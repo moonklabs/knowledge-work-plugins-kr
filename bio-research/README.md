@@ -1,6 +1,6 @@
 # Bio-Research Plugin
 
-One-stop shop for biological research — literature search, data analysis, pipeline execution, clinical trials, and scientific strategy. Use with [Cowork](https://claude.com/product/cowork) or install directly in Claude Code.
+Connect to preclinical research tools and databases (literature search, genomics analysis, target prioritization) to accelerate early-stage life sciences R&D. Use with [Cowork](https://claude.com/product/cowork) or install directly in Claude Code.
 
 This plugin consolidates 10 MCP server integrations and 6 analysis skills into a single package for life science researchers.
 
