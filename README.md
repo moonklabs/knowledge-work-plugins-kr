@@ -1,4 +1,4 @@
-# 지식 업무 플러그인
+# 지식 업무 플러그인 by Anthropic
 
 Claude를 당신의 역할, 팀, 회사를 위한 전문가로 만들어주는 플러그인입니다. [Claude Cowork](https://claude.com/product/cowork)를 위해 만들어졌으며, [Claude Code](https://claude.com/product/claude-code)와도 호환됩니다.
 
