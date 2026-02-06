@@ -1,7 +1,7 @@
 {
   "name": "finance",
   "version": "1.0.0",
-  "description": "Streamline finance and accounting workflows, from journal entries and reconciliation to financial statements and variance analysis. Speed up audit prep, month-end close, and keeping your books clean.",
+  "description": "전표, 대사, 재무제표, 변동 분석까지 재무/회계 워크플로를 간소화합니다. 감사 준비와 월말 마감을 가속하고 장부 정합성을 유지합니다.",
   "author": {
     "name": "Anthropic"
   }

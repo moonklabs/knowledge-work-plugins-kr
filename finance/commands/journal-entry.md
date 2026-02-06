@@ -1,130 +1,77 @@
 ---
-description: Prepare journal entries with proper debits, credits, and supporting detail
+description: 차변/대변과 증빙 근거를 포함한 전표 준비
 argument-hint: "<entry type> [period]"
 ---
 
 # Journal Entry Preparation
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 낯선 플레이스홀더가 보이거나 어떤 도구가 연결되어 있는지 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 보세요.
 
-**Important**: This command assists with journal entry workflows but does not provide financial advice. All entries should be reviewed by qualified financial professionals before posting.
-
-Prepare journal entries with proper debits, credits, supporting detail, and review documentation.
+**중요**: 이 커맨드는 전표 준비를 보조하지만 재무 자문을 제공하지 않습니다. 게시 전 전문가 검토가 필요합니다.
 
 ## Usage
 
-```
+```bash
 /je <type> <period>
 ```
 
 ### Arguments
 
-- `type` — The journal entry type. One of:
-  - `ap-accrual` — Accounts payable accruals for goods/services received but not yet invoiced
-  - `fixed-assets` — Depreciation and amortization entries for fixed assets and intangibles
-  - `prepaid` — Amortization of prepaid expenses (insurance, software, rent, etc.)
-  - `payroll` — Payroll accruals including salaries, benefits, taxes, and bonus accruals
-  - `revenue` — Revenue recognition entries including deferred revenue adjustments
-- `period` — The accounting period (e.g., `2024-12`, `2024-Q4`, `2024`)
+- `type`
+  - `ap-accrual`
+  - `fixed-assets`
+  - `prepaid`
+  - `payroll`
+  - `revenue`
+- `period`: `2024-12`, `2024-Q4` 등
 
 ## Workflow
 
-### 1. Gather Source Data
+### 1. 원천 데이터 수집
 
-If ~~erp or ~~data warehouse is connected:
-- Pull the trial balance for the specified period
-- Pull subledger detail for the relevant accounts
-- Pull prior period entries of the same type for reference
-- Identify the current GL balances for affected accounts
+연결 소스가 있으면:
+- 당기 TB/GL 잔액
+- 관련 서브레저/스케줄
+- 전기 유사 전표
 
-If no data source is connected:
-> Connect ~~erp or ~~data warehouse to pull GL data automatically. You can also paste trial balance data or upload a spreadsheet.
+연결이 없으면 사용자에게 요청:
+- 영향 계정 TB 또는 GL 잔액
+- 증빙 스케줄
+- 전기 전표(선택)
 
-Prompt the user to provide:
-- Trial balance or GL balances for affected accounts
-- Subledger detail or supporting schedules
-- Prior period entries for reference (optional)
+### 2. 전표 금액 계산
 
-### 2. Calculate the Entry
+유형별 계산 로직 적용:
+- `ap-accrual`: 미청구 비용 발생분
+- `fixed-assets`: 감가상각/상각
+- `prepaid`: 선급비용 상각
+- `payroll`: 급여/복리후생/세금/보너스 발생분
+- `revenue`: 이연수익 조정 포함 수익 인식
 
-Based on the JE type:
+### 3. 전표 생성
 
-**AP Accrual:**
-- Identify goods/services received but not invoiced by period end
-- Calculate accrual amounts from PO receipts, contracts, or estimates
-- Debit: Expense accounts (or asset accounts for capitalizable items)
-- Credit: Accrued liabilities
+아래 형식으로 작성:
+- 전표명, 기간, 작성자, 기준일
+- 라인별 계정코드/계정명/차변/대변/부서/메모
+- 합계 일치
+- 계산 근거 및 가정
+- 자동역분개 여부
 
-**Fixed Assets:**
-- Pull the fixed asset register or depreciation schedule
-- Calculate period depreciation by asset class and method (straight-line, declining balance, units of production)
-- Debit: Depreciation expense (by department/cost center)
-- Credit: Accumulated depreciation
+### 4. 검토 체크리스트
 
-**Prepaid:**
-- Pull the prepaid amortization schedule
-- Calculate the period amortization for each prepaid item
-- Debit: Expense accounts (by type — insurance, software, rent, etc.)
-- Credit: Prepaid expense accounts
+- 차변=대변
+- 회계기간 정확
+- 계정코드/코스트센터 정확
+- 금액 근거 및 메모 명확
+- 전기 처리와 일관성
+- 역분개 설정 적정
+- 증빙 참조 포함
+- 승인 권한 범위 내
 
-**Payroll:**
-- Calculate accrued salaries for days worked but not yet paid
-- Calculate accrued benefits (health, retirement contributions, PTO)
-- Calculate employer payroll tax accruals
-- Calculate bonus accruals (if applicable, based on plan terms)
-- Debit: Salary expense, benefits expense, payroll tax expense
-- Credit: Accrued payroll, accrued benefits, accrued payroll taxes
+### 5. 출력
 
-**Revenue:**
-- Review contracts and performance obligations
-- Calculate revenue to recognize based on delivery/performance
-- Adjust deferred revenue balances
-- Debit: Deferred revenue (or accounts receivable)
-- Credit: Revenue accounts (by stream/category)
-
-### 3. Generate the Journal Entry
-
-Present the entry in standard format:
-
-```
-Journal Entry: [Type] — [Period]
-Prepared by: [User]
-Date: [Period end date]
-
-| Line | Account Code | Account Name | Debit | Credit | Department | Memo |
-|------|-------------|--------------|-------|--------|------------|------|
-| 1    | XXXX        | [Name]       | X,XXX |        | [Dept]     | [Detail] |
-| 2    | XXXX        | [Name]       |       | X,XXX  | [Dept]     | [Detail] |
-|      |             | **Total**    | X,XXX | X,XXX  |            |      |
-
-Supporting Detail:
-- [Calculation basis and assumptions]
-- [Reference to supporting schedule or documentation]
-
-Reversal: [Yes/No — if yes, specify reversal date]
-```
-
-### 4. Review Checklist
-
-Before finalizing, verify:
-
-- [ ] Debits equal credits
-- [ ] Correct accounting period
-- [ ] Account codes are valid and map to the right GL accounts
-- [ ] Amounts are calculated correctly with supporting detail
-- [ ] Memo/description is clear and specific enough for audit
-- [ ] Department/cost center coding is correct
-- [ ] Entry is consistent with prior period treatment
-- [ ] Reversal flag is set appropriately (accruals should auto-reverse)
-- [ ] Supporting documentation is referenced or attached
-- [ ] Entry is within the user's approval authority
-- [ ] No unusual or out-of-pattern amounts that need investigation
-
-### 5. Output
-
-Provide:
-1. The formatted journal entry
-2. Supporting calculations
-3. Comparison to prior period entry of the same type (if available)
-4. Any items flagged for review or follow-up
-5. Instructions for posting (manual entry or upload format for the user's ERP)
+1. 전표 본문
+2. 계산 근거
+3. 전기 대비 차이(가능 시)
+4. 추가 확인 필요 항목
+5. ERP 반영 가이드(수기/업로드)

@@ -1,51 +1,18 @@
-# Knowledge MCP Search Strategies
+# search-strategies 레퍼런스
 
-Query patterns for gathering organizational context during plugin customization.
+이 문서는 'cowork-plugin-management/skills/cowork-plugin-customizer/references/search-strategies.md' 주제에 대한 참고 자료입니다.
 
-## Finding Tool Names
+## 목적
 
-**Source control:**
-- Search: "GitHub" OR "GitLab" OR "Bitbucket"
-- Search: "pull request" OR "merge request"
-- Look for: repository links, CI/CD mentions
+- 작업 수행 시 필요한 핵심 개념과 기준을 제공합니다.
 
-**Project management:**
-- Search: "Asana" OR "Jira" OR "Linear" OR "Monday"
-- Search: "sprint" AND "tickets"
-- Look for: task links, project board mentions
+## 사용 방법
 
-**Chat:**
-- Search: "Slack" OR "Teams" OR "Discord"
-- Look for: channel mentions, integration discussions
+1. 현재 요청과 직접 관련된 항목부터 확인합니다.
+2. 적용 가능한 규칙/예시를 선택합니다.
+3. 결과물에 반영하고 근거로 명시합니다.
 
-**Analytics:**
-- Search: "Datadog" OR "Grafana" OR "Mixpanel"
-- Search: "monitoring" OR "observability"
-- Look for: dashboard links, alert configurations
+## 참고
 
-**Design:**
-- Search: "Figma" OR "Sketch" OR "Adobe XD"
-- Look for: design file links, handoff discussions
-
-**CRM:**
-- Search: "Salesforce" OR "HubSpot"
-- Look for: deal mentions, customer record links
-
-## Finding Organization Values
-
-**Workspace/project IDs:**
-- Search for existing integrations or bookmarked links
-- Look for admin/setup documentation
-
-**Team conventions:**
-- Search: "story points" OR "estimation"
-- Search: "workflow" OR "ticket status"
-- Look for engineering process docs
-
-**Channel/team names:**
-- Search: "standup" OR "engineering" OR "releases"
-- Look for channel naming patterns
-
-## When Knowledge MCPs Are Unavailable
-
-If no knowledge MCPs are configured, skip automatic discovery and proceed directly to AskUserQuestion for all categories. Note: AskUserQuestion always includes a Skip button and a free-text input box for custom answers, so do not include `None` or `Other` as options.
+- 세부 구현은 상위 SKILL.md 절차를 우선 따릅니다.
+- 문서 내용은 필요 시 실제 데이터/환경에 맞게 조정합니다.

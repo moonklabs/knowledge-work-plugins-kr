@@ -1,78 +1,39 @@
 ---
-description: Set up your bio-research environment and explore available tools
+description: bio-research 환경 초기화 및 사용 가능한 도구 안내
 ---
 
 # Bio-Research Start
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 낯선 플레이스홀더가 보이거나 어떤 도구가 연결되어 있는지 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 보세요.
 
-You are helping a biological researcher get oriented with the bio-research plugin. Walk through the following steps in order.
+bio-research 플러그인 사용자를 온보딩합니다.
 
-## Step 1: Welcome
+## Step 1: 환영 및 목표 확인
 
-Display this welcome message:
+- 현재 연구 목표(문헌조사, 단일세포 분석, 파이프라인 실행, 타깃 발굴 등)를 확인합니다.
 
-```
-Bio-Research Plugin
+## Step 2: 연결 상태 확인
 
-Your AI-powered research assistant for the life sciences. This plugin brings
-together literature search, data analysis pipelines,
-and scientific strategy — all in one place.
-```
+- `~~literature`, `~~clinical trials`, `~~chemical database`, `~~drug targets`, `~~data repository`, `~~lab platform` 연결 여부를 점검합니다.
+- 미연결 소스는 명확히 안내하고 대체 흐름을 제시합니다.
 
-## Step 2: Check Available MCP Servers
+## Step 3: 스킬 선택 안내
 
-Test which MCP servers are connected by listing available tools. Group the results:
+목표에 따라 권장 스킬:
+- 단일세포 QC: `single-cell-rna-qc`
+- 통합/배치보정: `scvi-tools`
+- 시퀀싱 워크플로: `nextflow-development`
+- 장비 데이터 표준화: `instrument-data-to-allotrope`
+- 연구 문제 선정: `scientific-problem-selection`
 
-**Literature & Data Sources:**
-- ~~literature database — biomedical literature search
-- ~~literature database — preprint access (biology and medicine)
-- ~~journal access — academic publications
-- ~~data repository — collaborative research data (Sage Bionetworks)
+## Step 4: 첫 실행 예시 제시
 
-**Drug Discovery & Clinical:**
-- ~~chemical database — bioactive compound database
-- ~~drug target database — drug target discovery platform
-- ClinicalTrials.gov — clinical trial registry
-- ~~clinical data platform — clinical trial site ranking and platform help
+- 문헌 검색 쿼리 예시
+- 데이터 파일 입력 예시
+- 기대 산출물(리포트/시각화/워크플로 결과) 예시
 
-**Visualization & AI:**
-- ~~scientific illustration — create scientific figures and diagrams
-- ~~AI research platform — AI for biology (histopathology, drug discovery)
+## Step 5: 운영 원칙
 
-Report which servers are connected and which are not yet set up.
-
-## Step 3: Survey Available Skills
-
-List the analysis skills available in this plugin:
-
-| Skill | What It Does |
-|-------|-------------|
-| **Single-Cell RNA QC** | Quality control for scRNA-seq data with MAD-based filtering |
-| **scvi-tools** | Deep learning for single-cell omics (scVI, scANVI, totalVI, PeakVI, etc.) |
-| **Nextflow Pipelines** | Run nf-core pipelines (RNA-seq, WGS/WES, ATAC-seq) |
-| **Instrument Data Converter** | Convert lab instrument output to Allotrope ASM format |
-| **Scientific Problem Selection** | Systematic framework for choosing research problems |
-
-## Step 4: Optional Setup — Binary MCP Servers
-
-Mention that two additional MCP servers are available as separate installations:
-
-- **~~genomics platform** — Access cloud analysis data and workflows
-  Install: Download `txg-node.mcpb` from https://github.com/10XGenomics/txg-mcp/releases
-- **~~tool database** (Harvard MIMS) — AI tools for scientific discovery
-  Install: Download `tooluniverse.mcpb` from https://github.com/mims-harvard/ToolUniverse/releases
-
-These require downloading binary files and are optional.
-
-## Step 5: Ask How to Help
-
-Ask the researcher what they're working on today. Suggest starting points based on common workflows:
-
-1. **Literature review** — "Search ~~literature database for recent papers on [topic]"
-2. **Analyze sequencing data** — "Run QC on my single-cell data" or "Set up an RNA-seq pipeline"
-3. **Drug discovery** — "Search ~~chemical database for compounds targeting [protein]" or "Find drug targets for [disease]"
-4. **Data standardization** — "Convert my instrument data to Allotrope format"
-5. **Research strategy** — "Help me evaluate a new project idea"
-
-Wait for the user's response and guide them to the appropriate tools and skills.
+- 재현성을 위해 입력/파라미터/버전을 기록
+- 가정과 한계를 명시
+- 고위험 결론은 실험/전문가 검증 권고

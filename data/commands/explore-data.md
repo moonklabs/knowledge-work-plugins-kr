@@ -1,94 +1,94 @@
 ---
-description: Profile and explore a dataset to understand its shape, quality, and patterns
+description: 데이터셋의 형태, 품질, 패턴을 이해하기 위한 프로파일링 및 탐색
 argument-hint: "<table or file>"
 ---
 
-# /explore-data - Profile and Explore a Dataset
+# /explore-data - 데이터셋 프로파일링 및 탐색
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 낯선 플레이스홀더가 보이거나 어떤 도구가 연결되어 있는지 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 보세요.
 
-Generate a comprehensive data profile for a table or uploaded file. Understand its shape, quality, and patterns before diving into analysis.
+테이블 또는 업로드된 파일에 대한 종합 데이터 프로필을 생성합니다. 분석에 들어가기 전에 형태, 품질, 패턴을 파악합니다.
 
-## Usage
+## 사용법
 
 ```
 /explore-data <table_name or file>
 ```
 
-## Workflow
+## 워크플로
 
-### 1. Access the Data
+### 1. 데이터 접근
 
-**If a data warehouse MCP server is connected:**
+**데이터 웨어하우스 MCP 서버가 연결된 경우:**
 
-1. Resolve the table name (handle schema prefixes, suggest matches if ambiguous)
-2. Query table metadata: column names, types, descriptions if available
-3. Run profiling queries against the live data
+1. 테이블 이름을 해석합니다(스키마 접두어 처리, 모호하면 후보 제안)
+2. 테이블 메타데이터 조회: 컬럼명, 타입, 설명(가능한 경우)
+3. 실제 데이터에 대해 프로파일링 쿼리를 실행합니다
 
-**If a file is provided (CSV, Excel, Parquet, JSON):**
+**파일이 제공된 경우(CSV, Excel, Parquet, JSON):**
 
-1. Read the file and load into a working dataset
-2. Infer column types from the data
+1. 파일을 읽어 작업용 데이터셋으로 로드합니다
+2. 데이터로부터 컬럼 타입을 추론합니다
 
-**If neither:**
+**둘 다 없는 경우:**
 
-1. Ask the user to provide a table name (with their warehouse connected) or upload a file
-2. If they describe a table schema, provide guidance on what profiling queries to run
+1. 사용자가 테이블명을 제공하거나 파일을 업로드하도록 요청합니다
+2. 테이블 스키마를 설명한다면, 어떤 프로파일링 쿼리를 실행하면 되는지 안내합니다
 
-### 2. Generate Data Profile
+### 2. 데이터 프로필 생성
 
-Run the following profiling checks:
+다음 프로파일링 체크를 실행합니다.
 
-**Table-level metrics:**
-- Total row count
-- Column count and types breakdown
-- Approximate table size (if available from metadata)
-- Date range coverage (min/max of date columns)
+**테이블 수준 지표:**
+- 총 행 수
+- 컬럼 수 및 타입 분포
+- 대략적인 테이블 크기(메타데이터에서 가능 시)
+- 날짜 범위(날짜 컬럼의 min/max)
 
-**Column-level metrics for each column:**
-- Data type (and whether it matches expected type)
-- Null count and null rate (%)
-- Distinct count and cardinality (distinct / total)
-- For numeric columns: min, max, mean, median, stddev, percentiles (p25, p50, p75, p95, p99)
-- For string columns: min/max length, most common values (top 10), empty string count
-- For date/timestamp columns: min, max, distribution by time period
-- For boolean columns: true/false/null distribution
+**컬럼 수준 지표(각 컬럼):**
+- 데이터 타입(예상 타입과 일치 여부)
+- Null 개수 및 Null 비율(%)
+- Distinct 개수 및 카디널리티(distinct / total)
+- 수치 컬럼: min, max, mean, median, stddev, 백분위(p25, p50, p75, p95, p99)
+- 문자열 컬럼: 최소/최대 길이, 최빈값 상위 10개, 빈 문자열 개수
+- 날짜/타임스탬프 컬럼: min, max, 기간별 분포
+- 불리언 컬럼: true/false/null 분포
 
-**Present the profile as a clean summary table**, grouped by column type (dimensions, metrics, dates, IDs).
+**프로필은 깔끔한 요약 표로 제시**하며, 컬럼 타입(차원, 지표, 날짜, ID)별로 그룹화합니다.
 
-### 3. Identify Data Quality Issues
+### 3. 데이터 품질 이슈 식별
 
-Flag potential problems:
+잠재적 문제를 플래그합니다.
 
-- **High null rates**: Columns with >5% nulls (warn), >20% nulls (alert)
-- **Low cardinality surprises**: Columns that should be high-cardinality but aren't (e.g., a "user_id" with only 50 distinct values)
-- **High cardinality surprises**: Columns that should be categorical but have too many distinct values
-- **Suspicious values**: Negative amounts where only positive expected, future dates in historical data, obviously placeholder values (e.g., "N/A", "TBD", "test", "999999")
-- **Duplicate detection**: Check if there's a natural key and whether it has duplicates
-- **Distribution skew**: Extremely skewed numeric distributions that could affect averages
-- **Encoding issues**: Mixed case in categorical fields, trailing whitespace, inconsistent formats
+- **Null 비율 높음**: 5% 초과는 경고, 20% 초과는 알림
+- **낮은 카디널리티 이상**: 고카디널리티여야 하는 컬럼이 그렇지 않은 경우(예: "user_id"가 50개 뿐)
+- **높은 카디널리티 이상**: 범주형이어야 하는 컬럼이 과도하게 많은 값
+- **의심스러운 값**: 양수만 기대되는 컬럼의 음수, 과거 데이터의 미래 날짜, 플레이스홀더 값("N/A", "TBD", "test", "999999")
+- **중복 탐지**: 자연 키가 있는지와 중복 여부
+- **분포 왜곡**: 평균에 영향을 주는 심한 왜도
+- **인코딩 이슈**: 대소문자 혼재, 후행 공백, 형식 불일치
 
-### 4. Suggest Interesting Dimensions and Metrics
+### 4. 흥미로운 차원과 지표 제안
 
-Based on the column profile, recommend:
+컬럼 프로필을 기반으로 다음을 추천합니다.
 
-- **Best dimension columns** for slicing data (categorical columns with reasonable cardinality, 3-50 values)
-- **Key metric columns** for measurement (numeric columns with meaningful distributions)
-- **Time columns** suitable for trend analysis
-- **Natural groupings** or hierarchies apparent in the data
-- **Potential join keys** linking to other tables (ID columns, foreign keys)
+- **최적 차원 컬럼**: 적정 카디널리티(3~50)인 범주형 컬럼
+- **핵심 지표 컬럼**: 의미 있는 분포를 가진 수치 컬럼
+- **추세 분석용 시간 컬럼**
+- **자연스러운 그룹/계층 구조**
+- **조인 키 후보**: 다른 테이블과 연결 가능한 ID/외래키
 
-### 5. Recommend Follow-Up Analyses
+### 5. 후속 분석 추천
 
-Suggest 3-5 specific analyses the user could run next:
+다음에 수행할 3~5개 분석을 제안합니다.
 
-- "Trend analysis on [metric] by [time_column] grouped by [dimension]"
-- "Distribution deep-dive on [skewed_column] to understand outliers"
-- "Data quality investigation on [problematic_column]"
-- "Correlation analysis between [metric_a] and [metric_b]"
-- "Cohort analysis using [date_column] and [status_column]"
+- "[dimension]으로 그룹화한 [time_column] 기준 [metric] 추세 분석"
+- "[skewed_column]의 분포 심층 분석(이상치 이해)"
+- "[problematic_column] 데이터 품질 조사"
+- "[metric_a]와 [metric_b] 간 상관 분석"
+- "[date_column]과 [status_column]을 사용하는 코호트 분석"
 
-## Output Format
+## 출력 형식
 
 ```
 ## Data Profile: [table_name]
@@ -108,8 +108,8 @@ Suggest 3-5 specific analyses the user could run next:
 [numbered list of suggested follow-up analyses]
 ```
 
-## Tips
+## 팁
 
-- For very large tables (100M+ rows), profiling queries use sampling by default -- mention if you need exact counts
-- If exploring a new dataset for the first time, this command gives you the lay of the land before writing specific queries
-- The quality flags are heuristic -- not every flag is a real problem, but each is worth a quick look
+- 매우 큰 테이블(1억+ 행)은 기본적으로 샘플링을 사용합니다. 정확한 수치가 필요하면 명시하세요
+- 새로운 데이터셋을 처음 탐색할 때 이 커맨드는 개괄을 빠르게 파악하는 데 유용합니다
+- 품질 플래그는 휴리스틱입니다. 모든 플래그가 실제 문제는 아니지만, 빠르게 확인할 가치가 있습니다

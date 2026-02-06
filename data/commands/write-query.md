@@ -1,121 +1,121 @@
 ---
-description: Write optimized SQL for your dialect with best practices
-argument-hint: "<description of what data you need>"
+description: 방언별 모범 사례를 적용한 최적화 SQL 작성
+argument-hint: "<필요한 데이터 설명>"
 ---
 
-# /write-query - Write Optimized SQL
+# /write-query - 최적화 SQL 작성
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 낯선 플레이스홀더가 보이거나 어떤 도구가 연결되어 있는지 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 보세요.
 
-Write a SQL query from a natural language description, optimized for your specific SQL dialect and following best practices.
+자연어 설명을 바탕으로 SQL 쿼리를 작성하고, 사용 중인 SQL 방언에 맞게 최적화합니다.
 
-## Usage
+## 사용법
 
 ```
-/write-query <description of what data you need>
+/write-query <필요한 데이터 설명>
 ```
 
-## Workflow
+## 워크플로
 
-### 1. Understand the Request
+### 1. 요청 이해
 
-Parse the user's description to identify:
+사용자 설명을 파싱해 다음을 식별합니다.
 
-- **Output columns**: What fields should the result include?
-- **Filters**: What conditions limit the data (time ranges, segments, statuses)?
-- **Aggregations**: Are there GROUP BY operations, counts, sums, averages?
-- **Joins**: Does this require combining multiple tables?
-- **Ordering**: How should results be sorted?
-- **Limits**: Is there a top-N or sample requirement?
+- **출력 컬럼**: 결과에 포함되어야 하는 필드
+- **필터**: 데이터 범위를 제한하는 조건(기간, 세그먼트, 상태)
+- **집계**: GROUP BY, 카운트, 합계, 평균 등이 필요한가
+- **조인**: 여러 테이블 결합이 필요한가
+- **정렬**: 결과를 어떻게 정렬할 것인가
+- **제한**: Top-N 또는 샘플 요구가 있는가
 
-### 2. Determine SQL Dialect
+### 2. SQL 방언 결정
 
-If the user's SQL dialect is not already known, ask which they use:
+사용 중인 방언을 모르면 확인합니다.
 
-- **PostgreSQL** (including Aurora, RDS, Supabase, Neon)
+- **PostgreSQL** (Aurora, RDS, Supabase, Neon 포함)
 - **Snowflake**
 - **BigQuery** (Google Cloud)
 - **Redshift** (Amazon)
 - **Databricks SQL**
-- **MySQL** (including Aurora MySQL, PlanetScale)
+- **MySQL** (Aurora MySQL, PlanetScale 포함)
 - **SQL Server** (Microsoft)
 - **DuckDB**
 - **SQLite**
-- **Other** (ask for specifics)
+- **기타** (구체적 환경 확인)
 
-Remember the dialect for future queries in the same session.
+같은 세션에서는 방언을 기억합니다.
 
-### 3. Discover Schema (If Warehouse Connected)
+### 3. 스키마 탐색(웨어하우스 연결 시)
 
-If a data warehouse MCP server is connected:
+데이터 웨어하우스 MCP 서버가 연결되어 있다면:
 
-1. Search for relevant tables based on the user's description
-2. Inspect column names, types, and relationships
-3. Check for partitioning or clustering keys that affect performance
-4. Look for pre-built views or materialized views that might simplify the query
+1. 사용자 설명에 따라 관련 테이블을 탐색
+2. 컬럼명, 타입, 관계를 확인
+3. 파티션/클러스터 키 등 성능에 영향을 주는 정보를 확인
+4. 쿼리를 단순화할 수 있는 뷰/머티리얼라이즈드 뷰가 있는지 확인
 
-### 4. Write the Query
+### 4. 쿼리 작성
 
-Follow these best practices:
+다음 모범 사례를 따릅니다.
 
-**Structure:**
-- Use CTEs (WITH clauses) for readability when queries have multiple logical steps
-- One CTE per logical transformation or data source
-- Name CTEs descriptively (e.g., `daily_signups`, `active_users`, `revenue_by_product`)
+**구조:**
+- 논리 단계가 여러 개일 때 CTE(WITH) 사용
+- 논리 변환/데이터 소스별로 CTE 분리
+- CTE는 의미 있는 이름 사용(예: `daily_signups`, `active_users`, `revenue_by_product`)
 
-**Performance:**
-- Never use `SELECT *` in production queries -- specify only needed columns
-- Filter early (push WHERE clauses as close to the base tables as possible)
-- Use partition filters when available (especially date partitions)
-- Prefer `EXISTS` over `IN` for subqueries with large result sets
-- Use appropriate JOIN types (don't use LEFT JOIN when INNER JOIN is correct)
-- Avoid correlated subqueries when a JOIN or window function works
-- Be mindful of exploding joins (many-to-many)
+**성능:**
+- 프로덕션 쿼리에서 `SELECT *` 사용 금지 — 필요한 컬럼만 선택
+- 필터를 가능한 한 앞단에 적용(베이스 테이블에 가까울수록 좋음)
+- 가능한 경우 파티션 필터 사용(특히 날짜 파티션)
+- 큰 결과 집합의 서브쿼리에는 `IN`보다 `EXISTS` 선호
+- 적절한 JOIN 유형 사용(필요 없으면 LEFT JOIN 금지)
+- JOIN이나 윈도우 함수로 해결 가능한 경우 상관 서브쿼리 회피
+- many-to-many 폭발 조인에 유의
 
-**Readability:**
-- Add comments explaining the "why" for non-obvious logic
-- Use consistent indentation and formatting
-- Alias tables with meaningful short names (not just `a`, `b`, `c`)
-- Put each major clause on its own line
+**가독성:**
+- 명확하지 않은 로직에는 "왜"를 설명하는 주석 추가
+- 일관된 들여쓰기와 포맷
+- 의미 있는 짧은 테이블 별칭 사용(`a`, `b`, `c` 지양)
+- 주요 절은 한 줄에 하나씩 배치
 
-**Dialect-specific optimizations:**
-- Apply dialect-specific syntax and functions (see `sql-queries` skill for details)
-- Use dialect-appropriate date functions, string functions, and window syntax
-- Note any dialect-specific performance features (e.g., Snowflake clustering, BigQuery partitioning)
+**방언별 최적화:**
+- 방언별 문법과 함수 적용(자세한 내용은 `sql-queries` 스킬 참조)
+- 날짜/문자열/윈도우 함수는 방언에 맞게 사용
+- 방언별 성능 기능 언급(예: Snowflake 클러스터링, BigQuery 파티션)
 
-### 5. Present the Query
+### 5. 쿼리 제시
 
-Provide:
+다음을 제공합니다.
 
-1. **The complete query** in a SQL code block with syntax highlighting
-2. **Brief explanation** of what each CTE or section does
-3. **Performance notes** if relevant (expected cost, partition usage, potential bottlenecks)
-4. **Modification suggestions** -- how to adjust for common variations (different time range, different granularity, additional filters)
+1. **전체 쿼리**(SQL 코드 블록, 하이라이팅 포함)
+2. **간단한 설명**(각 CTE/섹션의 역할)
+3. **성능 노트**(비용, 파티션 사용, 병목 가능성)
+4. **수정 제안**(기간, 그라뉼러리티, 추가 필터 등 일반적 변형)
 
-### 6. Offer to Execute
+### 6. 실행 제안
 
-If a data warehouse is connected, offer to run the query and analyze the results. If the user wants to run it themselves, the query is ready to copy-paste.
+데이터 웨어하우스가 연결되어 있으면 쿼리 실행과 결과 분석을 제안합니다. 사용자가 직접 실행하려면 그대로 복사해 사용할 수 있습니다.
 
-## Examples
+## 예시
 
-**Simple aggregation:**
+**간단 집계:**
 ```
-/write-query Count of orders by status for the last 30 days
-```
-
-**Complex analysis:**
-```
-/write-query Cohort retention analysis -- group users by their signup month, then show what percentage are still active (had at least one event) at 1, 3, 6, and 12 months after signup
+/write-query 최근 30일 주문을 상태별로 카운트
 ```
 
-**Performance-critical:**
+**복잡한 분석:**
 ```
-/write-query We have a 500M row events table partitioned by date. Find the top 100 users by event count in the last 7 days with their most recent event type.
+/write-query 코호트 잔존 분석 -- 가입 월 기준으로 그룹화하고 가입 후 1, 3, 6, 12개월에 아직 활성(이벤트 1회 이상)인 비율을 보여 주세요
 ```
 
-## Tips
+**성능 중요 쿼리:**
+```
+/write-query 날짜 파티션이 있는 5억 행 이벤트 테이블에서 최근 7일 기준 이벤트 수 상위 100명을 찾고, 각 사용자의 가장 최근 이벤트 타입을 함께 보여 주세요.
+```
 
-- Mention your SQL dialect upfront to get the right syntax immediately
-- If you know the table names, include them -- otherwise Claude will help you find them
-- Specify if you need the query to be idempotent (safe to re-run) or one-time
-- For recurring queries, mention if it should be parameterized for date ranges
+## 팁
+
+- SQL 방언을 미리 알려주면 바로 맞는 문법으로 작성합니다
+- 테이블명을 알고 있다면 함께 알려주세요. 모르면 Claude가 찾아줍니다
+- 쿼리가 멱등(idempotent)해야 하는지, 일회성인지 알려 주세요
+- 반복 실행용이라면 날짜 범위 파라미터화 여부를 알려주세요

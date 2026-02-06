@@ -1,138 +1,88 @@
 ---
-description: Generate an income statement with period-over-period comparison and variance analysis
+description: 기간 비교와 변동 분석이 포함된 손익계산서 생성
 argument-hint: "<frequency> <period>"
 ---
 
 # Income Statement Generation
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 낯선 플레이스홀더가 보이거나 어떤 도구가 연결되어 있는지 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 보세요.
 
-**Important**: This command assists with financial statement workflows but does not provide financial advice. All statements should be reviewed by qualified financial professionals before use in reporting or filings.
+**중요**: 이 커맨드는 재무 워크플로를 지원하지만 재무 자문을 제공하지 않습니다. 보고/공시에 사용하기 전 반드시 유자격 전문가 검토가 필요합니다.
 
-Generate an income statement with period-over-period comparison and variance analysis. Highlight material variances for investigation.
+지정 기간의 손익계산서를 생성하고 전기 대비 변동을 계산해 중요 항목을 표시합니다.
 
 ## Usage
 
-```
+```bash
 /income-statement <period-type> <period>
 ```
 
 ### Arguments
 
-- `period-type` — The reporting period type:
-  - `monthly` — Single month P&L with prior month and prior year month comparison
-  - `quarterly` — Quarter P&L with prior quarter and prior year quarter comparison
-  - `annual` — Full year P&L with prior year comparison
-  - `ytd` — Year-to-date P&L with prior year YTD comparison
-- `period` — The period to report (e.g., `2024-12`, `2024-Q4`, `2024`)
+- `period-type`
+  - `monthly`: 당월 vs 전월/전년동월
+  - `quarterly`: 당분기 vs 전분기/전년동분기
+  - `annual`: 당해 vs 전년
+  - `ytd`: 누적 vs 전년동기누적
+- `period`: `2024-12`, `2024-Q4`, `2024` 등
 
 ## Workflow
 
-### 1. Gather Financial Data
+### 1. 데이터 수집
 
-If ~~erp or ~~data warehouse is connected:
-- Pull trial balance or income statement data for the specified period
-- Pull comparison period data (prior period, prior year, budget/forecast)
-- Pull account hierarchy and groupings for presentation
+`~~erp` 또는 `~~data warehouse`가 연결되어 있으면:
+- 당기 손익 데이터 수집
+- 비교 기간(전기/전년/예산/전망) 수집
+- 계정 계층 정보 수집
 
-If no data source is connected:
-> Connect ~~erp or ~~data warehouse to pull financial data automatically. You can also paste trial balance data, upload a spreadsheet, or provide income statement data for analysis.
+연결이 없으면 사용자에게 요청:
+- 당기 수익/비용(계정 또는 카테고리 단위)
+- 비교 기간 데이터
+- 조정/재분류 사항
 
-Prompt the user to provide:
-- Current period revenue and expense data (by account or category)
-- Comparison period data (prior period, prior year, and/or budget)
-- Any known adjustments or reclassifications
+### 2. 손익계산서 생성
 
-### 2. Generate Income Statement
+표준 다열 포맷으로 작성:
+- 매출
+- 매출원가
+- 매출총이익(총이익률)
+- 영업비용
+- 영업이익(영업이익률)
+- 기타수익/비용
+- 법인세
+- 순이익(순이익률)
 
-Present in standard multi-column format:
+### 3. 변동 분석
 
-```
-INCOME STATEMENT
-Period: [Period description]
-(in thousands, unless otherwise noted)
+중요성 기준을 적용해 플래그합니다.
+- 금액 기준: 사용자 임계치 초과
+- 비율 기준: 기본 10% 초과(또는 사용자 기준)
 
-                              Current    Prior      Variance   Variance   Budget    Budget
-                              Period     Period     ($)        (%)        Amount    Var ($)
-                              --------   --------   --------   --------   --------  --------
-REVENUE
-  Product revenue             $XX,XXX    $XX,XXX    $X,XXX     X.X%       $XX,XXX   $X,XXX
-  Service revenue             $XX,XXX    $XX,XXX    $X,XXX     X.X%       $XX,XXX   $X,XXX
-  Other revenue               $XX,XXX    $XX,XXX    $X,XXX     X.X%       $XX,XXX   $X,XXX
-                              --------   --------   --------              --------  --------
-TOTAL REVENUE                 $XX,XXX    $XX,XXX    $X,XXX     X.X%       $XX,XXX   $X,XXX
+플래그 항목마다:
+- 변동 방향/규모
+- 가능한 원인
+- 확인 질문
+- 유리/불리 여부
 
-COST OF REVENUE
-  [Cost items]                $XX,XXX    $XX,XXX    $X,XXX     X.X%       $XX,XXX   $X,XXX
-                              --------   --------   --------              --------  --------
-GROSS PROFIT                  $XX,XXX    $XX,XXX    $X,XXX     X.X%       $XX,XXX   $X,XXX
-  Gross Margin                XX.X%      XX.X%
+### 4. 핵심 지표 요약
 
-OPERATING EXPENSES
-  Research & development      $XX,XXX    $XX,XXX    $X,XXX     X.X%       $XX,XXX   $X,XXX
-  Sales & marketing           $XX,XXX    $XX,XXX    $X,XXX     X.X%       $XX,XXX   $X,XXX
-  General & administrative    $XX,XXX    $XX,XXX    $X,XXX     X.X%       $XX,XXX   $X,XXX
-                              --------   --------   --------              --------  --------
-TOTAL OPERATING EXPENSES      $XX,XXX    $XX,XXX    $X,XXX     X.X%       $XX,XXX   $X,XXX
+아래 지표를 요약합니다.
+- 매출 성장률
+- 총이익률
+- 영업이익률
+- 순이익률
+- 매출 대비 OpEx
+- 유효세율
 
-OPERATING INCOME (LOSS)       $XX,XXX    $XX,XXX    $X,XXX     X.X%       $XX,XXX   $X,XXX
-  Operating Margin            XX.X%      XX.X%
+### 5. 중요 변동 목록
 
-OTHER INCOME (EXPENSE)
-  Interest income             $XX,XXX    $XX,XXX    $X,XXX     X.X%
-  Interest expense           ($XX,XXX)  ($XX,XXX)   $X,XXX     X.X%
-  Other, net                  $XX,XXX    $XX,XXX    $X,XXX     X.X%
-                              --------   --------   --------
-TOTAL OTHER INCOME (EXPENSE)  $XX,XXX    $XX,XXX    $X,XXX     X.X%
+`Line Item`, `Variance($)`, `Variance(%)`, `Direction`, `Driver`, `Action` 형식으로 제시합니다.
 
-INCOME BEFORE TAXES           $XX,XXX    $XX,XXX    $X,XXX     X.X%
-  Income tax expense          $XX,XXX    $XX,XXX    $X,XXX     X.X%
-                              --------   --------   --------
+### 6. 출력
 
-NET INCOME (LOSS)             $XX,XXX    $XX,XXX    $X,XXX     X.X%       $XX,XXX   $X,XXX
-  Net Margin                  XX.X%      XX.X%
-```
-
-### 3. Variance Analysis
-
-For each line item, calculate and flag material variances:
-
-**Materiality thresholds** (flag if either condition met):
-- Dollar variance exceeds a defined threshold (e.g., $50K, $100K — ask user for their threshold)
-- Percentage variance exceeds 10% (or user-defined threshold)
-
-For flagged variances, provide:
-- Direction and magnitude of the variance
-- Possible drivers (if data is available to decompose)
-- Questions to investigate
-- Whether the variance is favorable or unfavorable
-
-### 4. Key Metrics Summary
-
-```
-KEY METRICS
-                              Current    Prior      Change
-Revenue growth (%)                                  X.X%
-Gross margin (%)              XX.X%      XX.X%      X.X pp
-Operating margin (%)          XX.X%      XX.X%      X.X pp
-Net margin (%)                XX.X%      XX.X%      X.X pp
-OpEx as % of revenue          XX.X%      XX.X%      X.X pp
-Effective tax rate (%)        XX.X%      XX.X%      X.X pp
-```
-
-### 5. Material Variance Summary
-
-List all material variances requiring investigation:
-
-| Line Item | Variance ($) | Variance (%) | Direction | Preliminary Driver | Action |
-|-----------|-------------|-------------|-----------|-------------------|--------|
-| [Item]    | $X,XXX      | X.X%        | Unfav.    | [If known]        | Investigate |
-
-### 6. Output
-
-Provide:
-1. Formatted income statement with comparisons
-2. Key metrics summary
-3. Material variance listing with investigation flags
-4. Suggested follow-up questions for unexplained variances
-5. Offer to drill into any specific variance with `/flux`
+다음을 제공합니다.
+1. 기간 비교 포함 손익계산서
+2. 핵심 지표 요약
+3. 중요 변동 목록
+4. 미설명 변동 확인 질문
+5. 필요 시 특정 변동 심화 분석 제안(`/flux`)

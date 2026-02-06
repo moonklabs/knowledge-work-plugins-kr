@@ -1,207 +1,92 @@
 ---
-description: Generate contextual briefings for legal work — daily summary, topic research, or incident response
+description: 법무 업무용 컨텍스트 브리핑 생성(데일리/주제/인시던트)
 argument-hint: "[daily | topic <query> | incident]"
 ---
 
 # /brief -- Legal Team Briefing
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 낯선 플레이스홀더가 보이거나 어떤 도구가 연결되어 있는지 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 보세요.
 
-Generate contextual briefings for legal work. Supports three modes: daily brief, topic brief, and incident brief.
+법무 업무 브리핑을 생성합니다. `daily`, `topic`, `incident` 모드를 지원합니다.
 
-**Important**: This command assists with legal workflows but does not provide legal advice. Briefings should be reviewed by qualified legal professionals before being relied upon.
+**중요**: 이 커맨드는 법무 워크플로를 보조하지만 법률 자문을 제공하지 않습니다. 결과는 법무 전문가 검토 후 활용해야 합니다.
 
 ## Invocation
 
-```
-/brief daily              # Morning brief of legal-relevant items
-/brief topic [query]      # Research brief on a specific legal question
-/brief incident [topic]   # Rapid brief on a developing situation
+```bash
+/brief daily
+/brief topic [query]
+/brief incident [topic]
 ```
 
-If no mode is specified, ask the user which type of brief they need.
+모드가 없으면 필요한 브리프 유형을 확인합니다.
 
 ## Modes
 
----
-
 ### Daily Brief
 
-A morning summary of everything a legal team member needs to know to start their day.
+아침 업무 시작용 요약:
+- 이메일: 신규 계약요청, 컴플라이언스 문의, 협상 회신, 외부자문 메일
+- 캘린더: 법무 준비가 필요한 회의, 임박 마감
+- 채팅: 법무 관련 멘션/DM/에스컬레이션
+- CLM: 검토 대기, 서명 대기, 만료 임박 계약
+- CRM: 법무 개입이 필요한 단계로 이동한 딜
 
-#### Sources to Scan
-
-Check each connected source for legal-relevant items:
-
-**Email (if connected):**
-- New contract requests or review requests
-- Compliance questions or reports
-- Responses from counterparties on active negotiations
-- Flagged or urgent items from the legal team inbox
-- External counsel communications
-- Regulatory or legal update newsletters
-
-**Calendar (if connected):**
-- Today's meetings that need legal prep (board meetings, deal reviews, vendor calls)
-- Upcoming deadlines this week (contract expirations, filing deadlines, response deadlines)
-- Recurring legal team syncs
-
-**Chat (if connected):**
-- Overnight messages in legal team channels
-- Direct messages requesting legal input
-- Mentions of legal-relevant topics (contract, compliance, privacy, NDA, terms)
-- Escalations or urgent requests
-
-**CLM (if connected):**
-- Contracts awaiting review or signature
-- Approaching expiration dates (next 30 days)
-- Newly executed agreements
-
-**CRM (if connected):**
-- Deals moving to stages that require legal involvement
-- New opportunities flagged for legal review
-
-#### Output Format
-
-```
-## Daily Legal Brief -- [Date]
-
-### Urgent / Action Required
-[Items needing immediate attention, sorted by urgency]
-
-### Contract Pipeline
-- **Awaiting Your Review**: [count and list]
-- **Pending Counterparty Response**: [count and list]
-- **Approaching Deadlines**: [items due this week]
-
-### New Requests
-[Contract review requests, NDA requests, compliance questions received since last brief]
-
-### Calendar Today
-[Meetings with legal relevance and what prep is needed]
-
-### Team Activity
-[Key messages or updates from legal team channels]
-
-### This Week's Deadlines
-[Upcoming deadlines and filing dates]
-
-### Sources Not Available
-[Any sources that were not connected or returned errors]
-```
-
----
+출력:
+- 긴급/즉시 조치
+- 계약 파이프라인
+- 신규 요청
+- 오늘 일정
+- 팀 활동
+- 주간 마감
+- 미연결/오류 소스
 
 ### Topic Brief
 
-Research and brief on a specific legal question or topic across available sources.
+특정 법무 주제 조사 브리프:
+1. 사용자 쿼리 수집
+2. 문서/이메일/채팅/CLM 검색
+3. 요약 생성
 
-#### Workflow
+출력:
+- Summary
+- Background
+- Current State
+- Key Considerations
+- Internal Precedent
+- Gaps
+- Recommended Next Steps
 
-1. Accept the topic query from the user
-2. Search across connected sources:
-   - **Documents**: Internal memos, prior analyses, playbooks, precedent
-   - **Email**: Prior communications on the topic
-   - **Chat**: Team discussions about the topic
-   - **CLM**: Related contracts or clauses
-3. Synthesize findings into a structured brief
-
-#### Output Format
-
-```
-## Topic Brief: [Topic]
-
-### Summary
-[2-3 sentence executive summary of findings]
-
-### Background
-[Context and history from internal sources]
-
-### Current State
-[What the organization's current position or approach is, based on available documents]
-
-### Key Considerations
-[Important factors, risks, or open questions]
-
-### Internal Precedent
-[Prior decisions, memos, or positions found in internal sources]
-
-### Gaps
-[What information is missing or what sources were not available]
-
-### Recommended Next Steps
-[What the user should do with this information]
-```
-
-#### Important Notes
-- Topic briefs synthesize what is available in connected sources; they do not substitute for formal legal research
-- If the topic requires current legal authority or case law, recommend the user consult a legal research platform (Westlaw, Lexis, etc.) or outside counsel
-- Always note the limitations of the sources searched
-
----
+주의:
+- 내부 연결 소스 기반 요약이며 정식 법률조사 대체 아님
+- 판례/최신 법령이 필요하면 전문 리서치 플랫폼 또는 외부자문 권고
 
 ### Incident Brief
 
-Rapid briefing for developing situations that require immediate legal attention (data breaches, litigation threats, regulatory inquiries, IP disputes, etc.).
+데이터 유출, 소송 위협, 규제 질의 등 긴급 사안 대응 브리프:
+1. 사안 설명 수집
+2. 이메일/채팅/문서/캘린더/CLM 신속 스캔
+3. 즉시 실행 가능한 브리프 생성
 
-#### Workflow
+출력:
+- Situation Summary
+- Timeline
+- Immediate Legal Considerations
+- Relevant Agreements
+- Internal Response
+- Key Contacts
+- Recommended Immediate Actions
+- Information Gaps
+- Sources Checked
 
-1. Accept the incident topic or description
-2. Rapidly scan all connected sources for relevant context:
-   - **Email**: Communications about the incident
-   - **Chat**: Real-time discussions and escalations
-   - **Documents**: Relevant policies, response plans, insurance coverage
-   - **Calendar**: Scheduled response meetings
-   - **CLM**: Affected contracts, indemnification provisions, insurance requirements
-3. Compile into an actionable incident brief
-
-#### Output Format
-
-```
-## Incident Brief: [Topic]
-**Prepared**: [timestamp]
-**Classification**: [severity assessment if determinable]
-
-### Situation Summary
-[What is known about the incident]
-
-### Timeline
-[Chronological summary of events based on available sources]
-
-### Immediate Legal Considerations
-[Regulatory notification requirements, preservation obligations, privilege concerns]
-
-### Relevant Agreements
-[Contracts, insurance policies, or other agreements that may be implicated]
-
-### Internal Response
-[What response activity has already occurred based on email/chat]
-
-### Key Contacts
-[Relevant internal and external contacts identified from sources]
-
-### Recommended Immediate Actions
-1. [Most urgent action]
-2. [Second priority]
-3. [etc.]
-
-### Information Gaps
-[What is not yet known and needs to be determined]
-
-### Sources Checked
-[What was searched and what was not available]
-```
-
-#### Important Notes for Incident Briefs
-- Speed matters. Produce the brief quickly with available information rather than waiting for complete information
-- Flag any litigation hold or preservation obligations immediately
-- Note privilege considerations (mark the brief as attorney-client privileged / work product if appropriate)
-- If the incident may involve a data breach, flag applicable notification deadlines (e.g., 72 hours for GDPR)
-- Recommend outside counsel engagement if the matter is significant
+인시던트 브리프 원칙:
+- 완전성보다 속도 우선
+- 보존의무/리티게이션 홀드 즉시 플래그
+- privilege 고려사항 명시
+- 데이터 유출 가능 시 통지 기한 플래그
 
 ## General Notes
 
-- If sources are unavailable, note the gaps prominently so the user knows what was not checked
-- For daily briefs, learn the user's preferences over time (what they find useful, what they want filtered out)
-- Briefs should be actionable: every item should have a clear next step or reason for inclusion
-- Keep briefs concise. Link to source materials rather than reproducing them in full
+- 미연결 소스는 눈에 띄게 표기
+- 항상 실행 가능한 다음 단계 중심으로 작성
+- 길게 인용하지 말고 핵심과 링크 중심으로 요약

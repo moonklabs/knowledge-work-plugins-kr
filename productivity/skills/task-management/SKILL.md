@@ -1,90 +1,40 @@
 ---
 name: task-management
-description: Simple task management using a shared TASKS.md file. Reference this when the user asks about their tasks, wants to add/complete tasks, or needs help tracking commitments.
+description: task-management 작업을 수행하기 위한 한국어 운영 가이드
 ---
 
-# Task Management
+# task-management 스킬
 
-Tasks are tracked in a simple `TASKS.md` file that both you and the user can edit.
+이 스킬은 'productivity/skills/task-management' 범위의 작업을 일관된 절차로 수행하기 위한 지침입니다.
 
-## File Location
+## 목적
 
-**Always use `TASKS.md` in the current working directory.**
+- 요청 의도를 빠르게 명확화
+- 필요한 입력과 제약을 먼저 확인
+- 재현 가능한 산출물 생성
 
-- If it exists, read/write to it
-- If it doesn't exist, create it with the template below
+## 입력
 
-## Dashboard Setup (First Run)
+- 사용자 목표/질문
+- 관련 데이터 또는 문서
+- 기간, 범위, 우선순위
 
-A visual dashboard is available for managing tasks and memory. **On first interaction with tasks:**
+## 절차
 
-1. Check if `dashboard.html` exists in the current working directory
-2. If not, copy it from `${CLAUDE_PLUGIN_ROOT}/skills/dashboard.html` to the current working directory
-3. Inform the user: "I've added the dashboard. Run `/productivity:start` to set up the full system."
+1. 요구사항과 성공 기준을 한 줄로 정리합니다.
+2. 사용 가능한 연결 소스와 로컬 파일을 확인합니다.
+3. 핵심 작업을 단계별로 수행합니다.
+4. 불확실성, 가정, 리스크를 명시합니다.
+5. 결과물을 사용 가능한 형식으로 제공합니다.
 
-The task board:
-- Reads and writes to the same `TASKS.md` file
-- Auto-saves changes
-- Watches for external changes (syncs when you edit via CLI)
-- Supports drag-and-drop reordering of tasks and sections
+## 출력
 
-## Format & Template
+- 핵심 결과 요약
+- 근거(데이터/출처/가정)
+- 후속 액션 제안
 
-When creating a new TASKS.md, use this exact template (without example tasks):
+## 품질 기준
 
-```markdown
-# Tasks
-
-## Active
-
-## Waiting On
-
-## Someday
-
-## Done
-```
-
-Task format:
-- `- [ ] **Task title** - context, for whom, due date`
-- Sub-bullets for additional details
-- Completed: `- [x] ~~Task~~ (date)`
-
-## How to Interact
-
-**When user asks "what's on my plate" / "my tasks":**
-- Read TASKS.md
-- Summarize Active and Waiting On sections
-- Highlight anything overdue or urgent
-
-**When user says "add a task" / "remind me to":**
-- Add to Active section with `- [ ] **Task**` format
-- Include context if provided (who it's for, due date)
-
-**When user says "done with X" / "finished X":**
-- Find the task
-- Change `[ ]` to `[x]`
-- Add strikethrough: `~~task~~`
-- Add completion date
-- Move to Done section
-
-**When user asks "what am I waiting on":**
-- Read the Waiting On section
-- Note how long each item has been waiting
-
-## Conventions
-
-- **Bold** the task title for scannability
-- Include "for [person]" when it's a commitment to someone
-- Include "due [date]" for deadlines
-- Include "since [date]" for waiting items
-- Sub-bullets for additional context
-- Keep Done section for ~1 week, then clear old items
-
-## Extracting Tasks
-
-When summarizing meetings or conversations, offer to add extracted tasks:
-- Commitments the user made ("I'll send that over")
-- Action items assigned to them
-- Follow-ups mentioned
-
-Ask before adding - don't auto-add without confirmation.
+- 모호한 표현 없이 구체적으로 작성
+- 불필요한 장문 설명 지양
+- 사용자 의사결정에 필요한 정보 우선 제시

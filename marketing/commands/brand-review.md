@@ -1,122 +1,31 @@
 ---
-description: Review content against your brand voice, style guide, and messaging pillars
+description: 콘텐츠를 브랜드 보이스, 스타일 가이드, 메시지 기둥 기준으로 검토
 argument-hint: "<content to review>"
 ---
 
 # Brand Review
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 낯선 플레이스홀더가 보이거나 어떤 도구가 연결되어 있는지 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 보세요.
 
-Review marketing content against brand voice, style guidelines, and messaging standards. Flag deviations and provide specific improvement suggestions.
+마케팅 콘텐츠를 브랜드 기준으로 검토하고 이탈 항목과 수정안을 제공합니다.
 
 ## Trigger
 
-User runs `/brand-review` or asks to review, check, or audit content against brand guidelines.
+```bash
+/brand-review <content>
+```
 
-## Inputs
+## Workflow
 
-1. **Content to review** — accept content in any of these forms:
-   - Pasted directly into the conversation
-   - A file path or ~~knowledge base reference (e.g. Notion page, shared doc)
-   - A URL to a published page
-   - Multiple pieces for batch review
+1. 브랜드 기준 수집: 로컬 설정(보이스, 금지 표현, 핵심 메시지, 용어집)을 로드합니다.
+2. 콘텐츠 분석: 톤, 구조, 메시지 일관성, CTA, 채널 적합성을 점검합니다.
+3. 이슈 분류: `Must fix`, `Should fix`, `Optional`로 분류합니다.
+4. 리라이트 제안: 문장 단위 대체 문구와 이유를 제공합니다.
+5. 최종판 제안: 수정 반영 버전과 짧은 변경 요약을 제공합니다.
 
-2. **Brand guidelines source** (determined automatically):
-   - If a brand style guide is configured in local settings, use it automatically
-   - If not configured, ask: "Do you have a brand style guide or voice guidelines I should review against? You can paste them, share a file, or describe your brand voice. Otherwise, I'll do a general review for clarity, consistency, and professionalism."
+## Output
 
-## Review Process
-
-### With Brand Guidelines Configured
-
-Evaluate the content against each of these dimensions:
-
-#### Voice and Tone
-- Does the content match the defined brand voice attributes?
-- Is the tone appropriate for the content type and audience?
-- Are there shifts in voice that feel inconsistent?
-- Flag specific sentences or phrases that deviate with an explanation of why
-
-#### Terminology and Language
-- Are preferred brand terms used correctly?
-- Are any "avoid" terms or phrases present?
-- Is jargon level appropriate for the target audience?
-- Are product names, feature names, and branded terms used correctly (capitalization, formatting)?
-
-#### Messaging Pillars
-- Does the content align with defined messaging pillars or value propositions?
-- Are claims consistent with approved messaging?
-- Is the content reinforcing or contradicting brand positioning?
-
-#### Style Guide Compliance
-- Grammar and punctuation per style guide (e.g., Oxford comma, title case vs. sentence case)
-- Formatting conventions (headers, lists, emphasis)
-- Number formatting, date formatting
-- Acronym usage (defined on first use?)
-
-### Without Brand Guidelines (Generic Review)
-
-Evaluate the content for:
-
-#### Clarity
-- Is the main message clear within the first paragraph?
-- Are sentences concise and easy to understand?
-- Is the structure logical and easy to follow?
-- Are there ambiguous statements or unclear references?
-
-#### Consistency
-- Is the tone consistent throughout?
-- Are terms used consistently (no switching between synonyms for the same concept)?
-- Is formatting consistent (headers, lists, capitalization)?
-
-#### Professionalism
-- Is the content free of typos, grammatical errors, and awkward phrasing?
-- Is the tone appropriate for the intended audience?
-- Are claims supported or substantiated?
-
-### Legal and Compliance Flags (Always Checked)
-
-Regardless of whether brand guidelines are configured, flag:
-- **Unsubstantiated claims** — superlatives ("best", "fastest", "only") without evidence or qualification
-- **Missing disclaimers** — financial claims, health claims, or guarantees that may need legal disclaimers
-- **Comparative claims** — comparisons to competitors that could be challenged
-- **Regulatory language** — content that may need compliance review (financial services, healthcare, etc.)
-- **Testimonial issues** — quotes or endorsements without attribution or disclosure
-- **Copyright concerns** — content that appears to be closely paraphrased from other sources
-
-## Output Format
-
-Present the review as:
-
-### Summary
-- Overall assessment: how well the content aligns with brand standards (or general quality)
-- 1-2 sentence summary of the biggest strengths
-- 1-2 sentence summary of the most important improvements
-
-### Detailed Findings
-
-For each issue found, provide:
-
-| Issue | Location | Severity | Suggestion |
-|-------|----------|----------|------------|
-
-Where severity is:
-- **High** — contradicts brand voice, contains compliance risk, or significantly undermines messaging
-- **Medium** — inconsistent with guidelines but not damaging
-- **Low** — minor style or preference issue
-
-### Revised Sections
-
-For the top 3-5 highest-severity issues, provide a before/after showing the original text and a suggested revision.
-
-### Legal/Compliance Flags
-
-List any legal or compliance concerns separately with recommended actions.
-
-## After Review
-
-Ask: "Would you like me to:
-- Revise the full content with these suggestions applied?
-- Focus on fixing just the high-severity issues?
-- Review additional content against the same guidelines?
-- Help you document your brand voice for future reviews?"
+- Overall Fit Score
+- Findings by category(voice, clarity, messaging, compliance)
+- Priority fixes
+- Revised draft

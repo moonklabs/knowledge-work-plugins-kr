@@ -1,7 +1,7 @@
 {
   "name": "product-management",
   "version": "1.0.0",
-  "description": "Write feature specs, plan roadmaps, and synthesize user research faster. Keep stakeholders updated and stay ahead of the competitive landscape.",
+  "description": "기능 스펙 작성, 로드맵 계획, 사용자 리서치 합성을 더 빠르게 수행합니다. 이해관계자 업데이트를 체계화하고 경쟁 환경에 선제 대응합니다.",
   "author": {
     "name": "Anthropic"
   }

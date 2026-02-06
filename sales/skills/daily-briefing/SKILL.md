@@ -1,263 +1,40 @@
 ---
 name: daily-briefing
-description: Start your day with a prioritized sales briefing. Works standalone when you tell me your meetings and priorities, supercharged when you connect your calendar, CRM, and email. Trigger with "morning briefing", "daily brief", "what's on my plate today", "prep my day", or "start my day".
+description: daily-briefing 작업을 수행하기 위한 한국어 운영 가이드
 ---
 
-# Daily Sales Briefing
+# daily-briefing 스킬
 
-Get a clear view of what matters most today. This skill works with whatever you tell me, and gets richer when you connect your tools.
+이 스킬은 'sales/skills/daily-briefing' 범위의 작업을 일관된 절차로 수행하기 위한 지침입니다.
 
-## How It Works
+## 목적
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                      DAILY BRIEFING                              │
-├─────────────────────────────────────────────────────────────────┤
-│  ALWAYS (works standalone)                                       │
-│  ✓ You tell me: today's meetings, key deals, priorities         │
-│  ✓ I organize: prioritized action plan for your day             │
-│  ✓ Output: scannable 2-minute briefing                          │
-├─────────────────────────────────────────────────────────────────┤
-│  SUPERCHARGED (when you connect your tools)                      │
-│  + Calendar: auto-pull today's meetings with attendees          │
-│  + CRM: pipeline alerts, tasks, deal health                     │
-│  + Email: unread from key accounts, waiting on replies          │
-│  + Enrichment: overnight signals on your accounts               │
-└─────────────────────────────────────────────────────────────────┘
-```
+- 요청 의도를 빠르게 명확화
+- 필요한 입력과 제약을 먼저 확인
+- 재현 가능한 산출물 생성
 
----
+## 입력
 
-## Getting Started
+- 사용자 목표/질문
+- 관련 데이터 또는 문서
+- 기간, 범위, 우선순위
 
-When you run this skill, I'll ask for what I need:
+## 절차
 
-**If no calendar connected:**
-> "What meetings do you have today? (Just paste your calendar or list them)"
+1. 요구사항과 성공 기준을 한 줄로 정리합니다.
+2. 사용 가능한 연결 소스와 로컬 파일을 확인합니다.
+3. 핵심 작업을 단계별로 수행합니다.
+4. 불확실성, 가정, 리스크를 명시합니다.
+5. 결과물을 사용 가능한 형식으로 제공합니다.
 
-**If no CRM connected:**
-> "What deals are you focused on this week? Any that need attention?"
+## 출력
 
-**If you have connectors:**
-I'll pull everything automatically and just show you the briefing.
+- 핵심 결과 요약
+- 근거(데이터/출처/가정)
+- 후속 액션 제안
 
----
+## 품질 기준
 
-## Connectors (Optional)
-
-Connect your tools to supercharge this skill:
-
-| Connector | What It Adds |
-|-----------|--------------|
-| **Calendar** | Today's meetings with attendees, times, and context |
-| **CRM** | Open pipeline, deals closing soon, overdue tasks, stale deals |
-| **Email** | Unread from opportunity contacts, emails waiting on replies |
-| **Enrichment** | Overnight signals: funding, hiring, news on your accounts |
-
-> **No connectors?** No problem. Tell me your meetings and deals, and I'll create your briefing.
-
----
-
-## Output Format
-
-```markdown
-# Daily Briefing | [Day, Month Date]
-
----
-
-## #1 Priority
-
-**[Most important thing to do today]**
-[Why it matters and what to do about it]
-
----
-
-## Today's Numbers
-
-| Open Pipeline | Closing This Month | Meetings Today | Action Items |
-|---------------|-------------------|----------------|--------------|
-| $[X] | $[X] | [N] | [N] |
-
----
-
-## Today's Meetings
-
-### [Time] — [Company] ([Meeting Type])
-**Attendees:** [Names]
-**Context:** [One-line: deal status, last touch, what's at stake]
-**Prep:** [Quick action before this meeting]
-
-### [Time] — [Company] ([Meeting Type])
-**Attendees:** [Names]
-**Context:** [One-line context]
-**Prep:** [Quick action]
-
-*Run `call-prep [company]` for detailed meeting prep*
-
----
-
-## Pipeline Alerts
-
-### Needs Attention
-| Deal | Stage | Amount | Alert | Action |
-|------|-------|--------|-------|--------|
-| [Deal] | [Stage] | $[X] | [Why flagged] | [What to do] |
-
-### Closing This Week
-| Deal | Close Date | Amount | Confidence | Blocker |
-|------|------------|--------|------------|---------|
-| [Deal] | [Date] | $[X] | [H/M/L] | [If any] |
-
----
-
-## Email Priorities
-
-### Needs Response
-| From | Subject | Received |
-|------|---------|----------|
-| [Name @ Company] | [Subject] | [Time] |
-
-### Waiting On Reply
-| To | Subject | Sent | Days Waiting |
-|----|---------|------|--------------|
-| [Name @ Company] | [Subject] | [Date] | [N] |
-
----
-
-## Suggested Actions
-
-1. **[Action]** — [Why now]
-2. **[Action]** — [Why now]
-3. **[Action]** — [Why now]
-
----
-
-*Run `call-prep [company]` before your meetings*
-*Run `call-follow-up` after each call*
-```
-
----
-
-## Execution Flow
-
-### Step 1: Gather Context
-
-**If connectors available:**
-```
-1. Calendar → Get today's events
-   - Filter to external meetings (non-company attendees)
-   - Pull: time, title, attendees, description
-
-2. CRM → Query your pipeline
-   - Open opportunities owned by you
-   - Flag: closing this week, no activity 7+ days, slipped dates
-   - Get: overdue tasks, upcoming tasks
-
-3. Email → Check priority messages
-   - Unread from opportunity contact domains
-   - Sent messages with no reply (3+ days)
-
-4. Enrichment → Check signals (if available)
-   - Funding, hiring, news on open accounts
-```
-
-**If no connectors:**
-```
-Ask user:
-1. "What meetings do you have today?"
-2. "What deals are you focused on? Any closing soon or needing attention?"
-3. "Anything urgent I should know about?"
-
-Work with whatever they provide.
-```
-
-### Step 2: Prioritize
-
-```
-Priority ranking:
-1. URGENT: Deal closing today/tomorrow not yet won
-2. HIGH: Meeting today with high-value opportunity
-3. HIGH: Unread email from decision-maker
-4. MEDIUM: Deal closing this week
-5. MEDIUM: Stale deal (7+ days no activity)
-6. LOW: Tasks due this week
-
-Select #1 Priority:
-- If meeting with >$50K deal today → prep that
-- If deal closing today → focus on close
-- If urgent email from buyer → respond first
-- Else → highest-value stale deal
-```
-
-### Step 3: Generate Briefing
-
-```
-Assemble sections based on available data:
-
-1. #1 Priority — Always include (even if simple)
-2. Today's Numbers — If CRM connected, otherwise skip
-3. Today's Meetings — From calendar or user input
-4. Pipeline Alerts — If CRM connected
-5. Email Priorities — If email connected
-6. Suggested Actions — Always include top 3 actions
-```
-
----
-
-## Quick Mode
-
-Say "quick brief" or "tldr my day" for abbreviated version:
-
-```markdown
-# Quick Brief | [Date]
-
-**#1:** [Priority action]
-
-**Meetings:** [N] — [Company 1], [Company 2], [Company 3]
-
-**Alerts:**
-- [Alert 1]
-- [Alert 2]
-
-**Do Now:** [Single most important action]
-```
-
----
-
-## End of Day Mode
-
-Say "wrap up my day" or "end of day summary" after your last meeting:
-
-```markdown
-# End of Day | [Date]
-
-**Completed:**
-- [Meeting 1] — [Outcome]
-- [Meeting 2] — [Outcome]
-
-**Pipeline Changes:**
-- [Deal] moved to [Stage]
-
-**Tomorrow's Focus:**
-- [Priority 1]
-- [Priority 2]
-
-**Open Loops:**
-- [ ] [Unfinished item needing follow-up]
-```
-
----
-
-## Tips
-
-1. **Connect your calendar first** — Biggest time saver
-2. **Add CRM second** — Unlocks pipeline alerts
-3. **Even without connectors** — Just tell me your meetings and I'll help prioritize
-
----
-
-## Related Skills
-
-- **call-prep** — Deep prep for any specific meeting
-- **call-follow-up** — Process notes after calls
-- **account-research** — Research a company before first meeting
+- 모호한 표현 없이 구체적으로 작성
+- 불필요한 장문 설명 지양
+- 사용자 의사결정에 필요한 정보 우선 제시

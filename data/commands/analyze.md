@@ -1,118 +1,118 @@
 ---
-description: Answer data questions -- from quick lookups to full analyses
+description: 데이터 질문에 답변 — 빠른 조회부터 전체 분석까지
 argument-hint: "<question>"
 ---
 
-# /analyze - Answer Data Questions
+# /analyze - 데이터 질문 답변
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 낯선 플레이스홀더가 보이거나 어떤 도구가 연결되어 있는지 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 보세요.
 
-Answer a data question, from a quick lookup to a full analysis to a formal report.
+간단한 조회부터 전체 분석, 정식 리포트까지 데이터 질문에 답합니다.
 
-## Usage
+## 사용법
 
 ```
-/analyze <natural language question>
+/analyze <자연어 질문>
 ```
 
-## Workflow
+## 워크플로
 
-### 1. Understand the Question
+### 1. 질문 이해
 
-Parse the user's question and determine:
+사용자 질문을 파싱해 다음을 결정합니다.
 
-- **Complexity level**:
-  - **Quick answer**: Single metric, simple filter, factual lookup (e.g., "How many users signed up last week?")
-  - **Full analysis**: Multi-dimensional exploration, trend analysis, comparison (e.g., "What's driving the drop in conversion rate?")
-  - **Formal report**: Comprehensive investigation with methodology, caveats, and recommendations (e.g., "Prepare a quarterly business review of our subscription metrics")
-- **Data requirements**: Which tables, metrics, dimensions, and time ranges are needed
-- **Output format**: Number, table, chart, narrative, or combination
+- **복잡도 수준**:
+  - **빠른 답변**: 단일 지표, 간단한 필터, 사실 조회 (예: "지난주 가입자는 몇 명이죠?")
+  - **전체 분석**: 다차원 탐색, 추세 분석, 비교 (예: "전환율 하락의 원인은 무엇인가요?")
+  - **정식 리포트**: 방법론, 주의사항, 권고안을 포함한 종합 조사 (예: "구독 지표에 대한 분기 비즈니스 리뷰를 준비해 주세요")
+- **데이터 요구사항**: 필요한 테이블, 지표, 차원, 기간
+- **출력 형식**: 숫자, 표, 차트, 서술, 또는 조합
 
-### 2. Gather Data
+### 2. 데이터 수집
 
-**If a data warehouse MCP server is connected:**
+**데이터 웨어하우스 MCP 서버가 연결된 경우:**
 
-1. Explore the schema to find relevant tables and columns
-2. Write SQL query(ies) to extract the needed data
-3. Execute the query and retrieve results
-4. If the query fails, debug and retry (check column names, table references, syntax for the specific dialect)
-5. If results look unexpected, run sanity checks before proceeding
+1. 스키마를 탐색해 관련 테이블과 컬럼을 찾습니다
+2. 필요한 데이터를 추출하는 SQL 쿼리를 작성합니다
+3. 쿼리를 실행하고 결과를 가져옵니다
+4. 쿼리가 실패하면 디버깅 후 재시도합니다(컬럼명, 테이블 참조, 방언 문법 점검)
+5. 결과가 이상해 보이면 합리성 검증을 수행한 뒤 진행합니다
 
-**If no data warehouse is connected:**
+**데이터 웨어하우스가 연결되지 않은 경우:**
 
-1. Ask the user to provide data in one of these ways:
-   - Paste query results directly
-   - Upload a CSV or Excel file
-   - Describe the schema so you can write queries for them to run
-2. If writing queries for manual execution, use the `sql-queries` skill for dialect-specific best practices
-3. Once data is provided, proceed with analysis
+1. 사용자가 다음 중 하나로 데이터를 제공하도록 요청합니다.
+   - 쿼리 결과를 직접 붙여넣기
+   - CSV 또는 Excel 파일 업로드
+   - 스키마를 설명해 쿼리를 대신 작성
+2. 수동 실행용 쿼리를 작성할 때는 `sql-queries` 스킬의 방언별 모범 사례를 사용합니다
+3. 데이터가 제공되면 분석을 진행합니다
 
-### 3. Analyze
+### 3. 분석
 
-- Calculate relevant metrics, aggregations, and comparisons
-- Identify patterns, trends, outliers, and anomalies
-- Compare across dimensions (time periods, segments, categories)
-- For complex analyses, break the problem into sub-questions and address each
+- 관련 지표, 집계, 비교를 계산합니다
+- 패턴, 추세, 이상치, 변칙을 식별합니다
+- 차원별(기간, 세그먼트, 카테고리) 비교를 수행합니다
+- 복잡한 분석은 하위 질문으로 쪼개어 해결합니다
 
-### 4. Validate Before Presenting
+### 4. 제시 전 검증
 
-Before sharing results, run through validation checks:
+결과를 공유하기 전에 다음 검증을 수행합니다.
 
-- **Row count sanity**: Does the number of records make sense?
-- **Null check**: Are there unexpected nulls that could skew results?
-- **Magnitude check**: Are the numbers in a reasonable range?
-- **Trend continuity**: Do time series have unexpected gaps?
-- **Aggregation logic**: Do subtotals sum to totals correctly?
+- **행 수 합리성**: 레코드 수가 합리적인가?
+- **결측치 확인**: 예상치 못한 결측이 결과를 왜곡하지 않는가?
+- **규모 확인**: 수치가 합리적 범위에 있는가?
+- **추세 연속성**: 시계열에 예상치 못한 공백이 있는가?
+- **집계 로직**: 소계가 합계와 일치하는가?
 
-If any check raises concerns, investigate and note caveats.
+문제가 있으면 조사하고 주의사항을 기록합니다.
 
-### 5. Present Findings
+### 5. 결과 제시
 
-**For quick answers:**
-- State the answer directly with relevant context
-- Include the query used (collapsed or in a code block) for reproducibility
+**빠른 답변:**
+- 관련 컨텍스트와 함께 결과를 바로 제시
+- 재현성을 위해 사용한 쿼리를 포함(접기 또는 코드블록)
 
-**For full analyses:**
-- Lead with the key finding or insight
-- Support with data tables and/or visualizations
-- Note methodology and any caveats
-- Suggest follow-up questions
+**전체 분석:**
+- 핵심 인사이트로 시작
+- 데이터 표/시각화로 근거 제시
+- 방법론과 주의사항 명시
+- 후속 질문 제안
 
-**For formal reports:**
-- Executive summary with key takeaways
-- Methodology section explaining approach and data sources
-- Detailed findings with supporting evidence
-- Caveats, limitations, and data quality notes
-- Recommendations and suggested next steps
+**정식 리포트:**
+- 핵심 요약(Executive summary)
+- 방법론 섹션(접근 방식, 데이터 소스)
+- 근거를 포함한 상세 결과
+- 주의사항, 한계, 데이터 품질 노트
+- 권고안과 다음 단계
 
-### 6. Visualize Where Helpful
+### 6. 필요 시 시각화
 
-When a chart would communicate results more effectively than a table:
+차트가 표보다 효과적인 경우:
 
-- Use the `data-visualization` skill to select the right chart type
-- Generate a Python visualization or build it into an HTML dashboard
-- Follow visualization best practices for clarity and accuracy
+- `data-visualization` 스킬로 적절한 차트 유형 선택
+- Python 시각화를 생성하거나 HTML 대시보드에 포함
+- 명확성과 정확성을 위한 시각화 모범 사례 준수
 
-## Examples
+## 예시
 
-**Quick answer:**
+**빠른 답변:**
 ```
-/analyze How many new users signed up in December?
-```
-
-**Full analysis:**
-```
-/analyze What's causing the increase in support ticket volume over the past 3 months? Break down by category and priority.
+/analyze 12월 신규 가입자는 몇 명인가요?
 ```
 
-**Formal report:**
+**전체 분석:**
 ```
-/analyze Prepare a data quality assessment of our customer table -- completeness, consistency, and any issues we should address.
+/analyze 지난 3개월 동안 지원 티켓 볼륨이 증가한 원인은 무엇인가요? 카테고리와 우선순위로 분해해 주세요.
 ```
 
-## Tips
+**정식 리포트:**
+```
+/analyze 고객 테이블의 데이터 품질 평가를 준비해 주세요 -- 완전성, 일관성, 그리고 해결해야 할 이슈를 포함해 주세요.
+```
 
-- Be specific about time ranges, segments, or metrics when possible
-- If you know the table names, mention them to speed up the process
-- For complex questions, Claude may break them into multiple queries
-- Results are always validated before presentation -- if something looks off, Claude will flag it
+## 팁
+
+- 기간, 세그먼트, 지표를 구체적으로 적으면 좋습니다
+- 테이블명을 알고 있다면 언급해 주세요
+- 복잡한 질문은 여러 쿼리로 나눌 수 있습니다
+- 결과는 항상 검증 후 제시됩니다 — 이상 징후가 있으면 Claude가 표시합니다

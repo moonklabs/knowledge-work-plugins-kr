@@ -1,50 +1,50 @@
 ---
-description: Build an interactive HTML dashboard with charts, filters, and tables
+description: 차트, 필터, 테이블이 포함된 인터랙티브 HTML 대시보드 생성
 argument-hint: "<description> [data source]"
 ---
 
-# /build-dashboard - Build Interactive Dashboards
+# /build-dashboard - 인터랙티브 대시보드 생성
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 낯선 플레이스홀더가 보이거나 어떤 도구가 연결되어 있는지 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 보세요.
 
-Build a self-contained interactive HTML dashboard with charts, filters, tables, and professional styling. Opens directly in a browser -- no server or dependencies required.
+차트, 필터, 테이블, 전문적인 스타일을 포함한 자체 포함형 HTML 대시보드를 생성합니다. 브라우저에서 바로 열 수 있으며 서버나 의존성이 필요하지 않습니다.
 
-## Usage
+## 사용법
 
 ```
-/build-dashboard <description of dashboard> [data source]
+/build-dashboard <대시보드 설명> [data source]
 ```
 
-## Workflow
+## 워크플로
 
-### 1. Understand the Dashboard Requirements
+### 1. 대시보드 요구사항 이해
 
-Determine:
+다음을 확인합니다.
 
-- **Purpose**: Executive overview, operational monitoring, deep-dive analysis, team reporting
-- **Audience**: Who will use this dashboard?
-- **Key metrics**: What numbers matter most?
-- **Dimensions**: What should users be able to filter or slice by?
-- **Data source**: Live query, pasted data, CSV file, or sample data
+- **목적**: 임원 요약, 운영 모니터링, 심층 분석, 팀 리포팅
+- **대상**: 누가 이 대시보드를 사용할 것인가
+- **핵심 지표**: 가장 중요한 숫자
+- **차원**: 사용자가 필터/분해할 차원
+- **데이터 소스**: 라이브 쿼리, 붙여넣은 데이터, CSV 파일, 샘플 데이터
 
-### 2. Gather the Data
+### 2. 데이터 수집
 
-**If data warehouse is connected:**
-1. Query the necessary data
-2. Embed the results as JSON within the HTML file
+**데이터 웨어하우스가 연결된 경우:**
+1. 필요한 데이터를 쿼리
+2. 결과를 HTML 내부 JSON으로 임베드
 
-**If data is pasted or uploaded:**
-1. Parse and clean the data
-2. Embed as JSON in the dashboard
+**데이터가 붙여넣기/업로드된 경우:**
+1. 데이터를 파싱하고 정제
+2. JSON으로 대시보드에 임베드
 
-**If working from a description without data:**
-1. Create a realistic sample dataset matching the described schema
-2. Note in the dashboard that it uses sample data
-3. Provide instructions for swapping in real data
+**데이터 없이 설명만 있는 경우:**
+1. 설명된 스키마에 맞는 현실적인 샘플 데이터 생성
+2. 대시보드에 샘플 데이터 사용 사실을 명시
+3. 실제 데이터로 교체하는 방법 안내
 
-### 3. Design the Dashboard Layout
+### 3. 대시보드 레이아웃 설계
 
-Follow a standard dashboard layout pattern:
+표준 레이아웃 패턴을 따릅니다.
 
 ```
 ┌──────────────────────────────────────────────────┐
@@ -63,59 +63,59 @@ Follow a standard dashboard layout pattern:
 └──────────────────────────────────────────────────┘
 ```
 
-**Adapt the layout to the content:**
-- 2-4 KPI cards at the top for headline numbers
-- 1-3 charts in the middle section for trends and breakdowns
-- Optional detail table at the bottom for drill-down data
-- Filters in the header or sidebar depending on complexity
+**콘텐츠에 맞게 레이아웃을 조정합니다.**
+- 상단에 2~4개의 KPI 카드
+- 중간 섹션에 1~3개의 차트(추세/분해)
+- 하단에 드릴다운용 상세 테이블(선택)
+- 필터는 복잡도에 따라 헤더 또는 사이드바
 
-### 4. Build the HTML Dashboard
+### 4. HTML 대시보드 구성
 
-Generate a single self-contained HTML file that includes:
+하나의 자체 포함형 HTML 파일을 생성합니다.
 
-**Structure (HTML):**
-- Semantic HTML5 layout
-- Responsive grid using CSS Grid or Flexbox
-- Filter controls (dropdowns, date pickers, toggles)
-- KPI cards with values and labels
-- Chart containers
-- Data table with sortable headers
+**구조(HTML):**
+- 의미 있는 HTML5 레이아웃
+- CSS Grid/Flexbox 기반 반응형 그리드
+- 필터 컨트롤(드롭다운, 날짜 선택기, 토글)
+- KPI 카드(값 + 레이블)
+- 차트 컨테이너
+- 정렬 가능한 데이터 테이블
 
-**Styling (CSS):**
-- Professional color scheme (clean whites, grays, with accent colors for data)
-- Card-based layout with subtle shadows
-- Consistent typography (system fonts for fast loading)
-- Responsive design that works on different screen sizes
-- Print-friendly styles
+**스타일(CSS):**
+- 전문적인 컬러 스킴(깨끗한 흰색/회색 + 데이터 강조색)
+- 카드 기반 레이아웃과 부드러운 그림자
+- 일관된 타이포그래피(빠른 로딩을 위한 시스템 폰트)
+- 다양한 화면 크기 대응
+- 인쇄 친화 스타일
 
-**Interactivity (JavaScript):**
-- Chart.js for interactive charts (included via CDN)
-- Filter dropdowns that update all charts and tables simultaneously
-- Sortable table columns
-- Hover tooltips on charts
-- Number formatting (commas, currency, percentages)
+**인터랙션(JavaScript):**
+- Chart.js(인터랙티브 차트, CDN 포함)
+- 필터 변경 시 모든 차트/테이블 동시 갱신
+- 테이블 컬럼 정렬
+- 차트 툴팁
+- 숫자 포맷(콤마, 통화, 퍼센트)
 
-**Data (embedded JSON):**
-- All data embedded directly in the HTML as JavaScript variables
-- No external data fetches required
-- Dashboard works completely offline
+**데이터(임베디드 JSON):**
+- 모든 데이터를 HTML에 직접 임베드
+- 외부 데이터 fetch 없음
+- 오프라인에서도 동작
 
-### 5. Implement Chart Types
+### 5. 차트 유형 구현
 
-Use Chart.js for all charts. Common dashboard chart patterns:
+모든 차트는 Chart.js를 사용합니다. 일반적인 패턴은 다음과 같습니다.
 
-- **Line chart**: Time series trends
-- **Bar chart**: Category comparisons
-- **Doughnut chart**: Composition (when <6 categories)
-- **Stacked bar**: Composition over time
-- **Mixed (bar + line)**: Volume with rate overlay
+- **라인 차트**: 시간 추세
+- **막대 차트**: 카테고리 비교
+- **도넛 차트**: 구성(카테고리 <6일 때)
+- **누적 막대**: 시간에 따른 구성
+- **혼합형(막대 + 라인)**: 볼륨과 비율 동시 표시
 
-### 6. Add Interactivity
+### 6. 인터랙션 추가
 
-**Filters:**
+**필터:**
 ```javascript
-// All filters update a central filter state
-// Charts and tables re-render when filters change
+// 모든 필터는 중앙 필터 상태를 업데이트합니다
+// 필터 변경 시 차트와 테이블을 다시 렌더링합니다
 function applyFilters() {
     const filtered = data.filter(row => matchesFilters(row));
     updateKPIs(filtered);
@@ -124,24 +124,24 @@ function applyFilters() {
 }
 ```
 
-**Table sorting:**
-- Click column headers to sort ascending/descending
-- Visual indicator for current sort column and direction
+**테이블 정렬:**
+- 컬럼 헤더 클릭 시 오름/내림차순 정렬
+- 현재 정렬 컬럼과 방향 표시
 
-**Tooltips:**
-- Charts show detailed values on hover
-- KPI cards show comparison to previous period
+**툴팁:**
+- 차트 hover 시 상세 값 표시
+- KPI 카드에 이전 기간 대비 표시
 
-### 7. Save and Open
+### 7. 저장 및 열기
 
-1. Save the dashboard as an HTML file with a descriptive name (e.g., `sales_dashboard.html`)
-2. Open it in the user's default browser
-3. Confirm it renders correctly
-4. Provide instructions for updating data or customizing
+1. 설명적인 이름으로 HTML 저장(예: `sales_dashboard.html`)
+2. 기본 브라우저에서 열기
+3. 렌더링 확인
+4. 데이터 업데이트/커스터마이징 방법 안내
 
-## Output Template
+## 출력 템플릿
 
-The generated HTML file follows this structure:
+생성된 HTML 파일 구조는 다음과 같습니다.
 
 ```html
 <!DOCTYPE html>
@@ -170,23 +170,23 @@ The generated HTML file follows this structure:
 </html>
 ```
 
-## Examples
+## 예시
 
 ```
-/build-dashboard Monthly sales dashboard with revenue trend, top products, and regional breakdown. Data is in the orders table.
-```
-
-```
-/build-dashboard Here's our support ticket data [pastes CSV]. Build a dashboard showing volume by priority, response time trends, and resolution rates.
+/build-dashboard 월간 매출 추세, 상위 제품, 지역별 분해를 포함한 세일즈 대시보드. 데이터는 orders 테이블에 있습니다.
 ```
 
 ```
-/build-dashboard Create a template executive dashboard for a SaaS company showing MRR, churn, new customers, and NPS. Use sample data.
+/build-dashboard 지원 티켓 데이터입니다 [CSV 붙여넣기]. 우선순위별 볼륨, 응답 시간 추세, 해결률을 보여주는 대시보드를 만들어 주세요.
 ```
 
-## Tips
+```
+/build-dashboard SaaS 회사를 위한 임원용 대시보드 템플릿을 만들어 주세요. MRR, 이탈, 신규 고객, NPS를 포함하고 샘플 데이터를 사용하세요.
+```
 
-- Dashboards are fully self-contained HTML files -- share them with anyone by sending the file
-- For real-time dashboards, consider connecting to a BI tool instead. These dashboards are point-in-time snapshots
-- Request "dark mode" or "presentation mode" for different styling
-- You can request a specific color scheme to match your brand
+## 팁
+
+- 대시보드는 완전히 자체 포함된 HTML 파일입니다. 파일을 공유하면 누구나 볼 수 있습니다
+- 실시간 대시보드가 필요하다면 BI 도구 연결을 고려하세요. 이 대시보드는 특정 시점 스냅샷입니다
+- "dark mode" 또는 "presentation mode"를 요청하면 스타일을 조정합니다
+- 브랜드에 맞는 특정 색상 스킴을 요청할 수 있습니다

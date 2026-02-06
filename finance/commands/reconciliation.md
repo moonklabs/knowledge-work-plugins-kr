@@ -1,147 +1,75 @@
 ---
-description: Reconcile GL balances to subledger, bank, or third-party balances
+description: GL 잔액을 서브레저/은행/외부 잔액과 대사
 argument-hint: "<account> [period]"
 ---
 
 # Account Reconciliation
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 낯선 플레이스홀더가 보이거나 어떤 도구가 연결되어 있는지 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 보세요.
 
-**Important**: This command assists with reconciliation workflows but does not provide financial advice. All reconciliations should be reviewed by qualified financial professionals before sign-off.
-
-Reconcile GL account balances to subledger, bank, or third-party balances. Identify and categorize reconciling items and generate a reconciliation workpaper.
+**중요**: 이 커맨드는 대사 워크플로를 보조하지만 재무 자문을 제공하지 않습니다. 사인오프 전 전문가 검토가 필요합니다.
 
 ## Usage
 
-```
+```bash
 /recon <account> <period>
 ```
 
 ### Arguments
 
-- `account` — The account or account category to reconcile. Examples:
-  - `cash` or `bank` — Bank reconciliation (GL cash to bank statement)
-  - `accounts-receivable` or `ar` — AR subledger reconciliation
-  - `accounts-payable` or `ap` — AP subledger reconciliation
-  - `fixed-assets` or `fa` — Fixed asset subledger reconciliation
-  - `intercompany` or `ic` — Intercompany balance reconciliation
-  - `prepaid` — Prepaid expense schedule reconciliation
-  - `accrued-liabilities` — Accrued liabilities detail reconciliation
-  - Any specific GL account code (e.g., `1010`, `2100`)
-- `period` — The accounting period end date (e.g., `2024-12`, `2024-12-31`)
+- `account`: `cash`, `ar`, `ap`, `fixed-assets`, `intercompany`, `prepaid`, `accrued-liabilities`, 또는 계정코드
+- `period`: `2024-12`, `2024-12-31` 등
 
 ## Workflow
 
-### 1. Gather Both Sides of the Reconciliation
+### 1. 양측 잔액 수집
 
-If ~~erp or ~~data warehouse is connected:
-- Pull the GL balance for the specified account(s) as of period end
-- Pull the subledger, bank statement, or third-party balance for comparison
-- Pull prior period reconciliation (if available) for outstanding item carryforward
+연결 소스가 있으면:
+- 기간말 GL 잔액
+- 비교측 잔액(서브레저/은행/외부확인)
+- 전기 미결항목
 
-If no data source is connected:
-> Connect ~~erp or ~~data warehouse to pull account balances automatically. To reconcile manually, provide:
-> 1. **GL side:** The general ledger balance for the account as of period end
-> 2. **Other side:** The subledger balance, bank statement balance, or third-party confirmation balance
-> 3. **Prior period outstanding items** (optional): Any reconciling items from the prior period reconciliation
+연결이 없으면 사용자에게 요청:
+1. GL 잔액
+2. 비교측 잔액
+3. 전기 미결항목(선택)
 
-### 2. Compare Balances
+### 2. 차이 계산
 
-Calculate the difference between the two sides:
+`GL Balance - Other Balance`를 계산합니다.
 
-```
-GL Balance:                    $XX,XXX.XX
-Subledger/Bank/Other Balance:  $XX,XXX.XX
-                               ----------
-Difference:                    $XX,XXX.XX
-```
+### 3. 조정항목 식별
 
-### 3. Identify Reconciling Items
+- 타이밍 차이: 미결제수표, 미입금, 반제 대기 등
+- 영구 차이: 오분개, 누락분개, 수수료 미반영 등
+- 전기 이월: 해결/미해결 구분 및 에이징
 
-Analyze the difference and categorize reconciling items:
+### 4. 대사 워크페이퍼 생성
 
-**Timing Differences** (items that will clear in subsequent periods):
-- Outstanding checks / payments issued but not yet cleared
-- Deposits in transit / receipts recorded but not yet credited
-- Invoices posted in one system but pending in the other
-- Accruals awaiting reversal
+다음을 포함:
+- 계정/기간/작성자
+- GL 기준 잔액
+- 가산/차감 조정항목
+- 조정 후 잔액
+- 비교측 잔액 및 조정
+- 최종 차이(`$0.00` 목표)
 
-**Permanent Differences** (items requiring adjustment):
-- Errors in recording (wrong amount, wrong account, duplicate entries)
-- Missing entries (transactions in one system but not the other)
-- Bank fees or charges not yet recorded
-- Foreign currency translation differences
+### 5. 조정항목 상세
 
-**Prior Period Items** (carryforward from prior reconciliation):
-- Items from prior period that have now cleared (remove from reconciliation)
-- Items from prior period still outstanding (carry forward with aging)
+`Description`, `Amount`, `Category`, `Age`, `Status`, `Action Required` 표로 제시합니다.
 
-### 4. Generate Reconciliation Workpaper
+### 6. 에스컬레이션 플래그
 
-```
-ACCOUNT RECONCILIATION
-Account: [Account code] — [Account name]
-Period End: [Date]
-Prepared by: [User]
-Date Prepared: [Today]
+- 장기 미해결(30/60/90일)
+- 중요 금액 초과
+- 전기 대비 증가 추세
+- 원인 미확인 차이
 
-RECONCILIATION SUMMARY
-=======================
+### 7. 출력
 
-Balance per General Ledger:              $XX,XXX.XX
-
-Add: Reconciling items increasing GL
-  [Item description]                     $X,XXX.XX
-  [Item description]                     $X,XXX.XX
-                                         ---------
-  Subtotal additions:                    $X,XXX.XX
-
-Less: Reconciling items decreasing GL
-  [Item description]                    ($X,XXX.XX)
-  [Item description]                    ($X,XXX.XX)
-                                         ---------
-  Subtotal deductions:                  ($X,XXX.XX)
-
-Adjusted GL Balance:                     $XX,XXX.XX
-
-Balance per [Subledger/Bank/Other]:      $XX,XXX.XX
-
-Add: Reconciling items
-  [Item description]                     $X,XXX.XX
-
-Less: Reconciling items
-  [Item description]                    ($X,XXX.XX)
-
-Adjusted [Other] Balance:                $XX,XXX.XX
-
-DIFFERENCE:                              $0.00
-```
-
-### 5. Reconciling Items Detail
-
-Present each reconciling item with:
-
-| # | Description | Amount | Category | Age (Days) | Status | Action Required |
-|---|-------------|--------|----------|------------|--------|-----------------|
-| 1 | [Detail]    | $X,XXX | Timing   | 5          | Expected to clear | Monitor |
-| 2 | [Detail]    | $X,XXX | Error    | N/A        | Requires correction | Post adjusting JE |
-
-### 6. Review and Escalation
-
-Flag items that require attention:
-
-- **Aged items:** Reconciling items outstanding more than 30/60/90 days
-- **Large items:** Individual items exceeding materiality thresholds
-- **Growing balances:** Reconciling item totals increasing period over period
-- **Unresolved prior period items:** Items carried forward without resolution
-- **Unexplained differences:** Amounts that cannot be tied to specific transactions
-
-### 7. Output
-
-Provide:
-1. The formatted reconciliation workpaper
-2. List of reconciling items with categorization and aging
-3. Required adjusting entries (if any permanent differences identified)
-4. Action items for items requiring follow-up
-5. Comparison to prior period reconciliation (if available)
-6. Sign-off section for preparer and reviewer
+1. 대사 워크페이퍼
+2. 조정항목 목록/에이징
+3. 필요 수정분개
+4. 후속 액션
+5. 전기 대비
+6. 작성자/검토자 사인오프 섹션

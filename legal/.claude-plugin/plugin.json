@@ -1,7 +1,7 @@
 {
   "name": "legal",
   "version": "1.0.0",
-  "description": "Speed up contract review, NDA triage, and compliance workflows for in-house legal teams. Draft legal briefs, organize precedent research, and manage institutional knowledge.",
+  "description": "사내 법무팀의 계약 검토, NDA 분류, 컴플라이언스 워크플로를 가속합니다. 법무 브리프를 작성하고 선례 리서치를 정리하며 조직 지식을 관리합니다.",
   "author": {
     "name": "Anthropic"
   }

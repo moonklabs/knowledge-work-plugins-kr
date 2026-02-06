@@ -1,20 +1,20 @@
-# Connectors
+# 커넥터
 
-## How tool references work
+## 도구 레퍼런스 동작 방식
 
-Plugin files use `~~category` as a placeholder for whatever tool the user connects in that category. For example, `~~data warehouse` might mean Snowflake, BigQuery, or any other warehouse with an MCP server.
+플러그인 파일은 `~~category`를 사용자가 연결한 해당 카테고리의 도구를 가리키는 플레이스홀더로 사용합니다. 예를 들어 `~~data warehouse`는 Snowflake, BigQuery 또는 MCP 서버가 있는 다른 웨어하우스를 의미할 수 있습니다.
 
-Plugins are **tool-agnostic** — they describe workflows in terms of categories (data warehouse, chat, project tracker, etc.) rather than specific products. The `.mcp.json` pre-configures specific MCP servers, but any MCP server in that category works.
+플러그인은 **도구에 종속되지 않습니다**. 특정 제품명이 아니라 카테고리(데이터 웨어하우스, 채팅, 프로젝트 트래커 등)로 워크플로를 설명합니다. `.mcp.json`에는 특정 MCP 서버가 미리 구성되어 있지만, 해당 카테고리의 어떤 MCP 서버라도 사용할 수 있습니다.
 
-## Connectors for this plugin
+## 이 플러그인의 커넥터
 
-| Category | Placeholder | Included servers | Other options |
+| 카테고리 | 플레이스홀더 | 포함 서버 | 기타 옵션 |
 |----------|-------------|-----------------|---------------|
-| Data warehouse | `~~data warehouse` | Snowflake\*, Databricks\*, BigQuery | Redshift, PostgreSQL |
-| Email | `~~email` | Microsoft 365 | — |
-| Office suite | `~~office suite` | Microsoft 365 | — |
-| Chat | `~~chat` | Slack | Microsoft Teams |
-| ERP / Accounting | `~~erp` | — (no supported MCP servers yet) | NetSuite, SAP, QuickBooks, Xero |
-| Analytics / BI | `~~analytics` | — (no supported MCP servers yet) | Tableau, Looker, Power BI |
+| 데이터 웨어하우스 | `~~data warehouse` | Snowflake\*, Databricks\*, BigQuery | Redshift, PostgreSQL |
+| 이메일 | `~~email` | Microsoft 365 | — |
+| 오피스 제품군 | `~~office suite` | Microsoft 365 | — |
+| 채팅 | `~~chat` | Slack | Microsoft Teams |
+| ERP / 회계 | `~~erp` | — (지원되는 MCP 서버 없음) | NetSuite, SAP, QuickBooks, Xero |
+| 분석 / BI | `~~analytics` | — (지원되는 MCP 서버 없음) | Tableau, Looker, Power BI |
 
-\* Placeholder — MCP URL not yet configured
+\* 플레이스홀더 — MCP URL이 아직 설정되지 않았습니다

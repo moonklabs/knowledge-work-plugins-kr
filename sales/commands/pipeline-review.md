@@ -1,52 +1,52 @@
 ---
-description: Analyze pipeline health — prioritize deals, flag risks, get a weekly action plan
+description: 파이프라인 상태 분석, 딜 우선순위 지정, 리스크 플래그, 주간 액션 플랜 생성
 argument-hint: "<segment or rep>"
 ---
 
 # /pipeline-review
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 낯선 플레이스홀더가 보이거나 어떤 도구가 연결되어 있는지 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 보세요.
 
-Analyze your pipeline health, prioritize deals, and get actionable recommendations for where to focus.
+파이프라인 건전성을 분석하고 딜 우선순위를 정해 어디에 집중해야 할지 실행 가능한 추천을 제공합니다.
 
-## Usage
+## 사용법
 
 ```
 /pipeline-review
 ```
 
-Then provide your pipeline data.
+그 다음 파이프라인 데이터를 제공하세요.
 
 ---
 
-## How It Works
+## 동작 방식
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                     PIPELINE REVIEW                              │
 ├─────────────────────────────────────────────────────────────────┤
 │  STANDALONE (always works)                                       │
-│  ✓ Upload CSV export from your CRM                              │
-│  ✓ Or paste/describe your deals                                 │
-│  ✓ Health check: flag stale, stuck, and at-risk deals          │
-│  ✓ Prioritization: rank deals by impact and closability        │
-│  ✓ Hygiene audit: missing data, bad close dates, single-thread │
-│  ✓ Weekly action plan: what to focus on                        │
+│  ✓ CRM CSV 내보내기 업로드                                      │
+│  ✓ 또는 딜을 붙여넣거나 설명                                    │
+│  ✓ 상태 점검: 오래됨/정체/고위험 딜 플래그                     │
+│  ✓ 우선순위: 영향도와 클로즈 가능성 기반 랭킹                  │
+│  ✓ 위생 점검: 데이터 누락, 잘못된 종료일, 단일 접점            │
+│  ✓ 주간 액션 플랜: 이번 주 집중 항목 제시                      │
 ├─────────────────────────────────────────────────────────────────┤
 │  SUPERCHARGED (when you connect your tools)                      │
-│  + CRM: Pull pipeline automatically, update records             │
-│  + Activity data for engagement scoring                         │
-│  + Historical patterns for risk prediction                      │
-│  + Calendar: See upcoming meetings per deal                     │
+│  + CRM: 파이프라인 자동 수집 및 레코드 업데이트                 │
+│  + 활동 데이터 기반 참여도 스코어링                             │
+│  + 과거 패턴 기반 리스크 예측                                   │
+│  + Calendar: 딜별 예정 미팅 확인                                │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## What I Need From You
+## 필요한 정보
 
-**Option A: Upload a CSV**
-Export your pipeline from your CRM (e.g. Salesforce, HubSpot). Helpful fields:
+**옵션 A: CSV 업로드**
+CRM(예: Salesforce, HubSpot)에서 파이프라인을 내보내세요. 다음 필드가 있으면 좋습니다.
 - Deal/Opportunity name
 - Account name
 - Amount
@@ -54,22 +54,22 @@ Export your pipeline from your CRM (e.g. Salesforce, HubSpot). Helpful fields:
 - Close date
 - Created date
 - Last activity date
-- Owner (if reviewing a team)
+- Owner (팀 리뷰 시)
 - Primary contact
 
-**Option B: Paste your deals**
+**옵션 B: 딜 붙여넣기**
 ```
 Acme Corp - $50K - Negotiation - closes Jan 31 - last activity Jan 20
 TechStart - $25K - Demo scheduled - closes Feb 15 - no activity in 3 weeks
 BigCo - $100K - Discovery - closes Mar 30 - created last week
 ```
 
-**Option C: Describe your pipeline**
+**옵션 C: 파이프라인 설명**
 "I have 12 deals. Two big ones in negotiation that I'm confident about. Three stuck in discovery for over a month. The rest are mid-stage but I haven't talked to some of them in a while."
 
 ---
 
-## Output
+## 출력
 
 ```markdown
 # Pipeline Review: [Date]
@@ -209,34 +209,34 @@ These deals may be dead weight:
 
 ---
 
-## Prioritization Framework
+## 우선순위 프레임워크
 
-I'll rank your deals using this framework:
+다음 기준으로 딜을 랭킹합니다.
 
-| Factor | Weight | What I Look For |
+| 요소 | 가중치 | 기준 |
 |--------|--------|-----------------|
-| **Close Date** | 30% | Deals closing soonest get priority |
-| **Deal Size** | 25% | Bigger deals = more focus |
-| **Stage** | 20% | Later stage = more focus |
-| **Activity** | 15% | Active deals get prioritized |
-| **Risk** | 10% | Lower risk = safer bet |
+| **Close Date** | 30% | 마감이 임박한 딜 우선 |
+| **Deal Size** | 25% | 금액이 큰 딜 우선 |
+| **Stage** | 20% | 후반 단계일수록 우선 |
+| **Activity** | 15% | 최근 활동 있는 딜 우선 |
+| **Risk** | 10% | 리스크 낮은 딜 우선 |
 
-You can tell me to weight differently: "Focus on big deals over soon deals" or "I need quick wins, prioritize close dates."
-
----
-
-## If CRM Connected
-
-- I'll pull your pipeline automatically
-- Update records with new close dates, stages, next steps
-- Create follow-up tasks
-- Track hygiene improvements over time
+가중치는 조정할 수 있습니다. 예: "빠른 성과가 필요하니 Close Date를 더 높게".
 
 ---
 
-## Tips
+## CRM 연결 시
 
-1. **Review weekly** — Pipeline health decays fast. Weekly reviews catch issues early.
-2. **Kill dead deals** — Stale opportunities inflate your pipeline and distort forecasts. Be ruthless.
-3. **Multi-thread everything** — If one person goes dark, you need a backup contact.
-4. **Close dates should mean something** — A close date is when you expect signature, not when you hope for one.
+- 파이프라인을 자동으로 수집합니다
+- 종료일, 단계, 다음 단계를 레코드에 업데이트합니다
+- 후속 작업을 생성합니다
+- 데이터 위생 개선 추이를 추적합니다
+
+---
+
+## 팁
+
+1. **주간 리뷰**: 파이프라인 건전성은 빠르게 악화됩니다. 주간 점검이 조기 대응에 효과적입니다.
+2. **죽은 딜 정리**: 오래된 기회는 파이프라인을 부풀리고 예측을 왜곡합니다.
+3. **멀티 스레딩**: 핵심 연락처 1명에 의존하지 말고 복수 이해관계자를 확보하세요.
+4. **종료일 신뢰성**: 종료일은 "희망일"이 아니라 실제 서명 예상일이어야 합니다.

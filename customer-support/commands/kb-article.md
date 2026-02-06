@@ -1,83 +1,30 @@
 ---
-description: Draft a knowledge base article from a resolved issue or common question
+description: 해결된 이슈 또는 반복 질문 기반 KB 문서 초안 생성
 argument-hint: "<resolved issue or ticket>"
 ---
 
 # KB Article
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 낯선 플레이스홀더가 보이거나 어떤 도구가 연결되어 있는지 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 보세요.
 
-Draft a publish-ready knowledge base article from a resolved support issue, common question, or documented workaround. Structures the content for searchability and self-service.
+해결된 티켓을 검색 친화적인 지식베이스 문서로 전환합니다.
 
 ## Usage
 
+```bash
+/kb-article <resolved issue>
 ```
-/kb-article <resolved issue, ticket reference, or topic description>
-```
-
-Examples:
-- `/kb-article How to configure SSO with Okta — resolved this for 3 customers last month`
-- `/kb-article Ticket #4521 — customer couldn't export data over 10k rows`
-- `/kb-article Common question: how to set up webhook notifications`
-- `/kb-article Known issue: dashboard charts not loading on Safari 16`
 
 ## Workflow
 
-### 1. Understand the Source Material
+1. 문제/원인/해결 절차 정리
+2. 대상 독자와 전제조건 정의
+3. 단계별 해결 가이드 작성
+4. 검증 단계와 자주 발생 오류 추가
+5. 관련 문서/링크/태그 제안
 
-Parse the input to identify:
+## Output
 
-- **What was the problem?** The original issue, question, or error
-- **What was the solution?** The resolution, workaround, or answer
-- **Who does this affect?** User type, plan level, or configuration
-- **How common is this?** One-off or recurring issue
-- **What article type fits best?** Use the article types from the **knowledge-management** skill (how-to, troubleshooting, FAQ, known issue, reference)
-
-If a ticket reference is provided, look up the full context:
-
-- **~~support platform**: Pull the ticket thread, resolution, and any internal notes
-- **~~knowledge base**: Check if a similar article already exists (update vs. create new)
-- **~~project tracker**: Check if there's a related bug or feature request
-
-### 2. Draft the Article
-
-Using the article structure and formatting standards from the **knowledge-management** skill:
-
-- Follow the template for the chosen article type (how-to, troubleshooting, FAQ, known issue, or reference)
-- Apply the searchability best practices: customer-language title, plain-language opening sentence, exact error messages, common synonyms
-- Keep it scannable: headers, numbered steps, short paragraphs
-
-### 3. Generate the Article
-
-Present the draft with metadata:
-
-```
-## KB Article Draft
-
-**Title:** [Article title]
-**Type:** [How-to / Troubleshooting / FAQ / Known Issue / Reference]
-**Category:** [Product area or topic]
-**Tags:** [Searchable tags]
-**Audience:** [All users / Admins / Developers / Specific plan]
-
----
-
-[Full article content — using the appropriate template
-from the knowledge-management skill]
-
----
-
-### Publishing Notes
-- **Source:** [Ticket #, customer conversation, or internal discussion]
-- **Existing articles to update:** [If this overlaps with existing content]
-- **Review needed from:** [SME or team if technical accuracy needs verification]
-- **Suggested review date:** [When to revisit for accuracy]
-```
-
-### 4. Offer Next Steps
-
-After generating the article:
-- "Want me to check if a similar article already exists in your ~~knowledge base?"
-- "Should I adjust the technical depth for a different audience?"
-- "Want me to draft a companion article (e.g., a how-to to go with this troubleshooting guide)?"
-- "Should I create an internal-only version with additional technical detail?"
+- Publish-ready KB draft
+- Troubleshooting section
+- SEO-friendly title and keywords

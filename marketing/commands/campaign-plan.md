@@ -1,120 +1,32 @@
 ---
-description: Generate a full campaign brief with objectives, channels, content calendar, and success metrics
+description: 목표, 채널, 콘텐츠 캘린더, 성공 지표가 포함된 캠페인 브리프 생성
 argument-hint: "<campaign objective or product>"
 ---
 
 # Campaign Plan
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 낯선 플레이스홀더가 보이거나 어떤 도구가 연결되어 있는지 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 보세요.
 
-Generate a comprehensive marketing campaign brief with objectives, audience, messaging, channel strategy, content calendar, and success metrics.
+캠페인 목표에 맞춰 실행 가능한 브리프를 생성합니다.
 
 ## Trigger
 
-User runs `/campaign-plan` or asks to plan, design, or build a marketing campaign.
+```bash
+/campaign-plan <goal>
+```
 
-## Inputs
+## Workflow
 
-Gather the following from the user. If not provided, ask before proceeding:
-
-1. **Campaign goal** — the primary objective (e.g., drive signups, increase awareness, launch a product, generate leads, re-engage churned users)
-
-2. **Target audience** — who the campaign is aimed at (demographics, roles, industries, pain points, buying stage)
-
-3. **Timeline** — campaign duration and any fixed dates (launch date, event date, seasonal deadline)
-
-4. **Budget range** — approximate budget or budget tier (optional; if not provided, generate a channel-agnostic plan and note where budget allocation would matter)
-
-5. **Additional context** (optional):
-   - Product or service being promoted
-   - Key differentiators or value propositions
-   - Previous campaign performance or learnings
-   - Brand guidelines or constraints
-   - Geographic focus
-
-## Campaign Brief Structure
-
-Generate a campaign brief with the following sections:
-
-### 1. Campaign Overview
-- Campaign name suggestion
-- One-sentence campaign summary
-- Primary objective with a specific, measurable goal
-- Secondary objectives (if applicable)
-
-### 2. Target Audience
-- Primary audience segment with description
-- Secondary audience segment (if applicable)
-- Audience pain points and motivations
-- Where they spend time (channels, communities, publications)
-- Buying stage alignment (awareness, consideration, decision)
-
-### 3. Key Messages
-- Core campaign message (one sentence)
-- 3-4 supporting messages tailored to audience pain points
-- Message variations by channel (if different tones are needed)
-- Proof points or evidence to support each message
-
-### 4. Channel Strategy
-Recommend channels based on audience and goal. For each channel, include:
-- Why this channel fits the audience and objective
-- Content format recommendations
-- Estimated effort level (low, medium, high)
-- Budget allocation suggestion (if budget was provided)
-
-Consider channels from:
-- Owned: blog, email, website, social media profiles
-- Earned: PR, influencer partnerships, guest posts, community engagement
-- Paid: search ads, social ads, display, sponsored content, events
-
-### 5. Content Calendar
-Create a week-by-week (or day-by-day for short campaigns) content calendar:
-- What content to produce each week
-- Which channel each piece targets
-- Key milestones and deadlines
-- Dependencies between pieces (e.g., "landing page must be live before paid ads launch")
-
-Format as a table:
-
-| Week | Content Piece | Channel | Owner/Notes | Status |
-|------|--------------|---------|-------------|--------|
-
-### 6. Content Pieces Needed
-List every content asset required for the campaign:
-- Asset name and type (blog post, email, social post, ad creative, landing page, etc.)
-- Brief description of what it should contain
-- Priority (must-have vs. nice-to-have)
-- Suggested timeline for creation
-
-### 7. Success Metrics
-Define KPIs aligned to the campaign objective:
-- Primary KPI with target number
-- Secondary KPIs (3-5)
-- How each metric will be tracked
-- Reporting cadence recommendation
-
-If ~~product analytics is connected, reference any available historical performance benchmarks to inform targets.
-
-### 8. Budget Allocation (if budget provided)
-- Breakdown by channel or activity
-- Production costs vs. distribution costs
-- Contingency recommendation (typically 10-15%)
-
-### 9. Risks and Mitigations
-- 2-3 potential risks (timeline, audience mismatch, channel underperformance)
-- Mitigation strategy for each
-
-### 10. Next Steps
-- Immediate action items to kick off the campaign
-- Stakeholder approvals needed
-- Key decision points
+1. 입력 수집: 목표, 대상, 기간, 예산, 제약을 확인합니다.
+2. 전략 수립: 핵심 메시지, 채널 믹스, 퍼널 단계별 전술을 정의합니다.
+3. 일정 설계: 주차별 콘텐츠/운영 캘린더를 작성합니다.
+4. 측정 계획: KPI, 목표치, 리포트 주기, 실험 계획을 제시합니다.
+5. 실행 리스크: 병목/의존성/대응책을 정리합니다.
 
 ## Output
 
-Present the full campaign brief with clear headings and formatting. After the brief, ask:
-
-"Would you like me to:
-- Dive deeper into any section?
-- Draft specific content pieces from the calendar?
-- Create a competitive analysis to inform the messaging?
-- Adjust the plan for a different budget or timeline?"
+- Campaign Brief
+- Audience segmentation
+- Channel plan
+- Content calendar
+- KPI & tracking plan

@@ -1,19 +1,19 @@
-# Connectors
+# 커넥터
 
-## How tool references work
+## 도구 레퍼런스 동작 방식
 
-Plugin files use `~~category` as a placeholder for whatever tool the user connects in that category. For example, `~~cloud storage` might mean Box, Egnyte, or any other storage provider with an MCP server.
+플러그인 파일은 `~~category`를 사용자가 연결한 해당 카테고리의 도구를 가리키는 플레이스홀더로 사용합니다. 예를 들어 `~~cloud storage`는 Box, Egnyte 또는 MCP 서버가 있는 다른 스토리지 제공자를 의미할 수 있습니다.
 
-Plugins are **tool-agnostic** — they describe workflows in terms of categories (cloud storage, chat, office suite, etc.) rather than specific products. The `.mcp.json` pre-configures specific MCP servers, but any MCP server in that category works.
+플러그인은 **도구에 종속되지 않습니다**. 특정 제품명이 아니라 카테고리(클라우드 스토리지, 채팅, 오피스 제품군 등)로 워크플로를 설명합니다. `.mcp.json`에는 특정 MCP 서버가 미리 구성되어 있지만, 해당 카테고리의 어떤 MCP 서버라도 사용할 수 있습니다.
 
-## Connectors for this plugin
+## 이 플러그인의 커넥터
 
-| Category | Placeholder | Included servers | Other options |
+| 카테고리 | 플레이스홀더 | 포함 서버 | 기타 옵션 |
 |----------|-------------|-----------------|---------------|
-| Chat | `~~chat` | Slack | Microsoft Teams |
-| Cloud storage | `~~cloud storage` | Box, Egnyte | Dropbox, SharePoint, Google Drive |
+| 채팅 | `~~chat` | Slack | Microsoft Teams |
+| 클라우드 스토리지 | `~~cloud storage` | Box, Egnyte | Dropbox, SharePoint, Google Drive |
 | CLM | `~~CLM` | — | Ironclad, Agiloft |
 | CRM | `~~CRM` | — | Salesforce, HubSpot |
-| E-signature | `~~e-signature` | — | DocuSign, Adobe Sign |
-| Office suite | `~~office suite` | Microsoft 365 | Google Workspace |
-| Project tracker | `~~project tracker` | Atlassian (Jira/Confluence) | Linear, Asana |
+| 전자 서명 | `~~e-signature` | — | DocuSign, Adobe Sign |
+| 오피스 제품군 | `~~office suite` | Microsoft 365 | Google Workspace |
+| 프로젝트 트래커 | `~~project tracker` | Atlassian (Jira/Confluence) | Linear, Asana |
