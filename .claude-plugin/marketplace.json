@@ -7,57 +7,57 @@
     {
       "name": "productivity",
       "source": "./productivity",
-      "description": "Manage tasks, plan your day, and build up memory of important context about your work. Syncs with your calendar, email, and chat to keep everything organized and on track."
+      "description": "작업을 관리하고 하루 일정을 계획하며 업무의 중요한 컨텍스트를 메모리로 축적합니다. 캘린더, 이메일, 채팅과 동기화해 업무를 체계적으로 정리하고 추적합니다."
     },
     {
       "name": "enterprise-search",
       "source": "./enterprise-search",
-      "description": "Search across all of your company's tools in one place. Find anything across email, chat, documents, and wikis without switching between apps."
+      "description": "회사 내 모든 도구를 한 곳에서 검색합니다. 앱 전환 없이 이메일, 채팅, 문서, 위키 전반에서 필요한 정보를 찾을 수 있습니다."
     },
     {
       "name": "cowork-plugin-management",
       "source": "./cowork-plugin-management",
-      "description": "Create, customize, and manage plugins tailored to your organization's tools and workflows. Configure MCP servers, adjust plugin behavior, and adapt templates to match how your team works."
+      "description": "조직의 도구와 워크플로에 맞는 플러그인을 생성, 커스터마이즈, 운영합니다. MCP 서버를 구성하고 플러그인 동작과 템플릿을 팀 방식에 맞게 조정합니다."
     },
     {
       "name": "sales",
       "source": "./sales",
-      "description": "Prospect, craft outreach, and build deal strategy faster. Prep for calls, manage your pipeline, and write personalized messaging that moves deals forward."
+      "description": "잠재고객 발굴, 아웃리치 작성, 딜 전략 수립을 가속합니다. 콜 준비와 파이프라인 관리를 지원하고 딜 전환을 높이는 개인화 메시지를 작성합니다."
     },
     {
       "name": "finance",
       "source": "./finance",
-      "description": "Streamline finance and accounting workflows, from journal entries and reconciliation to financial statements and variance analysis. Speed up audit prep, month-end close, and keeping your books clean."
+      "description": "전표, 대사, 재무제표, 변동 분석까지 재무/회계 워크플로를 간소화합니다. 감사 준비와 월말 마감을 가속하고 장부 정합성을 유지합니다."
     },
     {
       "name": "data",
       "source": "./data",
-      "description": "Write SQL, explore datasets, and generate insights faster. Build visualizations and dashboards, and turn raw data into clear stories for stakeholders."
+      "description": "SQL 작성, 데이터 탐색, 인사이트 도출을 더 빠르게 수행합니다. 시각화와 대시보드를 만들고 원시 데이터를 이해관계자를 위한 명확한 스토리로 전환합니다."
     },
     {
       "name": "legal",
       "source": "./legal",
-      "description": "Speed up contract review, NDA triage, and compliance workflows for in-house legal teams. Draft legal briefs, organize precedent research, and manage institutional knowledge."
+      "description": "사내 법무팀의 계약 검토, NDA 분류, 컴플라이언스 워크플로를 가속합니다. 법무 브리프를 작성하고 선례 리서치를 정리하며 조직 지식을 관리합니다."
     },
     {
       "name": "marketing",
       "source": "./marketing",
-      "description": "Create content, plan campaigns, and analyze performance across marketing channels. Maintain brand voice consistency, track competitors, and report on what's working."
+      "description": "콘텐츠 제작, 캠페인 기획, 채널 성과 분석을 지원합니다. 브랜드 보이스 일관성을 유지하고 경쟁사를 추적하며 성과를 보고합니다."
     },
     {
       "name": "customer-support",
       "source": "./customer-support",
-      "description": "Triage tickets, draft responses, escalate issues, and build your knowledge base. Research customer context and turn resolved issues into self-service content."
+      "description": "티켓을 분류하고 응답을 작성하며 이슈를 에스컬레이션하고 지식베이스를 구축합니다. 고객 컨텍스트를 조사해 해결 이슈를 셀프서비스 콘텐츠로 전환합니다."
     },
     {
       "name": "product-management",
       "source": "./product-management",
-      "description": "Write feature specs, plan roadmaps, and synthesize user research faster. Keep stakeholders updated and stay ahead of the competitive landscape."
+      "description": "기능 스펙 작성, 로드맵 계획, 사용자 리서치 합성을 더 빠르게 수행합니다. 이해관계자 업데이트를 체계화하고 경쟁 환경에 선제 대응합니다."
     },
     {
       "name": "bio-research",
       "source": "./bio-research",
-      "description": "Connect to preclinical research tools and databases (literature search, genomics analysis, target prioritization) to accelerate early-stage life sciences R&D"
+      "description": "문헌 검색, 유전체 분석, 타깃 우선순위화 등 전임상 연구 도구와 데이터베이스를 연결해 초기 생명과학 R&D를 가속합니다."
     }
   ]
 }
