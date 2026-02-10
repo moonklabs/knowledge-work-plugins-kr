@@ -1,0 +1,8 @@
+{
+  "name": "localization",
+  "version": "0.1.0",
+  "description": "Systematically translate Claude Code plugins from English to Korean while preserving structure, technical accuracy, and YAML integrity.",
+  "author": {
+    "name": "Anthropic"
+  }
+}

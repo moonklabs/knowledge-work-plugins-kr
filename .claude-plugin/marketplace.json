@@ -58,6 +58,11 @@
       "name": "bio-research",
       "source": "./bio-research",
       "description": "Connect to preclinical research tools and databases (literature search, genomics analysis, target prioritization) to accelerate early-stage life sciences R&D"
+    },
+    {
+      "name": "localization",
+      "source": "./localization",
+      "description": "Systematically translate Claude Code plugins from English to Korean while preserving structure, technical accuracy, and YAML integrity. Includes domain-specific glossaries and comprehensive translation guidelines."
     }
   ]
 }
