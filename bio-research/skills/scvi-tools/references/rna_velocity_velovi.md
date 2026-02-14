@@ -1,28 +1,28 @@
-# RNA Velocity with veloVI
+# veloVI를 이용한 RNA 속도 분석
 
-This reference covers RNA velocity analysis using veloVI, a deep learning approach that improves upon traditional velocity methods.
+본 레퍼런스는 기존의 속도 분석 방법을 개선한 딥러닝 접근법인 veloVI를 사용한 RNA 속도 분석을 다룹니다.
 
-## Overview
+## 개요
 
-RNA velocity estimates the future state of cells by modeling:
-- **Unspliced RNA**: Newly transcribed, contains introns
-- **Spliced RNA**: Mature mRNA, introns removed
+RNA 속도는 다음을 모델링하여 세포의 미래 상태를 추정합니다:
+- **비성숙 RNA (Unspliced RNA)**: 새로 전사된 RNA, 인트론 포함
+- **성숙 RNA (Spliced RNA)**: 성숙한 mRNA, 인트론 제거됨
 
-The ratio of unspliced to spliced indicates whether a gene is being upregulated or downregulated.
+비성숙 RNA 대 성숙 RNA의 비율은 유전자가 상향 조절 중인지 하향 조절 중인지를 나타냅니다.
 
-## Why veloVI?
+## veloVI를 사용하는 이유
 
-Traditional methods (velocyto, scVelo) have limitations:
-- Assume steady-state or dynamical model
-- Sensitive to noise
-- Don't handle batch effects
+기존 방법(velocyto, scVelo)에는 다음과 같은 한계가 있습니다:
+- 정상 상태 또는 동적 모델 가정
+- 노이즈에 민감
+- 배치 효과 처리 불가
 
-veloVI addresses these with:
-- Probabilistic modeling
-- Better uncertainty quantification
-- Integration with scVI framework
+veloVI는 다음으로 이러한 문제를 해결합니다:
+- 확률적 모델링
+- 향상된 불확실성 정량화
+- scVI 프레임워크와의 통합
 
-## Prerequisites
+## 사전 요구 사항
 
 ```python
 import scvi
@@ -34,9 +34,9 @@ print(f"scvi-tools version: {scvi.__version__}")
 print(f"scvelo version: {scv.__version__}")
 ```
 
-## Step 1: Generate Spliced/Unspliced Counts
+## 1단계: 성숙/비성숙 카운트 생성
 
-### From BAM Files (velocyto)
+### BAM 파일에서 생성 (velocyto)
 
 ```bash
 # Run velocyto on Cell Ranger output
@@ -45,7 +45,7 @@ velocyto run10x /path/to/cellranger_output /path/to/genes.gtf
 # Output: velocyto.loom file with spliced/unspliced layers
 ```
 
-### From kb-python (kallisto|bustools)
+### kb-python (kallisto|bustools)에서 생성
 
 ```bash
 # Faster alternative using kallisto
@@ -60,7 +60,7 @@ kb count \
     R1.fastq.gz R2.fastq.gz
 ```
 
-## Step 2: Load Velocity Data
+## 2단계: 속도 데이터 로드
 
 ```python
 # Load loom file from velocyto
@@ -77,7 +77,7 @@ print(f"Spliced shape: {adata.layers['spliced'].shape}")
 print(f"Unspliced shape: {adata.layers['unspliced'].shape}")
 ```
 
-### Merge with Existing AnnData
+### 기존 AnnData와 병합
 
 ```python
 # If you have separate loom and h5ad
@@ -88,7 +88,7 @@ adata = sc.read_h5ad("processed.h5ad")
 adata = scv.utils.merge(adata, ldata)
 ```
 
-## Step 3: Preprocessing for Velocity
+## 3단계: 속도 분석을 위한 전처리
 
 ```python
 # Filter and normalize
@@ -102,9 +102,9 @@ scv.pp.filter_and_normalize(
 scv.pp.moments(adata, n_pcs=30, n_neighbors=30)
 ```
 
-## Step 4: Run veloVI
+## 4단계: veloVI 실행
 
-### Setup AnnData
+### AnnData 설정
 
 ```python
 # Setup for veloVI
@@ -115,7 +115,7 @@ scvi.model.VELOVI.setup_anndata(
 )
 ```
 
-### Train Model
+### 모델 학습
 
 ```python
 # Create and train veloVI model
@@ -131,7 +131,7 @@ vae.train(
 vae.history["elbo_train"].plot()
 ```
 
-### Get Velocity Estimates
+### 속도 추정값 획득
 
 ```python
 # Get latent time
@@ -146,9 +146,9 @@ adata.layers["veloVI_velocity"] = velocities
 adata.layers["veloVI_expression"] = vae.get_expression_fit(n_samples=25)
 ```
 
-## Step 5: Visualize Velocity
+## 5단계: 속도 시각화
 
-### Velocity Streamlines
+### 속도 스트림라인
 
 ```python
 # Compute velocity graph
@@ -163,7 +163,7 @@ scv.pl.velocity_embedding_stream(
 )
 ```
 
-### Velocity Arrows
+### 속도 화살표
 
 ```python
 # Individual cell arrows
@@ -177,14 +177,14 @@ scv.pl.velocity_embedding(
 )
 ```
 
-### Latent Time
+### 잠재 시간
 
 ```python
 # Plot latent time (pseudotime from velocity)
 sc.pl.umap(adata, color="veloVI_latent_time", cmap="viridis")
 ```
 
-## Step 6: Compare with scVelo
+## 6단계: scVelo와 비교
 
 ```python
 # Run standard scVelo for comparison
@@ -195,7 +195,7 @@ scv.tl.velocity_graph(adata)
 fig, axes = plt.subplots(1, 2, figsize=(12, 5))
 
 scv.pl.velocity_embedding_stream(
-    adata, basis="umap", ax=axes[0], 
+    adata, basis="umap", ax=axes[0],
     title="scVelo", show=False
 )
 
@@ -207,9 +207,9 @@ scv.pl.velocity_embedding_stream(
 plt.tight_layout()
 ```
 
-## Step 7: Gene-Level Analysis
+## 7단계: 유전자 수준 분석
 
-### Velocity Phase Portraits
+### 속도 위상 초상
 
 ```python
 # Plot phase portrait for specific genes
@@ -223,13 +223,13 @@ scv.pl.velocity(
 )
 ```
 
-### Gene Dynamics
+### 유전자 역학
 
 ```python
 # Plot expression over latent time
 for gene in genes:
     fig, ax = plt.subplots(figsize=(6, 4))
-    
+
     sc.pl.scatter(
         adata,
         x="veloVI_latent_time",
@@ -242,7 +242,7 @@ for gene in genes:
     ax.set_ylabel(f"{gene} Expression")
 ```
 
-### Driver Genes
+### 드라이버 유전자
 
 ```python
 # Find genes driving velocity
@@ -257,9 +257,9 @@ df = scv.get_df(adata, "rank_velocity_genes/names")
 print(df.head(10))
 ```
 
-## Step 8: Uncertainty Quantification
+## 8단계: 불확실성 정량화
 
-veloVI provides uncertainty estimates:
+veloVI는 불확실성 추정값을 제공합니다:
 
 ```python
 # Get velocity with uncertainty
@@ -277,7 +277,7 @@ adata.obs["mean_velocity_uncertainty"] = velocity_std.mean(axis=1)
 sc.pl.umap(adata, color="mean_velocity_uncertainty")
 ```
 
-## Complete Pipeline
+## 전체 파이프라인
 
 ```python
 def run_velocity_analysis(
@@ -289,7 +289,7 @@ def run_velocity_analysis(
 ):
     """
     Complete RNA velocity analysis with veloVI.
-    
+
     Parameters
     ----------
     adata : AnnData
@@ -302,7 +302,7 @@ def run_velocity_analysis(
         Number of velocity genes
     max_epochs : int
         Training epochs
-        
+
     Returns
     -------
     AnnData with velocity and model
@@ -310,42 +310,42 @@ def run_velocity_analysis(
     import scvi
     import scvelo as scv
     import scanpy as sc
-    
+
     adata = adata.copy()
-    
+
     # Preprocessing
     scv.pp.filter_and_normalize(
         adata,
         min_shared_counts=20,
         n_top_genes=n_top_genes
     )
-    
+
     # Compute moments (needed for some visualizations)
     scv.pp.moments(adata, n_pcs=30, n_neighbors=30)
-    
+
     # Setup veloVI
     scvi.model.VELOVI.setup_anndata(
         adata,
         spliced_layer=spliced_layer,
         unspliced_layer=unspliced_layer
     )
-    
+
     # Train
     model = scvi.model.VELOVI(adata)
     model.train(max_epochs=max_epochs, early_stopping=True)
-    
+
     # Get results
     adata.obs["latent_time"] = model.get_latent_time(n_samples=25)
     adata.layers["velocity"] = model.get_velocity(n_samples=25)
-    
+
     # Compute velocity graph for visualization
     scv.tl.velocity_graph(adata, vkey="velocity")
-    
+
     # Compute UMAP if not present
     if "X_umap" not in adata.obsm:
         sc.pp.neighbors(adata)
         sc.tl.umap(adata)
-    
+
     return adata, model
 
 # Usage
@@ -362,7 +362,7 @@ scv.pl.velocity_embedding_stream(
 sc.pl.umap(adata_velocity, color="latent_time")
 ```
 
-## Advanced: Batch-Aware Velocity
+## 고급: 배치 인식 속도 분석
 
 ```python
 # For multi-batch data, include batch in model
@@ -377,33 +377,33 @@ model = scvi.model.VELOVI(adata)
 model.train()
 ```
 
-## Interpreting Results
+## 결과 해석
 
-### Good Velocity Signal
+### 양호한 속도 신호
 
-- Streamlines follow expected differentiation
-- Latent time correlates with known biology
-- Phase portraits show clear dynamics
+- 스트림라인이 예상되는 분화 방향을 따름
+- 잠재 시간이 알려진 생물학적 지식과 상관관계를 보임
+- 위상 초상이 명확한 역학을 표시
 
-### Poor Velocity Signal
+### 불량한 속도 신호
 
-- Random/chaotic streamlines
-- No correlation with known markers
-- May indicate:
-  - Insufficient unspliced reads
-  - Cells at steady state
-  - Technical issues
+- 무작위/혼란스러운 스트림라인
+- 알려진 마커와 상관관계 없음
+- 다음을 나타낼 수 있음:
+  - 비성숙 리드 부족
+  - 정상 상태에 있는 세포
+  - 기술적 문제
 
-## Troubleshooting
+## 문제 해결
 
-| Issue | Cause | Solution |
-|-------|-------|----------|
-| No velocity signal | Low unspliced counts | Check sequencing depth, use kb-python |
-| Reversed direction | Wrong root assignment | Manually set root cells |
-| Noisy streamlines | Too many genes | Reduce n_top_genes |
-| Memory error | Large dataset | Reduce batch_size |
+| 문제 | 원인 | 해결 방법 |
+|------|------|-----------|
+| 속도 신호 없음 | 낮은 비성숙 카운트 | 시퀀싱 깊이 확인, kb-python 사용 |
+| 방향 역전 | 잘못된 루트 할당 | 루트 세포를 수동으로 설정 |
+| 노이즈가 많은 스트림라인 | 유전자 수 과다 | n_top_genes 감소 |
+| 메모리 오류 | 대규모 데이터셋 | batch_size 감소 |
 
-## Key References
+## 주요 참고문헌
 
 - Gayoso et al. (2023) "Deep generative modeling of transcriptional dynamics for RNA velocity analysis in single cells"
 - La Manno et al. (2018) "RNA velocity of single cells"

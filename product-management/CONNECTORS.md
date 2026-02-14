@@ -1,19 +1,19 @@
-# Connectors
+# 커넥터
 
-## How tool references work
+## 도구 참조 방식
 
-Plugin files use `~~category` as a placeholder for whatever tool the user connects in that category. For example, `~~project tracker` might mean Linear, Asana, Jira, or any other tracker with an MCP server.
+플러그인 파일은 해당 카테고리에서 사용자가 연결한 도구를 나타내기 위해 `~~category`를 플레이스홀더로 사용합니다. 예를 들어, `~~project tracker`는 Linear, Asana, Jira 등 MCP 서버가 있는 모든 트래커를 의미할 수 있습니다.
 
-Plugins are **tool-agnostic** — they describe workflows in terms of categories (project tracker, design, product analytics, etc.) rather than specific products. The `.mcp.json` pre-configures specific MCP servers, but any MCP server in that category works.
+플러그인은 **도구에 구애받지 않습니다** — 특정 제품이 아닌 카테고리(프로젝트 트래커, 디자인, 제품 분석 등)로 워크플로우를 기술합니다. `.mcp.json`에 특정 MCP 서버가 사전 구성되어 있지만, 해당 카테고리의 모든 MCP 서버를 사용할 수 있습니다.
 
-## Connectors for this plugin
+## 이 플러그인의 커넥터
 
-| Category | Placeholder | Included servers | Other options |
+| 카테고리 | 플레이스홀더 | 포함된 서버 | 기타 옵션 |
 |----------|-------------|-----------------|---------------|
-| Chat | `~~chat` | Slack | Microsoft Teams |
-| Project tracker | `~~project tracker` | Linear, Asana, monday.com, ClickUp, Atlassian (Jira/Confluence) | Shortcut, Basecamp |
-| Knowledge base | `~~knowledge base` | Notion | Confluence, Guru, Coda |
-| Design | `~~design` | Figma | Sketch, Adobe XD |
-| Product analytics | `~~product analytics` | Amplitude, Pendo | Mixpanel, Heap, FullStory |
-| User feedback | `~~user feedback` | Intercom | Productboard, Canny, UserVoice |
-| Meeting transcription | `~~meeting transcription` | Fireflies | Gong, Dovetail, Otter.ai |
+| 채팅 | `~~chat` | Slack | Microsoft Teams |
+| 프로젝트 트래커 | `~~project tracker` | Linear, Asana, monday.com, ClickUp, Atlassian (Jira/Confluence) | Shortcut, Basecamp |
+| 지식 베이스 | `~~knowledge base` | Notion | Confluence, Guru, Coda |
+| 디자인 | `~~design` | Figma | Sketch, Adobe XD |
+| 제품 분석 | `~~product analytics` | Amplitude, Pendo | Mixpanel, Heap, FullStory |
+| 사용자 피드백 | `~~user feedback` | Intercom | Productboard, Canny, UserVoice |
+| 회의 녹취 | `~~meeting transcription` | Fireflies | Gong, Dovetail, Otter.ai |

@@ -1,102 +1,102 @@
-# Product Management Plugin
+# 제품 관리 플러그인
 
-A product management plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Covers the full PM workflow: writing feature specs, managing roadmaps, communicating with stakeholders, synthesizing user research, analyzing competitors, and tracking product metrics.
+Anthropic의 에이전트 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)을 위해 설계된 제품 관리 플러그인입니다. Claude Code에서도 사용할 수 있습니다. 기능 명세서(Feature Spec) 작성, 로드맵 관리, 이해관계자 커뮤니케이션, 사용자 조사 종합, 경쟁사 분석, 제품 지표 추적 등 PM 워크플로우 전반을 지원합니다.
 
-## Installation
+## 설치
 
 ```
 claude plugins add knowledge-work-plugins/product-management
 ```
 
-## What It Does
+## 주요 기능
 
-This plugin gives you an AI-powered product management partner that can help with:
+이 플러그인은 AI 기반 제품 관리 파트너로서 다음과 같은 작업을 도와줍니다:
 
-- **Feature Specs & PRDs** — Generate structured product requirements documents from a problem statement or feature idea. Includes user stories, requirements prioritization, success metrics, and scope management.
-- **Roadmap Planning** — Create, update, and reprioritize your product roadmap. Supports Now/Next/Later, quarterly themes, and OKR-aligned formats with dependency mapping.
-- **Stakeholder Updates** — Generate status updates tailored to your audience (executives, engineering, customers). Pulls context from connected tools to save you the weekly update grind.
-- **User Research Synthesis** — Turn interview notes, survey data, and support tickets into structured insights. Identifies themes, builds personas, and surfaces opportunity areas with supporting evidence.
-- **Competitive Analysis** — Research competitors and generate briefs with feature comparisons, positioning analysis, and strategic implications.
-- **Metrics Review** — Analyze product metrics, identify trends, compare against targets, and surface actionable insights.
+- **기능 명세서 및 PRD** — 문제 정의 또는 기능 아이디어로부터 체계적인 제품 요구사항 문서를 생성합니다. 사용자 스토리, 요구사항 우선순위 설정, 성공 지표, 범위 관리를 포함합니다.
+- **로드맵 계획** — 제품 로드맵을 생성, 업데이트, 재우선순위화합니다. Now/Next/Later, 분기별 테마, OKR 연계 형식을 의존성 매핑과 함께 지원합니다.
+- **이해관계자 업데이트** — 대상(경영진, 엔지니어링, 고객)에 맞춘 상태 업데이트를 생성합니다. 연결된 도구에서 컨텍스트를 가져와 주간 업데이트 작성 부담을 줄여줍니다.
+- **사용자 조사 종합** — 인터뷰 노트, 설문 데이터, 지원 티켓을 체계적인 인사이트로 전환합니다. 테마를 식별하고, 페르소나를 구축하며, 근거 자료와 함께 기회 영역을 도출합니다.
+- **경쟁사 분석** — 경쟁사를 조사하고 기능 비교, 포지셔닝 분석, 전략적 시사점이 담긴 브리프를 생성합니다.
+- **지표 리뷰** — 제품 지표를 분석하고, 추세를 파악하며, 목표와 비교하고, 실행 가능한 인사이트를 도출합니다.
 
-## Commands
+## 커맨드
 
-| Command | What It Does |
+| 커맨드 | 기능 |
 |---|---|
-| `/write-spec` | Write a feature spec or PRD from a problem statement |
-| `/roadmap-update` | Update, create, or reprioritize your roadmap |
-| `/stakeholder-update` | Generate a stakeholder update (weekly, monthly, launch) |
-| `/synthesize-research` | Synthesize user research from interviews, surveys, and tickets |
-| `/competitive-brief` | Create a competitive analysis brief |
-| `/metrics-review` | Review and analyze product metrics |
+| `/write-spec` | 문제 정의로부터 기능 명세서 또는 PRD 작성 |
+| `/roadmap-update` | 로드맵 업데이트, 생성 또는 재우선순위화 |
+| `/stakeholder-update` | 이해관계자 업데이트 생성 (주간, 월간, 출시) |
+| `/synthesize-research` | 인터뷰, 설문, 티켓으로부터 사용자 조사 종합 |
+| `/competitive-brief` | 경쟁사 분석 브리프 생성 |
+| `/metrics-review` | 제품 지표 리뷰 및 분석 |
 
-## Skills
+## 스킬
 
-| Skill | What It Covers |
+| 스킬 | 다루는 내용 |
 |---|---|
-| `feature-spec` | PRD structure, user stories, requirements categorization, acceptance criteria |
-| `roadmap-management` | Prioritization frameworks (RICE, MoSCoW), roadmap formats, dependency mapping |
-| `stakeholder-comms` | Update templates by audience, risk communication, decision documentation |
-| `user-research-synthesis` | Thematic analysis, affinity mapping, persona development, opportunity sizing |
-| `competitive-analysis` | Feature comparison matrices, positioning analysis, win/loss analysis |
-| `metrics-tracking` | Product metrics hierarchy, goal setting (OKRs), dashboard design, review cadences |
+| `feature-spec` | PRD 구조, 사용자 스토리, 요구사항 분류, 수락 기준 |
+| `roadmap-management` | 우선순위 프레임워크 (RICE, MoSCoW), 로드맵 형식, 의존성 매핑 |
+| `stakeholder-comms` | 대상별 업데이트 템플릿, 리스크 커뮤니케이션, 의사결정 문서화 |
+| `user-research-synthesis` | 주제 분석, 어피니티 매핑, 페르소나 개발, 기회 규모 산정 |
+| `competitive-analysis` | 기능 비교 매트릭스, 포지셔닝 분석, 수주/실주 분석 |
+| `metrics-tracking` | 제품 지표 계층 구조, 목표 설정 (OKR), 대시보드 설계, 리뷰 주기 |
 
-## Example Workflows
+## 워크플로우 예시
 
-### Writing a PRD
+### PRD 작성
 
 ```
 You: /write-spec
-Claude: What feature or problem are you speccing out?
-You: We need to add SSO support for enterprise customers
-Claude: [Asks about target users, constraints, success metrics]
-Claude: [Generates full PRD with problem statement, user stories, requirements, success metrics, open questions]
+Claude: 어떤 기능이나 문제에 대한 명세서를 작성할까요?
+You: 엔터프라이즈 고객을 위한 SSO 지원 기능을 추가해야 합니다.
+Claude: [대상 사용자, 제약 조건, 성공 지표에 대해 질문]
+Claude: [문제 정의, 사용자 스토리, 요구사항, 성공 지표, 미결 사항을 포함한 전체 PRD 생성]
 ```
 
-### Preparing a Stakeholder Update
+### 이해관계자 업데이트 준비
 
 ```
 You: /stakeholder-update
-Claude: What type of update? (weekly, monthly, launch, ad-hoc)
-You: Weekly update for the exec team
-Claude: [Pulls context from project management tool, chat, and docs]
-Claude: [Generates executive summary with progress, decisions, risks, and next milestones]
+Claude: 어떤 유형의 업데이트인가요? (주간, 월간, 출시, 수시)
+You: 경영진 대상 주간 업데이트
+Claude: [프로젝트 관리 도구, 채팅 및 문서에서 컨텍스트 추출]
+Claude: [진척 상황, 의사결정, 리스크 및 다음 마일스톤을 포함한 요약 보고서 생성]
 ```
 
-### Synthesizing User Research
+### 사용자 조사 종합
 
 ```
 You: /synthesize-research
-Claude: What research do you want to synthesize? You can paste interview notes, upload files, or I can pull from connected sources.
-You: [Pastes 8 interview transcripts]
-Claude: [Identifies themes, patterns, and insights across interviews]
-Claude: [Generates synthesis with key findings, personas, opportunity areas, and evidence]
+Claude: 어떤 조사를 종합하고 싶으신가요? 인터뷰 노트를 붙여넣거나 파일을 업로드할 수 있으며, 연결된 소스에서 가져올 수도 있습니다.
+You: [8개의 인터뷰 녹취록 붙여넣기]
+Claude: [인터뷰 전반의 테마, 패턴 및 인사이트 식별]
+Claude: [주요 발견점, 페르소나, 기회 영역 및 근거가 포함된 종합 결과 생성]
 ```
 
-### Competitive Analysis
+### 경쟁사 분석
 
 ```
 You: /competitive-brief
-Claude: Which competitor(s) or feature area do you want to analyze?
-You: Compare our onboarding flow to [competitor A] and [competitor B]
-Claude: [Researches competitor onboarding approaches]
-Claude: [Generates brief with feature comparison, strengths/weaknesses, and strategic implications]
+Claude: 어떤 경쟁사나 기능 영역을 분석하고 싶으신가요?
+You: 우리의 온보딩 흐름을 [경쟁사 A] 및 [경쟁사 B]와 비교해줘
+Claude: [경쟁사의 온보딩 방식 조사]
+Claude: [기능 비교, 강점/약점 및 전략적 시사점이 포함된 브리프 생성]
 ```
 
-## Data Sources
+## 데이터 소스
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인하려면 [CONNECTORS.md](CONNECTORS.md)를 참조하세요.
 
-Connect your project management and communication tools for the best experience. Without them, provide context manually.
+최적의 경험을 위해 프로젝트 관리 및 커뮤니케이션 도구를 연결하세요. 연결 없이도 수동으로 컨텍스트를 제공하여 사용할 수 있습니다.
 
-**Included MCP connections:**
-- Chat (Slack) for team context and stakeholder threads
-- Project tracker (Linear, Asana, monday.com, ClickUp, Atlassian) for roadmap integration, ticket context, and status tracking
-- Knowledge base (Notion) for existing specs, research, and meeting notes
-- Design (Figma) for design context and handoff
-- Product analytics (Amplitude, Pendo) for usage data, metrics, and behavioral analysis
-- User feedback (Intercom) for support tickets, feature requests, and user conversations
-- Meeting transcription (Fireflies) for meeting notes and discussion context
+**포함된 MCP 연결:**
+- 채팅 (Slack): 팀 컨텍스트 및 이해관계자 스레드
+- 프로젝트 트래커 (Linear, Asana, monday.com, ClickUp, Atlassian): 로드맵 통합, 티켓 컨텍스트, 상태 추적
+- 지식 베이스 (Notion): 기존 명세서, 조사 자료, 회의록
+- 디자인 (Figma): 디자인 컨텍스트 및 핸드오프
+- 제품 분석 (Amplitude, Pendo): 사용 데이터, 지표, 행동 분석
+- 사용자 피드백 (Intercom): 지원 티켓, 기능 요청, 사용자 대화
+- 회의 녹취 (Fireflies): 회의록 및 논의 컨텍스트
 
-**Additional options:**
-- See [CONNECTORS.md](CONNECTORS.md) for alternative tools in each category
+**추가 옵션:**
+- 각 카테고리의 대체 도구는 [CONNECTORS.md](CONNECTORS.md)를 참조하세요

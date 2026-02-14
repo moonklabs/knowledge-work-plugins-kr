@@ -1,7 +1,7 @@
 {
   "name": "cowork-plugin-management",
   "version": "0.2.1",
-  "description": "Create, customize, and manage plugins tailored to your organization's tools and workflows. Configure MCP servers, adjust plugin behavior, and adapt templates to match how your team works.",
+  "description": "조직의 도구와 워크플로우에 맞는 플러그인을 생성, 커스터마이징 및 관리합니다. MCP 서버를 설정하고, 플러그인 동작을 조정하며, 팀의 업무 방식에 맞게 템플릿을 적용합니다.",
   "author": {
     "name": "Anthropic"
   }

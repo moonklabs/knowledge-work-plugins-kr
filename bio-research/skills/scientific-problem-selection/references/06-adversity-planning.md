@@ -1,77 +1,77 @@
-# SKILL 6: Adversity Response Planning ("The Adversity Feature")
+# 스킬 6: 역경 대응 계획 ("역경 기능")
 
-## Overview
-This skill helps you prepare for inevitable crises and reframe them as opportunities. The term "adversity feature" (like a "rock garden" on a mountain bike trail) captures the mindset: adversity is not an obstacle—it's an opportunity to develop skill and improve your project.
+## 개요
+이 스킬은 불가피한 위기에 대비하고 이를 기회로 재구성하도록 돕습니다. "역경 기능"이라는 용어(산악자전거 트레일의 "록 가든"과 같은)는 이러한 마인드셋을 포착합니다: 역경은 장애물이 아니라 스킬을 개발하고 프로젝트를 개선할 기회입니다.
 
-## Core Principle
-**"Capitalize on the 'adversity feature'"**
+## 핵심 원칙
+**"'역경 기능'을 활용하십시오"**
 
-Adversity in a project is inevitable AND opportune:
-- **Inevitable:** Almost every project suffers existential crisis or sharp turn
-- **Opportune:** Two valuable outcomes possible:
-  1. Fix the problem AND upgrade the project simultaneously
-  2. Develop reasoning-your-way-out skills (best growth opportunity)
+프로젝트에서 역경은 불가피하며 동시에 기회입니다:
+- **불가피:** 거의 모든 프로젝트가 존재론적 위기나 급격한 방향 전환을 겪습니다
+- **기회:** 두 가지 가치 있는 결과가 가능합니다:
+  1. 문제를 해결하면서 동시에 프로젝트를 업그레이드
+  2. 위기 탈출 능력 개발 (최고의 성장 기회)
 
-## Key Concepts
+## 주요 개념
 
-**Why Adversity Is Inevitable:**
-- Technology doesn't work as advertised
-- Biological assumptions prove false
-- You get scooped
-- Key collaborator leaves
-- Funding runs out
-- Results don't support hypothesis
+**역경이 불가피한 이유:**
+- 기술이 광고대로 작동하지 않음
+- 생물학적 가정이 거짓으로 판명
+- 선취당함(scooped)
+- 핵심 협력자가 떠남
+- 자금이 소진됨
+- 결과가 가설을 지지하지 않음
 
-**Why Adversity Is Opportune:**
-- Forces you to think deeply about alternatives
-- Removes sunk-cost bias (path is blocked anyway)
-- Often leads to better projects than original plan
-- Develops critical problem-solving skills
-- Makes you resourceful
+**역경이 기회인 이유:**
+- 대안에 대해 깊이 생각하도록 강제함
+- 매몰비용 편향을 제거함 (어차피 경로가 차단됨)
+- 종종 원래 계획보다 더 나은 프로젝트로 이어짐
+- 비판적 문제 해결 스킬을 개발함
+- 자원을 활용하는 능력을 키움
 
-**The Crisis Mindset:**
-- **Wrong:** "This is a disaster that delays me"
-- **Right:** "This is the crisis I've been waiting for—don't waste it"
+**위기 마인드셋:**
+- **잘못됨:** "이것은 나를 지연시키는 재앙이다"
+- **올바름:** "이것은 내가 기다려온 위기다—낭비하지 말자"
 
-## Workflow
+## 워크플로우
 
-### Phase 1: Anticipate Failure Modes
+### 1단계: 실패 모드 예측
 
-For your project, list likely adversity scenarios:
-1. **Technical failures:** Method doesn't work, signal too low, etc.
-2. **Biological surprises:** System behaves unexpectedly
-3. **Competition:** Someone scoops you
-4. **Resource issues:** Funding, equipment, access
-5. **Timeline pressures:** Takes longer than expected
+프로젝트에 대해 가능한 역경 시나리오를 나열하십시오:
+1. **기술적 실패:** 방법이 작동하지 않음, 신호가 너무 낮음 등
+2. **생물학적 이변:** 시스템이 예상치 못하게 행동
+3. **경쟁:** 누군가에게 선취당함
+4. **자원 문제:** 자금, 장비, 접근성
+5. **타임라인 압박:** 예상보다 오래 걸림
 
-For each, rate:
-- Likelihood (Low/Medium/High)
-- Impact if it happens (Low/Medium/High)
-- When it might surface (early/mid/late)
+각각에 대해 평가하십시오:
+- 가능성 (낮음/중간/높음)
+- 발생 시 영향 (낮음/중간/높음)
+- 표면화 시기 (초기/중기/후기)
 
-### Phase 2: Upgrade Opportunities
+### 2단계: 업그레이드 기회
 
-For each high-likelihood or high-impact failure mode:
+가능성이 높거나 영향이 큰 각 실패 모드에 대해:
 
-**Question 1: How could you fix this AND make the project better?**
-Not just: "Get it working"
-Instead: "Use this as opportunity to improve the approach"
+**질문 1: 이를 수정하면서 동시에 프로젝트를 더 낫게 만들 수 있는 방법은?**
+단순히: "작동하게 만들기"가 아니라
+대신: "이를 접근법을 개선할 기회로 활용"
 
-**Example: Your Cell Type Can't Be Isolated**
-- Fix: Develop new isolation method
-- Upgrade: Make method work for whole class of cell types
-- Result: Better project (technology paper) + original biology
+**예시: 세포 유형을 분리할 수 없는 경우**
+- 수정: 새로운 분리 방법 개발
+- 업그레이드: 전체 세포 유형 클래스에 작동하는 방법 개발
+- 결과: 더 나은 프로젝트 (기술 논문) + 원래 생물학
 
-**Question 2: What skill would you develop by solving this?**
-- Computational: Learn new analysis method
-- Technical: Master challenging technique
-- Conceptual: Reason through biological complexity
+**질문 2: 이를 해결함으로써 어떤 스킬을 개발할 수 있는가?**
+- 계산적: 새로운 분석 방법 학습
+- 기술적: 도전적인 기술 숙달
+- 개념적: 생물학적 복잡성을 통한 논리적 사고
 
-### Phase 3: The Ensemble View
+### 3단계: 앙상블 관점
 
-**Critical Insight:** You're not picking ONE project path—you're picking an ENSEMBLE of possible projects that share core elements.
+**핵심 통찰:** 하나의 프로젝트 경로를 선택하는 것이 아니라, 핵심 요소를 공유하는 가능한 프로젝트의 앙상블을 선택하는 것입니다.
 
-**Your Project Ensemble:**
+**프로젝트 앙상블:**
 ```
 Core Theme: [What stays constant]
 
@@ -83,41 +83,41 @@ Path 4: [If scooped on C]
 All paths lead to impactful results, just different ones
 ```
 
-This reframing is liberating: when adversity strikes, you're not failing—you're discovering which path in the ensemble you're actually on.
+이 재구성은 해방적입니다: 역경이 닥쳤을 때, 실패하는 것이 아니라 앙상블에서 실제로 어떤 경로에 있는지를 발견하는 것입니다.
 
-### Phase 4: Historical Examples
+### 4단계: 역사적 예시
 
-**Example 1: PROTAC Discovery**
-- **Original Plan:** Create molecules to degrade specific kinase
-- **Crisis:** Didn't work for intended target
-- **Upgrade:** Test across kinome systematically
-- **Result:** Better project (mapped degradable kinome, discovered that target engagement ≠ degradation)
-- **Impact:** More influential than if original plan succeeded
+**예시 1: PROTAC 발견**
+- **원래 계획:** 특정 키나제를 분해하는 분자 생성
+- **위기:** 의도한 표적에 작동하지 않음
+- **업그레이드:** 키놈 전체에 걸쳐 체계적으로 테스트
+- **결과:** 더 나은 프로젝트 (분해 가능한 키놈 매핑, 표적 결합 ≠ 분해라는 사실 발견)
+- **영향력:** 원래 계획이 성공했을 때보다 더 큰 영향력
 
-**Example 2: Steroid Receptor Study**
-- **Original Plan:** Identify THE receptor for a steroid
-- **Crisis:** Binds multiple receptors at different affinities
-- **Upgrade:** Reframe question: How does finite receptor pool sense infinite lipids?
-- **Result:** Combinatorial sensing model (like piano chords)
-- **Impact:** More interesting than "receptor X binds steroid Y"
+**예시 2: 스테로이드 수용체 연구**
+- **원래 계획:** 스테로이드의 특정 수용체 식별
+- **위기:** 여러 수용체에 서로 다른 친화도로 결합
+- **업그레이드:** 질문 재구성: 유한한 수용체 풀이 무한한 지질을 어떻게 감지하는가?
+- **결과:** 조합적 감지 모델 (피아노 코드와 같은)
+- **영향력:** "수용체 X가 스테로이드 Y에 결합한다"보다 더 흥미로운 결과
 
-## Output: Adversity Playbook
+## 산출물: 역경 플레이북
 
-**Page 1: Anticipated Crises**
-| Crisis | Likelihood | Impact | Timeline | Growth Opportunity |
-|--------|-----------|--------|----------|-------------------|
-| [Crisis 1] | H/M/L | H/M/L | Early/Mid/Late | [Skill developed] |
+**1페이지: 예상 위기**
+| 위기 | 가능성 | 영향 | 타임라인 | 성장 기회 |
+|------|--------|------|----------|----------|
+| [위기 1] | 높/중/낮 | 높/중/낮 | 초기/중기/후기 | [개발할 스킬] |
 
-**Page 2: Upgrade Strategies**
-For each high-priority crisis:
-- **The Crisis:** [Description]
-- **Fix Strategy:** [How to solve it]
-- **Upgrade Strategy:** [How to make project better while fixing]
-- **Alternative Path:** [New direction if fix doesn't work]
-- **Ensemble Position:** [How this fits in project family]
+**2페이지: 업그레이드 전략**
+각 높은 우선순위 위기에 대해:
+- **위기:** [설명]
+- **수정 전략:** [해결 방법]
+- **업그레이드 전략:** [수정하면서 프로젝트를 더 낫게 만드는 방법]
+- **대안 경로:** [수정이 안 될 경우 새로운 방향]
+- **앙상블 위치:** [프로젝트 패밀리에서의 위치]
 
-**Page 3: Resilience Rituals**
-- **Weekly check-in:** Review what went wrong, what was learned
-- **Monthly ensemble review:** Update the family of possible projects
-- **Crisis protocol:** When major setback hits, take 2 days to think before acting
-- **Growth tracking:** Document skills developed through adversity
+**3페이지: 회복력 의식**
+- **주간 점검:** 무엇이 잘못되었고 무엇을 배웠는지 검토
+- **월간 앙상블 검토:** 가능한 프로젝트 패밀리 업데이트
+- **위기 프로토콜:** 주요 좌절이 발생하면 행동 전 2일간 사고
+- **성장 추적:** 역경을 통해 개발한 스킬 기록

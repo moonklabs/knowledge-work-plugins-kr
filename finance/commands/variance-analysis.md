@@ -1,158 +1,158 @@
 ---
-description: Decompose variances into drivers with narrative explanations and waterfall analysis
-argument-hint: "<line item> <period> vs <comparison>"
+description: 차이를 동인별로 분해하고 서술적 설명 및 워터폴 분석을 제공합니다
+argument-hint: "<항목> <기간> vs <비교 대상>"
 ---
 
-# Variance / Flux Analysis
+# 차이 / 변동 분석
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인해야 하는 경우, [CONNECTORS.md](../CONNECTORS.md)를 참조하십시오.
 
-**Important**: This command assists with variance analysis workflows but does not provide financial advice. All analyses should be reviewed by qualified financial professionals before use in reporting.
+**중요**: 이 커맨드는 차이 분석 워크플로우를 지원하지만 재무 자문을 제공하지는 않습니다. 모든 분석은 보고에 사용하기 전에 자격을 갖춘 재무 전문가의 검토를 받아야 합니다.
 
-Decompose variances into underlying drivers, provide narrative explanations for significant variances, and generate waterfall analysis.
+차이를 근본 동인별로 분해하고, 중요한 차이에 대한 서술적 설명을 제공하며, 워터폴 분석을 생성합니다.
 
-## Usage
+## 사용법
 
 ```
 /flux <area> <period-comparison>
 ```
 
-### Arguments
+### 인수
 
-- `area` — The area to analyze:
-  - `revenue` — Revenue variance by stream, product, geography, customer segment
-  - `opex` — Operating expense variance by category, department, cost center
-  - `capex` — Capital expenditure variance vs budget by project and asset class
-  - `headcount` — Headcount and compensation variance by department and role level
-  - `cogs` or `cost-of-revenue` — Cost of revenue variance by component
-  - `gross-margin` — Gross margin analysis with mix and rate effects
-  - Any specific GL account or account group
-- `period-comparison` — The periods to compare. Formats:
-  - `2024-12 vs 2024-11` — Month over month
-  - `2024-12 vs 2023-12` — Year over year
-  - `2024-Q4 vs 2024-Q3` — Quarter over quarter
-  - `2024-12 vs budget` — Actual vs budget
-  - `2024-12 vs forecast` — Actual vs forecast
-  - `2024-Q4 vs 2024-Q3 vs 2023-Q4` — Three-way comparison
+- `area` — 분석 영역:
+  - `revenue` — 스트림, 제품, 지역, 고객 세그먼트별 수익 차이
+  - `opex` — 카테고리, 부서, 원가 센터별 영업비용 차이
+  - `capex` — 프로젝트 및 자산 분류별 자본적 지출 예산 대비 차이
+  - `headcount` — 부서 및 직급별 인원 및 보상 차이
+  - `cogs` 또는 `cost-of-revenue` — 구성 요소별 매출원가 차이
+  - `gross-margin` — 믹스 및 비율 효과가 포함된 매출총이익률 분석
+  - 특정 총계정원장 계정 또는 계정 그룹
+- `period-comparison` — 비교할 기간. 형식:
+  - `2024-12 vs 2024-11` — 월별 비교(MoM)
+  - `2024-12 vs 2023-12` — 연별 비교(YoY)
+  - `2024-Q4 vs 2024-Q3` — 분기별 비교(QoQ)
+  - `2024-12 vs budget` — 실적 대 예산
+  - `2024-12 vs forecast` — 실적 대 전망
+  - `2024-Q4 vs 2024-Q3 vs 2023-Q4` — 3방향 비교
 
-## Workflow
+## 워크플로우
 
-### 1. Gather Data
+### 1. 데이터 수집
 
-If ~~erp or ~~data warehouse is connected:
-- Pull actuals for both comparison periods at the detail level
-- Pull budget/forecast data if comparing to plan
-- Pull supporting operational metrics (headcount, volumes, rates)
-- Pull prior variance analyses for context
+~~erp 또는 ~~data warehouse가 연결된 경우:
+- 양쪽 비교 기간의 실적을 상세 수준에서 가져옵니다
+- 계획 대비 비교 시 예산/전망 데이터를 가져옵니다
+- 보조 운영 지표(인원, 수량, 비율)를 가져옵니다
+- 맥락 파악을 위해 이전 차이 분석 내역을 가져옵니다
 
-If no data source is connected:
-> Connect ~~erp or ~~data warehouse to pull financial data automatically. To analyze manually, provide:
-> 1. Actual data for both comparison periods (at account or line-item detail)
-> 2. Budget/forecast data (if comparing to plan)
-> 3. Any operational metrics that drive the financial results (headcount, volumes, pricing, etc.)
+데이터 소스가 연결되지 않은 경우:
+> ~~erp 또는 ~~data warehouse를 연결하면 재무 데이터를 자동으로 가져올 수 있습니다. 수동으로 분석하려면 다음을 제공해 주십시오:
+> 1. 양쪽 비교 기간의 실적 데이터 (계정 또는 항목 상세 수준)
+> 2. 예산/전망 데이터 (계획 대비 비교 시)
+> 3. 재무 실적에 영향을 미치는 운영 지표 (인원, 수량, 가격 등)
 
-### 2. Calculate Top-Level Variance
+### 2. 상위 수준 차이 계산
 
 ```
-VARIANCE SUMMARY: [Area] — [Period 1] vs [Period 2]
+차이 요약: [영역] — [기간 1] vs [기간 2]
 
-                              Period 1   Period 2   Variance ($)   Variance (%)
+                              기간 1     기간 2     차이 ($)       차이 (%)
                               --------   --------   ------------   ------------
-Total [Area]                  $XX,XXX    $XX,XXX    $X,XXX         X.X%
+총 [영역]                     $XX,XXX    $XX,XXX    $X,XXX         X.X%
 ```
 
-### 3. Decompose Variance by Driver
+### 3. 동인별 차이 분해
 
-Break down the total variance into constituent drivers. Use the appropriate decomposition method for the area:
+전체 차이를 구성 동인별로 분해합니다. 분석 영역에 적합한 분해 방법을 적용합니다:
 
-**Revenue Decomposition:**
-- **Volume effect:** Change in units/customers/transactions at prior period pricing
-- **Price/rate effect:** Change in pricing/ASP applied to current period volume
-- **Mix effect:** Shift between products/segments at different margin levels
-- **New vs existing:** Revenue from new customers/products vs base business
-- **Currency effect:** FX impact on international revenue (if applicable)
+**수익 분해:**
+- **수량 효과:** 전기 가격으로 계산한 단위/고객/거래 수의 변동
+- **가격/비율 효과:** 당기 수량에 적용한 가격/ASP 변동
+- **믹스 효과:** 마진 수준이 다른 제품/세그먼트 간 구성비 변동
+- **신규 vs 기존:** 신규 고객/제품 수익 대 기존 사업 수익
+- **환율 효과:** 해외 수익에 대한 환율 영향 (해당되는 경우)
 
-**Operating Expense Decomposition:**
-- **Headcount-driven:** Salary and benefits changes from headcount additions/reductions
-- **Compensation changes:** Merit increases, promotions, bonus accruals
-- **Volume-driven:** Expenses that scale with business activity (hosting, commissions, travel)
-- **New programs/investments:** Incremental spend on new initiatives
-- **One-time items:** Non-recurring expenses (severance, legal settlements, write-offs)
-- **Timing:** Expenses shifted between periods (prepaid amortization changes, contract timing)
+**영업비용 분해:**
+- **인원 기반:** 인원 증감에 따른 급여 및 복리후생 변동
+- **보상 변동:** 호봉 인상, 승진, 상여금 발생
+- **수량 기반:** 사업 활동에 비례하는 비용 (호스팅, 수수료, 출장)
+- **신규 프로그램/투자:** 신규 이니셔티브에 대한 증분 지출
+- **일회성 항목:** 비반복 비용 (퇴직금, 법적 합의, 대손상각)
+- **시점 차이:** 기간 간 이동한 비용 (선급비용 상각 변동, 계약 시점)
 
-**CapEx Decomposition:**
-- **Project-level:** Variance by capital project vs approved budget
-- **Timing:** Projects ahead of or behind schedule
-- **Scope changes:** Approved scope expansions or reductions
-- **Cost overruns:** Unit cost increases vs plan
+**자본적 지출(CapEx) 분해:**
+- **프로젝트별:** 승인된 예산 대비 자본 프로젝트별 차이
+- **시점:** 일정 대비 앞서거나 뒤처진 프로젝트
+- **범위 변경:** 승인된 범위 확대 또는 축소
+- **원가 초과:** 계획 대비 단위 원가 증가
 
-**Headcount Decomposition:**
-- **Hiring pace:** Actual hires vs plan by department and level
-- **Attrition:** Unplanned departures and backfill timing
-- **Compensation mix:** Salary, bonus, equity, benefits variance
-- **Contractor/temp:** Supplemental workforce changes
+**인원 분해:**
+- **채용 속도:** 부서 및 직급별 실제 채용 대 계획
+- **이직:** 비계획 퇴사 및 대체 인력 투입 시점
+- **보상 구성:** 급여, 상여금, 주식, 복리후생 차이
+- **계약직/임시직:** 보충 인력 변동
 
-### 4. Waterfall Analysis
+### 4. 워터폴 분석
 
-Generate a text-based waterfall showing how each driver contributes to the total variance:
+각 동인이 전체 차이에 기여하는 정도를 보여주는 텍스트 기반 워터폴을 생성합니다:
 
 ```
-WATERFALL: [Area] — [Period 1] vs [Period 2]
+워터폴: [영역] — [기간 1] vs [기간 2]
 
-[Period 2 Base]                           $XX,XXX
+[기간 2 기준]                             $XX,XXX
   |
-  |--[+] [Driver 1 description]          +$X,XXX
-  |--[+] [Driver 2 description]          +$X,XXX
-  |--[-] [Driver 3 description]          -$X,XXX
-  |--[+] [Driver 4 description]          +$X,XXX
-  |--[-] [Driver 5 description]          -$X,XXX
+  |--[+] [동인 1 설명]                   +$X,XXX
+  |--[+] [동인 2 설명]                   +$X,XXX
+  |--[-] [동인 3 설명]                   -$X,XXX
+  |--[+] [동인 4 설명]                   +$X,XXX
+  |--[-] [동인 5 설명]                   -$X,XXX
   |
-[Period 1 Actual]                         $XX,XXX
+[기간 1 실적]                             $XX,XXX
 
-Variance Reconciliation:
-  Driver 1:    +$X,XXX  (XX% of total variance)
-  Driver 2:    +$X,XXX  (XX% of total variance)
-  Driver 3:    -$X,XXX  (XX% of total variance)
-  Driver 4:    +$X,XXX  (XX% of total variance)
-  Driver 5:    -$X,XXX  (XX% of total variance)
-  Unexplained: $X,XXX   (XX% of total variance)
+차이 조정:
+  동인 1:      +$X,XXX  (전체 차이의 XX%)
+  동인 2:      +$X,XXX  (전체 차이의 XX%)
+  동인 3:      -$X,XXX  (전체 차이의 XX%)
+  동인 4:      +$X,XXX  (전체 차이의 XX%)
+  동인 5:      -$X,XXX  (전체 차이의 XX%)
+  미설명:      $X,XXX   (전체 차이의 XX%)
                --------
-  Total:       $X,XXX   (100%)
+  합계:        $X,XXX   (100%)
 ```
 
-### 5. Narrative Explanations
+### 5. 서술적 설명
 
-For each significant driver, generate a narrative explanation:
+각 중요 동인에 대해 서술적 설명을 생성합니다:
 
-> **[Driver name]** — [Favorable/Unfavorable] variance of $X,XXX (X.X%)
+> **[동인명]** — $X,XXX (X.X%)의 [유리/불리] 차이
 >
-> [2-3 sentence explanation of what caused this variance, referencing specific operational factors, business events, or decisions. Include quantification where possible.]
+> [이 차이의 원인을 구체적인 운영 요인, 사업 이벤트 또는 의사결정을 참조하여 2-3문장으로 설명합니다. 가능한 한 정량화를 포함합니다.]
 >
-> *Outlook:* [Whether this is expected to continue, reverse, or change in future periods]
+> *전망:* [향후 기간에 지속, 반전 또는 변화가 예상되는지 여부]
 
-### 6. Identify Unexplained Variances
+### 6. 미설명 차이 식별
 
-If the decomposition does not fully explain the total variance, flag the residual:
+분해로 전체 차이를 완전히 설명할 수 없는 경우, 잔여분을 표시합니다:
 
-> **Unexplained variance:** $X,XXX (X.X% of total)
+> **미설명 차이:** $X,XXX (전체의 X.X%)
 >
-> Possible causes to investigate:
-> - [Suggested area 1]
-> - [Suggested area 2]
-> - [Suggested area 3]
+> 조사해야 할 가능한 원인:
+> - [제안 영역 1]
+> - [제안 영역 2]
+> - [제안 영역 3]
 
-Ask the user for additional context on unexplained variances:
-- "Can you provide context on [specific unexplained item]?"
-- "Were there any business events in [period] that would explain [variance area]?"
-- "Is the [specific driver] variance expected or a surprise?"
+미설명 차이에 대해 사용자에게 추가 맥락을 요청합니다:
+- "[특정 미설명 항목]에 대한 맥락을 제공해 주실 수 있나요?"
+- "[기간]에 [차이 영역]을 설명할 수 있는 사업 이벤트가 있었나요?"
+- "[특정 동인]의 차이가 예상된 것인가요, 아니면 예상치 못한 것인가요?"
 
-### 7. Output
+### 7. 결과물
 
-Provide:
-1. Top-level variance summary
-2. Detailed variance decomposition by driver
-3. Waterfall analysis (text format, or suggest chart if spreadsheet tool is connected)
-4. Narrative explanations for each significant driver
-5. Unexplained variance flag with investigation suggestions
-6. Trend context (is this variance new, growing, or consistent with recent periods?)
-7. Suggested actions or follow-ups
+다음을 제공합니다:
+1. 상위 수준 차이 요약
+2. 동인별 상세 차이 분해
+3. 워터폴 분석 (텍스트 형식, 스프레드시트 도구가 연결된 경우 차트 제안)
+4. 각 중요 동인에 대한 서술적 설명
+5. 조사 제안이 포함된 미설명 차이 표시
+6. 추세 맥락 (이 차이가 새로운 것인지, 증가 추세인지, 최근 기간과 일관적인지 여부)
+7. 권장 조치 또는 후속 작업

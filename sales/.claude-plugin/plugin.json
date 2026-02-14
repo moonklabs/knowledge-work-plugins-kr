@@ -1,7 +1,7 @@
 {
   "name": "sales",
   "version": "1.0.0",
-  "description": "Prospect, craft outreach, and build deal strategy faster. Prep for calls, manage your pipeline, and write personalized messaging that moves deals forward.",
+  "description": "잠재 고객 발굴, 아웃리치 작성, 거래 전략 수립을 가속화합니다. 통화 준비, 파이프라인 관리, 거래를 진전시키는 맞춤형 메시지 작성을 지원합니다.",
   "author": {
     "name": "Anthropic"
   }

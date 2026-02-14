@@ -1,219 +1,219 @@
 ---
-description: Design and draft multi-email sequences for nurture flows, onboarding, drip campaigns, and more
-argument-hint: "[sequence type]"
+description: 너처 플로우, 온보딩, 드립 캠페인 등을 위한 다중 이메일 시퀀스를 설계하고 작성합니다
+argument-hint: "[시퀀스 유형]"
 ---
 
-# Email Sequence
+# 이메일 시퀀스
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 참조하세요.
 
-Design and draft complete email sequences with full copy, timing, branching logic, and performance benchmarks for any lifecycle or campaign use case.
+라이프사이클 또는 캠페인 용도에 맞는 완전한 이메일 시퀀스를 설계하고 작성합니다. 전체 카피, 발송 타이밍, 분기 로직, 성과 벤치마크를 포함합니다.
 
-## Trigger
+## 트리거
 
-User runs `/email-sequence` or asks to create, design, build, or draft an email sequence, drip campaign, nurture flow, or onboarding series.
+사용자가 `/email-sequence`를 실행하거나 이메일 시퀀스, 드립 캠페인, 너처 플로우, 또는 온보딩 시리즈를 생성, 설계, 구축, 또는 작성해 달라고 요청합니다.
 
-## Inputs
+## 입력
 
-Gather the following from the user. If not provided, ask before proceeding:
+사용자로부터 다음 정보를 수집합니다. 제공되지 않은 경우 진행하기 전에 질문합니다:
 
-1. **Sequence type** — one of:
-   - Onboarding
-   - Lead nurture
-   - Re-engagement
-   - Product launch
-   - Event follow-up
-   - Upgrade/upsell
-   - Win-back
-   - Educational drip
+1. **시퀀스 유형** — 다음 중 하나:
+   - 온보딩
+   - 리드 너처(Lead Nurture)
+   - 재참여
+   - 제품 출시
+   - 이벤트 후속 조치
+   - 업그레이드/업셀
+   - 윈백(Win-back)
+   - 교육용 드립
 
-2. **Goal** — what the sequence should achieve (e.g., activate new users, convert leads to customers, reduce churn, drive event attendance, upsell to a higher tier)
+2. **목표** — 시퀀스가 달성해야 할 것 (예: 신규 사용자 활성화, 리드를 고객으로 전환, 이탈 감소, 이벤트 참석 유도, 상위 요금제로 업셀)
 
-3. **Audience** — who receives this sequence, what stage they are at, and any relevant segmentation details (role, industry, behavior triggers, lifecycle stage)
+3. **오디언스** — 이 시퀀스를 수신하는 대상, 현재 단계, 관련 세분화 정보 (역할, 산업, 행동 트리거, 라이프사이클 단계)
 
-4. **Number of emails** (optional) — if not specified, recommend a count based on the sequence type using the templates in the Sequence Type Templates section below
+4. **이메일 수** (선택 사항) — 지정되지 않으면 아래 시퀀스 유형별 템플릿 섹션을 기반으로 적절한 수를 추천합니다
 
-5. **Timing/cadence preferences** (optional) — desired spacing between emails (e.g., "every 3 days", "weekly", "aggressive first week then taper off")
+5. **타이밍/주기 선호** (선택 사항) — 이메일 간 원하는 간격 (예: "3일마다", "주간", "첫 주는 집중적으로 이후 점진적 감소")
 
-6. **Brand voice** — if configured in local settings, apply automatically and inform the user. If not configured, ask: "Do you have brand voice guidelines I should follow? If not, I'll use a clear, conversational professional tone."
+6. **브랜드 보이스** — 로컬 설정에 구성되어 있으면 자동으로 적용하고 사용자에게 알립니다. 구성되어 있지 않으면 다음과 같이 질문합니다: "따라야 할 브랜드 보이스 가이드라인이 있으신가요? 없으시면 명확하고 대화적인 전문가 톤으로 작성하겠습니다."
 
-7. **Additional context** (optional):
-   - Specific offers, discounts, or incentives to include
-   - CTAs or landing pages to link to
-   - Content assets available (blog posts, case studies, videos, guides)
-   - Product features to highlight
-   - Competitor differentiators to reference
+7. **추가 맥락** (선택 사항):
+   - 포함할 특별 혜택, 할인, 또는 인센티브
+   - 링크할 CTA 또는 랜딩 페이지
+   - 활용 가능한 콘텐츠 에셋 (블로그 포스트, 사례 연구, 동영상, 가이드)
+   - 강조할 제품 기능
+   - 참조할 경쟁사 차별화 요소
 
-## Process
+## 프로세스
 
-### 1. Sequence Strategy
+### 1. 시퀀스 전략
 
-Before drafting any emails, define the overall sequence architecture:
+이메일 작성 전에 전체 시퀀스 아키텍처를 정의합니다:
 
-- **Narrative arc** — what story does this sequence tell across all emails? What is the emotional and logical progression from first email to last?
-- **Journey mapping** — map each email to a stage of the buyer or user journey (awareness, consideration, decision, activation, expansion)
-- **Escalation logic** — how does the intensity, urgency, or value of each email build on the previous one?
-- **Success definition** — what specific action signals that the sequence has done its job and the recipient should exit?
+- **내러티브 아크** — 전체 이메일에 걸쳐 어떤 이야기를 전달하는가? 첫 이메일부터 마지막까지의 감정적, 논리적 흐름은?
+- **여정 매핑** — 각 이메일을 구매자 또는 사용자 여정의 단계에 매핑합니다 (인지, 고려, 결정, 활성화, 확장)
+- **에스컬레이션 로직** — 각 이메일의 강도, 긴급성, 가치가 이전 이메일을 어떻게 기반으로 쌓이는가?
+- **성공 정의** — 시퀀스가 역할을 다했고 수신자가 나가야 한다는 것을 알리는 구체적인 행동은?
 
-### 2. Individual Email Design
+### 2. 개별 이메일 설계
 
-For each email in the sequence, produce:
+시퀀스의 각 이메일에 대해 다음을 작성합니다:
 
-#### Subject Line
-- Provide 2-3 options per email
-- Vary approaches: curiosity, benefit-driven, urgency, personalization, question-based
-- Keep under 50 characters where possible; note preview behavior on mobile
+#### 제목
+- 이메일당 2-3개 옵션 제공
+- 다양한 접근 방식: 호기심, 혜택 중심, 긴급성, 개인화, 질문 기반
+- 가능하면 50자 이내; 모바일 미리보기 동작에 유의
 
-#### Preview Text
-- 40-90 characters that complement (not repeat) the subject line
-- Should add context or intrigue that increases open likelihood
+#### 미리보기 텍스트
+- 제목을 보완(반복하지 않는) 40-90자
+- 오픈 가능성을 높이는 맥락 또는 흥미 추가
 
-#### Email Purpose
-- One sentence explaining why this email exists and what it moves the recipient toward
+#### 이메일 목적
+- 이 이메일이 존재하는 이유와 수신자를 어디로 이끄는지를 한 문장으로 설명
 
-#### Body Copy
-- Full draft ready to use
-- Clear hierarchy: hook, body, CTA
-- Short paragraphs (2-3 sentences max)
-- Scannable formatting with bold key phrases where appropriate
-- Personalization tokens where relevant (e.g., first name, company name, product used)
+#### 본문 카피
+- 바로 사용할 수 있는 완성된 초안
+- 명확한 계층 구조: 후크, 본문, CTA
+- 짧은 문단 (최대 2-3문장)
+- 볼드 처리로 핵심 문구를 강조한 스캔 가능한 서식
+- 관련 있는 곳에 개인화 토큰 (예: 이름, 회사명, 사용 제품)
 
-#### Primary CTA
-- Button text and destination
-- One primary CTA per email (secondary CTA only if appropriate for the sequence stage)
+#### 주요 CTA
+- 버튼 텍스트 및 이동 대상
+- 이메일당 하나의 주요 CTA (시퀀스 단계에 적합한 경우에만 보조 CTA)
 
-#### Timing
-- Days after the trigger event or after the previous email
-- Note if timing should adjust based on engagement (e.g., "send sooner if they opened but did not click")
+#### 타이밍
+- 트리거 이벤트 또는 이전 이메일 이후 경과일
+- 참여도에 따라 타이밍 조정이 필요한 경우 표시 (예: "열었지만 클릭하지 않은 경우 더 빨리 발송")
 
-#### Segment/Condition Notes
-- Who receives this email vs. who skips it
-- Any behavioral or attribute-based conditions (e.g., "only send to users who have not completed setup")
+#### 세그먼트/조건 메모
+- 이 이메일을 수신하는 대상 vs. 건너뛰는 대상
+- 행동 또는 속성 기반 조건 (예: "설정을 완료하지 않은 사용자에게만 발송")
 
-### 3. Sequence Logic
+### 3. 시퀀스 로직
 
-Define the flow control for the sequence:
+시퀀스의 흐름 제어를 정의합니다:
 
-- **Branching conditions** — alternate paths based on engagement. For example:
-  - "If opened email 2 but did not click CTA, send email 2b (softer re-ask) instead of email 3"
-  - "If clicked CTA in email 1, skip email 2 and go directly to email 3"
-- **Exit conditions** — when a recipient converts (completes the desired action), remove them from the sequence. Define what "conversion" means for this sequence.
-- **Re-entry rules** — can someone re-enter the sequence? Under what conditions? (e.g., "if a user churns again 90 days later, re-enter the win-back sequence")
-- **Suppression rules** — do not send if the recipient is already in another active sequence, has unsubscribed from marketing, or has contacted support in the last 48 hours
+- **분기 조건** — 참여도에 따른 대체 경로. 예:
+  - "이메일 2를 열었지만 CTA를 클릭하지 않은 경우, 이메일 3 대신 이메일 2b(더 부드러운 재요청)를 발송"
+  - "이메일 1에서 CTA를 클릭한 경우, 이메일 2를 건너뛰고 이메일 3으로 직접 이동"
+- **퇴출 조건** — 수신자가 전환(원하는 행동 완료)하면 시퀀스에서 제거합니다. 이 시퀀스에서 "전환"의 의미를 정의합니다.
+- **재진입 규칙** — 동일 시퀀스에 다시 들어올 수 있는가? 어떤 조건에서? (예: "90일 후 다시 이탈하면 윈백 시퀀스에 재진입")
+- **억제 규칙** — 수신자가 이미 다른 활성 시퀀스에 있거나, 마케팅 수신을 거부했거나, 최근 48시간 내에 고객 지원에 연락한 경우 발송하지 않습니다
 
-### 4. Performance Benchmarks
+### 4. 성과 벤치마크
 
-Provide expected benchmarks based on the sequence type so the user can set targets:
+사용자가 목표를 설정할 수 있도록 시퀀스 유형별 예상 벤치마크를 제공합니다:
 
-| Metric | Onboarding | Lead Nurture | Re-engagement | Win-back |
-|--------|-----------|--------------|---------------|----------|
-| Open rate | 50-70% | 20-30% | 15-25% | 15-20% |
-| Click-through rate | 10-20% | 3-7% | 2-5% | 2-4% |
-| Conversion rate | 15-30% | 2-5% | 3-8% | 1-3% |
-| Unsubscribe rate | <0.5% | <0.5% | 1-2% | 1-3% |
+| 지표 | 온보딩 | 리드 너처 | 재참여 | 윈백 |
+|------|--------|----------|--------|------|
+| 오픈율 | 50-70% | 20-30% | 15-25% | 15-20% |
+| 클릭률 | 10-20% | 3-7% | 2-5% | 2-4% |
+| 전환율 | 15-30% | 2-5% | 3-8% | 1-3% |
+| 수신 거부율 | <0.5% | <0.5% | 1-2% | 1-3% |
 
-Adjust benchmarks based on industry and audience if the user has provided that context.
+사용자가 산업 및 오디언스 맥락을 제공한 경우 벤치마크를 조정합니다.
 
-## Sequence Type Templates
+## 시퀀스 유형별 템플릿
 
-Use these as starting frameworks. Adapt length and content based on the user's goal and audience.
+이를 시작 프레임워크로 활용합니다. 사용자의 목표와 오디언스에 따라 길이와 콘텐츠를 조정합니다.
 
-**Onboarding (5-7 emails over 14-21 days):**
-Welcome and set expectations -- Quick win to demonstrate value -- Core feature deep dive -- Advanced feature or integration -- Social proof and community -- Check-in and feedback request -- Upgrade prompt or next steps
+**온보딩 (14-21일에 걸쳐 5-7개 이메일):**
+환영 및 기대 설정 -- 가치를 보여주는 빠른 성공 -- 핵심 기능 심층 안내 -- 고급 기능 또는 연동 -- 사회적 증거 및 커뮤니티 -- 확인 및 피드백 요청 -- 업그레이드 안내 또는 다음 단계
 
-**Lead Nurture (4-6 emails over 3-4 weeks):**
-Value-first educational content -- Pain point identification -- Solution positioning with proof -- Social proof and results -- Soft CTA (trial, demo, resource) -- Direct CTA (buy, book, sign up)
+**리드 너처 (3-4주에 걸쳐 4-6개 이메일):**
+가치 우선 교육 콘텐츠 -- 고충 식별 -- 증거를 통한 솔루션 포지셔닝 -- 사회적 증거 및 성과 -- 소프트 CTA (체험, 데모, 리소스) -- 직접 CTA (구매, 예약, 가입)
 
-**Re-engagement (3-4 emails over 10-14 days):**
-"We miss you" with a compelling reason to return -- Value reminder highlighting what they are missing -- Incentive or exclusive offer -- Last chance with clear deadline
+**재참여 (10-14일에 걸쳐 3-4개 이메일):**
+복귀할 설득력 있는 이유와 함께 "보고 싶었습니다" -- 놓치고 있는 가치 리마인더 -- 인센티브 또는 독점 혜택 -- 명확한 마감일이 있는 마지막 기회
 
-**Win-back (3-5 emails over 30 days):**
-Friendly check-in asking what went wrong -- What is new since they left -- Special offer or incentive to return -- Feedback request (even if they do not come back) -- Final goodbye with door open
+**윈백 (30일에 걸쳐 3-5개 이메일):**
+무엇이 문제였는지 묻는 친근한 확인 -- 떠난 후 새로워진 것 -- 복귀를 위한 특별 혜택 또는 인센티브 -- 피드백 요청 (복귀하지 않더라도) -- 문을 열어둔 마지막 인사
 
-**Product Launch (4-6 emails over 2-3 weeks):**
-Teaser or pre-announcement -- Launch announcement with full details -- Feature spotlight or use case -- Social proof and early results -- Limited-time offer or bonus -- Last chance or reminder
+**제품 출시 (2-3주에 걸쳐 4-6개 이메일):**
+티저 또는 사전 공지 -- 상세 정보를 포함한 출시 발표 -- 기능 스포트라이트 또는 사용 사례 -- 사회적 증거 및 초기 성과 -- 한정 혜택 또는 보너스 -- 마지막 기회 또는 리마인더
 
-**Event Follow-up (3-4 emails over 7-10 days):**
-Thank you with key takeaways or recordings -- Resource roundup from the event -- Related offer or next step -- Feedback survey
+**이벤트 후속 조치 (7-10일에 걸쳐 3-4개 이메일):**
+주요 시사점 또는 녹화본과 함께 감사 인사 -- 이벤트 관련 리소스 모음 -- 관련 혜택 또는 다음 단계 -- 피드백 설문
 
-**Upgrade/Upsell (3-5 emails over 2-3 weeks):**
-Usage milestone or success celebration -- Feature gap or limitation they are hitting -- Upgrade benefits with proof -- Limited-time incentive -- Direct comparison of plans
+**업그레이드/업셀 (2-3주에 걸쳐 3-5개 이메일):**
+사용 마일스톤 또는 성공 축하 -- 겪고 있는 기능 격차 또는 제한 -- 증거를 포함한 업그레이드 혜택 -- 한정 인센티브 -- 요금제 직접 비교
 
-**Educational Drip (5-8 emails over 4-6 weeks):**
-Introduction and what they will learn -- Lesson 1: foundational concept -- Lesson 2: intermediate concept -- Lesson 3: advanced concept -- Practical application or exercise -- Resource roundup -- Graduation and next steps
+**교육용 드립 (4-6주에 걸쳐 5-8개 이메일):**
+소개 및 학습 내용 안내 -- 레슨 1: 기초 개념 -- 레슨 2: 중급 개념 -- 레슨 3: 고급 개념 -- 실습 적용 또는 연습 -- 리소스 모음 -- 수료 및 다음 단계
 
-## Tool Integration
+## 도구 연동
 
-### If ~~email marketing is connected (e.g., Klaviyo, Mailchimp, Customer.io)
-- Reference how to set up the sequence as a flow or automation in the platform
-- Note any platform-specific features to use (e.g., smart send time, conditional splits, A/B testing)
-- Map the branching logic to the platform's visual flow builder concepts
+### ~~email marketing이 연결된 경우 (예: Klaviyo, Mailchimp, Customer.io)
+- 플랫폼에서 플로우 또는 자동화로 시퀀스를 설정하는 방법을 안내합니다
+- 플랫폼별 기능 활용에 대해 표시합니다 (예: 스마트 발송 시간, 조건부 분기, A/B 테스트)
+- 분기 로직을 플랫폼의 비주얼 플로우 빌더 개념에 매핑합니다
 
-### If ~~marketing automation or ~~CRM is connected (e.g., HubSpot, Marketo)
-- Reference lead scoring data to inform segmentation and exit conditions
-- Use lifecycle stage data to tailor messaging per segment
-- Note how to set enrollment triggers based on CRM properties or list membership
+### ~~marketing automation 또는 ~~CRM이 연결된 경우 (예: HubSpot, Marketo)
+- 세분화 및 퇴출 조건에 참고할 리드 스코어링 데이터를 참조합니다
+- 라이프사이클 단계 데이터를 활용하여 세그먼트별 메시징을 맞춤화합니다
+- CRM 속성 또는 리스트 멤버십 기반 등록 트리거 설정 방법을 안내합니다
 
-### If no tools are connected
-- Deliver all email content in copy-paste-ready format
-- Include a setup checklist the user can follow in any email platform:
-  1. Create the automation or flow
-  2. Set the enrollment trigger
-  3. Add each email with the specified delays
-  4. Configure branching and exit conditions
-  5. Set up tracking for the recommended metrics
+### 도구가 연결되지 않은 경우
+- 모든 이메일 콘텐츠를 복사-붙여넣기 가능한 형식으로 제공합니다
+- 모든 이메일 플랫폼에서 따를 수 있는 설정 체크리스트를 포함합니다:
+  1. 자동화 또는 플로우 생성
+  2. 등록 트리거 설정
+  3. 지정된 지연 시간과 함께 각 이메일 추가
+  4. 분기 및 퇴출 조건 구성
+  5. 권장 지표에 대한 추적 설정
 
-## Output
+## 출력
 
-Present the complete sequence with the following sections:
+완성된 시퀀스를 다음 섹션으로 제시합니다:
 
-### Sequence Overview Table
+### 시퀀스 개요 테이블
 
-| # | Subject Line | Purpose | Timing | Primary CTA | Condition |
-|---|-------------|---------|--------|-------------|-----------|
+| # | 제목 | 목적 | 타이밍 | 주요 CTA | 조건 |
+|---|------|------|--------|----------|------|
 
-### Full Email Drafts
-Each email with subject line options, preview text, purpose, body copy, CTA, timing, and segment notes.
+### 전체 이메일 초안
+제목 옵션, 미리보기 텍스트, 목적, 본문 카피, CTA, 타이밍, 세그먼트 메모를 포함한 각 이메일 초안.
 
-### Sequence Flow Diagram
-A text-based diagram showing the email flow, branching paths, and exit points. Use a clear format such as:
+### 시퀀스 흐름 다이어그램
+이메일 흐름, 분기 경로, 퇴출 지점을 보여주는 텍스트 기반 다이어그램. 다음과 같은 명확한 형식을 사용합니다:
 
 ```
-[Trigger] --> Email 1 (Day 0)
+[트리거] --> 이메일 1 (0일차)
                 |
-          Opened? --Yes--> Email 2 (Day 3)
+          열었나? --예--> 이메일 2 (3일차)
                 |              |
-                No        Clicked CTA? --Yes--> [EXIT: Converted]
+                아니오     CTA 클릭? --예--> [퇴출: 전환 완료]
                 |              |
-                v              No
-          Email 1b (Day 2)     |
+                v              아니오
+          이메일 1b (2일차)     |
                 |              v
-                +--------> Email 3 (Day 7)
+                +--------> 이메일 3 (7일차)
                                |
                                v
-                          Email 4 (Day 10)
+                          이메일 4 (10일차)
                                |
-                          [EXIT: Sequence complete]
+                          [퇴출: 시퀀스 완료]
 ```
 
-### Branching Logic Notes
-Summary of all conditions, exits, and suppressions in a reference list.
+### 분기 로직 메모
+모든 조건, 퇴출, 억제를 참조 목록으로 요약합니다.
 
-### A/B Test Suggestions
-- 2-3 recommended A/B tests (subject lines, CTA text, send time, email length)
-- What to test, how to split, and how to measure the winner
+### A/B 테스트 제안
+- 2-3개의 권장 A/B 테스트 (제목, CTA 텍스트, 발송 시간, 이메일 길이)
+- 무엇을 테스트할지, 어떻게 분리할지, 승자를 어떻게 측정할지
 
-### Metrics to Track
-- Primary conversion metric for the sequence
-- Per-email metrics: open rate, CTR, unsubscribe rate
-- Sequence-level metrics: overall conversion rate, time to conversion, drop-off points
-- Recommended review cadence (e.g., "Review performance weekly for the first month, then monthly")
+### 추적할 지표
+- 시퀀스의 주요 전환 지표
+- 이메일별 지표: 오픈율, CTR, 수신 거부율
+- 시퀀스 수준 지표: 전체 전환율, 전환까지의 시간, 이탈 지점
+- 권장 검토 주기 (예: "첫 달은 주간으로, 이후 월간으로 성과를 검토하세요")
 
-## After the Sequence
+## 시퀀스 완성 후
 
-Ask: "Would you like me to:
-- Revise the copy or tone for any specific email?
-- Add a branching path for a specific scenario?
-- Create a variation of this sequence for a different audience segment?
-- Draft the A/B test variants for the subject lines?
-- Build a companion sequence (e.g., a post-purchase follow-up after this lead nurture converts)?"
+다음과 같이 질문합니다: "다음 중 원하시는 것이 있으신가요?
+- 특정 이메일의 카피나 톤을 수정할까요?
+- 특정 시나리오에 대한 분기 경로를 추가할까요?
+- 다른 오디언스 세그먼트를 위한 시퀀스 변형을 만들까요?
+- 제목의 A/B 테스트 변형을 작성할까요?
+- 보완 시퀀스를 구축할까요 (예: 리드 너처 전환 후 구매 후속 시퀀스)?"

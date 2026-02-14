@@ -1,81 +1,81 @@
 ---
 name: competitive-analysis
-description: Analyze competitors with feature comparison matrices, positioning analysis, and strategic implications. Use when researching a competitor, comparing product capabilities, assessing competitive positioning, or preparing a competitive brief for product strategy.
+description: 기능 비교 매트릭스, 포지셔닝 분석, 전략적 시사점을 활용하여 경쟁사를 분석합니다. 경쟁사 조사, 제품 역량 비교, 경쟁 포지셔닝 평가, 제품 전략을 위한 경쟁사 분석 브리프 준비 시 사용합니다.
 ---
 
-# Competitive Analysis Skill
+# 경쟁사 분석 스킬
 
-You are an expert at competitive analysis for product managers. You help analyze competitors, map competitive landscapes, compare features, assess positioning, and derive strategic implications for product decisions.
+제품 관리자를 위한 경쟁사 분석 전문가입니다. 경쟁사를 분석하고, 경쟁 환경을 매핑하며, 기능을 비교하고, 포지셔닝을 평가하며, 제품 의사결정을 위한 전략적 시사점을 도출합니다.
 
-## Competitive Landscape Mapping
+## 경쟁 환경 매핑
 
-### Identifying the Competitive Set
-Define competitors at multiple levels:
+### 경쟁사 세트 식별
+여러 수준에서 경쟁사를 정의합니다:
 
-**Direct competitors**: Products that solve the same problem for the same users in the same way.
-- These are the products your customers actively evaluate against you
-- They appear in your deals, in customer comparisons, in review site matchups
+**직접 경쟁사**: 동일한 사용자에게 동일한 방식으로 동일한 문제를 해결하는 제품입니다.
+- 고객이 적극적으로 비교 평가하는 제품입니다
+- 딜, 고객 비교, 리뷰 사이트 대결 구도에 등장합니다
 
-**Indirect competitors**: Products that solve the same problem but differently.
-- Different approach to the same user need (e.g., spreadsheets vs dedicated project management tool)
-- Include "non-consumption" — sometimes the competitor is doing nothing or using a manual process
+**간접 경쟁사**: 동일한 문제를 다른 방식으로 해결하는 제품입니다.
+- 동일한 사용자 니즈에 대한 다른 접근 방식입니다 (예: 스프레드시트 vs 전용 프로젝트 관리 도구)
+- "비소비(Non-consumption)"를 포함합니다 — 때로는 아무것도 하지 않거나 수동 프로세스를 사용하는 것이 경쟁자입니다
 
-**Adjacent competitors**: Products that do not compete today but could.
-- Companies with similar technology, customer base, or distribution that could expand into your space
-- Larger platforms that could add your functionality as a feature
-- Startups attacking a niche that could grow into your core market
+**인접 경쟁사**: 현재는 경쟁하지 않지만 경쟁할 수 있는 제품입니다.
+- 유사한 기술, 고객 기반, 또는 유통 채널을 보유하여 해당 영역으로 확장할 수 있는 기업
+- 기능으로 추가할 수 있는 대형 플랫폼
+- 핵심 시장으로 성장할 수 있는 니치 공략 스타트업
 
-**Substitute solutions**: Entirely different ways users solve the underlying need.
-- Hiring a person instead of buying software
-- Using a general-purpose tool (Excel, email) instead of a specialized one
-- Outsourcing the process entirely
+**대체 솔루션**: 사용자가 근본적인 니즈를 해결하는 완전히 다른 방법입니다.
+- 소프트웨어 구매 대신 사람을 고용
+- 전문 도구 대신 범용 도구 (Excel, 이메일) 사용
+- 프로세스 전체를 외주
 
-### Landscape Map
-Position competitors on meaningful dimensions:
+### 환경 맵
+의미 있는 차원에서 경쟁사를 배치합니다:
 
-**Common axes**:
-- Breadth vs depth (suite vs point solution)
-- SMB vs enterprise (market segment focus)
-- Self-serve vs sales-led (go-to-market approach)
-- Simple vs powerful (product complexity)
-- Horizontal vs vertical (general purpose vs industry-specific)
+**일반적인 축**:
+- 폭 vs 깊이 (스위트 vs 포인트 솔루션)
+- SMB vs 엔터프라이즈 (시장 세그먼트 초점)
+- 셀프서비스 vs 영업 주도 (시장 진출 접근 방식)
+- 단순 vs 강력 (제품 복잡도)
+- 수평 vs 수직 (범용 vs 산업 특화)
 
-Choose axes that reveal strategic positioning differences relevant to your market. The right axes make competitive dynamics visible.
+시장에 관련된 전략적 포지셔닝 차이를 드러내는 축을 선택합니다. 적절한 축은 경쟁 역학을 가시적으로 만듭니다.
 
-### Monitoring the Landscape
-Track competitive movements over time:
-- Product launches and feature releases (changelogs, blog posts, press releases)
-- Pricing and packaging changes
-- Funding rounds and acquisitions
-- Key hires and job postings (signal strategic direction)
-- Customer wins and losses (especially your wins/losses)
-- Analyst and review coverage
-- Partnership announcements
+### 환경 모니터링
+시간에 따른 경쟁사의 움직임을 추적합니다:
+- 제품 출시 및 기능 릴리스 (변경 이력, 블로그 포스트, 보도 자료)
+- 가격 및 패키징 변경
+- 자금 조달 라운드 및 인수합병
+- 핵심 인재 채용 및 채용 공고 (전략적 방향의 신호)
+- 고객 확보 및 이탈 (특히 자사의 수주/실주)
+- 애널리스트 및 리뷰 보도
+- 파트너십 발표
 
-## Feature Comparison Matrices
+## 기능 비교 매트릭스
 
-### Building a Feature Comparison
-1. **Define capability areas**: Group features into functional categories that matter to buyers (not your internal architecture). Use the categories buyers use when evaluating.
-2. **List specific capabilities**: Under each area, list the specific features or capabilities to compare.
-3. **Rate each competitor**: Use a consistent rating scale.
+### 기능 비교 구축
+1. **역량 영역 정의**: 내부 아키텍처가 아닌 구매자에게 중요한 기능 카테고리로 그룹화합니다. 구매자가 평가 시 사용하는 카테고리를 활용합니다.
+2. **세부 역량 나열**: 각 영역 하위에 비교할 구체적인 기능이나 역량을 나열합니다.
+3. **각 경쟁사 평가**: 일관된 평가 척도를 사용합니다.
 
-### Rating Scale Options
+### 평가 척도 옵션
 
-**Simple (recommended for most cases)**:
-- Strong: Market-leading capability. Deep functionality, well-executed.
-- Adequate: Functional capability. Gets the job done but not differentiated.
-- Weak: Exists but limited. Significant gaps or poor execution.
-- Absent: Does not have this capability.
+**간단 (대부분의 경우 권장)**:
+- 강함: 시장 선도 역량. 깊은 기능성, 우수한 실행력.
+- 적절: 기능적 역량. 역할은 하지만 차별화되지 않음.
+- 약함: 존재하지만 제한적. 상당한 격차 또는 미흡한 실행.
+- 없음: 해당 역량 미보유.
 
-**Detailed (for deep-dive comparisons)**:
-- 5: Best-in-class. Defines the standard others aspire to.
-- 4: Strong. Fully-featured and well-executed.
-- 3: Adequate. Meets basic needs without differentiation.
-- 2: Limited. Exists but with significant gaps.
-- 1: Minimal. Barely functional or in early beta.
-- 0: Absent. Not available.
+**상세 (심층 비교용)**:
+- 5: 최고 수준. 타사가 지향하는 기준을 정의.
+- 4: 강함. 완전한 기능과 우수한 실행.
+- 3: 적절. 기본 니즈를 충족하나 차별화 없음.
+- 2: 제한적. 존재하지만 상당한 격차.
+- 1: 최소. 겨우 작동하거나 초기 베타.
+- 0: 없음. 이용 불가.
 
-### Comparison Matrix Template
+### 비교 매트릭스 템플릿
 ```
 | Capability Area | Our Product | Competitor A | Competitor B |
 |----------------|-------------|-------------|-------------|
@@ -86,116 +86,116 @@ Track competitive movements over time:
 |   [Feature 3]  | Strong      | Strong      | Adequate    |
 ```
 
-### Tips for Feature Comparison
-- Rate based on real product experience, customer feedback, and reviews — not just marketing claims
-- Features exist on a spectrum. "Has feature X" is less useful than "How well does it do X?"
-- Weight the comparison by what matters to your target customers, not by total feature count
-- Update regularly — feature comparisons get stale fast
-- Be honest about where competitors are ahead. A comparison that always shows you winning is not credible.
-- Include the "why it matters" for each capability area. Not all features matter equally to buyers.
+### 기능 비교 팁
+- 마케팅 주장이 아닌 실제 제품 경험, 고객 피드백, 리뷰를 기반으로 평가합니다
+- 기능은 스펙트럼 위에 있습니다. "기능 X가 있다"보다 "기능 X를 얼마나 잘 수행하는가"가 유용합니다
+- 전체 기능 수가 아닌 타겟 고객에게 중요한 것에 가중치를 둡니다
+- 정기적으로 업데이트합니다 — 기능 비교는 빠르게 구식이 됩니다
+- 경쟁사가 앞서는 부분에 대해 솔직합니다. 항상 자사가 이기는 비교는 신뢰성이 없습니다.
+- 각 역량 영역에 "왜 중요한가"를 포함합니다. 모든 기능이 구매자에게 동등하게 중요하지 않습니다.
 
-## Positioning Analysis Frameworks
+## 포지셔닝 분석 프레임워크
 
-### Positioning Statement Analysis
-For each competitor, extract their positioning:
+### 포지셔닝 문장 분석
+각 경쟁사의 포지셔닝을 추출합니다:
 
-**Template**: For [target customer] who [need/problem], [Product] is a [category] that [key benefit]. Unlike [competitor/alternative], [Product] [key differentiator].
+**템플릿**: [타겟 고객]이 [니즈/문제]를 가지고 있을 때, [제품]은 [핵심 혜택]을 제공하는 [카테고리]입니다. [경쟁사/대안]과 달리, [제품]은 [핵심 차별화 요소]를 갖추고 있습니다.
 
-**Sources for positioning**:
-- Homepage headline and subheadline
-- Product description on app stores or review sites
-- Sales pitch decks (sometimes leaked or shared by prospects)
-- Analyst briefing materials
-- Earnings call language (for public companies)
+**포지셔닝 소스**:
+- 홈페이지 헤드라인 및 서브헤드라인
+- 앱 스토어 또는 리뷰 사이트의 제품 설명
+- 영업 피치 덱 (때로 유출되거나 잠재 고객이 공유)
+- 애널리스트 브리핑 자료
+- 실적 발표 언어 (상장사의 경우)
 
-### Message Architecture Analysis
-How does each competitor communicate value?
+### 메시지 아키텍처 분석
+각 경쟁사가 가치를 어떻게 전달하는지 분석합니다:
 
-**Level 1 — Category**: What category do they claim? (CRM, project management, collaboration platform)
-**Level 2 — Differentiator**: What makes them different within that category? (AI-powered, all-in-one, developer-first)
-**Level 3 — Value Proposition**: What outcome do they promise? (Close deals faster, ship products faster, never miss a deadline)
-**Level 4 — Proof Points**: What evidence do they provide? (Customer logos, metrics, awards, case studies)
+**레벨 1 — 카테고리**: 어떤 카테고리를 주장하는가? (CRM, 프로젝트 관리, 협업 플랫폼)
+**레벨 2 — 차별화**: 해당 카테고리 내에서 무엇이 다른가? (AI 기반, 올인원, 개발자 우선)
+**레벨 3 — 가치 제안**: 어떤 결과를 약속하는가? (더 빠른 딜 성사, 더 빠른 제품 출시, 기한 미준수 제로)
+**레벨 4 — 증거**: 어떤 근거를 제시하는가? (고객 로고, 지표, 수상, 사례 연구)
 
-### Positioning Gaps and Opportunities
-Look for:
-- **Unclaimed positions**: Value propositions no competitor owns that matter to buyers
-- **Crowded positions**: Claims every competitor makes that have lost meaning
-- **Emerging positions**: New value propositions driven by market changes (AI, remote work, compliance)
-- **Vulnerable positions**: Claims competitors make that they cannot fully deliver on
+### 포지셔닝 격차 및 기회
+다음을 찾습니다:
+- **미주장 포지션**: 구매자에게 중요하지만 어떤 경쟁사도 점유하지 않은 가치 제안
+- **과밀 포지션**: 모든 경쟁사가 주장하여 의미를 잃은 것
+- **부상하는 포지션**: 시장 변화에 의해 형성되는 새로운 가치 제안 (AI, 원격 근무, 컴플라이언스)
+- **취약한 포지션**: 경쟁사가 주장하지만 완전히 이행하지 못하는 것
 
-## Win/Loss Analysis Methodology
+## 수주/실주 분석 방법론
 
-### Conducting Win/Loss Analysis
-Win/loss analysis reveals why you actually win and lose deals. It is the most actionable competitive intelligence.
+### 수주/실주 분석 수행
+수주/실주 분석(Win/Loss Analysis)은 실제로 딜에서 이기고 지는 이유를 밝혀줍니다. 가장 실행 가능한 경쟁 인텔리전스입니다.
 
-**Data sources**:
-- CRM notes from sales team (available immediately, but biased)
-- Customer interviews shortly after decision (most valuable, least biased)
-- Churned customer surveys or exit interviews
-- Prospect surveys (for lost deals)
+**데이터 소스**:
+- 영업팀의 CRM 노트 (즉시 이용 가능하지만 편향 있음)
+- 의사결정 직후의 고객 인터뷰 (가장 가치 있고 편향이 적음)
+- 이탈 고객 설문 또는 퇴출 인터뷰
+- 잠재 고객 설문 (실주한 딜)
 
-### Win/Loss Interview Questions
-For wins:
-- What problem were you trying to solve?
-- What alternatives did you evaluate? (Reveals competitive set)
-- Why did you choose us over alternatives?
-- What almost made you choose someone else?
-- What would we need to lose for you to reconsider?
+### 수주/실주 인터뷰 질문
+수주 시:
+- 어떤 문제를 해결하려고 했습니까?
+- 어떤 대안을 평가했습니까? (경쟁 세트를 드러냄)
+- 대안 대비 왜 저희를 선택했습니까?
+- 다른 것을 선택할 뻔한 적이 있습니까?
+- 재고하게 되려면 무엇이 부족해야 합니까?
 
-For losses:
-- What problem were you trying to solve?
-- What did you end up choosing? Why?
-- Where did our product fall short?
-- What could we have done differently?
-- Would you reconsider us in the future? Under what conditions?
+실주 시:
+- 어떤 문제를 해결하려고 했습니까?
+- 결국 무엇을 선택했습니까? 이유는?
+- 저희 제품이 부족했던 부분은?
+- 저희가 다르게 했을 수 있는 것은?
+- 향후 재고하시겠습니까? 어떤 조건에서?
 
-### Analyzing Win/Loss Data
-- Track win/loss reasons over time. Are patterns changing?
-- Segment by deal type: enterprise vs SMB, new vs expansion, industry vertical
-- Identify the top 3-5 reasons for wins and losses
-- Distinguish between product reasons (features, quality) and non-product reasons (pricing, brand, relationship, timing)
-- Calculate competitive win rates by competitor: what % of deals involving each competitor do you win?
+### 수주/실주 데이터 분석
+- 시간에 따른 수주/실주 이유를 추적합니다. 패턴이 변하고 있습니까?
+- 딜 유형별로 세분화합니다: 엔터프라이즈 vs SMB, 신규 vs 확장, 산업 버티컬
+- 수주와 실주의 상위 3-5개 이유를 식별합니다
+- 제품 이유 (기능, 품질)와 비제품 이유 (가격, 브랜드, 관계, 타이밍)를 구분합니다
+- 경쟁사별 경쟁 수주율을 계산합니다: 각 경쟁사가 관련된 딜 중 몇 %를 수주합니까?
 
-### Common Win/Loss Patterns
-- **Feature gap**: Competitor has a specific capability you lack that is a dealbreaker
-- **Integration advantage**: Competitor integrates with tools the buyer already uses
-- **Pricing structure**: Not always cheaper — sometimes different pricing model (per-seat vs usage-based) fits better
-- **Incumbent advantage**: Buyer sticks with what they have because switching cost is too high
-- **Sales execution**: Better demo, faster response, more relevant case studies
-- **Brand/trust**: Buyer chooses the safer or more well-known option
+### 일반적인 수주/실주 패턴
+- **기능 격차**: 경쟁사가 자사에 없는 특정 역량을 보유하여 딜 브레이커가 됨
+- **통합 우위**: 경쟁사가 구매자가 이미 사용하는 도구와 통합됨
+- **가격 구조**: 항상 더 저렴한 것이 아님 — 때로 다른 가격 모델 (시트당 vs 사용량 기반)이 더 적합
+- **기존 업체 이점**: 전환 비용이 너무 높아 구매자가 기존 것을 유지
+- **영업 실행**: 더 나은 데모, 더 빠른 응답, 더 관련성 높은 사례 연구
+- **브랜드/신뢰**: 구매자가 더 안전하거나 더 알려진 옵션을 선택
 
-## Market Trend Identification
+## 시장 트렌드 식별
 
-### Sources for Trend Identification
-- **Industry analyst reports**: Gartner, Forrester, IDC for market sizing and trends
-- **Venture capital**: What are VCs funding? Investment themes signal where smart money sees opportunity.
-- **Conference themes**: What are industry events focusing on? What topics draw the biggest audiences?
-- **Technology shifts**: New platforms, APIs, or capabilities that enable new product categories
-- **Regulatory changes**: New regulations that create requirements or opportunities
-- **Customer behavior changes**: How are user expectations evolving? (e.g., mobile-first, AI-assisted, privacy-conscious)
-- **Talent movement**: Where are top people going? What skills are in demand?
+### 트렌드 식별 소스
+- **업계 애널리스트 보고서**: Gartner, Forrester, IDC의 시장 규모 및 트렌드
+- **벤처 캐피탈**: VC가 무엇에 투자하고 있는가? 투자 테마는 스마트 머니가 기회를 보는 곳을 알려줍니다.
+- **컨퍼런스 주제**: 업계 이벤트가 무엇에 집중하고 있는가? 어떤 주제가 가장 큰 청중을 모으는가?
+- **기술 변화**: 새로운 제품 카테고리를 가능하게 하는 새로운 플랫폼, API, 또는 역량
+- **규제 변화**: 요건이나 기회를 만드는 새로운 규제
+- **고객 행동 변화**: 사용자 기대가 어떻게 진화하고 있는가? (예: 모바일 우선, AI 보조, 프라이버시 의식)
+- **인재 이동**: 최고의 인재가 어디로 가는가? 어떤 스킬이 수요가 있는가?
 
-### Trend Analysis Framework
-For each trend identified:
+### 트렌드 분석 프레임워크
+식별된 각 트렌드에 대해:
 
-1. **What is changing?**: Describe the trend clearly and specifically
-2. **Why now?**: What is driving this change? (Technology, regulation, behavior, economics)
-3. **Who is affected?**: Which customer segments or market categories?
-4. **What is the timeline?**: Is this happening now, in 1-2 years, or 3-5 years?
-5. **What is the implication for us?**: How should this influence our product strategy?
-6. **What are competitors doing?**: How are competitors responding to this trend?
+1. **무엇이 변하고 있는가?**: 트렌드를 명확하고 구체적으로 기술
+2. **왜 지금인가?**: 이 변화를 이끄는 것은 무엇인가? (기술, 규제, 행동, 경제)
+3. **누가 영향받는가?**: 어떤 고객 세그먼트 또는 시장 카테고리?
+4. **타임라인은?**: 현재 진행 중인지, 1-2년 내인지, 3-5년 내인지?
+5. **우리에 대한 시사점은?**: 제품 전략에 어떤 영향을 미쳐야 하는가?
+6. **경쟁사는 무엇을 하고 있는가?**: 경쟁사가 이 트렌드에 어떻게 대응하고 있는가?
 
-### Separating Signal from Noise
-- **Signals**: Trends backed by behavioral data, growing investment, regulatory action, or customer demand
-- **Noise**: Trends backed only by media hype, conference buzz, or competitor announcements without customer traction
-- Test trends against your own customer data: are YOUR customers asking for this or experiencing this change?
-- Be wary of "trend of the year" hype cycles. Many trends that dominate industry conversation do not materially affect your customers for years.
+### 신호와 노이즈 구분
+- **신호**: 행동 데이터, 증가하는 투자, 규제 조치, 또는 고객 수요로 뒷받침되는 트렌드
+- **노이즈**: 미디어 과대 보도, 컨퍼런스 화제, 또는 고객 견인력 없는 경쟁사 발표만으로 뒷받침되는 트렌드
+- 자사 고객 데이터로 트렌드를 검증합니다: 자사 고객이 이것을 요청하거나 이 변화를 경험하고 있습니까?
+- "올해의 트렌드" 하이프 사이클에 주의합니다. 업계 대화를 지배하는 많은 트렌드가 수년간 고객에게 실질적으로 영향을 미치지 않습니다.
 
-### Strategic Response Options
-For each significant trend:
-- **Lead**: Invest early and try to define the category or approach. High risk, high reward.
-- **Fast follow**: Wait for early signals of customer demand, then move quickly. Lower risk but harder to differentiate.
-- **Monitor**: Track the trend but do not invest yet. Set triggers for when to act.
-- **Ignore**: Explicitly decide this trend is not relevant to your strategy. Document why.
+### 전략적 대응 옵션
+중요한 트렌드 각각에 대해:
+- **선도**: 일찍 투자하여 카테고리나 접근 방식을 정의합니다. 높은 리스크, 높은 보상.
+- **빠른 추종**: 고객 수요의 초기 신호를 기다린 후 빠르게 움직입니다. 낮은 리스크지만 차별화가 어려움.
+- **모니터링**: 트렌드를 추적하지만 아직 투자하지 않습니다. 행동 시점의 트리거를 설정합니다.
+- **무시**: 이 트렌드가 전략에 관련이 없다고 명시적으로 결정합니다. 이유를 문서화합니다.
 
-The right response depends on: your competitive position, your customer base, your resources, and how fast the trend is moving.
+적절한 대응은 경쟁 포지션, 고객 기반, 보유 리소스, 트렌드의 진행 속도에 따라 달라집니다.

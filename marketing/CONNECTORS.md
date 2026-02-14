@@ -1,19 +1,19 @@
-# Connectors
+# 커넥터
 
-## How tool references work
+## 도구 참조 방식
 
-Plugin files use `~~category` as a placeholder for whatever tool the user connects in that category. For example, `~~marketing automation` might mean HubSpot, Marketo, or any other marketing platform with an MCP server.
+플러그인 파일은 `~~category`를 플레이스홀더로 사용하여 해당 카테고리에서 사용자가 연결한 도구를 나타냅니다. 예를 들어, `~~marketing automation`은 MCP 서버가 있는 HubSpot, Marketo 또는 기타 마케팅 플랫폼을 의미할 수 있습니다.
 
-Plugins are **tool-agnostic** — they describe workflows in terms of categories (design, SEO, email marketing, etc.) rather than specific products. The `.mcp.json` pre-configures specific MCP servers, but any MCP server in that category works.
+플러그인은 **도구에 구애받지 않으며** — 특정 제품이 아닌 카테고리(디자인, SEO, 이메일 마케팅 등) 기준으로 워크플로우를 설명합니다. `.mcp.json`에 특정 MCP 서버가 사전 구성되어 있지만, 해당 카테고리의 모든 MCP 서버가 호환됩니다.
 
-## Connectors for this plugin
+## 이 플러그인의 커넥터
 
-| Category | Placeholder | Included servers | Other options |
+| 카테고리 | 플레이스홀더 | 포함된 서버 | 기타 옵션 |
 |----------|-------------|-----------------|---------------|
-| Chat | `~~chat` | Slack | Microsoft Teams |
-| Design | `~~design` | Canva, Figma | Adobe Creative Cloud |
-| Marketing automation | `~~marketing automation` | HubSpot | Marketo, Pardot, Mailchimp |
-| Product analytics | `~~product analytics` | Amplitude | Mixpanel, Google Analytics |
-| Knowledge base | `~~knowledge base` | Notion | Confluence, Guru |
+| 채팅 | `~~chat` | Slack | Microsoft Teams |
+| 디자인 | `~~design` | Canva, Figma | Adobe Creative Cloud |
+| 마케팅 자동화 | `~~marketing automation` | HubSpot | Marketo, Pardot, Mailchimp |
+| 프로덕트 분석 | `~~product analytics` | Amplitude | Mixpanel, Google Analytics |
+| 지식 베이스 | `~~knowledge base` | Notion | Confluence, Guru |
 | SEO | `~~SEO` | Ahrefs, Similarweb | Semrush, Moz |
-| Email marketing | `~~email marketing` | Klaviyo | Mailchimp, Brevo, Customer.io |
+| 이메일 마케팅 | `~~email marketing` | Klaviyo | Mailchimp, Brevo, Customer.io |

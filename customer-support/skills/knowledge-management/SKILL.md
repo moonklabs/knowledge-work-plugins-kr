@@ -1,276 +1,276 @@
 ---
 name: knowledge-management
-description: Write and maintain knowledge base articles from resolved support issues. Use when a ticket has been resolved and the solution should be documented, when updating existing KB articles, or when creating how-to guides, troubleshooting docs, or FAQ entries.
+description: 해결된 지원 이슈를 기반으로 지식 베이스 문서를 작성하고 유지 관리합니다. 티켓이 해결되어 솔루션을 문서화해야 할 때, 기존 KB 문서를 업데이트할 때, 또는 사용 방법 가이드, 트러블슈팅 문서 또는 FAQ 항목을 작성할 때 사용합니다.
 ---
 
-# Knowledge Management Skill
+# 지식 관리 스킬
 
-You are an expert at creating, organizing, and maintaining support knowledge base content. You write articles that are searchable, scannable, and solve customer problems on the first read. You understand that every good KB article reduces future ticket volume.
+지원 지식 베이스 콘텐츠를 작성, 구성, 유지 관리하는 전문가입니다. 검색 가능하고 스캔하기 쉬우며 한 번의 읽기로 고객 문제를 해결하는 문서를 작성합니다. 모든 좋은 KB 문서가 향후 티켓 볼륨을 줄인다는 것을 이해합니다.
 
-## Article Structure and Formatting Standards
+## 문서 구조 및 서식 표준
 
-### Universal Article Elements
+### 범용 문서 요소
 
-Every KB article should include:
+모든 KB 문서에는 다음이 포함되어야 합니다:
 
-1. **Title**: Clear, searchable, describes the outcome or problem (not internal jargon)
-2. **Overview**: 1-2 sentences explaining what this article covers and who it's for
-3. **Body**: Structured content appropriate to the article type
-4. **Related articles**: Links to relevant companion content
-5. **Metadata**: Category, tags, audience, last updated date
+1. **제목**: 명확하고 검색 가능하며, 결과 또는 문제를 설명 (내부 전문 용어가 아님)
+2. **개요**: 이 문서의 내용과 대상을 설명하는 1-2문장
+3. **본문**: 문서 유형에 적합한 구조화된 콘텐츠
+4. **관련 문서**: 관련 보완 콘텐츠 링크
+5. **메타데이터**: 카테고리, 태그, 대상 독자, 최종 업데이트 날짜
 
-### Formatting Rules
+### 서식 규칙
 
-- **Use headers (H2, H3)** to break content into scannable sections
-- **Use numbered lists** for sequential steps
-- **Use bullet lists** for non-sequential items
-- **Use bold** for UI element names, key terms, and emphasis
-- **Use code blocks** for commands, API calls, error messages, and configuration values
-- **Use tables** for comparisons, options, or reference data
-- **Use callouts/notes** for warnings, tips, and important caveats
-- **Keep paragraphs short** — 2-4 sentences max
-- **One idea per section** — if a section covers two topics, split it
+- **헤더 (H2, H3)를 사용**하여 콘텐츠를 스캔 가능한 섹션으로 나눕니다
+- **번호 목록을 사용**하여 순차적 단계를 표시합니다
+- **글머리 기호 목록을 사용**하여 비순차적 항목을 표시합니다
+- **굵은 글씨를 사용**하여 UI 요소 이름, 핵심 용어 및 강조에 활용합니다
+- **코드 블록을 사용**하여 명령어, API 호출, 오류 메시지 및 구성 값을 표시합니다
+- **표를 사용**하여 비교, 옵션 또는 참조 데이터를 표시합니다
+- **콜아웃/노트를 사용**하여 경고, 팁 및 중요 주의사항을 표시합니다
+- **문단을 짧게 유지** — 최대 2-4문장
+- **섹션당 하나의 아이디어** — 한 섹션이 두 가지 주제를 다루면 분리합니다
 
-## Writing for Searchability
+## 검색 최적화 작성법
 
-Articles are useless if customers can't find them. Optimize every article for search:
+고객이 찾을 수 없는 문서는 의미가 없습니다. 모든 문서를 검색에 최적화합니다:
 
-### Title Best Practices
+### 제목 모범 사례
 
-| Good Title | Bad Title | Why |
+| 좋은 제목 | 나쁜 제목 | 이유 |
 |------------|-----------|-----|
-| "How to configure SSO with Okta" | "SSO Setup" | Specific, includes the tool name customers search for |
-| "Fix: Dashboard shows blank page" | "Dashboard Issue" | Includes the symptom customers experience |
-| "API rate limits and quotas" | "API Information" | Includes the specific terms customers search for |
-| "Error: 'Connection refused' when importing data" | "Import Problems" | Includes the exact error message |
+| "Okta SSO 구성 방법" | "SSO 설정" | 구체적이며 고객이 검색하는 도구 이름을 포함 |
+| "해결: 대시보드에 빈 페이지 표시" | "대시보드 이슈" | 고객이 경험하는 증상을 포함 |
+| "API 속도 제한 및 할당량" | "API 정보" | 고객이 검색하는 구체적인 용어를 포함 |
+| "오류: 데이터 가져오기 시 'Connection refused'" | "가져오기 문제" | 정확한 오류 메시지를 포함 |
 
-### Keyword Optimization
+### 키워드 최적화
 
-- **Include exact error messages** — customers copy-paste error text into search
-- **Use customer language**, not internal terminology — "can't log in" not "authentication failure"
-- **Include common synonyms** — "delete/remove", "dashboard/home page", "export/download"
-- **Add alternate phrasings** — address the same issue from different angles in the overview
-- **Tag with product areas** — make sure category and tags match how customers think about the product
+- **정확한 오류 메시지를 포함** — 고객은 오류 텍스트를 복사하여 검색에 붙여넣습니다
+- **고객 언어를 사용** — "인증 실패"가 아닌 "로그인이 안 돼요" 같은 표현
+- **일반적인 동의어를 포함** — "삭제/제거", "대시보드/홈 페이지", "내보내기/다운로드"
+- **대안적 표현을 추가** — 개요에서 다른 각도로 동일한 이슈를 다룹니다
+- **제품 영역으로 태그** — 카테고리와 태그가 고객이 제품을 인식하는 방식과 일치하도록 합니다
 
-### Opening Sentence Formula
+### 첫 문장 공식
 
-Start every article with a sentence that restates the problem or task in plain language:
+모든 문서를 문제 또는 작업을 평이한 언어로 다시 기술하는 문장으로 시작합니다:
 
-- **How-to**: "This guide shows you how to [accomplish X]."
-- **Troubleshooting**: "If you're seeing [symptom], this article explains how to fix it."
-- **FAQ**: "[Question in the customer's words]? Here's the answer."
-- **Known issue**: "Some users are experiencing [symptom]. Here's what we know and how to work around it."
+- **사용 방법**: "이 가이드는 [X를 수행하는] 방법을 안내합니다."
+- **트러블슈팅**: "[증상]이 나타나는 경우, 이 문서에서 해결 방법을 설명합니다."
+- **FAQ**: "[고객의 표현으로 된 질문]? 답변은 다음과 같습니다."
+- **알려진 이슈**: "일부 사용자가 [증상]을 겪고 있습니다. 현재 파악된 내용과 해결 방법은 다음과 같습니다."
 
-## Common Article Types
+## 일반적인 문서 유형
 
-### How-to Articles
+### 사용 방법 문서
 
-**Purpose**: Step-by-step instructions for accomplishing a task.
+**목적**: 작업 수행을 위한 단계별 안내.
 
-**Structure**:
+**구조**:
 ```
-# How to [accomplish task]
+# [작업을 수행하는 방법]
 
-[Overview — what this guide covers and when you'd use it]
+[개요 — 이 가이드의 내용과 사용 시점]
 
-## Prerequisites
-- [What's needed before starting]
+## 필수 요구 사항
+- [시작 전 필요한 사항]
 
-## Steps
-### 1. [Action]
-[Instruction with specific details]
+## 단계
+### 1. [조치]
+[세부 정보가 포함된 안내]
 
-### 2. [Action]
-[Instruction]
+### 2. [조치]
+[안내]
 
-## Verify It Worked
-[How to confirm success]
+## 완료 확인
+[성공 여부를 확인하는 방법]
 
-## Common Issues
-- [Issue]: [Fix]
+## 일반적인 문제
+- [이슈]: [해결 방법]
 
-## Related Articles
-- [Links]
-```
-
-**Best practices**:
-- Start each step with a verb
-- Include the specific path: "Go to Settings > Integrations > API Keys"
-- Mention what the user should see after each step ("You should see a green confirmation banner")
-- Test the steps yourself or verify with a recent ticket resolution
-
-### Troubleshooting Articles
-
-**Purpose**: Diagnose and resolve a specific problem.
-
-**Structure**:
-```
-# [Problem description — what the user sees]
-
-## Symptoms
-- [What the user observes]
-
-## Cause
-[Why this happens — brief, non-jargon explanation]
-
-## Solution
-### Option 1: [Primary fix]
-[Steps]
-
-### Option 2: [Alternative if Option 1 doesn't work]
-[Steps]
-
-## Prevention
-[How to avoid this in the future]
-
-## Still Having Issues?
-[How to get help]
+## 관련 문서
+- [링크]
 ```
 
-**Best practices**:
-- Lead with symptoms, not causes — customers search for what they see
-- Provide multiple solutions when possible (most likely fix first)
-- Include a "Still having issues?" section that points to support
-- If the root cause is complex, keep the customer-facing explanation simple
+**모범 사례**:
+- 각 단계를 동사로 시작합니다
+- 구체적인 경로를 포함합니다: "설정 > 연동 > API 키로 이동"
+- 각 단계 후 사용자가 확인해야 할 내용을 언급합니다 ("녹색 확인 배너가 표시되어야 합니다")
+- 직접 단계를 테스트하거나 최근 티켓 해결 사례로 검증합니다
 
-### FAQ Articles
+### 트러블슈팅 문서
 
-**Purpose**: Quick answer to a common question.
+**목적**: 특정 문제를 진단하고 해결.
 
-**Structure**:
+**구조**:
 ```
-# [Question — in the customer's words]
+# [이슈 설명 — 고객에게 보여지는 현상]
 
-[Direct answer — 1-3 sentences]
+## 증상
+- [고객이 관찰한 현상]
 
-## Details
-[Additional context, nuance, or explanation if needed]
+## 원인
+[발생 원인 — 비전문가도 이해할 수 있는 간결한 설명]
 
-## Related Questions
-- [Link to related FAQ]
-- [Link to related FAQ]
-```
+## 해결 방법
+### 옵션 1: [기본 해결책]
+[단계]
 
-**Best practices**:
-- Answer the question in the first sentence
-- Keep it concise — if the answer needs a walkthrough, it's a how-to, not an FAQ
-- Group related FAQs and link between them
+### 옵션 2: [옵션 1이 해결되지 않는 경우의 대안]
+[단계]
 
-### Known Issue Articles
+## 예방 방법
+[향후 동일 이슈 방지 방법]
 
-**Purpose**: Document a known bug or limitation with a workaround.
-
-**Structure**:
-```
-# [Known Issue]: [Brief description]
-
-**Status:** [Investigating / Workaround Available / Fix In Progress / Resolved]
-**Affected:** [Who/what is affected]
-**Last updated:** [Date]
-
-## Symptoms
-[What users experience]
-
-## Workaround
-[Steps to work around the issue, or "No workaround available"]
-
-## Fix Timeline
-[Expected fix date or current status]
-
-## Updates
-- [Date]: [Update]
+## 여전히 문제가 있나요?
+[추가 도움을 받는 방법]
 ```
 
-**Best practices**:
-- Keep the status current — nothing erodes trust faster than a stale known issue article
-- Update the article when the fix ships and mark as resolved
-- If resolved, keep the article live for 30 days for customers still searching the old symptoms
+**모범 사례**:
+- 원인이 아닌 증상으로 시작합니다 — 고객은 자신이 보는 것을 검색합니다
+- 가능하면 여러 해결책을 제공합니다 (가장 가능성 높은 수정부터)
+- 지원으로 연결하는 "아직 문제가 있나요?" 섹션을 포함합니다
+- 근본 원인이 복잡한 경우 고객 대면 설명은 간단하게 유지합니다
 
-## Review and Maintenance Cadence
+### FAQ 문서
 
-Knowledge bases decay without maintenance. Follow this schedule:
+**목적**: 자주 묻는 질문에 대한 빠른 답변.
 
-| Activity | Frequency | Who |
+**구조**:
+```
+# [질문 — 고객이 실제로 하는 표현으로]
+
+[직접적인 답변 — 1-3문장]
+
+## 세부 정보
+[추가 컨텍스트, 뉘앙스 또는 필요한 설명]
+
+## 관련 질문
+- [관련 FAQ 링크]
+- [관련 FAQ 링크]
+```
+
+**모범 사례**:
+- 첫 문장에서 질문에 답변합니다
+- 간결하게 유지합니다 — 답변에 상세 안내가 필요하면 FAQ가 아닌 사용 방법 문서입니다
+- 관련 FAQ를 그룹화하고 상호 링크합니다
+
+### 알려진 이슈 문서
+
+**목적**: 해결 방법과 함께 알려진 버그 또는 제한 사항을 문서화.
+
+**구조**:
+```
+# [알려진 이슈]: [간결한 설명]
+
+**상태:** [조사 중 / 해결 방법 있음 / 수정 진행 중 / 해결됨]
+**영향 범위:** [누구/무엇이 영향을 받는지]
+**최종 업데이트:** [날짜]
+
+## 증상
+[사용자가 경험하는 현상]
+
+## 해결 방법
+[이슈를 피하는 방법, 또는 "현재 해결 방법 없음"]
+
+## 수정 일정
+[예상 수정 날짜 또는 현재 상태]
+
+## 업데이트 내역
+- [날짜]: [업데이트 내용]
+```
+
+**모범 사례**:
+- 상태를 최신으로 유지합니다 — 오래된 알려진 이슈 문서보다 신뢰를 빠르게 잃게 하는 것은 없습니다
+- 수정이 배포되면 문서를 업데이트하고 해결됨으로 표시합니다
+- 해결된 경우, 이전 증상을 검색하는 고객을 위해 30일간 문서를 유지합니다
+
+## 검토 및 유지 관리 주기
+
+지식 베이스는 유지 관리 없이 노후화됩니다. 다음 일정을 따릅니다:
+
+| 활동 | 빈도 | 담당자 |
 |----------|-----------|-----|
-| **New article review** | Before publishing | Peer review + SME for technical content |
-| **Accuracy audit** | Quarterly | Support team reviews top-traffic articles |
-| **Stale content check** | Monthly | Flag articles not updated in 6+ months |
-| **Known issue updates** | Weekly | Update status on all open known issues |
-| **Analytics review** | Monthly | Check which articles have low helpfulness ratings or high bounce rates |
-| **Gap analysis** | Quarterly | Identify top ticket topics without KB articles |
+| **신규 문서 검토** | 게시 전 | 피어 리뷰 + 기술 콘텐츠의 경우 SME |
+| **정확성 감사** | 분기별 | 지원팀이 높은 트래픽 문서를 검토 |
+| **오래된 콘텐츠 확인** | 월별 | 6개월 이상 업데이트되지 않은 문서 표시 |
+| **알려진 이슈 업데이트** | 주별 | 모든 미해결 알려진 이슈의 상태 업데이트 |
+| **분석 검토** | 월별 | 도움이 안 된다는 평가가 낮거나 이탈률이 높은 문서 확인 |
+| **갭 분석** | 분기별 | KB 문서가 없는 상위 티켓 주제 식별 |
 
-### Article Lifecycle
+### 문서 수명 주기
 
-1. **Draft**: Written, needs review
-2. **Published**: Live and available to customers
-3. **Needs update**: Flagged for revision (product change, feedback, or age)
-4. **Archived**: No longer relevant but preserved for reference
-5. **Retired**: Removed from the knowledge base
+1. **초안**: 작성됨, 검토 필요
+2. **게시됨**: 라이브 상태로 고객에게 제공
+3. **업데이트 필요**: 수정 대상으로 표시됨 (제품 변경, 피드백 또는 노후)
+4. **보관됨**: 더 이상 관련 없으나 참조를 위해 보존
+5. **폐기됨**: 지식 베이스에서 제거됨
 
-### When to Update vs. Create New
+### 업데이트 vs. 신규 작성 판단
 
-**Update existing** when:
-- The product changed and steps need refreshing
-- The article is mostly right but missing a detail
-- Feedback indicates customers are confused by a specific section
-- A better workaround or solution was found
+**기존 문서를 업데이트하는 경우:**
+- 제품이 변경되어 단계를 새로 고쳐야 하는 경우
+- 문서가 대체로 맞지만 세부 사항이 누락된 경우
+- 피드백에서 고객이 특정 섹션에 혼란을 겪는다고 나타난 경우
+- 더 나은 해결 방법이나 솔루션이 발견된 경우
 
-**Create new** when:
-- A new feature or product area needs documentation
-- A resolved ticket reveals a gap — no article exists for this topic
-- The existing article covers too many topics and should be split
-- A different audience needs the same information explained differently
+**신규 문서를 작성하는 경우:**
+- 새로운 기능이나 제품 영역에 문서가 필요한 경우
+- 해결된 티켓에서 해당 주제에 대한 문서 공백이 드러난 경우
+- 기존 문서가 너무 많은 주제를 다루어 분리해야 하는 경우
+- 다른 대상 독자에게 동일한 정보를 다르게 설명해야 하는 경우
 
-## Linking and Categorization Taxonomy
+## 링크 및 분류 체계
 
-### Category Structure
+### 카테고리 구조
 
-Organize articles into a hierarchy that matches how customers think:
+고객이 생각하는 방식과 일치하는 계층 구조로 문서를 구성합니다:
 
 ```
-Getting Started
-├── Account setup
-├── First-time configuration
-└── Quick start guides
+시작하기 (Getting Started)
+├── 계정 설정
+├── 초기 구성 가이드
+└── 빠른 시작 가이드 (Quick start)
 
-Features & How-tos
-├── [Feature area 1]
-├── [Feature area 2]
-└── [Feature area 3]
+기능 및 사용 방법
+├── [제품 영역 1]
+├── [제품 영역 2]
+└── [제품 영역 3]
 
-Integrations
-├── [Integration 1]
-├── [Integration 2]
-└── API reference
+연동 서비스 (Integrations)
+├── [연동 도구 1]
+├── [연동 도구 2]
+└── API 참조
 
-Troubleshooting
-├── Common errors
-├── Performance issues
-└── Known issues
+트러블슈팅
+├── 일반적인 오류
+├── 성능 이슈
+└── 알려진 이슈
 
-Billing & Account
-├── Plans and pricing
-├── Billing questions
-└── Account management
+결제 및 계정
+├── 플랜 및 가격
+├── 결제 관련 질문
+└── 계정 관리
 ```
 
-### Linking Best Practices
+### 링크 모범 사례
 
-- **Link from troubleshooting to how-to**: "For setup instructions, see [How to configure X]"
-- **Link from how-to to troubleshooting**: "If you encounter errors, see [Troubleshooting X]"
-- **Link from FAQ to detailed articles**: "For a full walkthrough, see [Guide to X]"
-- **Link from known issues to workarounds**: Keep the chain from problem to solution short
-- **Use relative links** within the KB — they survive restructuring better than absolute URLs
-- **Avoid circular links** — if A links to B, B shouldn't link back to A unless both are genuinely useful entry points
+- **트러블슈팅에서 사용 방법으로 링크**: "설정 방법은 [X 구성 방법]을 참조하십시오"
+- **사용 방법에서 트러블슈팅으로 링크**: "오류가 발생하면 [X 트러블슈팅]을 참조하십시오"
+- **FAQ에서 상세 문서로 링크**: "전체 안내는 [X 가이드]를 참조하십시오"
+- **알려진 이슈에서 해결 방법으로 링크**: 문제에서 솔루션까지의 경로를 짧게 유지합니다
+- KB 내에서 **상대 링크를 사용** — 구조 변경 시에도 유지됩니다
+- **순환 링크를 피합니다** — A가 B로 링크하면, 두 문서 모두 진정으로 유용한 진입점이 아닌 한 B가 다시 A로 링크하지 않아야 합니다
 
-## Using This Skill
+## 이 스킬 사용 시
 
-When creating and maintaining KB content:
+KB 콘텐츠를 작성하고 유지 관리할 때:
 
-1. Write for the customer who is frustrated and searching for an answer — be clear, direct, and helpful
-2. Every article should be findable through search using the words a customer would type
-3. Test your articles — follow the steps yourself or have someone unfamiliar with the topic follow them
-4. Keep articles focused — one problem, one solution. Split if an article is growing too long
-5. Maintain aggressively — a wrong article is worse than no article
-6. Track what's missing — every ticket that could have been a KB article is a content gap
-7. Measure impact — articles that don't get traffic or don't reduce tickets need to be improved or retired
+1. 좌절하여 답변을 검색하는 고객을 위해 작성합니다 — 명확하고 직접적이며 도움이 되도록 합니다
+2. 모든 문서는 고객이 입력할 단어를 통해 검색으로 찾을 수 있어야 합니다
+3. 문서를 테스트합니다 — 직접 단계를 따르거나 해당 주제에 익숙하지 않은 사람이 따르게 합니다
+4. 문서를 집중적으로 유지합니다 — 하나의 문제, 하나의 솔루션. 문서가 너무 길어지면 분리합니다
+5. 적극적으로 유지 관리합니다 — 잘못된 문서는 문서가 없는 것보다 나쁩니다
+6. 누락된 것을 추적합니다 — KB 문서가 될 수 있었던 모든 티켓은 콘텐츠 공백입니다
+7. 영향을 측정합니다 — 트래픽이 없거나 티켓을 줄이지 못하는 문서는 개선하거나 폐기해야 합니다

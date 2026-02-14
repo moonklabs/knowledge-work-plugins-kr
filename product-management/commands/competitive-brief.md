@@ -1,102 +1,102 @@
 ---
-description: Create a competitive analysis brief for one or more competitors or a feature area
-argument-hint: "<competitor or feature area>"
+description: 하나 이상의 경쟁사 또는 기능 영역에 대한 경쟁사 분석 브리프를 작성합니다
+argument-hint: "<경쟁사 또는 기능 영역>"
 ---
 
-# Competitive Brief
+# 경쟁사 분석 브리프
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 참조하세요.
 
-Create a competitive analysis brief for one or more competitors or a feature area.
+하나 이상의 경쟁사 또는 기능 영역에 대한 경쟁사 분석 브리프를 작성합니다.
 
-## Workflow
+## 워크플로우
 
-### 1. Scope the Analysis
+### 1. 분석 범위 설정
 
-Ask the user:
-- **Competitor(s)**: Which specific competitor(s) to analyze? Or a feature area to compare across competitors?
-- **Focus**: Full product comparison, specific feature area, pricing/packaging, go-to-market, or positioning?
-- **Context**: What decision will this inform? (product strategy, sales enablement, investor/board materials, feature prioritization)
+사용자에게 확인합니다:
+- **경쟁사**: 어떤 경쟁사를 분석할 것인지, 또는 경쟁사 간 비교할 기능 영역은 무엇인지
+- **초점**: 전체 제품 비교, 특정 기능 영역, 가격/패키징, 시장 진출 전략, 또는 포지셔닝 중 무엇인지
+- **맥락**: 이 분석이 어떤 의사결정에 활용될 것인지 (제품 전략, 영업 지원, 투자자/이사회 자료, 기능 우선순위 설정)
 
-### 2. Research
+### 2. 조사
 
-**Via web search**:
-- Product pages and feature lists
-- Pricing pages and packaging
-- Recent product launches, blog posts, and changelogs
-- Press coverage and analyst reports
-- Customer reviews and ratings (G2, Capterra, TrustRadius)
-- Job postings (signal of strategic direction)
-- Social media and community discussions
+**웹 검색을 통해**:
+- 제품 페이지 및 기능 목록
+- 가격 페이지 및 패키징
+- 최근 제품 출시, 블로그 포스트, 변경 이력
+- 언론 보도 및 애널리스트 보고서
+- 고객 리뷰 및 평점 (G2, Capterra, TrustRadius)
+- 채용 공고 (전략 방향의 신호)
+- 소셜 미디어 및 커뮤니티 논의
 
-If **~~knowledge base** is connected:
-- Search for existing competitive analysis documents
-- Find win/loss reports or sales battle cards
-- Pull prior competitive research
+**~~knowledge base**가 연결된 경우:
+- 기존 경쟁사 분석 문서 검색
+- 수주/실주 보고서 또는 영업 배틀 카드 검색
+- 이전 경쟁사 조사 자료 가져오기
 
-If **~~chat** is connected:
-- Search for competitive mentions in sales or product channels
-- Find recent deal feedback involving competitors
+**~~chat**이 연결된 경우:
+- 영업 또는 제품 채널에서 경쟁사 언급 검색
+- 경쟁사 관련 최근 딜 피드백 검색
 
-### 3. Generate the Brief
+### 3. 브리프 생성
 
-#### Competitor Overview
-For each competitor:
-- Company summary: founding, size, funding/revenue if public, target market
-- Product positioning: how they describe themselves, who they target
-- Recent momentum: launches, funding, partnerships, customer wins
+#### 경쟁사 개요
+각 경쟁사별로:
+- 회사 요약: 설립, 규모, 자금 조달/매출(상장사의 경우), 타겟 시장
+- 제품 포지셔닝: 자사 제품을 어떻게 설명하는지, 누구를 타겟으로 하는지
+- 최근 모멘텀: 출시, 자금 조달, 파트너십, 고객 확보
 
-#### Feature Comparison
-Compare capabilities across key areas relevant to the analysis. See the **competitive-analysis** skill for rating frameworks and comparison matrix templates.
+#### 기능 비교
+분석과 관련된 주요 영역에서 역량을 비교합니다. 평가 프레임워크와 비교 매트릭스 템플릿은 **competitive-analysis** 스킬을 참조하세요.
 
-#### Positioning Analysis
-Analyze how each competitor positions themselves — target customer, category claim, key differentiator, and value proposition. See the **competitive-analysis** skill for positioning analysis frameworks.
+#### 포지셔닝 분석
+각 경쟁사의 포지셔닝을 분석합니다 — 타겟 고객, 카테고리 주장, 핵심 차별화 요소, 가치 제안. 포지셔닝 분석 프레임워크는 **competitive-analysis** 스킬을 참조하세요.
 
-#### Strengths and Weaknesses
-For each competitor:
-- **Strengths**: Where they genuinely excel. What customers praise.
-- **Weaknesses**: Where they fall short. What customers complain about.
-- Be honest and evidence-based — do not dismiss competitors or inflate their weaknesses.
+#### 강점 및 약점
+각 경쟁사별로:
+- **강점**: 실제로 뛰어난 부분. 고객이 칭찬하는 점.
+- **약점**: 부족한 부분. 고객이 불만을 제기하는 점.
+- 정직하고 근거에 기반하여 작성합니다 — 경쟁사를 폄하하거나 약점을 부풀리지 않습니다.
 
-#### Opportunities
-Based on the analysis:
-- Where are there gaps in competitor offerings we could exploit?
-- What are customers asking for that no one provides well?
-- Where are competitors making bets we disagree with?
-- What market shifts could advantage our approach?
+#### 기회
+분석을 바탕으로:
+- 경쟁사 제품의 공백 중 활용할 수 있는 부분은 무엇인지
+- 어떤 경쟁사도 제대로 제공하지 못하는 고객 요구는 무엇인지
+- 우리가 동의하지 않는 경쟁사의 전략적 방향은 무엇인지
+- 우리의 접근 방식에 유리하게 작용할 시장 변화는 무엇인지
 
-#### Threats
-- Where are competitors investing heavily?
-- What competitive moves could disrupt our position?
-- Where are we most vulnerable?
-- What would a "nightmare scenario" competitive move look like?
+#### 위협
+- 경쟁사가 대규모로 투자하고 있는 분야는 무엇인지
+- 우리의 입지를 위협할 수 있는 경쟁사의 움직임은 무엇인지
+- 우리가 가장 취약한 부분은 어디인지
+- "최악의 시나리오" 경쟁사 움직임은 어떤 모습인지
 
-#### Strategic Implications
-Tie the analysis back to product strategy:
-- What should we build, accelerate, or deprioritize based on this analysis?
-- Where should we differentiate vs. achieve parity?
-- How should we adjust positioning or messaging?
-- What should we monitor going forward?
+#### 전략적 시사점
+분석을 제품 전략과 연결합니다:
+- 이 분석을 바탕으로 무엇을 만들고, 가속화하고, 우선순위를 낮추어야 하는지
+- 어디에서 차별화하고 어디에서 동등 수준을 달성해야 하는지
+- 포지셔닝이나 메시지를 어떻게 조정해야 하는지
+- 앞으로 무엇을 모니터링해야 하는지
 
-### 4. Follow Up
+### 4. 후속 조치
 
-After generating the brief:
-- Ask if the user wants to dive deeper on any section
-- Offer to create a one-page summary for executives
-- Offer to create sales battle cards for competitive deals
-- Offer to draft a "how to win against [competitor]" guide
-- Offer to set up a monitoring plan for competitive moves
+브리프 생성 후:
+- 특정 섹션을 더 깊이 다루고 싶은지 확인합니다
+- 경영진을 위한 1페이지 요약을 제안합니다
+- 경쟁 딜을 위한 영업 배틀 카드 작성을 제안합니다
+- "[경쟁사]를 이기는 방법" 가이드 작성을 제안합니다
+- 경쟁사 동향 모니터링 계획 수립을 제안합니다
 
-## Output Format
+## 출력 형식
 
-Use tables for feature comparisons. Use clear headers for each section. Keep the strategic implications section concise and actionable — this is where the value is for the reader.
+기능 비교에는 표를 사용합니다. 각 섹션에 명확한 제목을 사용합니다. 전략적 시사점 섹션은 간결하고 실행 가능하게 유지합니다 — 이 부분이 독자에게 가장 가치 있는 내용입니다.
 
-## Tips
+## 팁
 
-- Be honest about competitor strengths. Dismissing competitors makes the analysis useless.
-- Focus on what matters to customers, not what matters to product teams. Customers do not care about architecture elegance.
-- Pricing is hard to compare fairly. Note the caveats (different packaging, usage-based vs seat-based, enterprise custom pricing).
-- Job postings are underrated competitive intelligence. A competitor hiring ML engineers signals a strategic direction.
-- Customer reviews are gold. They reveal what real users love and hate, unfiltered by marketing.
-- The most valuable part of competitive analysis is the "so what" — the strategic implications. Do not skip this.
-- Competitive analysis has a shelf life. Note the date and flag areas that change quickly.
+- 경쟁사의 강점에 대해 정직하게 작성합니다. 경쟁사를 폄하하면 분석이 무용지물이 됩니다.
+- 제품팀이 아닌 고객에게 중요한 것에 집중합니다. 고객은 아키텍처의 우아함에 관심이 없습니다.
+- 가격은 공정하게 비교하기 어렵습니다. 주의 사항을 명시합니다 (패키징 차이, 사용량 기반 vs 시트 기반, 엔터프라이즈 커스텀 가격 등).
+- 채용 공고는 과소평가된 경쟁 정보입니다. 경쟁사가 ML 엔지니어를 채용하면 전략적 방향의 신호입니다.
+- 고객 리뷰는 매우 가치 있는 자료입니다. 마케팅 필터 없이 실제 사용자가 좋아하고 싫어하는 것을 드러냅니다.
+- 경쟁사 분석에서 가장 가치 있는 부분은 "그래서 어떻게 할 것인가" — 전략적 시사점입니다. 이 부분을 생략하지 마세요.
+- 경쟁사 분석에는 유효기간이 있습니다. 날짜를 명시하고 빠르게 변하는 영역을 표시합니다.

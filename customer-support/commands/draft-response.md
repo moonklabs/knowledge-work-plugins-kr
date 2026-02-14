@@ -1,154 +1,154 @@
 ---
-description: Draft a professional customer-facing response tailored to the situation and relationship
-argument-hint: "<situation description>"
+description: 상황과 고객 관계에 맞춘 전문적인 고객 대면 응답 초안 작성
+argument-hint: "<상황 설명>"
 ---
 
-# Draft Response
+# 응답 초안 작성
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 참조하십시오.
 
-Draft a professional, customer-facing response tailored to the situation, customer relationship, and communication context.
+상황, 고객 관계, 커뮤니케이션 컨텍스트에 맞춘 전문적인 고객 대면 응답 초안을 작성합니다.
 
-## Usage
+## 사용법
 
 ```
-/draft-response <context about the customer question, issue, or request>
+/draft-response <고객 질문, 이슈 또는 요청에 대한 컨텍스트>
 ```
 
-Examples:
-- `/draft-response Acme Corp is asking when the new dashboard feature will ship`
-- `/draft-response Customer escalation — their integration has been down for 2 days`
-- `/draft-response Responding to a feature request we won't be building`
-- `/draft-response Customer hit a billing error and wants a resolution ASAP`
+예시:
+- `/draft-response Acme Corp에서 새 대시보드 기능이 언제 출시되는지 묻고 있습니다`
+- `/draft-response 고객 에스컬레이션 — 통합 서비스가 2일 동안 중단되었습니다`
+- `/draft-response 개발 계획이 없는 기능 요청에 대한 응답`
+- `/draft-response 고객이 결제 오류를 발생시켜 빠른 해결을 원하고 있습니다`
 
-## Workflow
+## 워크플로우
 
-### 1. Understand the Context
+### 1. 컨텍스트 파악
 
-Parse the user's input to determine:
+사용자의 입력을 분석하여 다음을 파악합니다:
 
-- **Customer**: Who is the communication for? Look up account context if available.
-- **Situation type**: Question, issue, escalation, announcement, negotiation, bad news, good news, follow-up
-- **Urgency**: Is this time-sensitive? How long has the customer been waiting?
-- **Channel**: Email, support ticket, chat, or other (adjust formality accordingly)
-- **Relationship stage**: New customer, established, frustrated/escalated
-- **Stakeholder level**: End user, manager, executive, technical, business
+- **고객**: 누구를 위한 커뮤니케이션인지 파악하고, 가능한 경우 계정 컨텍스트를 조회합니다.
+- **상황 유형**: 질문, 이슈, 에스컬레이션, 공지, 협상, 부정적 소식, 긍정적 소식, 후속 조치
+- **긴급도**: 시간에 민감한 사안인지, 고객이 얼마나 기다렸는지 확인합니다.
+- **채널**: 이메일, 지원 티켓, 채팅 또는 기타 (형식을 그에 맞게 조정)
+- **관계 단계**: 신규 고객, 기존 고객, 불만/에스컬레이션 상태
+- **이해관계자 수준**: 최종 사용자, 관리자, 경영진, 기술직, 비즈니스직
 
-### 2. Research Context
+### 2. 컨텍스트 조사
 
-Gather relevant background from available sources:
+사용 가능한 소스에서 관련 배경 정보를 수집합니다:
 
 **~~email:**
-- Previous correspondence with this customer on this topic
-- Any commitments or timelines previously shared
-- Tone and style of the existing thread
+- 이 주제에 대한 해당 고객과의 이전 서신
+- 이전에 공유된 약속이나 일정
+- 기존 스레드의 톤과 스타일
 
 **~~chat:**
-- Internal discussions about this customer or topic
-- Any guidance from product, engineering, or leadership
-- Similar situations and how they were handled
+- 해당 고객 또는 주제에 대한 내부 논의
+- 프로덕트, 엔지니어링 또는 리더십의 가이던스
+- 유사한 상황의 처리 사례
 
-**~~CRM (if connected):**
-- Account details and plan level
-- Contact information and key stakeholders
-- Previous escalations or sensitive issues
+**~~CRM (연결된 경우):**
+- 계정 정보 및 플랜 등급
+- 연락처 정보 및 주요 이해관계자
+- 이전 에스컬레이션 또는 민감한 이슈
 
-**~~support platform (if connected):**
-- Related tickets and their resolution
-- Known issues or workarounds
-- SLA status and response time commitments
+**~~support platform (연결된 경우):**
+- 관련 티켓 및 해결 내역
+- 알려진 이슈 또는 해결 방법
+- SLA 상태 및 응답 시간 약속
 
 **~~knowledge base:**
-- Official documentation or help articles to reference
-- Product roadmap information (if shareable)
-- Policy or process documentation
+- 참조할 공식 문서 또는 도움말 문서
+- 프로덕트 로드맵 정보 (외부 공유 가능한 경우)
+- 정책 또는 프로세스 문서
 
-### 3. Generate the Draft
+### 3. 초안 생성
 
-Produce a response tailored to the situation:
+상황에 맞춘 응답을 작성합니다:
 
 ```
-## Draft Response
+## 응답 초안
 
-**To:** [Customer contact name]
-**Re:** [Subject/topic]
-**Channel:** [Email / Ticket / Chat]
-**Tone:** [Empathetic / Professional / Technical / Celebratory / Candid]
+**수신:** [고객 연락처 이름]
+**제목:** [주제/토픽]
+**채널:** [이메일 / 티켓 / 채팅]
+**톤:** [공감적 / 전문적 / 기술적 / 축하 / 솔직함]
 
 ---
 
-[Draft response text]
+[응답 초안 텍스트]
 
 ---
 
-### Notes for You (internal — do not send)
-- **Why this approach:** [Rationale for tone and content choices]
-- **Things to verify:** [Any facts or commitments to confirm before sending]
-- **Risk factors:** [Anything sensitive about this response]
-- **Follow-up needed:** [Actions to take after sending]
-- **Escalation note:** [If this should be reviewed by someone else first]
+### 참고 사항 (내부용 — 발송 금지)
+- **이 접근 방식을 선택한 이유:** [톤과 콘텐츠 선택에 대한 근거]
+- **확인할 사항:** [발송 전 확인할 사실이나 약속]
+- **위험 요소:** [이 응답에서 민감한 사항]
+- **필요한 후속 조치:** [발송 후 취할 조치]
+- **에스컬레이션 메모:** [먼저 다른 사람이 검토해야 하는 경우]
 ```
 
-### 4. Situation-Specific Approaches
+### 4. 상황별 접근 방식
 
-**Answering a product question:**
-- Lead with the direct answer
-- Provide relevant documentation links
-- Offer to connect them with the right resource if needed
-- If you don't know the answer: say so honestly, commit to finding out, give a timeline
+**제품 질문에 답변하는 경우:**
+- 직접적인 답변으로 시작합니다
+- 관련 문서 링크를 제공합니다
+- 필요한 경우 적절한 담당자와 연결을 제안합니다
+- 답변을 모르는 경우: 솔직하게 말하고, 확인을 약속하며, 일정을 제시합니다
 
-**Responding to an issue or bug:**
-- Acknowledge the impact on their work
-- State what you know about the issue and its status
-- Provide workaround if available
-- Set expectations for resolution timeline
-- Commit to updates at regular intervals
+**이슈 또는 버그에 대응하는 경우:**
+- 업무에 미치는 영향을 인정합니다
+- 이슈에 대해 파악한 내용과 현재 상태를 알립니다
+- 해결 방법이 있는 경우 제공합니다
+- 해결 일정에 대한 기대치를 설정합니다
+- 정기적인 업데이트를 약속합니다
 
-**Handling an escalation:**
-- Acknowledge the severity and their frustration
-- Take ownership (no deflecting or excuse-making)
-- Provide a clear action plan with timeline
-- Identify the person accountable for resolution
-- Offer a meeting or call if appropriate for the severity
+**에스컬레이션을 처리하는 경우:**
+- 심각성과 고객의 불만을 인정합니다
+- 책임을 집니다 (회피하거나 변명하지 않음)
+- 일정이 포함된 명확한 조치 계획을 제공합니다
+- 해결 책임자를 지정합니다
+- 심각도에 따라 미팅 또는 통화를 제안합니다
 
-**Delivering bad news (feature sunset, delay, can't-fix):**
-- Be direct — don't bury the news
-- Explain the reasoning honestly
-- Acknowledge the impact on them specifically
-- Offer alternatives or mitigation
-- Provide a clear path forward
+**부정적 소식 전달 (기능 중단, 지연, 수정 불가):**
+- 직설적으로 전달합니다 — 소식을 묻지 않습니다
+- 이유를 솔직하게 설명합니다
+- 고객에게 미치는 구체적인 영향을 인정합니다
+- 대안 또는 완화 방안을 제시합니다
+- 명확한 향후 방향을 제공합니다
 
-**Sharing good news (feature launch, milestone, recognition):**
-- Lead with the positive outcome
-- Connect it to their specific goals or use case
-- Suggest next steps to capitalize on the good news
-- Express genuine enthusiasm
+**긍정적 소식 공유 (기능 출시, 마일스톤, 인정):**
+- 긍정적인 결과로 시작합니다
+- 고객의 구체적인 목표 또는 사용 사례와 연결합니다
+- 좋은 소식을 활용할 수 있는 다음 단계를 제안합니다
+- 진심 어린 열의를 표현합니다
 
-**Declining a request (feature request, discount, exception):**
-- Acknowledge the request and its reasoning
-- Be honest about the decision
-- Explain the why without being dismissive
-- Offer alternatives when possible
-- Leave the door open for future conversation
+**요청 거절 (기능 요청, 할인, 예외):**
+- 요청과 그 이유를 인정합니다
+- 결정에 대해 솔직하게 말합니다
+- 무시하는 느낌 없이 이유를 설명합니다
+- 가능한 경우 대안을 제시합니다
+- 향후 대화의 여지를 남깁니다
 
-### 5. Response Quality Checks
+### 5. 응답 품질 점검
 
-Before presenting the draft, verify:
+초안을 제시하기 전에 다음을 확인합니다:
 
-- [ ] Tone matches the situation and relationship
-- [ ] No commitments beyond what's authorized
-- [ ] No product roadmap details that shouldn't be shared externally
-- [ ] Accurate references to previous conversations
-- [ ] Clear next steps and ownership
-- [ ] Appropriate for the stakeholder level (not too technical for executives, not too vague for engineers)
-- [ ] Length is appropriate for the channel (shorter for chat, fuller for email)
+- [ ] 톤이 상황과 관계에 맞는지 확인
+- [ ] 권한 범위를 넘는 약속이 없는지 확인
+- [ ] 외부에 공유해서는 안 되는 프로덕트 로드맵 정보가 없는지 확인
+- [ ] 이전 대화에 대한 정확한 참조인지 확인
+- [ ] 명확한 다음 단계와 담당자가 있는지 확인
+- [ ] 이해관계자 수준에 적합한지 확인 (경영진에게 너무 기술적이거나, 엔지니어에게 너무 모호하지 않은지)
+- [ ] 채널에 적합한 길이인지 확인 (채팅은 짧게, 이메일은 상세하게)
 
-### 6. Offer Iterations
+### 6. 수정 제안
 
-After presenting the draft:
-- "Want me to adjust the tone? (more formal, more casual, more empathetic, more direct)"
-- "Should I add or remove any specific points?"
-- "Want me to make this shorter/longer?"
-- "Should I draft a version for a different stakeholder?"
-- "Want me to draft the internal escalation note as well?"
-- "Should I prepare a follow-up message to send after [X days] if no response?"
+초안을 제시한 후:
+- "톤을 조정할까요? (더 격식체, 더 캐주얼, 더 공감적, 더 직접적)"
+- "특정 내용을 추가하거나 제거할까요?"
+- "더 짧게/길게 만들까요?"
+- "다른 이해관계자를 위한 버전을 작성할까요?"
+- "내부 에스컬레이션 노트도 함께 작성할까요?"
+- "응답이 없을 경우를 대비해 [X일] 후 발송할 후속 메시지를 준비할까요?"

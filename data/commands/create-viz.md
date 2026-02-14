@@ -1,71 +1,71 @@
 ---
-description: Create publication-quality visualizations with Python
-argument-hint: "<data source> [chart type]"
+description: Python으로 출판 수준의 시각화 생성
+argument-hint: "<데이터 소스> [차트 유형]"
 ---
 
-# /create-viz - Create Visualizations
+# /create-viz - 시각화 생성
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 있거나 연결된 도구를 확인해야 하는 경우 [CONNECTORS.md](../CONNECTORS.md)를 참조하십시오.
 
-Create publication-quality data visualizations using Python. Generates charts from data with best practices for clarity, accuracy, and design.
+Python을 사용하여 출판 수준의 데이터 시각화를 생성합니다. 명확성, 정확성, 디자인에 대한 모범 사례를 적용하여 데이터로부터 차트를 생성합니다.
 
-## Usage
+## 사용법
 
 ```
-/create-viz <data source> [chart type] [additional instructions]
+/create-viz <데이터 소스> [차트 유형] [추가 지시사항]
 ```
 
-## Workflow
+## 워크플로우
 
-### 1. Understand the Request
+### 1. 요청 이해
 
-Determine:
+다음을 결정합니다:
 
-- **Data source**: Query results, pasted data, CSV/Excel file, or data to be queried
-- **Chart type**: Explicitly requested or needs to be recommended
-- **Purpose**: Exploration, presentation, report, dashboard component
-- **Audience**: Technical team, executives, external stakeholders
+- **데이터 소스**: 쿼리 결과, 붙여넣은 데이터, CSV/Excel 파일 또는 쿼리할 데이터
+- **차트 유형**: 명시적으로 요청되었거나 추천이 필요한 경우
+- **목적**: 탐색, 프레젠테이션, 보고서, 대시보드 구성 요소
+- **대상**: 기술 팀, 임원, 외부 이해관계자
 
-### 2. Get the Data
+### 2. 데이터 확보
 
-**If data warehouse is connected and data needs querying:**
-1. Write and execute the query
-2. Load results into a pandas DataFrame
+**데이터 웨어하우스가 연결되어 있고 쿼리가 필요한 경우:**
+1. 쿼리를 작성하고 실행합니다
+2. 결과를 pandas DataFrame으로 로드합니다
 
-**If data is pasted or uploaded:**
-1. Parse the data into a pandas DataFrame
-2. Clean and prepare as needed (type conversions, null handling)
+**데이터가 붙여넣기 또는 업로드된 경우:**
+1. 데이터를 pandas DataFrame으로 파싱합니다
+2. 필요에 따라 정리 및 준비합니다 (유형 변환, null 처리)
 
-**If data is from a previous analysis in the conversation:**
-1. Reference the existing data
+**대화 내 이전 분석의 데이터인 경우:**
+1. 기존 데이터를 참조합니다
 
-### 3. Select Chart Type
+### 3. 차트 유형 선택
 
-If the user didn't specify a chart type, recommend one based on the data and question:
+사용자가 차트 유형을 지정하지 않은 경우, 데이터와 질문에 따라 추천합니다:
 
-| Data Relationship | Recommended Chart |
+| 데이터 관계 | 추천 차트 |
 |---|---|
-| Trend over time | Line chart |
-| Comparison across categories | Bar chart (horizontal if many categories) |
-| Part-to-whole composition | Stacked bar or area chart (avoid pie charts unless <6 categories) |
-| Distribution of values | Histogram or box plot |
-| Correlation between two variables | Scatter plot |
-| Two-variable comparison over time | Dual-axis line or grouped bar |
-| Geographic data | Choropleth map |
-| Ranking | Horizontal bar chart |
-| Flow or process | Sankey diagram |
-| Matrix of relationships | Heatmap |
+| 시간에 따른 추세 | 꺾은선 차트 |
+| 카테고리 간 비교 | 막대 차트 (카테고리가 많으면 가로 막대) |
+| 전체 대비 부분 구성 | 누적 막대 또는 영역 차트 (6개 미만 카테고리가 아니면 파이 차트 지양) |
+| 값의 분포 | 히스토그램 또는 상자 그림 |
+| 두 변수 간 상관관계 | 산점도 |
+| 시간에 따른 두 변수 비교 | 이중 축 꺾은선 또는 그룹 막대 |
+| 지리적 데이터 | 코로플레스 맵 |
+| 순위 | 가로 막대 차트 |
+| 흐름 또는 프로세스 | 생키 다이어그램 |
+| 관계 매트릭스 | 히트맵 |
 
-Explain the recommendation briefly if the user didn't specify.
+사용자가 지정하지 않은 경우 추천 이유를 간략히 설명합니다.
 
-### 4. Generate the Visualization
+### 4. 시각화 생성
 
-Write Python code using one of these libraries based on the need:
+필요에 따라 다음 라이브러리 중 하나를 사용하여 Python 코드를 작성합니다:
 
-- **matplotlib + seaborn**: Best for static, publication-quality charts. Default choice.
-- **plotly**: Best for interactive charts or when the user requests interactivity.
+- **matplotlib + seaborn**: 정적, 출판 수준 차트에 최적. 기본 선택.
+- **plotly**: 대화형 차트 또는 사용자가 인터랙티브를 요청한 경우에 최적.
 
-**Code requirements:**
+**코드 요구사항:**
 
 ```python
 import matplotlib.pyplot as plt
@@ -82,9 +82,9 @@ fig, ax = plt.subplots(figsize=(10, 6))
 # [chart-specific code]
 
 # Always include:
-ax.set_title('Clear, Descriptive Title', fontsize=14, fontweight='bold')
-ax.set_xlabel('X-Axis Label', fontsize=11)
-ax.set_ylabel('Y-Axis Label', fontsize=11)
+ax.set_title('명확하고 설명적인 제목', fontsize=14, fontweight='bold')
+ax.set_xlabel('X축 레이블', fontsize=11)
+ax.set_ylabel('Y축 레이블', fontsize=11)
 
 # Format numbers appropriately
 # - Percentages: '45.2%' not '0.452'
@@ -100,54 +100,54 @@ plt.savefig('chart_name.png', dpi=150, bbox_inches='tight')
 plt.show()
 ```
 
-### 5. Apply Design Best Practices
+### 5. 디자인 모범 사례 적용
 
-**Color:**
-- Use a consistent, colorblind-friendly palette
-- Use color meaningfully (not decoratively)
-- Highlight the key data point or trend with a contrasting color
-- Grey out less important reference data
+**색상:**
+- 일관되고 색맹 친화적인 팔레트를 사용합니다
+- 색상을 장식이 아닌 의미 있게 사용합니다
+- 핵심 데이터 포인트나 추세를 대비 색상으로 강조합니다
+- 덜 중요한 참조 데이터는 회색 처리합니다
 
-**Typography:**
-- Descriptive title that states the insight, not just the metric (e.g., "Revenue grew 23% YoY" not "Revenue by Month")
-- Readable axis labels (not rotated 90 degrees if avoidable)
-- Data labels on key points when they add clarity
+**타이포그래피:**
+- 지표가 아닌 인사이트를 서술하는 제목 (예: "매출이 전년 대비 23% 성장" 이 "월별 매출"보다 좋음)
+- 읽기 쉬운 축 레이블 (가능하면 90도 회전 지양)
+- 명확성을 더하는 핵심 포인트에 데이터 레이블 추가
 
-**Layout:**
-- Appropriate whitespace and margins
-- Legend placement that doesn't obscure data
-- Sorted categories by value (not alphabetically) unless there's a natural order
+**레이아웃:**
+- 적절한 여백과 공간
+- 데이터를 가리지 않는 범례 배치
+- 자연적 순서가 없다면 값 기준으로 카테고리 정렬 (알파벳 순이 아닌)
 
-**Accuracy:**
-- Y-axis starts at zero for bar charts
-- No misleading axis breaks without clear notation
-- Consistent scales when comparing panels
-- Appropriate precision (don't show 10 decimal places)
+**정확성:**
+- 막대 차트의 Y축은 0에서 시작합니다
+- 명확한 표기 없이 오해를 유발하는 축 절단 지양
+- 패널 비교 시 일관된 스케일
+- 적절한 정밀도 (소수점 10자리를 표시하지 않음)
 
-### 6. Save and Present
+### 6. 저장 및 제시
 
-1. Save the chart as a PNG file with descriptive name
-2. Display the chart to the user
-3. Provide the code used so they can modify it
-4. Suggest variations (different chart type, different grouping, zoomed time range)
+1. 설명적인 이름으로 차트를 PNG 파일로 저장합니다
+2. 사용자에게 차트를 표시합니다
+3. 수정할 수 있도록 사용된 코드를 제공합니다
+4. 변형을 제안합니다 (다른 차트 유형, 다른 그룹핑, 확대된 시간 범위)
 
-## Examples
-
-```
-/create-viz Show monthly revenue for the last 12 months as a line chart with the trend highlighted
-```
+## 예시
 
 ```
-/create-viz Here's our NPS data by product: [pastes data]. Create a horizontal bar chart ranking products by score.
+/create-viz 지난 12개월 동안의 월별 수익을 추세가 강조된 꺾은선 차트로 보여주세요.
 ```
 
 ```
-/create-viz Query the orders table and create a heatmap of order volume by day-of-week and hour
+/create-viz 제품별 NPS 데이터가 여기 있습니다: [데이터 붙여넣기]. 제품별 점수 순위를 매기는 가로 막대 차트를 만들어 주세요.
 ```
 
-## Tips
+```
+/create-viz orders 테이블을 쿼리하고 요일 및 시간별 주문량 히트맵을 만들어 주세요.
+```
 
-- If you want interactive charts (hover, zoom, filter), mention "interactive" and Claude will use plotly
-- Specify "presentation" if you need larger fonts and higher contrast
-- You can request multiple charts at once (e.g., "create a 2x2 grid of charts showing...")
-- Charts are saved to your current directory as PNG files
+## 팁
+
+- 대화형 차트(호버, 줌, 필터)를 원하면 "interactive"를 언급하면 Claude가 plotly를 사용합니다
+- 더 큰 폰트와 높은 대비가 필요하면 "presentation"을 지정하십시오
+- 여러 차트를 한 번에 요청할 수 있습니다 (예: "2x2 그리드 차트를 만들어...")
+- 차트는 현재 디렉토리에 PNG 파일로 저장됩니다

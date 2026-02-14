@@ -1,157 +1,157 @@
 ---
-description: Initialize the productivity system and open the dashboard
+description: 생산성 시스템을 초기화하고 대시보드를 엽니다
 ---
 
-# Start Command
+# Start 커맨드
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인해야 하는 경우 [CONNECTORS.md](../CONNECTORS.md)를 참조하세요.
 
-Initialize the task and memory systems, then open the unified dashboard.
+작업 및 기억 시스템을 초기화한 다음 통합 대시보드를 엽니다.
 
-## Instructions
+## 지침
 
-### 1. Check What Exists
+### 1. 기존 항목 확인
 
-Check the working directory for:
-- `TASKS.md` — task list
-- `CLAUDE.md` — working memory
-- `memory/` — deep memory directory
-- `dashboard.html` — the visual UI
+작업 디렉토리에서 다음을 확인합니다:
+- `TASKS.md` — 작업 목록
+- `CLAUDE.md` — 작업 기억
+- `memory/` — 심층 기억 디렉토리
+- `dashboard.html` — 시각적 UI
 
-### 2. Create What's Missing
+### 2. 누락된 항목 생성
 
-**If `TASKS.md` doesn't exist:** Create it with the standard template (see task-management skill). Place it in the current working directory.
+**`TASKS.md`가 없으면:** 표준 템플릿으로 생성합니다(task-management 스킬 참조). 현재 작업 디렉토리에 배치합니다.
 
-**If `dashboard.html` doesn't exist:** Copy it from `${CLAUDE_PLUGIN_ROOT}/skills/dashboard.html` to the current working directory.
+**`dashboard.html`이 없으면:** `${CLAUDE_PLUGIN_ROOT}/skills/dashboard.html`에서 현재 작업 디렉토리로 복사합니다.
 
-**If `CLAUDE.md` and `memory/` don't exist:** This is a fresh setup — after opening the dashboard, begin the memory bootstrap workflow (see below). Place these in the current working directory.
+**`CLAUDE.md`와 `memory/`가 없으면:** 새로운 설정입니다 — 대시보드를 연 후 기억 부트스트랩 워크플로우를 시작합니다(아래 참조). 현재 작업 디렉토리에 배치합니다.
 
-### 3. Open the Dashboard
+### 3. 대시보드 열기
 
-Do NOT use `open` or `xdg-open` — in Cowork, the agent runs in a VM and shell open commands won't reach the user's browser. Instead, tell the user: "Dashboard is ready at `dashboard.html`. Open it from your file browser to get started."
+`open` 또는 `xdg-open`을 사용하지 마세요 — Cowork에서는 에이전트가 VM에서 실행되며 셸 open 명령이 사용자의 브라우저에 도달하지 않습니다. 대신 사용자에게 다음과 같이 알립니다: "대시보드가 `dashboard.html`에 준비되었습니다. 파일 브라우저에서 열어 시작하세요."
 
-### 4. Orient the User
+### 4. 사용자에게 안내
 
-If everything was already initialized:
+모든 것이 이미 초기화된 경우:
 ```
-Dashboard open. Your tasks and memory are both loaded.
-- /productivity:update to sync tasks and check memory
-- /productivity:update --comprehensive for a deep scan of all activity
-```
-
-If memory hasn't been bootstrapped yet, continue to step 5.
-
-### 5. Bootstrap Memory (First Run Only)
-
-Only do this if `CLAUDE.md` and `memory/` don't exist yet.
-
-The best source of workplace language is the user's actual task list. Real tasks = real shorthand.
-
-**Ask the user:**
-```
-Where do you keep your todos or task list? This could be:
-- A local file (e.g., TASKS.md, todo.txt)
-- An app (e.g. Asana, Linear, Jira, Notion, Todoist)
-- A notes file
-
-I'll use your tasks to learn your workplace shorthand.
+대시보드가 열렸습니다. 작업과 기억이 모두 로드되었습니다.
+- /productivity:update로 작업을 동기화하고 기억을 확인하세요
+- /productivity:update --comprehensive로 모든 활동의 전체 스캔을 수행하세요
 ```
 
-**Once you have access to the task list:**
+기억이 아직 부트스트랩되지 않은 경우 5단계를 계속합니다.
 
-For each task item, analyze it for potential shorthand:
-- Names that might be nicknames
-- Acronyms or abbreviations
-- Project references or codenames
-- Internal terms or jargon
+### 5. 기억 부트스트랩 (첫 실행만)
 
-**For each item, decode it interactively:**
+`CLAUDE.md`와 `memory/`가 아직 존재하지 않는 경우에만 수행합니다.
 
+업무 언어의 최상의 소스는 사용자의 실제 작업 목록입니다. 실제 작업 = 실제 약어.
+
+**사용자에게 물어보세요:**
 ```
-Task: "Send PSR to Todd re: Phoenix blockers"
+할 일이나 작업 목록을 어디에 보관하시나요? 다음과 같을 수 있습니다:
+- 로컬 파일 (예: TASKS.md, todo.txt)
+- 앱 (예: Asana, Linear, Jira, Notion, Todoist)
+- 노트 파일
 
-I see some terms I want to make sure I understand:
-
-1. **PSR** - What does this stand for?
-2. **Todd** - Who is Todd? (full name, role)
-3. **Phoenix** - Is this a project codename? What's it about?
+작업을 사용하여 업무 약어를 학습하겠습니다.
 ```
 
-Continue through each task, asking only about terms you haven't already decoded.
+**작업 목록에 접근한 후:**
 
-### 6. Optional Comprehensive Scan
+각 작업 항목에 대해 잠재적인 약어를 분석합니다:
+- 별명일 수 있는 이름
+- 두문자어 또는 약어
+- 프로젝트 참조 또는 코드명
+- 내부 용어 또는 전문 용어
 
-After task list decoding, offer:
+**각 항목에 대해 대화식으로 해독합니다:**
+
 ```
-Do you want me to do a comprehensive scan of your messages, emails, and documents?
-This takes longer but builds much richer context about the people, projects, and terms in your work.
+작업: "Phoenix 차단 요소에 대해 Todd에게 PSR 보내기"
 
-Or we can stick with what we have and add context later.
+이해하고 싶은 몇 가지 용어가 보입니다:
+
+1. **PSR** - 이것은 무엇을 의미하나요?
+2. **Todd** - Todd는 누구인가요? (전체 이름, 역할)
+3. **Phoenix** - 이것은 프로젝트 코드명인가요? 무엇에 관한 것인가요?
 ```
 
-**If they choose comprehensive scan:**
+각 작업을 계속하면서 아직 해독하지 않은 용어에 대해서만 묻습니다.
 
-Gather data from available MCP sources:
-- **Chat:** Recent messages, channels, DMs
-- **Email:** Sent messages, recipients
-- **Documents:** Recent docs, collaborators
-- **Calendar:** Meetings, attendees
+### 6. 선택적 포괄적 스캔
 
-Build a braindump of people, projects, and terms found. Present findings grouped by confidence:
-- **Ready to add** (high confidence) — offer to add directly
-- **Needs clarification** — ask the user
-- **Low frequency / unclear** — note for later
+작업 목록 해독 후 제안합니다:
+```
+메시지, 이메일, 문서를 포괄적으로 스캔하시겠습니까?
+시간이 더 걸리지만 업무의 사람, 프로젝트, 용어에 대한 훨씬 풍부한 컨텍스트를 구축합니다.
 
-### 7. Write Memory Files
+아니면 현재 있는 것으로 유지하고 나중에 컨텍스트를 추가할 수 있습니다.
+```
 
-From everything gathered, create:
+**포괄적 스캔을 선택한 경우:**
 
-**CLAUDE.md** (working memory, ~50-80 lines):
+사용 가능한 MCP 소스에서 데이터를 수집합니다:
+- **채팅:** 최근 메시지, 채널, DM
+- **이메일:** 보낸 메시지, 수신자
+- **문서:** 최근 문서, 협력자
+- **캘린더:** 회의, 참석자
+
+발견된 사람, 프로젝트, 용어의 브레인덤프를 구축합니다. 신뢰도별로 그룹화된 결과를 제시합니다:
+- **추가 준비됨** (높은 신뢰도) — 직접 추가 제안
+- **명확화 필요** — 사용자에게 물어봄
+- **낮은 빈도 / 불분명** — 나중을 위해 메모
+
+### 7. 기억 파일 작성
+
+수집된 모든 것에서 생성합니다:
+
+**CLAUDE.md** (작업 기억, 약 50-80줄):
 ```markdown
 # Memory
 
 ## Me
-[Name], [Role] on [Team].
+[이름], [팀]의 [역할].
 
 ## People
 | Who | Role |
 |-----|------|
-| **[Nickname]** | [Full Name], [role] |
+| **[별명]** | [전체 이름], [역할] |
 
 ## Terms
 | Term | Meaning |
 |------|---------|
-| [acronym] | [expansion] |
+| [두문자어] | [확장] |
 
 ## Projects
 | Name | What |
 |------|------|
-| **[Codename]** | [description] |
+| **[코드명]** | [설명] |
 
 ## Preferences
-- [preferences discovered]
+- [발견된 선호 사항]
 ```
 
-**memory/** directory:
-- `memory/glossary.md` — full decoder ring (acronyms, terms, nicknames, codenames)
-- `memory/people/{name}.md` — individual profiles
-- `memory/projects/{name}.md` — project details
-- `memory/context/company.md` — teams, tools, processes
+**memory/** 디렉토리:
+- `memory/glossary.md` — 전체 해독 링(두문자어, 용어, 별명, 코드명)
+- `memory/people/{name}.md` — 개별 프로필
+- `memory/projects/{name}.md` — 프로젝트 세부 정보
+- `memory/context/company.md` — 팀, 도구, 프로세스
 
-### 8. Report Results
+### 8. 결과 보고
 
 ```
-Productivity system ready:
-- Tasks: TASKS.md (X items)
-- Memory: X people, X terms, X projects
-- Dashboard: open in browser
+생산성 시스템 준비 완료:
+- 작업: TASKS.md (X개 항목)
+- 기억: X명, X개 용어, X개 프로젝트
+- 대시보드: 브라우저에서 열기
 
-Use /productivity:update to keep things current (add --comprehensive for a deep scan).
+/productivity:update를 사용하여 최신 상태로 유지하세요(전체 스캔을 위해 --comprehensive 추가).
 ```
 
-## Notes
+## 참고 사항
 
-- If memory is already initialized, this just opens the dashboard
-- Nicknames are critical — always capture how people are actually referred to
-- If a source isn't available, skip it and note the gap
-- Memory grows organically through natural conversation after bootstrap
+- 기억이 이미 초기화된 경우 대시보드만 엽니다
+- 별명이 중요합니다 — 항상 사람들이 실제로 어떻게 불리는지 캡처하세요
+- 소스를 사용할 수 없으면 건너뛰고 공백을 메모하세요
+- 기억은 부트스트랩 후 자연스러운 대화를 통해 유기적으로 증가합니다

@@ -1,207 +1,208 @@
 ---
-description: Generate contextual briefings for legal work — daily summary, topic research, or incident response
+description: 법률 업무를 위한 맥락별 브리핑 생성 — 일일 요약, 주제 리서치, 긴급 상황 대응
 argument-hint: "[daily | topic <query> | incident]"
 ---
 
-# /brief -- Legal Team Briefing
+# /brief -- 법무팀 브리핑
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 어떤 도구가 연결되어 있는지 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 참고하십시오.
 
-Generate contextual briefings for legal work. Supports three modes: daily brief, topic brief, and incident brief.
+법률 업무를 위한 맥락별 브리핑을 생성합니다. 일일 브리핑, 주제 브리핑, 긴급 상황 브리핑의 세 가지 모드를 지원합니다.
 
-**Important**: This command assists with legal workflows but does not provide legal advice. Briefings should be reviewed by qualified legal professionals before being relied upon.
+**중요**: 이 커맨드는 법률 워크플로우를 지원하지만 법률 자문을 제공하지 않습니다. 브리핑은 활용하기 전에 자격을 갖춘 법률 전문가의 검토를 받아야 합니다.
 
-## Invocation
+## 호출 방법
 
 ```
-/brief daily              # Morning brief of legal-relevant items
-/brief topic [query]      # Research brief on a specific legal question
-/brief incident [topic]   # Rapid brief on a developing situation
+/brief daily              # 아침 법무 관련 사항 브리핑
+/brief topic [query]      # 특정 법률 질문에 대한 리서치 브리핑
+/brief incident [topic]   # 긴급 상황 대응 브리핑
 ```
 
-If no mode is specified, ask the user which type of brief they need.
+모드를 지정하지 않은 경우, 사용자에게 어떤 유형의 브리핑이 필요한지 문의합니다.
 
-## Modes
+## 모드
 
 ---
 
-### Daily Brief
+### 일일 브리핑
 
-A morning summary of everything a legal team member needs to know to start their day.
+법무팀원이 하루를 시작하는 데 필요한 모든 사항의 아침 요약입니다.
 
-#### Sources to Scan
+#### 스캔 대상 소스
 
-Check each connected source for legal-relevant items:
+연결된 각 소스에서 법무 관련 항목을 확인합니다:
 
-**Email (if connected):**
-- New contract requests or review requests
-- Compliance questions or reports
-- Responses from counterparties on active negotiations
-- Flagged or urgent items from the legal team inbox
-- External counsel communications
-- Regulatory or legal update newsletters
+**이메일 (연결 시):**
+- 신규 계약서 요청 또는 검토 요청
+- 컴플라이언스 질의 또는 보고서
+- 진행 중인 협상에 대한 상대방 응답
+- 법무팀 수신함의 플래그 또는 긴급 항목
+- 외부 법무 자문 커뮤니케이션
+- 규제 또는 법률 업데이트 뉴스레터
 
-**Calendar (if connected):**
-- Today's meetings that need legal prep (board meetings, deal reviews, vendor calls)
-- Upcoming deadlines this week (contract expirations, filing deadlines, response deadlines)
-- Recurring legal team syncs
+**캘린더 (연결 시):**
+- 법무 준비가 필요한 오늘의 회의(이사회, 딜 리뷰, 벤더 미팅)
+- 이번 주 다가오는 기한(계약 만료, 제출 기한, 응답 기한)
+- 정기 법무팀 회의
 
-**Chat (if connected):**
-- Overnight messages in legal team channels
-- Direct messages requesting legal input
-- Mentions of legal-relevant topics (contract, compliance, privacy, NDA, terms)
-- Escalations or urgent requests
+**채팅 (연결 시):**
+- 법무팀 채널의 야간 메시지
+- 법무 의견을 요청하는 다이렉트 메시지
+- 법무 관련 주제 언급(계약서, 컴플라이언스, 개인정보, NDA, 약관)
+- 에스컬레이션 또는 긴급 요청
 
-**CLM (if connected):**
-- Contracts awaiting review or signature
-- Approaching expiration dates (next 30 days)
-- Newly executed agreements
+**CLM (연결 시):**
+- 검토 또는 서명 대기 중인 계약서
+- 만료 임박 날짜(향후 30일)
+- 신규 체결 계약
 
-**CRM (if connected):**
-- Deals moving to stages that require legal involvement
-- New opportunities flagged for legal review
+**CRM (연결 시):**
+- 법무 관여가 필요한 단계로 이동하는 딜
+- 법무 검토가 필요하다고 표시된 신규 기회
 
-#### Output Format
+#### 출력 형식
 
 ```
-## Daily Legal Brief -- [Date]
+## 일일 법무 브리핑 -- [날짜]
 
-### Urgent / Action Required
-[Items needing immediate attention, sorted by urgency]
+### 긴급 / 조치 필요 항목
+[긴급도 순으로 정렬된 즉각적인 조치가 필요한 항목]
 
-### Contract Pipeline
-- **Awaiting Your Review**: [count and list]
-- **Pending Counterparty Response**: [count and list]
-- **Approaching Deadlines**: [items due this week]
+### 계약 파이프라인
+- **검토 대기 중**: [건수 및 목록]
+- **상대방 회신 대기 중**: [건수 및 목록]
+- **도래하는 기한**: [이번 주 기한 항목]
 
-### New Requests
-[Contract review requests, NDA requests, compliance questions received since last brief]
+### 신규 요청 사항
+[마지막 브리핑 이후 접수된 계약서 검토 요청, NDA 요청, 컴플라이언스 질의]
 
-### Calendar Today
-[Meetings with legal relevance and what prep is needed]
+### 오늘 일정
+[법무 관련성이 있는 회의와 필요한 준비 사항]
 
-### Team Activity
-[Key messages or updates from legal team channels]
+### 팀 활동
+[법무팀 채널의 주요 메시지 또는 업데이트]
 
-### This Week's Deadlines
-[Upcoming deadlines and filing dates]
+### 이번 주 마감 기한
+[다가오는 기한 및 제출일]
 
-### Sources Not Available
-[Any sources that were not connected or returned errors]
+### 확인 불가 소스
+[연결되지 않았거나 오류를 반환한 소스]
 ```
 
 ---
 
-### Topic Brief
+### 주제 브리핑
 
-Research and brief on a specific legal question or topic across available sources.
+사용 가능한 소스 전반에서 특정 법률 질문이나 주제를 조사하고 브리핑합니다.
 
-#### Workflow
+#### 워크플로우
 
-1. Accept the topic query from the user
-2. Search across connected sources:
-   - **Documents**: Internal memos, prior analyses, playbooks, precedent
-   - **Email**: Prior communications on the topic
-   - **Chat**: Team discussions about the topic
-   - **CLM**: Related contracts or clauses
-3. Synthesize findings into a structured brief
+1. 사용자로부터 주제 질의를 접수
+2. 연결된 소스 전반 검색:
+   - **문서**: 내부 메모, 이전 분석, 플레이북, 판례
+   - **이메일**: 해당 주제에 관한 이전 커뮤니케이션
+   - **채팅**: 해당 주제에 대한 팀 논의
+   - **CLM**: 관련 계약서 또는 조항
+3. 조사 결과를 구조화된 브리핑으로 종합
 
-#### Output Format
+#### 출력 형식
 
 ```
-## Topic Brief: [Topic]
+## 주제 브리핑: [주제]
 
-### Summary
-[2-3 sentence executive summary of findings]
+### 요약
+[2~3문장의 요약]
 
-### Background
-[Context and history from internal sources]
+### 배경
+[내부 소스에서 확인된 맥락 및 이력]
 
-### Current State
-[What the organization's current position or approach is, based on available documents]
+### 현황
+[사용 가능한 문서에 기반한 조직의 현재 입장 또는 접근 방식]
 
-### Key Considerations
-[Important factors, risks, or open questions]
+### 주요 고려 사항
+[중요한 요소, 리스크 또는 미해결 질문]
 
-### Internal Precedent
-[Prior decisions, memos, or positions found in internal sources]
+### 내부 선례
+[내부 소스에서 발견된 이전 결정, 메모 또는 입장]
 
-### Gaps
-[What information is missing or what sources were not available]
+### 정보 공백
+[누락된 정보 또는 사용 불가능한 소스]
 
-### Recommended Next Steps
-[What the user should do with this information]
+### 권장 후속 조치
+[이 정보를 바탕으로 사용자가 취해야 할 조치]
 ```
 
-#### Important Notes
-- Topic briefs synthesize what is available in connected sources; they do not substitute for formal legal research
-- If the topic requires current legal authority or case law, recommend the user consult a legal research platform (Westlaw, Lexis, etc.) or outside counsel
-- Always note the limitations of the sources searched
+#### 중요 사항
+- 주제 브리핑은 연결된 소스에서 사용 가능한 정보를 종합하며, 정식 법률 리서치를 대체하지 않습니다
+- 해당 주제에 최신 법적 근거나 판례가 필요한 경우, 법률 리서치 플랫폼(Westlaw, Lexis 등)이나 외부 법무 자문 활용을 권장합니다
+- 항상 검색한 소스의 한계를 명시합니다
 
 ---
 
-### Incident Brief
+### 긴급 상황 브리핑
 
-Rapid briefing for developing situations that require immediate legal attention (data breaches, litigation threats, regulatory inquiries, IP disputes, etc.).
+즉각적인 법적 대응이 필요한 긴급 상황(데이터 유출, 소송 위협, 규제 당국 조회, 지적 재산권 분쟁 등)을 위한 신속 브리핑입니다.
 
-#### Workflow
+#### 워크플로우
 
-1. Accept the incident topic or description
-2. Rapidly scan all connected sources for relevant context:
-   - **Email**: Communications about the incident
-   - **Chat**: Real-time discussions and escalations
-   - **Documents**: Relevant policies, response plans, insurance coverage
-   - **Calendar**: Scheduled response meetings
-   - **CLM**: Affected contracts, indemnification provisions, insurance requirements
-3. Compile into an actionable incident brief
+1. 사건 주제 또는 설명을 접수
+2. 관련 맥락을 위해 모든 연결 소스를 신속히 스캔:
+   - **이메일**: 해당 사건에 관한 커뮤니케이션
+   - **채팅**: 실시간 논의 및 에스컬레이션
+   - **문서**: 관련 정책, 대응 계획, 보험 보장 범위
+   - **캘린더**: 예정된 대응 회의
+   - **CLM**: 관련 계약서, 면책 규정, 보험 요건
+3. 실행 가능한 긴급 브리핑으로 편성
 
-#### Output Format
+#### 출력 형식
 
 ```
-## Incident Brief: [Topic]
-**Prepared**: [timestamp]
-**Classification**: [severity assessment if determinable]
+## 긴급 상황 브리핑: [주제]
 
-### Situation Summary
-[What is known about the incident]
+**작성 일시**: [타임스탬프]
+**분류**: [판단 가능한 경우 심각도 평가]
 
-### Timeline
-[Chronological summary of events based on available sources]
+### 상황 요약
+[해당 사건에 대해 알려진 사항]
 
-### Immediate Legal Considerations
-[Regulatory notification requirements, preservation obligations, privilege concerns]
+### 타임라인
+[사용 가능한 소스에 기반한 사건의 시간순 요약]
 
-### Relevant Agreements
-[Contracts, insurance policies, or other agreements that may be implicated]
+### 즉각적인 법적 고려 사항
+[규제 통지 요건, 증거보전 의무, 비밀유지특권 관련 사항]
 
-### Internal Response
-[What response activity has already occurred based on email/chat]
+### 관련 합의 및 계약
+[관련될 수 있는 계약서, 보험 증권 또는 기타 합의서]
 
-### Key Contacts
-[Relevant internal and external contacts identified from sources]
+### 내부 대응 현황
+[이메일/채팅에 기반한 이미 진행 중인 대응 활동]
 
-### Recommended Immediate Actions
-1. [Most urgent action]
-2. [Second priority]
-3. [etc.]
+### 주요 연락처
+[소스에서 확인된 관련 내부 및 외부 연락처]
 
-### Information Gaps
-[What is not yet known and needs to be determined]
+### 권장 즉각 조치 사항
+1. [가장 긴급한 조치]
+2. [두 번째 우선순위]
+3. [기타]
 
-### Sources Checked
-[What was searched and what was not available]
+### 정보 공백
+[아직 알려지지 않아 확인이 필요한 사항]
+
+### 확인된 소스
+[검색한 소스와 사용 불가능한 소스]
 ```
 
-#### Important Notes for Incident Briefs
-- Speed matters. Produce the brief quickly with available information rather than waiting for complete information
-- Flag any litigation hold or preservation obligations immediately
-- Note privilege considerations (mark the brief as attorney-client privileged / work product if appropriate)
-- If the incident may involve a data breach, flag applicable notification deadlines (e.g., 72 hours for GDPR)
-- Recommend outside counsel engagement if the matter is significant
+#### 긴급 상황 브리핑 중요 사항
+- 속도가 중요합니다. 완전한 정보를 기다리기보다 가용한 정보로 신속하게 브리핑을 작성합니다
+- 소송 관련 보전 의무(litigation hold)가 있는 경우 즉시 표시합니다
+- 비밀유지특권(attorney-client privilege) 관련 사항을 명시합니다(해당되는 경우 브리핑을 비밀유지특권/업무산출물로 표시)
+- 데이터 유출이 관련될 수 있는 경우, 해당 통지 기한을 표시합니다(예: GDPR의 경우 72시간)
+- 사안이 중대한 경우 외부 법무 자문 활용을 권장합니다
 
-## General Notes
+## 일반 참고 사항
 
-- If sources are unavailable, note the gaps prominently so the user knows what was not checked
-- For daily briefs, learn the user's preferences over time (what they find useful, what they want filtered out)
-- Briefs should be actionable: every item should have a clear next step or reason for inclusion
-- Keep briefs concise. Link to source materials rather than reproducing them in full
+- 소스를 사용할 수 없는 경우, 확인되지 않은 부분을 눈에 띄게 표시하여 사용자가 확인하지 못한 항목을 알 수 있도록 합니다
+- 일일 브리핑의 경우, 시간이 지남에 따라 사용자의 선호도를 학습합니다(유용한 정보, 필터링하고 싶은 정보)
+- 브리핑은 실행 가능해야 합니다: 모든 항목에는 명확한 다음 단계 또는 포함 이유가 있어야 합니다
+- 브리핑은 간결하게 작성합니다. 원본 자료를 전체 재현하기보다 링크로 연결합니다

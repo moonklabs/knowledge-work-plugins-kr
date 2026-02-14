@@ -1,481 +1,297 @@
-# SKILL 3: Optimization Function Selection
-
-## Overview
-This skill helps scientists articulate HOW their project should be evaluated and define what success means. While Skill 2 focused on likelihood of success (the X-axis), this skill focuses on impact if successful (the Y-axis). The key insight: **value is in the eye of a belief system**—the value creation framework must be explicitly stated and led with.
+# 스킬 3: 최적화 함수 선택
 
-## Core Principle
+## 개요
+이 스킬은 과학자가 프로젝트가 어떻게 평가되어야 하는지를 명시하고 성공의 의미를 정의하도록 돕습니다. 스킬 2가 성공 가능성(X축)에 초점을 맞춘 반면, 이 스킬은 성공 시 영향력(Y축)에 초점을 맞춥니다. 핵심 통찰: **가치는 신념 체계의 눈에 있습니다**—가치 창출 프레임워크를 명시적으로 진술하고 이를 선도해야 합니다.
 
-**"Pick the right optimization function."**
+## 핵심 원칙
 
-Different types of projects should be evaluated by different metrics. A common source of conflict between trainees and PIs, or authors and referees, is a misunderstanding about which category a project falls under. The root cause is often failure to articulate evaluation criteria clearly.
+**"올바른 최적화 함수를 선택하십시오."**
 
-## The Fundamental Truth
+서로 다른 유형의 프로젝트는 서로 다른 지표로 평가되어야 합니다. 연수생과 PI, 또는 저자와 심사위원 사이의 갈등의 일반적인 원인은 프로젝트가 어느 범주에 속하는지에 대한 오해입니다. 근본 원인은 종종 평가 기준을 명확히 명시하지 않은 것입니다.
 
-The default state of:
-1. Every new discovery is **irrelevance**
-2. Every new technology is **non-use**
-3. Every company is **death**
-
-Scientists must actively work against these defaults by choosing the right metrics and scoring well on at least one axis.
+## 근본적 진실
 
-## The Skill Workflow
+기본 상태:
+1. 모든 새로운 발견의 기본 상태는 **무관련성**
+2. 모든 새로운 기술의 기본 상태는 **미사용**
+3. 모든 회사의 기본 상태는 **소멸**
 
-### Phase 1: Project Categorization (5 minutes)
+과학자는 올바른 지표를 선택하고 최소한 하나의 축에서 높은 점수를 받아 이러한 기본 상태에 적극적으로 대항해야 합니다.
 
-First, Claude should determine what type of project the user is pursuing:
+## 스킬 워크플로우
 
-**Question 1: What is the primary goal?**
-A. Understand how biology works (fundamental knowledge)
-B. Enable new experiments or capabilities (tool/technology)
-C. Solve a practical problem (invention/application)
-D. Something else (please describe)
+### 1단계: 프로젝트 분류 (5분)
 
-**Question 2: What would "success" look like in 3-5 years?**
-- 1-2 sentences describing the ideal outcome
+먼저 Claude는 사용자가 추구하는 프로젝트 유형을 결정해야 합니다:
 
-**Question 3: Who cares if this succeeds?**
-- Academic researchers in the subfield?
-- Broader scientific community across fields?
-- Clinicians or practitioners?
-- Industry partners or companies?
-- General public or specific communities?
-- All of the above?
+**질문 1: 주요 목표는 무엇입니까?**
+A. 생물학이 어떻게 작동하는지 이해 (기초 지식)
+B. 새로운 실험이나 능력 활성화 (도구/기술)
+C. 실용적 문제 해결 (발명/응용)
+D. 기타 (설명해 주십시오)
 
-Based on the answers, Claude should help identify the right optimization function.
+**질문 2: 3-5년 후 "성공"은 어떤 모습입니까?**
+- 이상적인 결과를 설명하는 1-2문장
 
-### Phase 2: Understanding the Three Main Frameworks
+**질문 3: 이것이 성공하면 누가 관심을 가집니까?**
+- 세부 분야의 학술 연구자?
+- 분야를 넘어선 더 넓은 과학 커뮤니티?
+- 임상의 또는 실무자?
+- 산업 파트너 또는 기업?
+- 일반 대중 또는 특정 커뮤니티?
+- 위의 모두?
 
-#### Framework 1: Basic Science
-**Axes:** How much did we learn? × How general/fundamental is the object of study?
+답변에 기반하여 Claude는 올바른 최적화 함수를 식별하도록 도와야 합니다.
 
-**Philosophy:** A high score on EITHER axis yields substantial impact. You don't need both.
+### 2단계: 세 가지 주요 프레임워크 이해
 
-**Examples:**
-- **High Generality, Medium Learning:** Ribosome stalling complex
-  - Updates understanding of translation (fundamental process)
-  - Scores well because translation is universal
-  
-- **Medium Generality, High Learning:** Oxytricha germ-line nucleus
-  - Genomic acrobatics may not be common to other organisms
-  - BUT elegant mapping scores highly on how much we learned
-  - May yield tools for genome editing (bonus)
-  
-- **High on Both Axes (Landmark):** RNA interference, biomolecular condensates
-  - These are rare—don't expect every project to be here
-  - But aim to score well on at least one axis
+#### 프레임워크 1: 기초 과학
+**축:** 얼마나 많이 배웠는가? x 연구 대상이 얼마나 일반적/근본적인가?
 
-**Key Questions:**
-- How many systems/organisms does this apply to?
-- Does it update understanding of a fundamental process?
-- Will textbooks need to be rewritten?
-- What new questions does this open?
+**철학:** 어느 한 축에서 높은 점수를 받으면 상당한 영향력을 얻습니다. 양쪽 모두 필요하지 않습니다.
 
-#### Framework 2: Technology Development
-**Axes:** How widely will it be used? × How critical is it for the application?
+**예시:**
+- **높은 일반성, 중간 학습:** 리보솜 정지 복합체
+  - 번역에 대한 이해를 업데이트 (근본적 과정)
+  - 번역이 보편적이므로 높은 점수
 
-**Philosophy:** Again, high score on EITHER axis is sufficient.
+- **중간 일반성, 높은 학습:** Oxytricha 생식핵
+  - 게놈적 곡예는 다른 생물체에 공통적이지 않을 수 있음
+  - 그러나 우아한 매핑이 학습량에서 높은 점수
+  - 게놈 편집을 위한 도구를 산출할 수 있음 (보너스)
 
-**Examples:**
-- **Widely Used, Not Critical:** BLAST
-  - Used in countless projects
-  - Rarely THE critical tool, but enormous cumulative impact
-  
-- **Not Widely Used, Highly Critical:** Cryo-electron tomography
-  - Too complicated for broad adoption
-  - But generates stunning data that's impossible to get otherwise
-  - When you need it, nothing else works
-  
-- **High on Both Axes (Game-Changing):** 
-  - GFP, CRISPR, AlphaFold (the famous ones)
-  - But also: lentiviral delivery, cell sorting, massively parallel sequencing
-  - Technologies we cannot imagine living without
+- **양축 모두 높음 (랜드마크):** RNA 간섭, 생체분자 응축체
+  - 이것은 드뭅니다—모든 프로젝트가 여기에 있을 것으로 기대하지 마십시오
+  - 그러나 최소한 하나의 축에서 높은 점수를 목표로 하십시오
 
-**Key Questions:**
-- How many labs would adopt this?
-- For what fraction of experiments is this THE enabling technology?
-- What becomes possible that wasn't before?
-- How hard is it to implement?
+**핵심 질문:**
+- 이것이 얼마나 많은 시스템/생물체에 적용됩니까?
+- 근본적 과정에 대한 이해를 업데이트합니까?
+- 교과서를 다시 써야 합니까?
+- 어떤 새로운 질문을 여는가?
 
-**Critical Rule:** A tool that won't be widely used AND isn't critical for an application probably isn't worth building.
+#### 프레임워크 2: 기술 개발
+**축:** 얼마나 널리 사용될 것인가? x 응용에 얼마나 중요한가?
 
-#### Framework 3: Typical Invention/Application
-**Axes:** How much good? × For how many people?
+**철학:** 역시 어느 한 축에서 높은 점수면 충분합니다.
 
-**Philosophy:** Useful for translational work, frugal science, global health.
+**예시:**
+- **널리 사용, 중요하지 않음:** BLAST
+  - 수많은 프로젝트에서 사용
+  - 핵심 도구인 경우는 드물지만 막대한 누적 영향력
 
-**Examples:**
-- Foldscope: Paper microscope accessible to millions of students globally
-- Neglected tropical disease intervention: Quality-adjusted life years per $100
-- Medical device: Number of patients who can access treatment
+- **널리 사용되지 않음, 매우 중요:** 극저온 전자 단층촬영
+  - 광범위한 채택에는 너무 복잡함
+  - 그러나 다른 방법으로는 불가능한 놀라운 데이터 생성
+  - 필요할 때 대안이 없음
 
-**Key Questions:**
-- What problem does this solve?
-- How many people have this problem?
-- How much better is their life if you solve it?
-- What's the cost per person helped?
+- **양축 모두 높음 (게임 체인저):**
+  - GFP, CRISPR, AlphaFold (유명한 것들)
+  - 그러나 또한: 렌티바이러스 전달, 세포 분류, 대량 병렬 시퀀싱
+  - 없이는 살 수 없다고 상상하는 기술들
 
-### Phase 3: Selecting and Articulating Your Framework
+**핵심 질문:**
+- 얼마나 많은 실험실이 이것을 채택할 것인가?
+- 실험의 몇 분의 일에서 이것이 핵심 활성화 기술인가?
+- 이전에 불가능했던 무엇이 가능해지는가?
+- 구현이 얼마나 어려운가?
 
-Based on your Phase 1 responses, let me help you choose:
+**핵심 규칙:** 널리 사용되지도 않고 응용에 중요하지도 않은 도구는 만들 가치가 없을 수 있습니다.
 
-**If you selected A (fundamental knowledge):** → Basic Science Framework
-**If you selected B (enable experiments):** → Technology Development Framework  
-**If you selected C (solve practical problem):** → Invention Framework
+#### 프레임워크 3: 일반적 발명/응용
+**축:** 얼마나 큰 효과? x 얼마나 많은 사람에게?
 
-**Now, let's be explicit:**
+**철학:** 중개 연구, 검약적 과학, 글로벌 건강에 유용합니다.
 
-1. **State Your Framework:** "This project should be evaluated as [basic science/technology development/invention]."
+**예시:**
+- Foldscope: 전 세계 수백만 학생이 접근할 수 있는 종이 현미경
+- 소외 열대 질환 개입: $100당 품질 보정 수명(QALY)
+- 의료 기기: 치료에 접근할 수 있는 환자 수
 
-2. **Define Your Axes:** 
-   - X-axis measures: [specific metric]
-   - Y-axis measures: [specific metric]
+**핵심 질문:**
+- 이것은 어떤 문제를 해결합니까?
+- 얼마나 많은 사람이 이 문제를 가지고 있습니까?
+- 해결하면 그들의 삶이 얼마나 나아집니까?
+- 도움받는 사람당 비용은 얼마입니까?
 
-3. **Make Your Case:**
-   - X-axis score (Low/Medium/High): [Your assessment + reasoning]
-   - Y-axis score (Low/Medium/High): [Your assessment + reasoning]
+### 3단계: 프레임워크 선택 및 명시
 
-4. **Threshold Check:** 
-   - Do you score at least MEDIUM-HIGH on one axis?
-   - If both are LOW-MEDIUM, you have a problem
+1단계 응답에 기반하여 선택을 도우십시오:
 
-### Phase 4: Alternative or Custom Metrics
+**A를 선택했다면 (기초 지식):** → 기초 과학 프레임워크
+**B를 선택했다면 (실험 활성화):** → 기술 개발 프레임워크
+**C를 선택했다면 (실용적 문제 해결):** → 발명 프레임워크
 
-Sometimes standard frameworks don't fit. Examples where custom metrics work:
+**명시적으로 기술하십시오:**
 
-**Alternative Metric Examples:**
-- **Frugal Science:** How many children in low/middle-income countries gain access to microscopy?
-- **Neglected Disease:** Quality-adjusted life years saved per $100 invested
-- **Sustainability:** Tons of CO₂ equivalent prevented × cost-effectiveness
-- **Equity:** Reduction in disparity metric × number of people affected
+1. **프레임워크 선언:** "이 프로젝트는 [기초 과학/기술 개발/발명]으로 평가되어야 합니다."
 
-**When to propose alternative metrics:**
-- Your work addresses a specific underserved need
-- Standard metrics miss your core value proposition
-- You're working in an emerging area without established norms
-- Your work crosses traditional boundaries
+2. **축 정의:**
+   - X축 측정: [특정 지표]
+   - Y축 측정: [특정 지표]
 
-**How to propose alternative metrics:**
-1. Explain why standard metrics are insufficient
-2. Define your proposed metric clearly
-3. Provide a value creation index (two axes)
-4. Show how your project scores on these axes
+3. **주장 제시:**
+   - X축 점수 (낮음/중간/높음): [평가 + 근거]
+   - Y축 점수 (낮음/중간/높음): [평가 + 근거]
 
-### Phase 5: Comparative Assessment
+4. **임계값 확인:**
+   - 최소한 하나의 축에서 중간-높음 점수를 받는가?
+   - 양쪽 모두 낮음-중간이면 문제가 있음
 
-Even if absolute impact is hard to estimate, comparative assessment is valuable:
+### 4단계: 대안 또는 사용자 정의 지표
 
-**Exercise: Compare 3 Related Projects**
+때로는 표준 프레임워크가 맞지 않습니다. 사용자 정의 지표가 적합한 예시:
 
-For your project and two alternatives (either from literature or hypothetical):
+**대안 지표 예시:**
+- **검약적 과학:** 저/중소득 국가의 얼마나 많은 어린이가 현미경에 접근하는가?
+- **소외 질환:** 투자 $100당 구한 품질 보정 수명
+- **지속 가능성:** 방지된 CO2 당량 톤 x 비용 효율성
+- **형평성:** 격차 지표 감소 x 영향받는 사람 수
 
-| Project | Framework | X-Axis Score | Y-Axis Score | Overall |
-|---------|-----------|--------------|--------------|---------|
-| Yours | [Type] | [L/M/H] + reasoning | [L/M/H] + reasoning | [Assessment] |
-| Alt 1 | [Type] | [L/M/H] + reasoning | [L/M/H] + reasoning | [Assessment] |
-| Alt 2 | [Type] | [L/M/H] + reasoning | [L/M/H] + reasoning | [Assessment] |
+### 5단계: 비교 평가
 
-**Comparative Questions:**
-- Which would be most impactful if they all work?
-- Which has the best risk-adjusted impact?
-- Are you pursuing the best option?
-- If not, why? (Sometimes there are good reasons: resources, expertise, timing)
+절대적 영향력을 추정하기 어렵더라도 비교 평가는 가치 있습니다:
 
-### Phase 6: Avoiding Metric Mismatch
+**연습: 3개 관련 프로젝트 비교**
 
-**Common Mismatches:**
+| 프로젝트 | 프레임워크 | X축 점수 | Y축 점수 | 전체 |
+|---------|-----------|---------|---------|------|
+| 자신의 | [유형] | [낮/중/높] + 근거 | [낮/중/높] + 근거 | [평가] |
+| 대안 1 | [유형] | [낮/중/높] + 근거 | [낮/중/높] + 근거 | [평가] |
+| 대안 2 | [유형] | [낮/중/높] + 근거 | [낮/중/높] + 근거 | [평가] |
 
-#### Mismatch 1: Basic Science vs. Technology Evaluation
-**Scenario:** You're doing fundamental biology, but reviewers ask "How widely will this be used?"
+### 6단계: 지표 불일치 방지
 
-**Problem:** They're evaluating basic science with technology metrics
+**일반적인 불일치:**
 
-**Solution:** Explicitly frame as basic science. Lead with: "This updates our understanding of [fundamental process], which is conserved across [many systems]."
+#### 불일치 1: 기초 과학 vs. 기술 평가
+**시나리오:** 기초 생물학을 연구하는데, 심사위원이 "이것이 얼마나 널리 사용될 것인가?"라고 질문
+**문제:** 기초 과학을 기술 지표로 평가
+**해결:** 명시적으로 기초 과학으로 프레이밍. "이것은 [여러 시스템]에 걸쳐 보존된 [근본적 과정]에 대한 이해를 업데이트합니다"로 시작
 
-#### Mismatch 2: Technology vs. Basic Science Evaluation
-**Scenario:** You're building a tool, but reviewers ask "How much did we learn about biology?"
+#### 불일치 2: 기술 vs. 기초 과학 평가
+**시나리오:** 도구를 만드는데, 심사위원이 "생물학에 대해 얼마나 배웠는가?"라고 질문
+**문제:** 기술을 기초 과학 지표로 평가
+**해결:** 명시적으로 기술 개발로 프레이밍. "이것은 현재 불가능한 실험을 가능하게 합니다"로 시작
 
-**Problem:** They're evaluating technology with basic science metrics
+#### 불일치 3: 범주 내 혼동
+**시나리오:** 기초 과학이 특정적이지만 깊은데, 심사위원이 넓은 일반성을 원함
+**문제:** 양축 모두 필요하다고 생각하지만 실제로는 어느 한 축이면 충분
+**해결:** 명시적으로 인정: "이것이 보편적이지 않을 수 있지만, 메커니즘적 통찰의 깊이가 학습 축에서 높은 점수를 받습니다"
 
-**Solution:** Explicitly frame as technology development. Lead with: "This enables experiments that are currently impossible, which [X] labs need for [Y] applications."
+### 7단계: 가치 체계 논의
 
-#### Mismatch 3: Within-Category Confusion
-**Scenario:** Your basic science is specific but deep, but reviewers want broad generality
+Claude가 사용자의 신념 체계에 대해 명시적으로 논의하는 단계입니다:
 
-**Problem:** They think both axes are required, rather than either/or
+**성찰 질문:**
 
-**Solution:** Explicitly acknowledge: "While this may not be universal, the depth of mechanistic insight scores highly on the learning axis."
+1. **무엇이 동기를 부여합니까?**
+   - 발견과 이해?
+   - 다른 사람을 활성화?
+   - 문제 해결?
+   - 무언가를 구축?
 
-#### Mismatch 4: Time Horizon Mismatch
-**Scenario:** You're working on long-term fundamental research, but reviewers want immediate impact
+2. **무엇이 자랑스러울 것입니까?**
+   - Cell/Nature/Science 논문?
+   - 수백 개 실험실이 사용하는 도구?
+   - 환자에게 도달하는 치료법?
+   - 새로운 분야를 여는 것?
 
-**Problem:** Different value systems about when impact should materialize
+3. **어떻게 기억되고 싶습니까?**
+   - "X를 발견했다"
+   - "Z를 가능하게 한 Y를 만들었다"
+   - "문제 W를 해결했다"
+   - "계속해서 활약하는 학생들을 훈련시켰다"
 
-**Solution:** Articulate your time horizon explicitly and provide historical examples of similar timelines
+4. **누구의 승인이 중요합니까?**
+   - 분야의 특정 선임 과학자?
+   - 분야를 넘어선 넓은 커뮤니티?
+   - 도구를 사용하는 실무자?
+   - 삶이 개선되는 사람들?
 
-### Phase 7: Value System Discussion
+**틀린 답은 없습니다—그러나 정렬이 중요합니다:**
+- 프로젝트가 사용자의 가치 체계와 일치해야 합니다
+- 평가 프레임워크가 프로젝트 유형과 일치해야 합니다
+- 커뮤니케이션이 프레임워크를 선도해야 합니다
 
-This is where Claude explicitly discusses the user's belief system about what matters:
+### 8단계: 문헌 벤치마킹
 
-**Questions for Reflection:**
+Claude는 PubMed를 사용하여 사용자의 분야에서 영향력을 벤치마킹해야 합니다.
 
-1. **What drives the user?**
-   - Discovery and understanding?
-   - Enabling others?
-   - Solving problems?
-   - Building things?
+### 9단계: 커뮤니케이션 전략
 
-2. **What would make the user proud?**
-   - Paper in Cell/Nature/Science?
-   - Tool used by hundreds of labs?
-   - Treatment reaching patients?
-   - Opening a new field?
+프레임워크가 선택되면 이를 선도하는 방법:
 
-3. **How does the user want to be remembered?**
-   - "Discovered X"
-   - "Built Y that enabled Z"
-   - "Solved problem W"
-   - "Trained students who went on to..."
+#### 발표에서:
+**오프닝 프레임 (처음 2개 슬라이드 내):**
+- "이 연구의 목표는 [일반 시스템 Y]에서 [근본적 과정 X]를 이해하는 것입니다" → 기초 과학
+- "우리는 [커뮤니티 Y]를 위한 [핵심 실험 X]를 가능하게 하는 기술을 개발하고 있습니다" → 기술
+- "이 발명은 [N]명에게 영향을 미치는 [문제 X]를 해결합니다" → 응용
 
-4. **Whose approval matters?**
-   - Specific senior scientists in the field?
-   - Broader community across fields?
-   - Practitioners who use tools?
-   - People whose lives are improved?
+#### 논문에서:
+**초록 구조:**
+- 단어 선택을 통해 프레임워크를 암시적으로 기술
+- 기초 과학: "reveals," "demonstrates," "shows that"
+- 기술: "enables," "provides," "makes it possible to"
+- 응용: "solves," "addresses," "improves"
 
-**There are no wrong answers—but alignment matters:**
-- The project should match the user's value system
-- The evaluation framework should match the project type
-- Communication should lead with the framework
+## 산출물
 
-### Phase 8: Literature Benchmarking
+Claude는 **2페이지 영향력 평가 문서**를 작성해야 합니다:
 
-Claude should use PubMed to benchmark impact in the user's area:
+### 1페이지: 프레임워크 및 점수
 
-**Searches should include:**
+#### 프로젝트 분류:
+- **유형:** 기초 과학 / 기술 개발 / 발명 / 사용자 정의
+- **근거:** [이 분류가 맞는 이유]
 
-1. **Impact Exemplars:** Papers the user considers high-impact in the field
-   - What framework did they use (implicitly or explicitly)?
-   - How did they score on the axes?
-   - What made them successful?
+#### 최적화 함수:
+- **X축:** [지표 이름 및 정의]
+- **Y축:** [지표 이름 및 정의]
 
-2. **Analogous Projects:** Similar approaches or systems
-   - How were they evaluated?
-   - What impact did they achieve?
-   - What can be learned from their framing?
+#### 자가 평가:
+- **X축 점수: [낮음/중간/높음]** + 근거 및 벤치마크
+- **Y축 점수: [낮음/중간/높음]** + 근거 및 벤치마크
+- **전체 평가:** 최소 하나의 축에서 점수 ☑ 예 / ☐ 아니오
 
-3. **Field Expectations:** What's typical for the area?
-   - Are basic science papers common?
-   - Is technology development valued?
-   - What level of impact is "good enough"?
+### 2페이지: 커뮤니케이션 및 정렬
 
-**Questions to ask the user:**
-- What papers should be analyzed as benchmarks?
-- What search terms capture the field's impact exemplars?
-- Are there specific journals or authors whose framing to emulate?
+#### 가치 체계 정렬:
+- **동기:** [발견/활성화/문제해결/구축]
+- **성공 정의:** [무엇이 이것을 가치 있게 만드는가]
+- **승인 원천:** [누구의 의견이 중요하며 왜]
+- **프레임워크 적합성:** [프로젝트가 가치와 어떻게 정렬되는가]
 
-### Phase 9: Communication Strategy
+#### 피해야 할 잠재적 불일치:
+1. [특정 불일치 유형] - 시나리오 및 예방 방법
+2. [다른 불일치] - 시나리오 및 예방 방법
 
-Once the framework is selected, here's how to lead with it:
+#### 커뮤니케이션 전략:
+- **발표용:** 오프닝 프레임 및 핵심 문구
+- **논문용:** 프레임워크에 적합한 언어
+- **연구비용:** 영향력을 명시적으로 평가
+- **멘토용:** 정렬 질문
 
-#### In Talks:
-**Opening Frame (within first 2 slides):**
-- "The goal of this work is to understand [fundamental process X] in [general system Y]" → Basic science
-- "We're developing a technology that will enable [critical experiment X] for [community Y]" → Technology
-- "This invention addresses [problem X] affecting [N] people" → Application
+## 핵심 원칙
 
-#### In Papers:
-**Abstract Structure:**
-- State your framework implicitly through word choice
-- Basic science: "reveals," "demonstrates," "shows that"
-- Technology: "enables," "provides," "makes it possible to"
-- Application: "solves," "addresses," "improves"
+1. **가치는 신념 체계의 눈에 있습니다:** 자신의 것을 명시적으로 하십시오.
+2. **지표를 선도하십시오:** 다른 사람이 같은 프레임워크를 공유한다고 가정하지 마십시오.
+3. **어느 한 축이면 충분합니다:** 양쪽 모두 필요하지 않습니다—하나에서만 높은 점수를 받으십시오.
+4. **일찍 명시하십시오:** 2년이 지나기 전에 멘토와 논의하십시오.
+5. **기본 상태를 피하십시오:** 무관련성/미사용에 적극적으로 대항하십시오.
+6. **비교하십시오, 절대적으로 하지 마십시오:** 대략적인 비교라도 영향력을 무시하는 것보다 낫습니다.
+7. **커뮤니케이션을 정렬하십시오:** 말이 프레임워크를 신호해야 합니다.
+8. **프로젝트를 가치에 맞추십시오:** 삶은 정렬되지 않은 일에 너무 짧습니다.
 
-#### In Grants:
-**Broader Impact Section:**
-- Explicitly name your evaluation framework
-- Provide the two-axis assessment
-- Score yourself on each axis with evidence
+## 시작하기
 
-#### With Your PI/Committee:
-**Alignment Conversation:**
-- "I want to make sure we're aligned on how this should be evaluated"
-- "I see this as [framework], scoring [X] on [axis 1] and [Y] on [axis 2]"
-- "Do you agree, or do you see it differently?"
-- "This matters because..." [explain downstream implications]
+Claude는 다음을 질문하여 1단계를 시작해야 합니다:
+1. 주요 목표는 무엇입니까? (A/B/C/D)
+2. 3-5년 후 성공은 어떤 모습입니까?
+3. 이것이 성공하면 누가 관심을 가집니까?
 
-## Output Deliverable
-
-Claude should produce a **2-page Impact Assessment Document**:
-
-### Page 1: Framework and Scoring
-
-#### Project Categorization:
-- **Type:** Basic Science / Technology Development / Invention / Custom
-- **Rationale:** [Why this categorization fits]
-
-#### Optimization Function:
-- **X-Axis:** [Metric name and definition]
-- **Y-Axis:** [Metric name and definition]
-- **Custom Rationale (if applicable):** [Why standard metrics don't fit]
-
-#### Self-Assessment:
-
-**X-Axis Score: [Low/Medium/High]**
-- Evidence: [Specific reasons for this score]
-- Examples: [Comparable projects or benchmarks]
-- PubMed Support: [Key papers that inform assessment]
-
-**Y-Axis Score: [Low/Medium/High]**
-- Evidence: [Specific reasons for this score]
-- Examples: [Comparable projects or benchmarks]
-- PubMed Support: [Key papers that inform assessment]
-
-**Overall Assessment:**
-- Score on at least one axis: ☑ Yes / ☐ No
-- Strong justification: ☑ Yes / ☐ No
-- Aligned with your values: ☑ Yes / ☐ No
-
-#### Visual Framework:
-```
-         [Your Project Type]
-              
-Y-Axis    |           ★ Your Project
-[Metric]  |         /
-          |       /
-          |     /
-          |   /
-          |_________________
-              X-Axis [Metric]
-              
-★ = Your project
-Reference projects plotted for context
-```
-
-### Page 2: Communication and Alignment
-
-#### Value System Alignment:
-- **What Drives You:** [Discovery/Enabling/Problem-solving/Building]
-- **Success Definition:** [What would make this worthwhile]
-- **Approval Sources:** [Whose opinion matters and why]
-- **Framework Fit:** [How project aligns with values]
-
-#### Potential Mismatches to Avoid:
-1. [Specific mismatch type]
-   - Scenario: [When this might happen]
-   - Prevention: [How to frame to avoid it]
-
-2. [Another mismatch]
-   - Scenario: [When this might happen]
-   - Prevention: [How to frame to avoid it]
-
-#### Communication Strategy:
-
-**For Talks:**
-- Opening frame: [Exact language to use in first 2 slides]
-- Key phrases: [Vocabulary that signals your framework]
-
-**For Papers:**
-- Abstract structure: [Framework-appropriate language]
-- Impact statement: [How to articulate in discussion]
-
-**For Grants:**
-- Broader impact: [How to score yourself explicitly]
-- Justification: [Evidence for scores]
-
-**For Mentors:**
-- Alignment question: [Exact question to ask]
-- Your perspective: [How you see it]
-- Discussion points: [What matters for alignment]
-
-#### Comparative Analysis:
-
-| Project | Type | X-Score | Y-Score | Notes |
-|---------|------|---------|---------|-------|
-| Yours | [Type] | [L/M/H] | [L/M/H] | [Key strengths] |
-| Benchmark 1 | [Type] | [L/M/H] | [L/M/H] | [What you can learn] |
-| Benchmark 2 | [Type] | [L/M/H] | [L/M/H] | [What you can learn] |
-| Alternative | [Type] | [L/M/H] | [L/M/H] | [Why not pursuing] |
-
-#### Action Items:
-1. [Specific step to strengthen X-axis score or argument]
-2. [Specific step to strengthen Y-axis score or argument]
-3. [Communication alignment with key stakeholders]
-
-## Practical Examples
-
-### Example 1: Ribosome Stalling (Basic Science)
-- **Framework:** Basic science
-- **X-Axis (Generality):** HIGH—translation is universal
-- **Y-Axis (Learning):** MEDIUM—mechanism of one quality control system
-- **Assessment:** High on generality alone = substantial impact
-- **Communication:** "Updates our understanding of translation quality control"
-
-### Example 2: BLAST (Technology)
-- **Framework:** Technology development
-- **X-Axis (Widely Used):** VERY HIGH—used by virtually all molecular biologists
-- **Y-Axis (Critical):** LOW-MEDIUM—helpful but rarely essential
-- **Assessment:** Extreme breadth of use = enormous cumulative impact
-- **Communication:** "Enables rapid sequence comparison across all biological databases"
-
-### Example 3: Cryo-EM Tomography (Technology)
-- **Framework:** Technology development
-- **X-Axis (Widely Used):** LOW—complex, expensive, specialized
-- **Y-Axis (Critical):** VERY HIGH—generates impossible-to-get-otherwise data
-- **Assessment:** Extreme criticality for niche = high impact
-- **Communication:** "Enables 3D visualization of molecular machines in native cellular context"
-
-### Example 4: Foldscope (Invention)
-- **Framework:** Invention (custom metric)
-- **X-Axis (Good):** MEDIUM—functional microscopy
-- **Y-Axis (People):** VERY HIGH—millions of students globally
-- **Assessment:** Massive reach × modest utility = transformative for education
-- **Communication:** "Democratizes microscopy for global education"
-
-## Key Principles to Remember
-
-1. **Value Is in the Eye of a Belief System:** Make yours explicit.
-
-2. **Lead with Your Metric:** Don't assume others share your framework.
-
-3. **Either Axis Suffices:** You don't need both—just score well on one.
-
-4. **Articulate Early:** Discuss with mentors before you're 2 years in.
-
-5. **Avoid Default State:** Work actively against irrelevance/non-use.
-
-6. **Compare, Don't Absolute:** Even rough comparison beats ignoring impact.
-
-7. **Align Communication:** Your words should signal your framework.
-
-8. **Match Project to Values:** Life is too short for misaligned work.
-
-## Warning Signs
-
-**Warning signs include:**
-- Inability to articulate which framework applies
-- Scoring LOW on both axes
-- Project type and evaluation framework don't match
-- User and PI have different frameworks but haven't discussed it
-- Using basic science metrics for a tool or vice versa
-- Never explicitly discussing impact assessment
-
-**Good shape indicators:**
-- Clear statement of optimization function
-- MEDIUM-HIGH score on at least one axis
-- Framework matches project type
-- Alignment with key stakeholders
-- Communication signals framework clearly
-- Benchmarking against comparable work
-
-## Getting Started
-
-Claude should begin Phase 1 by asking:
-1. What is the primary goal? (A/B/C/D)
-2. What would success look like in 3-5 years?
-3. Who cares if this succeeds?
-
-Together, Claude and the user will select the right optimization function and position the work for maximum impact.
+Claude와 사용자는 함께 올바른 최적화 함수를 선택하고 최대 영향력을 위해 작업을 포지셔닝할 것입니다.
 
 ---
 
-*Remember: Impact assessment isn't about ego—it's about ensuring work matters in the way the scientist wants it to matter. Explicit framing prevents years of misalignment.*
+*기억하십시오: 영향력 평가는 자존심에 관한 것이 아닙니다—과학자가 원하는 방식으로 작업이 중요하도록 보장하는 것입니다. 명시적 프레이밍이 수년간의 불일치를 방지합니다.*

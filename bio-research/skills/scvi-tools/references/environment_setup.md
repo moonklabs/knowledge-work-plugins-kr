@@ -1,10 +1,10 @@
-# Environment Setup for scvi-tools
+# scvi-tools 환경 설정
 
-This reference covers installation and environment configuration for scvi-tools.
+이 레퍼런스는 scvi-tools의 설치 및 환경 구성을 다룹니다.
 
-## Installation Options
+## 설치 옵션
 
-### Option 1: Conda Environment (Recommended)
+### 옵션 1: Conda 환경 (권장)
 
 ```bash
 # Create environment with GPU support
@@ -21,7 +21,7 @@ pip install torch --index-url https://download.pytorch.org/whl/cu118
 pip install scanpy leidenalg
 ```
 
-### Option 2: Pip Only
+### 옵션 2: Pip만 사용
 
 ```bash
 # Create virtual environment
@@ -33,7 +33,7 @@ source scvi-env/bin/activate  # Linux/Mac
 pip install scvi-tools scanpy
 ```
 
-### Option 3: With Spatial Analysis Support
+### 옵션 3: 공간 분석 지원 포함
 
 ```bash
 conda create -n scvi-spatial python=3.10
@@ -42,13 +42,13 @@ conda activate scvi-spatial
 pip install scvi-tools scanpy squidpy
 ```
 
-### Option 4: With MuData Support (Multiome)
+### 옵션 4: MuData 지원 포함 (멀티옴)
 
 ```bash
 pip install scvi-tools mudata muon
 ```
 
-## Verify Installation
+## 설치 확인
 
 ```python
 import scvi
@@ -62,27 +62,27 @@ print(f"GPU available: {torch.cuda.is_available()}")
 
 if torch.cuda.is_available():
     print(f"GPU device: {torch.cuda.get_device_name(0)}")
-    print(f"GPU memory: {torch.cuda.get_device_properties(0).total_memory / 1e9:.1f} GB")
+    print(f"GPU memory: {torch.cuda.get_device_properties(0).total_mem / 1e9:.1f} GB")
 ```
 
-## GPU Configuration
+## GPU 구성
 
-### Check CUDA Version
+### CUDA 버전 확인
 
 ```bash
 nvidia-smi
 nvcc --version
 ```
 
-### PyTorch CUDA Versions
+### PyTorch CUDA 버전
 
-| CUDA Version | PyTorch Install Command |
-|--------------|------------------------|
+| CUDA 버전 | PyTorch 설치 명령어 |
+|-----------|-------------------|
 | CUDA 11.8 | `pip install torch --index-url https://download.pytorch.org/whl/cu118` |
 | CUDA 12.1 | `pip install torch --index-url https://download.pytorch.org/whl/cu121` |
-| CPU only | `pip install torch --index-url https://download.pytorch.org/whl/cpu` |
+| CPU만 사용 | `pip install torch --index-url https://download.pytorch.org/whl/cpu` |
 
-### Memory Management
+### 메모리 관리
 
 ```python
 import torch
@@ -95,16 +95,16 @@ print(f"Allocated: {torch.cuda.memory_allocated() / 1e9:.2f} GB")
 print(f"Cached: {torch.cuda.memory_reserved() / 1e9:.2f} GB")
 ```
 
-## Common Issues
+## 일반적인 문제
 
-| Issue | Cause | Solution |
-|-------|-------|----------|
-| `CUDA out of memory` | GPU memory exhausted | Reduce batch_size, use smaller model |
-| `No GPU detected` | CUDA not installed | Install CUDA toolkit matching PyTorch |
-| `Version mismatch` | PyTorch/CUDA incompatibility | Reinstall PyTorch with correct CUDA version |
-| `Import error scvi` | Missing dependencies | `pip install scvi-tools[all]` |
+| 문제 | 원인 | 해결 방법 |
+|------|------|----------|
+| `CUDA out of memory` | GPU 메모리 부족 | batch_size 줄이기, 더 작은 모델 사용 |
+| `No GPU detected` | CUDA 미설치 | PyTorch에 맞는 CUDA 툴킷 설치 |
+| `Version mismatch` | PyTorch/CUDA 비호환 | 올바른 CUDA 버전의 PyTorch 재설치 |
+| `Import error scvi` | 의존성 누락 | `pip install scvi-tools[all]` |
 
-## Jupyter Setup
+## Jupyter 설정
 
 ```bash
 # Install Jupyter kernel
@@ -115,9 +115,9 @@ python -m ipykernel install --user --name scvi-env --display-name "scvi-tools"
 pip install matplotlib seaborn
 ```
 
-## Recommended Package Versions
+## 권장 패키지 버전
 
-For reproducibility, pin versions:
+재현성을 위해 버전을 고정합니다:
 
 ```bash
 pip install \
@@ -127,19 +127,19 @@ pip install \
     torch>=2.0.0
 ```
 
-## Version Compatibility Guide
+## 버전 호환성 가이드
 
-### scvi-tools 1.x vs 0.x API Changes
+### scvi-tools 1.x vs 0.x API 변경사항
 
-The 1.x release introduced breaking changes. Key differences:
+1.x 릴리스에서 호환성을 깨는 변경사항이 도입되었습니다. 주요 차이점은 다음과 같습니다:
 
-| Operation | 0.x API (deprecated) | 1.x API (current) |
-|-----------|---------------------|-------------------|
-| Setup data | `scvi.data.setup_anndata(adata, ...)` | `scvi.model.SCVI.setup_anndata(adata, ...)` |
-| Register data | `scvi.data.register_tensor_from_anndata(...)` | Built into `setup_anndata` |
-| View setup | `scvi.data.view_anndata_setup(adata)` | `scvi.model.SCVI.view_anndata_setup(adata)` |
+| 작업 | 0.x API (더 이상 사용되지 않음) | 1.x API (현재) |
+|-----|-------------------------------|----------------|
+| 데이터 설정 | `scvi.data.setup_anndata(adata, ...)` | `scvi.model.SCVI.setup_anndata(adata, ...)` |
+| 데이터 등록 | `scvi.data.register_tensor_from_anndata(...)` | `setup_anndata`에 내장 |
+| 설정 보기 | `scvi.data.view_anndata_setup(adata)` | `scvi.model.SCVI.view_anndata_setup(adata)` |
 
-### Migration from 0.x to 1.x
+### 0.x에서 1.x로 마이그레이션
 
 ```python
 # OLD (0.x) - DEPRECATED
@@ -153,9 +153,9 @@ scvi.model.SCVI.setup_anndata(adata, layer="counts", batch_key="batch")
 model = scvi.model.SCVI(adata)
 ```
 
-### Model-Specific Setup (1.x)
+### 모델별 설정 (1.x)
 
-Each model has its own setup method:
+각 모델에는 고유한 설정 메서드가 있습니다:
 
 ```python
 # scVI
@@ -177,18 +177,18 @@ scvi.model.PEAKVI.setup_anndata(adata, batch_key="batch")
 scvi.external.VELOVI.setup_anndata(adata, spliced_layer="spliced", unspliced_layer="unspliced")
 ```
 
-### Minimum Version Requirements
+### 최소 버전 요구사항
 
-| Package | Minimum Version | Notes |
-|---------|-----------------|-------|
-| scvi-tools | 1.0.0 | Required for current API |
-| scanpy | 1.9.0 | HVG selection improvements |
-| anndata | 0.9.0 | Improved MuData support |
-| torch | 2.0.0 | Performance improvements |
-| mudata | 0.2.0 | Required for MultiVI |
-| scvelo | 0.2.5 | Required for veloVI |
+| 패키지 | 최소 버전 | 비고 |
+|--------|----------|------|
+| scvi-tools | 1.0.0 | 현재 API에 필요 |
+| scanpy | 1.9.0 | HVG 선택 개선 |
+| anndata | 0.9.0 | 개선된 MuData 지원 |
+| torch | 2.0.0 | 성능 개선 |
+| mudata | 0.2.0 | MultiVI에 필요 |
+| scvelo | 0.2.5 | veloVI에 필요 |
 
-### Check Your Versions
+### 버전 확인
 
 ```python
 import scvi
@@ -208,16 +208,16 @@ else:
     print("WARNING: Using deprecated 0.x API - please upgrade")
 ```
 
-### Known Compatibility Issues
+### 알려진 호환성 문제
 
-| Issue | Affected Versions | Solution |
-|-------|-------------------|----------|
-| `setup_anndata` not found | scvi-tools < 1.0 | Upgrade to 1.0+ |
-| MuData errors | mudata < 0.2 | `pip install mudata>=0.2.0` |
-| CUDA version mismatch | Any | Reinstall PyTorch for your CUDA |
-| numpy 2.0 issues | Early 2024 builds | `pip install numpy<2.0` |
+| 문제 | 영향 받는 버전 | 해결 방법 |
+|------|--------------|----------|
+| `setup_anndata` 미발견 | scvi-tools < 1.0 | 1.0+ 으로 업그레이드 |
+| MuData 오류 | mudata < 0.2 | `pip install mudata>=0.2.0` |
+| CUDA 버전 불일치 | 모든 버전 | 해당 CUDA용 PyTorch 재설치 |
+| numpy 2.0 문제 | 2024년 초 빌드 | `pip install numpy<2.0` |
 
-### Upgrading scvi-tools
+### scvi-tools 업그레이드
 
 ```bash
 # Upgrade to latest
@@ -232,7 +232,7 @@ pip cache purge
 pip install scvi-tools
 ```
 
-## Testing Installation
+## 설치 테스트
 
 ```python
 # Quick test with sample data

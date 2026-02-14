@@ -1,120 +1,120 @@
 ---
-description: Generate a full campaign brief with objectives, channels, content calendar, and success metrics
-argument-hint: "<campaign objective or product>"
+description: 목표, 채널, 콘텐츠 캘린더, 성공 지표를 포함한 전체 캠페인 브리프를 생성합니다
+argument-hint: "<캠페인 목표 또는 제품>"
 ---
 
-# Campaign Plan
+# 캠페인 기획
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 참조하세요.
 
-Generate a comprehensive marketing campaign brief with objectives, audience, messaging, channel strategy, content calendar, and success metrics.
+목표, 오디언스, 메시징, 채널 전략, 콘텐츠 캘린더, 성공 지표를 포함한 종합 마케팅 캠페인 브리프를 생성합니다.
 
-## Trigger
+## 트리거
 
-User runs `/campaign-plan` or asks to plan, design, or build a marketing campaign.
+사용자가 `/campaign-plan`을 실행하거나 마케팅 캠페인을 기획, 설계, 또는 구축해 달라고 요청합니다.
 
-## Inputs
+## 입력
 
-Gather the following from the user. If not provided, ask before proceeding:
+사용자로부터 다음 정보를 수집합니다. 제공되지 않은 경우 진행하기 전에 질문합니다:
 
-1. **Campaign goal** — the primary objective (e.g., drive signups, increase awareness, launch a product, generate leads, re-engage churned users)
+1. **캠페인 목표** — 주요 목적 (예: 가입 유도, 인지도 향상, 제품 출시, 리드 생성, 이탈 사용자 재참여)
 
-2. **Target audience** — who the campaign is aimed at (demographics, roles, industries, pain points, buying stage)
+2. **타겟 오디언스** — 캠페인 대상 (인구통계, 역할, 산업, 고충, 구매 단계)
 
-3. **Timeline** — campaign duration and any fixed dates (launch date, event date, seasonal deadline)
+3. **타임라인** — 캠페인 기간 및 고정 일정 (출시일, 이벤트 날짜, 시즌 마감일)
 
-4. **Budget range** — approximate budget or budget tier (optional; if not provided, generate a channel-agnostic plan and note where budget allocation would matter)
+4. **예산 범위** — 대략적인 예산 또는 예산 등급 (선택 사항; 제공되지 않으면 채널에 구애받지 않는 계획을 생성하고 예산 배분이 중요한 부분을 표시합니다)
 
-5. **Additional context** (optional):
-   - Product or service being promoted
-   - Key differentiators or value propositions
-   - Previous campaign performance or learnings
-   - Brand guidelines or constraints
-   - Geographic focus
+5. **추가 맥락** (선택 사항):
+   - 홍보할 제품 또는 서비스
+   - 핵심 차별화 요소 또는 가치 제안
+   - 이전 캠페인 성과 또는 교훈
+   - 브랜드 가이드라인 또는 제약 조건
+   - 지역 초점
 
-## Campaign Brief Structure
+## 캠페인 브리프 구조
 
-Generate a campaign brief with the following sections:
+다음 섹션으로 캠페인 브리프를 생성합니다:
 
-### 1. Campaign Overview
-- Campaign name suggestion
-- One-sentence campaign summary
-- Primary objective with a specific, measurable goal
-- Secondary objectives (if applicable)
+### 1. 캠페인 개요
+- 캠페인 이름 제안
+- 한 문장 캠페인 요약
+- 구체적이고 측정 가능한 목표가 포함된 주요 목적
+- 부차적 목적 (해당 시)
 
-### 2. Target Audience
-- Primary audience segment with description
-- Secondary audience segment (if applicable)
-- Audience pain points and motivations
-- Where they spend time (channels, communities, publications)
-- Buying stage alignment (awareness, consideration, decision)
+### 2. 타겟 오디언스
+- 주요 오디언스 세그먼트 및 설명
+- 부차적 오디언스 세그먼트 (해당 시)
+- 오디언스 고충 및 동기
+- 활동 채널 (채널, 커뮤니티, 매체)
+- 구매 단계 정렬 (인지, 고려, 결정)
 
-### 3. Key Messages
-- Core campaign message (one sentence)
-- 3-4 supporting messages tailored to audience pain points
-- Message variations by channel (if different tones are needed)
-- Proof points or evidence to support each message
+### 3. 핵심 메시지
+- 핵심 캠페인 메시지 (한 문장)
+- 오디언스 고충에 맞춘 3-4개 보조 메시지
+- 채널별 메시지 변형 (톤 차별화가 필요한 경우)
+- 각 메시지를 뒷받침하는 근거 또는 증거
 
-### 4. Channel Strategy
-Recommend channels based on audience and goal. For each channel, include:
-- Why this channel fits the audience and objective
-- Content format recommendations
-- Estimated effort level (low, medium, high)
-- Budget allocation suggestion (if budget was provided)
+### 4. 채널 전략
+오디언스와 목표에 따라 채널을 추천합니다. 각 채널에 대해 다음을 포함합니다:
+- 이 채널이 오디언스와 목적에 적합한 이유
+- 콘텐츠 형식 권장 사항
+- 예상 노력 수준 (낮음, 보통, 높음)
+- 예산 배분 제안 (예산이 제공된 경우)
 
-Consider channels from:
-- Owned: blog, email, website, social media profiles
-- Earned: PR, influencer partnerships, guest posts, community engagement
-- Paid: search ads, social ads, display, sponsored content, events
+다음 채널 범주를 고려합니다:
+- 소유 채널: 블로그, 이메일, 웹사이트, 소셜 미디어 프로필
+- 획득 채널: PR, 인플루언서 파트너십, 기고문, 커뮤니티 참여
+- 유료 채널: 검색 광고, 소셜 광고, 디스플레이, 스폰서 콘텐츠, 이벤트
 
-### 5. Content Calendar
-Create a week-by-week (or day-by-day for short campaigns) content calendar:
-- What content to produce each week
-- Which channel each piece targets
-- Key milestones and deadlines
-- Dependencies between pieces (e.g., "landing page must be live before paid ads launch")
+### 5. 콘텐츠 캘린더
+주간(또는 단기 캠페인의 경우 일간) 콘텐츠 캘린더를 작성합니다:
+- 매주 제작할 콘텐츠
+- 각 콘텐츠가 대상으로 하는 채널
+- 주요 마일스톤 및 마감일
+- 콘텐츠 간 종속 관계 (예: "유료 광고 시작 전에 랜딩 페이지가 라이브되어야 함")
 
-Format as a table:
+테이블 형식으로 작성합니다:
 
-| Week | Content Piece | Channel | Owner/Notes | Status |
-|------|--------------|---------|-------------|--------|
+| 주차 | 콘텐츠 | 채널 | 담당자/비고 | 상태 |
+|------|--------|------|-------------|------|
 
-### 6. Content Pieces Needed
-List every content asset required for the campaign:
-- Asset name and type (blog post, email, social post, ad creative, landing page, etc.)
-- Brief description of what it should contain
-- Priority (must-have vs. nice-to-have)
-- Suggested timeline for creation
+### 6. 필요한 콘텐츠 목록
+캠페인에 필요한 모든 콘텐츠 에셋을 나열합니다:
+- 에셋 이름 및 유형 (블로그 포스트, 이메일, 소셜 포스트, 광고 크리에이티브, 랜딩 페이지 등)
+- 포함해야 할 내용에 대한 간략한 설명
+- 우선순위 (필수 vs. 있으면 좋은 것)
+- 제작 권장 일정
 
-### 7. Success Metrics
-Define KPIs aligned to the campaign objective:
-- Primary KPI with target number
-- Secondary KPIs (3-5)
-- How each metric will be tracked
-- Reporting cadence recommendation
+### 7. 성공 지표
+캠페인 목적에 맞춘 KPI를 정의합니다:
+- 목표 수치가 포함된 주요 KPI
+- 보조 KPI (3-5개)
+- 각 지표의 추적 방법
+- 리포팅 주기 권장 사항
 
-If ~~product analytics is connected, reference any available historical performance benchmarks to inform targets.
+~~product analytics가 연결되어 있으면, 목표 설정에 참고할 수 있는 과거 성과 벤치마크를 참조합니다.
 
-### 8. Budget Allocation (if budget provided)
-- Breakdown by channel or activity
-- Production costs vs. distribution costs
-- Contingency recommendation (typically 10-15%)
+### 8. 예산 배분 (예산이 제공된 경우)
+- 채널 또는 활동별 분배
+- 제작 비용 vs. 배포 비용
+- 비상 예비비 권장 사항 (일반적으로 10-15%)
 
-### 9. Risks and Mitigations
-- 2-3 potential risks (timeline, audience mismatch, channel underperformance)
-- Mitigation strategy for each
+### 9. 리스크와 대응 방안
+- 2-3개의 잠재적 리스크 (일정, 오디언스 불일치, 채널 저성과)
+- 각 리스크에 대한 대응 전략
 
-### 10. Next Steps
-- Immediate action items to kick off the campaign
-- Stakeholder approvals needed
-- Key decision points
+### 10. 다음 단계
+- 캠페인 착수를 위한 즉각적인 실행 항목
+- 필요한 이해관계자 승인
+- 주요 의사결정 시점
 
-## Output
+## 출력
 
-Present the full campaign brief with clear headings and formatting. After the brief, ask:
+명확한 제목과 서식을 갖춘 전체 캠페인 브리프를 제시합니다. 브리프 이후 다음과 같이 질문합니다:
 
-"Would you like me to:
-- Dive deeper into any section?
-- Draft specific content pieces from the calendar?
-- Create a competitive analysis to inform the messaging?
-- Adjust the plan for a different budget or timeline?"
+"다음 중 원하시는 것이 있으신가요?
+- 특정 섹션을 더 상세하게 작성할까요?
+- 캘린더에서 특정 콘텐츠를 초안으로 작성할까요?
+- 메시징에 참고할 경쟁사 분석을 작성할까요?
+- 다른 예산이나 타임라인으로 계획을 조정할까요?"

@@ -1,263 +1,267 @@
 ---
 name: stakeholder-comms
-description: Draft stakeholder updates tailored to audience — executives, engineering, customers, or cross-functional partners. Use when writing weekly status updates, monthly reports, launch announcements, risk communications, or decision documentation.
+description: 경영진, 엔지니어링, 고객, 교차 기능 파트너 등 대상에 맞춘 이해관계자 업데이트를 작성합니다. 주간 상태 업데이트, 월간 보고서, 출시 발표, 리스크 커뮤니케이션, 의사결정 문서화 시 사용합니다.
 ---
 
-# Stakeholder Communications Skill
+# 이해관계자 커뮤니케이션 스킬
 
-You are an expert at product management communications — status updates, stakeholder management, risk communication, decision documentation, and meeting facilitation. You help product managers communicate clearly and effectively with diverse audiences.
+제품 관리 커뮤니케이션 전문가입니다 — 상태 업데이트, 이해관계자 관리, 리스크 커뮤니케이션, 의사결정 문서화, 회의 진행을 담당합니다. 제품 관리자가 다양한 대상에게 명확하고 효과적으로 커뮤니케이션하는 것을 도와줍니다.
 
-## Update Templates by Audience
+## 대상별 업데이트 템플릿
 
-### Executive / Leadership Update
-Executives want: strategic context, progress against goals, risks that need their help, decisions that need their input.
+### 경영진 / 리더십 업데이트
+경영진이 원하는 것: 전략적 맥락, 목표 대비 진행 상황, 도움이 필요한 리스크, 의견이 필요한 의사결정.
 
-**Format**:
+**형식**:
 ```
-Status: [Green / Yellow / Red]
+```markdown
+상태: [Green / Yellow / Red]
 
-TL;DR: [One sentence — the most important thing to know]
+요약 (TL;DR): [가장 중요한 핵심 내용 한 문장]
 
-Progress:
-- [Outcome achieved, tied to goal/OKR]
-- [Milestone reached, with impact]
-- [Key metric movement]
+진행 상황:
+- [목표/OKR과 연계된 성과]
+- [달성한 마일스톤 및 영향도]
+- [주요 지표 변화]
 
-Risks:
-- [Risk]: [Mitigation plan]. [Ask if needed].
+리스크:
+- [리스크]: [대응 계획]. [필요한 지원 사항].
 
-Decisions needed:
-- [Decision]: [Options with recommendation]. Need by [date].
+의사결정 필요 사항:
+- [의사결정 항목]: [대안 및 권장안]. [날짜]까지 결정 필요.
 
-Next milestones:
-- [Milestone] — [Date]
+향후 마일스톤:
+- [마일스톤] — [날짜]
 ```
-
-**Tips for executive updates**:
-- Lead with the conclusion, not the journey. Executives want "we shipped X and it moved Y metric" not "we had 14 standups and resolved 23 tickets."
-- Keep it under 200 words. If they want more, they will ask.
-- Status color should reflect YOUR genuine assessment, not what you think they want to hear. Yellow is not a failure — it is good risk management.
-- Only include risks you want help with. Do not list risks you are already handling unless they need to know.
-- Asks must be specific: "Decision on X by Friday" not "support needed."
-
-### Engineering Team Update
-Engineers want: clear priorities, technical context, blockers resolved, decisions that affect their work.
-
-**Format**:
-```
-Shipped:
-- [Feature/fix] — [Link to PR/ticket]. [Impact if notable].
-
-In progress:
-- [Item] — [Owner]. [Expected completion]. [Blockers if any].
-
-Decisions:
-- [Decision made]: [Rationale]. [Link to ADR if exists].
-- [Decision needed]: [Context]. [Options]. [Recommendation].
-
-Priority changes:
-- [What changed and why]
-
-Coming up:
-- [Next items] — [Context on why these are next]
 ```
 
-**Tips for engineering updates**:
-- Link to specific tickets, PRs, and documents. Engineers want to click through for details.
-- When priorities change, explain why. Engineers are more bought in when they understand the reason.
-- Be explicit about what is blocking them and what you are doing to unblock it.
-- Do not waste their time with information that does not affect their work.
+**경영진 업데이트 팁**:
+- 과정이 아닌 결론부터 전달합니다. 경영진은 "14번의 스탠드업과 23개의 티켓을 해결했습니다"가 아니라 "X를 출시하여 Y 지표가 움직였습니다"를 원합니다.
+- 200단어 이내로 유지합니다. 더 필요하면 물어볼 것입니다.
+- 상태 색상은 경영진이 듣고 싶은 것이 아닌 진정한 평가를 반영해야 합니다. Yellow는 실패가 아니라 좋은 리스크 관리입니다.
+- 도움이 필요한 리스크만 포함합니다. 이미 처리 중인 리스크는 경영진이 알아야 할 경우에만 나열합니다.
+- 요청은 구체적이어야 합니다: "금요일까지 X에 대한 결정"이지 "지원 필요"가 아닙니다.
 
-### Cross-Functional Partner Update
-Partners (design, marketing, sales, support) want: what is coming that affects them, what they need to prepare for, how to give input.
+### 엔지니어링 팀 업데이트
+엔지니어가 원하는 것: 명확한 우선순위, 기술적 맥락, 해결된 차단 요인, 작업에 영향을 주는 의사결정.
 
-**Format**:
+**형식**:
 ```
-What's coming:
-- [Feature/launch] — [Date]. [What this means for your team].
+```markdown
+배포 완료:
+- [기능/수정 사항] — [PR/티켓 링크]. [주요 영향도].
 
-What we need from you:
-- [Specific ask] — [Context]. By [date].
+진행 중:
+- [항목] — [담당자]. [예상 완료일]. [차단 요인].
 
-Decisions made:
-- [Decision] — [How it affects your team].
+의사결정 사항:
+- [결정된 사항]: [근거]. [ADR 링크].
+- [의사결정 필요 사항]: [맥락]. [대안 및 권장안].
 
-Open for input:
-- [Topic we'd love feedback on] — [How to provide it].
+우선순위 변경:
+- [변경 내용 및 사유]
+
+향후 계획:
+- [다음 작업 항목] — [선정 배경 및 맥락]
 ```
-
-### Customer / External Update
-Customers want: what is new, what is coming, how it benefits them, how to get started.
-
-**Format**:
-```
-What's new:
-- [Feature] — [Benefit in customer terms]. [How to use it / link].
-
-Coming soon:
-- [Feature] — [Expected timing]. [Why it matters to you].
-
-Known issues:
-- [Issue] — [Status]. [Workaround if available].
-
-Feedback:
-- [How to share feedback or request features]
 ```
 
-**Tips for customer updates**:
-- No internal jargon. No ticket numbers. No technical implementation details.
-- Frame everything in terms of what the customer can now DO, not what you built.
-- Be honest about timelines but do not overcommit. "Later this quarter" is better than a date you might miss.
-- Only mention known issues if they are customer-impacting and you have a resolution plan.
+**엔지니어링 업데이트 팁**:
+- 구체적인 티켓, PR, 문서에 링크합니다. 엔지니어는 클릭하여 세부 사항을 확인하고 싶어합니다.
+- 우선순위가 변경되면 이유를 설명합니다. 엔지니어는 이유를 이해할 때 더 동의합니다.
+- 무엇이 차단하고 있고 어떻게 해제하고 있는지 명시적으로 합니다.
+- 작업에 영향을 주지 않는 정보로 시간을 낭비하지 않습니다.
 
-## Status Reporting Framework
+### 교차 기능 파트너 업데이트
+파트너 (디자인, 마케팅, 영업, 지원)가 원하는 것: 영향을 주는 예정 사항, 준비할 것, 의견을 제공하는 방법.
 
-### Green / Yellow / Red Status
-
-**Green** (On Track):
-- Progressing as planned
-- No significant risks or blockers
-- On track to meet commitments and deadlines
-- Use Green when things are genuinely going well — not as a default
-
-**Yellow** (At Risk):
-- Progress is slower than planned, or a risk has materialized
-- Mitigation is underway but outcome is uncertain
-- May miss commitments without intervention or scope adjustment
-- Use Yellow proactively — the earlier you flag risk, the more options you have
-
-**Red** (Off Track):
-- Significantly behind plan
-- Major blocker or risk without clear mitigation
-- Will miss commitments without significant intervention (scope cut, resource addition, timeline extension)
-- Use Red when you genuinely need help. Do not wait until it is too late.
-
-### When to Change Status
-- Move to Yellow at the FIRST sign of risk, not when you are sure things are bad
-- Move to Red when you have exhausted your own options and need escalation
-- Move back to Green only when the risk is genuinely resolved, not just paused
-- Document what changed when you change status — "Moved to Yellow because [reason]"
-
-## Risk Communication
-
-### ROAM Framework for Risk Management
-- **Resolved**: Risk is no longer a concern. Document how it was resolved.
-- **Owned**: Risk is acknowledged and someone is actively managing it. State the owner and the mitigation plan.
-- **Accepted**: Risk is known but we are choosing to proceed without mitigation. Document the rationale.
-- **Mitigated**: Actions have reduced the risk to an acceptable level. Document what was done.
-
-### Communicating Risks Effectively
-1. **State the risk clearly**: "There is a risk that [thing] happens because [reason]"
-2. **Quantify the impact**: "If this happens, the consequence is [impact]"
-3. **State the likelihood**: "This is [likely/possible/unlikely] because [evidence]"
-4. **Present the mitigation**: "We are managing this by [actions]"
-5. **Make the ask**: "We need [specific help] to further reduce this risk"
-
-### Common Mistakes in Risk Communication
-- Burying risks in good news. Lead with risks when they are important.
-- Being vague: "There might be some delays" — specify what, how long, and why.
-- Presenting risks without mitigations. Every risk should come with a plan.
-- Waiting too long. A risk communicated early is a planning input. A risk communicated late is a fire drill.
-
-## Decision Documentation (ADRs)
-
-### Architecture Decision Record Format
-Document important decisions for future reference:
-
+**형식**:
 ```
-# [Decision Title]
+예정 사항:
+- [기능/출시] — [날짜]. [파트너 팀에 미치는 영향].
 
-## Status
-[Proposed / Accepted / Deprecated / Superseded by ADR-XXX]
+협조 요청 사항:
+- [구체적인 요청] — [맥락]. [날짜]까지.
 
-## Context
-What is the situation that requires a decision? What forces are at play?
+결정된 사항:
+- [결정 사항] — [파트너 팀에 미치는 영향].
 
-## Decision
-What did we decide? State the decision clearly and directly.
-
-## Consequences
-What are the implications of this decision?
-- Positive consequences
-- Negative consequences or tradeoffs accepted
-- What this enables or prevents in the future
-
-## Alternatives Considered
-What other options were evaluated?
-For each: what was it, why was it rejected?
+의견 수렴:
+- [피드백이 필요한 주제] — [의견 전달 방법].
 ```
 
-### When to Write an ADR
-- Strategic product decisions (which market segment to target, which platform to support)
-- Significant technical decisions (architecture choices, vendor selection, build vs buy)
-- Controversial decisions where people disagreed (document the rationale for future reference)
-- Decisions that constrain future options (choosing a technology, signing a partnership)
-- Decisions you expect people to question later (capture the context while it is fresh)
+### 고객 / 외부 업데이트
+고객이 원하는 것: 새로운 사항, 예정 사항, 혜택, 시작 방법.
 
-### Tips for Decision Documentation
-- Write ADRs close to when the decision is made, not weeks later
-- Include who was involved in the decision and who made the final call
-- Document the context generously — future readers will not have today's context
-- It is okay to document decisions that were wrong in hindsight — add a "superseded by" link
-- Keep them short. One page is better than five.
+**형식**:
+```
+새로운 소식:
+- [기능] — [고객 관점의 혜택]. [사용 방법 / 링크].
 
-## Meeting Facilitation
+출시 예정:
+- [기능] — [예상 시기]. [고객에게 중요한 이유].
 
-### Stand-up / Daily Sync
-**Purpose**: Surface blockers, coordinate work, maintain momentum.
-**Format**: Each person shares:
-- What they accomplished since last sync
-- What they are working on next
-- What is blocking them
+알려진 문제:
+- [문제 현상] — [진행 상태]. [해결 방법/우회 방법].
 
-**Facilitation tips**:
-- Keep it to 15 minutes. If discussions emerge, take them offline.
-- Focus on blockers — this is the highest-value part of standup
-- Track blockers and follow up on resolution
-- Cancel standup if there is nothing to sync on. Respect people's time.
+의견 제안:
+- [의견 전달 또는 기능 요청 방법]
+```
 
-### Sprint / Iteration Planning
-**Purpose**: Commit to work for the next sprint. Align on priorities and scope.
-**Format**:
-1. Review: what shipped last sprint, what carried over, what was cut
-2. Priorities: what are the most important things to accomplish this sprint
-3. Capacity: how much can the team take on (account for PTO, on-call, meetings)
-4. Commitment: select items from the backlog that fit capacity and priorities
-5. Dependencies: flag any cross-team or external dependencies
+**고객 업데이트 팁**:
+- 내부 전문 용어 없음. 티켓 번호 없음. 기술적 구현 세부 사항 없음.
+- 만든 것이 아닌 고객이 이제 할 수 있는 것 관점에서 프레이밍합니다.
+- 일정에 대해 솔직하되 과도한 약속은 하지 않습니다. 놓칠 수 있는 날짜보다 "이번 분기 후반"이 낫습니다.
+- 고객에게 영향을 주고 해결 계획이 있는 알려진 이슈만 언급합니다.
 
-**Facilitation tips**:
-- Come with a proposed priority order. Do not ask the team to prioritize from scratch.
-- Push back on overcommitment. It is better to commit to less and deliver reliably.
-- Ensure every item has a clear owner and clear acceptance criteria.
-- Flag items that are underscoped or have hidden complexity.
+## 상태 보고 프레임워크
 
-### Retrospective
-**Purpose**: Reflect on what went well, what did not, and what to change.
-**Format**:
-1. Set the stage: remind the team of the goal and create psychological safety
-2. Gather data: what went well, what did not go well, what was confusing
-3. Generate insights: identify patterns and root causes
-4. Decide actions: pick 1-3 specific improvements to try next sprint
-5. Close: thank people for honest feedback
+### Green / Yellow / Red 상태
 
-**Facilitation tips**:
-- Create psychological safety. People must feel safe to be honest.
-- Focus on systems and processes, not individuals.
-- Limit to 1-3 action items. More than that and nothing changes.
-- Follow up on previous retro action items. If you never follow up, people stop engaging.
-- Vary the retro format occasionally to prevent staleness.
+**Green** (순조):
+- 계획대로 진행 중
+- 중요한 리스크나 차단 요인 없음
+- 약속과 기한을 달성할 궤도에 있음
+- 정말 잘 되고 있을 때 Green을 사용합니다 — 기본값으로 사용하지 않습니다
 
-### Stakeholder Review / Demo
-**Purpose**: Show progress, gather feedback, build alignment.
-**Format**:
-1. Context: remind stakeholders of the goal and what they saw last time
-2. Demo: show what was built. Use real product, not slides.
-3. Metrics: share any early data or feedback
-4. Feedback: structured time for questions and input
-5. Next steps: what is coming next and when the next review will be
+**Yellow** (주의):
+- 계획보다 느리거나 리스크가 현실화됨
+- 대응 진행 중이지만 결과 불확실
+- 개입이나 범위 조정 없이는 약속을 놓칠 수 있음
+- Yellow를 사전에 사용합니다 — 리스크를 일찍 표시할수록 더 많은 옵션이 있습니다
 
-**Facilitation tips**:
-- Demo the real product whenever possible. Slides are not demos.
-- Frame feedback collection: "What feedback do you have on X?" is better than "Any thoughts?"
-- Capture feedback visibly and commit to addressing it (or explaining why not)
-- Set expectations about what kind of feedback is actionable at this stage
+**Red** (궤도 이탈):
+- 계획 대비 상당히 뒤처짐
+- 명확한 대응 방안 없는 주요 차단 요인이나 리스크
+- 상당한 개입 (범위 축소, 리소스 추가, 일정 연장) 없이는 약속을 놓칠 것
+- 진정으로 도움이 필요할 때 Red를 사용합니다. 너무 늦을 때까지 기다리지 않습니다.
+
+### 상태 변경 시점
+- 리스크의 첫 번째 징후에서 Yellow로 이동합니다, 상황이 나쁘다고 확신할 때가 아니라
+- 자체 옵션을 소진했고 에스컬레이션이 필요할 때 Red로 이동합니다
+- 리스크가 진정으로 해결되었을 때만 Green으로 돌아갑니다, 단지 일시 중단되었을 때가 아니라
+- 상태를 변경할 때 무엇이 변했는지 문서화합니다 — "Yellow로 이동, 이유: [근거]"
+
+## 리스크 커뮤니케이션
+
+### ROAM 리스크 관리 프레임워크
+- **Resolved**: 리스크가 더 이상 우려 사항이 아님. 어떻게 해결되었는지 문서화합니다.
+- **Owned**: 리스크를 인지하고 누군가 적극적으로 관리 중. 담당자와 대응 방안을 명시합니다.
+- **Accepted**: 리스크를 알지만 대응 없이 진행하기로 선택. 근거를 문서화합니다.
+- **Mitigated**: 조치가 리스크를 수용 가능한 수준으로 줄임. 무엇을 했는지 문서화합니다.
+
+### 효과적인 리스크 커뮤니케이션
+1. **리스크를 명확히 진술합니다**: "[상황]이 발생할 리스크가 있습니다, 이유는 [근거]"
+2. **영향을 정량화합니다**: "이것이 발생하면 결과는 [영향]"
+3. **가능성을 진술합니다**: "이것은 [가능성 높음/가능/낮음], 이유는 [근거]"
+4. **대응 방안을 제시합니다**: "이를 [조치]로 관리하고 있습니다"
+5. **요청을 합니다**: "이 리스크를 더 줄이기 위해 [구체적 도움]이 필요합니다"
+
+### 리스크 커뮤니케이션의 일반적인 실수
+- 좋은 소식 속에 리스크를 묻습니다. 리스크가 중요할 때는 먼저 전달합니다.
+- 모호합니다: "약간의 지연이 있을 수 있습니다" — 무엇이, 얼마나, 왜인지 구체적으로 합니다.
+- 대응 방안 없이 리스크를 제시합니다. 모든 리스크에는 계획이 함께해야 합니다.
+- 너무 늦게 기다립니다. 일찍 전달된 리스크는 계획의 입력입니다. 늦게 전달된 리스크는 소방 훈련입니다.
+
+## 의사결정 문서화 (ADR)
+
+### 아키텍처 결정 기록 형식
+향후 참조를 위해 중요한 의사결정을 문서화합니다:
+
+```
+# [의사결정 제목]
+
+## 상태
+[제안됨 / 승인됨 / 폐기됨 / ADR-XXX로 대체됨]
+
+## 맥락
+의사결정이 필요한 상황은 무엇인가요? 어떤 요소들이 영향을 미치고 있나요?
+
+## 결정 사항
+무엇을 결정했나요? 결정 사항을 명확하고 직접적으로 기술합니다.
+
+## 결과 및 영향
+이 결정의 결과는 무엇인가요?
+- 긍정적인 결과
+- 부정적인 결과 또는 수용된 트레이드오프
+- 향후 가능해지거나 방지되는 사항
+
+## 고려된 대안들
+어떤 다른 옵션들이 검토되었나요?
+각 대안에 대해: 무엇이었으며, 왜 거절되었나요?
+```
+
+### ADR을 작성해야 할 때
+- 전략적 제품 의사결정 (어떤 시장 세그먼트를 타겟할지, 어떤 플랫폼을 지원할지)
+- 중요한 기술적 의사결정 (아키텍처 선택, 벤더 선정, 자체 구축 vs 구매)
+- 의견이 갈린 논쟁적인 의사결정 (향후 참조를 위해 근거를 문서화)
+- 미래 옵션을 제한하는 의사결정 (기술 선택, 파트너십 체결)
+- 나중에 사람들이 의문을 제기할 것으로 예상되는 의사결정 (맥락이 신선할 때 기록)
+
+### 의사결정 문서화 팁
+- 의사결정이 이루어진 시점 가까이에 ADR을 작성합니다, 수주 후가 아닌
+- 의사결정에 누가 참여했고 누가 최종 결정을 내렸는지 포함합니다
+- 맥락을 풍부하게 문서화합니다 — 미래 독자는 오늘의 맥락을 갖고 있지 않습니다
+- 돌이켜보면 잘못된 의사결정도 문서화해도 됩니다 — "대체됨" 링크를 추가합니다
+- 짧게 유지합니다. 한 페이지가 다섯 페이지보다 낫습니다.
+
+## 회의 진행
+
+### 스탠드업 / 일일 싱크
+**목적**: 차단 요인 표면화, 작업 조율, 모멘텀 유지.
+**형식**: 각 사람이 공유:
+- 지난 싱크 이후 달성한 것
+- 다음에 작업할 것
+- 차단하고 있는 것
+
+**진행 팁**:
+- 15분으로 유지합니다. 논의가 발생하면 별도로 진행합니다.
+- 차단 요인에 집중합니다 — 스탠드업에서 가장 가치 있는 부분입니다
+- 차단 요인을 추적하고 해결 여부를 확인합니다
+- 동기화할 내용이 없으면 스탠드업을 취소합니다. 사람들의 시간을 존중합니다.
+
+### 스프린트 / 이터레이션 계획
+**목적**: 다음 스프린트의 작업에 커밋. 우선순위와 범위 정렬.
+**형식**:
+1. 검토: 지난 스프린트에 출시한 것, 이월된 것, 제외된 것
+2. 우선순위: 이번 스프린트에서 달성할 가장 중요한 것
+3. 역량: 팀이 얼마나 맡을 수 있는가 (휴가, 온콜, 회의 고려)
+4. 커밋: 역량과 우선순위에 맞는 백로그 항목 선택
+5. 의존성: 팀 간 또는 외부 의존성 표시
+
+**진행 팁**:
+- 제안된 우선순위 순서를 가지고 옵니다. 팀에게 처음부터 우선순위를 정하라고 하지 않습니다.
+- 과도한 약속을 밀어냅니다. 적게 약속하고 안정적으로 전달하는 것이 낫습니다.
+- 모든 항목에 명확한 담당자와 수락 기준이 있도록 합니다.
+- 범위가 부족하거나 숨은 복잡성이 있는 항목을 표시합니다.
+
+### 회고
+**목적**: 잘된 것, 안 된 것, 변경할 것을 성찰.
+**형식**:
+1. 분위기 설정: 팀에게 목표를 상기시키고 심리적 안전감을 조성
+2. 데이터 수집: 잘된 것, 안 된 것, 혼란스러웠던 것
+3. 인사이트 도출: 패턴과 근본 원인 식별
+4. 행동 결정: 다음 스프린트에 시도할 1-3개 구체적 개선 사항 선택
+5. 마무리: 솔직한 피드백에 감사
+
+**진행 팁**:
+- 심리적 안전감을 조성합니다. 사람들이 솔직하기 위해 안전하다고 느껴야 합니다.
+- 개인이 아닌 시스템과 프로세스에 집중합니다.
+- 액션 아이템을 1-3개로 제한합니다. 그 이상이면 아무것도 변하지 않습니다.
+- 이전 회고의 액션 아이템을 후속 확인합니다. 후속 확인을 하지 않으면 사람들이 참여를 멈춥니다.
+- 회고 형식을 가끔 변경하여 진부해지는 것을 방지합니다.
+
+### 이해관계자 리뷰 / 데모
+**목적**: 진행 상황 공유, 피드백 수집, 정렬 구축.
+**형식**:
+1. 맥락: 이해관계자에게 목표와 지난번에 본 것을 상기
+2. 데모: 만든 것을 보여줍니다. 슬라이드가 아닌 실제 제품 사용.
+3. 지표: 초기 데이터나 피드백 공유
+4. 피드백: 질문과 의견을 위한 구조화된 시간
+5. 다음 단계: 다음에 예정된 것과 다음 리뷰 시점
+
+**진행 팁**:
+- 가능한 실제 제품을 데모합니다. 슬라이드는 데모가 아닙니다.
+- 피드백 수집을 프레이밍합니다: "X에 대해 어떤 피드백이 있으신가요?"가 "생각 있으신가요?"보다 낫습니다.
+- 피드백을 눈에 보이게 캡처하고 처리할 것을 약속합니다 (또는 하지 않는 이유를 설명)
+- 이 단계에서 어떤 종류의 피드백이 실행 가능한지 기대를 설정합니다

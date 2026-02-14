@@ -1,117 +1,117 @@
 ---
-description: Synthesize user research from interviews, surveys, and feedback into structured insights
-argument-hint: "<research topic or question>"
+description: 인터뷰, 설문, 피드백에서 수집한 사용자 조사를 체계적인 인사이트로 종합합니다
+argument-hint: "<조사 주제 또는 질문>"
 ---
 
-# Synthesize Research
+# 조사 종합
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 참조하세요.
 
-Synthesize user research from multiple sources into structured insights and recommendations.
+다양한 소스의 사용자 조사를 체계적인 인사이트와 권장 사항으로 종합합니다.
 
-## Workflow
+## 워크플로우
 
-### 1. Gather Research Inputs
+### 1. 조사 자료 수집
 
-Accept research from any combination of:
-- **Pasted text**: Interview notes, transcripts, survey responses, feedback
-- **Uploaded files**: Research documents, spreadsheets, recordings summaries
-- **~~knowledge base** (if connected): Search for research documents, interview notes, survey results
-- **~~user feedback** (if connected): Pull recent support tickets, feature requests, bug reports
-- **~~product analytics** (if connected): Pull usage data, funnel metrics, behavioral data
-- **~~meeting transcription** (if connected): Pull interview recordings, meeting summaries, and discussion notes
+다음의 조합으로 조사 자료를 수용합니다:
+- **붙여넣기 텍스트**: 인터뷰 노트, 녹취록, 설문 응답, 피드백
+- **업로드 파일**: 조사 문서, 스프레드시트, 녹음 요약
+- **~~knowledge base** (연결된 경우): 조사 문서, 인터뷰 노트, 설문 결과 검색
+- **~~user feedback** (연결된 경우): 최근 지원 티켓, 기능 요청, 버그 리포트 가져오기
+- **~~product analytics** (연결된 경우): 사용 데이터, 퍼널 지표, 행동 데이터 가져오기
+- **~~meeting transcription** (연결된 경우): 인터뷰 녹음, 회의 요약, 논의 노트 가져오기
 
-Ask the user what they have:
-- What type of research? (interviews, surveys, usability tests, analytics, support tickets, sales call notes)
-- How many sources / participants?
-- Is there a specific question or hypothesis they are investigating?
-- What decisions will this research inform?
+사용자에게 확인합니다:
+- 어떤 유형의 조사인지 (인터뷰, 설문, 사용성 테스트, 분석, 지원 티켓, 영업 통화 노트)
+- 소스/참여자 수는 몇 명인지
+- 조사 중인 특정 질문이나 가설이 있는지
+- 이 조사가 어떤 의사결정에 활용될 것인지
 
-### 2. Process the Research
+### 2. 조사 처리
 
-For each source, extract:
-- **Key observations**: What did users say, do, or experience?
-- **Quotes**: Verbatim quotes that illustrate important points
-- **Behaviors**: What users actually did (vs what they said they do)
-- **Pain points**: Frustrations, workarounds, and unmet needs
-- **Positive signals**: What works well, moments of delight
-- **Context**: User segment, use case, experience level
+각 소스에서 추출합니다:
+- **핵심 관찰**: 사용자가 무엇을 말하고, 행동하고, 경험했는지
+- **직접 인용**: 중요한 포인트를 잘 나타내는 원문 인용
+- **행동**: 사용자가 실제로 한 것 (말한 것과 대비하여)
+- **페인 포인트**: 불만, 우회 방법, 충족되지 않은 니즈
+- **긍정적 신호**: 잘 작동하는 것, 만족스러운 순간
+- **맥락**: 사용자 세그먼트, 사용 사례, 경험 수준
 
-### 3. Identify Themes and Patterns
+### 3. 테마 및 패턴 식별
 
-Apply thematic analysis — see the **user-research-synthesis** skill for detailed methodology including affinity mapping and triangulation techniques.
+주제 분석(Thematic Analysis)을 적용합니다 — 어피니티 매핑 및 삼각검증(Triangulation) 기법을 포함한 상세 방법론은 **user-research-synthesis** 스킬을 참조하세요.
 
-Group observations into themes, count frequency across participants, and assess impact severity. Note contradictions and surprises.
+관찰 내용을 테마로 그룹화하고, 참여자 간 빈도를 집계하며, 영향의 심각도를 평가합니다. 모순과 의외의 발견을 기록합니다.
 
-Create a priority matrix:
-- **High frequency + High impact**: Top priority findings
-- **Low frequency + High impact**: Important for specific segments
-- **High frequency + Low impact**: Quality-of-life improvements
-- **Low frequency + Low impact**: Note but deprioritize
+우선순위 매트릭스를 생성합니다:
+- **높은 빈도 + 높은 영향**: 최우선 발견 사항
+- **낮은 빈도 + 높은 영향**: 특정 세그먼트에 중요
+- **높은 빈도 + 낮은 영향**: 사용 경험 개선 사항
+- **낮은 빈도 + 낮은 영향**: 기록하되 우선순위 하향
 
-### 4. Generate the Synthesis
+### 4. 종합 결과 생성
 
-Produce a structured research synthesis:
+체계적인 조사 종합 결과를 작성합니다:
 
-#### Research Overview
-- Methodology: what types of research, how many participants/sources
-- Research question(s): what we set out to learn
-- Timeframe: when the research was conducted
+#### 조사 개요
+- 방법론: 어떤 유형의 조사, 참여자/소스 수
+- 조사 질문: 무엇을 알아내고자 했는지
+- 기간: 조사가 수행된 시기
 
-#### Key Findings
-For each major finding (aim for 5-8):
-- **Finding statement**: One clear sentence describing the insight
-- **Evidence**: Supporting quotes, data points, or observations (with source attribution)
-- **Frequency**: How many participants/sources support this finding
-- **Impact**: How significantly this affects the user experience or business
-- **Confidence level**: High (strong evidence), Medium (suggestive), Low (early signal)
+#### 핵심 발견 사항
+각 주요 발견 사항(5-8개 목표)에 대해:
+- **발견 사항 문장**: 인사이트를 설명하는 명확한 한 문장
+- **근거**: 뒷받침하는 인용, 데이터 포인트, 또는 관찰 (출처 표기 포함)
+- **빈도**: 이 발견 사항을 뒷받침하는 참여자/소스 수
+- **영향**: 사용자 경험 또는 비즈니스에 미치는 영향의 크기
+- **신뢰 수준**: 높음 (강한 근거), 보통 (시사적), 낮음 (초기 신호)
 
-Order findings by priority (frequency x impact).
+우선순위(빈도 x 영향)에 따라 정렬합니다.
 
-#### User Segments / Personas
-If the research reveals distinct user segments:
-- Segment name and description
-- Key characteristics and behaviors
-- Unique needs and pain points
-- Size estimate if data is available
+#### 사용자 세그먼트 / 페르소나
+조사에서 뚜렷한 사용자 세그먼트가 드러나는 경우:
+- 세그먼트 이름 및 설명
+- 주요 특성 및 행동
+- 고유한 니즈와 페인 포인트
+- 가능한 경우 규모 추정
 
-#### Opportunity Areas
-Based on the findings, identify opportunity areas:
-- What user needs are unmet or underserved
-- Where do current solutions fall short
-- What new capabilities would unlock value
-- Prioritized by potential impact
+#### 기회 영역
+발견 사항을 바탕으로 기회 영역을 식별합니다:
+- 충족되지 않거나 불충분하게 서비스되는 사용자 니즈는 무엇인지
+- 현재 솔루션이 부족한 부분은 어디인지
+- 가치를 창출할 새로운 역량은 무엇인지
+- 잠재적 영향 기준으로 우선순위화
 
-#### Recommendations
-Specific, actionable recommendations:
-- What to build, change, or investigate further
-- Tied back to specific findings
-- Prioritized by impact and feasibility
+#### 권장 사항
+구체적이고 실행 가능한 권장 사항:
+- 무엇을 만들고, 변경하고, 추가 조사해야 하는지
+- 특정 발견 사항과 연결
+- 영향과 실현 가능성에 따라 우선순위화
 
-#### Open Questions
-What the research did not answer:
-- Gaps in understanding
-- Areas needing further investigation
-- Suggested follow-up research methods
+#### 미해결 질문
+조사가 답하지 못한 것:
+- 이해의 공백
+- 추가 조사가 필요한 영역
+- 권장 후속 조사 방법
 
-### 5. Review and Extend
+### 5. 검토 및 확장
 
-After generating the synthesis:
-- Ask if any findings need more detail or different framing
-- Offer to generate specific artifacts: persona documents, opportunity maps, research presentations
-- Offer to create follow-up research plans for open questions
-- Offer to draft product implications (how findings should influence the roadmap)
+종합 결과 생성 후:
+- 발견 사항에 대해 더 상세한 내용이나 다른 프레이밍이 필요한지 확인합니다
+- 구체적인 산출물 생성을 제안합니다: 페르소나 문서, 기회 맵, 조사 프레젠테이션
+- 미해결 질문에 대한 후속 조사 계획 작성을 제안합니다
+- 제품 시사점 (발견 사항이 로드맵에 미치는 영향) 초안 작성을 제안합니다
 
-## Output Format
+## 출력 형식
 
-Use clear headers and structured formatting. Each finding should stand on its own — a reader should be able to read any single finding and understand it without reading the rest.
+명확한 제목과 체계적인 형식을 사용합니다. 각 발견 사항은 독립적으로 이해할 수 있어야 합니다 — 독자가 나머지를 읽지 않고도 개별 발견 사항을 이해할 수 있어야 합니다.
 
-## Tips
+## 팁
 
-- Let the data speak. Do not force findings into a predetermined narrative.
-- Distinguish between what users say and what they do. Behavioral data is stronger than stated preferences.
-- Quotes are powerful evidence. Include them generously, with attribution to participant type (not name).
-- Be explicit about confidence levels. A finding from 2 interviews is a hypothesis, not a conclusion.
-- Contradictions in the data are interesting, not inconvenient. They often reveal distinct user segments.
-- Recommendations should be specific enough to act on. "Improve onboarding" is not actionable. "Add a progress indicator to the setup flow" is.
-- Resist the temptation to synthesize too many themes. 5-8 strong findings are better than 20 weak ones.
+- 데이터가 말하게 합니다. 미리 정해진 내러티브에 발견 사항을 맞추지 않습니다.
+- 사용자가 말하는 것과 행동하는 것을 구분합니다. 행동 데이터가 진술된 선호보다 강력한 근거입니다.
+- 인용은 강력한 근거입니다. 참여자 유형 표기 (이름이 아닌)와 함께 풍부하게 포함합니다.
+- 신뢰 수준을 명시합니다. 2건의 인터뷰에서 나온 발견 사항은 결론이 아닌 가설입니다.
+- 데이터의 모순은 불편한 것이 아니라 흥미로운 것입니다. 종종 뚜렷한 사용자 세그먼트를 드러냅니다.
+- 권장 사항은 실행 가능할 만큼 구체적이어야 합니다. "온보딩 개선"은 실행 가능하지 않습니다. "설정 플로우에 진행률 표시기 추가"는 실행 가능합니다.
+- 너무 많은 테마를 종합하려는 유혹을 참습니다. 강력한 5-8개 발견 사항이 약한 20개보다 낫습니다.

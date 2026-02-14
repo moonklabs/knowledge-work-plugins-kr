@@ -1,28 +1,28 @@
 # nf-core/atacseq
 
-**Version:** 2.1.2
+**버전:** 2.1.2
 
-**Official Documentation:** https://nf-co.re/atacseq/2.1.2/
+**공식 문서:** https://nf-co.re/atacseq/2.1.2/
 **GitHub:** https://github.com/nf-core/atacseq
 
-> **Note:** When updating to a new version, check the [releases page](https://github.com/nf-core/atacseq/releases) for breaking changes and update the version in commands below.
+> **참고:** 새 버전으로 업데이트할 때 [릴리스 페이지](https://github.com/nf-core/atacseq/releases)에서 주요 변경 사항을 확인하고 아래 명령어의 버전을 업데이트하십시오.
 
-## Contents
-- [Test command](#test-command)
-- [Samplesheet format](#samplesheet-format)
-- [Parameters](#parameters)
-- [Output files](#output-files)
-- [Quality metrics](#quality-metrics)
+## 목차
+- [테스트 명령어](#테스트-명령어)
+- [샘플시트 형식](#샘플시트-형식)
+- [파라미터](#파라미터)
+- [출력 파일](#출력-파일)
+- [품질 메트릭](#품질-메트릭)
 
-## Test command
+## 테스트 명령어
 
 ```bash
 nextflow run nf-core/atacseq -r 2.1.2 -profile test,docker --outdir test_atacseq
 ```
 
-Expected: ~15 min, creates peaks and BigWig tracks.
+예상 시간: 약 15분, 피크 및 BigWig 트랙을 생성합니다.
 
-## Samplesheet format
+## 샘플시트 형식
 
 ```csv
 sample,fastq_1,fastq_2,replicate
@@ -32,47 +32,47 @@ TREATMENT,/path/to/treat_rep1_R1.fq.gz,/path/to/treat_rep1_R2.fq.gz,1
 TREATMENT,/path/to/treat_rep2_R1.fq.gz,/path/to/treat_rep2_R2.fq.gz,2
 ```
 
-| Column | Required | Description |
-|--------|----------|-------------|
-| sample | Yes | Condition/group identifier |
-| fastq_1 | Yes | Absolute path to R1 |
-| fastq_2 | Yes | Absolute path to R2 (paired-end required) |
-| replicate | Yes | Replicate number (integer) |
+| 열 | 필수 | 설명 |
+|----|------|------|
+| sample | 예 | 조건/그룹 식별자 |
+| fastq_1 | 예 | R1 절대 경로 |
+| fastq_2 | 예 | R2 절대 경로 (페어드엔드 필수) |
+| replicate | 예 | 반복(replicate) 번호 (정수) |
 
-### Design file for differential analysis
+### 차등 분석을 위한 디자인 파일
 ```csv
 sample,condition
 CONTROL,control
 TREATMENT,treatment
 ```
 
-Use with `--deseq2_design design.csv`.
+`--deseq2_design design.csv`와 함께 사용하십시오.
 
-## Parameters
+## 파라미터
 
-### Minimal run
+### 최소 실행
 ```bash
 nextflow run nf-core/atacseq -r 2.1.2 -profile docker \
     --input samplesheet.csv --outdir results --genome GRCh38 --read_length 50
 ```
 
-### Common parameters
+### 주요 파라미터
 
-| Parameter | Default | Description |
-|-----------|---------|-------------|
+| 파라미터 | 기본값 | 설명 |
+|---------|--------|------|
 | `--genome` | - | `GRCh38`, `GRCh37`, `mm10` |
-| `--read_length` | 50 | Read length for MACS2 optimization |
-| `--narrow_peak` | true | Narrow peaks (false for broad) |
-| `--mito_name` | chrM | Mitochondrial chromosome name |
-| `--keep_mito` | false | Keep mitochondrial reads |
-| `--min_reps_consensus` | 1 | Min replicates for consensus peaks |
+| `--read_length` | 50 | MACS2 최적화를 위한 리드 길이 |
+| `--narrow_peak` | true | 좁은 피크 (브로드의 경우 false) |
+| `--mito_name` | chrM | 미토콘드리아 염색체 이름 |
+| `--keep_mito` | false | 미토콘드리아 리드 유지 |
+| `--min_reps_consensus` | 1 | 합의(consensus) 피크를 위한 최소 반복 수 |
 
-### Differential accessibility
+### 차등 접근성 분석
 ```bash
 --deseq2_design design.csv
 ```
 
-## Output files
+## 출력 파일
 
 ```
 results/
@@ -91,25 +91,25 @@ results/
 └── multiqc/
 ```
 
-**Key outputs:**
-- `*.mLb.mkD.sorted.bam`: Analysis-ready alignments
-- `*.narrowPeak`: MACS2 peak calls (BED format)
-- `consensus_peaks.bed`: Consensus peaks across replicates
-- `*.bigWig`: Genome browser tracks
+**주요 출력:**
+- `*.mLb.mkD.sorted.bam`: 분석 준비 완료 정렬
+- `*.narrowPeak`: MACS2 피크 호출 (BED 형식)
+- `consensus_peaks.bed`: 반복 간 합의 피크
+- `*.bigWig`: 게놈 브라우저 트랙
 
-## Quality metrics
+## 품질 메트릭
 
-| Metric | Good | Acceptable | Poor |
-|--------|------|------------|------|
-| Mapped reads | >80% | 60-80% | <60% |
-| Mitochondrial | <20% | 20-40% | >40% |
-| Duplicates | <30% | 30-50% | >50% |
+| 메트릭 | 양호 | 허용 가능 | 불량 |
+|--------|------|----------|------|
+| 매핑된 리드 | >80% | 60-80% | <60% |
+| 미토콘드리아 | <20% | 20-40% | >40% |
+| 중복률 | <30% | 30-50% | >50% |
 | FRiP | >30% | 15-30% | <15% |
-| TSS enrichment | >6 | 4-6 | <4 |
+| TSS 농축 | >6 | 4-6 | <4 |
 
-**Fragment size**: Should show nucleosomal periodicity (~50bp nucleosome-free, ~200bp mono-nucleosome).
+**단편 크기**: 뉴클레오솜 주기성(nucleosomal periodicity)이 나타나야 합니다 (~50bp 뉴클레오솜 프리, ~200bp 모노-뉴클레오솜).
 
-## Downstream analysis
+## 다운스트림 분석
 
 ```r
 library(ChIPseeker)
@@ -118,21 +118,21 @@ peaks <- import("consensus_peaks.bed")
 peakAnno <- annotatePeak(peaks, TxDb = TxDb.Hsapiens.UCSC.hg38.knownGene)
 ```
 
-**Motif analysis:**
+**모티프 분석:**
 ```bash
 findMotifsGenome.pl consensus_peaks.bed hg38 motifs/ -size 200
 ```
 
-## Troubleshooting
+## 문제 해결
 
-**Low FRiP**: Check library complexity in `plotFingerprint/`. May indicate over-transposition.
+**낮은 FRiP**: `plotFingerprint/`에서 라이브러리 복잡도를 확인하십시오. 과도한 전위(over-transposition)를 나타낼 수 있습니다.
 
-**Few peaks**: Lower threshold with `--macs_qvalue 0.1` or use `--narrow_peak false` for broader peaks.
+**피크 수 부족**: `--macs_qvalue 0.1`로 임계값을 낮추거나 `--narrow_peak false`로 브로드 피크를 사용하십시오.
 
-**High duplicates**: Normal for low-input; pipeline removes by default.
+**높은 중복률**: 저입력 시료에서는 정상이며, 파이프라인이 기본적으로 제거합니다.
 
-## More Information
+## 추가 정보
 
-- **Full parameter list:** https://nf-co.re/atacseq/2.1.2/parameters/
-- **Output documentation:** https://nf-co.re/atacseq/2.1.2/docs/output/
-- **Usage documentation:** https://nf-co.re/atacseq/2.1.2/docs/usage/
+- **전체 파라미터 목록:** https://nf-co.re/atacseq/2.1.2/parameters/
+- **출력 문서:** https://nf-co.re/atacseq/2.1.2/docs/output/
+- **사용법 문서:** https://nf-co.re/atacseq/2.1.2/docs/usage/

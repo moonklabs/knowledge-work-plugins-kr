@@ -1,156 +1,156 @@
 ---
 name: content-creation
-description: Draft marketing content across channels — blog posts, social media, email newsletters, landing pages, press releases, and case studies. Use when writing any marketing content, when you need channel-specific formatting, SEO-optimized copy, headline options, or calls to action.
+description: 채널 전반에 걸쳐 마케팅 콘텐츠를 작성합니다 — 블로그 포스트, 소셜 미디어, 이메일 뉴스레터, 랜딩 페이지, 보도자료, 사례 연구. 마케팅 콘텐츠 작성, 채널별 서식, SEO 최적화 카피, 헤드라인 옵션, CTA가 필요할 때 사용합니다.
 ---
 
-# Content Creation Skill
+# 콘텐츠 제작 스킬
 
-Guidelines and frameworks for creating effective marketing content across channels.
+채널 전반에 걸쳐 효과적인 마케팅 콘텐츠를 제작하기 위한 가이드라인과 프레임워크입니다.
 
-## Content Type Templates
+## 콘텐츠 유형별 템플릿
 
-### Blog Post Structure
-1. **Headline** — clear, benefit-driven, includes primary keyword (aim for 60 characters or less for SEO)
-2. **Introduction** (100-150 words) — hook the reader with a question, statistic, bold claim, or relatable scenario. State what the post will cover. Include primary keyword.
-3. **Body sections** (3-5 sections) — each with a descriptive subheading (H2). Use H3 for subsections. One core idea per section with supporting evidence, examples, or data.
-4. **Conclusion** (75-100 words) — summarize key takeaways, reinforce the main message, include a call to action.
-5. **Meta description** — under 160 characters, includes primary keyword, compels the click.
+### 블로그 포스트 구조
+1. **헤드라인** — 명확하고 혜택 중심이며, 주요 키워드 포함 (SEO를 위해 60자 이내 권장)
+2. **서론** (100-150단어) — 질문, 통계, 대담한 주장, 공감할 수 있는 시나리오로 독자를 끌어들입니다. 포스트에서 다룰 내용을 명시합니다. 주요 키워드를 포함합니다.
+3. **본문 섹션** (3-5개 섹션) — 각각 설명적 소제목(H2)과 함께. 하위 섹션에는 H3을 사용합니다. 섹션당 하나의 핵심 아이디어와 뒷받침하는 증거, 예시, 또는 데이터를 포함합니다.
+4. **결론** (75-100단어) — 핵심 시사점을 요약하고, 주요 메시지를 강화하며, CTA를 포함합니다.
+5. **메타 설명** — 160자 이내, 주요 키워드 포함, 클릭을 유도합니다.
 
-### Social Media Post Structure
-- **Hook** — first line grabs attention (question, bold statement, number)
-- **Body** — 2-4 concise points or a short narrative
-- **CTA** — what should the reader do next (comment, click, share, tag)
-- **Hashtags** — 3-5 relevant hashtags (platform-dependent)
+### 소셜 미디어 포스트 구조
+- **후크** — 첫 줄로 주의를 끕니다 (질문, 대담한 주장, 숫자)
+- **본문** — 2-4개 간결한 포인트 또는 짧은 내러티브
+- **CTA** — 독자가 다음에 해야 할 행동 (댓글, 클릭, 공유, 태그)
+- **해시태그** — 관련 해시태그 3-5개 (플랫폼에 따라 다름)
 
-### Email Newsletter Structure
-- **Subject line** — under 50 characters, creates curiosity or states clear value
-- **Preview text** — complements the subject line, does not repeat it
-- **Header/hero** — visual anchor and one-line value statement
-- **Body sections** — 2-3 content blocks, each scannable with a bold intro sentence
-- **Primary CTA** — one clear action per email
-- **Footer** — unsubscribe link, company info, social links
+### 이메일 뉴스레터 구조
+- **제목** — 50자 이내, 호기심을 자극하거나 명확한 가치를 제시
+- **미리보기 텍스트** — 제목을 보완하되 반복하지 않음
+- **헤더/히어로** — 시각적 앵커와 한 줄 가치 문구
+- **본문 섹션** — 2-3개 콘텐츠 블록, 각각 볼드 도입 문장으로 스캔 가능
+- **주요 CTA** — 이메일당 하나의 명확한 행동
+- **푸터** — 수신 거부 링크, 회사 정보, 소셜 링크
 
-### Landing Page Structure
-- **Headline** — primary benefit in under 10 words
-- **Subheadline** — elaborates on the headline with supporting context
-- **Hero section** — headline, subheadline, primary CTA, supporting image or video
-- **Value propositions** — 3-4 benefit-driven sections with icons or images
-- **Social proof** — testimonials, logos, stats, case study snippets
-- **Objection handling** — FAQ or trust signals
-- **Final CTA** — repeat the primary call to action
+### 랜딩 페이지 구조
+- **헤드라인** — 10단어 이내의 주요 혜택
+- **서브헤드라인** — 맥락을 추가하여 헤드라인을 보강
+- **히어로 섹션** — 헤드라인, 서브헤드라인, 주요 CTA, 지원 이미지 또는 영상
+- **가치 제안** — 아이콘이나 이미지와 함께 혜택 중심 3-4개 섹션
+- **사회적 증거** — 후기, 로고, 통계, 사례 연구 발췌
+- **반론 처리** — FAQ 또는 신뢰 신호
+- **최종 CTA** — 주요 CTA 반복
 
-### Press Release Structure
-- **Headline** — factual, newsworthy, under 80 characters
-- **Subheadline** — optional, adds context
-- **Dateline** — city, state, date
-- **Lead paragraph** — who, what, when, where, why in 2-3 sentences
-- **Body paragraphs** — supporting details, quotes, context
-- **Boilerplate** — company description (standardized)
-- **Media contact** — name, email, phone
+### 보도자료 구조
+- **헤드라인** — 사실적, 뉴스 가치 있는, 80자 이내
+- **서브헤드라인** — 선택 사항, 맥락 추가
+- **발행 정보** — 도시, 주, 날짜
+- **리드 문단** — 누가, 무엇을, 언제, 어디서, 왜를 2-3문장으로
+- **본문 단락** — 뒷받침 세부 사항, 인용, 맥락
+- **기업 소개** — 기업 설명 (표준화)
+- **미디어 연락처** — 이름, 이메일, 전화번호
 
-### Case Study Structure
-- **Title** — "[Customer] achieves [result] with [product]"
-- **Snapshot** — customer name, industry, company size, product used, key result (sidebar or callout box)
-- **Challenge** — what problem the customer faced
-- **Solution** — what was implemented and how
-- **Results** — quantified outcomes with specific metrics
-- **Quote** — customer testimonial
-- **CTA** — learn more, get a demo, read more case studies
+### 사례 연구 구조
+- **제목** — "[고객]이 [제품]으로 [결과] 달성"
+- **스냅샷** — 고객명, 산업, 기업 규모, 사용 제품, 핵심 결과 (사이드바 또는 콜아웃 박스)
+- **과제** — 고객이 직면한 문제
+- **솔루션** — 도입된 내용과 방법
+- **결과** — 구체적 지표로 정량화된 성과
+- **인용** — 고객 후기
+- **CTA** — 더 알아보기, 데모 받기, 다른 사례 연구 읽기
 
-## Writing Best Practices by Channel
+## 채널별 작성 모범 사례
 
-### Blog
-- Write at an 8th-grade reading level for broad audiences; adjust up for technical audiences
-- Use short paragraphs (2-4 sentences)
-- Include subheadings every 200-300 words
-- Use bullet points and numbered lists to break up text
-- Include at least one data point, example, or quote per section
-- Write in active voice
-- Front-load key information in each section
+### 블로그
+- 폭넓은 오디언스를 위해 8학년 수준의 가독성으로 작성; 기술적 오디언스에 맞게 조정
+- 짧은 문단 사용 (2-4문장)
+- 200-300단어마다 소제목 포함
+- 불릿 포인트와 번호 목록으로 텍스트를 나눔
+- 섹션당 최소 하나의 데이터 포인트, 예시, 또는 인용 포함
+- 능동태로 작성
+- 각 섹션에서 핵심 정보를 앞에 배치
 
-### Social Media
-- **LinkedIn**: professional but human, paragraph breaks for readability, personal stories and lessons perform well, 1,300 characters is the sweet spot before "see more"
-- **Twitter/X**: concise and punchy, strong opening words, threads for longer narratives, engage with replies
-- **Instagram**: visual-first captions, storytelling hooks, line breaks for readability, hashtags in first comment or at end
-- **Facebook**: conversational tone, questions drive comments, shorter posts (under 80 characters) get more engagement for links
+### 소셜 미디어
+- **LinkedIn**: 전문적이지만 인간적, 가독성을 위한 문단 나누기, 개인적 스토리와 교훈이 좋은 성과, "더 보기" 전 1,300자가 최적
+- **Twitter/X**: 간결하고 임팩트 있게, 강한 시작 단어, 긴 내러티브에는 스레드, 답글 참여
+- **Instagram**: 비주얼 중심 캡션, 스토리텔링 후크, 가독성을 위한 줄 바꿈, 첫 댓글이나 끝에 해시태그
+- **Facebook**: 대화체 톤, 질문이 댓글 유도, 짧은 포스트(80자 미만)가 링크에 더 높은 참여도
 
-### Email
-- Write subject lines that create urgency, curiosity, or state clear value
-- Personalize where possible (name, company, behavior)
-- One primary CTA per email — make it visually distinct
-- Keep body copy scannable: bold key phrases, short paragraphs, bullet points
-- Test everything: subject lines, send times, CTA copy, layout
-- Mobile-first: most email is read on mobile
+### 이메일
+- 긴급성, 호기심, 명확한 가치를 제시하는 제목 작성
+- 가능한 경우 개인화 (이름, 회사, 행동)
+- 이메일당 하나의 주요 CTA — 시각적으로 구분
+- 본문 카피는 스캔 가능하게: 핵심 문구 볼드, 짧은 문단, 불릿 포인트
+- 모든 것을 테스트: 제목, 발송 시간, CTA 카피, 레이아웃
+- 모바일 퍼스트: 대부분의 이메일은 모바일에서 읽힘
 
-### Web (Landing Pages, Product Pages)
-- Lead with benefits, not features
-- Use "you" language — speak to the reader directly
-- Minimize jargon unless the audience expects it
-- Every section should answer "so what?" from the reader's perspective
-- Reduce friction: fewer form fields, clear next steps, trust signals near CTAs
+### 웹 (랜딩 페이지, 제품 페이지)
+- 기능이 아닌 혜택을 앞세움
+- "당신" 언어 사용 — 독자에게 직접 말함
+- 오디언스가 기대하지 않는 한 전문 용어 최소화
+- 모든 섹션이 독자의 관점에서 "그래서 뭐?"에 답해야 함
+- 마찰 감소: 적은 양식 필드, 명확한 다음 단계, CTA 근처의 신뢰 신호
 
-## SEO Fundamentals for Content
+## 콘텐츠를 위한 SEO 기초
 
-### Keyword Strategy
-- Identify one primary keyword and 2-3 secondary keywords per piece
-- Use the primary keyword in: headline, first paragraph, one subheading, meta description, URL slug
-- Use secondary keywords naturally in body copy and subheadings
-- Do not keyword-stuff — write for humans first
+### 키워드 전략
+- 콘텐츠당 하나의 주요 키워드와 2-3개 보조 키워드 식별
+- 주요 키워드를 다음에 사용: 헤드라인, 첫 문단, 소제목 하나, 메타 설명, URL 슬러그
+- 보조 키워드는 본문과 소제목에 자연스럽게 사용
+- 키워드 스터핑 금지 — 사람을 위해 먼저 작성
 
-### On-Page SEO Checklist
-- Title tag: under 60 characters, includes primary keyword
-- Meta description: under 160 characters, includes primary keyword, compels click
-- URL slug: short, descriptive, includes primary keyword
-- H1: one per page, matches or closely reflects the title tag
-- H2/H3: descriptive, include secondary keywords where natural
-- Image alt text: descriptive, includes keyword where relevant
-- Internal links: 2-3 links to related content on your site
-- External links: 1-2 links to authoritative sources
+### 온페이지 SEO 체크리스트
+- 타이틀 태그: 60자 이내, 주요 키워드 포함
+- 메타 설명: 160자 이내, 주요 키워드 포함, 클릭 유도
+- URL 슬러그: 짧고, 설명적이며, 주요 키워드 포함
+- H1: 페이지당 하나, 타이틀 태그와 일치하거나 유사
+- H2/H3: 설명적이며, 자연스러운 곳에 보조 키워드 포함
+- 이미지 대체 텍스트: 설명적이며, 관련 키워드 포함
+- 내부 링크: 사이트 내 관련 콘텐츠로 2-3개 링크
+- 외부 링크: 권위 있는 소스로 1-2개 링크
 
-### Content-SEO Integration
-- Aim for comprehensive coverage of the topic (search engines reward depth)
-- Answer related questions (check "People Also Ask" for ideas)
-- Update and refresh high-performing content regularly
-- Structure content for featured snippets: definition paragraphs, numbered lists, tables
+### 콘텐츠-SEO 통합
+- 주제의 포괄적 커버리지 지향 (검색 엔진은 깊이를 보상)
+- 관련 질문에 답변 ("사람들이 또한 묻는 질문" 확인)
+- 성과 좋은 콘텐츠를 정기적으로 업데이트 및 새로고침
+- 추천 스니펫을 위해 콘텐츠 구조화: 정의 문단, 번호 목록, 테이블
 
-## Headline and Hook Formulas
+## 헤드라인 및 후크 공식
 
-### Headline Formulas
-- **How to [achieve result] [without common obstacle]** — "How to Double Your Email Open Rates Without Sending More Emails"
-- **[Number] [adjective] ways to [achieve result]** — "7 Proven Ways to Reduce Customer Churn"
-- **Why [common belief] is wrong (and what to do instead)** — "Why More Content Is Not the Answer (And What to Do Instead)"
-- **The [adjective] guide to [topic]** — "The Complete Guide to B2B Content Marketing"
-- **[Do this], not [that]** — "Build a Community, Not Just an Audience"
-- **What [impressive result] taught us about [topic]** — "What 10,000 A/B Tests Taught Us About Email Subject Lines"
-- **[topic]: what [audience] needs to know in [year]** — "SEO: What Marketers Need to Know in 2025"
+### 헤드라인 공식
+- **[일반적 장애물 없이] [결과 달성]하는 방법** — "이메일을 더 보내지 않고 오픈율을 2배로 높이는 방법"
+- **[결과 달성]하는 [숫자]가지 [형용사] 방법** — "고객 이탈을 줄이는 7가지 검증된 방법"
+- **[일반적 믿음]이 틀린 이유 (그리고 대신 해야 할 것)** — "더 많은 콘텐츠가 정답이 아닌 이유 (그리고 대신 해야 할 것)"
+- **[주제]에 대한 [형용사] 가이드** — "B2B 콘텐츠 마케팅 완벽 가이드"
+- **[이것]을 하세요, [저것]은 하지 마세요** — "커뮤니티를 구축하세요, 단순한 오디언스가 아닌"
+- **[인상적인 결과]가 [주제]에 대해 알려준 것** — "10,000번의 A/B 테스트가 이메일 제목에 대해 알려준 것"
+- **[주제]: [오디언스]가 [연도]에 알아야 할 것** — "SEO: 마케터가 2025년에 알아야 할 것"
 
-### Hook Formulas (Opening Lines)
-- **Surprising statistic**: "73% of marketers say their biggest challenge is not budget — it is focus."
-- **Contrarian statement**: "The best marketing campaigns start with saying no to most channels."
-- **Question**: "When was the last time a marketing email actually changed what you bought?"
-- **Scenario**: "Imagine launching a campaign and knowing, before it goes live, which messages will land."
-- **Bold claim**: "Most landing pages lose half their visitors in the first three seconds."
-- **Story opening**: "Last quarter, our team was spending 20 hours a week on reporting. Here is what we did about it."
+### 후크 공식 (오프닝 라인)
+- **놀라운 통계**: "마케터의 73%가 가장 큰 과제가 예산이 아니라 집중이라고 합니다."
+- **역발상 주장**: "최고의 마케팅 캠페인은 대부분의 채널에 '아니오'라고 말하는 것에서 시작됩니다."
+- **질문**: "마케팅 이메일이 실제로 구매 결정을 바꾼 적이 마지막으로 언제인가요?"
+- **시나리오**: "캠페인이 시작되기 전에 어떤 메시지가 통할지 미리 알 수 있다고 상상해 보세요."
+- **대담한 주장**: "대부분의 랜딩 페이지는 첫 3초에 방문자의 절반을 잃습니다."
+- **스토리 오프닝**: "지난 분기, 우리 팀은 리포팅에 주당 20시간을 쓰고 있었습니다. 다음은 우리가 한 일입니다."
 
-## Call-to-Action Best Practices
+## CTA 모범 사례
 
-### CTA Principles
-- Use action verbs: "Get", "Start", "Download", "Join", "Try", "See"
-- Be specific about what happens next: "Start your free trial" is better than "Submit"
-- Create urgency when genuine: "Join 500 teams already using this" or "Limited spots available"
-- Reduce risk: "No credit card required", "Cancel anytime", "Free for 14 days"
-- One primary CTA per page or email — too many choices reduce conversions
+### CTA 원칙
+- 행동 동사 사용: "받기", "시작하기", "다운로드", "참여하기", "체험하기", "보기"
+- 다음에 무슨 일이 일어나는지 구체적으로: "무료 체험 시작"이 "제출"보다 좋음
+- 진정한 긴급성 조성: "이미 500개 팀이 사용 중" 또는 "자리가 제한되어 있습니다"
+- 리스크 감소: "신용카드 불필요", "언제든 취소", "14일 무료"
+- 페이지나 이메일당 하나의 주요 CTA — 너무 많은 선택은 전환을 줄임
 
-### CTA Examples by Context
-- **Blog post**: "Read our complete guide to [topic]" / "Subscribe for weekly insights"
-- **Landing page**: "Start free trial" / "Get a demo" / "See pricing"
-- **Email**: "Read the full story" / "Claim your spot" / "Reply and tell us"
-- **Social media**: "Drop a comment if you agree" / "Save this for later" / "Link in bio"
-- **Case study**: "See how [product] can work for your team" / "Talk to our team"
+### 맥락별 CTA 예시
+- **블로그 포스트**: "[주제] 완벽 가이드 읽기" / "주간 인사이트 구독하기"
+- **랜딩 페이지**: "무료 체험 시작" / "데모 받기" / "가격 보기"
+- **이메일**: "전체 스토리 읽기" / "자리 확보하기" / "답장으로 알려주세요"
+- **소셜 미디어**: "동의하시면 댓글을 남겨주세요" / "나중을 위해 저장하세요" / "프로필 링크"
+- **사례 연구**: "[제품]이 팀에 어떻게 도움이 되는지 보기" / "팀에 문의하기"
 
-### CTA Placement
-- Above the fold on landing pages (do not make users scroll to act)
-- After establishing value in emails (not in the first sentence)
-- At the end of blog posts (after you have earned the reader's trust)
-- In-line within content when contextually relevant (e.g., a related guide mention)
-- Repeat the primary CTA at the bottom of long-form pages
+### CTA 배치
+- 랜딩 페이지에서는 스크롤 없이 보이는 영역에 (행동하기 위해 스크롤하게 하지 않음)
+- 이메일에서는 가치를 전달한 후에 (첫 문장에 넣지 않음)
+- 블로그 포스트에서는 끝에 (독자의 신뢰를 얻은 후)
+- 맥락적으로 관련 있을 때 콘텐츠 내에 인라인으로 (예: 관련 가이드 언급)
+- 긴 형식 페이지 하단에 주요 CTA 반복

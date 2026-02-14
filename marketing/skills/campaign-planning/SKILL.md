@@ -1,202 +1,202 @@
 ---
 name: campaign-planning
-description: Plan marketing campaigns with objectives, audience segmentation, channel strategy, content calendars, and success metrics. Use when launching a campaign, planning a product launch, building a content calendar, allocating budget across channels, or defining campaign KPIs.
+description: 목표, 오디언스 세분화, 채널 전략, 콘텐츠 캘린더, 성공 지표를 포함한 마케팅 캠페인을 기획합니다. 캠페인 시작, 제품 출시 기획, 콘텐츠 캘린더 구축, 채널별 예산 배분, 캠페인 KPI 정의 시 사용합니다.
 ---
 
-# Campaign Planning Skill
+# 캠페인 기획 스킬
 
-Frameworks and guidance for planning, structuring, and executing marketing campaigns.
+마케팅 캠페인을 기획, 구조화, 실행하기 위한 프레임워크와 가이드입니다.
 
-## Campaign Framework: Objective, Audience, Message, Channel, Measure
+## 캠페인 프레임워크: 목적, 오디언스, 메시지, 채널, 측정
 
-Every campaign should be built on this five-part framework:
+모든 캠페인은 다음 다섯 가지 프레임워크를 기반으로 구축해야 합니다:
 
-### 1. Objective
-Define what success looks like before planning anything else.
+### 1. 목적
+다른 것을 기획하기 전에 성공의 기준을 정의합니다.
 
-- **Awareness**: increase brand or product visibility (measured by reach, impressions, share of voice)
-- **Consideration**: drive engagement and education (measured by content engagement, email signups, webinar attendance)
-- **Conversion**: generate leads or sales (measured by signups, demos, purchases, pipeline)
-- **Retention**: re-engage existing customers (measured by churn reduction, upsell, NPS)
-- **Advocacy**: turn customers into promoters (measured by referrals, reviews, UGC)
+- **인지(Awareness)**: 브랜드 또는 제품 가시성 향상 (도달 범위, 노출, 점유율로 측정)
+- **고려(Consideration)**: 참여도 및 교육 촉진 (콘텐츠 참여도, 이메일 가입, 웨비나 참석으로 측정)
+- **전환(Conversion)**: 리드 또는 매출 생성 (가입, 데모, 구매, 파이프라인으로 측정)
+- **유지(Retention)**: 기존 고객 재참여 (이탈 감소, 업셀, NPS로 측정)
+- **옹호(Advocacy)**: 고객을 추천자로 전환 (추천, 리뷰, UGC로 측정)
 
-Good objectives are SMART: Specific, Measurable, Achievable, Relevant, Time-bound.
+좋은 목적은 SMART 원칙을 따릅니다: 구체적(Specific), 측정 가능(Measurable), 달성 가능(Achievable), 관련성(Relevant), 시한 있는(Time-bound).
 
-Example: "Generate 200 marketing qualified leads from mid-market SaaS companies in North America within 6 weeks of campaign launch."
+예시: "캠페인 시작 후 6주 이내에 북미 중견 SaaS 기업으로부터 200개의 마케팅 적격 리드를 생성합니다."
 
-### 2. Audience
-Define who you are trying to reach with enough specificity to guide messaging and channel decisions.
+### 2. 오디언스
+메시징과 채널 결정을 안내할 수 있을 만큼 구체적으로 대상을 정의합니다.
 
-- **Demographics**: role/title, seniority, company size, industry
-- **Psychographics**: motivations, pain points, goals, objections
-- **Behavioral**: where they consume content, how they buy, what they have engaged with before
-- **Buying stage**: are they unaware of the problem, researching solutions, or ready to buy?
+- **인구통계**: 역할/직함, 직급, 기업 규모, 산업
+- **심리통계**: 동기, 고충, 목표, 반론
+- **행동**: 콘텐츠 소비 채널, 구매 방식, 이전 참여 이력
+- **구매 단계**: 문제를 인식하지 못하는가, 솔루션을 조사 중인가, 구매 준비가 되었는가?
 
-Create a brief audience profile (not a full persona) for campaign planning:
-> "[Role] at [company type] who is struggling with [pain point] and looking for [desired outcome]. They typically discover solutions through [channels] and care most about [priorities]."
+캠페인 기획을 위한 간략한 오디언스 프로필을 작성합니다:
+> "[역할]은(는) [기업 유형]에서 [고충]으로 어려움을 겪고 있으며 [원하는 결과]를 찾고 있습니다. 일반적으로 [채널]을 통해 솔루션을 발견하며 [우선순위]를 가장 중시합니다."
 
-### 3. Message
-Craft the core message and supporting points that will resonate with the audience.
+### 3. 메시지
+오디언스에게 공감을 얻을 핵심 메시지와 보조 포인트를 작성합니다.
 
-- **Core message**: one sentence that captures what you want the audience to think, feel, or do
-- **Supporting messages**: 3-4 points that provide evidence, address objections, or elaborate on benefits
-- **Proof points**: data, case studies, testimonials, or third-party validation for each supporting message
-- **Differentiation**: what makes your offering different from alternatives (including doing nothing)
+- **핵심 메시지**: 오디언스가 생각하고, 느끼고, 행동하기를 원하는 것을 담은 한 문장
+- **보조 메시지**: 증거를 제공하거나, 반론을 다루거나, 혜택을 상세화하는 3-4개 포인트
+- **근거**: 각 보조 메시지에 대한 데이터, 사례 연구, 후기, 또는 제3자 검증
+- **차별화**: 대안(아무것도 하지 않는 것 포함)과 비교했을 때 차별점
 
-Message hierarchy:
-1. Why should I care? (addresses the pain point or opportunity)
-2. What is the solution? (positions your offering)
-3. Why you? (differentiates from alternatives)
-4. What should I do? (call to action)
+메시지 우선순위:
+1. 왜 관심을 가져야 하는가? (고충 또는 기회를 다룸)
+2. 솔루션은 무엇인가? (자사 제품을 포지셔닝)
+3. 왜 당신인가? (대안과 차별화)
+4. 무엇을 해야 하는가? (CTA)
 
-### 4. Channel
-Select channels based on where your audience is, not where you are most comfortable.
+### 4. 채널
+자사가 익숙한 곳이 아닌, 오디언스가 있는 곳을 기준으로 채널을 선택합니다.
 
-See the Channel Selection Guide below for detailed guidance.
+자세한 안내는 아래 채널 선택 가이드를 참조하세요.
 
-### 5. Measure
-Define how you will know the campaign worked. See Success Metrics by Campaign Type below.
+### 5. 측정
+캠페인이 효과가 있었는지를 어떻게 알 수 있는지 정의합니다. 아래 캠페인 유형별 성공 지표를 참조하세요.
 
-## Channel Selection Guide
+## 채널 선택 가이드
 
-### Owned Channels
+### 소유 채널
 
-| Channel | Best For | Typical Metrics | Effort |
-|---------|----------|----------------|--------|
-| Blog/Website | SEO, thought leadership, education | Traffic, time on page, conversions | Medium |
-| Email | Nurture, retention, announcements | Open rate, CTR, conversions | Low-Medium |
-| Social (organic) | Awareness, community, brand building | Engagement, reach, follower growth | Medium |
-| Webinars | Education, lead gen, product demos | Registrations, attendance, pipeline | High |
-| Podcast | Thought leadership, brand awareness | Downloads, subscriber growth | High |
+| 채널 | 적합한 용도 | 일반적 지표 | 노력 수준 |
+|------|-----------|-----------|----------|
+| 블로그/웹사이트 | SEO, 사고 리더십, 교육 | 트래픽, 체류 시간, 전환 | 보통 |
+| 이메일 | 너처, 유지, 공지 | 오픈율, CTR, 전환 | 낮음-보통 |
+| 소셜 (오가닉) | 인지, 커뮤니티, 브랜드 구축 | 참여도, 도달 범위, 팔로워 증가 | 보통 |
+| 웨비나 | 교육, 리드 생성, 제품 데모 | 등록, 참석, 파이프라인 | 높음 |
+| 팟캐스트 | 사고 리더십, 브랜드 인지 | 다운로드, 구독자 증가 | 높음 |
 
-### Earned Channels
+### 획득 채널
 
-| Channel | Best For | Typical Metrics | Effort |
-|---------|----------|----------------|--------|
-| PR/Media | Awareness, credibility, launches | Coverage, share of voice, referral traffic | High |
-| Guest content | Audience expansion, SEO, credibility | Referral traffic, backlinks | Medium |
-| Influencer/Partner | Audience expansion, trust | Reach, engagement, referral conversions | Medium-High |
-| Community | Awareness, trust, feedback | Mentions, engagement, referral traffic | Medium |
-| Reviews/Ratings | Credibility, SEO, consideration | Review volume, rating, conversion lift | Low-Medium |
+| 채널 | 적합한 용도 | 일반적 지표 | 노력 수준 |
+|------|-----------|-----------|----------|
+| PR/미디어 | 인지, 신뢰성, 출시 | 보도, 점유율, 유입 트래픽 | 높음 |
+| 기고 콘텐츠 | 오디언스 확장, SEO, 신뢰성 | 유입 트래픽, 백링크 | 보통 |
+| 인플루언서/파트너 | 오디언스 확장, 신뢰 | 도달 범위, 참여도, 유입 전환 | 보통-높음 |
+| 커뮤니티 | 인지, 신뢰, 피드백 | 언급, 참여도, 유입 트래픽 | 보통 |
+| 리뷰/평점 | 신뢰성, SEO, 고려 | 리뷰 수, 평점, 전환 향상 | 낮음-보통 |
 
-### Paid Channels
+### 유료 채널
 
-| Channel | Best For | Typical Metrics | Effort |
-|---------|----------|----------------|--------|
-| Search ads (SEM) | High-intent lead capture | CPC, CTR, conversion rate, CPA | Medium |
-| Social ads | Awareness, retargeting, lead gen | CPM, CPC, CTR, CPA, ROAS | Medium |
-| Display/Programmatic | Awareness, retargeting | Impressions, CPM, view-through conversions | Low-Medium |
-| Sponsored content | Thought leadership, lead gen | Engagement, leads, cost per lead | Medium |
-| Events/Sponsorships | Relationship building, brand | Leads, meetings, pipeline influenced | High |
+| 채널 | 적합한 용도 | 일반적 지표 | 노력 수준 |
+|------|-----------|-----------|----------|
+| 검색 광고 (SEM) | 높은 의도 리드 확보 | CPC, CTR, 전환율, CPA | 보통 |
+| 소셜 광고 | 인지, 리타겟팅, 리드 생성 | CPM, CPC, CTR, CPA, ROAS | 보통 |
+| 디스플레이/프로그래매틱 | 인지, 리타겟팅 | 노출, CPM, 뷰스루 전환 | 낮음-보통 |
+| 스폰서 콘텐츠 | 사고 리더십, 리드 생성 | 참여도, 리드, 리드당 비용 | 보통 |
+| 이벤트/스폰서십 | 관계 구축, 브랜드 | 리드, 미팅, 파이프라인 기여 | 높음 |
 
-### Channel Selection Criteria
-When choosing channels, consider:
-- Where does your target audience spend time?
-- What is the buying stage you are targeting? (awareness channels vs. conversion channels)
-- What is your budget? (paid channels require spend; owned/earned require time)
-- What content assets do you already have or can you produce?
-- What has worked in the past? (reference historical data if available)
+### 채널 선택 기준
+채널 선택 시 다음을 고려합니다:
+- 타겟 오디언스는 어디에서 시간을 보내는가?
+- 타겟하는 구매 단계는? (인지 채널 vs. 전환 채널)
+- 예산은? (유료 채널은 비용 필요; 소유/획득 채널은 시간 필요)
+- 이미 보유하고 있거나 제작할 수 있는 콘텐츠 에셋은?
+- 과거에 효과가 있었던 것은? (가용한 경우 과거 데이터 참조)
 
-## Content Calendar Creation
+## 콘텐츠 캘린더 작성
 
-### Calendar Structure
+### 캘린더 구조
 
-A content calendar should answer: what, where, when, who, and why for every piece of content.
+콘텐츠 캘린더는 모든 콘텐츠에 대해 무엇을, 어디서, 언제, 누가, 왜를 답해야 합니다.
 
-| Date | Content Piece | Channel | Audience Segment | Campaign/Theme | Owner | Status |
-|------|--------------|---------|-------------------|----------------|-------|--------|
+| 날짜 | 콘텐츠 | 채널 | 오디언스 세그먼트 | 캠페인/테마 | 담당자 | 상태 |
+|------|--------|------|------------------|-----------|--------|------|
 
-### Calendar Planning Process
-1. **Start with milestones**: campaign launch, event dates, product releases, seasonal moments
-2. **Work backward**: what needs to be live and when? What is the production lead time?
-3. **Map content to funnel stages**: ensure coverage across awareness, consideration, and conversion
-4. **Batch by theme**: group related content pieces into weekly or bi-weekly themes
-5. **Balance channels**: do not over-index on one channel; ensure the audience sees the campaign across touchpoints
-6. **Build in flexibility**: leave 20% of calendar slots open for reactive or opportunistic content
+### 캘린더 기획 프로세스
+1. **마일스톤으로 시작**: 캠페인 시작일, 이벤트 날짜, 제품 출시, 시즌 이벤트
+2. **역방향으로 계획**: 무엇이 언제까지 라이브되어야 하는가? 제작 리드 타임은?
+3. **퍼널 단계에 매핑**: 인지, 고려, 전환에 걸친 커버리지 확인
+4. **테마별 묶음**: 관련 콘텐츠를 주간 또는 격주 테마로 그룹화
+5. **채널 균형**: 하나의 채널에 치우치지 않음; 오디언스가 터치포인트 전반에 걸쳐 캠페인을 볼 수 있도록 함
+6. **유연성 확보**: 반응적 또는 기회적 콘텐츠를 위해 캘린더 슬롯의 20%를 비워둠
 
-### Content Cadence Guidelines
-- **Blog**: 1-4 posts per week depending on team size and goals
-- **Email newsletter**: weekly or bi-weekly for most audiences
-- **Social media**: 3-7 posts per week per platform (varies by platform)
-- **Paid campaigns**: continuous during campaign window with creative refreshes every 2-4 weeks
-- **Webinars**: monthly or quarterly depending on resources
+### 콘텐츠 주기 가이드라인
+- **블로그**: 팀 규모와 목표에 따라 주 1-4회 포스트
+- **이메일 뉴스레터**: 대부분의 오디언스에 주간 또는 격주
+- **소셜 미디어**: 플랫폼당 주 3-7회 포스트 (플랫폼에 따라 다름)
+- **유료 캠페인**: 캠페인 기간 동안 지속, 2-4주마다 크리에이티브 교체
+- **웨비나**: 리소스에 따라 월간 또는 분기별
 
-### Production Timeline Benchmarks
-- Blog post: 3-5 business days (research, draft, review, publish)
-- Email campaign: 2-3 business days (copy, design, test, send)
-- Social media posts: 1-2 business days (draft, design, schedule)
-- Landing page: 5-7 business days (copy, design, development, QA)
-- Video content: 2-4 weeks (script, production, editing)
-- Ebook/whitepaper: 2-4 weeks (outline, draft, design, review)
+### 제작 타임라인 벤치마크
+- 블로그 포스트: 영업일 3-5일 (리서치, 초안, 검토, 게시)
+- 이메일 캠페인: 영업일 2-3일 (카피, 디자인, 테스트, 발송)
+- 소셜 미디어 포스트: 영업일 1-2일 (초안, 디자인, 예약)
+- 랜딩 페이지: 영업일 5-7일 (카피, 디자인, 개발, QA)
+- 영상 콘텐츠: 2-4주 (대본, 촬영, 편집)
+- e-book/백서: 2-4주 (개요, 초안, 디자인, 검토)
 
-## Budget Allocation Approaches
+## 예산 배분 방식
 
-### Percentage of Revenue Method
-- Industry benchmark: 5-15% of revenue for marketing, with B2B typically at 5-10% and B2C at 10-15%
-- Startups and growth-stage companies often invest 15-25% of revenue in marketing
-- Within the marketing budget, allocate across brand (long-term) and performance (short-term)
+### 매출 대비 비율 방식
+- 산업 벤치마크: 매출의 5-15%를 마케팅에, B2B는 일반적으로 5-10%, B2C는 10-15%
+- 스타트업 및 성장 단계 기업은 매출의 15-25%를 마케팅에 투자하는 경우가 많음
+- 마케팅 예산 내에서 브랜드(장기)와 퍼포먼스(단기)에 배분
 
-### Channel Allocation Framework
-A common starting framework (adjust based on goals and historical data):
+### 채널 배분 프레임워크
+일반적인 시작 프레임워크 (목표와 과거 데이터에 따라 조정):
 
-| Category | Percentage of Budget | Examples |
-|----------|---------------------|----------|
-| Paid acquisition | 30-40% | Search ads, social ads, display |
-| Content production | 20-30% | Blog, video, design, ebooks |
-| Events and sponsorships | 10-20% | Conferences, webinars, meetups |
-| Tools and technology | 10-15% | Analytics, automation, CRM |
-| Testing and experimentation | 5-10% | New channels, A/B tests, pilots |
+| 카테고리 | 예산 비율 | 예시 |
+|----------|---------|------|
+| 유료 획득 | 30-40% | 검색 광고, 소셜 광고, 디스플레이 |
+| 콘텐츠 제작 | 20-30% | 블로그, 영상, 디자인, e-book |
+| 이벤트 및 스폰서십 | 10-20% | 컨퍼런스, 웨비나, 밋업 |
+| 도구 및 기술 | 10-15% | 분석, 자동화, CRM |
+| 테스트 및 실험 | 5-10% | 신규 채널, A/B 테스트, 파일럿 |
 
-### Budget Optimization Principles
-- Start with your highest-confidence channel and allocate 60-70% of paid budget there
-- Reserve 15-20% for testing new channels or tactics
-- Shift budget monthly based on performance data (do not set and forget)
-- Account for production costs, not just media spend
-- Include a 10-15% contingency for unexpected opportunities or overruns
+### 예산 최적화 원칙
+- 가장 확신 있는 채널에서 시작하여 유료 예산의 60-70%를 배분
+- 신규 채널이나 전술 테스트를 위해 15-20% 예비
+- 성과 데이터에 따라 매월 예산을 조정 (설정 후 방치하지 않음)
+- 미디어 비용뿐 아니라 제작 비용도 고려
+- 예상치 못한 기회나 초과 지출에 대비하여 10-15%의 비상 예비비 포함
 
-## Success Metrics by Campaign Type
+## 캠페인 유형별 성공 지표
 
-### Awareness Campaign
-| Metric | What It Measures |
-|--------|-----------------|
-| Reach/Impressions | How many people saw the campaign |
-| Brand mention volume | Increase in brand conversations |
-| Share of voice | Your mentions vs. competitors |
-| Direct traffic | People coming to your site unprompted |
-| Social follower growth | Audience building |
+### 인지 캠페인
+| 지표 | 측정 대상 |
+|------|----------|
+| 도달 범위/노출 | 캠페인을 본 사람 수 |
+| 브랜드 언급 수 | 브랜드 관련 대화 증가 |
+| 점유율 | 경쟁사 대비 자사 언급 비율 |
+| 직접 트래픽 | 자발적으로 사이트를 방문한 사람 |
+| 소셜 팔로워 증가 | 오디언스 구축 |
 
-### Lead Generation Campaign
-| Metric | What It Measures |
-|--------|-----------------|
-| Total leads | Volume of new contacts |
-| Marketing qualified leads (MQLs) | Leads meeting quality threshold |
-| Cost per lead (CPL) | Efficiency of spend |
-| Lead-to-MQL conversion rate | Quality of leads generated |
-| Pipeline influenced | Revenue opportunity created |
+### 리드 생성 캠페인
+| 지표 | 측정 대상 |
+|------|----------|
+| 총 리드 | 신규 연락처 수 |
+| 마케팅 적격 리드(MQL) | 품질 기준을 충족하는 리드 |
+| 리드당 비용(CPL) | 비용 효율성 |
+| 리드-MQL 전환율 | 생성된 리드의 품질 |
+| 파이프라인 기여 | 생성된 매출 기회 |
 
-### Product Launch Campaign
-| Metric | What It Measures |
-|--------|-----------------|
-| Signups or trials | Adoption of new product |
-| Activation rate | Users who complete key first action |
-| Media coverage | Earned media hits |
-| Social buzz | Mentions, shares, engagement spike |
-| Feature adoption | Usage of specific launched features |
+### 제품 출시 캠페인
+| 지표 | 측정 대상 |
+|------|----------|
+| 가입 또는 체험판 | 신규 제품 채택 |
+| 활성화율 | 핵심 첫 행동을 완료한 사용자 |
+| 미디어 보도 | 획득 미디어 수 |
+| 소셜 버즈 | 언급, 공유, 참여도 급증 |
+| 기능 채택 | 출시된 특정 기능 사용 |
 
-### Retention/Engagement Campaign
-| Metric | What It Measures |
-|--------|-----------------|
-| Churn rate change | Customer retention improvement |
-| Engagement rate | Interactions with campaign content |
-| NPS or CSAT change | Satisfaction improvement |
-| Upsell/cross-sell revenue | Expansion revenue |
-| Feature adoption | Usage of promoted features |
+### 유지/참여 캠페인
+| 지표 | 측정 대상 |
+|------|----------|
+| 이탈률 변화 | 고객 유지 개선 |
+| 참여율 | 캠페인 콘텐츠와의 상호작용 |
+| NPS 또는 CSAT 변화 | 만족도 개선 |
+| 업셀/크로스셀 수익 | 확장 수익 |
+| 기능 채택 | 홍보한 기능의 사용 |
 
-### Event/Webinar Campaign
-| Metric | What It Measures |
-|--------|-----------------|
-| Registrations | Interest generated |
-| Attendance rate | Conversion from registration |
-| Engagement during event | Questions, polls, chat activity |
-| Post-event conversions | Leads or pipeline from attendees |
-| Content repurposing reach | Downstream audience from recordings |
+### 이벤트/웨비나 캠페인
+| 지표 | 측정 대상 |
+|------|----------|
+| 등록 | 생성된 관심 |
+| 참석률 | 등록에서 참석으로의 전환 |
+| 이벤트 중 참여도 | 질문, 설문, 채팅 활동 |
+| 이벤트 후 전환 | 참석자로부터의 리드 또는 파이프라인 |
+| 콘텐츠 재활용 도달 | 녹화본에서의 후속 오디언스 |

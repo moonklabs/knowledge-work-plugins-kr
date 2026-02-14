@@ -1,116 +1,116 @@
 ---
-description: Multi-source research on a customer question or topic with source attribution
-argument-hint: "<question or topic>"
+description: 소스 출처 포함 고객 질문 또는 주제에 대한 다중 소스 조사
+argument-hint: "<질문 또는 주제>"
 ---
 
-# Research
+# 조사
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 참조하십시오.
 
-Multi-source research on a customer question, product topic, or account-related inquiry. Synthesizes findings from all available sources with clear attribution.
+고객 질문, 제품 주제 또는 계정 관련 문의에 대한 다중 소스 조사를 수행합니다. 사용 가능한 모든 소스에서 발견된 내용을 명확한 출처 표시와 함께 종합합니다.
 
-## Usage
-
-```
-/research <question or topic>
-```
-
-## Workflow
-
-### 1. Parse the Research Request
-
-Identify what type of research is needed:
-- **Customer question**: Something a customer has asked that needs an answer (e.g., "Does our product support SSO with Okta?")
-- **Issue investigation**: Background on a reported problem (e.g., "Has this bug been reported before? What's the known workaround?")
-- **Account context**: History with a specific customer (e.g., "What did we tell Acme Corp last time they asked about this?")
-- **Topic research**: General topic relevant to support work (e.g., "Best practices for webhook retry logic")
-
-### 2. Search Available Sources
-
-Search in priority order, adapting to what is connected:
-
-**Tier 1 — Internal Documentation (highest confidence):**
-- ~~knowledge base (if connected): product docs, runbooks, FAQs
-- ~~cloud storage: internal documents, specs, guides, past research
-- ~~CRM notes: previous answers to similar questions, account context
-
-**Tier 2 — Team Communications:**
-- ~~chat: search for the topic in relevant channels; check if teammates have discussed or answered this before
-- ~~email: search for previous correspondence on this topic
-- ~~support platform (if connected): check if this has been asked/resolved before
-
-**Tier 3 — External Sources:**
-- Web search: official documentation, blog posts, community forums
-- Public knowledge bases, help centers, release notes
-
-### 3. Synthesize Findings
-
-Compile results into a structured research brief:
+## 사용법
 
 ```
-## Research: [Question/Topic]
-
-### Answer
-[Clear, direct answer to the question — lead with the bottom line]
-
-**Confidence:** [High / Medium / Low]
-[Explain what drives the confidence level]
-
-### Key Findings
-
-**From [Source 1]:**
-- [Finding with specific detail]
-- [Finding with specific detail]
-
-**From [Source 2]:**
-- [Finding with specific detail]
-
-### Context & Nuance
-[Any caveats, edge cases, or additional context that matters]
-
-### Sources
-1. [Source name/link] — [what it contributed]
-2. [Source name/link] — [what it contributed]
-3. [Source name/link] — [what it contributed]
-
-### Gaps & Unknowns
-- [What couldn't be confirmed]
-- [What might need verification from a subject matter expert]
-
-### Recommended Next Steps
-- [Action if the answer needs to go to a customer]
-- [Action if further research is needed]
-- [Who to consult for verification if needed]
+/research <질문 또는 주제>
 ```
 
-### 4. Handle Insufficient Sources
+## 워크플로우
 
-If no connected sources yield results:
+### 1. 조사 요청 분석
 
-- Perform web research on the topic
-- Ask the user for internal context:
-  - "I couldn't find this in connected sources. Do you have internal docs or knowledge base articles about this?"
-  - "Has your team discussed this topic before? Any ~~chat channels I should check?"
-  - "Is there a subject matter expert who would know the answer?"
-- Be transparent about limitations:
-  - "This answer is based on web research only — please verify against your internal documentation before sharing with the customer."
-  - "I found a possible answer but couldn't confirm it from an authoritative internal source."
+필요한 조사 유형을 식별합니다:
+- **고객 질문**: 고객이 답변이 필요한 질문을 한 경우 (예: "우리 제품이 Okta SSO를 지원하나요?")
+- **이슈 조사**: 보고된 문제에 대한 배경 조사 (예: "이 버그가 이전에 보고된 적이 있나요? 알려진 해결 방법은?")
+- **계정 컨텍스트**: 특정 고객과의 이력 (예: "Acme Corp에 이 건에 대해 이전에 무엇이라고 말했나요?")
+- **주제 조사**: 지원 업무와 관련된 일반 주제 (예: "웹훅 재시도 로직 모범 사례")
 
-### 5. Customer-Facing Considerations
+### 2. 사용 가능한 소스 검색
 
-If the research is to answer a customer question:
+연결된 소스에 맞게 우선순위 순서대로 검색합니다:
 
-- Flag if the answer involves product roadmap, pricing, legal, or security topics that may need review
-- Note if the answer differs from what may have been communicated previously
-- Suggest appropriate caveats for the customer-facing response
-- Offer to draft the customer response: "Want me to draft a response to the customer based on these findings?"
+**1단계 — 내부 문서 (가장 높은 신뢰도):**
+- ~~knowledge base (연결된 경우): 제품 문서, 런북, FAQ
+- ~~cloud storage: 내부 문서, 사양서, 가이드, 이전 조사 자료
+- ~~CRM 노트: 유사한 질문에 대한 이전 답변, 계정 컨텍스트
 
-### 6. Knowledge Capture
+**2단계 — 팀 커뮤니케이션:**
+- ~~chat: 관련 채널에서 해당 주제를 검색하고, 팀원이 이전에 논의하거나 답변한 적이 있는지 확인합니다
+- ~~email: 해당 주제에 대한 이전 서신을 검색합니다
+- ~~support platform (연결된 경우): 이전에 질문/해결된 적이 있는지 확인합니다
 
-After research is complete, suggest capturing the knowledge:
+**3단계 — 외부 소스:**
+- 웹 검색: 공식 문서, 블로그 게시물, 커뮤니티 포럼
+- 공개 지식 베이스, 도움말 센터, 릴리스 노트
 
-- "Should I save these findings to your knowledge base for future reference?"
-- "Want me to create a FAQ entry based on this research?"
-- "This might be worth documenting — should I draft a runbook entry?"
+### 3. 결과 종합
 
-This helps build institutional knowledge and reduces duplicate research effort across the team.
+결과를 구조화된 조사 브리프로 정리합니다:
+
+```
+## 조사: [질문/주제]
+
+### 답변
+[질문에 대한 명확하고 직접적인 답변 — 결론부터 시작]
+
+**신뢰도:** [높음 / 보통 / 낮음]
+[신뢰도 수준의 근거 설명]
+
+### 주요 발견사항
+
+**출처 [소스 1]:**
+- [구체적 세부 정보가 포함된 발견사항]
+- [구체적 세부 정보가 포함된 발견사항]
+
+**출처 [소스 2]:**
+- [구체적 세부 정보가 포함된 발견사항]
+
+### 컨텍스트 및 뉘앙스
+[중요한 주의사항, 엣지 케이스 또는 추가 컨텍스트]
+
+### 출처
+1. [출처 이름/링크] — [기여한 내용]
+2. [출처 이름/링크] — [기여한 내용]
+3. [출처 이름/링크] — [기여한 내용]
+
+### 공백 및 미확인 사항
+- [확인할 수 없었던 사항]
+- [전문가의 검증이 필요할 수 있는 사항]
+
+### 권장 다음 단계
+- [답변을 고객에게 전달해야 하는 경우의 조치]
+- [추가 조사가 필요한 경우의 조치]
+- [필요시 검증을 위해 상담할 담당자]
+```
+
+### 4. 소스 부족 시 처리
+
+연결된 소스에서 결과가 없는 경우:
+
+- 해당 주제에 대해 웹 조사를 수행합니다
+- 사용자에게 내부 컨텍스트를 요청합니다:
+  - "연결된 소스에서 이 정보를 찾을 수 없었습니다. 이에 대한 내부 문서나 지식 베이스 문서가 있나요?"
+  - "팀에서 이 주제를 이전에 논의한 적이 있나요? 확인해야 할 ~~chat 채널이 있나요?"
+  - "답변을 알고 있는 전문가(SME)가 있나요?"
+- 한계에 대해 투명하게 말합니다:
+  - "이 답변은 웹 조사만을 기반으로 합니다 — 고객에게 공유하기 전에 내부 문서와 대조 확인하시기 바랍니다."
+  - "가능한 답변을 찾았으나 권위 있는 내부 소스에서 확인하지 못했습니다."
+
+### 5. 고객 대면 고려사항
+
+조사가 고객 질문에 답변하기 위한 것인 경우:
+
+- 답변이 프로덕트 로드맵, 가격, 법률 또는 보안 관련 주제를 포함하는 경우 검토가 필요하다고 표시합니다
+- 이전에 전달한 내용과 다른 경우 알립니다
+- 고객 대면 응답에 적절한 단서를 제안합니다
+- 고객 응답 초안 작성을 제안합니다: "이 조사 결과를 바탕으로 고객에게 보낼 응답을 작성할까요?"
+
+### 6. 지식 확보
+
+조사가 완료된 후 지식 확보를 제안합니다:
+
+- "향후 참조를 위해 이 조사 결과를 지식 베이스에 저장할까요?"
+- "이 조사를 기반으로 FAQ 항목을 작성할까요?"
+- "문서화할 가치가 있을 수 있습니다 — 런북 항목 초안을 작성할까요?"
+
+이를 통해 조직의 지식을 축적하고 팀 전체의 중복 조사를 줄일 수 있습니다.

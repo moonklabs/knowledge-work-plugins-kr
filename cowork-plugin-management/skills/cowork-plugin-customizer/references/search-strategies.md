@@ -1,51 +1,51 @@
-# Knowledge MCP Search Strategies
+# 지식 MCP 검색 전략
 
-Query patterns for gathering organizational context during plugin customization.
+플러그인 커스터마이징 중 조직 컨텍스트를 수집하기 위한 쿼리 패턴입니다.
 
-## Finding Tool Names
+## 도구 이름 찾기
 
-**Source control:**
-- Search: "GitHub" OR "GitLab" OR "Bitbucket"
-- Search: "pull request" OR "merge request"
-- Look for: repository links, CI/CD mentions
+**소스 제어:**
+- 검색: "GitHub" OR "GitLab" OR "Bitbucket"
+- 검색: "pull request" OR "merge request"
+- 확인할 것: 저장소 링크, CI/CD 언급
 
-**Project management:**
-- Search: "Asana" OR "Jira" OR "Linear" OR "Monday"
-- Search: "sprint" AND "tickets"
-- Look for: task links, project board mentions
+**프로젝트 관리:**
+- 검색: "Asana" OR "Jira" OR "Linear" OR "Monday"
+- 검색: "sprint" AND "tickets"
+- 확인할 것: 작업 링크, 프로젝트 보드 언급
 
-**Chat:**
-- Search: "Slack" OR "Teams" OR "Discord"
-- Look for: channel mentions, integration discussions
+**채팅:**
+- 검색: "Slack" OR "Teams" OR "Discord"
+- 확인할 것: 채널 언급, 통합 논의
 
-**Analytics:**
-- Search: "Datadog" OR "Grafana" OR "Mixpanel"
-- Search: "monitoring" OR "observability"
-- Look for: dashboard links, alert configurations
+**애널리틱스:**
+- 검색: "Datadog" OR "Grafana" OR "Mixpanel"
+- 검색: "monitoring" OR "observability"
+- 확인할 것: 대시보드 링크, 알림 설정
 
-**Design:**
-- Search: "Figma" OR "Sketch" OR "Adobe XD"
-- Look for: design file links, handoff discussions
+**디자인:**
+- 검색: "Figma" OR "Sketch" OR "Adobe XD"
+- 확인할 것: 디자인 파일 링크, 핸드오프 논의
 
 **CRM:**
-- Search: "Salesforce" OR "HubSpot"
-- Look for: deal mentions, customer record links
+- 검색: "Salesforce" OR "HubSpot"
+- 확인할 것: 딜 언급, 고객 레코드 링크
 
-## Finding Organization Values
+## 조직 값 찾기
 
-**Workspace/project IDs:**
-- Search for existing integrations or bookmarked links
-- Look for admin/setup documentation
+**워크스페이스/프로젝트 ID:**
+- 기존 통합 또는 북마크된 링크를 검색합니다
+- 관리자/설정 문서를 확인합니다
 
-**Team conventions:**
-- Search: "story points" OR "estimation"
-- Search: "workflow" OR "ticket status"
-- Look for engineering process docs
+**팀 관례:**
+- 검색: "story points" OR "estimation"
+- 검색: "workflow" OR "ticket status"
+- 엔지니어링 프로세스 문서를 확인합니다
 
-**Channel/team names:**
-- Search: "standup" OR "engineering" OR "releases"
-- Look for channel naming patterns
+**채널/팀 이름:**
+- 검색: "standup" OR "engineering" OR "releases"
+- 채널 네이밍 패턴을 확인합니다
 
-## When Knowledge MCPs Are Unavailable
+## 지식 MCP를 사용할 수 없는 경우
 
-If no knowledge MCPs are configured, skip automatic discovery and proceed directly to AskUserQuestion for all categories. Note: AskUserQuestion always includes a Skip button and a free-text input box for custom answers, so do not include `None` or `Other` as options.
+지식 MCP가 설정되지 않은 경우, 자동 검색을 건너뛰고 모든 카테고리에 대해 AskUserQuestion으로 바로 진행합니다. 참고: AskUserQuestion에는 항상 건너뛰기 버튼과 자유 텍스트 입력 상자가 포함되므로 `None`이나 `Other`를 옵션에 포함하지 마십시오.

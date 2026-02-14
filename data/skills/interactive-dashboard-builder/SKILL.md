@@ -1,62 +1,62 @@
 ---
 name: interactive-dashboard-builder
-description: Build self-contained interactive HTML dashboards with Chart.js, dropdown filters, and professional styling. Use when creating dashboards, building interactive reports, or generating shareable HTML files with charts and filters that work without a server.
+description: Chart.js, 드롭다운 필터, 전문적인 스타일링을 갖춘 자체 완결형 대화형 HTML 대시보드를 구축합니다. 대시보드를 생성하거나, 대화형 보고서를 구축하거나, 서버 없이 작동하는 차트와 필터가 포함된 공유 가능한 HTML 파일을 생성할 때 사용합니다.
 ---
 
-# Interactive Dashboard Builder Skill
+# 대화형 대시보드 빌더 스킬
 
-Patterns and techniques for building self-contained HTML/JS dashboards with Chart.js, filters, interactivity, and professional styling.
+Chart.js, 필터, 상호작용, 전문적인 스타일링을 갖춘 자체 완결형 HTML/JS 대시보드 구축을 위한 패턴과 기법입니다.
 
-## HTML/JS Dashboard Patterns
+## HTML/JS 대시보드 패턴
 
-### Base Template
+### 기본 템플릿
 
-Every dashboard follows this structure:
+모든 대시보드는 다음 구조를 따릅니다:
 
 ```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Title</title>
+    <title>대시보드 제목</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1" integrity="sha384-jb8JQMbMoBUzgWatfe6COACi2ljcDdZQ2OxczGA3bGNeWe+6DChMTBJemed7ZnvJ" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0" integrity="sha384-cVMg8E3QFwTvGCDuK+ET4PD341jF3W8nO1auiXfuZNQkzbUUiBGLsIQUE+b1mxws" crossorigin="anonymous"></script>
     <style>
-        /* Dashboard styles go here */
+        /* 대시보드 스타일 */
     </style>
 </head>
 <body>
     <div class="dashboard-container">
         <header class="dashboard-header">
-            <h1>Dashboard Title</h1>
+            <h1>대시보드 제목</h1>
             <div class="filters">
-                <!-- Filter controls -->
+                <!-- 필터 컨트롤 -->
             </div>
         </header>
 
         <section class="kpi-row">
-            <!-- KPI cards -->
+            <!-- KPI 카드 -->
         </section>
 
         <section class="chart-row">
-            <!-- Chart containers -->
+            <!-- 차트 컨테이너 -->
         </section>
 
         <section class="table-section">
-            <!-- Data table -->
+            <!-- 데이터 테이블 -->
         </section>
 
         <footer class="dashboard-footer">
-            <span>Data as of: <span id="data-date"></span></span>
+            <span>데이터 기준일: <span id="data-date"></span></span>
         </footer>
     </div>
 
     <script>
-        // Embedded data
+        // 포함된 데이터
         const DATA = [];
 
-        // Dashboard logic
+        // 대시보드 로직
         class Dashboard {
             constructor(data) {
                 this.rawData = data;
@@ -73,17 +73,17 @@ Every dashboard follows this structure:
             }
 
             applyFilters() {
-                // Filter logic
+                // 필터 로직
                 this.filteredData = this.rawData.filter(row => {
-                    // Apply each active filter
-                    return true; // placeholder
+                    // 각 활성 필터 적용
+                    return true; // 플레이스홀더
                 });
                 this.renderKPIs();
                 this.updateCharts();
                 this.renderTable();
             }
 
-            // ... methods for each section
+            // ... 각 섹션별 메서드
         }
 
         const dashboard = new Dashboard(DATA);
@@ -92,11 +92,11 @@ Every dashboard follows this structure:
 </html>
 ```
 
-### KPI Card Pattern
+### KPI 카드 패턴
 
 ```html
 <div class="kpi-card">
-    <div class="kpi-label">Total Revenue</div>
+    <div class="kpi-label">총 매출</div>
     <div class="kpi-value" id="kpi-revenue">$0</div>
     <div class="kpi-change positive" id="kpi-revenue-change">+0%</div>
 </div>
@@ -107,14 +107,14 @@ function renderKPI(elementId, value, previousValue, format = 'number') {
     const el = document.getElementById(elementId);
     const changeEl = document.getElementById(elementId + '-change');
 
-    // Format the value
+    // 값 형식 지정
     el.textContent = formatValue(value, format);
 
-    // Calculate and display change
+    // 증감 계산 및 표시
     if (previousValue && previousValue !== 0) {
         const pctChange = ((value - previousValue) / previousValue) * 100;
         const sign = pctChange >= 0 ? '+' : '';
-        changeEl.textContent = `${sign}${pctChange.toFixed(1)}% vs prior period`;
+        changeEl.textContent = `${sign}${pctChange.toFixed(1)}% vs 이전 기간`;
         changeEl.className = `kpi-change ${pctChange >= 0 ? 'positive' : 'negative'}`;
     }
 }
@@ -137,18 +137,18 @@ function formatValue(value, format) {
 }
 ```
 
-### Chart Container Pattern
+### 차트 컨테이너 패턴
 
 ```html
 <div class="chart-container">
-    <h3 class="chart-title">Monthly Revenue Trend</h3>
+    <h3 class="chart-title">월간 수익 추세</h3>
     <canvas id="revenue-chart"></canvas>
 </div>
 ```
 
-## Chart.js Integration
+## Chart.js 통합
 
-### Line Chart
+### 꺾은선 차트
 
 ```javascript
 function createLineChart(canvasId, labels, datasets) {
@@ -207,7 +207,7 @@ function createLineChart(canvasId, labels, datasets) {
 }
 ```
 
-### Bar Chart
+### 막대 차트
 
 ```javascript
 function createBarChart(canvasId, labels, data, options = {}) {
@@ -219,7 +219,7 @@ function createBarChart(canvasId, labels, data, options = {}) {
         data: {
             labels: labels,
             datasets: [{
-                label: options.label || 'Value',
+                label: options.label || '값',
                 data: data,
                 backgroundColor: options.colors || COLORS.map(c => c + 'CC'),
                 borderColor: options.colors || COLORS,
@@ -266,7 +266,7 @@ function createBarChart(canvasId, labels, data, options = {}) {
 }
 ```
 
-### Doughnut Chart
+### 도넛 차트
 
 ```javascript
 function createDoughnutChart(canvasId, labels, data) {
@@ -306,14 +306,14 @@ function createDoughnutChart(canvasId, labels, data) {
 }
 ```
 
-### Updating Charts on Filter Change
+### 필터 변경 시 차트 업데이트
 
 ```javascript
 function updateChart(chart, newLabels, newData) {
     chart.data.labels = newLabels;
 
     if (Array.isArray(newData[0])) {
-        // Multiple datasets
+        // 다중 데이터셋
         newData.forEach((data, i) => {
             chart.data.datasets[i].data = data;
         });
@@ -321,19 +321,19 @@ function updateChart(chart, newLabels, newData) {
         chart.data.datasets[0].data = newData;
     }
 
-    chart.update('none'); // 'none' disables animation for instant update
+    chart.update('none'); // 'none'은 즉각적인 업데이트를 위해 애니메이션을 비활성화함
 }
 ```
 
-## Filter and Interactivity Implementation
+## 필터 및 상호작용 구현
 
-### Dropdown Filter
+### 드롭다운 필터
 
 ```html
 <div class="filter-group">
-    <label for="filter-region">Region</label>
+    <label for="filter-region">지역</label>
     <select id="filter-region" onchange="dashboard.applyFilters()">
-        <option value="all">All Regions</option>
+        <option value="all">모든 지역</option>
     </select>
 </div>
 ```
@@ -343,7 +343,7 @@ function populateFilter(selectId, data, field) {
     const select = document.getElementById(selectId);
     const values = [...new Set(data.map(d => d[field]))].sort();
 
-    // Keep the "All" option, add unique values
+    // "모두" 옵션 유지, 고유값 추가
     values.forEach(val => {
         const option = document.createElement('option');
         option.value = val;
@@ -358,13 +358,13 @@ function getFilterValue(selectId) {
 }
 ```
 
-### Date Range Filter
+### 날짜 범위 필터
 
 ```html
 <div class="filter-group">
-    <label>Date Range</label>
+    <label>날짜 범위</label>
     <input type="date" id="filter-date-start" onchange="dashboard.applyFilters()">
-    <span>to</span>
+    <span>~</span>
     <input type="date" id="filter-date-end" onchange="dashboard.applyFilters()">
 </div>
 ```
@@ -380,7 +380,7 @@ function filterByDateRange(data, dateField, startDate, endDate) {
 }
 ```
 
-### Combined Filter Logic
+### 결합된 필터 로직
 
 ```javascript
 applyFilters() {
@@ -403,7 +403,7 @@ applyFilters() {
 }
 ```
 
-### Sortable Table
+### 정렬 가능한 테이블
 
 ```javascript
 function renderTable(containerId, data, columns) {
@@ -414,7 +414,7 @@ function renderTable(containerId, data, columns) {
     function render(sortedData) {
         let html = '<table class="data-table">';
 
-        // Header
+        // 헤더
         html += '<thead><tr>';
         columns.forEach(col => {
             const arrow = sortCol === col.field
@@ -424,7 +424,7 @@ function renderTable(containerId, data, columns) {
         });
         html += '</tr></thead>';
 
-        // Body
+        // 본문
         html += '<tbody>';
         sortedData.forEach(row => {
             html += '<tr>';
@@ -432,7 +432,7 @@ function renderTable(containerId, data, columns) {
                 const value = col.format ? formatValue(row[col.field], col.format) : row[col.field];
                 html += `<td>${value}</td>`;
             });
-            html += '</tr>';
+            html += '</td>';
         });
         html += '</tbody></table>';
 
@@ -458,23 +458,23 @@ function renderTable(containerId, data, columns) {
 }
 ```
 
-## CSS Styling for Dashboards
+## 대시보드용 CSS 스타일링
 
-### Color System
+### 색상 시스템
 
 ```css
 :root {
-    /* Background layers */
+    /* 배경 레이어 */
     --bg-primary: #f8f9fa;
     --bg-card: #ffffff;
     --bg-header: #1a1a2e;
 
-    /* Text */
+    /* 텍스트 */
     --text-primary: #212529;
     --text-secondary: #6c757d;
     --text-on-dark: #ffffff;
 
-    /* Accent colors for data */
+    /* 데이터용 강조 색상 */
     --color-1: #4C72B0;
     --color-2: #DD8452;
     --color-3: #55A868;
@@ -482,18 +482,18 @@ function renderTable(containerId, data, columns) {
     --color-5: #8172B3;
     --color-6: #937860;
 
-    /* Status colors */
+    /* 상태 색상 */
     --positive: #28a745;
     --negative: #dc3545;
     --neutral: #6c757d;
 
-    /* Spacing */
+    /* 간격 */
     --gap: 16px;
     --radius: 8px;
 }
 ```
 
-### Layout
+### 레이아웃
 
 ```css
 * {
@@ -534,7 +534,7 @@ body {
 }
 ```
 
-### KPI Cards
+### KPI 카드
 
 ```css
 .kpi-row {
@@ -575,7 +575,7 @@ body {
 .kpi-change.negative { color: var(--negative); }
 ```
 
-### Chart Containers
+### 차트 컨테이너
 
 ```css
 .chart-row {
@@ -604,7 +604,7 @@ body {
 }
 ```
 
-### Filters
+### 필터
 
 ```css
 .filters {
@@ -641,7 +641,7 @@ body {
 }
 ```
 
-### Data Table
+### 데이터 테이블
 
 ```css
 .table-section {
@@ -690,7 +690,7 @@ body {
 }
 ```
 
-### Responsive Design
+### 반응형 디자인
 
 ```css
 @media (max-width: 768px) {
@@ -722,35 +722,35 @@ body {
 }
 ```
 
-## Performance Considerations for Large Datasets
+## 대용량 데이터셋의 성능 고려사항
 
-### Data Size Guidelines
+### 데이터 크기 가이드라인
 
-| Data Size | Approach |
+| 데이터 크기 | 접근 방법 |
 |---|---|
-| <1,000 rows | Embed directly in HTML. Full interactivity. |
-| 1,000 - 10,000 rows | Embed in HTML. May need to pre-aggregate for charts. |
-| 10,000 - 100,000 rows | Pre-aggregate server-side. Embed only aggregated data. |
-| >100,000 rows | Not suitable for client-side dashboard. Use a BI tool or paginate. |
+| 1,000행 미만 | HTML에 직접 포함. 완전한 상호작용. |
+| 1,000 - 10,000행 | HTML에 포함. 차트용으로 사전 집계가 필요할 수 있음. |
+| 10,000 - 100,000행 | 서버 측에서 사전 집계. 집계된 데이터만 포함. |
+| 100,000행 초과 | 클라이언트 측 대시보드에 부적합. BI 도구를 사용하거나 페이지네이션. |
 
-### Pre-Aggregation Pattern
+### 사전 집계 패턴
 
-Instead of embedding raw data and aggregating in the browser:
+원시 데이터를 포함하고 브라우저에서 집계하는 대신:
 
 ```javascript
-// DON'T: embed 50,000 raw rows
+// X: 50,000개의 원시 행을 포함하지 마십시오
 const RAW_DATA = [/* 50,000 rows */];
 
-// DO: pre-aggregate before embedding
+// O: 포함하기 전에 결과 데이터를 사전 집계하십시오
 const CHART_DATA = {
     monthly_revenue: [
         { month: '2024-01', revenue: 150000, orders: 1200 },
         { month: '2024-02', revenue: 165000, orders: 1350 },
-        // ... 12 rows instead of 50,000
+        // ... 50,000행 대신 12행
     ],
     top_products: [
         { product: 'Widget A', revenue: 45000 },
-        // ... 10 rows
+        // ... 10행
     ],
     kpis: {
         total_revenue: 1980000,
@@ -760,27 +760,27 @@ const CHART_DATA = {
 };
 ```
 
-### Chart Performance
+### 차트 성능
 
-- Limit line charts to <500 data points per series (downsample if needed)
-- Limit bar charts to <50 categories
-- For scatter plots, cap at 1,000 points (use sampling for larger datasets)
-- Disable animations for dashboards with many charts: `animation: false` in Chart.js options
-- Use `Chart.update('none')` instead of `Chart.update()` for filter-triggered updates
+- 꺾은선 차트는 시리즈당 500개 미만의 데이터 포인트로 제한합니다 (필요시 다운샘플링)
+- 막대 차트는 50개 미만의 카테고리로 제한합니다
+- 산점도는 1,000개 포인트로 제한합니다 (대규모 데이터셋에는 샘플링 사용)
+- 차트가 많은 대시보드에서는 애니메이션을 비활성화합니다: Chart.js 옵션에서 `animation: false`
+- 필터 트리거 업데이트에는 `Chart.update()` 대신 `Chart.update('none')`을 사용합니다
 
-### DOM Performance
+### DOM 성능
 
-- Limit data tables to 100-200 visible rows. Add pagination for more.
-- Use `requestAnimationFrame` for coordinated chart updates
-- Avoid rebuilding the entire DOM on filter change -- update only changed elements
+- 데이터 테이블은 100-200개 가시 행으로 제한합니다. 더 많은 경우 페이지네이션을 추가합니다.
+- 조율된 차트 업데이트에는 `requestAnimationFrame`을 사용합니다
+- 필터 변경 시 전체 DOM을 다시 구축하지 않습니다 -- 변경된 요소만 업데이트합니다
 
 ```javascript
-// Efficient table pagination
+// 효율적인 테이블 페이지네이션
 function renderTablePage(data, page, pageSize = 50) {
     const start = page * pageSize;
     const end = Math.min(start + pageSize, data.length);
     const pageData = data.slice(start, end);
-    // Render only pageData
-    // Show pagination controls: "Showing 1-50 of 2,340"
+    // pageData만 렌더링
+    // 페이지네이션 컨트롤 표시: "2,340개 중 1-50개 표시 중"
 }
 ```

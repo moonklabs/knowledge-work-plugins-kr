@@ -1,184 +1,184 @@
 ---
 name: brand-voice
-description: Apply and enforce brand voice, style guide, and messaging pillars across content. Use when reviewing content for brand consistency, documenting a brand voice, adapting tone for different audiences, or checking terminology and style guide compliance.
+description: 콘텐츠 전반에 걸쳐 브랜드 보이스, 스타일 가이드, 메시징 핵심 요소를 적용하고 시행합니다. 콘텐츠의 브랜드 일관성 검토, 브랜드 보이스 문서화, 오디언스별 톤 조정, 용어 및 스타일 가이드 준수 확인 시 사용합니다.
 ---
 
-# Brand Voice Skill
+# 브랜드 보이스 스킬
 
-Frameworks for documenting, applying, and enforcing brand voice and style guidelines across marketing content.
+마케팅 콘텐츠 전반에 걸쳐 브랜드 보이스와 스타일 가이드라인을 문서화, 적용, 시행하기 위한 프레임워크입니다.
 
-## Brand Voice Documentation Framework
+## 브랜드 보이스 문서화 프레임워크
 
-A complete brand voice document should cover these areas. Use this framework to help users define their brand voice or to understand an existing brand voice configuration.
+완전한 브랜드 보이스 문서는 다음 영역을 다루어야 합니다. 사용자가 브랜드 보이스를 정의하거나 기존 브랜드 보이스 구성을 이해하는 데 이 프레임워크를 활용합니다.
 
-### 1. Brand Personality
-Define the brand as if it were a person. What are its defining traits?
+### 1. 브랜드 개성
+브랜드를 사람처럼 정의합니다. 특징적인 성격은 무엇인가?
 
-Example: "If our brand were a person, they would be a knowledgeable colleague who explains complex things simply, celebrates your wins genuinely, and never talks down to you."
+예시: "우리 브랜드가 사람이라면, 복잡한 것을 쉽게 설명하고, 진심으로 성과를 축하하며, 절대 무시하지 않는 지식이 풍부한 동료일 것입니다."
 
-### 2. Voice Attributes
-Select 3-5 attributes that define how the brand communicates. Each attribute should be defined with:
-- What it means in practice
-- What it does NOT mean (to prevent misinterpretation)
-- An example demonstrating the attribute
+### 2. 보이스 속성
+브랜드의 커뮤니케이션 방식을 정의하는 3-5개 속성을 선택합니다. 각 속성은 다음을 포함하여 정의합니다:
+- 실제 의미
+- 의미하지 않는 것 (오해 방지)
+- 속성을 보여주는 예시
 
-### 3. Audience Awareness
-- Who the brand is speaking to (primary and secondary audiences)
-- What the audience cares about
-- What level of expertise the audience has
-- How the audience expects to be addressed
+### 3. 오디언스 인식
+- 브랜드가 누구에게 말하는가 (주요 및 부차적 오디언스)
+- 오디언스가 관심을 갖는 것
+- 오디언스의 전문성 수준
+- 오디언스가 기대하는 소통 방식
 
-### 4. Core Messaging Pillars
-- 3-5 key themes the brand consistently communicates
-- The hierarchy of these messages (which comes first)
-- How each pillar connects to audience needs
+### 4. 핵심 메시징 요소
+- 브랜드가 일관되게 전달하는 3-5개 핵심 주제
+- 메시지의 우선순위 (무엇이 먼저인가)
+- 각 요소가 오디언스 니즈와 연결되는 방식
 
-### 5. Tone Spectrum
-How the voice adapts across contexts while remaining recognizably the same brand.
+### 5. 톤 스펙트럼
+맥락에 따라 보이스가 어떻게 조정되면서도 같은 브랜드로 인식될 수 있는지를 설명합니다.
 
-### 6. Style Rules
-Specific grammar, formatting, and language rules. See the Style Guide Enforcement section below.
+### 6. 스타일 규칙
+구체적인 문법, 서식, 언어 규칙. 아래 스타일 가이드 시행 섹션을 참조하세요.
 
-### 7. Terminology
-Preferred and avoided terms. See the Terminology Management section below.
+### 7. 용어
+선호 및 금지 용어. 아래 용어 관리 섹션을 참조하세요.
 
-## Voice Attributes
+## 보이스 속성
 
-### Common Voice Attribute Pairs
+### 일반적인 보이스 속성 쌍
 
-When defining brand voice, it helps to position attributes on a spectrum. Here are common attribute spectrums:
+브랜드 보이스를 정의할 때 속성을 스펙트럼 상에 위치시키면 도움이 됩니다. 일반적인 속성 스펙트럼은 다음과 같습니다:
 
-| Spectrum | One End | Other End |
+| 스펙트럼 | 한쪽 끝 | 다른 쪽 끝 |
 |----------|---------|-----------|
-| Formality | Formal, institutional | Casual, conversational |
-| Authority | Expert, authoritative | Peer-level, collaborative |
-| Emotion | Warm, empathetic | Direct, matter-of-fact |
-| Complexity | Technical, precise | Simple, accessible |
-| Energy | Bold, energetic | Calm, measured |
-| Humor | Playful, witty | Serious, earnest |
-| Innovation | Cutting-edge, forward-looking | Established, proven |
+| 격식 | 공식적, 기관적 | 캐주얼, 대화체 |
+| 권위 | 전문가적, 권위 있는 | 동료 수준, 협력적 |
+| 감정 | 따뜻한, 공감적 | 직접적, 사실 중심 |
+| 복잡성 | 기술적, 정밀한 | 간결한, 접근 쉬운 |
+| 에너지 | 대담한, 에너지 넘치는 | 차분한, 절제된 |
+| 유머 | 장난기 있는, 위트 있는 | 진지한, 진정성 있는 |
+| 혁신 | 최첨단, 미래 지향적 | 검증된, 신뢰할 수 있는 |
 
-### Defining an Attribute
+### 속성 정의 방법
 
-For each chosen attribute, document it in this format:
+선택한 각 속성에 대해 다음 형식으로 문서화합니다:
 
-**[Attribute name]**
-- **We are**: [what this means in practice]
-- **We are not**: [common misinterpretation to avoid]
-- **This sounds like**: [example sentence demonstrating the attribute]
-- **This does NOT sound like**: [example sentence violating the attribute]
+**[속성 이름]**
+- **우리는**: [이것이 실제로 의미하는 바]
+- **우리는 아닌 것**: [피해야 할 일반적 오해]
+- **이렇게 들립니다**: [속성을 보여주는 예시 문장]
+- **이렇게 들리면 안 됩니다**: [속성을 위반하는 예시 문장]
 
-Example:
+예시:
 
-**Approachable**
-- **We are**: friendly, clear, jargon-free, welcoming to beginners and experts alike
-- **We are not**: dumbed-down, overly casual, or lacking substance
-- **This sounds like**: "Here's how to get started — it takes about five minutes."
-- **This does NOT sound like**: "Yo! This is super easy, even a noob can do it lol."
+**친근한**
+- **우리는**: 친절하고, 명확하며, 전문 용어가 없고, 초보자와 전문가 모두에게 환영하는
+- **우리는 아닌 것**: 수준을 낮추거나, 지나치게 캐주얼하거나, 내용이 없는
+- **이렇게 들립니다**: "시작하는 방법을 안내해 드리겠습니다 -- 약 5분이면 됩니다."
+- **이렇게 들리면 안 됩니다**: "야! 이거 진짜 쉬워요, 초보자도 할 수 있어요 ㅋㅋ"
 
-## Tone Adaptation Across Channels and Contexts
+## 채널 및 맥락별 톤 조정
 
-The brand voice stays consistent, but tone adapts to context. Tone is the emotional inflection applied to the voice.
+브랜드 보이스는 일관되게 유지되지만, 톤은 맥락에 따라 조정됩니다. 톤은 보이스에 적용되는 감정적 뉘앙스입니다.
 
-### Tone by Channel
+### 채널별 톤
 
-| Channel | Tone Adaptation | Example |
-|---------|----------------|---------|
-| Blog | Informative, conversational, educational | "Let's walk through how this works and why it matters for your team." |
-| Social media (LinkedIn) | Professional, thought-provoking, concise | "Three things we learned from running 50 campaigns this quarter." |
-| Social media (Twitter/X) | Punchy, direct, sometimes witty | "Your landing page has 3 seconds. Make them count." |
-| Email marketing | Personal, helpful, action-oriented | "We put together something we think you'll find useful." |
-| Sales collateral | Confident, benefit-driven, specific | "Teams using our platform reduce reporting time by 40%." |
-| Support/Help docs | Clear, patient, step-by-step | "If you see this error, here's how to fix it." |
-| Press release | Formal, factual, newsworthy | "The company today announced the launch of..." |
-| Error messages | Empathetic, helpful, blame-free | "Something went wrong on our end. We're looking into it." |
+| 채널 | 톤 조정 | 예시 |
+|------|---------|------|
+| 블로그 | 정보 제공적, 대화체, 교육적 | "이것이 어떻게 작동하는지, 그리고 왜 팀에게 중요한지 함께 살펴보겠습니다." |
+| 소셜 미디어 (LinkedIn) | 전문적, 생각을 자극하는, 간결한 | "이번 분기에 50개 캠페인을 운영하면서 배운 세 가지." |
+| 소셜 미디어 (Twitter/X) | 임팩트 있는, 직접적, 때때로 위트 있는 | "랜딩 페이지에는 3초가 있습니다. 제대로 활용하세요." |
+| 이메일 마케팅 | 개인적, 도움이 되는, 행동 지향적 | "유용하실 것 같은 자료를 준비했습니다." |
+| 영업 자료 | 자신감 있는, 혜택 중심, 구체적 | "우리 플랫폼을 사용하는 팀은 리포팅 시간을 40% 단축합니다." |
+| 고객 지원/도움말 문서 | 명확한, 인내심 있는, 단계별 | "이 오류가 발생하면 다음과 같이 해결할 수 있습니다." |
+| 보도자료 | 공식적, 사실 중심, 뉴스 가치 있는 | "당사는 오늘 ...의 출시를 발표했습니다." |
+| 에러 메시지 | 공감적, 도움이 되는, 비난하지 않는 | "저희 쪽에서 문제가 발생했습니다. 확인 중입니다." |
 
-### Tone by Situation
+### 상황별 톤
 
-| Situation | Tone Adaptation |
-|-----------|----------------|
-| Product launch | Excited, confident, forward-looking |
-| Incident or outage | Transparent, empathetic, accountable |
-| Customer success story | Celebratory, specific, crediting the customer |
-| Thought leadership | Authoritative, nuanced, evidence-based |
-| Onboarding | Welcoming, encouraging, clear |
-| Bad news (price increase, deprecation) | Honest, respectful, solution-oriented |
-| Competitive comparison | Confident but fair, fact-based, not disparaging |
+| 상황 | 톤 조정 |
+|------|---------|
+| 제품 출시 | 기대감, 자신감, 미래 지향적 |
+| 장애 또는 서비스 중단 | 투명한, 공감적, 책임감 있는 |
+| 고객 성공 사례 | 축하하는, 구체적, 고객을 인정하는 |
+| 사고 리더십 | 권위 있는, 뉘앙스 있는, 증거 기반 |
+| 온보딩 | 환영하는, 격려하는, 명확한 |
+| 부정적 소식 (가격 인상, 기능 폐지) | 솔직한, 존중하는, 해결 지향적 |
+| 경쟁사 비교 | 자신감 있지만 공정한, 사실 기반, 비방하지 않는 |
 
-### Tone Adaptation Rule
-The voice attributes remain fixed. Tone dials them up or down based on context. For example, if a brand is "bold and warm":
-- In a product launch, dial up boldness
-- In an incident response, dial up warmth
-- Neither attribute disappears; the balance shifts
+### 톤 조정 원칙
+보이스 속성은 고정됩니다. 톤은 맥락에 따라 강도를 높이거나 낮춥니다. 예를 들어, 브랜드가 "대담하고 따뜻한" 경우:
+- 제품 출시에서는 대담함을 높입니다
+- 장애 대응에서는 따뜻함을 높입니다
+- 어느 속성도 사라지지 않습니다; 균형이 이동합니다
 
-## Style Guide Enforcement
+## 스타일 가이드 시행
 
-### Grammar and Mechanics
-Document and enforce these choices consistently:
+### 문법 및 기계적 규칙
+다음 선택 사항을 일관되게 문서화하고 시행합니다:
 
-| Rule | Options | Example |
-|------|---------|---------|
-| Oxford comma | Yes / No | "fast, reliable, and secure" vs. "fast, reliable and secure" |
-| Sentence case vs. title case (headings) | Sentence / Title | "How to get started" vs. "How to Get Started" |
-| Contractions | Use / Avoid | "we're" vs. "we are" |
-| Em dash spacing | No spaces / Spaces | "this—and more" vs. "this — and more" |
-| Numbers | Spell out 1-9, numerals 10+ / Always numerals | "five features" vs. "5 features" |
-| Percent | % / percent | "50%" vs. "50 percent" |
-| Date format | Month DD, YYYY / DD/MM/YYYY / etc. | "January 15, 2025" |
-| Time format | 12-hour / 24-hour | "3:00 PM" vs. "15:00" |
-| Lists | Periods / No periods on fragments | "Set up your account." vs. "Set up your account" |
+| 규칙 | 옵션 | 예시 |
+|------|------|------|
+| 옥스퍼드 쉼표 | 사용 / 미사용 | "빠르고, 안정적이며, 안전한" vs. "빠르고, 안정적이며 안전한" |
+| 제목 대소문자 (영문) | 문장형 / 제목형 | "How to get started" vs. "How to Get Started" |
+| 축약형 | 사용 / 미사용 | "we're" vs. "we are" |
+| 엠 대시 간격 | 간격 없음 / 간격 있음 | "this—and more" vs. "this — and more" |
+| 숫자 | 1-9 철자, 10 이상 숫자 / 항상 숫자 | "다섯 가지 기능" vs. "5가지 기능" |
+| 퍼센트 | % / 퍼센트 | "50%" vs. "50 퍼센트" |
+| 날짜 형식 | YYYY년 MM월 DD일 / YYYY-MM-DD 등 | "2025년 1월 15일" |
+| 시간 형식 | 12시간제 / 24시간제 | "오후 3:00" vs. "15:00" |
+| 목록 | 구문에 마침표 / 마침표 없음 | "계정을 설정합니다." vs. "계정을 설정" |
 
-### Formatting Conventions
-- Heading hierarchy (when to use H1, H2, H3)
-- Bold and italic usage (bold for emphasis, italic for titles/terms)
-- Link text (descriptive vs. "click here" — always descriptive)
-- Image alt text requirements
-- Code formatting (for technical brands)
-- Callout or highlight box usage
+### 서식 규칙
+- 제목 계층 (H1, H2, H3 사용 시기)
+- 볼드 및 이탤릭 사용 (강조에 볼드, 제목/용어에 이탤릭)
+- 링크 텍스트 (설명적 vs. "여기를 클릭" — 항상 설명적으로)
+- 이미지 대체 텍스트 요구 사항
+- 코드 서식 (기술 브랜드의 경우)
+- 콜아웃 또는 하이라이트 박스 사용
 
-### Punctuation and Emphasis
-- Exclamation mark policy (limited use, never more than one)
-- Ellipsis usage (avoid in most professional contexts)
-- ALL CAPS policy (avoid; use bold for emphasis instead)
-- Emoji usage by channel (professional channels: minimal or none; social: where appropriate)
+### 구두점 및 강조
+- 느낌표 정책 (제한적 사용, 두 개 이상 금지)
+- 말줄임표 사용 (대부분의 전문적 맥락에서 지양)
+- 전체 대문자 정책 (지양; 강조에는 볼드 사용)
+- 채널별 이모지 사용 (전문적 채널: 최소화 또는 사용하지 않음; 소셜: 적절한 경우)
 
-## Terminology Management
+## 용어 관리
 
-### Preferred Terms
+### 선호 용어
 
-Maintain a list of preferred terms and their incorrect alternatives:
+선호 용어와 부적절한 대안 목록을 관리합니다:
 
-| Use This | Not This | Notes |
-|----------|----------|-------|
-| sign up (verb) | signup (verb) | "signup" is the noun form |
-| log in (verb) | login (verb) | "login" is the noun/adjective form |
-| set up (verb) | setup (verb) | "setup" is the noun/adjective form |
-| email | e-mail | No hyphen |
-| website | web site | One word |
-| data is (singular) | data are | Unless the publication requires plural |
+| 올바른 사용 | 잘못된 사용 | 비고 |
+|-----------|-----------|------|
+| sign up (동사) | signup (동사) | "signup"은 명사형 |
+| log in (동사) | login (동사) | "login"은 명사/형용사형 |
+| set up (동사) | setup (동사) | "setup"은 명사/형용사형 |
+| email | e-mail | 하이픈 없음 |
+| website | web site | 한 단어 |
+| data is (단수) | data are | 출판물에서 복수형을 요구하지 않는 한 |
 
-### Product and Feature Names
-- Official capitalization for product names
-- When to use the full product name vs. shorthand
-- Whether to use "the" before product names
-- How to handle versioning in copy
-- Trademark and registration symbols (when required and when to omit)
+### 제품 및 기능 이름
+- 제품명의 공식 대소문자 표기
+- 전체 제품명 vs. 약칭 사용 시점
+- 제품명 앞에 관사("the") 사용 여부
+- 카피에서 버전 표기 처리 방법
+- 상표 및 등록 기호 (필요한 경우와 생략하는 경우)
 
-### Inclusive Language
-- Use gender-neutral language (they/them for unknown individuals)
-- Avoid ableist language ("crazy", "blind spot", "lame")
-- Use person-first language where appropriate
-- Avoid culturally specific idioms that may not translate
-- Use "simple" or "straightforward" instead of "easy" (what is easy varies by person)
+### 포용적 언어
+- 성별 중립 언어 사용 (불특정 개인에 대해 they/them)
+- 차별적 표현 지양 ("미친", "블라인드 스팟", "구린")
+- 적절한 경우 사람 우선 언어 사용
+- 번역이 어려운 문화 특수 관용구 지양
+- "쉬운" 대신 "간단한" 또는 "직관적인" 사용 (쉬움의 기준은 사람마다 다름)
 
-### Industry Jargon Management
-- Define which technical terms the audience understands without explanation
-- List jargon that should always be defined or replaced with plain language
-- Specify which acronyms need to be spelled out on first use
-- Audience-specific glossary for terms that mean different things to different readers
+### 산업 전문 용어 관리
+- 오디언스가 설명 없이 이해하는 기술 용어 정의
+- 항상 정의하거나 쉬운 말로 대체해야 하는 전문 용어 목록
+- 첫 사용 시 풀어서 써야 하는 약어 지정
+- 독자에 따라 다른 의미를 가질 수 있는 용어에 대한 오디언스별 용어집
 
-### Competitor and Category Terms
-- How to refer to your product category (use your preferred framing)
-- How to refer to competitors (by name or generically)
-- Terms competitors have coined that you should avoid (to prevent reinforcing their positioning)
-- Your preferred differentiation language
+### 경쟁사 및 카테고리 용어
+- 제품 카테고리를 어떻게 지칭할 것인가 (선호하는 프레이밍 사용)
+- 경쟁사를 어떻게 지칭할 것인가 (이름으로 또는 일반적으로)
+- 경쟁사가 만든 용어 중 사용을 피해야 하는 것 (경쟁사의 포지셔닝을 강화하지 않기 위해)
+- 선호하는 차별화 언어

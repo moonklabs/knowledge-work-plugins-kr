@@ -1,163 +1,163 @@
 ---
-description: Build a marketing performance report with key metrics, trends, and optimization recommendations
-argument-hint: "<time period or campaign>"
+description: 핵심 지표, 트렌드, 최적화 권장 사항을 포함한 마케팅 성과 리포트를 작성합니다
+argument-hint: "<기간 또는 캠페인>"
 ---
 
-# Performance Report
+# 성과 리포트
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 참조하세요.
 
-Generate a marketing performance report with key metrics, trend analysis, insights, and optimization recommendations.
+핵심 지표, 트렌드 분석, 인사이트, 최적화 권장 사항을 포함한 마케팅 성과 리포트를 생성합니다.
 
-## Trigger
+## 트리거
 
-User runs `/performance-report` or asks for a marketing report, performance analysis, campaign results, or metrics summary.
+사용자가 `/performance-report`를 실행하거나 마케팅 리포트, 성과 분석, 캠페인 결과, 또는 지표 요약을 요청합니다.
 
-## Inputs
+## 입력
 
-1. **Report type** — determine which type of report the user needs:
-   - **Campaign report** — performance of a specific campaign
-   - **Channel report** — performance across a specific channel (email, social, paid, SEO, etc.)
-   - **Content performance** — how content pieces are performing
-   - **Overall marketing report** — cross-channel summary (weekly, monthly, quarterly)
-   - **Custom** — user-defined scope
+1. **리포트 유형** — 사용자가 필요한 리포트 유형을 결정합니다:
+   - **캠페인 리포트** — 특정 캠페인의 성과
+   - **채널 리포트** — 특정 채널의 성과 (이메일, 소셜, 유료, SEO 등)
+   - **콘텐츠 성과** — 콘텐츠의 성과 현황
+   - **전체 마케팅 리포트** — 크로스 채널 요약 (주간, 월간, 분기)
+   - **맞춤형** — 사용자 정의 범위
 
-2. **Time period** — the reporting window (last week, last month, last quarter, custom date range)
+2. **기간** — 리포팅 기간 (지난 주, 지난 달, 지난 분기, 맞춤 기간)
 
-3. **Data source**:
-   - If ~~product analytics is connected: pull performance data automatically
-   - If not connected: ask the user to provide metrics. Prompt with: "Please paste or share your performance data. I can work with spreadsheets, CSV data, dashboard screenshots described in text, or just the key numbers."
+3. **데이터 소스**:
+   - ~~product analytics가 연결된 경우: 자동으로 성과 데이터를 가져옵니다
+   - 연결되지 않은 경우: 사용자에게 지표를 요청합니다. 다음과 같이 안내합니다: "성과 데이터를 붙여넣거나 공유해 주세요. 스프레드시트, CSV 데이터, 텍스트로 설명한 대시보드 스크린샷, 또는 핵심 수치만으로도 작업할 수 있습니다."
 
-4. **Comparison period** (optional) — prior period or year-over-year for trend context
+4. **비교 기간** (선택 사항) — 트렌드 맥락을 위한 이전 기간 또는 전년 동기 비교
 
-5. **Stakeholder audience** (optional) — who will read this report (executive summary style vs. detailed analyst view)
+5. **리포트 대상** (선택 사항) — 이 리포트를 읽는 대상 (경영진 요약 스타일 vs. 상세 분석 뷰)
 
-## Report Structure
+## 리포트 구조
 
-### 1. Executive Summary
-- 2-3 sentence overview of performance in the period
-- Headline metric with trend direction (up/down/flat vs. prior period)
-- One key win and one area of concern
+### 1. 핵심 요약
+- 해당 기간의 성과에 대한 2-3문장 개요
+- 트렌드 방향이 포함된 헤드라인 지표 (이전 기간 대비 상승/하락/보합)
+- 하나의 주요 성과와 하나의 우려 영역
 
-### 2. Key Metrics Dashboard
+### 2. 핵심 지표 대시보드
 
-Present core metrics in a summary table:
+핵심 지표를 요약 테이블로 제시합니다:
 
-| Metric | This Period | Prior Period | Change | Target | Status |
-|--------|------------|--------------|--------|--------|--------|
+| 지표 | 이번 기간 | 이전 기간 | 변화 | 목표 | 상태 |
+|------|----------|----------|------|------|------|
 
-Status indicators:
-- On track (meeting or exceeding target)
-- At risk (below target but within acceptable range)
-- Off track (significantly below target)
+상태 표시:
+- 순조로움 (목표 달성 또는 초과)
+- 주의 필요 (목표 미달이나 허용 범위 내)
+- 위험 (목표 크게 미달)
 
-#### Metrics by Report Type
+#### 리포트 유형별 지표
 
-**Campaign Report:**
-- Impressions and reach
-- Click-through rate (CTR)
-- Conversion rate
-- Cost per acquisition (CPA)
-- Return on ad spend (ROAS) or ROI
-- Total conversions/signups/leads
-
-**Channel Report (Email):**
-- Emails sent, delivered, bounced
-- Open rate
-- Click-through rate
-- Unsubscribe rate
-- Conversion rate
-
-**Channel Report (Social):**
-- Impressions and reach
-- Engagement rate (likes, comments, shares)
-- Follower growth
-- Click-through rate
-- Top-performing posts
-
-**Channel Report (Paid):**
-- Spend
-- Impressions and clicks
+**캠페인 리포트:**
+- 노출 및 도달 범위
 - CTR
-- CPC and CPM
-- Conversions and CPA
+- 전환율
+- 획득 단가(CPA)
+- 광고비 대비 수익률(ROAS) 또는 ROI
+- 총 전환/가입/리드 수
+
+**채널 리포트 (이메일):**
+- 발송, 수신, 반송 이메일 수
+- 오픈율
+- 클릭률
+- 수신 거부율
+- 전환율
+
+**채널 리포트 (소셜):**
+- 노출 및 도달 범위
+- 참여율 (좋아요, 댓글, 공유)
+- 팔로워 증가
+- 클릭률
+- 최고 성과 게시물
+
+**채널 리포트 (유료):**
+- 집행액
+- 노출 및 클릭
+- CTR
+- CPC 및 CPM
+- 전환 및 CPA
 - ROAS
 
-**Channel Report (SEO/Organic):**
-- Organic sessions
-- Keyword rankings (movement)
-- Pages indexed
-- Backlinks acquired
-- Top-performing pages
+**채널 리포트 (SEO/오가닉):**
+- 오가닉 세션
+- 키워드 랭킹 (변동)
+- 색인된 페이지
+- 확보한 백링크
+- 최고 성과 페이지
 
-**Content Performance:**
-- Pageviews and unique visitors
-- Time on page
-- Bounce rate
-- Social shares
-- Conversions attributed to content
-- Top and bottom performers
+**콘텐츠 성과:**
+- 페이지뷰 및 고유 방문자
+- 페이지 체류 시간
+- 이탈률
+- 소셜 공유
+- 콘텐츠 기여 전환
+- 최고 및 최저 성과 콘텐츠
 
-**Overall Marketing Report:**
-- Total leads generated
-- Marketing qualified leads (MQLs)
-- Pipeline contribution
-- Customer acquisition cost (CAC)
-- Channel-by-channel summary
+**전체 마케팅 리포트:**
+- 총 생성 리드
+- 마케팅 적격 리드(MQL)
+- 파이프라인 기여
+- 고객 획득 비용(CAC)
+- 채널별 요약
 
-### 3. Trend Analysis
-- Performance trend over the period (week-over-week or month-over-month)
-- Notable inflection points and what caused them
-- Seasonal or cyclical patterns observed
-- Comparison to benchmarks or targets
+### 3. 트렌드 분석
+- 기간 동안의 성과 추이 (주간 또는 월간)
+- 주목할 만한 전환점과 원인
+- 관찰된 계절적 또는 주기적 패턴
+- 벤치마크 또는 목표 대비 비교
 
-### 4. What Worked
-- Top 3-5 wins with specific data
-- Why these performed well (hypothesis)
-- How to replicate or scale
+### 4. 효과적이었던 것
+- 구체적인 데이터가 포함된 상위 3-5개 성과
+- 좋은 성과를 낸 이유 (가설)
+- 반복 또는 확대 방법
 
-### 5. What Needs Improvement
-- Bottom 3-5 performers with specific data
-- Hypotheses for underperformance
-- Recommended fixes
+### 5. 개선이 필요한 것
+- 구체적인 데이터가 포함된 하위 3-5개 성과
+- 저성과 원인에 대한 가설
+- 권장 수정 사항
 
-### 6. Insights and Observations
-- Patterns in the data that are not obvious from the metrics alone
-- Audience behavior insights
-- Content or creative themes that resonated
-- External factors that may have influenced performance (seasonality, news, competitive moves)
+### 6. 인사이트 및 관찰
+- 지표만으로는 명확하지 않은 데이터 패턴
+- 오디언스 행동 인사이트
+- 공감을 얻은 콘텐츠 또는 크리에이티브 주제
+- 성과에 영향을 미쳤을 수 있는 외부 요인 (시즌, 뉴스, 경쟁사 동향)
 
-### 7. Recommendations
-For each recommendation:
-- What to do
-- Why (linked to a specific insight from the data)
-- Expected impact (high, medium, low)
-- Effort to implement (high, medium, low)
-- Priority (immediate, next sprint, next quarter)
+### 7. 권장 사항
+각 권장 사항에 대해:
+- 무엇을 해야 하는지
+- 이유 (데이터에서 도출된 구체적 인사이트와 연결)
+- 예상 영향 (높음, 보통, 낮음)
+- 실행 노력 (높음, 보통, 낮음)
+- 우선순위 (즉시, 다음 스프린트, 다음 분기)
 
-Prioritize recommendations in a 2x2 matrix format:
+권장 사항을 2x2 매트릭스 형식으로 우선순위를 정합니다:
 
-| | Low Effort | High Effort |
+| | 낮은 노력 | 높은 노력 |
 |---|---|---|
-| **High Impact** | Do first | Plan for next sprint |
-| **Low Impact** | Do if time allows | Deprioritize |
+| **높은 영향** | 먼저 실행 | 다음 스프린트에 계획 |
+| **낮은 영향** | 시간이 허용되면 실행 | 후순위로 |
 
-### 8. Next Period Focus
-- Top 3 priorities for the upcoming period
-- Tests or experiments to run
-- Targets for key metrics
+### 8. 다음 기간 집중 사항
+- 향후 기간의 상위 3개 우선순위
+- 실행할 테스트 또는 실험
+- 핵심 지표 목표
 
-## Output Formatting
+## 출력 서식
 
-- Use tables for data presentation
-- Bold key numbers and trends
-- Keep the executive summary concise (suitable for forwarding to leadership)
-- Include a "detailed appendix" section for granular data if the user provided a lot of metrics
+- 데이터 제시에 테이블 사용
+- 핵심 수치와 트렌드는 볼드 처리
+- 핵심 요약은 간결하게 (경영진에게 전달하기 적합하도록)
+- 사용자가 많은 지표를 제공한 경우 세부 데이터를 위한 "상세 부록" 섹션 포함
 
-## After the Report
+## 리포트 후
 
-Ask: "Would you like me to:
-- Create a slide-ready summary of these results?
-- Draft a stakeholder email with the key takeaways?
-- Dive deeper into any specific metric or channel?
-- Set up a reporting template you can reuse next period?"
+다음과 같이 질문합니다: "다음 중 원하시는 것이 있으신가요?
+- 이 결과의 슬라이드용 요약을 만들까요?
+- 핵심 시사점을 담은 이해관계자 이메일을 작성할까요?
+- 특정 지표나 채널을 더 심층 분석할까요?
+- 다음 기간에 재사용할 수 있는 리포팅 템플릿을 만들까요?"

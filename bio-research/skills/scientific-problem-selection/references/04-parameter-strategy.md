@@ -1,304 +1,169 @@
-# SKILL 4: Parameter Fixation Strategy
+# 스킬 4: 파라미터 고정 전략
 
-## Overview
-This skill helps scientists strategically decide which parameters to fix and which to keep flexible in their project. The paradox: too many fixed parameters creates brittleness, but too few causes paralysis. The key is fixing ONE parameter thoughtfully and letting others float—constraints engender creativity.
+## 개요
+이 스킬은 과학자가 프로젝트에서 어떤 파라미터를 고정하고 어떤 것을 유연하게 유지할지 전략적으로 결정하도록 돕습니다. 역설: 고정된 파라미터가 너무 많으면 취약성이 생기지만, 너무 적으면 마비됩니다. 핵심은 하나의 파라미터를 신중하게 고정하고 나머지는 유동적으로 두는 것입니다—제약이 창의성을 낳습니다.
 
-## Core Principle
+## 핵심 원칙
 
-**"Fix one parameter; let the others float."**
+**"하나의 파라미터를 고정하고 나머지는 유동적으로 두십시오."**
 
-Most failure modes in ideation involve fixing too many parameters at the outset (system + method + application). Conversely, statements like "I want to do impactful work in cell engineering" are so broad they cause paralysis. The sweet spot: fix one meaningful constraint and let creativity flow within that boundary.
+아이디어 발굴에서 대부분의 실패 모드는 처음부터 너무 많은 파라미터(시스템 + 방법 + 응용)를 고정하는 것입니다. 반대로 "세포 공학에서 영향력 있는 연구를 하고 싶다"는 너무 광범위하여 마비를 일으킵니다. 최적 지점: 하나의 의미 있는 제약을 고정하고 그 경계 안에서 창의성이 흐르게 하는 것입니다.
 
-## What Are Project Parameters?
+## 프로젝트 파라미터란 무엇인가?
 
-Parameters are the choices that define your project:
+파라미터는 프로젝트를 정의하는 선택입니다:
 
-**Common Parameters:**
-- **System:** Which organism/cell type/tissue/molecule?
-- **Question:** What biological phenomenon to study?
-- **Tool/Method:** Which experimental approach?
-- **Application:** What practical use or goal?
-- **Output:** What form will results take?
-- **Collaborators:** Who will you work with?
-- **Timeline:** How fast must you move?
-- **Resources:** What's available/necessary?
+**일반적인 파라미터:**
+- **시스템:** 어떤 생물체/세포 유형/조직/분자?
+- **질문:** 어떤 생물학적 현상을 연구?
+- **도구/방법:** 어떤 실험적 접근법?
+- **응용:** 어떤 실용적 용도 또는 목표?
+- **산출물:** 결과가 어떤 형태를 취할 것인가?
+- **협력자:** 누구와 함께 일할 것인가?
+- **타임라인:** 얼마나 빨리 진행해야 하는가?
+- **자원:** 무엇이 사용 가능/필요한가?
 
-## The Skill Workflow
+## 스킬 워크플로우
 
-### Phase 1: Parameter Inventory (10 minutes)
+### 1단계: 파라미터 목록 작성 (10분)
 
-First, let's identify what's already fixed in your current project idea:
+먼저 현재 프로젝트 아이디어에서 이미 고정된 것을 식별하십시오:
 
-**Question 1: List your project parameters**
+| 파라미터 유형 | 선택 | 상태 (F/FL) | 고정 이유 |
+|-------------|------|-------------|----------|
+| **시스템** | [생물체/세포/조직] | F / FL | [이유] |
+| **질문** | [생물학적 현상] | F / FL | [이유] |
+| **도구/방법** | [기술들] | F / FL | [이유] |
+| **응용** | [사용 사례/목표] | F / FL | [이유] |
+| **타임라인** | [기간] | F / FL | [이유] |
+| **자원** | [장비/자금] | F / FL | [이유] |
 
-For each category, indicate if it's **FIXED** (must stay) or **FLOATING** (could change):
+### 2단계: GLP-1 예시 (사례 연구)
 
-| Parameter Type | Your Choice | Status (F/FL) | Why Fixed? |
-|----------------|-------------|---------------|------------|
-| **System** | [organism/cell/tissue] | F / FL | [reason] |
-| **Question** | [biological phenomenon] | F / FL | [reason] |
-| **Tool/Method** | [techniques] | F / FL | [reason] |
-| **Application** | [use case/goal] | F / FL | [reason] |
-| **Timeline** | [duration] | F / FL | [reason] |
-| **Resources** | [equipment/funding] | F / FL | [reason] |
+**제안 프로젝트:** 지속적 공급을 위해 GLP-1(glucagon-like peptide-1)을 생산하는 T 세포를 엔지니어링합니다.
 
-**Question 2: Count your fixed parameters**
-- How many did you mark as FIXED? _____
-- If >2, you may have over-constrained the problem
+**분석: 무엇이 고정되어 있는가?**
+1. GLP-1 수용체 작용제 전달 특성 개선 (문제)
+2. 엔지니어링된 T 세포 사용 (해결책)
 
-**Question 3: Why are they fixed?**
-For each fixed parameter, is it because:
-A. Your expertise/passion
-B. Lab resources/capabilities  
-C. Advisor requirements
-D. You think it's the "best" solution
-E. Historical accident (you started this way)
+**문제:** 두 개의 파라미터 고정 = 나쁜 기술-응용 적합
 
-### Phase 2: The GLP-1 Example (Case Study)
+**대안적 프레이밍:**
 
-Let's learn from a concrete example:
+**파라미터 1 (GLP-1 전달)을 고정하면:**
+- 해결책을 유동적으로 둠
+- 더 나은 옵션: 연장된 반감기를 위한 펩타이드 엔지니어링, 경구 펩타이드, 소분자, B 세포 (더 나은 단백질 분비)
+- T 세포가 최적이 아닌 이유: 단백질 분비를 위해 설계되지 않음
 
-**Proposed Project:** Engineer a T cell to produce GLP-1 (glucagon-like peptide-1) for continuous supply.
+**파라미터 2 (엔지니어링된 T 세포)를 고정하면:**
+- 응용을 유동적으로 둠
+- 더 나은 옵션: 종양학/자가면역/재생의학을 위한 국소 작용 펩타이드 (사이토카인, 케모카인, 성장인자)
+- GLP-1이 최적이 아닌 이유: T 세포의 자연적 능력을 활용하지 않음
 
-**Analysis: What's Fixed?**
-1. Improving GLP-1 receptor agonist delivery characteristics (the problem)
-2. Using an engineered T cell (the solution)
+**핵심 통찰:** 어떤 파라미터를 고정하느냐는 사용자의 관심사와 실험실의 전문성에 따라 달라집니다.
 
-**Problem:** Two parameters fixed = poor technique-application match
+### 3단계: 진단 질문
 
-**Alternative Framings:**
+**골디락스 테스트:**
 
-**If you fix Parameter 1 (GLP-1 delivery):**
-- Let the solution float
-- Better options: peptide engineering for extended half-life, oral peptides, small molecules, B cells (better protein secretion)
-- Why T cell is suboptimal: Not designed for protein secretion
-- **Best for:** Trainee in metabolism lab who cares about GLP-1
+**너무 많은 고정 파라미터 (>2):**
+- 기술-응용 적합을 강제하고 있습니까?
+- 하나의 가정이 실패하면 모든 것이 실패합니까?
+- 무엇(WHAT)보다 어떻게(HOW)에 더 집착하고 있습니까?
+- 프로젝트가 "X를 사용하여 Z에서 Y를 하겠다"처럼 들립니까?
 
-**If you fix Parameter 2 (Engineered T cell):**
-- Let the application float
-- Better options: local-acting peptides (cytokines, chemokines, growth factors) for oncology/autoimmunity/regeneration
-- Why GLP-1 is suboptimal: Doesn't leverage T cell's natural capabilities
-- **Best for:** Trainee in immunology/cell engineering lab
+**너무 적은 고정 파라미터 (0-1 매우 광범위):**
+- 어디서 시작해야 할지 마비되어 있습니까?
+- 진술이 매우 일반적입니까? ("...에서 영향력 있는 연구를 하겠다")
+- 약속을 피하고 있습니까?
+- 결정 피로가 있습니까?
 
-**Key Insight:** Which parameter you fix depends on YOUR interests and your lab's expertise. Both can lead to great projects, but they're DIFFERENT projects.
+**적절함 (잘 선택된 1-2):**
+- 창의적 제약이 있습니까?
+- 이 제약이 왜 중요한지 명시할 수 있습니까?
+- 하나의 접근법이 실패하면 대안이 존재합니까?
+- 제약이 에너지를 줍니까?
 
-### Phase 3: Diagnostic Questions
+### 4단계: Illumina 예시 (제약이 혁신을 주도)
 
-**The Goldilocks Test:**
+**역사적 맥락:** 차세대 시퀀싱은 설계되지 않았습니다; 우리는 Illumina의 접근법(많은 짧은 리드)을 얻었습니다.
 
-**Too Many Fixed Parameters (>2):**
-- Are you forcing a technique-application match?
-- If one assumption fails, does everything fail?
-- Are you more attached to HOW than WHAT?
-- Does your project sound like: "Use X to do Y in Z"?
+**초기 제약:** 짧은 리드는 한계처럼 보였습니다
+- 우리가 "요청했을" 것이 아님
+- 긴 리드보다 열등해 보임
 
-**Too Few Fixed Parameters (0-1 very broad):**
-- Do you feel paralyzed where to start?
-- Is your statement super generic? ("Do impactful work in...")
-- Are you avoiding commitment?
-- Do you have decision fatigue?
+**촉발된 혁신:**
+- 계산 방법 (조립 알고리즘)
+- 새로운 응용 (RNA-seq, ChIP-seq, ATAC-seq)
+- 예상치 못한 사용 (시퀀싱을 통한 단백질 접힘)
+- 제약 내에서 작동하는 생화학적 창의성
 
-**Just Right (1-2 well-chosen):**
-- Do you have creative constraints?
-- Can you articulate why THIS constraint matters?
-- If one approach fails, do alternatives exist?
-- Does the constraint energize you?
-
-### Phase 4: The Illumina Example (Constraints Drive Innovation)
-
-**Historical Context:** Next-generation sequencing wasn't designed; we got Illumina's approach (many short reads).
-
-**Initial Constraint:** Short reads seemed like a limitation
-- Not what we would have "asked for"
-- Seemed inferior to long reads
+**교훈:** 제약은 창의성을 제한하지 않고 집중시킵니다. 막혔다면 하나의 파라미터를 고정하고 자원의 발휘를 관찰하십시오.
 
-**Innovation Unleashed:**
-- Computational methods (assembly algorithms)
-- Novel applications (RNA-seq, ChIP-seq, ATAC-seq)
-- Unexpected uses (protein folding via sequencing)
-- Biochemical creativity to work within constraints
+### 5단계: 어떤 파라미터를 고정해야 하는가?
 
-**Lesson:** Constraints don't limit creativity—they focus it. If you feel stuck, fix ONE parameter and watch resourcefulness emerge.
-
-### Phase 5: Which Parameter Should You Fix?
+**올바른 고정 파라미터를 식별하기 위한 전략적 질문:**
 
-**Strategic Questions to Identify the Right Fixed Parameter:**
-
-1. **What can you prototype quickly?**
-   - What test article could you build rapidly?
-   - Which experimental conditions enable early go/no-go?
-   - What gives you fastest feedback?
+1. **빠르게 프로토타이핑할 수 있는 것은?**
+2. **주변 사람들이 유난히 잘하는 것은?**
+3. **일로 느껴지지 않을 만큼 즐기는 것은?**
+4. **경쟁 우위는?**
 
-2. **What are people around you unusually good at?**
-   - Lab expertise?
-   - Core facility capabilities?
-   - Collaborator strengths?
-   - Your unique skill combination?
+**일반적인 전략적 선택:**
 
-3. **What do you enjoy so much you don't think of it as work?**
-   - System you're passionate about?
-   - Technique you love?
-   - Type of question that excites you?
+**시스템 고정 (질문과 도구는 유동적):**
+- 적합: 생물체/조직/세포 유형의 전문가
+- 가능: 여러 질문, 다양한 도구 시도
 
-4. **What's your competitive advantage?**
-   - Unique resource access?
-   - Rare skill combination?
-   - Proprietary data/reagents?
-   - First-mover opportunity?
+**질문 고정 (시스템과 도구는 유동적):**
+- 적합: 생물학적 현상에 깊이 관심
+- 가능: 시스템 간 테스트, 각각에 최적의 도구 사용
 
-**Common Strategic Choices:**
+**도구 고정 (시스템과 질문은 유동적):**
+- 적합: 기술을 개발하거나 마스터하는 중
+- 가능: 최적의 응용 찾기, 시스템 간 비교
 
-**Fix the System (Let question & tool float):**
-- Good if: You're an expert in the organism/tissue/cell type
-- Enables: Asking multiple questions, trying various tools
-- Example: "I study *Drosophila* neural development; I'll let the specific questions and methods emerge"
+**응용 고정 (시스템과 도구는 유동적):**
+- 적합: 특정 중개적 목표가 있음
+- 가능: 여러 접근법 시도, 다른 모델에서 테스트
 
-**Fix the Question (Let system & tool float):**
-- Good if: You care deeply about a biological phenomenon
-- Enables: Testing across systems, using best tool for each
-- Example: "I want to understand phase separation; I'll study it wherever it's clearest"
+## 산출물
 
-**Fix the Tool (Let system & question float):**
-- Good if: You're developing or mastering a technology
-- Enables: Finding best applications, comparing across systems
-- Example: "I'm building a new microscopy method; I'll find the most impactful uses"
+**2페이지 파라미터 전략 문서**
 
-**Fix the Application (Let system & tool float):**
-- Good if: You have a specific translational goal
-- Enables: Trying multiple approaches, testing in different models
-- Example: "I want to treat disease X; I'm open to any validated approach"
+### 1페이지: 현재 상태 및 분석
 
-### Phase 6: Parameter Flexibility Matrix
+#### 파라미터 목록:
+| 파라미터 | 현재 상태 | 전략적 근거 | 유연성 |
+|---------|----------|-----------|--------|
+| 시스템 | 고정: [X] | [이유] | 다음 경우 유동 가능: [조건] |
+| 질문 | 유동: [Y,Z] | [이유] | 제약: [X] |
+| 도구 | [상태] | [이유] | [비상 계획] |
+| 응용 | [상태] | [이유] | [비상 계획] |
 
-For your project, let's create a flexibility assessment:
+#### 진단 요약:
+- **고정된 파라미터:** [수 및 목록]
+- **평가:** ☐ 너무 많음 (>2) / ☐ 적절함 (1-2) / ☐ 너무 적음 (0, 너무 광범위)
+- **주요 고정 파라미터:** [가장 중요한 것]
+- **고정 이유:** [전문성/열정/자원/기타]
 
-| Parameter | Currently | Should Be? | If Problem Arises, Could This Float? |
-|-----------|-----------|------------|--------------------------------------|
-| System | [F/FL] | [F/FL] | Yes / No / Maybe |
-| Question | [F/FL] | [F/FL] | Yes / No / Maybe |
-| Tool | [F/FL] | [F/FL] | Yes / No / Maybe |
-| Application | [F/FL] | [F/FL] | Yes / No / Maybe |
-| Timeline | [F/FL] | [F/FL] | Yes / No / Maybe |
-| Resources | [F/FL] | [F/FL] | Yes / No / Maybe |
+### 2페이지: 전략 및 비상 계획
 
-**Analysis:**
-- **Flexibility Score:** How many "Yes" or "Maybe"? _____
-- **Risk Assessment:** If <3 can float, you're brittle
-- **Pivot Potential:** Which parameters provide escape routes?
+#### 권장 파라미터 전략:
+**핵심 고정 파라미터:** [유지할 것]
+- **근거:** [왜 이것인가]
+- **장점:** [전문성/접근/열정]
+- **가능해지는 것:** [무엇이 가능해지는가]
 
-### Phase 7: Scenario Planning
+**유동적이어야 하는 파라미터:** [목록]
 
-For each fixed parameter, let's plan what happens if it becomes untenable:
+#### 핵심 가정 실패 시:
+**시나리오 1:** [특정 실패 모드]
+- 유동화: [어떤 파라미터]
+- 대안 1: [새로운 구성]
+- 대안 2: [다른 옵션]
 
-**Fixed Parameter 1: [Name it]**
-- **Why it's fixed:** [Your reason]
-- **Risk if this fails:** [What breaks]
-- **Contingency:** [What could you float instead]
-- **Alternative project:** [If you fixed something else]
-
-**Fixed Parameter 2: [Name it]**
-- **Why it's fixed:** [Your reason]  
-- **Risk if this fails:** [What breaks]
-- **Contingency:** [What could you float instead]
-- **Alternative project:** [If you fixed something else]
-
-### Phase 8: The Unfixing Exercise
-
-Sometimes you need to unfix parameters to escape a rut:
-
-**Current State:** [Describe your over-constrained project]
-
-**Unfixing Experiment:**
-
-**Try 1: Unfix the System**
-- Keep question & tool
-- What other systems could you study?
-- Which would be easier/faster/more informative?
-
-**Try 2: Unfix the Tool**
-- Keep system & question
-- What other methods exist?
-- Which are more mature/accessible/powerful?
-
-**Try 3: Unfix the Question**
-- Keep system & tool
-- What other questions could you ask?
-- Which would be more impactful/feasible?
-
-**Evaluation:** Does any "unfixed" version seem better than your original? If yes, you over-constrained.
-
-### Phase 9: Literature Reality Check
-
-Let's use PubMed to see how others handled parameter fixation:
-
-**Search 1: Successful projects in your area**
-- What did they fix?
-- What did they let float?
-- Did they pivot from their initial parameter choices?
-
-**Search 2: Failed or stalled projects**
-- (Often in discussion sections or preprints)
-- Did they over-constrain?
-- What parameters trapped them?
-
-**Search 3: Method papers**
-- How did technology developers choose applications?
-- Did they fix the tool and let applications emerge?
-
-**Your Searches:**
-What specific papers should we analyze for parameter lessons?
-
-## Output Deliverable
-
-**2-Page Parameter Strategy Document**
-
-### Page 1: Current State and Analysis
-
-#### Parameter Inventory:
-| Parameter | Current Status | Strategic Rationale | Flexibility |
-|-----------|----------------|---------------------|-------------|
-| System | Fixed: [X] | [Why] | Can float if: [condition] |
-| Question | Floating: [Y,Z] | [Why] | Constrained by: [X] |
-| Tool | [Status] | [Why] | [Contingency] |
-| Application | [Status] | [Why] | [Contingency] |
-
-#### Diagnostic Summary:
-- **Fixed Parameters:** [Count and list]
-- **Assessment:** ☐ Too Many (>2) / ☐ Just Right (1-2) / ☐ Too Few (0, too broad)
-- **Primary Fixed Parameter:** [The one that matters most]
-- **Reason for Fixation:** [Expertise/Passion/Resources/Other]
-
-#### Goldilocks Test Results:
-- Over-constrained indicators: [Yes/No to each test]
-- Under-constrained indicators: [Yes/No to each test]
-- Verdict: [Analysis]
-
-### Page 2: Strategy and Contingencies
-
-#### Recommended Parameter Strategy:
-
-**Core Fixed Parameter:** [The one to keep]
-- **Rationale:** [Why this one]
-- **Your advantage:** [Expertise/access/passion]
-- **Enables:** [What becomes possible]
-
-**Parameters That Should Float:** [List]
-- [Parameter 1]: [How to explore alternatives]
-- [Parameter 2]: [How to explore alternatives]
-
-#### If Core Assumptions Fail:
-
-**Scenario 1: [Specific failure mode]**
-- **Unfix:** [Which parameter to let float]
-- **Alternative 1:** [New configuration]
-- **Alternative 2:** [Another option]
-
-**Scenario 2: [Another failure mode]**
-- **Unfix:** [Which parameter]
-- **Alternative 1:** [New configuration]
-- **Alternative 2:** [Another option]
-
-#### Project Ensemble:
+#### 프로젝트 앙상블:
 ```
 Core Fixed: [X]
 
@@ -310,87 +175,26 @@ Possible Projects:
 All share [X], but float other parameters
 ```
 
-#### Strategic Questions Answered:
-1. **Quick prototype:** [How to test quickly]
-2. **Team strengths:** [Who's good at what]
-3. **Your passion:** [What energizes you]
-4. **Competitive advantage:** [Your edge]
+## 핵심 원칙
 
-#### Historical Parallel:
-[Example like Illumina where constraints drove innovation in your field]
-- The constraint: [What seemed limiting]
-- The innovation: [How people worked within it]
-- Your application: [How this applies to your project]
+1. **제약이 창의성을 낳습니다:** 한계가 자원의 발휘를 집중시킵니다
+2. **하나의 파라미터 규칙:** 하나의 의미 있는 제약을 고정하고 나머지는 유동적으로
+3. **강점에 맞추십시오:** 우위가 있는 파라미터를 고정
+4. **기술-응용 적합:** 도구를 잘못된 문제에 강제하지 마십시오
+5. **유연성 = 회복력:** 유동 파라미터가 피벗 옵션을 제공
+6. **역사적 교훈:** 최고의 기술은 제약 내에서 작동하며 등장 (Illumina)
+7. **영원하지 않음:** 파라미터는 프로젝트 중간에 막혔을 때 해제할 수 있음
 
-## Practical Examples
+## 시작할 준비가 되었습니까?
 
-### Example 1: GLP-1 T Cell Project (Over-Constrained)
-- **Fixed:** GLP-1 delivery + T cell engineering
-- **Problem:** Poor technique-application match
-- **Solution:** Unfix one parameter
-  - Fix delivery, float cell type → Better options emerge
-  - Fix T cell, float payload → Better applications emerge
+1단계부터 시작하겠습니다. 다음을 제공해 주십시오:
+1. 현재 프로젝트 설명
+2. 고정 vs. 유동이라고 생각하는 것의 목록
+3. 실험실의 핵심 전문성
+4. 가장 흥미로운 측면
 
-### Example 2: Drosophila Neurobiologist (Well-Constrained)
-- **Fixed:** *Drosophila* nervous system
-- **Floating:** Specific questions, methods
-- **Works because:** Deep system expertise, many tools available
-- **Enables:** Pursuing most impactful questions as field evolves
-
-### Example 3: "Impactful Cell Engineering" (Under-Constrained)
-- **Fixed:** Nothing specific
-- **Problem:** Paralysis from too many options
-- **Solution:** Fix one meaningful constraint
-  - Option A: Fix CAR-T platform → Find best applications
-  - Option B: Fix autoimmune disease → Find best cell engineering approach
-  - Option C: Fix specific rare disease → Let methods emerge
-
-## Key Principles to Remember
-
-1. **Constraints Engender Creativity:** Limitations focus resourcefulness
-
-2. **One Parameter Rule:** Fix one meaningful constraint, let others float
-
-3. **Match to Your Strengths:** Fix the parameter you have advantage in
-
-4. **Technique-Application Match:** Don't force tools into wrong problems
-
-5. **Flexibility = Resilience:** Floating parameters provide pivot options
-
-6. **Historical Lesson:** Best technologies emerged from working within constraints (Illumina)
-
-7. **Not Forever:** Parameters can unfix mid-project when stuck
-
-## Warning Signs
-
-**Over-Constrained (Too Many Fixed):**
-- Project sounds like: "Use X to study Y in Z"
-- When one assumption fails, everything fails
-- You're attached to HOW more than WHAT
-- Forcing a technique-application match
-
-**Under-Constrained (Too Few/Vague):**
-- Statement is incredibly broad ("impactful work in...")
-- Feeling paralyzed about where to start
-- Avoiding commitment due to infinite options
-- No clear next experimental step
-
-**Well-Constrained:**
-- One clear fixed parameter with good rationale
-- Multiple paths within that constraint
-- Energized by the focused challenge
-- If one approach fails, alternatives exist
-
-## Ready to Begin?
-
-Let's start with Phase 1. Please provide:
-1. Your current project description
-2. List of what you think is fixed vs. floating
-3. Your lab's core expertise
-4. What aspect excites you most
-
-Together we'll optimize your parameter strategy for maximum creativity and resilience.
+함께 최대 창의성과 회복력을 위한 파라미터 전략을 최적화하겠습니다.
 
 ---
 
-*Remember: The right constraint is liberating, not limiting. It channels creativity into productive directions while maintaining flexibility for pivots.*
+*기억하십시오: 올바른 제약은 해방적이지 제한적이지 않습니다. 피벗을 위한 유연성을 유지하면서 창의성을 생산적인 방향으로 안내합니다.*

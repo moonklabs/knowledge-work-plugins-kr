@@ -1,196 +1,198 @@
 ---
 name: user-research-synthesis
-description: Synthesize qualitative and quantitative user research into structured insights and opportunity areas. Use when analyzing interview notes, survey responses, support tickets, or behavioral data to identify themes, build personas, or prioritize opportunities.
+description: 정성적 및 정량적 사용자 조사를 체계적인 인사이트와 기회 영역으로 종합합니다. 인터뷰 노트, 설문 응답, 지원 티켓, 행동 데이터를 분석하여 테마를 식별하고, 페르소나를 구축하고, 기회를 우선순위화할 때 사용합니다.
 ---
 
-# User Research Synthesis Skill
+# 사용자 조사 종합 스킬
 
-You are an expert at synthesizing user research — turning raw qualitative and quantitative data into structured insights that drive product decisions. You help product managers make sense of interviews, surveys, usability tests, support data, and behavioral analytics.
+사용자 조사 종합 전문가입니다 — 정성적, 정량적 원시 데이터를 제품 의사결정을 이끄는 체계적인 인사이트로 전환합니다. 제품 관리자가 인터뷰, 설문, 사용성 테스트, 지원 데이터, 행동 분석을 이해하는 것을 도와줍니다.
 
-## Research Synthesis Methodology
+## 조사 종합 방법론
 
-### Thematic Analysis
-The core method for synthesizing qualitative research:
+### 주제 분석 (Thematic Analysis)
+정성적 조사를 종합하는 핵심 방법입니다:
 
-1. **Familiarization**: Read through all the data. Get a feel for the overall landscape before coding anything.
-2. **Initial coding**: Go through the data systematically. Tag each observation, quote, or data point with descriptive codes. Be generous with codes — it is easier to merge than to split later.
-3. **Theme development**: Group related codes into candidate themes. A theme captures something important about the data in relation to the research question.
-4. **Theme review**: Check themes against the data. Does each theme have sufficient evidence? Are themes distinct from each other? Do they tell a coherent story?
-5. **Theme refinement**: Define and name each theme clearly. Write a 1-2 sentence description of what each theme captures.
-6. **Report**: Write up the themes as findings with supporting evidence.
+1. **숙지**: 모든 데이터를 읽습니다. 코딩하기 전에 전체적인 윤곽을 파악합니다.
+2. **초기 코딩**: 데이터를 체계적으로 검토합니다. 각 관찰, 인용, 데이터 포인트에 서술적 코드를 태그합니다. 코드를 넉넉하게 부여합니다 — 나중에 병합하는 것이 분리하는 것보다 쉽습니다.
+3. **테마 개발**: 관련 코드를 후보 테마로 그룹화합니다. 테마는 조사 질문과 관련하여 데이터에서 중요한 것을 포착합니다.
+4. **테마 검토**: 데이터에 대해 테마를 확인합니다. 각 테마에 충분한 근거가 있는가? 테마들이 서로 구별되는가? 일관된 이야기를 말하는가?
+5. **테마 정제**: 각 테마를 명확하게 정의하고 명명합니다. 각 테마가 포착하는 것에 대해 1-2문장 설명을 작성합니다.
+6. **보고**: 테마를 뒷받침하는 근거와 함께 발견 사항으로 작성합니다.
 
-### Affinity Mapping
-A collaborative method for grouping observations:
+### 어피니티 매핑 (Affinity Mapping)
+관찰을 그룹화하는 협업 방법입니다:
 
-1. **Capture observations**: Write each distinct observation, quote, or data point as a separate note
-2. **Cluster**: Group related notes together based on similarity. Do not pre-define categories — let them emerge from the data.
-3. **Label clusters**: Give each cluster a descriptive name that captures the common thread
-4. **Organize clusters**: Arrange clusters into higher-level groups if patterns emerge
-5. **Identify themes**: The clusters and their relationships reveal the key themes
+1. **관찰 기록**: 각 개별 관찰, 인용, 데이터 포인트를 별도의 노트로 작성합니다
+2. **클러스터링**: 유사성에 따라 관련 노트를 함께 그룹화합니다. 카테고리를 미리 정의하지 않습니다 — 데이터에서 자연스럽게 도출합니다.
+3. **클러스터 라벨링**: 각 클러스터에 공통 스레드를 포착하는 서술적 이름을 부여합니다
+4. **클러스터 정리**: 패턴이 나타나면 클러스터를 상위 수준 그룹으로 배열합니다
+5. **테마 식별**: 클러스터와 그 관계가 핵심 테마를 드러냅니다
 
-**Tips for affinity mapping**:
-- One observation per note. Do not combine multiple insights.
-- Move notes between clusters freely. The first grouping is rarely the best.
-- If a cluster gets too large, it probably contains multiple themes. Split it.
-- Outliers are interesting. Do not force every observation into a cluster.
-- The process of grouping is as valuable as the output. It builds shared understanding.
+**어피니티 매핑 팁**:
+- 노트당 하나의 관찰. 여러 인사이트를 결합하지 않습니다.
+- 클러스터 간에 자유롭게 노트를 이동합니다. 첫 번째 그룹화가 최선인 경우는 드뭅니다.
+- 클러스터가 너무 커지면 여러 테마를 포함하고 있을 가능성이 있습니다. 분리합니다.
+- 이상값은 흥미롭습니다. 모든 관찰을 억지로 클러스터에 넣지 않습니다.
+- 그룹화 과정 자체가 결과물만큼 가치가 있습니다. 공유된 이해를 구축합니다.
 
-### Triangulation
-Strengthen findings by combining multiple data sources:
+### 삼각검증 (Triangulation)
+여러 데이터 소스를 결합하여 발견 사항을 강화합니다:
 
-- **Methodological triangulation**: Same question, different methods (interviews + survey + analytics)
-- **Source triangulation**: Same method, different participants or segments
-- **Temporal triangulation**: Same observation at different points in time
+- **방법론적 삼각검증**: 동일한 질문, 다른 방법 (인터뷰 + 설문 + 분석)
+- **소스 삼각검증**: 동일한 방법, 다른 참여자 또는 세그먼트
+- **시간적 삼각검증**: 다른 시점에서의 동일한 관찰
 
-A finding supported by multiple sources and methods is much stronger than one supported by a single source. When sources disagree, that is interesting — it may reveal different user segments or contexts.
+여러 소스와 방법으로 뒷받침되는 발견 사항은 단일 소스보다 훨씬 강력합니다. 소스가 일치하지 않을 때, 그것은 흥미로운 것입니다 — 다른 사용자 세그먼트나 맥락을 드러낼 수 있습니다.
 
-## Interview Note Analysis
+## 인터뷰 노트 분석
 
-### Extracting Insights from Interview Notes
-For each interview, identify:
+### 인터뷰 노트에서 인사이트 추출
+각 인터뷰에서 식별합니다:
 
-**Observations**: What did the participant describe doing, experiencing, or feeling?
-- Distinguish between behaviors (what they do) and attitudes (what they think/feel)
-- Note context: when, where, with whom, how often
-- Flag workarounds — these are unmet needs in disguise
+**관찰**: 참여자가 무엇을 하고, 경험하고, 느낀다고 설명했는가?
+- 행동 (무엇을 하는가)과 태도 (무엇을 생각하고 느끼는가)를 구분합니다
+- 맥락을 기록합니다: 언제, 어디서, 누구와, 얼마나 자주
+- 우회 방법에 주목합니다 — 이것은 위장된 미충족 니즈입니다
 
-**Direct quotes**: Verbatim statements that powerfully illustrate a point
-- Good quotes are specific and vivid, not generic
-- Attribute to participant type, not name: "Enterprise admin, 200-person team" not "Sarah"
-- A quote is evidence, not a finding. The finding is your interpretation of what the quote means.
+**직접 인용**: 중요한 포인트를 강력하게 보여주는 원문 진술
+- 좋은 인용은 구체적이고 생생하며, 일반적이지 않습니다
+- 이름이 아닌 참여자 유형으로 귀속합니다: "200명 팀의 엔터프라이즈 관리자"이지 "사라"가 아닙니다
+- 인용은 근거이지 발견 사항이 아닙니다. 발견 사항은 인용이 의미하는 바에 대한 해석입니다.
 
-**Behaviors vs stated preferences**: What people DO often differs from what they SAY they want
-- Behavioral observations are stronger evidence than stated preferences
-- If a participant says "I want feature X" but their workflow shows they never use similar features, note the contradiction
-- Look for revealed preferences through actual behavior
+**행동 vs 진술된 선호**: 사람들이 하는 것은 원한다고 말하는 것과 종종 다릅니다
+- 행동적 관찰이 진술된 선호보다 강력한 근거입니다
+- 참여자가 "기능 X를 원합니다"라고 하지만 워크플로우에서 유사한 기능을 사용하지 않는다면, 그 모순을 기록합니다
+- 실제 행동을 통한 드러난 선호를 찾습니다
 
-**Signals of intensity**: How much does this matter to the participant?
-- Emotional language: frustration, excitement, resignation
-- Frequency: how often do they encounter this issue
-- Workarounds: how much effort do they expend working around the problem
-- Impact: what is the consequence when things go wrong
+**강도의 신호**: 이것이 참여자에게 얼마나 중요한가?
+- 감정적 언어: 좌절, 흥분, 체념
+- 빈도: 이 이슈를 얼마나 자주 접하는가
+- 우회 방법: 문제를 해결하기 위해 얼마나 많은 노력을 기울이는가
+- 영향: 일이 잘못될 때 결과는 무엇인가
 
-### Cross-Interview Analysis
-After processing individual interviews:
-- Look for patterns: which observations appear across multiple participants?
-- Note frequency: how many participants mentioned each theme?
-- Identify segments: do different types of users have different patterns?
-- Surface contradictions: where do participants disagree? This often reveals meaningful segments.
-- Find surprises: what challenged your prior assumptions?
+### 인터뷰 간 분석
+개별 인터뷰 처리 후:
+- 패턴을 찾습니다: 어떤 관찰이 여러 참여자에 걸쳐 나타나는가?
+- 빈도를 기록합니다: 각 테마를 몇 명의 참여자가 언급했는가?
+- 세그먼트를 식별합니다: 다른 유형의 사용자가 다른 패턴을 보이는가?
+- 모순을 표면화합니다: 참여자 간 의견이 다른 곳은 어디인가? 이것은 종종 의미 있는 세그먼트를 드러냅니다.
+- 놀라운 점을 찾습니다: 이전 가정에 도전하는 것은 무엇인가?
 
-## Survey Data Interpretation
+## 설문 데이터 해석
 
-### Quantitative Survey Analysis
-- **Response rate**: How representative is the sample? Low response rates may introduce bias.
-- **Distribution**: Look at the shape of responses, not just averages. A bimodal distribution (lots of 1s and 5s) tells a different story than a normal distribution (lots of 3s).
-- **Segmentation**: Break down responses by user segment. Aggregates can mask important differences.
-- **Statistical significance**: For small samples, be cautious about drawing conclusions from small differences.
-- **Benchmark comparison**: How do scores compare to industry benchmarks or previous surveys?
+### 정량적 설문 분석
+- **응답률**: 표본이 얼마나 대표적인가? 낮은 응답률은 편향을 도입할 수 있습니다.
+- **분포**: 평균이 아닌 응답의 형태를 봅니다. 양봉 분포 (1과 5가 많음)는 정규 분포 (3이 많음)와 다른 이야기를 합니다.
+- **세분화**: 사용자 세그먼트별로 응답을 분해합니다. 총계는 중요한 차이를 가릴 수 있습니다.
+- **통계적 유의성**: 작은 표본의 경우, 작은 차이에서 결론을 도출하는 것에 주의합니다.
+- **벤치마크 비교**: 점수가 산업 벤치마크 또는 이전 설문과 어떻게 비교되는가?
 
-### Open-Ended Survey Response Analysis
-- Treat open-ended responses like mini interview notes
-- Code each response with themes
-- Count frequency of themes across responses
-- Pull representative quotes for each theme
-- Look for themes that appear in open-ended responses but not in structured questions — these are things you did not think to ask about
+### 개방형 설문 응답 분석
+- 개방형 응답을 미니 인터뷰 노트처럼 취급합니다
+- 각 응답에 테마로 코딩합니다
+- 응답 전체에서 테마 빈도를 집계합니다
+- 각 테마에 대한 대표적 인용을 뽑습니다
+- 구조화된 질문에는 없지만 개방형 응답에 나타나는 테마를 찾습니다 — 이것은 물어보지 않은 것들입니다
 
-### Common Survey Analysis Mistakes
-- Reporting averages without distributions. A 3.5 average could mean everyone is lukewarm or half love it and half hate it.
-- Ignoring non-response bias. The people who did not respond may be systematically different.
-- Over-interpreting small differences. A 0.1 point change in NPS is noise, not signal.
-- Treating Likert scales as interval data. The difference between "Strongly Agree" and "Agree" is not necessarily the same as between "Agree" and "Neutral."
-- Confusing correlation with causation in cross-tabulations.
+### 일반적인 설문 분석 실수
+- 분포 없이 평균만 보고합니다. 3.5 평균은 모두가 미지근한 것일 수도, 반은 좋아하고 반은 싫어하는 것일 수도 있습니다.
+- 비응답 편향을 무시합니다. 응답하지 않은 사람들은 체계적으로 다를 수 있습니다.
+- 작은 차이를 과대 해석합니다. NPS의 0.1 포인트 변화는 노이즈이지 신호가 아닙니다.
+- 리커트 척도를 등간 데이터로 취급합니다. "매우 동의"와 "동의" 사이의 차이가 "동의"와 "중립" 사이의 차이와 반드시 같지 않습니다.
+- 교차 표에서 상관관계를 인과관계로 혼동합니다.
 
-## Combining Qualitative and Quantitative Insights
+## 정성적 및 정량적 인사이트 결합
 
-### The Qual-Quant Feedback Loop
-- **Qualitative first**: Interviews and observation reveal WHAT is happening and WHY. They generate hypotheses.
-- **Quantitative validation**: Surveys and analytics reveal HOW MUCH and HOW MANY. They test hypotheses at scale.
-- **Qualitative deep-dive**: Return to qualitative methods to understand unexpected quantitative findings.
+### 정성-정량 피드백 루프
+- **정성적 먼저**: 인터뷰와 관찰은 무엇이 일어나고 있고 왜인지 드러냅니다. 가설을 생성합니다.
+- **정량적 검증**: 설문과 분석은 얼마나 많이, 얼마나 자주인지 드러냅니다. 대규모로 가설을 검증합니다.
+- **정성적 심층 분석**: 예상치 못한 정량적 발견을 이해하기 위해 정성적 방법으로 돌아갑니다.
 
-### Integration Strategies
-- Use quantitative data to prioritize qualitative findings. A theme from interviews is more important if usage data shows it affects many users.
-- Use qualitative data to explain quantitative anomalies. A drop in retention is a number; interviews reveal it is because of a confusing onboarding change.
-- Present combined evidence: "47% of surveyed users report difficulty with X (survey), and interviews reveal this is because Y (qualitative finding)."
+### 통합 전략
+- 정량적 데이터를 사용하여 정성적 발견의 우선순위를 매깁니다. 인터뷰의 테마가 사용 데이터에서 많은 사용자에게 영향을 미치는 것으로 나타나면 더 중요합니다.
+- 정성적 데이터를 사용하여 정량적 이상을 설명합니다. 리텐션 감소는 숫자입니다; 인터뷰는 혼란스러운 온보딩 변경 때문이라는 것을 드러냅니다.
+- 결합된 근거를 제시합니다: "설문 응답자의 47%가 X에 어려움을 보고하며 (설문), 인터뷰는 이것이 Y 때문이라는 것을 드러냅니다 (정성적 발견)."
 
-### When Sources Disagree
-- Quantitative and qualitative sources may tell different stories. This is signal, not error.
-- Check if the disagreement is due to different populations being measured
-- Check if stated preferences (survey) differ from actual behavior (analytics)
-- Check if the quantitative question captured what you think it captured
-- Report the disagreement honestly and investigate further rather than choosing one source
+### 소스가 일치하지 않을 때
+- 정량적과 정성적 소스가 다른 이야기를 할 수 있습니다. 이것은 오류가 아닌 신호입니다.
+- 불일치가 측정되는 집단의 차이 때문인지 확인합니다
+- 진술된 선호 (설문)가 실제 행동 (분석)과 다른지 확인합니다
+- 정량적 질문이 의도한 것을 포착했는지 확인합니다
+- 하나의 소스를 선택하기보다 불일치를 정직하게 보고하고 추가 조사합니다
 
-## Persona Development from Research
+## 조사 기반 페르소나 개발
 
-### Building Evidence-Based Personas
-Personas should emerge from research data, not imagination:
+### 근거 기반 페르소나 구축
+페르소나는 상상이 아닌 조사 데이터에서 도출되어야 합니다:
 
-1. **Identify behavioral patterns**: Look for clusters of similar behaviors, goals, and contexts across participants
-2. **Define distinguishing variables**: What dimensions differentiate one cluster from another? (e.g., company size, technical skill, usage frequency, primary use case)
-3. **Create persona profiles**: For each behavioral cluster:
-   - Name and brief description
-   - Key behaviors and goals
-   - Pain points and needs
-   - Context (role, company, tools used)
-   - Representative quotes
-4. **Validate with data**: Can you size each persona segment using quantitative data?
+1. **행동 패턴 식별**: 참여자 전체에서 유사한 행동, 목표, 맥락의 클러스터를 찾습니다
+2. **구별 변수 정의**: 하나의 클러스터를 다른 것과 구별하는 차원은 무엇인가? (예: 회사 규모, 기술 숙련도, 사용 빈도, 주요 사용 사례)
+3. **페르소나 프로필 생성**: 각 행동 클러스터에 대해:
+   - 이름 및 간략한 설명
+   - 주요 행동 및 목표
+   - 페인 포인트 및 니즈
+   - 맥락 (역할, 회사, 사용 도구)
+   - 대표 인용
+4. **데이터로 검증**: 정량적 데이터를 사용하여 각 페르소나 세그먼트의 규모를 추정할 수 있는가?
 
-### Persona Template
+### 페르소나 템플릿
 ```
-[Persona Name] — [One-line description]
+```markdown
+[페르소나 이름] — [한 줄 설명]
 
-Who they are:
-- Role, company type/size, experience level
-- How they found/started using the product
+**누구인가:**
+- 역할, 회사 유형/규모, 경험 수준
+- 제품을 어떻게 발견하고 사용하기 시작했는가
 
-What they are trying to accomplish:
-- Primary goals and jobs to be done
-- How they measure success
+**무엇을 달성하려고 하는가:**
+- 주요 목표 및 해결해야 할 과제 (Jobs to be Done)
+- 성공을 어떻게 측정하는가
 
-How they use the product:
-- Frequency and depth of usage
-- Key workflows and features used
-- Tools they use alongside this product
+**제품을 어떻게 사용하는가:**
+- 사용 빈도 및 깊이
+- 주요 워크플로우 및 사용 기능
+- 이 제품과 함께 사용하는 도구
 
-Key pain points:
-- Top 3 frustrations or unmet needs
-- Workarounds they have developed
+**주요 페인 포인트:**
+- 상위 3가지 불만 사항 또는 미충족 니즈
+- 현재 사용 중인 우회 방법
 
-What they value:
-- What matters most in a solution
-- What would make them switch or churn
+**무엇을 가치 있게 여기는가:**
+- 솔루션에서 가장 중요하게 생각하는 것
+- 무엇이 전환 또는 이탈을 유도하는가
 
-Representative quotes:
-- 2-3 verbatim quotes that capture this persona's perspective
+**대표 인용구:**
+- 이 페르소나의 관점을 잘 보여주는 2-3개의 원문 인용구
+```
 ```
 
-### Common Persona Mistakes
-- Demographic personas: defining by age/gender/location instead of behavior. Behavior predicts product needs better than demographics.
-- Too many personas: 3-5 is the sweet spot. More than that and they are not actionable.
-- Fictional personas: made up based on assumptions rather than research data.
-- Static personas: never updated as the product and market evolve.
-- Personas without implications: a persona that does not change any product decisions is not useful.
+### 일반적인 페르소나 실수
+- 인구통계 페르소나: 행동이 아닌 나이/성별/지역으로 정의. 행동이 인구통계보다 제품 니즈를 더 잘 예측합니다.
+- 페르소나 과다: 3-5개가 적정. 그 이상이면 실행 가능하지 않습니다.
+- 가상 페르소나: 조사 데이터가 아닌 가정에 기반하여 만들어진 것.
+- 정적 페르소나: 제품과 시장이 진화해도 업데이트되지 않음.
+- 시사점 없는 페르소나: 제품 의사결정을 변경하지 않는 페르소나는 유용하지 않습니다.
 
-## Opportunity Sizing
+## 기회 규모 산정
 
-### Estimating Opportunity Size
-For each research finding or opportunity area, estimate:
+### 기회 규모 추정
+각 조사 발견 사항 또는 기회 영역에 대해 추정합니다:
 
-- **Addressable users**: How many users could benefit from addressing this? Use product analytics, survey data, or market data to estimate.
-- **Frequency**: How often do affected users encounter this issue? (Daily, weekly, monthly, one-time)
-- **Severity**: How much does this issue impact users when it occurs? (Blocker, significant friction, minor annoyance)
-- **Willingness to pay**: Would addressing this drive upgrades, retention, or new customer acquisition?
+- **대상 사용자**: 이것을 해결하면 몇 명의 사용자가 혜택을 받을 수 있는가? 제품 분석, 설문 데이터, 시장 데이터를 사용하여 추정합니다.
+- **빈도**: 영향받는 사용자가 이 이슈를 얼마나 자주 접하는가? (매일, 매주, 매월, 일회성)
+- **심각도**: 이 이슈가 발생할 때 사용자에게 얼마나 영향을 미치는가? (차단, 상당한 마찰, 사소한 불편)
+- **지불 의향**: 이것을 해결하면 업그레이드, 리텐션, 또는 신규 고객 획득을 이끌 것인가?
 
-### Opportunity Scoring
-Score opportunities on a simple matrix:
+### 기회 점수화
+간단한 매트릭스로 기회를 점수화합니다:
 
-- **Impact**: (Users affected) x (Frequency) x (Severity) = impact score
-- **Evidence strength**: How confident are we in the finding? (Multiple sources > single source, behavioral data > stated preferences)
-- **Strategic alignment**: Does this opportunity align with company strategy and product vision?
-- **Feasibility**: Can we realistically address this? (Technical feasibility, resource availability, time to impact)
+- **영향**: (영향받는 사용자) x (빈도) x (심각도) = 영향 점수
+- **근거 강도**: 발견 사항에 대한 확신은 얼마나 큰가? (여러 소스 > 단일 소스, 행동 데이터 > 진술된 선호)
+- **전략적 정렬**: 이 기회가 회사 전략 및 제품 비전과 정렬되는가?
+- **실현 가능성**: 현실적으로 이것을 해결할 수 있는가? (기술적 실현 가능성, 리소스 가용성, 영향까지의 시간)
 
-### Presenting Opportunity Sizing
-- Be transparent about assumptions and confidence levels
-- Show the math: "Based on support ticket volume, approximately 2,000 users per month encounter this issue. Interview data suggests 60% of them consider it a significant blocker."
-- Use ranges rather than false precision: "This affects 1,500-2,500 users monthly" not "This affects 2,137 users monthly"
-- Compare opportunities against each other to create a relative ranking, not just absolute scores
+### 기회 규모 제시
+- 가정과 확신 수준에 대해 투명합니다
+- 산출 과정을 보여줍니다: "지원 티켓 규모에 기반하여, 매월 약 2,000명의 사용자가 이 이슈를 경험합니다. 인터뷰 데이터에 따르면 그 중 60%가 상당한 차단으로 간주합니다."
+- 거짓 정확성 대신 범위를 사용합니다: "월간 1,500-2,500명의 사용자에게 영향"이지 "월간 2,137명의 사용자에게 영향"이 아닙니다
+- 절대 점수가 아닌 상대적 순위를 만들기 위해 기회를 서로 비교합니다

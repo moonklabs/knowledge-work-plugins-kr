@@ -1,110 +1,110 @@
 ---
 name: search-strategy
-description: Query decomposition and multi-source search orchestration. Breaks natural language questions into targeted searches per source, translates queries into source-specific syntax, ranks results by relevance, and handles ambiguity and fallback strategies.
+description: 쿼리 분해 및 다중 소스 검색 오케스트레이션을 수행합니다. 자연어 질문을 소스별 맞춤 검색으로 분해하고, 쿼리를 소스별 구문으로 변환하며, 관련성에 따라 결과의 순위를 매기고, 모호성과 대체 전략을 처리합니다.
 ---
 
-# Search Strategy
+# 검색 전략
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인하려면 [CONNECTORS.md](../../CONNECTORS.md)를 참조하세요.
 
-The core intelligence behind enterprise search. Transforms a single natural language question into parallel, source-specific searches and produces ranked, deduplicated results.
+엔터프라이즈 검색의 핵심 인텔리전스입니다. 하나의 자연어 질문을 병렬 소스별 검색으로 변환하고 순위가 매겨진 중복 제거된 결과를 생성합니다.
 
-## The Goal
+## 목표
 
-Turn this:
+다음을:
 ```
-"What did we decide about the API migration timeline?"
-```
-
-Into targeted searches across every connected source:
-```
-~~chat:  "API migration timeline decision" (semantic) + "API migration" in:#engineering after:2025-01-01
-~~knowledge base: semantic search "API migration timeline decision"
-~~project tracker:  text search "API migration" in relevant workspace
+"API 마이그레이션 일정에 대해 무엇을 결정했나요?"
 ```
 
-Then synthesize the results into a single coherent answer.
-
-## Query Decomposition
-
-### Step 1: Identify Query Type
-
-Classify the user's question to determine search strategy:
-
-| Query Type | Example | Strategy |
-|-----------|---------|----------|
-| **Decision** | "What did we decide about X?" | Prioritize conversations (~~chat, email), look for conclusion signals |
-| **Status** | "What's the status of Project Y?" | Prioritize recent activity, task trackers, status updates |
-| **Document** | "Where's the spec for Z?" | Prioritize Drive, wiki, shared docs |
-| **Person** | "Who's working on X?" | Search task assignments, message authors, doc collaborators |
-| **Factual** | "What's our policy on X?" | Prioritize wiki, official docs, then confirmatory conversations |
-| **Temporal** | "When did X happen?" | Search with broad date range, look for timestamps |
-| **Exploratory** | "What do we know about X?" | Broad search across all sources, synthesize |
-
-### Step 2: Extract Search Components
-
-From the query, extract:
-
-- **Keywords**: Core terms that must appear in results
-- **Entities**: People, projects, teams, tools (use memory system if available)
-- **Intent signals**: Decision words, status words, temporal markers
-- **Constraints**: Time ranges, source hints, author filters
-- **Negations**: Things to exclude
-
-### Step 3: Generate Sub-Queries Per Source
-
-For each available source, create one or more targeted queries:
-
-**Prefer semantic search** for:
-- Conceptual questions ("What do we think about...")
-- Questions where exact keywords are unknown
-- Exploratory queries
-
-**Prefer keyword search** for:
-- Known terms, project names, acronyms
-- Exact phrases the user quoted
-- Filter-heavy queries (from:, in:, after:)
-
-**Generate multiple query variants** when the topic might be referred to differently:
+연결된 모든 소스에 대한 맞춤 검색으로 변환합니다:
 ```
-User: "Kubernetes setup"
-Queries: "Kubernetes", "k8s", "cluster", "container orchestration"
+~~chat: "API migration timeline decision" (시맨틱) + "API migration" in:#engineering after:2025-01-01
+~~knowledge base: 시맨틱 검색 "API migration timeline decision"
+~~project tracker: 관련 작업공간에서 텍스트 검색 "API migration"
 ```
 
-## Source-Specific Query Translation
+그런 다음 결과를 하나의 일관된 답변으로 통합합니다.
+
+## 쿼리 분해
+
+### 1단계: 쿼리 유형 식별
+
+사용자의 질문을 분류하여 검색 전략을 결정합니다:
+
+| 쿼리 유형 | 예시 | 전략 |
+|-----------|------|------|
+| **의사결정** | "X에 대해 무엇을 결정했나?" | 대화(~~chat, 이메일)를 우선하고, 결론 신호를 탐색 |
+| **상태** | "프로젝트 Y의 상태는?" | 최근 활동, 작업 트래커, 상태 업데이트를 우선 |
+| **문서** | "Z에 대한 스펙은 어디에?" | Drive, 위키, 공유 문서를 우선 |
+| **사람** | "X 작업을 누가 하고 있나?" | 작업 할당, 메시지 작성자, 문서 공동 작업자를 검색 |
+| **사실** | "X에 대한 정책은?" | 위키, 공식 문서를 우선하고, 확인 대화를 검색 |
+| **시간** | "X는 언제 발생했나?" | 넓은 날짜 범위로 검색하고, 타임스탬프를 탐색 |
+| **탐색** | "X에 대해 무엇을 알고 있나?" | 모든 소스에 걸쳐 광범위하게 검색하고 통합 |
+
+### 2단계: 검색 구성 요소 추출
+
+쿼리에서 다음을 추출합니다:
+
+- **키워드**: 결과에 반드시 나타나야 하는 핵심 용어
+- **엔티티**: 사람, 프로젝트, 팀, 도구 (메모리 시스템이 있는 경우 활용)
+- **의도 신호**: 의사결정 관련 단어, 상태 관련 단어, 시간 마커
+- **제약 조건**: 시간 범위, 소스 힌트, 작성자 필터
+- **부정**: 제외할 항목
+
+### 3단계: 소스별 하위 쿼리 생성
+
+사용 가능한 각 소스에 대해 하나 이상의 맞춤 쿼리를 생성합니다:
+
+**시맨틱 검색을 사용하는 경우:**
+- 개념적 질문 ("...에 대해 어떻게 생각하는가")
+- 정확한 키워드를 알 수 없는 질문
+- 탐색적 쿼리
+
+**키워드 검색을 사용하는 경우:**
+- 알려진 용어, 프로젝트 이름, 약어
+- 사용자가 인용한 정확한 구문
+- 필터가 많은 쿼리 (from:, in:, after:)
+
+**주제가 다르게 지칭될 수 있는 경우 여러 쿼리 변형을 생성합니다:**
+```
+사용자: "Kubernetes setup"
+쿼리: "Kubernetes", "k8s", "cluster", "container orchestration"
+```
+
+## 소스별 쿼리 변환
 
 ### ~~chat
 
-**Semantic search** (natural language questions):
+**시맨틱 검색** (자연어 질문):
 ```
-query: "What is the status of project aurora?"
+query: "project aurora의 상태는 어떻습니까?"
 ```
 
-**Keyword search:**
+**키워드 검색:**
 ```
 query: "project aurora status update"
 query: "aurora in:#engineering after:2025-01-15"
 query: "from:<@UserID> aurora"
 ```
 
-**Filter mapping:**
-| Enterprise filter | ~~chat syntax |
-|------------------|--------------|
-| `from:sarah` | `from:sarah` or `from:<@USERID>` |
+**필터 매핑:**
+| 엔터프라이즈 필터 | ~~chat 구문 |
+|------------------|------------|
+| `from:sarah` | `from:sarah` 또는 `from:<@USERID>` |
 | `in:engineering` | `in:engineering` |
 | `after:2025-01-01` | `after:2025-01-01` |
 | `before:2025-02-01` | `before:2025-02-01` |
 | `type:thread` | `is:thread` |
 | `type:file` | `has:file` |
 
-### ~~knowledge base (Wiki)
+### ~~knowledge base (위키)
 
-**Semantic search** — Use for conceptual queries:
+**시맨틱 검색** — 개념적 쿼리에 사용:
 ```
-descriptive_query: "API migration timeline and decision rationale"
+descriptive_query: "API 마이그레이션 일정 및 결정 근거"
 ```
 
-**Keyword search** — Use for exact terms:
+**키워드 검색** — 정확한 용어에 사용:
 ```
 query: "API migration"
 query: "\"API migration timeline\""  (exact phrase)
@@ -112,110 +112,110 @@ query: "\"API migration timeline\""  (exact phrase)
 
 ### ~~project tracker
 
-**Task search:**
+**작업 검색:**
 ```
 text: "API migration"
 workspace: [workspace_id]
-completed: false  (for status queries)
-assignee_any: "me"  (for "my tasks" queries)
+completed: false  (상태 쿼리의 경우)
+assignee_any: "me"  ("내 작업" 쿼리의 경우)
 ```
 
-**Filter mapping:**
-| Enterprise filter | ~~project tracker parameter |
-|------------------|----------------|
-| `from:sarah` | `assignee_any` or `created_by_any` |
+**필터 매핑:**
+| 엔터프라이즈 필터 | ~~project tracker 매개변수 |
+|------------------|--------------------------|
+| `from:sarah` | `assignee_any` 또는 `created_by_any` |
 | `after:2025-01-01` | `modified_on_after: "2025-01-01"` |
 | `type:milestone` | `resource_subtype: "milestone"` |
 
-## Result Ranking
+## 결과 순위
 
-### Relevance Scoring
+### 관련성 점수
 
-Score each result on these factors (weighted by query type):
+각 결과를 다음 요인으로 평가합니다 (쿼리 유형에 따라 가중치 적용):
 
-| Factor | Weight (Decision) | Weight (Status) | Weight (Document) | Weight (Factual) |
-|--------|-------------------|------------------|--------------------|-------------------|
-| Keyword match | 0.3 | 0.2 | 0.4 | 0.3 |
-| Freshness | 0.3 | 0.4 | 0.2 | 0.1 |
-| Authority | 0.2 | 0.1 | 0.3 | 0.4 |
-| Completeness | 0.2 | 0.3 | 0.1 | 0.2 |
+| 요인 | 가중치 (의사결정) | 가중치 (상태) | 가중치 (문서) | 가중치 (사실) |
+|------|-----------------|-------------|-------------|-------------|
+| 키워드 일치 | 0.3 | 0.2 | 0.4 | 0.3 |
+| 최신성 | 0.3 | 0.4 | 0.2 | 0.1 |
+| 신뢰도 | 0.2 | 0.1 | 0.3 | 0.4 |
+| 완전성 | 0.2 | 0.3 | 0.1 | 0.2 |
 
-### Authority Hierarchy
+### 신뢰도 계층
 
-Depends on query type:
+쿼리 유형에 따라 다릅니다:
 
-**For factual/policy questions:**
+**사실/정책 질문의 경우:**
 ```
 Wiki/Official docs > Shared documents > Email announcements > Chat messages
 ```
 
-**For "what happened" / decision questions:**
+**"무슨 일이 있었나" / 의사결정 질문의 경우:**
 ```
 Meeting notes > Thread conclusions > Email confirmations > Chat messages
 ```
 
-**For status questions:**
+**상태 질문의 경우:**
 ```
 Task tracker > Recent chat > Status docs > Email updates
 ```
 
-## Handling Ambiguity
+## 모호성 처리
 
-When a query is ambiguous, prefer asking one focused clarifying question over guessing:
-
-```
-Ambiguous: "search for the migration"
-→ "I found references to a few migrations. Are you looking for:
-   1. The database migration (Project Phoenix)
-   2. The cloud migration (AWS → GCP)
-   3. The email migration (Exchange → O365)"
-```
-
-Only ask for clarification when:
-- There are genuinely distinct interpretations that would produce very different results
-- The ambiguity would significantly affect which sources to search
-
-Do NOT ask for clarification when:
-- The query is clear enough to produce useful results
-- Minor ambiguity can be resolved by returning results from multiple interpretations
-
-## Fallback Strategies
-
-When a source is unavailable or returns no results:
-
-1. **Source unavailable**: Skip it, search remaining sources, note the gap
-2. **No results from a source**: Try broader query terms, remove date filters, try alternate keywords
-3. **All sources return nothing**: Suggest query modifications to the user
-4. **Rate limited**: Note the limitation, return results from other sources, suggest retrying later
-
-### Query Broadening
-
-If initial queries return too few results:
-```
-Original: "PostgreSQL migration Q2 timeline decision"
-Broader:  "PostgreSQL migration"
-Broader:  "database migration"
-Broadest: "migration"
-```
-
-Remove constraints in this order:
-1. Date filters (search all time)
-2. Source/location filters
-3. Less important keywords
-4. Keep only core entity/topic terms
-
-## Parallel Execution
-
-Always execute searches across sources in parallel, never sequentially. The total search time should be roughly equal to the slowest single source, not the sum of all sources.
+쿼리가 모호한 경우, 추측보다는 하나의 집중된 명확화 질문을 합니다:
 
 ```
-[User query]
-     ↓ decompose
-[~~chat query] [~~email query] [~~cloud storage query] [Wiki query] [~~project tracker query]
+모호함: "마이그레이션 검색해달라"
+→ "몇 가지 마이그레이션에 대한 참조를 찾았습니다. 찾으시는 것이 무엇인가요:
+   1. 데이터베이스 마이그레이션 (프로젝트 Phoenix)
+   2. 클라우드 마이그레이션 (AWS → GCP)
+   3. 이메일 마이그레이션 (Exchange → O365)"
+```
+
+명확화를 요청하는 경우:
+- 매우 다른 결과를 생성할 수 있는 진정으로 구별되는 해석이 있을 때
+- 모호성이 검색할 소스에 크게 영향을 미칠 때
+
+명확화를 요청하지 않는 경우:
+- 쿼리가 유용한 결과를 생성할 수 있을 만큼 명확할 때
+- 여러 해석의 결과를 반환하여 경미한 모호성을 해결할 수 있을 때
+
+## 대체 전략
+
+소스가 사용 불가하거나 결과를 반환하지 않는 경우:
+
+1. **소스 사용 불가**: 건너뛰고, 나머지 소스를 검색하며, 누락을 기록합니다
+2. **소스에서 결과 없음**: 더 넓은 쿼리 용어를 시도하고, 날짜 필터를 제거하며, 대체 키워드를 시도합니다
+3. **모든 소스에서 결과 없음**: 사용자에게 쿼리 수정을 제안합니다
+4. **속도 제한**: 제한을 기록하고, 다른 소스의 결과를 반환하며, 나중에 재시도를 제안합니다
+
+### 쿼리 확장
+
+초기 쿼리가 너무 적은 결과를 반환하는 경우:
+```
+원본: "PostgreSQL migration Q2 timeline decision"
+광범위: "PostgreSQL migration"
+광범위: "database migration"
+가장 광범위: "migration"
+```
+
+다음 순서로 제약 조건을 제거합니다:
+1. 날짜 필터 (전체 기간 검색)
+2. 소스/위치 필터
+3. 덜 중요한 키워드
+4. 핵심 엔티티/주제 용어만 유지
+
+## 병렬 실행
+
+항상 소스 간 검색을 병렬로 실행하며, 순차적으로 실행하지 않습니다. 총 검색 시간은 모든 소스의 합이 아닌 가장 느린 단일 소스와 대략 동일해야 합니다.
+
+```
+[사용자 쿼리]
+     ↓ 분해
+[~~chat 쿼리] [~~email 쿼리] [~~cloud storage 쿼리] [위키 쿼리] [~~project tracker 쿼리]
      ↓            ↓            ↓              ↓            ↓
-  (parallel execution)
+  (병렬 실행)
      ↓
-[Merge + Rank + Deduplicate]
+[병합 + 순위 지정 + 중복 제거]
      ↓
-[Synthesized answer]
+[통합된 답변]
 ```

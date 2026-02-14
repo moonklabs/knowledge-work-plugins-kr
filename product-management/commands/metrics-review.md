@@ -1,114 +1,114 @@
 ---
-description: Review and analyze product metrics with trend analysis and actionable insights
-argument-hint: "<time period or metric focus>"
+description: 추세 분석 및 실행 가능한 인사이트와 함께 제품 지표를 리뷰하고 분석합니다
+argument-hint: "<기간 또는 지표 초점>"
 ---
 
-# Metrics Review
+# 지표 리뷰
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 참조하세요.
 
-Review and analyze product metrics, identify trends, and surface actionable insights.
+제품 지표를 리뷰하고 분석하며, 추세를 파악하고, 실행 가능한 인사이트를 도출합니다.
 
-## Workflow
+## 워크플로우
 
-### 1. Gather Metrics Data
+### 1. 지표 데이터 수집
 
-If **~~product analytics** is connected:
-- Pull key product metrics for the relevant time period
-- Get comparison data (previous period, same period last year, targets)
-- Pull segment breakdowns if available
+**~~product analytics**가 연결된 경우:
+- 해당 기간의 주요 제품 지표를 가져옵니다
+- 비교 데이터를 가져옵니다 (이전 기간, 전년 동기, 목표치)
+- 가능한 경우 세그먼트별 분석을 가져옵니다
 
-If no analytics tool is connected, ask the user to provide:
-- The metrics and their values (paste a table, screenshot, or describe)
-- Comparison data (previous period, targets)
-- Any context on recent changes (launches, incidents, seasonality)
+분석 도구가 연결되지 않은 경우, 사용자에게 다음을 요청합니다:
+- 지표와 그 값 (표, 스크린샷, 또는 설명으로 제공)
+- 비교 데이터 (이전 기간, 목표치)
+- 최근 변경 사항에 대한 컨텍스트 (출시, 장애, 계절성)
 
-Ask the user:
-- What time period to review? (last week, last month, last quarter)
-- What metrics to focus on? Or should we review the full product metrics suite?
-- Are there specific targets or goals to compare against?
-- Any known events that might explain changes (launches, outages, marketing campaigns, seasonality)?
+사용자에게 확인합니다:
+- 어떤 기간을 리뷰할 것인지 (지난주, 지난달, 지난 분기)
+- 어떤 지표에 집중할 것인지, 전체 제품 지표를 리뷰할 것인지
+- 비교할 특정 목표나 기준이 있는지
+- 변동을 설명할 수 있는 알려진 이벤트가 있는지 (출시, 장애, 마케팅 캠페인, 계절성)
 
-### 2. Organize the Metrics
+### 2. 지표 정리
 
-Structure the review using the metrics hierarchy from the **metrics-tracking** skill: North Star metric at the top, L1 health indicators (acquisition, activation, engagement, retention, revenue, satisfaction), and L2 diagnostic metrics for drill-down.
+**metrics-tracking** 스킬의 지표 계층 구조를 활용하여 리뷰를 구성합니다: 최상위에 North Star 지표, L1 건강 지표 (획득, 활성화, 참여도, 리텐션, 매출, 만족도), 그리고 세부 분석을 위한 L2 진단 지표입니다.
 
-If the user has not defined their metrics hierarchy, help them identify their North Star and key L1 metrics before proceeding.
+사용자가 지표 계층을 정의하지 않은 경우, 진행하기 전에 North Star 지표와 핵심 L1 지표를 식별하도록 도와줍니다.
 
-### 3. Analyze Trends
+### 3. 추세 분석
 
-For each key metric:
-- **Current value**: What is the metric today?
-- **Trend**: Up, down, or flat compared to previous period? Over what timeframe?
-- **vs Target**: How does it compare to the goal or target?
-- **Rate of change**: Is the trend accelerating or decelerating?
-- **Anomalies**: Any sudden changes, spikes, or drops?
+각 주요 지표에 대해:
+- **현재 값**: 현재 지표는 어떤 상태인지
+- **추세**: 이전 기간 대비 상승, 하락, 또는 횡보인지. 어떤 기간에 걸쳐 나타나는지
+- **목표 대비**: 목표나 기준과 비교하면 어떤지
+- **변화 속도**: 추세가 가속되고 있는지 감속되고 있는지
+- **이상치**: 급격한 변화, 스파이크, 또는 급락이 있는지
 
-Identify correlations:
-- Do changes in one metric correlate with changes in another?
-- Are there leading indicators that predict lagging metric changes?
-- Do segment breakdowns reveal that an aggregate trend is driven by a specific cohort?
+상관관계를 파악합니다:
+- 한 지표의 변화가 다른 지표의 변화와 상관관계가 있는지
+- 후행 지표의 변화를 예측하는 선행 지표가 있는지
+- 세그먼트별 분석을 통해 총계 추세가 특정 코호트에 의해 주도되고 있는지
 
-### 4. Generate the Review
+### 4. 리뷰 생성
 
-#### Summary
-2-3 sentences: overall product health, most notable changes, key callout.
+#### 요약
+2-3문장: 전반적인 제품 건강 상태, 가장 주목할 만한 변화, 핵심 포인트.
 
-#### Metric Scorecard
-Table format for quick scanning:
+#### 지표 스코어카드
+빠른 확인을 위한 표 형식:
 
-| Metric | Current | Previous | Change | Target | Status |
+| 지표 | 현재 | 이전 | 변화 | 목표 | 상태 |
 |--------|---------|----------|--------|--------|--------|
-| [Metric] | [Value] | [Value] | [+/- %] | [Target] | [On track / At risk / Miss] |
+| [지표] | [값] | [값] | [+/- %] | [목표] | [순조 / 주의 / 미달] |
 
-#### Trend Analysis
-For each metric worth discussing:
-- What happened and how significant is the change
-- Why it likely happened (attribution based on known events, correlated metrics, segment analysis)
-- Whether this is a one-time event or a sustained trend
+#### 추세 분석
+논의할 가치가 있는 각 지표에 대해:
+- 무엇이 발생했고 변화가 얼마나 유의미한지
+- 발생 원인으로 추정되는 것 (알려진 이벤트, 상관 지표, 세그먼트 분석에 기반한 귀인)
+- 일회성 이벤트인지 지속적인 추세인지
 
-#### Bright Spots
-What is going well:
-- Metrics beating targets
-- Positive trends to sustain
-- Segments or features showing strong performance
+#### 긍정적 신호
+잘 되고 있는 부분:
+- 목표를 초과 달성하는 지표
+- 유지해야 할 긍정적 추세
+- 강한 성과를 보이는 세그먼트 또는 기능
 
-#### Areas of Concern
-What needs attention:
-- Metrics missing targets or trending negatively
-- Early warning signals before they become problems
-- Metrics where we lack visibility or understanding
+#### 우려 영역
+주의가 필요한 부분:
+- 목표 미달 또는 부정적 추세를 보이는 지표
+- 문제가 되기 전에 포착해야 할 조기 경고 신호
+- 가시성이나 이해가 부족한 지표
 
-#### Recommended Actions
-Specific next steps based on the analysis:
-- Investigations to run (dig deeper into a concerning trend)
-- Experiments to launch (test hypotheses about what could improve a metric)
-- Investments to make (double down on what is working)
-- Alerts to set (monitor a metric more closely)
+#### 권장 조치
+분석에 기반한 구체적인 다음 단계:
+- 수행할 조사 (우려되는 추세에 대한 심층 분석)
+- 시작할 실험 (지표 개선에 대한 가설 검증)
+- 해야 할 투자 (효과가 있는 것에 대한 강화)
+- 설정할 알림 (지표를 더 면밀히 모니터링)
 
-#### Context and Caveats
-- Known data quality issues
-- Events that affect comparability (outages, holidays, launches)
-- Metrics we should be tracking but are not yet
+#### 맥락 및 주의 사항
+- 알려진 데이터 품질 이슈
+- 비교 가능성에 영향을 주는 이벤트 (장애, 휴일, 출시)
+- 추적해야 하지만 아직 추적하지 못하는 지표
 
-### 5. Follow Up
+### 5. 후속 조치
 
-After generating the review:
-- Ask if any metric needs deeper investigation
-- Offer to create a dashboard spec for ongoing monitoring
-- Offer to draft experiment proposals for areas of concern
-- Offer to set up a metrics review template for recurring use
+리뷰 생성 후:
+- 특정 지표에 대한 심층 조사가 필요한지 확인합니다
+- 지속적인 모니터링을 위한 대시보드 사양 작성을 제안합니다
+- 우려 영역에 대한 실험 제안서 작성을 제안합니다
+- 반복 사용을 위한 지표 리뷰 템플릿 설정을 제안합니다
 
-## Output Format
+## 출력 형식
 
-Use tables for the scorecard. Use clear status indicators. Keep the summary tight — the reader should get the essential story in 30 seconds.
+스코어카드에는 표를 사용합니다. 명확한 상태 표시를 사용합니다. 요약은 간결하게 유지합니다 — 독자가 30초 안에 핵심 내용을 파악할 수 있어야 합니다.
 
-## Tips
+## 팁
 
-- Start with the "so what" — what is the most important thing in this metrics review? Lead with that.
-- Absolute numbers without context are useless. Always show comparisons (vs previous period, vs target, vs benchmark).
-- Be careful about attribution. Correlation is not causation. If a metric moved, acknowledge uncertainty about why.
-- Segment analysis often reveals that an aggregate metric masks important differences. A flat overall number might hide one segment growing and another shrinking.
-- Not all metric movements matter. Small fluctuations are noise. Focus attention on meaningful changes.
-- If a metric is missing its target, do not just report the miss — recommend what to do about it.
-- Metrics reviews should drive decisions. If the review does not lead to at least one action, it was not useful.
+- "그래서 어떻다는 것인가"부터 시작합니다 — 이번 지표 리뷰에서 가장 중요한 것은 무엇인지 먼저 제시합니다.
+- 맥락 없는 절대 수치는 무의미합니다. 항상 비교를 보여줍니다 (이전 기간 대비, 목표 대비, 벤치마크 대비).
+- 귀인에 주의합니다. 상관관계는 인과관계가 아닙니다. 지표가 변동했다면, 그 이유에 대한 불확실성을 인정합니다.
+- 세그먼트 분석은 총계 지표가 중요한 차이를 숨기고 있음을 종종 드러냅니다. 전체적으로 변동이 없는 수치가 한 세그먼트의 성장과 다른 세그먼트의 감소를 가리고 있을 수 있습니다.
+- 모든 지표 변동이 중요한 것은 아닙니다. 작은 변동은 노이즈입니다. 유의미한 변화에 집중합니다.
+- 지표가 목표를 달성하지 못했다면, 미달만 보고하지 말고 대응 방안을 제시합니다.
+- 지표 리뷰는 의사결정으로 이어져야 합니다. 리뷰 결과 최소 하나의 실행 조치가 나오지 않는다면, 유용하지 않은 리뷰입니다.

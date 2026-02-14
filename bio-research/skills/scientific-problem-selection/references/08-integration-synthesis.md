@@ -1,173 +1,173 @@
-# SKILL 8: Integration and Synthesis
+# 스킬 8: 통합 및 종합
 
-## Overview
-This final individual skill synthesizes all previous skills into a coherent project plan and communication strategy. You'll create a complete package that demonstrates thoughtful problem selection and rigorous planning.
+## 개요
+이 마지막 개별 스킬은 이전의 모든 스킬을 일관된 프로젝트 계획과 커뮤니케이션 전략으로 종합합니다. 사려 깊은 문제 선택과 엄밀한 계획을 보여주는 완전한 패키지를 작성하게 됩니다.
 
-## Core Principle
-**"Tell a compelling story with your choices"**
+## 핵심 원칙
+**"선택으로 설득력 있는 이야기를 전달하십시오"**
 
-Humans love stories. Your project should have:
-- **Setting:** Background and problem framing
-- **Problem statement:** Clear, general enough to be interesting, specific enough to be distinctive
-- **New idea/approach:** Your angle (perturbation/measurement/theory: logic vs. technology)
-- **Iteration:** Loop of "we wondered X → did Y → found Z → interpreted as W"
-- **Conclusion:** What we learned and/or what's now possible
-- **Passion:** Authentic enthusiasm
+인간은 이야기를 좋아합니다. 프로젝트에는 다음이 있어야 합니다:
+- **배경:** 배경 및 문제 프레이밍
+- **문제 진술:** 명확하고, 흥미로울 만큼 충분히 일반적이며, 독특할 만큼 충분히 구체적
+- **새로운 아이디어/접근법:** 고유한 각도 (교란/측정/이론: 논리 vs. 기술)
+- **반복:** "X가 궁금했다 → Y를 했다 → Z를 발견했다 → W로 해석했다"의 순환
+- **결론:** 무엇을 배웠고/또는 무엇이 가능해졌는가
+- **열정:** 진정성 있는 열의
 
-## Workflow
+## 워크플로우
 
-### Phase 1: Gather Your Skill Outputs
+### 1단계: 스킬 산출물 수집
 
-Collect your completed documents:
-- ☐ Skill 1: Problem Ideation Document
-- ☐ Skill 2: Risk Assessment Matrix
-- ☐ Skill 3: Impact Assessment Document
-- ☐ Skill 4: Parameter Strategy Document
-- ☐ Skill 5: Decision Tree Map
-- ☐ Skill 6: Adversity Playbook
-- ☐ Skill 7: Problem Inversion Analysis (if applicable)
+완료된 문서를 수집하십시오:
+- ☐ 스킬 1: 문제 아이디어 발굴 문서
+- ☐ 스킬 2: 리스크 평가 매트릭스
+- ☐ 스킬 3: 영향력 평가 문서
+- ☐ 스킬 4: 매개변수 전략 문서
+- ☐ 스킬 5: 의사결정 트리 맵
+- ☐ 스킬 6: 역경 플레이북
+- ☐ 스킬 7: 문제 반전 분석 (해당하는 경우)
 
-### Phase 2: Create Narrative Arc
+### 2단계: 내러티브 아크 생성
 
-**Story Structure for Your Project:**
+**프로젝트의 이야기 구조:**
 
-**1. Setting (Background)**
-- What's known in the field?
-- What's the gap or opportunity?
-- Why does this matter?
+**1. 배경 (Setting)**
+- 분야에서 알려진 것은 무엇인가?
+- 격차 또는 기회는 무엇인가?
+- 왜 이것이 중요한가?
 
-**2. Problem Statement**
-- General enough: connects to broad principle
-- Specific enough: distinctive and tractable
-- Your framing from Skill 1
+**2. 문제 진술**
+- 충분히 일반적: 넓은 원칙과 연결
+- 충분히 구체적: 독특하고 다룰 수 있음
+- 스킬 1에서의 프레이밍
 
-**3. Your Approach**
-- Perturbation/Measurement/Theory
-- Logic vs. Technology
-- What's novel about your angle (from Skill 1)
-- How your optimization function shapes approach (from Skill 3)
+**3. 접근법**
+- 교란/측정/이론
+- 논리 vs. 기술
+- 각도의 새로운 점 (스킬 1에서)
+- 최적화 함수가 접근법을 어떻게 형성하는가 (스킬 3에서)
 
-**4. Strategy**
-- Fixed vs. floating parameters (from Skill 4)
-- Decision points mapped out (from Skill 5)
-- Risk mitigation built in (from Skill 2)
-- Adversity contingencies (from Skill 6)
+**4. 전략**
+- 고정 vs. 유동 매개변수 (스킬 4에서)
+- 의사결정 지점 매핑 (스킬 5에서)
+- 리스크 완화 내장 (스킬 2에서)
+- 역경 비상 계획 (스킬 6에서)
 
-**5. Why You**
-- Your competitive advantage
-- Lab expertise
-- Your passion and alignment
-- Timeline and resources
+**5. 왜 당신인가**
+- 경쟁 우위
+- 실험실 전문성
+- 열정과 정렬
+- 타임라인과 자원
 
-### Phase 3: Communication Formats
+### 3단계: 커뮤니케이션 형식
 
-**Format 1: 3-Slide, 5-Minute Presentation**
+**형식 1: 3슬라이드, 5분 발표**
 
-**Slide 1: The Opportunity**
-- Setting + Problem statement
-- One key figure or schematic
-- Why this matters (optimization function)
+**슬라이드 1: 기회**
+- 배경 + 문제 진술
+- 핵심 그림 또는 도식 하나
+- 왜 이것이 중요한가 (최적화 함수)
 
-**Slide 2: Your Approach**
-- New idea/angle
-- Key experiments or analyses
-- What makes this feasible
-- Decision tree highlights
+**슬라이드 2: 접근법**
+- 새로운 아이디어/각도
+- 핵심 실험 또는 분석
+- 실현 가능성의 근거
+- 의사결정 트리 하이라이트
 
-**Slide 3: Impact and Timeline**
-- What you'll learn or enable
-- Success metrics
-- Timeline with milestones
-- Your advantage
+**슬라이드 3: 영향력과 타임라인**
+- 무엇을 배우거나 가능하게 할 것인가
+- 성공 지표
+- 마일스톤이 포함된 타임라인
+- 경쟁 우위
 
-**Slide Design Tips:**
-- Minimal text (bullets are fine here)
-- Strong visuals
-- Tell story, don't catalog facts
-- Passion shows through
+**슬라이드 디자인 팁:**
+- 최소한의 텍스트 (글머리 기호는 괜찮음)
+- 강력한 시각 자료
+- 사실을 나열하지 말고 이야기를 전달
+- 열정이 드러나도록
 
-**Format 2: 1-Page Written Summary**
+**형식 2: 1페이지 서면 요약**
 
-**Paragraph 1:** Setting and problem (2-3 sentences)
-**Paragraph 2:** Your approach and novelty (3-4 sentences)
-**Paragraph 3:** Why it will work (risk mitigation, your advantage) (2-3 sentences)
-**Paragraph 4:** Impact and timeline (2-3 sentences)
+**단락 1:** 배경과 문제 (2-3문장)
+**단락 2:** 접근법과 새로운 점 (3-4문장)
+**단락 3:** 왜 성공할 것인가 (리스크 완화, 경쟁 우위) (2-3문장)
+**단락 4:** 영향력과 타임라인 (2-3문장)
 
-**Total:** ~250-300 words that could be abstract or summary
+**총:** 초록 또는 요약이 될 수 있는 ~250-300단어
 
-**Format 3: 1-Minute Elevator Pitch**
+**형식 3: 1분 엘리베이터 피치**
 
-**Structure:**
-- "I'm working on [problem] because [why it matters]"
-- "Current approaches are limited by [gap]"
-- "My angle is [approach] which is novel because [what's new]"
-- "This will [impact] and I have [advantage]"
+**구조:**
+- "저는 [문제]를 연구하고 있습니다. 왜냐하면 [중요한 이유]이기 때문입니다"
+- "현재 접근법은 [격차]에 의해 제한됩니다"
+- "제 각도는 [접근법]이며, [새로운 점] 때문에 새롭습니다"
+- "이것은 [영향력]을 가져올 것이며, 저는 [우위]를 가지고 있습니다"
 
-**Practice until:** Natural, passionate, memorable
+**다음이 될 때까지 연습:** 자연스럽고, 열정적이며, 기억에 남도록
 
-### Phase 4: Integration Document
+### 4단계: 통합 문서
 
-**Complete Project Plan Integrating All Skills:**
+**모든 스킬을 통합하는 완전한 프로젝트 계획:**
 
-**Section 1: Problem Selection Rationale**
-- How you generated this idea (Skill 1 intuition pumps)
-- Why this problem matters (Skill 3 optimization function)
-- Your competitive advantage
+**섹션 1: 문제 선택 근거**
+- 아이디어를 어떻게 생성했는가 (스킬 1 직관 펌프)
+- 왜 이 문제가 중요한가 (스킬 3 최적화 함수)
+- 경쟁 우위
 
-**Section 2: Risk Management**
-- Assumption analysis table (Skill 2)
-- Go/no-go experiments
-- Timeline with checkpoints
-- Mitigation strategies
+**섹션 2: 리스크 관리**
+- 가정 분석 표 (스킬 2)
+- Go/no-go 실험
+- 체크포인트가 있는 타임라인
+- 완화 전략
 
-**Section 3: Execution Strategy**
-- Fixed vs. floating parameters (Skill 4)
-- Decision tree navigation plan (Skill 5)
-- Adversity response protocols (Skill 6)
-- Project ensemble (alternative paths)
+**섹션 3: 실행 전략**
+- 고정 vs. 유동 매개변수 (스킬 4)
+- 의사결정 트리 탐색 계획 (스킬 5)
+- 역경 대응 프로토콜 (스킬 6)
+- 프로젝트 앙상블 (대안 경로)
 
-**Section 4: Communication Plan**
-- Presentations (3-slide deck)
-- Written summary (1-page)
-- Elevator pitch (1-minute)
-- Key messages for different audiences
+**섹션 4: 커뮤니케이션 계획**
+- 발표 (3슬라이드 덱)
+- 서면 요약 (1페이지)
+- 엘리베이터 피치 (1분)
+- 다양한 청중을 위한 핵심 메시지
 
-**Section 5: Career Alignment**
-- How this fits your trajectory
-- Skills you'll develop
-- Network you'll build
-- Next steps after this project
+**섹션 5: 경력 정렬**
+- 이것이 경력 궤적에 어떻게 맞는가
+- 개발할 스킬
+- 구축할 네트워크
+- 이 프로젝트 이후의 다음 단계
 
-## Output: Complete Project Package
+## 산출물: 완전한 프로젝트 패키지
 
-**Document 1: Integrated Project Plan (4-6 pages)**
-- All sections above
-- References to individual skill outputs
-- Timeline and milestones
-- Resource requirements
+**문서 1: 통합 프로젝트 계획 (4-6페이지)**
+- 위의 모든 섹션
+- 개별 스킬 산출물 참조
+- 타임라인과 마일스톤
+- 자원 요구사항
 
-**Document 2: Communication Materials**
-- 3-slide presentation
-- 1-page summary
-- Elevator pitch script
-- Talking points for different audiences
+**문서 2: 커뮤니케이션 자료**
+- 3슬라이드 발표
+- 1페이지 요약
+- 엘리베이터 피치 스크립트
+- 다양한 청중을 위한 핵심 논점
 
-**Document 3: Living Documents**
-- Decision tree (to update regularly)
-- Risk assessment (to review quarterly)
-- Adversity playbook (to consult in crisis)
-- Parameter strategy (to revisit if stuck)
+**문서 3: 살아있는 문서**
+- 의사결정 트리 (정기적으로 업데이트)
+- 리스크 평가 (분기별 검토)
+- 역경 플레이북 (위기 시 참조)
+- 매개변수 전략 (막혔을 때 재검토)
 
-## Key Principles
+## 핵심 원칙
 
-1. **Integration, Not Duplication:** Each skill output serves a purpose in the whole
-2. **Story Over Catalog:** Communicate choices, not just facts
-3. **Passion Matters:** Authentic enthusiasm is persuasive
-4. **Living Plan:** This evolves; revisit quarterly
-5. **Alignment:** Project, values, and career fit together
-6. **Preparation:** You've thought through contingencies
-7. **Communication:** You can pitch this clearly to anyone
+1. **통합이지, 중복이 아닙니다:** 각 스킬 산출물이 전체에서 역할을 수행합니다
+2. **나열이 아니라 이야기:** 사실이 아니라 선택을 전달하십시오
+3. **열정이 중요합니다:** 진정성 있는 열의는 설득력이 있습니다
+4. **살아있는 계획:** 이것은 진화합니다; 분기별로 재검토하십시오
+5. **정렬:** 프로젝트, 가치, 경력이 함께 맞아야 합니다
+6. **준비:** 비상 상황을 미리 생각해 두었습니다
+7. **커뮤니케이션:** 누구에게든 명확하게 설명할 수 있습니다
 
-## Ready to Synthesize
+## 종합 준비
 
-With all skills complete, you now have a comprehensive, thoughtful, rigorous approach to problem selection and project planning. This is the highest-leverage work you can do in science.
+모든 스킬이 완료되면, 문제 선택과 프로젝트 계획에 대한 포괄적이고 사려 깊으며 엄밀한 접근법을 갖추게 됩니다. 이것이 과학에서 할 수 있는 가장 높은 레버리지 작업입니다.

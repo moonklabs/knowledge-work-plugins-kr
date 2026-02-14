@@ -1,255 +1,255 @@
 ---
 name: performance-analytics
-description: Analyze marketing performance with key metrics, trend analysis, and optimization recommendations. Use when building performance reports, reviewing campaign results, analyzing channel metrics (email, social, paid, SEO), or identifying what's working and what needs improvement.
+description: 핵심 지표, 트렌드 분석, 최적화 권장 사항으로 마케팅 성과를 분석합니다. 성과 리포트 작성, 캠페인 결과 검토, 채널별 지표 분석(이메일, 소셜, 유료, SEO), 효과적인 것과 개선이 필요한 것을 식별할 때 사용합니다.
 ---
 
-# Performance Analytics Skill
+# 성과 분석 스킬
 
-Frameworks for measuring, reporting, and optimizing marketing performance across channels and campaigns.
+채널과 캠페인 전반에 걸쳐 마케팅 성과를 측정, 리포팅, 최적화하기 위한 프레임워크입니다.
 
-## Key Marketing Metrics by Channel
+## 채널별 핵심 마케팅 지표
 
-### Email Marketing
+### 이메일 마케팅
 
-| Metric | Definition | Benchmark Range | What It Tells You |
-|--------|-----------|----------------|-------------------|
-| Delivery rate | Emails delivered / emails sent | 95-99% | List health and sender reputation |
-| Open rate | Unique opens / emails delivered | 15-30% | Subject line and sender effectiveness |
-| Click-through rate (CTR) | Unique clicks / emails delivered | 2-5% | Content relevance and CTA effectiveness |
-| Click-to-open rate (CTOR) | Unique clicks / unique opens | 10-20% | Email content quality (for those who opened) |
-| Unsubscribe rate | Unsubscribes / emails delivered | <0.5% | Content-audience fit and frequency tolerance |
-| Bounce rate | Bounces / emails sent | <2% | List quality and data hygiene |
-| Conversion rate | Conversions / emails delivered | 1-5% | End-to-end email effectiveness |
-| Revenue per email | Total revenue / emails sent | Varies | Direct revenue attribution |
-| List growth rate | (New subscribers - unsubscribes) / total list | 2-5% monthly | Audience building health |
+| 지표 | 정의 | 벤치마크 범위 | 의미 |
+|------|------|-------------|------|
+| 전달율 | 전달된 이메일 / 발송된 이메일 | 95-99% | 리스트 건강도 및 발신자 평판 |
+| 오픈율 | 고유 오픈 / 전달된 이메일 | 15-30% | 제목 및 발신자 효과 |
+| CTR | 고유 클릭 / 전달된 이메일 | 2-5% | 콘텐츠 관련성 및 CTA 효과 |
+| 클릭-오픈율(CTOR) | 고유 클릭 / 고유 오픈 | 10-20% | 이메일 콘텐츠 품질 (열어본 사람 기준) |
+| 수신 거부율 | 수신 거부 / 전달된 이메일 | <0.5% | 콘텐츠-오디언스 적합도 및 빈도 허용 범위 |
+| 반송율 | 반송 / 발송된 이메일 | <2% | 리스트 품질 및 데이터 관리 |
+| 전환율 | 전환 / 전달된 이메일 | 1-5% | 이메일 종합 효과 |
+| 이메일당 수익 | 총 수익 / 발송된 이메일 | 다양 | 직접 수익 기여도 |
+| 리스트 성장률 | (신규 구독자 - 수신 거부) / 전체 리스트 | 월 2-5% | 오디언스 구축 건강도 |
 
-### Social Media
+### 소셜 미디어
 
-| Metric | Definition | What It Tells You |
-|--------|-----------|-------------------|
-| Impressions | Number of times content was displayed | Content distribution and reach |
-| Reach | Number of unique users who saw content | Audience breadth |
-| Engagement rate | (Likes + comments + shares) / reach | Content resonance |
-| Click-through rate | Link clicks / impressions | Traffic driving effectiveness |
-| Follower growth rate | Net new followers / total followers per period | Audience building |
-| Share/Repost rate | Shares / reach | Content virality and advocacy |
-| Video view rate | Views / impressions | Video content hook effectiveness |
-| Video completion rate | Completed views / total views | Video content quality and length fit |
-| Social share of voice | Your mentions / total category mentions | Brand visibility vs. competitors |
+| 지표 | 정의 | 의미 |
+|------|------|------|
+| 노출 | 콘텐츠가 표시된 횟수 | 콘텐츠 배포 및 도달 범위 |
+| 도달 범위 | 콘텐츠를 본 고유 사용자 수 | 오디언스 폭 |
+| 참여율 | (좋아요 + 댓글 + 공유) / 도달 범위 | 콘텐츠 공감도 |
+| CTR | 링크 클릭 / 노출 | 트래픽 유도 효과 |
+| 팔로워 성장률 | 순 신규 팔로워 / 전체 팔로워 (기간당) | 오디언스 구축 |
+| 공유/리포스트율 | 공유 / 도달 범위 | 콘텐츠 바이럴 및 옹호 |
+| 영상 조회율 | 조회 / 노출 | 영상 콘텐츠 후크 효과 |
+| 영상 완료율 | 완료 조회 / 전체 조회 | 영상 콘텐츠 품질 및 길이 적합도 |
+| 소셜 점유율 | 자사 언급 / 전체 카테고리 언급 | 경쟁사 대비 브랜드 가시성 |
 
-### Paid Advertising (Search and Social)
+### 유료 광고 (검색 및 소셜)
 
-| Metric | Definition | What It Tells You |
-|--------|-----------|-------------------|
-| Impressions | Times ad was shown | Budget utilization and targeting breadth |
-| Click-through rate (CTR) | Clicks / impressions | Ad creative and targeting relevance |
-| Cost per click (CPC) | Total spend / clicks | Cost efficiency of traffic generation |
-| Cost per mille (CPM) | Cost per 1,000 impressions | Awareness cost efficiency |
-| Conversion rate | Conversions / clicks | Landing page and offer effectiveness |
-| Cost per acquisition (CPA) | Total spend / conversions | Full-funnel cost efficiency |
-| Return on ad spend (ROAS) | Revenue / ad spend | Revenue generation efficiency |
-| Quality Score (search) | Google's relevance rating (1-10) | Ad-keyword-landing page alignment |
-| Frequency | Average times a user sees the ad | Ad fatigue risk |
-| View-through conversions | Conversions from users who saw but did not click | Display/awareness campaign influence |
+| 지표 | 정의 | 의미 |
+|------|------|------|
+| 노출 | 광고가 표시된 횟수 | 예산 활용 및 타겟팅 폭 |
+| CTR | 클릭 / 노출 | 광고 크리에이티브 및 타겟팅 관련성 |
+| CPC | 총 집행액 / 클릭 | 트래픽 생성 비용 효율성 |
+| CPM | 1,000 노출당 비용 | 인지도 비용 효율성 |
+| 전환율 | 전환 / 클릭 | 랜딩 페이지 및 오퍼 효과 |
+| CPA | 총 집행액 / 전환 | 전체 퍼널 비용 효율성 |
+| ROAS | 수익 / 광고비 | 수익 창출 효율성 |
+| 품질 점수 (검색) | Google의 관련성 평가 (1-10) | 광고-키워드-랜딩 페이지 정합성 |
+| 빈도 | 사용자가 광고를 본 평균 횟수 | 광고 피로도 위험 |
+| 뷰스루 전환 | 보았지만 클릭하지 않은 사용자의 전환 | 디스플레이/인지 캠페인 영향력 |
 
-### SEO / Organic Search
+### SEO / 오가닉 검색
 
-| Metric | Definition | What It Tells You |
-|--------|-----------|-------------------|
-| Organic sessions | Visits from organic search | SEO effectiveness and content reach |
-| Keyword rankings | Position for target keywords | Search visibility |
-| Organic CTR | Clicks / impressions in search results | Title and meta description effectiveness |
-| Pages indexed | Number of pages in search index | Crawlability and site health |
-| Domain authority | Third-party authority score | Overall site strength |
-| Backlinks | Number of external sites linking to you | Content authority and off-page SEO |
-| Page load speed | Time to interactive | User experience and ranking factor |
-| Organic conversion rate | Organic conversions / organic sessions | Content quality and intent alignment |
-| Top entry pages | Most-visited pages from organic search | Content driving the most organic traffic |
+| 지표 | 정의 | 의미 |
+|------|------|------|
+| 오가닉 세션 | 오가닉 검색을 통한 방문 | SEO 효과 및 콘텐츠 도달 범위 |
+| 키워드 랭킹 | 타겟 키워드의 순위 | 검색 가시성 |
+| 오가닉 CTR | 클릭 / 검색 결과 노출 | 타이틀 및 메타 설명 효과 |
+| 색인 페이지 | 검색 색인에 포함된 페이지 수 | 크롤링 가능성 및 사이트 건강도 |
+| 도메인 권위 | 제3자 권위 점수 | 전반적 사이트 강도 |
+| 백링크 | 외부 사이트의 링크 수 | 콘텐츠 권위 및 오프페이지 SEO |
+| 페이지 로드 속도 | 인터랙티브 가능 시간 | 사용자 경험 및 랭킹 요소 |
+| 오가닉 전환율 | 오가닉 전환 / 오가닉 세션 | 콘텐츠 품질 및 의도 정합성 |
+| 상위 유입 페이지 | 오가닉 검색 최다 방문 페이지 | 가장 많은 오가닉 트래픽을 유도하는 콘텐츠 |
 
-### Content Marketing
+### 콘텐츠 마케팅
 
-| Metric | Definition | What It Tells You |
-|--------|-----------|-------------------|
-| Pageviews | Total views of content pages | Content reach and distribution |
-| Unique visitors | Distinct users viewing content | Audience size |
-| Average time on page | Time spent on content pages | Content engagement and depth |
-| Bounce rate | Single-page sessions / total sessions | Content-audience fit and UX |
-| Scroll depth | How far users scroll on a page | Content engagement through the piece |
-| Social shares | Times content was shared on social | Content resonance and virality |
-| Backlinks earned | External links to content | Content authority and SEO value |
-| Lead generation | Leads attributed to content | Content conversion effectiveness |
-| Content ROI | Revenue attributed / content production cost | Overall content investment return |
+| 지표 | 정의 | 의미 |
+|------|------|------|
+| 페이지뷰 | 콘텐츠 페이지 총 조회수 | 콘텐츠 도달 범위 및 배포 |
+| 고유 방문자 | 콘텐츠를 조회한 고유 사용자 | 오디언스 규모 |
+| 평균 페이지 체류 시간 | 콘텐츠 페이지에 머문 시간 | 콘텐츠 참여도 및 깊이 |
+| 이탈률 | 단일 페이지 세션 / 전체 세션 | 콘텐츠-오디언스 적합도 및 UX |
+| 스크롤 깊이 | 사용자가 페이지를 얼마나 스크롤했는가 | 콘텐츠 전반에 걸친 참여도 |
+| 소셜 공유 | 소셜에서 콘텐츠가 공유된 횟수 | 콘텐츠 공감도 및 바이럴 |
+| 획득 백링크 | 콘텐츠로의 외부 링크 | 콘텐츠 권위 및 SEO 가치 |
+| 리드 생성 | 콘텐츠에 기인한 리드 | 콘텐츠 전환 효과 |
+| 콘텐츠 ROI | 기인 수익 / 콘텐츠 제작 비용 | 전반적 콘텐츠 투자 수익 |
 
-### Overall Marketing / Pipeline
+### 전체 마케팅 / 파이프라인
 
-| Metric | Definition | What It Tells You |
-|--------|-----------|-------------------|
-| Marketing qualified leads (MQLs) | Leads meeting marketing qualification criteria | Top-of-funnel effectiveness |
-| Sales qualified leads (SQLs) | MQLs accepted by sales | Lead quality |
-| MQL to SQL conversion rate | SQLs / MQLs | Marketing-sales alignment and lead quality |
-| Pipeline generated | Dollar value of opportunities created | Marketing impact on revenue |
-| Pipeline velocity | How fast deals move through pipeline | Campaign urgency and quality |
-| Customer acquisition cost (CAC) | Total marketing + sales cost / new customers | Efficiency of customer acquisition |
-| CAC payback period | Months to recover CAC from revenue | Unit economics health |
-| Marketing-sourced revenue | Revenue from marketing-originated deals | Direct marketing contribution |
-| Marketing-influenced revenue | Revenue from deals where marketing touched | Broader marketing impact |
+| 지표 | 정의 | 의미 |
+|------|------|------|
+| 마케팅 적격 리드(MQL) | 마케팅 자격 기준을 충족하는 리드 | 상위 퍼널 효과 |
+| 영업 적격 리드(SQL) | 영업이 수락한 MQL | 리드 품질 |
+| MQL-SQL 전환율 | SQL / MQL | 마케팅-영업 정렬 및 리드 품질 |
+| 생성된 파이프라인 | 생성된 기회의 금액 | 매출에 대한 마케팅 영향 |
+| 파이프라인 속도 | 딜이 파이프라인을 통과하는 속도 | 캠페인 긴급성 및 품질 |
+| 고객 획득 비용(CAC) | 총 마케팅 + 영업 비용 / 신규 고객 수 | 고객 획득 효율성 |
+| CAC 회수 기간 | 수익으로 CAC를 회수하는 데 걸리는 개월 | 단위 경제 건강도 |
+| 마케팅 기원 수익 | 마케팅이 기원한 딜의 수익 | 직접적 마케팅 기여 |
+| 마케팅 영향 수익 | 마케팅이 접점을 가진 딜의 수익 | 광범위한 마케팅 영향 |
 
-## Reporting Templates and Dashboards
+## 리포팅 템플릿 및 대시보드
 
-### Weekly Marketing Report
-Quick-scan format for team standups:
-- **Top 3 metrics** with week-over-week change
-- **What worked** this week (1-2 bullet points with data)
-- **What needs attention** (1-2 bullet points with data)
-- **This week's priorities** (3-5 action items)
+### 주간 마케팅 리포트
+팀 스탠드업을 위한 빠른 스캔 형식:
+- **상위 3개 지표**와 전주 대비 변화
+- 이번 주 **효과적이었던 것** (데이터와 함께 1-2개 불릿)
+- **주의가 필요한 것** (데이터와 함께 1-2개 불릿)
+- **이번 주 우선순위** (3-5개 실행 항목)
 
-### Monthly Marketing Report
-Standard stakeholder report:
-1. Executive summary (3-5 sentences)
-2. Key metrics dashboard (table with MoM and target comparison)
-3. Channel-by-channel performance summary
-4. Campaign highlights and results
-5. What worked and what did not (with hypotheses)
-6. Recommendations and next month priorities
-7. Budget spend vs. plan
+### 월간 마케팅 리포트
+표준 이해관계자 리포트:
+1. 핵심 요약 (3-5문장)
+2. 핵심 지표 대시보드 (전월 및 목표 대비 테이블)
+3. 채널별 성과 요약
+4. 캠페인 하이라이트 및 결과
+5. 효과적이었던 것과 그렇지 않았던 것 (가설 포함)
+6. 권장 사항 및 다음 달 우선순위
+7. 예산 집행 vs. 계획
 
-### Quarterly Business Review (QBR)
-Strategic review for leadership:
-1. Quarter performance vs. goals
-2. Year-to-date trajectory
-3. Channel ROI analysis
-4. Campaign performance summary
-5. Competitive and market observations
-6. Strategic recommendations for next quarter
-7. Budget request and allocation plan
-8. Key experiments and learnings
+### 분기 사업 검토(QBR)
+경영진을 위한 전략적 검토:
+1. 분기 성과 vs. 목표
+2. 연간 누적 추이
+3. 채널 ROI 분석
+4. 캠페인 성과 요약
+5. 경쟁사 및 시장 관찰
+6. 다음 분기 전략적 권장 사항
+7. 예산 요청 및 배분 계획
+8. 주요 실험 및 교훈
 
-### Dashboard Design Principles
-- Lead with the metrics that map to business objectives (not vanity metrics)
-- Show trends over time, not just point-in-time snapshots
-- Include comparison context: prior period, target, benchmark
-- Use consistent color coding: green (on track), yellow (at risk), red (off track)
-- Group metrics by funnel stage or business question
-- Keep dashboards to one page/screen — detail goes in appendix
-- Update cadence should match decision cadence (real-time for paid, weekly for content)
+### 대시보드 설계 원칙
+- 비즈니스 목표에 매핑되는 지표를 맨 앞에 배치 (허영 지표가 아닌)
+- 시점 스냅샷이 아닌 시간에 따른 트렌드 표시
+- 비교 맥락 포함: 이전 기간, 목표, 벤치마크
+- 일관된 색상 코딩 사용: 초록(순조), 노랑(주의), 빨강(위험)
+- 퍼널 단계 또는 비즈니스 질문별로 지표 그룹화
+- 대시보드는 한 페이지/화면으로 유지 — 상세 내용은 부록에
+- 업데이트 주기는 의사결정 주기와 맞춤 (유료는 실시간, 콘텐츠는 주간)
 
-## Trend Analysis and Forecasting
+## 트렌드 분석 및 예측
 
-### Trend Identification
-When analyzing performance data, look for:
+### 트렌드 식별
+성과 데이터 분석 시 다음을 확인합니다:
 
-1. **Directional trends**: is the metric consistently going up, down, or flat over 4+ periods?
-2. **Inflection points**: where did performance change direction and what happened then?
-3. **Seasonality**: are there predictable patterns by day of week, month, or quarter?
-4. **Anomalies**: one-time spikes or drops — what caused them and are they repeatable?
-5. **Leading indicators**: which metrics change first and predict future outcomes?
+1. **방향성 트렌드**: 4개 이상의 기간에 걸쳐 지표가 일관되게 상승, 하락, 또는 보합인가?
+2. **전환점**: 어디에서 성과 방향이 바뀌었으며 그때 무슨 일이 있었는가?
+3. **계절성**: 요일, 월, 분기별 예측 가능한 패턴이 있는가?
+4. **이상치**: 일회성 급등 또는 급락 — 원인은 무엇이며 반복 가능한가?
+5. **선행 지표**: 어떤 지표가 먼저 변화하여 미래 결과를 예측하는가?
 
-### Trend Analysis Process
-1. Chart the metric over time (at least 8-12 data points for meaningful trends)
-2. Identify the overall direction (upward, downward, flat, cyclical)
-3. Calculate the rate of change (is it accelerating or decelerating?)
-4. Overlay key events (campaigns launched, product changes, market events)
-5. Compare to benchmarks or targets
-6. Identify correlations with other metrics
-7. Form hypotheses about causation (and plan tests to validate)
+### 트렌드 분석 프로세스
+1. 시간에 따라 지표를 차트화 (의미 있는 트렌드를 위해 최소 8-12개 데이터 포인트)
+2. 전반적 방향 식별 (상승, 하락, 보합, 주기적)
+3. 변화율 계산 (가속 또는 감속 중인가?)
+4. 주요 이벤트 오버레이 (캠페인 시작, 제품 변경, 시장 이벤트)
+5. 벤치마크 또는 목표와 비교
+6. 다른 지표와의 상관관계 식별
+7. 인과관계에 대한 가설 수립 (검증을 위한 테스트 계획)
 
-### Simple Forecasting Approaches
-- **Linear projection**: extend the current trend line forward (useful for stable metrics)
-- **Moving average**: smooth out noise by averaging the last 3-6 periods
-- **Year-over-year comparison**: use last year's pattern as a baseline, adjusted for growth rate
-- **Funnel math**: forecast outputs from inputs (e.g., if we generate X leads at Y conversion rate, we will get Z customers)
-- **Scenario modeling**: create best case, expected case, and worst case projections
+### 간단한 예측 방법
+- **선형 투영**: 현재 추세선을 앞으로 연장 (안정적 지표에 유용)
+- **이동 평균**: 최근 3-6개 기간을 평균하여 노이즈 제거
+- **전년 동기 비교**: 작년 패턴을 기준선으로, 성장률에 맞게 조정
+- **퍼널 계산**: 입력에서 출력 예측 (예: X 리드를 Y 전환율로 생성하면 Z 고객 확보)
+- **시나리오 모델링**: 최상, 예상, 최악의 시나리오 예측
 
-### Forecasting Caveats
-- Short-term forecasts (1-3 months) are more reliable than long-term
-- Forecasts based on fewer than 12 data points should be flagged as low confidence
-- External factors (market shifts, competitive moves, economic changes) can invalidate trend-based forecasts
-- Always present forecasts as ranges, not exact numbers
+### 예측 시 주의사항
+- 단기 예측 (1-3개월)이 장기보다 더 신뢰할 수 있음
+- 12개 미만의 데이터 포인트에 기반한 예측은 낮은 확신으로 표시
+- 외부 요인 (시장 변화, 경쟁 동향, 경제 변화)이 트렌드 기반 예측을 무효화할 수 있음
+- 예측은 항상 정확한 숫자가 아닌 범위로 제시
 
-## Attribution Modeling Basics
+## 기여도(Attribution) 모델링 기초
 
-### What Is Attribution?
-Attribution determines which marketing touchpoints get credit for a conversion. This matters because buyers typically interact with multiple channels before converting.
+### 기여도란?
+기여도(Attribution)는 어떤 마케팅 접점이 전환에 대한 공로를 받을지를 결정합니다. 구매자는 일반적으로 전환 전에 여러 채널과 상호작용하기 때문에 이것이 중요합니다.
 
-### Common Attribution Models
+### 일반적 기여도 모델
 
-| Model | How It Works | Best For | Limitation |
-|-------|-------------|----------|------------|
-| Last touch | 100% credit to last interaction before conversion | Understanding final conversion triggers | Ignores awareness and nurture |
-| First touch | 100% credit to first interaction | Understanding top-of-funnel effectiveness | Ignores nurture and conversion drivers |
-| Linear | Equal credit to all touchpoints | Fair representation of all channels | Does not reflect relative impact |
-| Time decay | More credit to touchpoints closer to conversion | Balanced view favoring recent interactions | May undervalue awareness |
-| Position-based (U-shaped) | 40% first, 40% last, 20% split among middle | Valuing both discovery and conversion | Somewhat arbitrary weighting |
-| Data-driven | Algorithmic credit based on conversion patterns | Most accurate representation | Requires significant data volume |
+| 모델 | 작동 방식 | 적합한 용도 | 한계 |
+|------|---------|-----------|------|
+| 라스트 터치 | 전환 직전 마지막 상호작용에 100% 공로 | 최종 전환 트리거 이해 | 인지 및 너처 무시 |
+| 퍼스트 터치 | 첫 상호작용에 100% 공로 | 상위 퍼널 효과 이해 | 너처 및 전환 동인 무시 |
+| 선형 | 모든 접점에 동일 공로 | 모든 채널의 공정한 대표 | 상대적 영향을 반영하지 않음 |
+| 시간 감소 | 전환에 가까운 접점에 더 많은 공로 | 최근 상호작용을 중시하는 균형 잡힌 뷰 | 인지를 과소평가할 수 있음 |
+| 위치 기반 (U자형) | 첫 40%, 마지막 40%, 중간에 20% 분배 | 발견과 전환 모두 중시 | 다소 임의적인 가중치 |
+| 데이터 기반 | 전환 패턴에 기반한 알고리즘적 공로 | 가장 정확한 대표 | 상당한 데이터 양 필요 |
 
-### Attribution Practical Guidance
-- Start with last-touch attribution if you have no model in place — it is the simplest and most actionable
-- Compare first-touch and last-touch to understand which channels drive awareness vs. conversion
-- Use position-based (U-shaped) as a reasonable middle ground for most B2B companies
-- Data-driven attribution requires high conversion volume to be statistically meaningful
-- No model is perfect — use attribution directionally, not as absolute truth
-- Multi-touch attribution is better than single-touch, but any model is better than none
+### 기여도 실용 가이드
+- 모델이 없다면 라스트 터치 기여도부터 시작 — 가장 간단하고 실행 가능
+- 퍼스트 터치와 라스트 터치를 비교하여 어떤 채널이 인지 vs. 전환을 주도하는지 이해
+- 대부분의 B2B 기업에는 위치 기반(U자형)이 합리적인 절충안
+- 데이터 기반 기여도는 통계적으로 의미 있으려면 높은 전환 볼륨 필요
+- 어떤 모델도 완벽하지 않음 — 기여도는 절대적 진실이 아닌 방향성으로 사용
+- 멀티 터치 기여도가 싱글 터치보다 낫지만, 어떤 모델이라도 없는 것보다 나음
 
-### Attribution Pitfalls
-- Do not optimize one channel in isolation based on single-touch attribution
-- Awareness channels (display, social, PR) will always look bad in last-touch models
-- Conversion channels (search, retargeting) will always look bad in first-touch models
-- Self-reported attribution ("how did you hear about us?") provides useful qualitative color but is unreliable as quantitative data
-- Cross-device and cross-channel tracking gaps mean attribution data is always incomplete
+### 기여도 함정
+- 싱글 터치 기여도에 기반하여 개별 채널을 최적화하지 않음
+- 인지 채널(디스플레이, 소셜, PR)은 라스트 터치 모델에서 항상 나빠 보임
+- 전환 채널(검색, 리타겟팅)은 퍼스트 터치 모델에서 항상 나빠 보임
+- 자기 보고 기여도("어떻게 알게 되셨나요?")는 유용한 정성적 참고이지만 정량적 데이터로는 신뢰할 수 없음
+- 크로스 디바이스 및 크로스 채널 추적 갭은 기여도 데이터가 항상 불완전함을 의미
 
-## Optimization Recommendations Framework
+## 최적화 권장 프레임워크
 
-### Optimization Process
-1. **Identify**: which metrics are underperforming vs. target or benchmark?
-2. **Diagnose**: where in the funnel is the problem? (impressions, clicks, conversions, retention)
-3. **Hypothesize**: what is causing the underperformance? (audience, message, creative, offer, timing, technical)
-4. **Prioritize**: which fixes will have the biggest impact with the least effort?
-5. **Test**: design an experiment to validate the hypothesis
-6. **Measure**: did the change improve the metric?
-7. **Scale or iterate**: roll out wins broadly; iterate on inconclusive or failed tests
+### 최적화 프로세스
+1. **식별**: 어떤 지표가 목표 또는 벤치마크 대비 저성과인가?
+2. **진단**: 퍼널 어디에 문제가 있는가? (노출, 클릭, 전환, 유지)
+3. **가설 수립**: 저성과의 원인은? (오디언스, 메시지, 크리에이티브, 오퍼, 타이밍, 기술)
+4. **우선순위 지정**: 어떤 수정이 최소 노력으로 최대 영향을 미칠 것인가?
+5. **테스트**: 가설을 검증할 실험 설계
+6. **측정**: 변경이 지표를 개선했는가?
+7. **확대 또는 반복**: 성공을 광범위하게 롤아웃; 불확실하거나 실패한 테스트는 반복
 
-### Optimization Levers by Funnel Stage
+### 퍼널 단계별 최적화 레버
 
-| Funnel Stage | Problem Signal | Optimization Levers |
-|-------------|---------------|---------------------|
-| Awareness | Low impressions, low reach | Budget, targeting, channel mix, creative format |
-| Interest | Low CTR, low engagement | Ad creative, headlines, content hooks, audience targeting |
-| Consideration | High bounce rate, low time on page | Landing page content, page speed, content relevance, UX |
-| Conversion | Low conversion rate | Offer, CTA, form length, trust signals, page layout |
-| Retention | High churn, low repeat engagement | Onboarding, email nurture, product experience, support |
+| 퍼널 단계 | 문제 신호 | 최적화 레버 |
+|----------|----------|-----------|
+| 인지 | 낮은 노출, 낮은 도달 범위 | 예산, 타겟팅, 채널 믹스, 크리에이티브 형식 |
+| 관심 | 낮은 CTR, 낮은 참여도 | 광고 크리에이티브, 헤드라인, 콘텐츠 후크, 오디언스 타겟팅 |
+| 고려 | 높은 이탈률, 낮은 체류 시간 | 랜딩 페이지 콘텐츠, 페이지 속도, 콘텐츠 관련성, UX |
+| 전환 | 낮은 전환율 | 오퍼, CTA, 양식 길이, 신뢰 신호, 페이지 레이아웃 |
+| 유지 | 높은 이탈, 낮은 반복 참여 | 온보딩, 이메일 너처, 제품 경험, 지원 |
 
-### Prioritization Framework
+### 우선순위 프레임워크
 
-Rank optimization ideas on two dimensions:
+최적화 아이디어를 두 가지 차원으로 평가합니다:
 
-**Impact** (how much will this move the metric?):
-- High: directly addresses the primary bottleneck
-- Medium: addresses a contributing factor
-- Low: incremental improvement
+**영향** (지표를 얼마나 움직일 것인가?):
+- 높음: 주요 병목을 직접 해결
+- 보통: 기여 요인을 해결
+- 낮음: 점진적 개선
 
-**Effort** (how hard is this to implement?):
-- Low: copy change, targeting adjustment, simple A/B test
-- Medium: new creative, landing page redesign, workflow change
-- High: new tool, cross-team project, major content production
+**노력** (실행이 얼마나 어려운가?):
+- 낮음: 카피 변경, 타겟팅 조정, 간단한 A/B 테스트
+- 보통: 새 크리에이티브, 랜딩 페이지 리디자인, 워크플로우 변경
+- 높음: 새 도구, 크로스팀 프로젝트, 대규모 콘텐츠 제작
 
-Priority order:
-1. High impact, low effort (do immediately)
-2. High impact, high effort (plan and resource)
-3. Low impact, low effort (do if capacity allows)
-4. Low impact, high effort (deprioritize)
+우선순위 순서:
+1. 높은 영향, 낮은 노력 (즉시 실행)
+2. 높은 영향, 높은 노력 (계획 및 리소스 확보)
+3. 낮은 영향, 낮은 노력 (여력이 있으면 실행)
+4. 낮은 영향, 높은 노력 (후순위)
 
-### Testing Best Practices
-- Test one variable at a time for clean results
-- Define the success metric before launching the test
-- Calculate required sample size before starting (do not end tests early)
-- Run tests for a minimum of one full business cycle (typically one week for B2B)
-- Document all tests and results, regardless of outcome
-- Share learnings across the team — failed tests are valuable information
-- A test that confirms the status quo is not a failure — it builds confidence in your current approach
+### 테스트 모범 사례
+- 깔끔한 결과를 위해 한 번에 하나의 변수만 테스트
+- 테스트 시작 전 성공 지표 정의
+- 시작 전 필요 샘플 크기 계산 (테스트를 조기 종료하지 않음)
+- 최소 하나의 완전한 비즈니스 주기 동안 테스트 실행 (일반적으로 B2B의 경우 1주일)
+- 결과에 관계없이 모든 테스트와 결과 문서화
+- 팀 전체에 교훈 공유 — 실패한 테스트도 가치 있는 정보
+- 현상 유지를 확인하는 테스트도 실패가 아님 — 현재 접근 방식에 대한 확신을 구축
 
-### Continuous Optimization Cadence
-- **Daily**: monitor paid campaigns for budget pacing, anomalies, and disapproved ads
-- **Weekly**: review channel performance, pause underperformers, scale winners
-- **Bi-weekly**: refresh ad creative and test new variants
-- **Monthly**: full performance review, identify new optimization opportunities, update forecasts
-- **Quarterly**: strategic review of channel mix, budget allocation, and targeting strategy
+### 지속적 최적화 주기
+- **일간**: 유료 캠페인의 예산 속도, 이상치, 비승인 광고 모니터링
+- **주간**: 채널 성과 검토, 저성과 중지, 성과 좋은 것 확대
+- **격주**: 광고 크리에이티브 교체 및 새 변형 테스트
+- **월간**: 전체 성과 검토, 새로운 최적화 기회 식별, 예측 업데이트
+- **분기**: 채널 믹스, 예산 배분, 타겟팅 전략의 전략적 검토

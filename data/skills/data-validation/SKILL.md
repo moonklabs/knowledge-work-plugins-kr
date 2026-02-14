@@ -1,233 +1,233 @@
 ---
 name: data-validation
-description: QA an analysis before sharing with stakeholders — methodology checks, accuracy verification, and bias detection. Use when reviewing an analysis for errors, checking for survivorship bias, validating aggregation logic, or preparing documentation for reproducibility.
+description: 이해관계자에게 공유하기 전 분석 QA -- 방법론 검사, 정확성 검증, 편향 탐지. 분석의 오류를 검토하거나, 생존자 편향을 검사하거나, 집계 로직을 검증하거나, 재현 가능성을 위한 문서화를 준비할 때 사용합니다.
 ---
 
-# Data Validation Skill
+# 데이터 검증 스킬
 
-Pre-delivery QA checklist, common data analysis pitfalls, result sanity checking, and documentation standards for reproducibility.
+전달 전 QA 체크리스트, 일반적인 데이터 분석 함정, 결과 정합성 검사, 재현 가능성을 위한 문서화 표준입니다.
 
-## Pre-Delivery QA Checklist
+## 전달 전 QA 체크리스트
 
-Run through this checklist before sharing any analysis with stakeholders.
+이해관계자에게 분석을 공유하기 전에 이 체크리스트를 수행합니다.
 
-### Data Quality Checks
+### 데이터 품질 검사
 
-- [ ] **Source verification**: Confirmed which tables/data sources were used. Are they the right ones for this question?
-- [ ] **Freshness**: Data is current enough for the analysis. Noted the "as of" date.
-- [ ] **Completeness**: No unexpected gaps in time series or missing segments.
-- [ ] **Null handling**: Checked null rates in key columns. Nulls are handled appropriately (excluded, imputed, or flagged).
-- [ ] **Deduplication**: Confirmed no double-counting from bad joins or duplicate source records.
-- [ ] **Filter verification**: All WHERE clauses and filters are correct. No unintended exclusions.
+- [ ] **소스 확인**: 사용된 테이블/데이터 소스를 확인함. 이 질문에 적합한 소스인가?
+- [ ] **최신성**: 분석에 충분히 최신 데이터인지 확인. "기준일" 명시.
+- [ ] **완전성**: 시계열에 예상치 못한 갭이나 누락된 세그먼트 없음.
+- [ ] **Null 처리**: 핵심 컬럼의 null 비율 확인. Null이 적절히 처리됨 (제외, 대체 또는 표시).
+- [ ] **중복 제거**: 잘못된 조인이나 소스 레코드 중복으로 인한 이중 계산 없음 확인.
+- [ ] **필터 확인**: 모든 WHERE 절과 필터가 정확함. 의도치 않은 제외 없음.
 
-### Calculation Checks
+### 계산 검사
 
-- [ ] **Aggregation logic**: GROUP BY includes all non-aggregated columns. Aggregation level matches the analysis grain.
-- [ ] **Denominator correctness**: Rate and percentage calculations use the right denominator. Denominators are non-zero.
-- [ ] **Date alignment**: Comparisons use the same time period length. Partial periods are excluded or noted.
-- [ ] **Join correctness**: JOIN types are appropriate (INNER vs LEFT). Many-to-many joins haven't inflated counts.
-- [ ] **Metric definitions**: Metrics match how stakeholders define them. Any deviations are noted.
-- [ ] **Subtotals sum**: Parts add up to the whole where expected. If they don't, explain why (e.g., overlap).
+- [ ] **집계 로직**: GROUP BY에 비집계 컬럼이 모두 포함됨. 집계 수준이 분석 세분화와 일치.
+- [ ] **분모 정확성**: 비율 및 백분율 계산이 올바른 분모를 사용. 분모가 0이 아님.
+- [ ] **날짜 정렬**: 비교가 동일한 기간 길이를 사용. 불완전한 기간이 제외되거나 명시됨.
+- [ ] **조인 정확성**: JOIN 유형이 적절함 (INNER vs LEFT). 다대다 조인이 수치를 부풀리지 않음.
+- [ ] **지표 정의**: 지표가 이해관계자의 정의와 일치. 차이가 있으면 명시.
+- [ ] **소계 합산**: 부분이 예상대로 전체에 합산됨. 그렇지 않으면 이유를 설명 (예: 중복).
 
-### Reasonableness Checks
+### 합리성 검사
 
-- [ ] **Magnitude**: Numbers are in a plausible range. Revenue isn't negative. Percentages are between 0-100%.
-- [ ] **Trend continuity**: No unexplained jumps or drops in time series.
-- [ ] **Cross-reference**: Key numbers match other known sources (dashboards, previous reports, finance data).
-- [ ] **Order of magnitude**: Total revenue is in the right ballpark. User counts match known figures.
-- [ ] **Edge cases**: What happens at the boundaries? Empty segments, zero-activity periods, new entities.
+- [ ] **규모**: 수치가 합리적인 범위 내. 매출이 음수가 아님. 백분율이 0-100% 사이.
+- [ ] **추세 연속성**: 시계열에 설명되지 않는 급등 또는 급락 없음.
+- [ ] **교차 참조**: 핵심 수치가 다른 알려진 소스(대시보드, 이전 보고서, 재무 데이터)와 일치.
+- [ ] **자릿수 검사**: 총 매출이 올바른 규모. 사용자 수가 알려진 수치와 일치.
+- [ ] **엣지 케이스**: 경계에서 어떤 일이 발생하는가? 빈 세그먼트, 비활동 기간, 신규 엔티티.
 
-### Presentation Checks
+### 프레젠테이션 검사
 
-- [ ] **Chart accuracy**: Bar charts start at zero. Axes are labeled. Scales are consistent across panels.
-- [ ] **Number formatting**: Appropriate precision. Consistent currency/percentage formatting. Thousands separators where needed.
-- [ ] **Title clarity**: Titles state the insight, not just the metric. Date ranges are specified.
-- [ ] **Caveat transparency**: Known limitations and assumptions are stated explicitly.
-- [ ] **Reproducibility**: Someone else could recreate this analysis from the documentation provided.
+- [ ] **차트 정확성**: 막대 차트가 0에서 시작. 축에 레이블이 있음. 패널 간 스케일이 일관적.
+- [ ] **숫자 형식**: 적절한 정밀도. 통화/백분율 형식이 일관적. 필요한 곳에 천 단위 구분자.
+- [ ] **제목 명확성**: 제목이 지표가 아닌 인사이트를 명시. 날짜 범위가 지정됨.
+- [ ] **주의사항 투명성**: 알려진 제한사항과 가정이 명시적으로 서술됨.
+- [ ] **재현 가능성**: 다른 사람이 제공된 문서로 이 분석을 재현할 수 있음.
 
-## Common Data Analysis Pitfalls
+## 일반적인 데이터 분석 함정
 
-### Join Explosion
+### 조인 폭발
 
-**The problem**: A many-to-many join silently multiplies rows, inflating counts and sums.
+**문제**: 다대다 조인이 행을 조용히 곱하여 수치와 합계를 부풀립니다.
 
-**How to detect**:
+**탐지 방법**:
 ```sql
--- Check row count before and after join
+-- 조인 전후의 행 수 확인
 SELECT COUNT(*) FROM table_a;  -- 1,000
-SELECT COUNT(*) FROM table_a a JOIN table_b b ON a.id = b.a_id;  -- 3,500 (uh oh)
+SELECT COUNT(*) FROM table_a a JOIN table_b b ON a.id = b.a_id;  -- 3,500 (문제가 발생함)
 ```
 
-**How to prevent**:
-- Always check row counts after joins
-- If counts increase, investigate the join relationship (is it really 1:1 or 1:many?)
-- Use `COUNT(DISTINCT a.id)` instead of `COUNT(*)` when counting entities through joins
+**예방 방법**:
+- 조인 후 항상 행 수를 확인합니다
+- 수치가 증가하면 조인 관계를 조사합니다 (정말 1:1 또는 1:다인가?)
+- 조인을 통해 엔티티를 계산할 때 `COUNT(*)` 대신 `COUNT(DISTINCT a.id)`를 사용합니다
 
-### Survivorship Bias
+### 생존자 편향
 
-**The problem**: Analyzing only entities that exist today, ignoring those that were deleted, churned, or failed.
+**문제**: 오늘 존재하는 엔티티만 분석하고, 삭제되거나 이탈하거나 실패한 엔티티를 무시합니다.
 
-**Examples**:
-- Analyzing user behavior of "current users" misses churned users
-- Looking at "companies using our product" ignores those who evaluated and left
-- Studying properties of "successful" outcomes without "unsuccessful" ones
+**예시**:
+- "현재 사용자"의 행동을 분석하면 이탈한 사용자를 놓침
+- "우리 제품을 사용하는 기업"을 보면 평가 후 떠난 기업을 무시
+- "성공한" 결과의 속성만 연구하고 "실패한" 결과는 제외
 
-**How to prevent**: Ask "who is NOT in this dataset?" before drawing conclusions.
+**예방 방법**: 결론을 내리기 전에 "이 데이터셋에 누가 포함되어 있지 않은가?"를 질문합니다.
 
-### Incomplete Period Comparison
+### 불완전한 기간 비교
 
-**The problem**: Comparing a partial period to a full period.
+**문제**: 부분 기간을 완전한 기간과 비교합니다.
 
-**Examples**:
-- "January revenue is $500K vs. December's $800K" -- but January isn't over yet
-- "This week's signups are down" -- checked on Wednesday, comparing to a full prior week
+**예시**:
+- "1월 매출은 $500K인데 12월은 $800K" -- 하지만 1월이 아직 끝나지 않음
+- "이번 주 가입이 줄었다" -- 수요일에 확인하면서 직전 전체 주와 비교
 
-**How to prevent**: Always filter to complete periods, or compare same-day-of-month / same-number-of-days.
+**예방 방법**: 항상 완전한 기간으로 필터링하거나, 동일 일수/동일 날짜로 비교합니다.
 
-### Denominator Shifting
+### 분모 변동
 
-**The problem**: The denominator changes between periods, making rates incomparable.
+**문제**: 기간 간 분모가 변경되어 비율을 비교할 수 없습니다.
 
-**Examples**:
-- Conversion rate improves because you changed how you count "eligible" users
-- Churn rate changes because the definition of "active" was updated
+**예시**:
+- "적격" 사용자 계산 방법을 변경하여 전환율이 개선됨
+- "활성" 정의가 업데이트되어 이탈률이 변동
 
-**How to prevent**: Use consistent definitions across all compared periods. Note any definition changes.
+**예방 방법**: 비교하는 모든 기간에 일관된 정의를 사용합니다. 정의 변경 사항을 기록합니다.
 
-### Average of Averages
+### 평균의 평균
 
-**The problem**: Averaging pre-computed averages gives wrong results when group sizes differ.
+**문제**: 사전 계산된 평균을 평균화하면 그룹 크기가 다를 때 잘못된 결과를 제공합니다.
 
-**Example**:
-- Group A: 100 users, average revenue $50
-- Group B: 10 users, average revenue $200
-- Wrong: Average of averages = ($50 + $200) / 2 = $125
-- Right: Weighted average = (100*$50 + 10*$200) / 110 = $63.64
+**예시**:
+- 그룹 A: 100명 사용자, 평균 매출 $50
+- 그룹 B: 10명 사용자, 평균 매출 $200
+- 잘못된 방법: 평균의 평균 = ($50 + $200) / 2 = $125
+- 올바른 방법: 가중 평균 = (100*$50 + 10*$200) / 110 = $63.64
 
-**How to prevent**: Always aggregate from raw data. Never average pre-aggregated averages.
+**예방 방법**: 항상 원시 데이터에서 집계합니다. 사전 집계된 평균을 다시 평균하지 않습니다.
 
-### Timezone Mismatches
+### 시간대 불일치
 
-**The problem**: Different data sources use different timezones, causing misalignment.
+**문제**: 서로 다른 데이터 소스가 다른 시간대를 사용하여 정렬이 맞지 않습니다.
 
-**Examples**:
-- Event timestamps in UTC vs. user-facing dates in local time
-- Daily rollups that use different cutoff times
+**예시**:
+- UTC 이벤트 타임스탬프 vs 로컬 시간의 사용자 대면 날짜
+- 서로 다른 마감 시간을 사용하는 일별 집계
 
-**How to prevent**: Standardize all timestamps to a single timezone (UTC recommended) before analysis. Document the timezone used.
+**예방 방법**: 분석 전에 모든 타임스탬프를 단일 시간대(UTC 권장)로 표준화합니다. 사용된 시간대를 문서화합니다.
 
-### Selection Bias in Segmentation
+### 세분화의 선택 편향
 
-**The problem**: Segments are defined by the outcome you're measuring, creating circular logic.
+**문제**: 측정하려는 결과로 세그먼트를 정의하여 순환 논리를 만듭니다.
 
-**Examples**:
-- "Users who completed onboarding have higher retention" -- obviously, they self-selected
-- "Power users generate more revenue" -- they became power users BY generating revenue
+**예시**:
+- "온보딩을 완료한 사용자의 리텐션이 더 높다" -- 당연히, 자기 선택의 결과
+- "파워 유저가 더 많은 매출을 생성한다" -- 매출 생성으로 인해 파워 유저가 된 것
 
-**How to prevent**: Define segments based on pre-treatment characteristics, not outcomes.
+**예방 방법**: 결과가 아닌 사전 특성을 기반으로 세그먼트를 정의합니다.
 
-## Result Sanity Checking
+## 결과 정합성 검사
 
-### Magnitude Checks
+### 규모 검사
 
-For any key number in your analysis, verify it passes the "smell test":
+분석의 모든 핵심 수치에 대해 "감각 검사"를 통과하는지 확인합니다:
 
-| Metric Type | Sanity Check |
+| 지표 유형 | 정합성 검사 |
 |---|---|
-| User counts | Does this match known MAU/DAU figures? |
-| Revenue | Is this in the right order of magnitude vs. known ARR? |
-| Conversion rates | Is this between 0% and 100%? Does it match dashboard figures? |
-| Growth rates | Is 50%+ MoM growth realistic, or is there a data issue? |
-| Averages | Is the average reasonable given what you know about the distribution? |
-| Percentages | Do segment percentages sum to ~100%? |
+| 사용자 수 | 알려진 MAU/DAU 수치와 일치하는가? |
+| 매출 | 알려진 ARR과 비교하여 올바른 자릿수인가? |
+| 전환율 | 0%에서 100% 사이인가? 대시보드 수치와 일치하는가? |
+| 성장률 | 월 대비 50% 이상 성장이 현실적인가, 아니면 데이터 문제인가? |
+| 평균 | 분포를 고려했을 때 평균이 합리적인가? |
+| 백분율 | 세그먼트 백분율의 합이 약 100%인가? |
 
-### Cross-Validation Techniques
+### 교차 검증 기법
 
-1. **Calculate the same metric two different ways** and verify they match
-2. **Spot-check individual records** -- pick a few specific entities and trace their data manually
-3. **Compare to known benchmarks** -- match against published dashboards, finance reports, or prior analyses
-4. **Reverse engineer** -- if total revenue is X, does per-user revenue times user count approximately equal X?
-5. **Boundary checks** -- what happens when you filter to a single day, a single user, or a single category? Are those micro-results sensible?
+1. **동일 지표를 두 가지 다른 방법으로 계산**하여 일치하는지 확인합니다
+2. **개별 레코드를 표본 검사** -- 몇 개의 특정 엔티티를 선택하여 수동으로 데이터를 추적합니다
+3. **알려진 벤치마크와 비교** -- 게시된 대시보드, 재무 보고서 또는 이전 분석과 대조합니다
+4. **역계산** -- 총 매출이 X이면, 사용자당 매출에 사용자 수를 곱하면 대략 X가 되는가?
+5. **경계 검사** -- 단일 날짜, 단일 사용자 또는 단일 카테고리로 필터링하면 어떻게 되는가? 미시 결과가 합리적인가?
 
-### Red Flags That Warrant Investigation
+### 조사가 필요한 위험 신호
 
-- Any metric that changed by more than 50% period-over-period without an obvious cause
-- Counts or sums that are exact round numbers (suggests a filter or default value issue)
-- Rates exactly at 0% or 100% (may indicate incomplete data)
-- Results that perfectly confirm the hypothesis (reality is usually messier)
-- Identical values across time periods or segments (suggests the query is ignoring a dimension)
+- 명확한 원인 없이 기간 대비 50% 이상 변동한 지표
+- 정확한 반올림 수인 수치와 합계 (필터 또는 기본값 문제를 시사)
+- 정확히 0% 또는 100%인 비율 (불완전한 데이터를 나타낼 수 있음)
+- 가설을 완벽하게 확인하는 결과 (현실은 보통 더 지저분함)
+- 기간이나 세그먼트에 걸쳐 동일한 값 (쿼리가 차원을 무시하고 있음을 시사)
 
-## Documentation Standards for Reproducibility
+## 재현 가능성을 위한 문서화 표준
 
-### Analysis Documentation Template
+### 분석 문서화 템플릿
 
-Every non-trivial analysis should include:
+모든 비사소한 분석에는 다음이 포함되어야 합니다:
 
 ```markdown
-## Analysis: [Title]
+## 분석: [제목]
 
-### Question
-[The specific question being answered]
+### 질문
+[답변하고 있는 구체적인 질문]
 
-### Data Sources
-- Table: [schema.table_name] (as of [date])
-- Table: [schema.other_table] (as of [date])
-- File: [filename] (source: [where it came from])
+### 데이터 소스
+- 테이블: [스키마.테이블명] ([날짜] 기준)
+- 테이블: [스키마.다른_테이블] ([날짜] 기준)
+- 파일: [파일명] (출처: [출처])
 
-### Definitions
-- [Metric A]: [Exactly how it's calculated]
-- [Segment X]: [Exactly how membership is determined]
-- [Time period]: [Start date] to [end date], [timezone]
+### 정의
+- [지표 A]: [정확한 계산 방법]
+- [세그먼트 X]: [멤버십 결정 방법]
+- [기간]: [시작일]부터 [종료일]까지, [시간대]
 
-### Methodology
-1. [Step 1 of the analysis approach]
-2. [Step 2]
-3. [Step 3]
+### 방법론
+1. [분석 접근법의 1단계]
+2. [2단계]
+3. [3단계]
 
-### Assumptions and Limitations
-- [Assumption 1 and why it's reasonable]
-- [Limitation 1 and its potential impact on conclusions]
+### 가정 및 제한사항
+- [가정 1 및 합리적인 이유]
+- [제한사항 1 및 결론에 미칠 수 있는 잠재적 영향]
 
-### Key Findings
-1. [Finding 1 with supporting evidence]
-2. [Finding 2 with supporting evidence]
+### 주요 발견사항
+1. [증거 자료가 포함된 발견사항 1]
+2. [증거 자료가 포함된 발견사항 2]
 
-### SQL Queries
-[All queries used, with comments]
+### SQL 쿼리
+[주석과 함께 사용된 모든 쿼리]
 
-### Caveats
-- [Things the reader should know before acting on this]
+### 주의사항
+- [독자가 이를 기반으로 행동하기 전에 알아야 할 사항]
 ```
 
-### Code Documentation
+### 코드 문서화
 
-For any code (SQL, Python) that may be reused:
+재사용될 수 있는 코드(SQL, Python)의 경우:
 
 ```python
 """
-Analysis: Monthly Cohort Retention
-Author: [Name]
-Date: [Date]
-Data Source: events table, users table
-Last Validated: [Date] -- results matched dashboard within 2%
+분석: 월간 코호트 리텐션
+작성자: [이름]
+날짜: [날짜]
+데이터 소스: events 테이블, users 테이블
+마지막 검증: [날짜] -- 결과가 대시보드와 2% 이내로 일치함
 
-Purpose:
-    Calculate monthly user retention cohorts based on first activity date.
+목적:
+    최초 활동일 기준 월간 사용자 리텐션 코호트 계산.
 
-Assumptions:
-    - "Active" means at least one event in the month
-    - Excludes test/internal accounts (user_type != 'internal')
-    - Uses UTC dates throughout
+가정:
+    - "활성"은 해당 월에 최소 하나 이상의 이벤트가 발생함을 의미
+    - 테스트/내부 계정 제외 (user_type != 'internal')
+    - 전체에 UTC 날짜 사용
 
-Output:
-    Cohort retention matrix with cohort_month rows and months_since_signup columns.
-    Values are retention rates (0-100%).
+출력:
+    cohort_month 행과 months_since_signup 열이 포함된 코호트 리텐션 매트릭스.
+    값은 리텐션율(0-100%)임.
 """
 ```
 
-### Version Control for Analyses
+### 분석의 버전 관리
 
-- Save queries and code in version control (git) or a shared docs system
-- Note the date of the data snapshot used
-- If an analysis is re-run with updated data, document what changed and why
-- Link to prior versions of recurring analyses for trend comparison
+- 쿼리와 코드를 버전 관리(git) 또는 공유 문서 시스템에 저장합니다
+- 사용된 데이터 스냅샷 날짜를 기록합니다
+- 업데이트된 데이터로 분석을 재실행하는 경우 변경 사항과 이유를 문서화합니다
+- 반복 분석의 경우 추세 비교를 위해 이전 버전에 링크합니다

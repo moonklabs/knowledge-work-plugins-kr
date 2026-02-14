@@ -1,19 +1,19 @@
-# Connectors
+# 커넥터
 
-## How tool references work
+## 도구 참조 방식
 
-Plugin files use `~~category` as a placeholder for whatever tool the user connects in that category. For example, `~~support platform` might mean Intercom, Zendesk, or any other support tool with an MCP server.
+플러그인 파일은 해당 카테고리에서 사용자가 연결한 도구에 대한 플레이스홀더로 `~~category`를 사용합니다. 예를 들어, `~~support platform`은 MCP 서버가 있는 Intercom, Zendesk 또는 기타 지원 도구를 의미할 수 있습니다.
 
-Plugins are **tool-agnostic** — they describe workflows in terms of categories (support platform, CRM, chat, etc.) rather than specific products. The `.mcp.json` pre-configures specific MCP servers, but any MCP server in that category works.
+플러그인은 **도구에 구애받지 않습니다** — 특정 제품이 아닌 카테고리(지원 플랫폼, CRM, 채팅 등) 단위로 워크플로우를 설명합니다. `.mcp.json`은 특정 MCP 서버를 사전 구성하지만, 해당 카테고리의 모든 MCP 서버가 호환됩니다.
 
-## Connectors for this plugin
+## 이 플러그인의 커넥터
 
-| Category | Placeholder | Included servers | Other options |
+| 카테고리 | 플레이스홀더 | 포함된 서버 | 기타 옵션 |
 |----------|-------------|-----------------|---------------|
-| Chat | `~~chat` | Slack | Microsoft Teams |
-| Email | `~~email` | Microsoft 365 | — |
-| Cloud storage | `~~cloud storage` | Microsoft 365 | — |
-| Support platform | `~~support platform` | Intercom | Zendesk, Freshdesk, HubSpot Service Hub |
+| 채팅 | `~~chat` | Slack | Microsoft Teams |
+| 이메일 | `~~email` | Microsoft 365 | — |
+| 클라우드 스토리지 | `~~cloud storage` | Microsoft 365 | — |
+| 지원 플랫폼 | `~~support platform` | Intercom | Zendesk, Freshdesk, HubSpot Service Hub |
 | CRM | `~~CRM` | HubSpot | Salesforce, Pipedrive |
-| Knowledge base | `~~knowledge base` | Guru, Notion | Confluence, Help Scout |
-| Project tracker | `~~project tracker` | Atlassian (Jira/Confluence) | Linear, Asana |
+| 지식 베이스 | `~~knowledge base` | Guru, Notion | Confluence, Help Scout |
+| 프로젝트 트래커 | `~~project tracker` | Atlassian (Jira/Confluence) | Linear, Asana |

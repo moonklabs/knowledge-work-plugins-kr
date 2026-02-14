@@ -7,62 +7,62 @@
     {
       "name": "productivity",
       "source": "./productivity",
-      "description": "Manage tasks, plan your day, and build up memory of important context about your work. Syncs with your calendar, email, and chat to keep everything organized and on track."
+      "description": "작업 관리, 일정 계획, 중요한 업무 맥락 기억을 지원합니다. 캘린더, 이메일, 채팅과 동기화하여 모든 것을 정리하고 추적합니다."
     },
     {
       "name": "enterprise-search",
       "source": "./enterprise-search",
-      "description": "Search across all of your company's tools in one place. Find anything across email, chat, documents, and wikis without switching between apps."
+      "description": "회사의 모든 도구를 한 곳에서 검색합니다. 이메일, 채팅, 문서, 위키를 앱 전환 없이 통합 검색합니다."
     },
     {
       "name": "cowork-plugin-management",
       "source": "./cowork-plugin-management",
-      "description": "Create, customize, and manage plugins tailored to your organization's tools and workflows. Configure MCP servers, adjust plugin behavior, and adapt templates to match how your team works."
+      "description": "조직의 도구와 워크플로우에 맞는 플러그인을 생성, 커스터마이징, 관리합니다. MCP 서버를 설정하고, 플러그인 동작을 조정하고, 팀의 작업 방식에 맞게 템플릿을 조정합니다."
     },
     {
       "name": "sales",
       "source": "./sales",
-      "description": "Prospect, craft outreach, and build deal strategy faster. Prep for calls, manage your pipeline, and write personalized messaging that moves deals forward."
+      "description": "잠재 고객 발굴, 아웃리치 작성, 거래 전략 수립을 더 빠르게 수행합니다. 통화 준비, 파이프라인 관리, 거래를 진전시키는 맞춤형 메시지를 작성합니다."
     },
     {
       "name": "finance",
       "source": "./finance",
-      "description": "Streamline finance and accounting workflows, from journal entries and reconciliation to financial statements and variance analysis. Speed up audit prep, month-end close, and keeping your books clean."
+      "description": "분개, 계정 조정부터 재무제표, 차이 분석까지 재무 및 회계 워크플로우를 간소화합니다. 감사 준비, 월마감, 장부 관리를 가속화합니다."
     },
     {
       "name": "data",
       "source": "./data",
-      "description": "Write SQL, explore datasets, and generate insights faster. Build visualizations and dashboards, and turn raw data into clear stories for stakeholders."
+      "description": "SQL 작성, 데이터셋 탐색, 인사이트 생성을 더 빠르게 수행합니다. 시각화와 대시보드를 구축하고, 원시 데이터를 이해관계자를 위한 명확한 스토리로 변환합니다."
     },
     {
       "name": "legal",
       "source": "./legal",
-      "description": "Speed up contract review, NDA triage, and compliance workflows for in-house legal teams. Draft legal briefs, organize precedent research, and manage institutional knowledge."
+      "description": "사내 법무팀을 위한 계약서 검토, NDA 분류, 컴플라이언스 워크플로우를 가속화합니다. 법률 브리핑을 작성하고, 판례 조사를 정리하고, 기관 지식을 관리합니다."
     },
     {
       "name": "marketing",
       "source": "./marketing",
-      "description": "Create content, plan campaigns, and analyze performance across marketing channels. Maintain brand voice consistency, track competitors, and report on what's working."
+      "description": "콘텐츠 제작, 캠페인 기획, 마케팅 채널 전반의 성과 분석을 수행합니다. 브랜드 보이스 일관성을 유지하고, 경쟁사를 추적하고, 효과적인 전략을 보고합니다."
     },
     {
       "name": "customer-support",
       "source": "./customer-support",
-      "description": "Triage tickets, draft responses, escalate issues, and build your knowledge base. Research customer context and turn resolved issues into self-service content."
+      "description": "티켓 분류, 응답 초안 작성, 이슈 에스컬레이션, 지식 베이스 구축을 수행합니다. 고객 컨텍스트를 조사하고 해결된 이슈를 셀프 서비스 콘텐츠로 전환합니다."
     },
     {
       "name": "product-management",
       "source": "./product-management",
-      "description": "Write feature specs, plan roadmaps, and synthesize user research faster. Keep stakeholders updated and stay ahead of the competitive landscape."
+      "description": "기능 명세서 작성, 로드맵 계획, 사용자 조사 통합을 더 빠르게 수행합니다. 이해관계자에게 최신 정보를 전달하고 경쟁 환경을 선제적으로 파악합니다."
     },
     {
       "name": "bio-research",
       "source": "./bio-research",
-      "description": "Connect to preclinical research tools and databases (literature search, genomics analysis, target prioritization) to accelerate early-stage life sciences R&D"
+      "description": "전임상 연구 도구 및 데이터베이스(문헌 검색, 유전체 분석, 타겟 우선순위 지정)를 연결하여 초기 단계 생명과학 R&D를 가속화합니다."
     },
     {
       "name": "localization",
       "source": "./localization",
-      "description": "Systematically translate Claude Code plugins from English to Korean while preserving structure, technical accuracy, and YAML integrity. Includes domain-specific glossaries and comprehensive translation guidelines."
+      "description": "구조, 기술적 정확성, YAML 무결성을 유지하면서 Claude Code 플러그인을 영어에서 한국어로 체계적으로 번역합니다. 도메인별 용어집과 포괄적인 번역 가이드라인을 포함합니다."
     }
   ]
 }

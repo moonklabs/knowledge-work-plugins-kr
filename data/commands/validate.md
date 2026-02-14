@@ -1,168 +1,168 @@
 ---
-description: QA an analysis before sharing -- methodology, accuracy, and bias checks
-argument-hint: "<analysis to review>"
+description: 공유 전 분석 QA -- 방법론, 정확성, 편향 검사
+argument-hint: "<검토할 분석>"
 ---
 
-# /validate - Validate Analysis Before Sharing
+# /validate - 공유 전 분석 검증
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 있거나 연결된 도구를 확인해야 하는 경우 [CONNECTORS.md](../CONNECTORS.md)를 참조하십시오.
 
-Review an analysis for accuracy, methodology, and potential biases before sharing with stakeholders. Generates a confidence assessment and improvement suggestions.
+이해관계자에게 공유하기 전에 분석의 정확성, 방법론, 잠재적 편향을 검토합니다. 신뢰도 평가와 개선 제안을 생성합니다.
 
-## Usage
-
-```
-/validate <analysis to review>
-```
-
-The analysis can be:
-- A document or report in the conversation
-- A file (markdown, notebook, spreadsheet)
-- SQL queries and their results
-- Charts and their underlying data
-- A description of methodology and findings
-
-## Workflow
-
-### 1. Review Methodology and Assumptions
-
-Examine:
-
-- **Question framing**: Is the analysis answering the right question? Could the question be interpreted differently?
-- **Data selection**: Are the right tables/datasets being used? Is the time range appropriate?
-- **Population definition**: Is the analysis population correctly defined? Are there unintended exclusions?
-- **Metric definitions**: Are metrics defined clearly and consistently? Do they match how stakeholders understand them?
-- **Baseline and comparison**: Is the comparison fair? Are time periods, cohort sizes, and contexts comparable?
-
-### 2. Check for Common Analytical Errors
-
-Systematically review for:
-
-**Data completeness:**
-- Missing data that could skew results (e.g., nulls in key fields, missing time periods)
-- Data freshness issues (is the most recent data actually complete or still loading?)
-- Survivorship bias (are you only looking at entities that "survived" to the analysis date?)
-
-**Statistical issues:**
-- Simpson's paradox (trend reverses when data is aggregated vs. segmented)
-- Correlation presented as causation without supporting evidence
-- Small sample sizes leading to unreliable conclusions
-- Outliers disproportionately affecting averages (should medians be used instead?)
-- Multiple testing / cherry-picking significant results
-
-**Aggregation errors:**
-- Double-counting from improper joins (many-to-many explosions)
-- Incorrect denominators in rate calculations
-- Mixing granularity levels (e.g., user-level metrics averaged with account-level)
-- Revenue recognized vs. billed vs. collected confusion
-
-**Time-related issues:**
-- Seasonality not accounted for in comparisons
-- Incomplete periods included in averages (e.g., partial month compared to full months)
-- Timezone inconsistencies between data sources
-- Look-ahead bias (using future information to explain past events)
-
-**Selection and scope:**
-- Cherry-picked time ranges that favor a particular narrative
-- Excluded segments without justification
-- Changing definitions mid-analysis
-
-### 3. Verify Calculations and Aggregations
-
-Where possible, spot-check:
-
-- Recalculate a few key numbers independently
-- Verify that subtotals sum to totals
-- Check that percentages sum to 100% (or close to it) where expected
-- Confirm that YoY/MoM comparisons use the correct base periods
-- Validate that filters are applied consistently across all metrics
-
-### 4. Assess Visualizations
-
-If the analysis includes charts:
-
-- Do axes start at appropriate values (zero for bar charts)?
-- Are scales consistent across comparison charts?
-- Do chart titles accurately describe what's shown?
-- Could the visualization mislead a quick reader?
-- Are there truncated axes, inconsistent intervals, or 3D effects that distort perception?
-
-### 5. Evaluate Narrative and Conclusions
-
-Review whether:
-
-- Conclusions are supported by the data shown
-- Alternative explanations are acknowledged
-- Uncertainty is communicated appropriately
-- Recommendations follow logically from findings
-- The level of confidence matches the strength of evidence
-
-### 6. Suggest Improvements
-
-Provide specific, actionable suggestions:
-
-- Additional analyses that would strengthen the conclusions
-- Caveats or limitations that should be noted
-- Better visualizations or framings for key points
-- Missing context that stakeholders would want
-
-### 7. Generate Confidence Assessment
-
-Rate the analysis on a 3-level scale:
-
-**Ready to share** -- Analysis is methodologically sound, calculations verified, caveats noted. Minor suggestions for improvement but nothing blocking.
-
-**Share with noted caveats** -- Analysis is largely correct but has specific limitations or assumptions that must be communicated to stakeholders. List the required caveats.
-
-**Needs revision** -- Found specific errors, methodological issues, or missing analyses that should be addressed before sharing. List the required changes with priority order.
-
-## Output Format
+## 사용법
 
 ```
-## Validation Report
+/validate <검토할 분석>
+```
 
-### Overall Assessment: [Ready to share | Share with caveats | Needs revision]
+분석 대상은 다음과 같습니다:
+- 대화 중의 문서 또는 보고서
+- 파일 (마크다운, 노트북, 스프레드시트)
+- SQL 쿼리 및 결과
+- 차트와 기반 데이터
+- 방법론 및 결과에 대한 설명
 
-### Methodology Review
-[Findings about approach, data selection, definitions]
+## 워크플로우
 
-### Issues Found
-1. [Severity: High/Medium/Low] [Issue description and impact]
+### 1. 방법론 및 가정 검토
+
+다음을 검토합니다:
+
+- **질문 프레이밍**: 분석이 올바른 질문에 답하고 있는가? 질문이 다르게 해석될 수 있는가?
+- **데이터 선택**: 올바른 테이블/데이터셋을 사용하고 있는가? 시간 범위가 적절한가?
+- **모집단 정의**: 분석 모집단이 올바르게 정의되었는가? 의도치 않은 제외가 있는가?
+- **지표 정의**: 지표가 명확하고 일관되게 정의되었는가? 이해관계자의 이해와 일치하는가?
+- **기준선 및 비교**: 비교가 공정한가? 기간, 코호트 크기, 맥락이 비교 가능한가?
+
+### 2. 일반적인 분석 오류 검사
+
+체계적으로 검토합니다:
+
+**데이터 완전성:**
+- 결과를 왜곡할 수 있는 누락 데이터 (예: 핵심 필드의 null, 누락된 기간)
+- 데이터 최신성 문제 (최근 데이터가 실제로 완전한가, 아니면 아직 로딩 중인가?)
+- 생존자 편향(Survivorship bias) (분석 시점까지 "생존"한 엔티티만 보고 있는가?)
+
+**통계적 문제:**
+- 심슨의 역설(Simpson's paradox) (데이터를 집계할 때와 세분화할 때 추세가 역전됨)
+- 근거 없이 상관관계를 인과관계로 제시
+- 신뢰할 수 없는 결론을 낳는 작은 표본 크기
+- 평균에 과도하게 영향을 미치는 이상치 (중앙값을 대신 사용해야 하는가?)
+- 다중 검정 / 유의미한 결과의 선별적 선택
+
+**집계 오류:**
+- 부적절한 조인으로 인한 이중 계산 (다대다 폭발)
+- 비율 계산에서의 잘못된 분모
+- 세분화 수준 혼합 (예: 사용자 수준 지표를 계정 수준과 평균화)
+- 인식 매출 vs 청구 매출 vs 수금 매출 혼동
+
+**시간 관련 문제:**
+- 비교에서 계절성을 고려하지 않음
+- 평균에 불완전한 기간 포함 (예: 부분 월을 완전한 월과 비교)
+- 데이터 소스 간 시간대 불일치
+- 미래 정보를 사용하여 과거 사건을 설명하는 예측 편향(Look-ahead bias)
+
+**선택 및 범위:**
+- 특정 서술에 유리한 기간 선별
+- 정당한 이유 없이 세그먼트 제외
+- 분석 중 정의 변경
+
+### 3. 계산 및 집계 검증
+
+가능한 경우 표본 검사를 수행합니다:
+
+- 몇 가지 핵심 수치를 독립적으로 재계산
+- 소계가 합계와 일치하는지 확인
+- 예상되는 경우 백분율 합계가 100% (또는 근사치)인지 확인
+- 전년 대비/전월 대비 비교가 올바른 기준 기간을 사용하는지 확인
+- 필터가 모든 지표에 일관되게 적용되었는지 검증
+
+### 4. 시각화 평가
+
+분석에 차트가 포함된 경우:
+
+- 축이 적절한 값에서 시작하는가 (막대 차트의 경우 0)?
+- 비교 차트 간 스케일이 일관적인가?
+- 차트 제목이 표시된 내용을 정확히 설명하는가?
+- 시각화가 빠르게 보는 독자에게 오해를 줄 수 있는가?
+- 절단된 축, 일관되지 않은 간격, 인식을 왜곡하는 3D 효과가 있는가?
+
+### 5. 내러티브 및 결론 평가
+
+다음을 검토합니다:
+
+- 결론이 제시된 데이터로 뒷받침되는지
+- 대안적 설명이 인정되는지
+- 불확실성이 적절하게 전달되는지
+- 권장사항이 결과에서 논리적으로 도출되는지
+- 확신 수준이 근거의 강도와 일치하는지
+
+### 6. 개선 제안
+
+구체적이고 실행 가능한 제안을 제공합니다:
+
+- 결론을 강화할 추가 분석
+- 언급해야 할 주의사항 또는 제한사항
+- 핵심 포인트를 위한 더 나은 시각화 또는 프레이밍
+- 이해관계자가 원할 누락된 맥락
+
+### 7. 신뢰도 평가 생성
+
+3단계 척도로 분석을 평가합니다:
+
+**공유 준비 완료** -- 분석의 방법론이 건전하고, 계산이 검증되었으며, 주의사항이 기록되었습니다. 개선을 위한 사소한 제안은 있지만 차단 요소는 없습니다.
+
+**주의사항과 함께 공유** -- 분석은 대체로 정확하지만 이해관계자에게 반드시 전달해야 할 특정 제한사항이나 가정이 있습니다. 필요한 주의사항을 나열합니다.
+
+**수정 필요** -- 공유 전에 해결해야 할 특정 오류, 방법론 문제 또는 누락된 분석이 발견되었습니다. 필요한 변경 사항을 우선순위와 함께 나열합니다.
+
+## 출력 형식
+
+```
+## 검증 보고서 (Validation Report)
+
+### 종합 평가: [공유 준비 완료 | 주의사항과 함께 공유 | 수정 필요]
+
+### 방법론 검토
+[접근 방식, 데이터 선택, 정의에 관한 발견한 내용]
+
+### 발견된 문제
+1. [심각도: 높음/보통/낮음] [문제 설명 및 영향]
 2. ...
 
-### Calculation Spot-Checks
-- [Metric]: [Verified / Discrepancy found]
+### 계산 표본 검토
+- [지표]: [확인됨 / 차이 발견됨]
 - ...
 
-### Visualization Review
-[Any issues with charts or visual presentation]
+### 시각화 검토
+[차트 또는 시각적 프레젠테이션 이슈]
 
-### Suggested Improvements
-1. [Improvement and why it matters]
+### 권장 개선 사항
+1. [개선 사항 및 그 이유]
 2. ...
 
-### Required Caveats for Stakeholders
-- [Caveat that must be communicated]
+### 이해관계자를 위한 필수 주의사항
+- [반드시 전달해야 하는 주의사항]
 - ...
 ```
 
-## Examples
+## 예시
 
 ```
-/validate Review this quarterly revenue analysis before I send it to the exec team: [analysis]
-```
-
-```
-/validate Check my churn analysis -- I'm comparing Q4 churn rates to Q3 but Q4 has a shorter measurement window
+/validate 이 분기별 수익 분석을 경영진에게 보내기 전에 검토해 주세요: [분석 내용]
 ```
 
 ```
-/validate Here's a SQL query and its results for our conversion funnel. Does the logic look right? [query + results]
+/validate 내 이탈 분석을 확인해 주세요 -- Q4 이탈률을 Q3과 비교하고 있는데, Q4의 측정 기간이 더 짧습니다.
 ```
 
-## Tips
+```
+/validate 여기 우리 전환 퍼널에 대한 SQL 쿼리와 결과가 있습니다. 로직이 맞나요? [쿼리 + 결과]
+```
 
-- Run /validate before any high-stakes presentation or decision
-- Even quick analyses benefit from a sanity check -- it takes a minute and can save your credibility
-- If the validation finds issues, fix them and re-validate
-- Share the validation output alongside your analysis to build stakeholder confidence
+## 팁
+
+- 중요한 프레젠테이션이나 의사결정 전에 /validate를 실행하십시오
+- 빠른 분석도 정합성 검사의 이점이 있습니다 -- 1분이면 되고, 신뢰성을 지킬 수 있습니다
+- 검증에서 문제가 발견되면 수정 후 다시 검증하십시오
+- 이해관계자의 신뢰를 구축하기 위해 분석과 함께 검증 결과를 공유하십시오

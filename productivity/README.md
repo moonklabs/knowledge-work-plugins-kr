@@ -1,96 +1,96 @@
-# Productivity Plugin
+# Productivity 플러그인
 
-A productivity plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Task management, workplace memory, and a visual dashboard — Claude learns your people, projects, and terminology so it can act like a colleague, not a chatbot.
+[Cowork](https://claude.com/product/cowork)(Anthropic의 에이전틱 데스크톱 애플리케이션)를 위해 주로 설계된 생산성 플러그인입니다. Claude Code에서도 작동합니다. 작업 관리, 업무 기억, 시각적 대시보드를 제공하며, Claude가 사람, 프로젝트, 용어를 학습하여 챗봇이 아닌 동료처럼 행동합니다.
 
-## Installation
+## 설치
 
 ```
 claude plugins add knowledge-work-plugins/productivity
 ```
 
-## What It Does
+## 기능
 
-This plugin gives Claude a persistent understanding of your work:
+이 플러그인은 Claude에게 업무에 대한 지속적인 이해를 제공합니다:
 
-- **Task management** — A markdown task list (`TASKS.md`) that Claude reads, writes, and executes against. Add tasks naturally, and Claude tracks status, triages stale items, and syncs with external tools.
-- **Workplace memory** — A two-tier memory system that teaches Claude your shorthand, people, projects, and terminology. Say "ask todd to do the PSR for oracle" and Claude knows exactly who, what, and which deal.
-- **Visual dashboard** — A local HTML file that gives you a board view of your tasks and a live view of what Claude knows about your workplace. Edit from the board or the file — they stay in sync.
+- **작업 관리** — Claude가 읽고, 쓰고, 실행하는 마크다운 작업 목록(`TASKS.md`)입니다. 작업을 자연스럽게 추가하면 Claude가 상태를 추적하고, 오래된 항목을 분류하고, 외부 도구와 동기화합니다.
+- **업무 기억** — Claude에게 약어, 사람, 프로젝트, 용어를 가르치는 2단계 기억 시스템입니다. "oracle 건에 대한 PSR을 todd에게 요청해"라고 말하면 Claude는 누가, 무엇을, 어떤 거래인지 정확히 알고 있습니다.
+- **시각적 대시보드** — 작업의 보드 뷰와 Claude가 업무에 대해 알고 있는 내용의 실시간 뷰를 제공하는 로컬 HTML 파일입니다. 보드나 파일에서 편집하면 동기화가 유지됩니다.
 
-## Commands
+## 커맨드
 
-| Command | What it does |
-|---------|--------------|
-| `/start` | Initialize tasks + memory, open the dashboard |
-| `/update` | Triage stale items, check memory for gaps, sync from external tools if applicable |
-| `/update --comprehensive` | Deep scan email, calendar, chat — flag missed todos and suggest new memories |
+| 커맨드 | 기능 |
+|--------|------|
+| `/start` | 작업 및 기억 초기화, 대시보드 열기 |
+| `/update` | 오래된 항목 분류, 기억 공백 확인, 외부 도구와 동기화(해당되는 경우) |
+| `/update --comprehensive` | 이메일, 캘린더, 채팅 전체 스캔 — 놓친 할 일 표시 및 새로운 기억 제안 |
 
-## Skills
+## 스킬
 
-| Skill | Description |
-|-------|-------------|
-| `memory-management` | Two-tier memory system — CLAUDE.md for working memory, memory/ directory for deep storage |
-| `task-management` | Markdown-based task tracking using a shared TASKS.md file |
+| 스킬 | 설명 |
+|------|------|
+| `memory-management` | 2단계 기억 시스템 — 작업 기억을 위한 CLAUDE.md, 심층 저장을 위한 memory/ 디렉토리 |
+| `task-management` | 공유 TASKS.md 파일을 사용한 마크다운 기반 작업 추적 |
 
-## Example Workflows
+## 예시 워크플로우
 
-### Getting Started
-
-```
-You: /start
-
-Claude: [Creates TASKS.md, CLAUDE.md, memory/ directory, and dashboard.html]
-        [Opens the dashboard in your browser]
-        [Asks about your role, team, and current priorities to seed memory]
-```
-
-### Adding Tasks Naturally
+### 시작하기
 
 ```
-You: I need to review the budget proposal for Sarah by Friday,
-     draft the Q2 roadmap after syncing with Greg, and follow up
-     on the API spec from the Platform team
+사용자: /start
 
-Claude: [Adds all three tasks to TASKS.md with context]
-        [Dashboard updates automatically]
+Claude: [TASKS.md, CLAUDE.md, memory/ 디렉토리, dashboard.html 생성]
+        [브라우저에서 대시보드 열기]
+        [역할, 팀, 현재 우선순위에 대해 질문하여 기억 시드]
 ```
 
-### Morning Sync
+### 자연스럽게 작업 추가하기
 
 ```
-You: /update --comprehensive
+사용자: 금요일까지 Sarah를 위한 예산 제안서를 검토하고,
+       Greg와 동기화한 후 Q2 로드맵 초안을 작성하고,
+       Platform 팀의 API 스펙에 대해 후속 조치를 취해야 해
 
-Claude: [Scans email, calendar, and chat for new action items]
-        [Flags: "Budget proposal review is due tomorrow — still open"]
-        [Suggests: "New person mentioned in 3 threads: Jamie Park,
-         Design Lead — add to memory?"]
-        [Updates stale tasks and fills memory gaps]
+Claude: [세 가지 작업 모두를 컨텍스트와 함께 TASKS.md에 추가]
+        [대시보드가 자동으로 업데이트됨]
 ```
 
-### Workplace Shorthand
-
-Once memory is populated, Claude decodes your shorthand instantly:
+### 아침 동기화
 
 ```
-You: ask todd to do the PSR for oracle
+사용자: /update --comprehensive
 
-Claude: "Ask Todd Martinez (Finance lead) to prepare the Pipeline
-         Status Report for the Oracle Systems deal ($2.3M, closing Q2)"
+Claude: [이메일, 캘린더, 채팅에서 새로운 실행 항목 스캔]
+        [표시: "예산 제안서 검토가 내일까지입니다 — 아직 열려 있음"]
+        [제안: "3개 스레드에서 언급된 새로운 사람: Jamie Park,
+         Design Lead — 기억에 추가할까요?"]
+        [오래된 작업 업데이트 및 기억 공백 채우기]
 ```
 
-No clarifying questions. No round trips.
+### 업무 약어
 
-## Data Sources
+기억이 채워지면 Claude는 약어를 즉시 해독합니다:
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
+```
+사용자: oracle 건에 대한 PSR을 todd에게 요청해
 
-Connect your communication and project management tools for the best experience. Without them, manage tasks and memory manually.
+Claude: "Todd Martinez(Finance lead)에게 Oracle Systems 거래
+         ($2.3M, Q2 마감)에 대한 Pipeline Status Report 준비를 요청합니다"
+```
 
-**Included MCP connections:**
-- Chat (Slack) for team context and message scanning
-- Email and calendar (Microsoft 365) for action item discovery
-- Knowledge base (Notion) for reference documents
-- Project tracker (Asana, Linear, Atlassian, monday.com, ClickUp) for task syncing
-- Office suite (Microsoft 365) for documents
+명확화 질문이나 왕복이 없습니다.
 
-**Additional options:**
-- See [CONNECTORS.md](CONNECTORS.md) for alternative tools in each category
+## 데이터 소스
+
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인해야 하는 경우 [CONNECTORS.md](CONNECTORS.md)를 참조하세요.
+
+최상의 경험을 위해 커뮤니케이션 및 프로젝트 관리 도구를 연결하세요. 도구가 없으면 작업과 기억을 수동으로 관리합니다.
+
+**포함된 MCP 연결:**
+- 채팅(Slack) - 팀 컨텍스트 및 메시지 스캔
+- 이메일 및 캘린더(Microsoft 365) - 실행 항목 발견
+- 지식 베이스(Notion) - 참조 문서
+- 프로젝트 트래커(Asana, Linear, Atlassian, monday.com, ClickUp) - 작업 동기화
+- Office 스위트(Microsoft 365) - 문서
+
+**추가 옵션:**
+- 각 카테고리의 대체 도구는 [CONNECTORS.md](CONNECTORS.md)를 참조하세요

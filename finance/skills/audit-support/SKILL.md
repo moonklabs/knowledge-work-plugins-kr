@@ -1,202 +1,202 @@
 ---
 name: audit-support
-description: Support SOX 404 compliance with control testing methodology, sample selection, and documentation standards. Use when generating testing workpapers, selecting audit samples, classifying control deficiencies, or preparing for internal or external audits.
+description: SOX 404 컴플라이언스를 위한 통제 테스트 방법론, 표본 선정, 문서화 기준을 지원합니다. 테스트 조서 생성, 감사 표본 선정, 통제 결함 분류 또는 내부/외부 감사 준비 시 사용합니다.
 ---
 
-# Audit Support
+# 감사 지원
 
-**Important**: This skill assists with SOX compliance workflows but does not provide audit or legal advice. All testing workpapers and assessments should be reviewed by qualified financial professionals. While "significance" and "materiality" are context-specific concepts that are ultimately assessed by auditors, this skill is intended to assist professionals in the creation and evaluation of effective internal controls and documentation for audits.
+**중요**: 이 스킬은 SOX 컴플라이언스 워크플로우를 지원하지만 감사 또는 법률 자문을 제공하지는 않습니다. 모든 테스트 조서 및 평가는 자격을 갖춘 재무 전문가의 검토를 받아야 합니다. "유의성"과 "중요성"은 궁극적으로 감사인이 평가하는 상황별 개념이지만, 이 스킬은 전문가가 효과적인 내부통제 및 감사 문서를 작성하고 평가하는 데 도움을 주기 위한 것입니다.
 
-SOX 404 control testing methodology, sample selection approaches, testing documentation standards, control deficiency classification, and common control types.
+SOX 404 통제 테스트 방법론, 표본 선정 접근 방식, 테스트 문서화 기준, 통제 결함 분류 및 일반적인 통제 유형에 대해 설명합니다.
 
-## SOX 404 Control Testing Methodology
+## SOX 404 통제 테스트 방법론
 
-### Overview
+### 개요
 
-SOX Section 404 requires management to assess the effectiveness of internal controls over financial reporting (ICFR). This involves:
+SOX 제404조는 경영진이 재무보고에 대한 내부통제(ICFR)의 유효성을 평가하도록 요구합니다. 여기에는 다음이 포함됩니다:
 
-1. **Scoping:** Identify significant accounts and relevant assertions
-2. **Risk assessment:** Evaluate the risk of material misstatement for each significant account
-3. **Control identification:** Document the controls that address each risk
-4. **Testing:** Test the design and operating effectiveness of key controls
-5. **Evaluation:** Assess whether any deficiencies exist and their severity
-6. **Reporting:** Document the assessment and any material weaknesses
+1. **범위 설정(Scoping):** 유의한 계정과 관련 주장을 식별합니다
+2. **위험 평가:** 각 유의한 계정에 대한 중요한 왜곡표시 위험을 평가합니다
+3. **통제 식별:** 각 위험에 대응하는 통제를 문서화합니다
+4. **테스트:** 핵심 통제의 설계 및 운영 유효성을 테스트합니다
+5. **평가:** 결함 존재 여부와 심각도를 평가합니다
+6. **보고:** 평가 결과와 중요한 취약점을 문서화합니다
 
-### Scoping Significant Accounts
+### 유의한 계정의 범위 설정
 
-An account is significant if there is more than a remote likelihood that it could contain a misstatement that is material (individually or in aggregate).
+계정이 중요한 왜곡표시(개별적으로 또는 합산하여)를 포함할 가능성이 미미한 수준을 초과하면 유의한 계정으로 판단합니다.
 
-**Quantitative factors:**
-- Account balance exceeds materiality threshold (typically 3-5% of a key benchmark)
-- Transaction volume is high, increasing the risk of error
-- Account is subject to significant estimates or judgment
+**정량적 요소:**
+- 계정 잔액이 중요성 기준(일반적으로 핵심 벤치마크의 3-5%)을 초과하는 경우
+- 거래량이 많아 오류 위험이 증가하는 경우
+- 중요한 추정 또는 판단이 수반되는 계정
 
-**Qualitative factors:**
-- Account involves complex accounting (revenue recognition, derivatives, pensions)
-- Account is susceptible to fraud (cash, revenue, related-party transactions)
-- Account has had prior misstatements or audit adjustments
-- Account involves significant management judgment or estimates
-- New account or significantly changed process
+**정성적 요소:**
+- 복잡한 회계가 관련된 계정 (수익 인식, 파생상품, 연금)
+- 부정에 취약한 계정 (현금, 수익, 특수관계자 거래)
+- 이전에 왜곡표시 또는 감사 조정이 있었던 계정
+- 중요한 경영진 판단 또는 추정이 수반되는 계정
+- 신규 계정 또는 프로세스가 크게 변경된 계정
 
-### Relevant Assertions by Account Type
+### 계정 유형별 관련 주장
 
-| Account Type | Key Assertions |
-|-------------|---------------|
-| Revenue | Occurrence, Completeness, Accuracy, Cut-off |
-| Accounts Receivable | Existence, Valuation (allowance), Rights |
-| Inventory | Existence, Valuation, Completeness |
-| Fixed Assets | Existence, Valuation, Completeness, Rights |
-| Accounts Payable | Completeness, Accuracy, Existence |
-| Accrued Liabilities | Completeness, Valuation, Accuracy |
-| Equity | Completeness, Accuracy, Presentation |
-| Financial Close/Reporting | Presentation, Accuracy, Completeness |
+| 계정 유형 | 핵심 주장 |
+|-----------|----------|
+| 수익 | 발생, 완전성, 정확성, 기간귀속(Cut-off) |
+| 매출채권 | 실재성, 평가(대손충당금), 권리 |
+| 재고 | 실재성, 평가, 완전성 |
+| 고정자산 | 실재성, 평가, 완전성, 권리 |
+| 매입채무 | 완전성, 정확성, 실재성 |
+| 미지급비용 | 완전성, 평가, 정확성 |
+| 자본 | 완전성, 정확성, 표시 |
+| 재무 마감/보고 | 표시, 정확성, 완전성 |
 
-### Design Effectiveness vs Operating Effectiveness
+### 설계 유효성 vs 운영 유효성
 
-**Design effectiveness:** Is the control properly designed to prevent or detect a material misstatement in the relevant assertion?
-- Evaluated through walkthroughs (trace a transaction end-to-end through the process)
-- Confirm the control is placed at the right point in the process
-- Confirm the control addresses the identified risk
-- Performed at least annually, or when processes change
+**설계 유효성:** 통제가 관련 주장에서 중요한 왜곡표시를 예방 또는 발견하도록 적절하게 설계되어 있는가?
+- 워크스루(거래를 프로세스 전체에 걸쳐 추적)를 통해 평가합니다
+- 통제가 프로세스의 적절한 지점에 배치되었는지 확인합니다
+- 통제가 식별된 위험에 대응하는지 확인합니다
+- 최소 연 1회 또는 프로세스 변경 시 수행합니다
 
-**Operating effectiveness:** Did the control actually operate as designed throughout the testing period?
-- Evaluated through testing (inspection, observation, re-performance, inquiry)
-- Requires sufficient sample sizes to support a conclusion
-- Must cover the full period of reliance
+**운영 유효성:** 통제가 테스트 기간 동안 설계대로 실제 운영되었는가?
+- 테스트(검사, 관찰, 재수행, 질의)를 통해 평가합니다
+- 결론을 뒷받침할 수 있는 충분한 표본 크기가 필요합니다
+- 의존 기간 전체를 커버해야 합니다
 
-## Sample Selection Approaches
+## 표본 선정 접근 방식
 
-### Random Selection
+### 무작위 추출
 
-**When to use:** Default method for transaction-level controls with large populations.
+**사용 시점:** 대규모 모집단이 있는 거래 수준 통제의 기본 방법입니다.
 
-**Method:**
-1. Define the population (all transactions subject to the control during the period)
-2. Number each item in the population sequentially
-3. Use a random number generator to select sample items
-4. Ensure no bias in selection (all items have equal probability)
+**방법:**
+1. 모집단을 정의합니다 (기간 중 통제 대상인 모든 거래)
+2. 모집단의 각 항목에 순번을 부여합니다
+3. 난수 생성기를 사용하여 표본 항목을 선정합니다
+4. 선정에 편향이 없는지 확인합니다 (모든 항목이 동일한 확률 보유)
 
-**Advantages:** Statistically valid, defensible, no selection bias
-**Disadvantages:** May miss high-risk items, requires complete population listing
+**장점:** 통계적으로 유효, 방어 가능, 선정 편향 없음
+**단점:** 고위험 항목을 놓칠 수 있음, 완전한 모집단 목록 필요
 
-### Targeted (Judgmental) Selection
+### 목적적(판단적) 추출
 
-**When to use:** Supplement to random selection for risk-based testing; primary method when population is small or highly varied.
+**사용 시점:** 위험 기반 테스트를 위한 무작위 추출의 보완. 모집단이 작거나 매우 다양할 때 주된 방법입니다.
 
-**Method:**
-1. Identify items with specific risk characteristics:
-   - High dollar amount (above a defined threshold)
-   - Unusual or non-standard transactions
-   - Period-end transactions (cut-off risk)
-   - Related-party transactions
-   - Manual or override transactions
-   - New vendor/customer transactions
-2. Select items matching risk criteria
-3. Document rationale for each targeted selection
+**방법:**
+1. 특정 위험 특성이 있는 항목을 식별합니다:
+   - 고액 (정의된 기준 초과)
+   - 비정상적이거나 비표준적인 거래
+   - 기말 거래 (기간귀속 위험)
+   - 특수관계자 거래
+   - 수동 또는 오버라이드 거래
+   - 신규 거래처/고객 거래
+2. 위험 기준에 맞는 항목을 선정합니다
+3. 각 목적적 추출의 근거를 문서화합니다
 
-**Advantages:** Focuses on highest-risk items, efficient use of testing effort
-**Disadvantages:** Not statistically representative, may over-represent certain risks
+**장점:** 최고 위험 항목에 집중, 효율적인 테스트 노력 활용
+**단점:** 통계적으로 대표성 없음, 특정 위험을 과대 대표할 수 있음
 
-### Haphazard Selection
+### 임의 추출
 
-**When to use:** When random selection is impractical (no sequential population listing) and population is relatively homogeneous.
+**사용 시점:** 무작위 추출이 비현실적(순차적 모집단 목록 없음)이고 모집단이 비교적 균질할 때 사용합니다.
 
-**Method:**
-1. Select items without any specific pattern or bias
-2. Ensure selections are spread across the full population period
-3. Avoid unconscious bias (don't always pick items at the top, round numbers, etc.)
+**방법:**
+1. 특정 패턴이나 편향 없이 항목을 선정합니다
+2. 전체 모집단 기간에 걸쳐 고르게 분산되도록 합니다
+3. 무의식적 편향을 회피합니다 (항상 맨 위, 단수 금액 등을 선택하지 않음)
 
-**Advantages:** Simple, no technology required
-**Disadvantages:** Not statistically valid, susceptible to unconscious bias
+**장점:** 단순, 기술이 필요 없음
+**단점:** 통계적으로 유효하지 않음, 무의식적 편향에 취약
 
-### Systematic Selection
+### 체계적 추출
 
-**When to use:** When population is sequential and you want even coverage across the period.
+**사용 시점:** 모집단이 순차적이고 기간 전체에 걸쳐 균등한 커버리지를 원할 때 사용합니다.
 
-**Method:**
-1. Calculate the sampling interval: Population size / Sample size
-2. Select a random starting point within the first interval
-3. Select every Nth item from the starting point
+**방법:**
+1. 추출 간격을 계산합니다: 모집단 크기 / 표본 크기
+2. 첫 번째 간격 내에서 무작위 시작점을 선택합니다
+3. 시작점부터 N번째 항목마다 선정합니다
 
-**Example:** Population of 1,000, sample of 25 → interval of 40. Random start: item 17. Select items 17, 57, 97, 137, ...
+**예시:** 모집단 1,000, 표본 25 -> 간격 40. 무작위 시작: 17번 항목. 17, 57, 97, 137, ... 번 항목을 선정합니다.
 
-**Advantages:** Even coverage across population, simple to execute
-**Disadvantages:** Periodic patterns in the population could bias results
+**장점:** 모집단 전체에 걸쳐 균등한 커버리지, 실행이 간단
+**단점:** 모집단의 주기적 패턴이 결과를 편향시킬 수 있음
 
-### Sample Size Guidance
+### 표본 크기 지침
 
-| Control Frequency | Expected Population | Low Risk Sample | Moderate Risk Sample | High Risk Sample |
-|------------------|--------------------|-----------------|--------------------|-----------------|
-| Annual | 1 | 1 | 1 | 1 |
-| Quarterly | 4 | 2 | 2 | 3 |
-| Monthly | 12 | 2 | 3 | 4 |
-| Weekly | 52 | 5 | 8 | 15 |
-| Daily | ~250 | 20 | 30 | 40 |
-| Per-transaction (small pop.) | < 250 | 20 | 30 | 40 |
-| Per-transaction (large pop.) | 250+ | 25 | 40 | 60 |
+| 통제 빈도 | 예상 모집단 | 저위험 표본 | 중위험 표본 | 고위험 표본 |
+|-----------|------------|------------|------------|------------|
+| 연간 | 1 | 1 | 1 | 1 |
+| 분기별 | 4 | 2 | 2 | 3 |
+| 월별 | 12 | 2 | 3 | 4 |
+| 주별 | 52 | 5 | 8 | 15 |
+| 일별 | ~250 | 20 | 30 | 40 |
+| 거래별 (소규모) | < 250 | 20 | 30 | 40 |
+| 거래별 (대규모) | 250+ | 25 | 40 | 60 |
 
-**Factors increasing sample size:**
-- Higher inherent risk in the account/process
-- Control is the sole control addressing a significant risk (no redundancy)
-- Prior period control deficiency identified
-- New control (not tested in prior periods)
-- External auditor reliance on management testing
+**표본 크기 증가 요인:**
+- 계정/프로세스의 내재 위험이 높은 경우
+- 통제가 유의한 위험에 대응하는 유일한 통제인 경우 (대체 통제 없음)
+- 전기에 통제 결함이 식별된 경우
+- 신규 통제인 경우 (전기에 테스트되지 않음)
+- 외부 감사인이 경영진 테스트에 의존하는 경우
 
-## Testing Documentation Standards
+## 테스트 문서화 기준
 
-### Workpaper Requirements
+### 조서 요건
 
-Every control test should be documented with:
+모든 통제 테스트에 다음을 문서화해야 합니다:
 
-1. **Control identification:**
-   - Control number/ID
-   - Control description (what is done, by whom, how often)
-   - Control type (manual, automated, IT-dependent manual)
-   - Control frequency
-   - Risk and assertion addressed
+1. **통제 식별:**
+   - 통제 번호/ID
+   - 통제 설명 (무엇을, 누가, 얼마나 자주 수행하는지)
+   - 통제 유형 (수동, 자동, IT 의존 수동)
+   - 통제 빈도
+   - 대응하는 위험 및 주장
 
-2. **Test design:**
-   - Test objective (what you are trying to determine)
-   - Test procedures (step-by-step instructions)
-   - Expected evidence (what you expect to see if the control is effective)
-   - Sample selection methodology and rationale
+2. **테스트 설계:**
+   - 테스트 목적 (무엇을 판단하려 하는지)
+   - 테스트 절차 (단계별 안내)
+   - 예상 증거 (통제가 유효할 때 기대하는 것)
+   - 표본 선정 방법론 및 근거
 
-3. **Test execution:**
-   - Population description and size
-   - Sample selection details (method, items selected)
-   - Results for each sample item (pass/fail with specific evidence examined)
-   - Exceptions noted with full description
+3. **테스트 실행:**
+   - 모집단 설명 및 크기
+   - 표본 선정 상세 (방법, 선정 항목)
+   - 각 표본 항목의 결과 (통과/실패 및 구체적 증거)
+   - 발견된 예외 사항의 상세 설명
 
-4. **Conclusion:**
-   - Overall assessment (effective / deficiency / significant deficiency / material weakness)
-   - Basis for conclusion
-   - Impact assessment for any exceptions
-   - Compensating controls considered (if applicable)
+4. **결론:**
+   - 전체 평가 (유효 / 결함 / 유의한 결함 / 중요한 취약점)
+   - 결론의 근거
+   - 예외 사항의 영향 평가
+   - 고려한 보완 통제 (해당되는 경우)
 
-5. **Sign-off:**
-   - Tester name and date
-   - Reviewer name and date
+5. **서명:**
+   - 테스터 이름 및 날짜
+   - 검토자 이름 및 날짜
 
-### Evidence Standards
+### 증거 기준
 
-**Sufficient evidence includes:**
-- Screenshots showing system-enforced controls
-- Signed/initialed approval documents
-- Email approvals with identifiable approver and date
-- System audit logs showing who performed the action and when
-- Re-performed calculations with matching results
-- Observation notes (with date, location, observer)
+**충분한 증거:**
+- 시스템 강제 통제를 보여주는 스크린샷
+- 서명/이니셜이 있는 승인 문서
+- 승인자와 날짜가 식별 가능한 이메일 승인
+- 수행자와 시점을 보여주는 시스템 감사 로그
+- 결과가 일치하는 재수행 계산
+- 관찰 기록 (날짜, 장소, 관찰자)
 
-**Insufficient evidence:**
-- Verbal confirmations alone (must be corroborated)
-- Undated documents
-- Evidence without identifiable performer/approver
-- Generic system reports without date/time stamps
-- "Per discussion with [name]" without corroborating documentation
+**불충분한 증거:**
+- 구두 확인만으로는 불충분 (뒷받침 문서가 필요)
+- 날짜가 없는 문서
+- 수행자/승인자가 식별 불가능한 증거
+- 날짜/시간 스탬프가 없는 일반 시스템 보고서
+- 뒷받침 문서 없이 "[이름]과의 논의에 따라"라고만 기재
 
-### Working Paper Organization
+### 조서 구성
 
-Organize testing files by control area:
+통제 영역별로 테스트 파일을 구성합니다:
 
 ```
 SOX Testing/
@@ -219,155 +219,155 @@ SOX Testing/
 │       └── Management Assessment
 ```
 
-## Control Deficiency Classification
+## 통제 결함 분류
 
-### Deficiency
+### 결함
 
-A deficiency in internal control exists when the design or operation of a control does not allow management or employees, in the normal course of performing their assigned functions, to prevent or detect misstatements on a timely basis.
+내부통제의 결함은 통제의 설계 또는 운영이 경영진 또는 직원이 정상적인 업무 수행 과정에서 왜곡표시를 적시에 예방 또는 발견하는 것을 허용하지 않을 때 존재합니다.
 
-**Evaluation factors:**
-- What is the likelihood that the control failure could result in a misstatement?
-- What is the magnitude of the potential misstatement?
-- Is there a compensating control that mitigates the deficiency?
+**평가 요소:**
+- 통제 실패가 왜곡표시로 이어질 가능성은 얼마인가?
+- 잠재적 왜곡표시의 규모는 어느 정도인가?
+- 결함을 완화하는 보완 통제가 있는가?
 
-### Significant Deficiency
+### 유의한 결함
 
-A deficiency, or combination of deficiencies, that is less severe than a material weakness yet important enough to merit attention by those charged with governance.
+중요한 취약점보다 심각하지는 않지만 재무보고 감독 책임자의 주의를 끌 만큼 중요한 결함(또는 결함의 조합)입니다.
 
-**Indicators:**
-- The deficiency could result in a misstatement that is more than inconsequential but less than material
-- There is more than a remote (but less than reasonably possible) likelihood of a material misstatement
-- The control is a key control and the deficiency is not fully mitigated by compensating controls
-- Combination of individually minor deficiencies that together represent a significant concern
+**지표:**
+- 결함이 경미하지 않지만 중요하지도 않은 왜곡표시를 초래할 수 있는 경우
+- 중요한 왜곡표시의 가능성이 미미 이상이지만 합리적 가능성 미만인 경우
+- 핵심 통제의 결함이 보완 통제로 완전히 완화되지 않는 경우
+- 개별적으로 경미한 결함이 합산되어 유의한 우려를 나타내는 경우
 
-### Material Weakness
+### 중요한 취약점
 
-A deficiency, or combination of deficiencies, such that there is a reasonable possibility that a material misstatement of the financial statements will not be prevented or detected on a timely basis.
+재무제표의 중요한 왜곡표시가 적시에 예방 또는 발견되지 않을 합리적 가능성이 있는 결함(또는 결함의 조합)입니다.
 
-**Indicators:**
-- Identification of fraud by senior management (any magnitude)
-- Restatement of previously issued financial statements to correct a material error
-- Identification by the auditor of a material misstatement that would not have been detected by the company's controls
-- Ineffective oversight of financial reporting by the audit committee
-- Deficiency in a pervasive control (entity-level, IT general control) affecting multiple processes
+**지표:**
+- 고위 경영진에 의한 부정 식별 (규모 불문)
+- 중요한 오류를 수정하기 위해 이전에 발행된 재무제표를 재작성
+- 회사의 통제로 발견되지 않았을 중요한 왜곡표시를 감사인이 식별
+- 감사위원회의 비효과적인 재무보고 감독
+- 다수의 프로세스에 영향을 미치는 전반적 통제(전사 수준, IT 일반 통제)의 결함
 
-### Deficiency Aggregation
+### 결함 합산
 
-Individual deficiencies that are not significant individually may be significant in combination:
+개별적으로 유의하지 않은 결함도 합산하면 유의할 수 있습니다:
 
-1. Identify all deficiencies in the same process or affecting the same assertion
-2. Evaluate whether the combined effect could result in a material misstatement
-3. Consider whether deficiencies in compensating controls exacerbate other deficiencies
-4. Document the aggregation analysis and conclusion
+1. 동일 프로세스 또는 동일 주장에 영향을 미치는 모든 결함을 식별합니다
+2. 결합 효과가 중요한 왜곡표시를 초래할 수 있는지 평가합니다
+3. 보완 통제의 결함이 다른 결함을 악화시키는지 고려합니다
+4. 합산 분석 및 결론을 문서화합니다
 
-### Remediation
+### 개선 조치
 
-For each identified deficiency:
+식별된 각 결함에 대해:
 
-1. **Root cause analysis:** Why did the control fail? (design gap, execution failure, staffing, training, system issue)
-2. **Remediation plan:** Specific actions to fix the control (redesign, additional training, system enhancement, added review)
-3. **Timeline:** Target date for remediation completion
-4. **Owner:** Person responsible for implementing the remediation
-5. **Validation:** How and when the remediated control will be re-tested to confirm effectiveness
+1. **근본 원인 분석:** 통제가 실패한 이유는 무엇인가? (설계 미비, 실행 실패, 인력, 교육, 시스템 문제)
+2. **개선 계획:** 통제를 수정하기 위한 구체적 조치 (재설계, 추가 교육, 시스템 개선, 검토 추가)
+3. **일정:** 개선 조치 완료 목표일
+4. **책임자:** 개선 조치 이행 책임자
+5. **검증:** 개선된 통제의 유효성을 재테스트할 방법 및 시점
 
-## Common Control Types
+## 일반적인 통제 유형
 
-### IT General Controls (ITGCs)
+### IT 일반 통제(ITGC)
 
-Controls over the IT environment that support the reliable functioning of application controls and automated processes.
+애플리케이션 통제 및 자동화된 프로세스의 신뢰성을 뒷받침하는 IT 환경에 대한 통제입니다.
 
-**Access Controls:**
-- User access provisioning (new access requests require approval)
-- User access de-provisioning (terminated users removed timely)
-- Privileged access management (admin/superuser access restricted and monitored)
-- Periodic access reviews (user access recertified on a defined schedule)
-- Password policies (complexity, rotation, lockout)
-- Segregation of duties enforcement (conflicting access prevented)
+**접근 통제:**
+- 사용자 접근 권한 부여 (신규 접근 요청에 승인 필요)
+- 사용자 접근 권한 회수 (퇴사자의 적시 권한 제거)
+- 특권 접근 관리 (관리자/슈퍼유저 접근 제한 및 모니터링)
+- 정기 접근 검토 (정해진 일정에 따른 사용자 접근 재인증)
+- 비밀번호 정책 (복잡성, 변경 주기, 잠금)
+- 직무 분리 강제 (상충되는 접근 방지)
 
-**Change Management:**
-- Change requests documented and approved before implementation
-- Changes tested in a non-production environment before promotion
-- Separation of development and production environments
-- Emergency change procedures (documented, approved post-implementation)
-- Change review and post-implementation validation
+**변경 관리:**
+- 구현 전 변경 요청의 문서화 및 승인
+- 운영 환경 적용 전 비운영 환경에서의 변경 테스트
+- 개발 환경과 운영 환경의 분리
+- 긴급 변경 절차 (문서화, 사후 승인)
+- 변경 검토 및 구현 후 검증
 
-**IT Operations:**
-- Batch job monitoring and exception handling
-- Backup and recovery procedures (regular backups, tested restores)
-- System availability and performance monitoring
-- Incident management and escalation procedures
-- Disaster recovery planning and testing
+**IT 운영:**
+- 배치 작업 모니터링 및 예외 처리
+- 백업 및 복구 절차 (정기 백업, 복원 테스트)
+- 시스템 가용성 및 성능 모니터링
+- 인시던트 관리 및 에스컬레이션 절차
+- 재해 복구 계획 및 테스트
 
-### Manual Controls
+### 수동 통제
 
-Controls performed by people using judgment, typically involving review and approval.
+판단을 사용하여 사람이 수행하는 통제로, 일반적으로 검토 및 승인이 포함됩니다.
 
-**Examples:**
-- Management review of financial statements and key metrics
-- Supervisory approval of journal entries above a threshold
-- Three-way match verification (PO, receipt, invoice)
-- Account reconciliation preparation and review
-- Physical inventory observation and count
-- Vendor master data change approval
-- Customer credit approval
+**예시:**
+- 재무제표 및 핵심 지표에 대한 경영진 검토
+- 기준 초과 분개에 대한 감독자 승인
+- 3자 매칭 확인 (PO, 수령, 청구서)
+- 계정 조정 작성 및 검토
+- 실사 재고 관찰 및 실사
+- 거래처 마스터 데이터 변경 승인
+- 고객 신용 승인
 
-**Key attributes to test:**
-- Was the control performed by the right person (proper authority)?
-- Was it performed timely (within the required timeframe)?
-- Is there evidence of the review (signature, initials, email, system log)?
-- Did the reviewer have sufficient information to perform an effective review?
-- Were exceptions identified and appropriately addressed?
+**테스트해야 할 핵심 속성:**
+- 적절한 권한이 있는 사람이 통제를 수행했는가?
+- 적시에 수행되었는가 (요구 기한 내)?
+- 검토의 증거가 있는가 (서명, 이니셜, 이메일, 시스템 로그)?
+- 검토자가 효과적인 검토를 수행할 충분한 정보를 보유했는가?
+- 예외가 식별되었고 적절하게 처리되었는가?
 
-### Automated Controls
+### 자동 통제
 
-Controls enforced by IT systems without human intervention.
+사람의 개입 없이 IT 시스템이 강제하는 통제입니다.
 
-**Examples:**
-- System-enforced approval workflows (cannot proceed without required approvals)
-- Three-way match automation (system blocks payment if PO/receipt/invoice don't match)
-- Duplicate payment detection (system flags or blocks duplicate invoices)
-- Credit limit enforcement (system prevents orders exceeding credit limit)
-- Automated calculations (depreciation, amortization, interest, tax)
-- System-enforced segregation of duties (conflicting roles prevented)
-- Input validation controls (required fields, format checks, range checks)
-- Automated reconciliation matching
+**예시:**
+- 시스템 강제 승인 워크플로우 (필요한 승인 없이 진행 불가)
+- 3자 매칭 자동화 (PO/수령/청구서 불일치 시 시스템이 지급 차단)
+- 중복 지급 탐지 (시스템이 중복 청구서를 표시 또는 차단)
+- 신용 한도 강제 (신용 한도 초과 주문을 시스템이 방지)
+- 자동 계산 (감가상각, 상각, 이자, 세금)
+- 시스템 강제 직무 분리 (상충되는 역할 방지)
+- 입력 검증 통제 (필수 필드, 형식 검사, 범위 검사)
+- 자동 조정 매칭
 
-**Testing approach:**
-- Test design: Confirm the system configuration enforces the control as intended
-- Test operating effectiveness: For automated controls, if the system configuration has not changed, one test of the control is typically sufficient for the period (supplemented by ITGC testing of change management)
-- Verify change management ITGCs are effective (if system changed, re-test the control)
+**테스트 접근 방식:**
+- 설계 테스트: 시스템 구성이 의도한 대로 통제를 강제하는지 확인합니다
+- 운영 유효성 테스트: 자동 통제의 경우 시스템 구성이 변경되지 않았다면 해당 기간에 통제를 1회 테스트하는 것으로 일반적으로 충분합니다 (변경 관리에 대한 ITGC 테스트로 보완)
+- 변경 관리 ITGC가 유효한지 확인합니다 (시스템이 변경된 경우 통제를 재테스트)
 
-### IT-Dependent Manual Controls
+### IT 의존 수동 통제
 
-Manual controls that rely on the completeness and accuracy of system-generated information.
+시스템이 생성한 정보의 완전성과 정확성에 의존하는 수동 통제입니다.
 
-**Examples:**
-- Management review of a system-generated exception report
-- Supervisor review of a system-generated aging report to assess reserves
-- Reconciliation using system-generated trial balance data
-- Approval of transactions identified by a system-generated workflow
+**예시:**
+- 시스템 생성 예외 보고서에 대한 경영진 검토
+- 충당금 평가를 위한 시스템 생성 경과 분석 보고서에 대한 감독자 검토
+- 시스템 생성 시산표 데이터를 사용한 조정
+- 시스템 생성 워크플로우로 식별된 거래의 승인
 
-**Testing approach:**
-- Test the manual control (review, approval, follow-up on exceptions)
-- AND test the completeness and accuracy of the underlying report/data (IPE — Information Produced by the Entity)
-- IPE testing confirms the data the reviewer relied on was complete and accurate
+**테스트 접근 방식:**
+- 수동 통제를 테스트합니다 (검토, 승인, 예외 후속 조치)
+- 그리고 기초 보고서/데이터의 완전성과 정확성을 테스트합니다 (IPE - 기업이 생성한 정보)
+- IPE 테스트는 검토자가 의존한 데이터가 완전하고 정확했는지 확인합니다
 
-### Entity-Level Controls
+### 전사 수준 통제
 
-Broad controls that operate at the organizational level and affect multiple processes.
+조직 수준에서 운영되며 다수의 프로세스에 영향을 미치는 광범위한 통제입니다.
 
-**Examples:**
-- Tone at the top / code of conduct
-- Risk assessment process
-- Audit committee oversight of financial reporting
-- Internal audit function and activities
-- Fraud risk assessment and anti-fraud programs
-- Whistleblower/ethics hotline
-- Management monitoring of control effectiveness
-- Financial reporting competence (staffing, training, qualifications)
-- Period-end financial reporting process (close procedures, GAAP compliance reviews)
+**예시:**
+- 경영진의 윤리 의식(Tone at the top) / 행동 강령
+- 위험 평가 프로세스
+- 재무보고에 대한 감사위원회 감독
+- 내부 감사 기능 및 활동
+- 부정 위험 평가 및 부정 방지 프로그램
+- 내부 고발자/윤리 핫라인
+- 통제 유효성에 대한 경영진 모니터링
+- 재무보고 역량 (인력, 교육, 자격)
+- 기말 재무보고 프로세스 (마감 절차, GAAP 준수 검토)
 
-**Significance:**
-- Entity-level controls can mitigate but typically cannot replace process-level controls
-- Ineffective entity-level controls (especially audit committee oversight and tone at the top) are strong indicators of a material weakness
-- Effective entity-level controls may reduce the extent of testing needed for process-level controls
+**중요성:**
+- 전사 수준 통제는 프로세스 수준 통제를 완화할 수 있지만 일반적으로 대체할 수는 없습니다
+- 비효과적인 전사 수준 통제(특히 감사위원회 감독과 경영진 윤리 의식)는 중요한 취약점의 강력한 지표입니다
+- 효과적인 전사 수준 통제는 프로세스 수준 통제에 필요한 테스트 범위를 줄일 수 있습니다

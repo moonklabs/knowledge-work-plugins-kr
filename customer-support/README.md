@@ -1,139 +1,125 @@
-# Customer Support Plugin
+# Customer Support 플러그인
 
-A customer support plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Provides ticket triage, escalation management, response drafting, customer research, and knowledge base authoring for support teams.
+Anthropic의 에이전트 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)을 위해 설계된 고객 지원 플러그인입니다. Claude Code에서도 사용할 수 있습니다. 지원팀을 위한 티켓 분류, 에스컬레이션 관리, 응답 초안 작성, 고객 조사, 지식 베이스(Knowledge Base) 작성 기능을 제공합니다.
 
-## Installation
+## 설치
 
 ```
 claude plugins add knowledge-work-plugins/customer-support
 ```
 
-## What It Does
+## 주요 기능
 
-This plugin turns Claude into a customer support co-pilot. It helps you:
+이 플러그인은 Claude를 고객 지원 코파일럿으로 전환합니다. 다음과 같은 작업을 지원합니다:
 
-- **Triage incoming tickets** with structured categorization, priority assessment, and routing recommendations
-- **Research customer questions** by synthesizing information from multiple sources with confidence scoring
-- **Draft professional responses** tailored to the situation, urgency, and communication channel
-- **Package escalations** with full context, reproduction steps, and business impact for engineering or product
-- **Write KB articles** from resolved issues to reduce future ticket volume
+- **수신 티켓 분류** — 체계적인 카테고리 분류, 우선순위 평가, 라우팅 권장 사항 제공
+- **고객 질문 조사** — 여러 소스에서 정보를 종합하여 신뢰도 점수와 함께 제공
+- **전문적인 응답 초안 작성** — 상황, 긴급도, 커뮤니케이션 채널에 맞춘 맞춤형 응답
+- **에스컬레이션 패키징** — 엔지니어링 또는 프로덕트 팀을 위한 전체 컨텍스트, 재현 단계, 비즈니스 영향도 포함
+- **KB 문서 작성** — 해결된 이슈를 기반으로 향후 티켓 볼륨을 줄이기 위한 문서 작성
 
-## Commands
+## 커맨드
 
-| Command | Description |
+| 커맨드 | 설명 |
 |---|---|
-| `/triage` | Categorize, prioritize, and route a support ticket or customer issue |
-| `/research` | Multi-source research on a customer question or topic |
-| `/draft-response` | Draft a customer-facing response for any situation |
-| `/escalate` | Package an escalation for engineering, product, or leadership |
-| `/kb-article` | Draft a knowledge base article from a resolved issue |
+| `/triage` | 지원 티켓 또는 고객 이슈를 분류하고 우선순위를 지정하여 라우팅 |
+| `/research` | 고객 질문 또는 주제에 대한 다중 소스 조사 |
+| `/draft-response` | 모든 상황에 대한 고객 대면 응답 초안 작성 |
+| `/escalate` | 엔지니어링, 프로덕트 또는 리더십을 위한 에스컬레이션 패키징 |
+| `/kb-article` | 해결된 이슈를 기반으로 지식 베이스 문서 초안 작성 |
 
-## Skills
+## 스킬
 
-| Skill | Description |
+| 스킬 | 설명 |
 |---|---|
-| `ticket-triage` | Category taxonomy, priority framework (P1-P4), routing rules, duplicate detection |
-| `customer-research` | Multi-source research methodology, source prioritization, answer synthesis |
-| `response-drafting` | Communication best practices, tone guidelines, templates for common scenarios |
-| `escalation` | Escalation tiers, structured escalation format, impact assessment, follow-up cadence |
-| `knowledge-management` | Article structure standards, writing for searchability, review cadence, maintenance |
+| `ticket-triage` | 카테고리 분류 체계, 우선순위 프레임워크(P1-P4), 라우팅 규칙, 중복 감지 |
+| `customer-research` | 다중 소스 조사 방법론, 소스 우선순위 지정, 답변 종합 |
+| `response-drafting` | 커뮤니케이션 모범 사례, 톤 가이드라인, 일반적인 시나리오별 템플릿 |
+| `escalation` | 에스컬레이션 등급, 구조화된 에스컬레이션 형식, 영향도 평가, 후속 조치 주기 |
+| `knowledge-management` | 문서 구조 표준, 검색 최적화 작성법, 검토 주기, 유지 관리 |
 
-## Data Sources
+## 데이터 소스
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인하려면 [CONNECTORS.md](CONNECTORS.md)를 참조하십시오.
 
-Connect your support platform, knowledge base, and communication tools for the best experience. Without them, provide customer context manually.
+최상의 경험을 위해 지원 플랫폼, 지식 베이스, 커뮤니케이션 도구를 연결하십시오. 연결하지 않은 경우에는 고객 컨텍스트를 수동으로 제공해야 합니다.
 
-**Included MCP connections:**
-- Chat (Slack) for internal discussions and customer channel context
-- Support platform (Intercom) for ticket history and customer conversations
-- CRM (HubSpot) for account details and contact information
-- Knowledge base (Guru, Notion) for internal documentation and runbooks
-- Project tracker (Atlassian) for bug reports and feature requests
-- Email and cloud storage (Microsoft 365) for customer correspondence
+**포함된 MCP 연결:**
+- 채팅(Slack) — 내부 논의 및 고객 채널 컨텍스트
+- 지원 플랫폼(Intercom) — 티켓 이력 및 고객 대화
+- CRM(HubSpot) — 계정 정보 및 연락처 정보
+- 지식 베이스(Guru, Notion) — 내부 문서 및 런북
+- 프로젝트 트래커(Atlassian) — 버그 리포트 및 기능 요청
+- 이메일 및 클라우드 스토리지(Microsoft 365) — 고객 서신
 
-**Additional options:**
-- See [CONNECTORS.md](CONNECTORS.md) for alternative tools in each category
+**추가 옵션:**
+- 각 카테고리의 대체 도구는 [CONNECTORS.md](CONNECTORS.md)를 참조하십시오.
 
-## Example Workflows
+## 워크플로우 예시
 
-### Triaging an Incoming Ticket
-
-```
-You: /triage Customer says their dashboard has been showing a blank
-     page since this morning — they're on the Enterprise plan
-
-Claude: Analyzing the issue...
-
-## Triage: Dashboard blank page — Enterprise customer
-
-**Category:** Bug
-**Priority:** P2 — High (core feature broken, enterprise customer)
-**Product area:** Dashboard / Frontend
-
-### Routing Recommendation
-Route to: Tier 2 Support (investigate browser/account specifics,
-then escalate to Engineering if reproducible)
-
-### Suggested Initial Response
-[Draft acknowledging the issue, asking clarifying questions
-about browser and any recent changes, offering status page link]
-```
-
-### Researching a Customer Question
+### 수신 티켓 분류
 
 ```
-You: /research Does our platform support SSO with Okta?
+사용자: /triage 오늘 아침부터 고객의 대시보드가 빈 페이지로 표시된다고 합니다 — Enterprise 플랜을 이용 중인 고객입니다.
 
-Claude: Let me check across available sources...
+Claude: 이슈 분석 중...
 
-[Searches docs, knowledge base, previous conversations,
- and web sources — synthesizes answer with confidence
- level and source attribution]
+## 분류(Triage): 대시보드 빈 페이지 — Enterprise 고객
+
+**카테고리:** 버그(Bug)
+**우선순위:** P2 — 높음 (핵심 기능 장애, Enterprise 고객)
+**제품 영역:** 대시보드 / 프론트엔드
+
+### 라우팅 권장 사항
+라우팅 대상: Tier 2 지원팀 (브라우저/계정 특이사항 조사 후, 재현 시 엔지니어링 팀으로 에스컬레이션)
+
+### 권장 초기 응답
+[이슈를 인지했음을 알리고, 브라우저 및 최근 변경 사항에 대한 확인 질문을 포함하며, 상태 페이지 링크를 제공하는 응답 초안]
 ```
 
-### Packaging an Escalation
+### 고객 질문 조사
 
 ```
-You: /escalate API returning 500 errors intermittently — 3
-     Enterprise customers reported this week
+사용자: /research 우리 플랫폼이 Okta를 통한 SSO를 지원하나요?
 
-Claude: I'll gather context and build the escalation brief...
+Claude: 사용 가능한 소스들을 확인하겠습니다...
 
-[Pulls ticket history, identifies affected accounts,
- structures reproduction steps, assesses business impact,
- and generates a structured escalation for engineering]
+[문서, 지식 베이스, 이전 대화 및 웹 소스를 검색 — 신뢰도 수준 및 소스 출처와 함께 답변을 종합함]
 ```
 
-### Drafting a Response
+### 에스컬레이션 패키징
 
 ```
-You: /draft-response Customer escalation — their integration
-     has been down for 2 days and they're frustrated
+사용자: /escalate API가 간헐적으로 500 에러를 반환합니다 — 이번 주에 3곳의 Enterprise 고객으로부터 보고되었습니다.
 
-Claude: [Generates empathetic, professional response acknowledging
- the frustration, taking ownership, providing a clear action
- plan with timeline, and offering a call]
+Claude: 컨텍스트를 수집하고 에스컬레이션 브리프를 작성하겠습니다...
+
+[티켓 이력을 가져오고, 영향을 받은 계정을 식별하며, 재현 단계를 구조화하고, 비즈니스 영향도를 평가하여 엔지니어링 팀을 위한 구조화된 에스컬레이션 문서를 생성함]
 ```
 
-### Writing a KB Article
+### 응답 초안 작성
 
 ```
-You: /kb-article How to configure webhook notifications —
-     just resolved this for the third customer this month
+사용자: /draft-response 고객 에스컬레이션 — 통합 서비스가 2일 동안 중단되어 고객이 매우 불만족해합니다.
 
-Claude: [Generates a structured how-to article with prerequisites,
- step-by-step instructions, verification steps, and common
- issues — optimized for search]
+Claude: [불만사항을 인지하고 공감을 표하며, 책임을 다하겠다는 자세로 타임라인이 포함된 명확한 실행 계획을 제시하고 미팅을 제안하는 전문적인 응답 초안을 생성함]
 ```
 
-## Configuration
+### KB 문서 작성
 
-The plugin works out of the box with the included MCP connections. For the richest experience, connect additional data sources through your Claude settings:
+```
+사용자: /kb-article 웹훅 알림 구성 방법 — 이번 달에만 세 번째 고객의 문제를 해결했습니다.
 
-1. **Support platform**: Add your ticketing system for ticket history and customer context
-2. **Knowledge base**: Add your wiki for internal documentation and existing KB articles
-3. **Project tracker**: Add your issue tracker for bug reports and feature requests
-4. **CRM**: Add your CRM for account details and contact information
+Claude: [필수 요구 사항, 단계별 안내, 검증 단계 및 일반적인 문제를 포함하며 검색에 최적화된 구조화된 가이드 문서를 생성함]
+```
 
-Without these connections, the plugin will ask you to provide context manually and offer frameworks and templates you can fill in with your own data.
+## 구성
+
+이 플러그인은 포함된 MCP 연결로 즉시 사용할 수 있습니다. 가장 풍부한 경험을 위해 Claude 설정에서 추가 데이터 소스를 연결하십시오:
+
+1. **지원 플랫폼**: 티켓 이력 및 고객 컨텍스트를 위해 티켓팅 시스템을 추가하십시오
+2. **지식 베이스**: 내부 문서 및 기존 KB 문서를 위해 위키를 추가하십시오
+3. **프로젝트 트래커**: 버그 리포트 및 기능 요청을 위해 이슈 트래커를 추가하십시오
+4. **CRM**: 계정 정보 및 연락처 정보를 위해 CRM을 추가하십시오
+
+이러한 연결 없이도 플러그인은 컨텍스트를 수동으로 제공하도록 요청하며, 자체 데이터로 채울 수 있는 프레임워크와 템플릿을 제공합니다.

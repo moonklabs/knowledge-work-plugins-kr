@@ -1,156 +1,156 @@
 ---
-description: Rapidly triage an incoming NDA — classify as standard approval, counsel review, or full legal review
-argument-hint: "<NDA file or text>"
+description: 수신된 NDA를 신속하게 분류 — 표준 승인, 법무 검토, 또는 전체 법무 검토로 분류
+argument-hint: "<NDA 파일 또는 텍스트>"
 ---
 
-# /triage-nda -- NDA Pre-Screening
+# /triage-nda -- NDA 사전 심사
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 어떤 도구가 연결되어 있는지 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 참고하십시오.
 
-Rapidly triage incoming NDAs against standard screening criteria. Classify the NDA for routing: standard approval, counsel review, or full legal review.
+수신된 NDA를 표준 심사 기준에 따라 신속하게 분류합니다. NDA를 라우팅을 위해 표준 승인, 법무 검토, 전체 법무 검토로 분류합니다.
 
-## Invocation
+## 호출 방법
 
 ```
 /triage-nda
 ```
 
-## Workflow
+## 워크플로우
 
-### Step 1: Accept the NDA
+### 1단계: NDA 접수
 
-Accept the NDA in any format:
-- **File upload**: PDF, DOCX, or other document format
-- **URL**: Link to the NDA in a document system
-- **Pasted text**: NDA text pasted directly
+다음 형식의 NDA를 접수합니다:
+- **파일 업로드**: PDF, DOCX 또는 기타 문서 형식
+- **URL**: 문서 시스템의 NDA 링크
+- **붙여넣은 텍스트**: 직접 붙여넣은 NDA 텍스트
 
-If no NDA is provided, prompt the user to supply one.
+NDA가 제공되지 않은 경우, 사용자에게 제출을 요청합니다.
 
-### Step 2: Load NDA Playbook
+### 2단계: NDA 플레이북 로드
 
-Look for NDA screening criteria in local settings (e.g., `legal.local.md`).
+로컬 설정(예: `legal.local.md`)에서 NDA 심사 기준을 찾습니다.
 
-The NDA playbook should define:
-- Mutual vs. unilateral requirements
-- Acceptable term lengths
-- Required carveouts
-- Prohibited provisions
-- Organization-specific requirements
+NDA 플레이북에는 다음이 정의되어야 합니다:
+- 상호 vs. 일방 요건
+- 허용되는 계약 기간
+- 필수 예외 조항
+- 금지 규정
+- 조직 고유 요건
 
-**If no NDA playbook is configured:**
-- Proceed with reasonable market-standard defaults
-- Note clearly that defaults are being used
-- Defaults applied:
-  - Mutual obligations required (unless the organization is only disclosing)
-  - Term: 2-3 years standard, up to 5 years for trade secrets
-  - Standard carveouts required: independently developed, publicly available, rightfully received from third party, required by law
-  - No non-solicitation or non-compete provisions
-  - No residuals clause (or narrowly scoped if present)
-  - Governing law in a reasonable commercial jurisdiction
+**NDA 플레이북이 구성되지 않은 경우:**
+- 합리적인 시장 표준 기본값으로 진행
+- 기본값이 사용되고 있음을 명확히 표시
+- 적용되는 기본값:
+  - 상호 의무 필수(조직이 공개만 하는 경우 제외)
+  - 계약 기간: 표준 2~3년, 영업비밀의 경우 최대 5년
+  - 필수 예외 조항: 독자 개발, 공개 정보, 제3자로부터 적법하게 수령, 법적 요구
+  - 비유인 또는 경업 금지 규정 불포함
+  - 잔존 정보 조항 불포함(있는 경우 좁은 범위)
+  - 합리적인 상업적 관할권의 준거법
 
-### Step 3: Quick Screen
+### 3단계: 신속 심사
 
-Evaluate the NDA against each screening criterion:
+각 심사 기준에 따라 NDA를 평가합니다:
 
-| Criterion | Check |
-|-----------|-------|
-| **Mutual vs. Unilateral** | Are obligations mutual? If unilateral, is that appropriate for the relationship? |
-| **Definition of Confidential Information** | Reasonable scope? Not overbroad (e.g., "all information of any kind")? |
-| **Term** | Within acceptable range? Reasonable for the type of information? |
-| **Standard Carveouts** | All required carveouts present? (independent development, public knowledge, third-party receipt, legal compulsion) |
-| **Permitted Disclosures** | Can share with employees, advisors, contractors who need to know? |
-| **Return/Destruction** | Reasonable obligations on termination? Allows retention of legal/compliance copies? |
-| **Residuals** | If present, narrowly scoped to unaided memory? |
-| **Non-Solicitation** | Any non-solicit provisions embedded? |
-| **Non-Compete** | Any non-compete provisions embedded? |
-| **Injunctive Relief** | Reasonable or one-sided? Pre-determined damages? |
-| **Governing Law** | Acceptable jurisdiction? |
-| **Assignment** | Reasonable assignment provisions? |
-| **Unusual Provisions** | Any non-standard clauses that don't belong in an NDA? |
+| 기준 | 확인 사항 |
+|------|----------|
+| **상호 vs. 일방** | 의무가 상호적인가? 일방적인 경우, 해당 관계에 적합한가? |
+| **비밀 정보의 정의** | 합리적인 범위인가? 지나치게 광범위하지 않은가(예: "종류를 불문한 모든 정보")? |
+| **계약 기간** | 허용 범위 내인가? 정보 유형에 적합한가? |
+| **표준 예외 조항** | 필수 예외 조항이 모두 있는가? (독자 개발, 공지 정보, 제3자 수령, 법적 강제) |
+| **허용된 공개** | 직원, 자문역, 필요한 계약자에게 공유할 수 있는가? |
+| **반환/파기** | 해지 시 합리적인 의무인가? 법적/컴플라이언스 사본 보관이 허용되는가? |
+| **잔존 정보** | 있는 경우, 보조 없는 기억으로 좁은 범위인가? |
+| **비유인** | NDA에 포함된 비유인 규정이 있는가? |
+| **경업 금지** | NDA에 포함된 경업 금지 규정이 있는가? |
+| **금지 명령 구제** | 합리적인가 일방적인가? 사전 확정 손해배상이 있는가? |
+| **준거법** | 수용 가능한 관할권인가? |
+| **양도** | 합리적인 양도 규정인가? |
+| **비정상 규정** | NDA에 포함되지 않아야 할 비표준 조항이 있는가? |
 
-### Step 4: Classify
+### 4단계: 분류
 
-Based on the screening results, assign a classification:
+심사 결과에 따라 분류를 부여합니다:
 
-#### GREEN -- Standard Approval
-All criteria met. NDA is market-standard with no unusual provisions.
-- **Route**: Can be approved and signed via standard process
-- **Action**: Proceed to signature with standard delegation of authority
+#### GREEN -- 표준 승인
+모든 기준을 충족합니다. NDA가 비정상적 규정 없이 시장 표준입니다.
+- **라우팅**: 표준 절차를 통해 승인 및 서명 가능
+- **조치**: 표준 위임 권한으로 서명 진행
 
-#### YELLOW -- Counsel Review Needed
-One or more criteria have minor deviations that need review but are potentially acceptable:
-- Definition of confidential information is broader than ideal but not unreasonable
-- Term is longer than standard but within market range
-- Residuals clause present but narrowly scoped
-- Minor jurisdiction preference issue
-- Missing one standard carveout that could be added
-- **Route**: Flag specific issues for counsel review
-- **Action**: Counsel can likely resolve in a single review pass
+#### YELLOW -- 법무 검토 필요
+하나 이상의 기준에서 사소한 편차가 있으나 잠재적으로 수용 가능합니다:
+- 비밀 정보 정의가 이상적보다 넓지만 비합리적이지 않음
+- 계약 기간이 표준보다 길지만 시장 범위 내
+- 잔존 정보 조항이 있으나 좁은 범위
+- 사소한 관할권 선호도 문제
+- 추가 가능한 표준 예외 조항 하나 누락
+- **라우팅**: 법무 검토를 위해 특정 이슈 표시
+- **조치**: 법무 담당자가 한 번의 검토로 해결할 수 있을 가능성이 높음
 
-#### RED -- Significant Issues
-One or more criteria have material deviations that pose risk:
-- Unilateral obligations when mutual is required
-- Missing critical carveouts (e.g., no independent development carveout)
-- Non-solicitation or non-compete provisions embedded
-- Unreasonable term (10+ years) without justification
-- Overbroad definition that could capture public information
-- Unusual provisions (exclusivity, audit rights, IP assignment)
-- Highly unfavorable jurisdiction with no negotiation room
-- **Route**: Full legal review required
-- **Action**: Do not sign; requires negotiation or counterproposal
+#### RED -- 중대한 문제
+하나 이상의 기준에서 중대한 편차가 있어 리스크가 존재합니다:
+- 상호 의무가 필요한데 일방적 의무
+- 필수 예외 조항 누락(예: 독자 개발 예외 없음)
+- 비유인 또는 경업 금지 규정 포함
+- 정당한 사유 없이 비합리적인 기간(10년 이상)
+- 공개 정보를 포착할 수 있는 지나치게 광범위한 정의
+- 비정상적 규정(독점권, 감사 권한, IP 양도)
+- 협상 여지 없는 매우 불리한 관할권
+- **라우팅**: 전체 법무 검토 필요
+- **조치**: 서명하지 않으며, 협상 또는 대안 제안이 필요
 
-### Step 5: Generate Triage Report
+### 5단계: 분류 보고서 생성
 
-Output a structured report:
+구조화된 보고서를 출력합니다:
 
 ```
 ## NDA Triage Report
 
 **Classification**: [GREEN / YELLOW / RED]
-**Parties**: [party names]
+**Parties**: [당사자 이름]
 **Type**: [Mutual / Unilateral (disclosing) / Unilateral (receiving)]
-**Term**: [duration]
-**Governing Law**: [jurisdiction]
+**Term**: [기간]
+**Governing Law**: [관할권]
 **Review Basis**: [Playbook / Default Standards]
 
 ## Screening Results
 
 | Criterion | Status | Notes |
 |-----------|--------|-------|
-| Mutual Obligations | [PASS/FLAG/FAIL] | [details] |
-| Definition Scope | [PASS/FLAG/FAIL] | [details] |
-| Term | [PASS/FLAG/FAIL] | [details] |
-| Standard Carveouts | [PASS/FLAG/FAIL] | [details] |
-| [etc.] | | |
+| Mutual Obligations | [PASS/FLAG/FAIL] | [세부 사항] |
+| Definition Scope | [PASS/FLAG/FAIL] | [세부 사항] |
+| Term | [PASS/FLAG/FAIL] | [세부 사항] |
+| Standard Carveouts | [PASS/FLAG/FAIL] | [세부 사항] |
+| [등] | | |
 
 ## Issues Found
 
 ### [Issue 1 -- YELLOW/RED]
-**What**: [description]
-**Risk**: [what could go wrong]
-**Suggested Fix**: [specific language or approach]
+**What**: [설명]
+**Risk**: [발생 가능한 문제]
+**Suggested Fix**: [구체적 문구 또는 접근 방식]
 
-[Repeat for each issue]
+[각 이슈에 대해 반복]
 
 ## Recommendation
 
-[Specific next step: approve, send for review with specific notes, or reject/counter]
+[구체적 다음 단계: 승인, 특정 메모와 함께 검토 전달, 또는 거부/대안 제안]
 
 ## Next Steps
 
-1. [Action item 1]
-2. [Action item 2]
+1. [조치 항목 1]
+2. [조치 항목 2]
 ```
 
-### Step 6: Routing Suggestion
+### 6단계: 라우팅 제안
 
-Based on the classification:
-- **GREEN**: Suggest the user proceed to signature under their standard delegation of authority
-- **YELLOW**: Identify which specific issues need counsel attention and suggest the user route to the appropriate reviewer
-- **RED**: Recommend the user engage counsel for a full review, and provide a counterproposal NDA if the organization has a standard form
+분류에 따라:
+- **GREEN**: 사용자에게 표준 위임 권한에 따라 서명을 진행하도록 제안
+- **YELLOW**: 법무 담당자가 검토해야 할 구체적 이슈를 식별하고 적절한 검토자에게 전달하도록 제안
+- **RED**: 전체 법무 검토를 위해 법무 담당자를 배정하고, 조직에 표준 양식 NDA가 있는 경우 대안으로 제시하도록 권장
 
-## Notes
+## 참고 사항
 
-- If the document is not actually an NDA (e.g., it's labeled as an NDA but contains substantive commercial terms), flag this immediately as a RED and recommend full contract review instead
-- For NDAs that are part of a larger agreement (e.g., confidentiality section in an MSA), note that the broader agreement context may affect the analysis
-- Always note that this is a screening tool and counsel should review any items the user is uncertain about
+- 문서가 실제로 NDA가 아닌 경우(예: NDA로 표기되어 있으나 실질적인 상업 조건을 포함), 즉시 RED로 표시하고 전체 계약서 검토를 권장합니다
+- NDA가 더 큰 계약서의 일부인 경우(예: MSA의 비밀유지 섹션), 상위 계약서의 맥락이 분석에 영향을 줄 수 있음을 안내합니다
+- 항상 이것은 심사 도구이며 사용자가 확신하지 못하는 항목은 법무 담당자가 검토해야 한다고 안내합니다

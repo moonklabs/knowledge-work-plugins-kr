@@ -1,122 +1,122 @@
 ---
-description: Review content against your brand voice, style guide, and messaging pillars
-argument-hint: "<content to review>"
+description: 브랜드 보이스, 스타일 가이드, 메시징 핵심 요소에 맞춰 콘텐츠를 검토합니다
+argument-hint: "<검토할 콘텐츠>"
 ---
 
-# Brand Review
+# 브랜드 검토
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 참조하세요.
 
-Review marketing content against brand voice, style guidelines, and messaging standards. Flag deviations and provide specific improvement suggestions.
+마케팅 콘텐츠를 브랜드 보이스, 스타일 가이드라인, 메시징 기준에 맞춰 검토합니다. 이탈 사항을 표시하고 구체적인 개선 제안을 제공합니다.
 
-## Trigger
+## 트리거
 
-User runs `/brand-review` or asks to review, check, or audit content against brand guidelines.
+사용자가 `/brand-review`를 실행하거나 콘텐츠를 브랜드 가이드라인에 맞춰 검토, 점검, 또는 감사해 달라고 요청합니다.
 
-## Inputs
+## 입력
 
-1. **Content to review** — accept content in any of these forms:
-   - Pasted directly into the conversation
-   - A file path or ~~knowledge base reference (e.g. Notion page, shared doc)
-   - A URL to a published page
-   - Multiple pieces for batch review
+1. **검토할 콘텐츠** — 다음 형태 중 하나로 콘텐츠를 받습니다:
+   - 대화에 직접 붙여넣기
+   - 파일 경로 또는 ~~knowledge base 참조 (예: Notion 페이지, 공유 문서)
+   - 게시된 페이지의 URL
+   - 일괄 검토를 위한 복수의 콘텐츠
 
-2. **Brand guidelines source** (determined automatically):
-   - If a brand style guide is configured in local settings, use it automatically
-   - If not configured, ask: "Do you have a brand style guide or voice guidelines I should review against? You can paste them, share a file, or describe your brand voice. Otherwise, I'll do a general review for clarity, consistency, and professionalism."
+2. **브랜드 가이드라인 소스** (자동 결정):
+   - 로컬 설정에 브랜드 스타일 가이드가 구성되어 있으면 자동으로 사용합니다
+   - 구성되어 있지 않으면 다음과 같이 질문합니다: "검토 기준으로 사용할 브랜드 스타일 가이드나 보이스 가이드라인이 있으신가요? 붙여넣기, 파일 공유, 또는 브랜드 보이스를 설명해 주셔도 됩니다. 없으시면 명확성, 일관성, 전문성 관점에서 일반 검토를 진행하겠습니다."
 
-## Review Process
+## 검토 프로세스
 
-### With Brand Guidelines Configured
+### 브랜드 가이드라인이 구성된 경우
 
-Evaluate the content against each of these dimensions:
+다음 각 항목에 대해 콘텐츠를 평가합니다:
 
-#### Voice and Tone
-- Does the content match the defined brand voice attributes?
-- Is the tone appropriate for the content type and audience?
-- Are there shifts in voice that feel inconsistent?
-- Flag specific sentences or phrases that deviate with an explanation of why
+#### 보이스와 톤
+- 콘텐츠가 정의된 브랜드 보이스 속성과 일치하는가?
+- 콘텐츠 유형과 오디언스에 적합한 톤인가?
+- 일관성이 떨어지는 보이스 변화가 있는가?
+- 이탈한 구체적인 문장이나 구절을 이유와 함께 표시합니다
 
-#### Terminology and Language
-- Are preferred brand terms used correctly?
-- Are any "avoid" terms or phrases present?
-- Is jargon level appropriate for the target audience?
-- Are product names, feature names, and branded terms used correctly (capitalization, formatting)?
+#### 용어와 언어
+- 선호하는 브랜드 용어가 올바르게 사용되었는가?
+- "사용 금지" 용어나 표현이 포함되어 있는가?
+- 전문 용어 수준이 타겟 오디언스에 적합한가?
+- 제품명, 기능명, 브랜드 용어가 올바르게 사용되었는가 (대소문자, 서식)?
 
-#### Messaging Pillars
-- Does the content align with defined messaging pillars or value propositions?
-- Are claims consistent with approved messaging?
-- Is the content reinforcing or contradicting brand positioning?
+#### 메시징 핵심 요소
+- 콘텐츠가 정의된 메시징 핵심 요소 또는 가치 제안과 부합하는가?
+- 주장이 승인된 메시징과 일관되는가?
+- 콘텐츠가 브랜드 포지셔닝을 강화하는가 아니면 약화시키는가?
 
-#### Style Guide Compliance
-- Grammar and punctuation per style guide (e.g., Oxford comma, title case vs. sentence case)
-- Formatting conventions (headers, lists, emphasis)
-- Number formatting, date formatting
-- Acronym usage (defined on first use?)
+#### 스타일 가이드 준수
+- 스타일 가이드에 따른 문법 및 구두점 (예: 옥스퍼드 쉼표, 제목 대소문자 등)
+- 서식 규칙 (제목, 목록, 강조)
+- 숫자 및 날짜 표기법
+- 약어 사용 (첫 사용 시 정의 여부)
 
-### Without Brand Guidelines (Generic Review)
+### 브랜드 가이드라인이 없는 경우 (일반 검토)
 
-Evaluate the content for:
+다음 항목에 대해 콘텐츠를 평가합니다:
 
-#### Clarity
-- Is the main message clear within the first paragraph?
-- Are sentences concise and easy to understand?
-- Is the structure logical and easy to follow?
-- Are there ambiguous statements or unclear references?
+#### 명확성
+- 첫 번째 문단 내에서 핵심 메시지가 명확한가?
+- 문장이 간결하고 이해하기 쉬운가?
+- 구조가 논리적이고 따라가기 쉬운가?
+- 모호한 진술이나 불명확한 참조가 있는가?
 
-#### Consistency
-- Is the tone consistent throughout?
-- Are terms used consistently (no switching between synonyms for the same concept)?
-- Is formatting consistent (headers, lists, capitalization)?
+#### 일관성
+- 톤이 전체적으로 일관되는가?
+- 용어가 일관되게 사용되는가 (같은 개념에 대해 동의어를 번갈아 사용하지 않는가)?
+- 서식이 일관되는가 (제목, 목록, 대소문자)?
 
-#### Professionalism
-- Is the content free of typos, grammatical errors, and awkward phrasing?
-- Is the tone appropriate for the intended audience?
-- Are claims supported or substantiated?
+#### 전문성
+- 오탈자, 문법 오류, 어색한 표현이 없는가?
+- 의도한 오디언스에 적합한 톤인가?
+- 주장이 뒷받침되거나 근거가 있는가?
 
-### Legal and Compliance Flags (Always Checked)
+### 법률 및 컴플라이언스 플래그 (항상 점검)
 
-Regardless of whether brand guidelines are configured, flag:
-- **Unsubstantiated claims** — superlatives ("best", "fastest", "only") without evidence or qualification
-- **Missing disclaimers** — financial claims, health claims, or guarantees that may need legal disclaimers
-- **Comparative claims** — comparisons to competitors that could be challenged
-- **Regulatory language** — content that may need compliance review (financial services, healthcare, etc.)
-- **Testimonial issues** — quotes or endorsements without attribution or disclosure
-- **Copyright concerns** — content that appears to be closely paraphrased from other sources
+브랜드 가이드라인 구성 여부와 관계없이 다음을 표시합니다:
+- **근거 없는 주장** — 증거나 단서 없는 최상급 표현 ("최고", "가장 빠른", "유일한")
+- **누락된 면책 조항** — 법적 면책 조항이 필요할 수 있는 재무, 건강, 보증 관련 주장
+- **비교 주장** — 이의 제기될 수 있는 경쟁사와의 비교
+- **규제 관련 표현** — 컴플라이언스 검토가 필요할 수 있는 콘텐츠 (금융 서비스, 의료 등)
+- **후기 관련 이슈** — 귀속 표시나 공개가 없는 인용 또는 추천
+- **저작권 우려** — 다른 출처에서 밀접하게 의역한 것으로 보이는 콘텐츠
 
-## Output Format
+## 출력 형식
 
-Present the review as:
+검토 결과를 다음과 같이 제시합니다:
 
-### Summary
-- Overall assessment: how well the content aligns with brand standards (or general quality)
-- 1-2 sentence summary of the biggest strengths
-- 1-2 sentence summary of the most important improvements
+### 요약
+- 전체 평가: 콘텐츠가 브랜드 기준 (또는 일반적인 품질)에 얼마나 부합하는지
+- 가장 큰 강점 1-2문장 요약
+- 가장 중요한 개선 사항 1-2문장 요약
 
-### Detailed Findings
+### 상세 결과
 
-For each issue found, provide:
+발견된 각 이슈에 대해 다음을 제공합니다:
 
-| Issue | Location | Severity | Suggestion |
-|-------|----------|----------|------------|
+| 이슈 | 위치 | 심각도 | 제안 |
+|------|------|--------|------|
 
-Where severity is:
-- **High** — contradicts brand voice, contains compliance risk, or significantly undermines messaging
-- **Medium** — inconsistent with guidelines but not damaging
-- **Low** — minor style or preference issue
+심각도 기준:
+- **높음** — 브랜드 보이스에 반하거나, 컴플라이언스 위험이 있거나, 메시징을 크게 약화시키는 경우
+- **보통** — 가이드라인과 일치하지 않지만 큰 문제는 아닌 경우
+- **낮음** — 사소한 스타일 또는 선호 관련 이슈
 
-### Revised Sections
+### 수정 섹션
 
-For the top 3-5 highest-severity issues, provide a before/after showing the original text and a suggested revision.
+심각도가 가장 높은 3-5개 이슈에 대해 원본 텍스트와 수정 제안을 비교하여 보여줍니다.
 
-### Legal/Compliance Flags
+### 법률/컴플라이언스 플래그
 
-List any legal or compliance concerns separately with recommended actions.
+법률 또는 컴플라이언스 우려 사항을 권장 조치와 함께 별도로 나열합니다.
 
-## After Review
+## 검토 후
 
-Ask: "Would you like me to:
-- Revise the full content with these suggestions applied?
-- Focus on fixing just the high-severity issues?
-- Review additional content against the same guidelines?
-- Help you document your brand voice for future reviews?"
+다음과 같이 질문합니다: "다음 중 원하시는 것이 있으신가요?
+- 제안 사항을 적용하여 전체 콘텐츠를 수정할까요?
+- 심각도가 높은 이슈만 집중 수정할까요?
+- 동일한 가이드라인으로 추가 콘텐츠를 검토할까요?
+- 향후 검토를 위해 브랜드 보이스를 문서화할까요?"

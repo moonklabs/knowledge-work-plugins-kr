@@ -1,30 +1,30 @@
-# Troubleshooting Guide for scvi-tools
+# scvi-tools 문제 해결 가이드
 
-This reference provides a consolidated guide for diagnosing and resolving common issues across all scvi-tools models.
+본 레퍼런스는 모든 scvi-tools 모델에 걸친 일반적인 문제의 진단 및 해결을 위한 통합 가이드를 제공합니다.
 
-## Quick Diagnosis
+## 빠른 진단
 
-| Symptom | Likely Cause | Quick Fix |
-|---------|--------------|-----------|
-| "X should contain integers" | Normalized data in X | Use `layer="counts"` in setup |
-| CUDA out of memory | GPU memory exhausted | Reduce `batch_size`, use smaller model |
-| Training loss is NaN | Bad data or learning rate | Check for all-zero cells/genes |
-| Batches not mixing | Too few shared features | Increase HVGs, check gene overlap |
-| Over-correction | Too aggressive integration | Use scANVI with labels |
-| Import error | Missing dependencies | `pip install scvi-tools[all]` |
+| 증상 | 예상 원인 | 빠른 해결 |
+|------|----------|-----------|
+| "X should contain integers" | X에 정규화된 데이터가 있음 | setup에서 `layer="counts"` 사용 |
+| CUDA out of memory | GPU 메모리 부족 | `batch_size` 감소, 더 작은 모델 사용 |
+| 학습 손실이 NaN | 불량 데이터 또는 학습률 문제 | 전체 0인 세포/유전자 확인 |
+| 배치 간 혼합 부족 | 공유 피처 부족 | HVG 수 증가, 유전자 중첩 확인 |
+| 과도한 보정 | 너무 공격적인 통합 | scANVI에 레이블 적용 |
+| Import 오류 | 의존성 누락 | `pip install scvi-tools[all]` |
 
-## Data Format Issues
+## 데이터 형식 문제
 
-### Issue: CITE-seq protein data from Seurat is CLR-normalized
+### 문제: Seurat에서 가져온 CITE-seq 단백질 데이터가 CLR 정규화됨
 
-**Cause**: Seurat's `NormalizeData(normalization.method = "CLR")` transforms raw ADT counts. totalVI requires raw integer counts for protein data.
+**원인**: Seurat의 `NormalizeData(normalization.method = "CLR")`이 원시 ADT 카운트를 변환합니다. totalVI는 단백질 데이터에 원시 정수 카운트가 필요합니다.
 
-**Symptoms**:
-- Protein values are not integers
-- Protein values contain negative numbers
-- Model training produces poor results
+**증상**:
+- 단백질 값이 정수가 아님
+- 단백질 값에 음수 포함
+- 모델 학습 결과가 저조
 
-**Solution**:
+**해결 방법**:
 ```python
 # Check if protein data is normalized
 protein = adata.obsm["protein_expression"]
@@ -36,11 +36,11 @@ print(f"Contains integers: {np.allclose(protein, protein.astype(int))}")
 # GetAssayData(seurat_obj, assay = "ADT", slot = "counts")
 ```
 
-### Issue: "layer not found" or "X should contain integers"
+### 문제: "layer not found" 또는 "X should contain integers"
 
-**Cause**: scvi-tools requires raw integer counts, not normalized data.
+**원인**: scvi-tools는 정규화된 데이터가 아닌 원시 정수 카운트가 필요합니다.
 
-**Solution**:
+**해결 방법**:
 ```python
 # Check if X contains integers
 import numpy as np
@@ -56,11 +56,11 @@ adata.layers["counts"] = adata.X.copy()
 scvi.model.SCVI.setup_anndata(adata, layer="counts")
 ```
 
-### Issue: Sparse matrix errors
+### 문제: 희소 행렬 오류
 
-**Cause**: Incompatible sparse format or dense array expected.
+**원인**: 호환되지 않는 희소 형식이거나 밀집 배열이 필요합니다.
 
-**Solution**:
+**해결 방법**:
 ```python
 from scipy.sparse import csr_matrix
 
@@ -73,11 +73,11 @@ if adata.n_obs * adata.n_vars < 1e8:
     adata.X = adata.X.toarray()
 ```
 
-### Issue: NaN or Inf values in data
+### 문제: 데이터에 NaN 또는 Inf 값 존재
 
-**Cause**: Missing values or corrupted data.
+**원인**: 결측값 또는 손상된 데이터입니다.
 
-**Solution**:
+**해결 방법**:
 ```python
 import numpy as np
 
@@ -93,11 +93,11 @@ X = np.clip(X, 0, None)  # Ensure non-negative
 adata.X = csr_matrix(X)
 ```
 
-### Issue: batch_key or labels_key not found
+### 문제: batch_key 또는 labels_key를 찾을 수 없음
 
-**Cause**: Column name mismatch in adata.obs.
+**원인**: adata.obs의 열 이름 불일치입니다.
 
-**Solution**:
+**해결 방법**:
 ```python
 # List available columns
 print(adata.obs.columns.tolist())
@@ -108,13 +108,13 @@ for col in adata.obs.columns:
         print(f"Potential batch column: {col}")
 ```
 
-## GPU and Memory Issues
+## GPU 및 메모리 문제
 
-### Issue: CUDA out of memory
+### 문제: CUDA out of memory
 
-**Cause**: Model or batch doesn't fit in GPU memory.
+**원인**: 모델 또는 배치가 GPU 메모리에 맞지 않습니다.
 
-**Solutions** (try in order):
+**해결 방법** (순서대로 시도):
 
 ```python
 # 1. Reduce batch size
@@ -139,11 +139,11 @@ torch.cuda.empty_cache()
 model.train(accelerator="cpu")
 ```
 
-### Issue: No GPU detected
+### 문제: GPU가 감지되지 않음
 
-**Cause**: CUDA not installed or version mismatch.
+**원인**: CUDA가 설치되지 않았거나 버전이 불일치합니다.
 
-**Diagnosis**:
+**진단**:
 ```python
 import torch
 print(f"CUDA available: {torch.cuda.is_available()}")
@@ -151,7 +151,7 @@ print(f"PyTorch version: {torch.__version__}")
 print(f"CUDA version: {torch.version.cuda}")
 ```
 
-**Solution**:
+**해결 방법**:
 ```bash
 # Check system CUDA
 nvidia-smi
@@ -163,11 +163,11 @@ pip install torch --index-url https://download.pytorch.org/whl/cu118  # For CUDA
 pip install torch --index-url https://download.pytorch.org/whl/cu121  # For CUDA 12.1
 ```
 
-### Issue: Memory error with large datasets
+### 문제: 대규모 데이터셋에서 메모리 오류
 
-**Cause**: Dataset too large for system RAM.
+**원인**: 데이터셋이 시스템 RAM에 비해 너무 큽니다.
 
-**Solutions**:
+**해결 방법**:
 ```python
 # 1. Process in chunks (for very large data)
 # Subsample for initial exploration
@@ -180,13 +180,13 @@ adata = sc.read_h5ad("large_data.h5ad", backed='r')
 adata = adata[:, adata.var['highly_variable']].copy()
 ```
 
-## Training Issues
+## 학습 문제
 
-### Issue: Training loss is NaN
+### 문제: 학습 손실이 NaN
 
-**Cause**: Numerical instability, bad data, or learning rate issues.
+**원인**: 수치 불안정, 불량 데이터 또는 학습률 문제입니다.
 
-**Solutions**:
+**해결 방법**:
 ```python
 # 1. Check for problematic cells/genes
 sc.pp.filter_cells(adata, min_genes=200)
@@ -199,11 +199,11 @@ adata = adata[adata.X.sum(axis=1) > 0].copy()
 model.train(max_epochs=200, early_stopping=True)
 ```
 
-### Issue: Training doesn't converge
+### 문제: 학습이 수렴하지 않음
 
-**Cause**: Insufficient epochs, poor hyperparameters, or data issues.
+**원인**: 에폭 부족, 부적절한 하이퍼파라미터 또는 데이터 문제입니다.
 
-**Solutions**:
+**해결 방법**:
 ```python
 # 1. Train longer
 model.train(max_epochs=400)
@@ -224,11 +224,11 @@ model = scvi.model.SCVI(adata, n_latent=10, n_layers=1, dropout_rate=0.2)
 model = scvi.model.SCVI(adata, n_latent=30, n_layers=2)
 ```
 
-### Issue: Overfitting (validation loss increases)
+### 문제: 과적합 (검증 손실 증가)
 
-**Cause**: Model too complex or trained too long.
+**원인**: 모델이 너무 복잡하거나 학습 기간이 너무 깁니다.
 
-**Solutions**:
+**해결 방법**:
 ```python
 # 1. Enable early stopping
 model.train(early_stopping=True, early_stopping_patience=10)
@@ -240,13 +240,13 @@ model = scvi.model.SCVI(adata, dropout_rate=0.2)
 model = scvi.model.SCVI(adata, n_layers=1)
 ```
 
-## Integration Issues
+## 통합 문제
 
-### Issue: Batches don't mix
+### 문제: 배치 간 혼합 부족
 
-**Cause**: Too few shared features, strong biological differences, or technical issues.
+**원인**: 공유 피처 부족, 강한 생물학적 차이 또는 기술적 문제입니다.
 
-**Solutions**:
+**해결 방법**:
 ```python
 # 1. Check gene overlap between batches
 for batch in adata.obs['batch'].unique():
@@ -263,11 +263,11 @@ model.train(max_epochs=400)
 model = scvi.model.SCVI(adata, n_latent=50)
 ```
 
-### Issue: Over-correction (biological signal lost)
+### 문제: 과도한 보정 (생물학적 신호 손실)
 
-**Cause**: Model removes too much variation.
+**원인**: 모델이 너무 많은 변이를 제거합니다.
 
-**Solutions**:
+**해결 방법**:
 ```python
 # 1. Use scANVI with cell type labels
 scvi.model.SCANVI.from_scvi_model(scvi_model, labels_key="cell_type")
@@ -283,11 +283,11 @@ scvi.model.SCVI.setup_anndata(
 )
 ```
 
-### Issue: One batch dominates clusters
+### 문제: 하나의 배치가 클러스터를 지배
 
-**Cause**: Unbalanced batch sizes or incomplete integration.
+**원인**: 배치 크기 불균형 또는 불완전한 통합입니다.
 
-**Solutions**:
+**해결 방법**:
 ```python
 # 1. Check batch distribution
 print(adata.obs['batch'].value_counts())
@@ -302,11 +302,11 @@ for batch in adata.obs['batch'].unique():
 adata_balanced = sc.concat(balanced)
 ```
 
-## Model-Specific Issues
+## 모델별 문제
 
-### scANVI: Poor label transfer
+### scANVI: 레이블 전이 품질 저하
 
-**Solutions**:
+**해결 방법**:
 ```python
 # 1. Check label distribution
 print(adata.obs['cell_type'].value_counts())
@@ -320,9 +320,9 @@ scanvi_model = scvi.model.SCANVI.from_scvi_model(scvi_model, labels_key="cell_ty
 scanvi_model.train(max_epochs=100)
 ```
 
-### totalVI: Noisy protein signal
+### totalVI: 노이즈가 많은 단백질 신호
 
-**Solutions**:
+**해결 방법**:
 ```python
 # 1. Use denoised protein values
 _, protein_denoised = model.get_normalized_expression(return_mean=True)
@@ -334,9 +334,9 @@ for i, name in enumerate(adata.uns["protein_names"]):
         print(f"{name}: mean={adata.obsm['protein_expression'][:, i].mean():.1f}")
 ```
 
-### PeakVI: Poor clustering
+### PeakVI: 클러스터링 품질 저하
 
-**Solutions**:
+**해결 방법**:
 ```python
 # 1. Use more variable peaks
 from sklearn.feature_selection import VarianceThreshold
@@ -347,9 +347,9 @@ adata = adata[:, selector.fit(adata.X).get_support()].copy()
 adata.X = (adata.X > 0).astype(np.float32)
 ```
 
-### MultiVI: Different cell counts between modalities
+### MultiVI: 모달리티 간 세포 수 불일치
 
-**Solutions**:
+**해결 방법**:
 ```python
 # Ensure same cells in same order
 common_cells = adata_rna.obs_names.intersection(adata_atac.obs_names)
@@ -357,9 +357,9 @@ adata_rna = adata_rna[common_cells].copy()
 adata_atac = adata_atac[common_cells].copy()
 ```
 
-### DestVI: Poor deconvolution
+### DestVI: 디컨볼루션 품질 저하
 
-**Solutions**:
+**해결 방법**:
 ```python
 # 1. Check gene overlap
 common_genes = adata_ref.var_names.intersection(adata_spatial.var_names)
@@ -372,11 +372,11 @@ print(f"Common genes: {len(common_genes)}")  # Should be >1000
 print(adata_ref.obs['cell_type'].value_counts())
 ```
 
-## Version Compatibility
+## 버전 호환성
 
-### scvi-tools 1.x vs 0.x API changes
+### scvi-tools 1.x vs 0.x API 변경 사항
 
-Key differences:
+주요 차이점:
 ```python
 # 0.x API
 scvi.data.setup_anndata(adata, ...)
@@ -385,7 +385,7 @@ scvi.data.setup_anndata(adata, ...)
 scvi.model.SCVI.setup_anndata(adata, ...)
 ```
 
-### Check versions
+### 버전 확인
 ```python
 import scvi
 import scanpy as sc
@@ -398,7 +398,7 @@ print(f"anndata: {anndata.__version__}")
 print(f"torch: {torch.__version__}")
 ```
 
-### Recommended versions (as of late 2024)
+### 권장 버전 (2024년 후반 기준)
 ```
 scvi-tools>=1.0.0
 scanpy>=1.9.0
@@ -406,15 +406,15 @@ anndata>=0.9.0
 torch>=2.0.0
 ```
 
-## Getting Help
+## 도움 받기
 
-1. **Check documentation**: https://docs.scvi-tools.org/
-2. **GitHub issues**: https://github.com/scverse/scvi-tools/issues
-3. **Discourse forum**: https://discourse.scverse.org/
-4. **Tutorials**: https://docs.scvi-tools.org/en/stable/tutorials/index.html
+1. **문서 확인**: https://docs.scvi-tools.org/
+2. **GitHub 이슈**: https://github.com/scverse/scvi-tools/issues
+3. **Discourse 포럼**: https://discourse.scverse.org/
+4. **튜토리얼**: https://docs.scvi-tools.org/en/stable/tutorials/index.html
 
-When reporting issues, include:
-- scvi-tools version (`scvi.__version__`)
-- Python version
-- Full error traceback
-- Minimal reproducible example
+이슈 보고 시 포함할 내용:
+- scvi-tools 버전 (`scvi.__version__`)
+- Python 버전
+- 전체 오류 트레이스백
+- 최소한의 재현 가능 예제

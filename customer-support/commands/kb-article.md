@@ -1,83 +1,83 @@
 ---
-description: Draft a knowledge base article from a resolved issue or common question
-argument-hint: "<resolved issue or ticket>"
+description: 해결된 이슈 또는 자주 묻는 질문을 기반으로 지식 베이스 문서 초안 작성
+argument-hint: "<해결된 이슈 또는 티켓>"
 ---
 
-# KB Article
+# KB 문서
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 참조하십시오.
 
-Draft a publish-ready knowledge base article from a resolved support issue, common question, or documented workaround. Structures the content for searchability and self-service.
+해결된 지원 이슈, 자주 묻는 질문 또는 문서화된 해결 방법을 기반으로 게시 가능한 지식 베이스 문서를 초안 작성합니다. 검색 가능성과 셀프 서비스에 최적화된 콘텐츠를 구조화합니다.
 
-## Usage
-
-```
-/kb-article <resolved issue, ticket reference, or topic description>
-```
-
-Examples:
-- `/kb-article How to configure SSO with Okta — resolved this for 3 customers last month`
-- `/kb-article Ticket #4521 — customer couldn't export data over 10k rows`
-- `/kb-article Common question: how to set up webhook notifications`
-- `/kb-article Known issue: dashboard charts not loading on Safari 16`
-
-## Workflow
-
-### 1. Understand the Source Material
-
-Parse the input to identify:
-
-- **What was the problem?** The original issue, question, or error
-- **What was the solution?** The resolution, workaround, or answer
-- **Who does this affect?** User type, plan level, or configuration
-- **How common is this?** One-off or recurring issue
-- **What article type fits best?** Use the article types from the **knowledge-management** skill (how-to, troubleshooting, FAQ, known issue, reference)
-
-If a ticket reference is provided, look up the full context:
-
-- **~~support platform**: Pull the ticket thread, resolution, and any internal notes
-- **~~knowledge base**: Check if a similar article already exists (update vs. create new)
-- **~~project tracker**: Check if there's a related bug or feature request
-
-### 2. Draft the Article
-
-Using the article structure and formatting standards from the **knowledge-management** skill:
-
-- Follow the template for the chosen article type (how-to, troubleshooting, FAQ, known issue, or reference)
-- Apply the searchability best practices: customer-language title, plain-language opening sentence, exact error messages, common synonyms
-- Keep it scannable: headers, numbered steps, short paragraphs
-
-### 3. Generate the Article
-
-Present the draft with metadata:
+## 사용법
 
 ```
-## KB Article Draft
+/kb-article <해결된 이슈, 티켓 참조 또는 주제 설명>
+```
 
-**Title:** [Article title]
-**Type:** [How-to / Troubleshooting / FAQ / Known Issue / Reference]
-**Category:** [Product area or topic]
-**Tags:** [Searchable tags]
-**Audience:** [All users / Admins / Developers / Specific plan]
+예시:
+- `/kb-article Okta를 사용한 SSO 구성 방법 — 지난달 3명의 고객 이슈를 해결함`
+- `/kb-article 티켓 #4521 — 1만 행 이상의 데이터를 내보낼 수 없는 고객 이슈`
+- `/kb-article 자주 묻는 질문: 웹훅 알림 설정 방법`
+- `/kb-article 알려진 이슈: Safari 16에서 대시보드 차트가 로드되지 않음`
 
----
+## 워크플로우
 
-[Full article content — using the appropriate template
-from the knowledge-management skill]
+### 1. 소스 자료 파악
+
+입력을 분석하여 다음을 식별합니다:
+
+- **문제가 무엇이었나?** 원래 이슈, 질문 또는 오류
+- **해결 방법은?** 해결책, 해결 방법 또는 답변
+- **누가 영향을 받나?** 사용자 유형, 플랜 등급 또는 구성
+- **얼마나 자주 발생하나?** 일회성 또는 반복 이슈
+- **어떤 문서 유형이 적합한가?** **knowledge-management** 스킬의 문서 유형을 사용합니다 (사용 방법, 트러블슈팅, FAQ, 알려진 이슈, 참조)
+
+티켓 참조가 제공된 경우 전체 컨텍스트를 조회합니다:
+
+- **~~support platform**: 티켓 스레드, 해결 내역 및 내부 메모를 가져옵니다
+- **~~knowledge base**: 유사한 문서가 이미 있는지 확인합니다 (업데이트 vs. 신규 작성)
+- **~~project tracker**: 관련 버그 또는 기능 요청이 있는지 확인합니다
+
+### 2. 문서 초안 작성
+
+**knowledge-management** 스킬의 문서 구조 및 서식 표준을 사용합니다:
+
+- 선택한 문서 유형에 맞는 템플릿을 따릅니다 (사용 방법, 트러블슈팅, FAQ, 알려진 이슈 또는 참조)
+- 검색 최적화 모범 사례를 적용합니다: 고객 언어 기반 제목, 평이한 표현의 첫 문장, 정확한 오류 메시지, 일반적인 동의어
+- 스캔 가능하게 유지합니다: 헤더, 번호 매기기 단계, 짧은 문단
+
+### 3. 문서 생성
+
+메타데이터와 함께 초안을 제시합니다:
+
+```
+## KB 문서 초안
+
+**제목:** [문서 제목]
+**유형:** [사용 방법 / 트러블슈팅 / FAQ / 알려진 이슈 / 참조]
+**카테고리:** [제품 영역 또는 주제]
+**태그:** [검색 가능한 태그]
+**대상:** [모든 사용자 / 관리자 / 개발자 / 특정 플랜]
 
 ---
 
-### Publishing Notes
-- **Source:** [Ticket #, customer conversation, or internal discussion]
-- **Existing articles to update:** [If this overlaps with existing content]
-- **Review needed from:** [SME or team if technical accuracy needs verification]
-- **Suggested review date:** [When to revisit for accuracy]
+[전체 문서 콘텐츠 — knowledge-management 스킬의
+적절한 템플릿 사용]
+
+---
+
+### 게시 메모
+- **출처:** [티켓 번호, 고객 대화 또는 내부 논의]
+- **업데이트할 기존 문서:** [기존 콘텐츠와 중복되는 경우]
+- **검토 필요 담당자:** [기술적 정확성 확인이 필요한 경우 SME 또는 팀]
+- **권장 검토 날짜:** [정확성 재검토 시점]
 ```
 
-### 4. Offer Next Steps
+### 4. 다음 단계 제안
 
-After generating the article:
-- "Want me to check if a similar article already exists in your ~~knowledge base?"
-- "Should I adjust the technical depth for a different audience?"
-- "Want me to draft a companion article (e.g., a how-to to go with this troubleshooting guide)?"
-- "Should I create an internal-only version with additional technical detail?"
+문서를 생성한 후:
+- "~~knowledge base에 유사한 문서가 이미 있는지 확인할까요?"
+- "다른 대상 독자를 위해 기술적 깊이를 조정할까요?"
+- "보완 문서를 작성할까요? (예: 이 트러블슈팅 가이드에 맞는 사용 방법 문서)"
+- "추가 기술 세부 정보가 포함된 내부 전용 버전을 작성할까요?"

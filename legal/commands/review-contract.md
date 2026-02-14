@@ -1,169 +1,169 @@
 ---
-description: Review a contract against your organization's negotiation playbook — flag deviations, generate redlines, provide business impact analysis
-argument-hint: "<contract file or text>"
+description: 조직의 협상 플레이북에 따라 계약서를 검토 — 편차 표시, 수정안 생성, 비즈니스 영향 분석 제공
+argument-hint: "<계약서 파일 또는 텍스트>"
 ---
 
-# /review-contract -- Contract Review Against Playbook
+# /review-contract -- 플레이북 기반 계약서 검토
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 어떤 도구가 연결되어 있는지 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 참고하십시오.
 
-Review a contract against your organization's negotiation playbook. Analyze each clause, flag deviations, generate redline suggestions, and provide business impact analysis.
+조직의 협상 플레이북에 따라 계약서를 검토합니다. 각 조항을 분석하고, 편차를 표시하며, 수정안을 생성하고, 비즈니스 영향 분석을 제공합니다.
 
-## Invocation
+## 호출 방법
 
 ```
 /review-contract
 ```
 
-## Workflow
+## 워크플로우
 
-### Step 1: Accept the Contract
+### 1단계: 계약서 접수
 
-Accept the contract in any of these formats:
-- **File upload**: PDF, DOCX, or other document format
-- **URL**: Link to a contract in your CLM, cloud storage (e.g., Box, Egnyte, SharePoint), or other document system
-- **Pasted text**: Contract text pasted directly into the conversation
+다음 형식의 계약서를 접수합니다:
+- **파일 업로드**: PDF, DOCX 또는 기타 문서 형식
+- **URL**: CLM, 클라우드 스토리지(Box, Egnyte, SharePoint 등) 또는 기타 문서 시스템의 계약서 링크
+- **붙여넣은 텍스트**: 대화에 직접 붙여넣은 계약서 텍스트
 
-If no contract is provided, prompt the user to supply one.
+계약서가 제공되지 않은 경우, 사용자에게 제출을 요청합니다.
 
-### Step 2: Gather Context
+### 2단계: 맥락 수집
 
-Ask the user for context before beginning the review:
+검토를 시작하기 전에 사용자에게 맥락을 확인합니다:
 
-1. **Which side are you on?** (vendor/supplier, customer/buyer, licensor, licensee, partner -- or other)
-2. **Deadline**: When does this need to be finalized? (Affects prioritization of issues)
-3. **Focus areas**: Any specific concerns? (e.g., "data protection is critical", "we need flexibility on term", "IP ownership is the key issue")
-4. **Deal context**: Any relevant business context? (e.g., deal size, strategic importance, existing relationship)
+1. **어느 쪽 입장인가요?** (벤더/공급자, 고객/구매자, 라이선서, 라이선시, 파트너 또는 기타)
+2. **기한**: 언제까지 확정해야 하나요? (이슈 우선순위에 영향)
+3. **중점 검토 영역**: 특정 우려 사항이 있나요? (예: "데이터 보호가 중요", "계약 기간에 유연성이 필요", "지적 재산권 소유권이 핵심 이슈")
+4. **딜 맥락**: 관련 비즈니스 맥락이 있나요? (예: 딜 규모, 전략적 중요성, 기존 관계)
 
-If the user provides partial context, proceed with what you have and note assumptions.
+사용자가 부분적인 맥락을 제공한 경우, 가진 정보로 진행하고 가정 사항을 명시합니다.
 
-### Step 3: Load the Playbook
+### 3단계: 플레이북 로드
 
-Look for the organization's contract review playbook in local settings (e.g., `legal.local.md` or similar configuration files).
+로컬 설정(예: `legal.local.md` 또는 유사한 구성 파일)에서 조직의 계약서 검토 플레이북을 찾습니다.
 
-The playbook should define:
-- **Standard positions**: The organization's preferred terms for each major clause type
-- **Acceptable ranges**: Terms that can be agreed to without escalation
-- **Escalation triggers**: Terms that require senior counsel review or outside counsel involvement
+플레이북에는 다음이 정의되어야 합니다:
+- **표준 포지션**: 주요 조항 유형별 조직의 선호 조건
+- **허용 범위**: 에스컬레이션 없이 합의할 수 있는 조건
+- **에스컬레이션 트리거**: 시니어 법무 검토 또는 외부 법무 자문이 필요한 조건
 
-**If no playbook is configured:**
-- Inform the user that no playbook was found
-- Offer two options:
-  1. Help the user set up their playbook (walk through defining positions for key clauses)
-  2. Proceed with a generic review using widely-accepted commercial standards as the baseline
-- If proceeding generically, clearly note that the review is based on general commercial standards, not the organization's specific positions
+**플레이북이 구성되지 않은 경우:**
+- 플레이북이 없음을 사용자에게 알림
+- 두 가지 옵션 제안:
+  1. 플레이북 설정 지원(주요 조항에 대한 포지션 정의 안내)
+  2. 일반적으로 인정되는 상업 기준을 기준선으로 하여 일반 검토 진행
+- 일반 검토로 진행하는 경우, 검토가 조직의 특정 포지션이 아닌 일반 상업 기준에 기반함을 명확히 표시
 
-### Step 4: Clause-by-Clause Analysis
+### 4단계: 조항별 분석
 
-Analyze the contract systematically, covering at minimum:
+계약서를 체계적으로 분석하며, 최소한 다음 사항을 포함합니다:
 
-| Clause Category | Key Review Points |
-|----------------|-------------------|
-| **Limitation of Liability** | Cap amount, carveouts, mutual vs. unilateral, consequential damages |
-| **Indemnification** | Scope, mutual vs. unilateral, cap, IP infringement, data breach |
-| **IP Ownership** | Pre-existing IP, developed IP, work-for-hire, license grants, assignment |
-| **Data Protection** | DPA requirement, processing terms, sub-processors, breach notification, cross-border transfers |
-| **Confidentiality** | Scope, term, carveouts, return/destruction obligations |
-| **Representations & Warranties** | Scope, disclaimers, survival period |
-| **Term & Termination** | Duration, renewal, termination for convenience, termination for cause, wind-down |
-| **Governing Law & Dispute Resolution** | Jurisdiction, venue, arbitration vs. litigation |
-| **Insurance** | Coverage requirements, minimums, evidence of coverage |
-| **Assignment** | Consent requirements, change of control, exceptions |
-| **Force Majeure** | Scope, notification, termination rights |
-| **Payment Terms** | Net terms, late fees, taxes, price escalation |
+| 조항 카테고리 | 주요 검토 사항 |
+|-------------|--------------|
+| **책임 제한** | 상한 금액, 예외 사항, 상호 vs. 일방적, 결과적 손해 |
+| **면책** | 범위, 상호 vs. 일방적, 상한, IP 침해, 데이터 유출 |
+| **지적 재산권 소유권** | 기존 IP, 개발 IP, 직무저작물, 라이선스 부여, 양도 |
+| **데이터 보호** | DPA 요건, 처리 조건, 하위 처리자, 유출 통지, 국경 간 전송 |
+| **비밀유지** | 범위, 기간, 예외, 반환/파기 의무 |
+| **진술 및 보증** | 범위, 면책 조항, 존속 기간 |
+| **계약 기간 및 해지** | 기간, 갱신, 임의 해지, 사유 해지, 종료 절차 |
+| **준거법 및 분쟁 해결** | 관할권, 재판지, 중재 vs. 소송 |
+| **보험** | 보장 범위 요건, 최소 금액, 보장 증빙 |
+| **양도** | 동의 요건, 지배권 변경, 예외 |
+| **불가항력** | 범위, 통지, 해지권 |
+| **대금 지급 조건** | 순 지급 기간, 연체 수수료, 세금, 가격 인상 |
 
-For each clause, assess against the playbook (or generic standards) and note whether it is present, absent, or unusual.
+각 조항에 대해 플레이북(또는 일반 기준)에 따라 평가하고, 해당 조항이 존재하는지, 누락되었는지, 비정상적인지 확인합니다.
 
-### Step 5: Flag Deviations
+### 5단계: 편차 표시
 
-Classify each deviation from the playbook using a three-tier system:
+플레이북에서의 각 편차를 3단계 시스템으로 분류합니다:
 
-#### GREEN -- Acceptable
-- Aligns with or is better than the organization's standard position
-- Minor variations that are commercially reasonable
-- No action needed; note for awareness
+#### GREEN -- 수용 가능
+- 조직의 표준 포지션과 일치하거나 그보다 유리한 조건
+- 상업적으로 합리적인 사소한 차이
+- 조치 불필요, 참고용으로 기록
 
-#### YELLOW -- Negotiate
-- Falls outside standard position but within negotiable range
-- Common in the market but not the organization's preference
-- Requires attention but not escalation
-- **Include**: Specific redline language to bring the term back to standard position
-- **Include**: Fallback position if the counterparty pushes back
-- **Include**: Business impact of accepting as-is vs. negotiating
+#### YELLOW -- 협상 필요
+- 표준 포지션 범위 밖이지만 협상 가능 범위 내
+- 시장에서 일반적이나 조직이 선호하지 않는 조건
+- 주의가 필요하나 에스컬레이션은 불필요
+- **포함 사항**: 표준 포지션으로 되돌리기 위한 구체적 수정안
+- **포함 사항**: 상대방이 거부할 경우의 대안 포지션
+- **포함 사항**: 현 상태 수용 vs. 협상의 비즈니스 영향
 
-#### RED -- Escalate
-- Falls outside acceptable range or triggers an escalation criterion
-- Unusual or aggressive terms that pose material risk
-- Requires senior counsel review, outside counsel involvement, or business decision-maker sign-off
-- **Include**: Why this is a RED flag (specific risk)
-- **Include**: What the standard market position looks like
-- **Include**: Business impact and potential exposure
-- **Include**: Recommended escalation path
+#### RED -- 에스컬레이션 필요
+- 허용 범위를 벗어나거나 에스컬레이션 기준에 해당
+- 중대한 리스크를 초래하는 비정상적이거나 공격적인 조건
+- 시니어 법무 검토, 외부 법무 자문, 또는 비즈니스 의사결정자 승인 필요
+- **포함 사항**: RED 플래그 이유(구체적 리스크)
+- **포함 사항**: 표준 시장 포지션
+- **포함 사항**: 비즈니스 영향 및 잠재적 노출
+- **포함 사항**: 권장 에스컬레이션 경로
 
-### Step 6: Generate Redline Suggestions
+### 6단계: 수정안 생성
 
-For each YELLOW and RED deviation, provide:
-- **Current language**: Quote the relevant contract text
-- **Suggested redline**: Specific alternative language
-- **Rationale**: Brief explanation suitable for sharing with the counterparty
-- **Priority**: Whether this is a must-have or nice-to-have in negotiation
+각 YELLOW 및 RED 편차에 대해 다음을 제공합니다:
+- **현재 문구**: 관련 계약서 텍스트 인용
+- **제안 수정안**: 구체적인 대안 문구
+- **근거**: 상대방과 공유하기에 적합한 간략한 설명
+- **우선순위**: 협상에서 필수 사항인지 선호 사항인지
 
-### Step 7: Business Impact Summary
+### 7단계: 비즈니스 영향 요약
 
-Provide a summary section covering:
-- **Overall risk assessment**: High-level view of the contract's risk profile
-- **Top 3 issues**: The most important items to address
-- **Negotiation strategy**: Recommended approach (which issues to lead with, what to concede)
-- **Timeline considerations**: Any urgency factors affecting the negotiation approach
+다음을 포함하는 요약 섹션을 제공합니다:
+- **전체 리스크 평가**: 계약서의 리스크 프로파일에 대한 상위 수준 관점
+- **상위 3개 이슈**: 가장 중요하게 다뤄야 할 항목
+- **협상 전략**: 권장 접근 방식(어떤 이슈를 먼저 제기할지, 무엇을 양보할지)
+- **일정 고려 사항**: 협상 접근 방식에 영향을 미치는 긴급 요소
 
-### Step 8: CLM Routing (If Connected)
+### 8단계: CLM 라우팅 (연결 시)
 
-If a Contract Lifecycle Management system is connected via MCP:
-- Recommend the appropriate approval workflow based on contract type and risk level
-- Suggest the correct routing path (e.g., standard approval, senior counsel, outside counsel)
-- Note any required approvals based on contract value or risk flags
+CLM(Contract Lifecycle Management) 시스템이 MCP를 통해 연결된 경우:
+- 계약 유형 및 리스크 수준에 따라 적절한 승인 워크플로우 권장
+- 올바른 라우팅 경로 제안(예: 표준 승인, 시니어 법무, 외부 법무 자문)
+- 계약 금액 또는 리스크 플래그에 따른 필수 승인 사항 안내
 
-If no CLM is connected, skip this step.
+CLM이 연결되지 않은 경우, 이 단계를 건너뜁니다.
 
-## Output Format
+## 출력 형식
 
-Structure the output as:
+출력은 다음과 같이 구성합니다:
 
 ```
 ## Contract Review Summary
 
-**Document**: [contract name/identifier]
-**Parties**: [party names and roles]
-**Your Side**: [vendor/customer/etc.]
-**Deadline**: [if provided]
+**Document**: [계약서 이름/식별자]
+**Parties**: [당사자 이름 및 역할]
+**Your Side**: [벤더/고객 등]
+**Deadline**: [제공된 경우]
 **Review Basis**: [Playbook / Generic Standards]
 
 ## Key Findings
 
-[Top 3-5 issues with severity flags]
+[심각도 플래그가 포함된 상위 3~5개 이슈]
 
 ## Clause-by-Clause Analysis
 
 ### [Clause Category] -- [GREEN/YELLOW/RED]
-**Contract says**: [summary of the provision]
-**Playbook position**: [your standard]
-**Deviation**: [description of gap]
-**Business impact**: [what this means practically]
-**Redline suggestion**: [specific language, if YELLOW or RED]
+**Contract says**: [해당 규정 요약]
+**Playbook position**: [표준 포지션]
+**Deviation**: [차이 설명]
+**Business impact**: [실질적 의미]
+**Redline suggestion**: [YELLOW 또는 RED인 경우 구체적 문구]
 
-[Repeat for each major clause]
+[각 주요 조항에 대해 반복]
 
 ## Negotiation Strategy
 
-[Recommended approach, priorities, concession candidates]
+[권장 접근 방식, 우선순위, 양보 후보]
 
 ## Next Steps
 
-[Specific actions to take]
+[취해야 할 구체적 조치]
 ```
 
-## Notes
+## 참고 사항
 
-- If the contract is in a language other than English, note this and ask if the user wants a translation or review in the original language
-- For very long contracts (50+ pages), offer to focus on the most material sections first and then do a complete review
-- Always remind the user that this analysis should be reviewed by qualified legal counsel before being relied upon for legal decisions
+- 계약서가 영어 이외의 언어로 작성된 경우, 이를 안내하고 사용자에게 번역 또는 원문 검토 중 선호하는 방식을 확인합니다
+- 매우 긴 계약서(50페이지 이상)의 경우, 가장 핵심적인 섹션을 먼저 검토한 후 전체 검토를 진행하도록 제안합니다
+- 항상 이 분석은 법적 결정에 활용하기 전에 자격을 갖춘 법무 담당자의 검토를 받아야 한다고 안내합니다

@@ -1,227 +1,227 @@
 ---
 name: data-context-extractor
 description: >
-  Generate or improve a company-specific data analysis skill by extracting tribal knowledge from analysts.
+  회사별 데이터 분석 스킬을 생성하거나 개선합니다. 분석가로부터 조직 내부 지식을 추출합니다.
 
-  BOOTSTRAP MODE - Triggers: "Create a data context skill", "Set up data analysis for our warehouse",
-  "Help me create a skill for our database", "Generate a data skill for [company]"
-  → Discovers schemas, asks key questions, generates initial skill with reference files
+  부트스트랩 모드 - 트리거: "데이터 컨텍스트 스킬 생성", "우리 웨어하우스에 데이터 분석 설정",
+  "데이터베이스용 스킬 생성 도와줘", "[회사명]용 데이터 스킬 생성"
+  → 스키마를 탐색하고, 핵심 질문을 하고, 참조 파일이 포함된 초기 스킬을 생성합니다
 
-  ITERATION MODE - Triggers: "Add context about [domain]", "The skill needs more info about [topic]",
-  "Update the data skill with [metrics/tables/terminology]", "Improve the [domain] reference"
-  → Loads existing skill, asks targeted questions, appends/updates reference files
+  반복 모드 - 트리거: "[도메인]에 대한 컨텍스트 추가", "스킬에 [주제]에 대한 정보가 더 필요해",
+  "[지표/테이블/용어]로 데이터 스킬 업데이트", "[도메인] 참조 개선"
+  → 기존 스킬을 로드하고, 타겟 질문을 하고, 참조 파일을 추가/업데이트합니다
 
-  Use when data analysts want Claude to understand their company's specific data warehouse,
-  terminology, metrics definitions, and common query patterns.
+  데이터 분석가가 Claude에게 자사의 데이터 웨어하우스, 용어, 지표 정의,
+  일반적인 쿼리 패턴을 이해시키고자 할 때 사용합니다.
 ---
 
-# Data Context Extractor
+# 데이터 컨텍스트 추출기
 
-A meta-skill that extracts company-specific data knowledge from analysts and generates tailored data analysis skills.
+분석가로부터 회사별 데이터 지식을 추출하여 맞춤형 데이터 분석 스킬을 생성하는 메타 스킬입니다.
 
-## How It Works
+## 작동 방식
 
-This skill has two modes:
+이 스킬에는 두 가지 모드가 있습니다:
 
-1. **Bootstrap Mode**: Create a new data analysis skill from scratch
-2. **Iteration Mode**: Improve an existing skill by adding domain-specific reference files
+1. **부트스트랩 모드**: 새로운 데이터 분석 스킬을 처음부터 생성
+2. **반복 모드**: 도메인별 참조 파일을 추가하여 기존 스킬을 개선
 
 ---
 
-## Bootstrap Mode
+## 부트스트랩 모드
 
-Use when: User wants to create a new data context skill for their warehouse.
+사용 시점: 사용자가 자사 웨어하우스를 위한 새로운 데이터 컨텍스트 스킬을 생성하고자 할 때.
 
-### Phase 1: Database Connection & Discovery
+### 1단계: 데이터베이스 연결 및 탐색
 
-**Step 1: Identify the database type**
+**단계 1: 데이터베이스 유형 식별**
 
-Ask: "What data warehouse are you using?"
+질문: "어떤 데이터 웨어하우스를 사용하고 계신가요?"
 
-Common options:
+일반적인 옵션:
 - **BigQuery**
 - **Snowflake**
 - **PostgreSQL/Redshift**
 - **Databricks**
 
-Use `~~data warehouse` tools (query and schema) to connect. If unclear, check available MCP tools in the current session.
+`~~data warehouse` 도구(쿼리 및 스키마)를 사용하여 연결합니다. 불명확한 경우 현재 세션에서 사용 가능한 MCP 도구를 확인합니다.
 
-**Step 2: Explore the schema**
+**단계 2: 스키마 탐색**
 
-Use `~~data warehouse` schema tools to:
-1. List available datasets/schemas
-2. Identify the most important tables (ask user: "Which 3-5 tables do analysts query most often?")
-3. Pull schema details for those key tables
+`~~data warehouse` 스키마 도구를 사용하여:
+1. 사용 가능한 데이터셋/스키마를 나열합니다
+2. 가장 중요한 테이블을 식별합니다 (사용자에게 질문: "분석가들이 가장 자주 쿼리하는 3-5개의 테이블은 무엇인가요?")
+3. 해당 핵심 테이블의 스키마 세부사항을 가져옵니다
 
-Sample exploration queries by dialect:
+방언별 탐색 쿼리 샘플:
 ```sql
--- BigQuery: List datasets
+-- BigQuery: 데이터셋 나열
 SELECT schema_name FROM INFORMATION_SCHEMA.SCHEMATA
 
--- BigQuery: List tables in a dataset
+-- BigQuery: 데이터셋 내 테이블 나열
 SELECT table_name FROM `project.dataset.INFORMATION_SCHEMA.TABLES`
 
--- Snowflake: List schemas
+-- Snowflake: 스키마 나열
 SHOW SCHEMAS IN DATABASE my_database
 
--- Snowflake: List tables
+-- Snowflake: 테이블 나열
 SHOW TABLES IN SCHEMA my_schema
 ```
 
-### Phase 2: Core Questions (Ask These)
+### 2단계: 핵심 질문 (이 질문들을 합니다)
 
-After schema discovery, ask these questions conversationally (not all at once):
+스키마 탐색 후 대화식으로 질문합니다 (한꺼번에 모두가 아닌):
 
-**Entity Disambiguation (Critical)**
-> "When people here say 'user' or 'customer', what exactly do they mean? Are there different types?"
+**엔티티 구분 (핵심)**
+> "이곳에서 '사용자'나 '고객'이라고 하면 정확히 무엇을 의미하나요? 다른 유형이 있나요?"
 
-Listen for:
-- Multiple entity types (user vs account vs organization)
-- Relationships between them (1:1, 1:many, many:many)
-- Which ID fields link them together
+주의 깊게 들을 내용:
+- 여러 엔티티 유형 (사용자 vs 계정 vs 조직)
+- 엔티티 간 관계 (1:1, 1:다, 다:다)
+- 엔티티를 연결하는 ID 필드
 
-**Primary Identifiers**
-> "What's the main identifier for a [customer/user/account]? Are there multiple IDs for the same entity?"
+**주요 식별자**
+> "[고객/사용자/계정]의 주 식별자는 무엇인가요? 동일 엔티티에 여러 ID가 있나요?"
 
-Listen for:
-- Primary keys vs business keys
-- UUID vs integer IDs
-- Legacy ID systems
+주의 깊게 들을 내용:
+- 기본 키 vs 비즈니스 키
+- UUID vs 정수 ID
+- 레거시 ID 시스템
 
-**Key Metrics**
-> "What are the 2-3 metrics people ask about most? How is each one calculated?"
+**핵심 지표**
+> "사람들이 가장 많이 문의하는 2-3개의 지표는 무엇인가요? 각각 어떻게 계산되나요?"
 
-Listen for:
-- Exact formulas (ARR = monthly_revenue × 12)
-- Which tables/columns feed each metric
-- Time period conventions (trailing 7 days, calendar month, etc.)
+주의 깊게 들을 내용:
+- 정확한 공식 (ARR = 월간 매출 x 12)
+- 각 지표를 제공하는 테이블/컬럼
+- 시간 기간 관례 (최근 7일, 역월 등)
 
-**Data Hygiene**
-> "What should ALWAYS be filtered out of queries? (test data, fraud, internal users, etc.)"
+**데이터 위생**
+> "쿼리에서 항상 제외해야 하는 것은 무엇인가요? (테스트 데이터, 사기, 내부 사용자 등)"
 
-Listen for:
-- Standard WHERE clauses to always include
-- Flag columns that indicate exclusions (is_test, is_internal, is_fraud)
-- Specific values to exclude (status = 'deleted')
+주의 깊게 들을 내용:
+- 항상 포함해야 하는 표준 WHERE 절
+- 제외를 나타내는 플래그 컬럼 (is_test, is_internal, is_fraud)
+- 제외할 특정 값 (status = 'deleted')
 
-**Common Gotchas**
-> "What mistakes do new analysts typically make with this data?"
+**일반적인 함정**
+> "신입 분석가들이 이 데이터에서 보통 어떤 실수를 하나요?"
 
-Listen for:
-- Confusing column names
-- Timezone issues
-- NULL handling quirks
-- Historical vs current state tables
+주의 깊게 들을 내용:
+- 혼동하기 쉬운 컬럼명
+- 시간대 문제
+- NULL 처리 특이사항
+- 이력 vs 현재 상태 테이블
 
-### Phase 3: Generate the Skill
+### 3단계: 스킬 생성
 
-Create a skill with this structure:
+다음 구조로 스킬을 생성합니다:
 
 ```
 [company]-data-analyst/
 ├── SKILL.md
 └── references/
-    ├── entities.md          # Entity definitions and relationships
-    ├── metrics.md           # KPI calculations
-    ├── tables/              # One file per domain
-    │   ├── [domain1].md
-    │   └── [domain2].md
-    └── dashboards.json      # Optional: existing dashboards catalog
+    ├── entities.md          # 엔티티 정의 및 관계
+    ├── metrics.md           # KPI 계산
+    ├── tables/              # 도메인당 하나의 파일
+    │   ├── [도메인1].md
+    │   └── [도메인2].md
+    └── dashboards.json      # 선택: 기존 대시보드 카탈로그
 ```
 
-**SKILL.md Template**: See `references/skill-template.md`
+**SKILL.md 템플릿**: `references/skill-template.md`를 참조하십시오
 
-**SQL Dialect Section**: See `references/sql-dialects.md` and include the appropriate dialect notes.
+**SQL 방언 섹션**: `references/sql-dialects.md`를 참조하여 적절한 방언 노트를 포함하십시오.
 
-**Reference File Template**: See `references/domain-template.md`
+**참조 파일 템플릿**: `references/domain-template.md`를 참조하십시오
 
-### Phase 4: Package and Deliver
+### 4단계: 패키징 및 전달
 
-1. Create all files in the skill directory
-2. Package as a zip file
-3. Present to user with summary of what was captured
-
----
-
-## Iteration Mode
-
-Use when: User has an existing skill but needs to add more context.
-
-### Step 1: Load Existing Skill
-
-Ask user to upload their existing skill (zip or folder), or locate it if already in the session.
-
-Read the current SKILL.md and reference files to understand what's already documented.
-
-### Step 2: Identify the Gap
-
-Ask: "What domain or topic needs more context? What queries are failing or producing wrong results?"
-
-Common gaps:
-- A new data domain (marketing, finance, product, etc.)
-- Missing metric definitions
-- Undocumented table relationships
-- New terminology
-
-### Step 3: Targeted Discovery
-
-For the identified domain:
-
-1. **Explore relevant tables**: Use `~~data warehouse` schema tools to find tables in that domain
-2. **Ask domain-specific questions**:
-   - "What tables are used for [domain] analysis?"
-   - "What are the key metrics for [domain]?"
-   - "Any special filters or gotchas for [domain] data?"
-
-3. **Generate new reference file**: Create `references/[domain].md` using the domain template
-
-### Step 4: Update and Repackage
-
-1. Add the new reference file
-2. Update SKILL.md's "Knowledge Base Navigation" section to include the new domain
-3. Repackage the skill
-4. Present the updated skill to user
+1. 스킬 디렉토리에 모든 파일을 생성합니다
+2. zip 파일로 패키징합니다
+3. 캡처된 내용의 요약과 함께 사용자에게 제시합니다
 
 ---
 
-## Reference File Standards
+## 반복 모드
 
-Each reference file should include:
+사용 시점: 사용자가 기존 스킬을 보유하고 있지만 더 많은 컨텍스트를 추가해야 할 때.
 
-### For Table Documentation
-- **Location**: Full table path
-- **Description**: What this table contains, when to use it
-- **Primary Key**: How to uniquely identify rows
-- **Update Frequency**: How often data refreshes
-- **Key Columns**: Table with column name, type, description, notes
-- **Relationships**: How this table joins to others
-- **Sample Queries**: 2-3 common query patterns
+### 단계 1: 기존 스킬 로드
 
-### For Metrics Documentation
-- **Metric Name**: Human-readable name
-- **Definition**: Plain English explanation
-- **Formula**: Exact calculation with column references
-- **Source Table(s)**: Where the data comes from
-- **Caveats**: Edge cases, exclusions, gotchas
+사용자에게 기존 스킬(zip 또는 폴더)을 업로드하도록 요청하거나, 세션에 이미 있는 경우 찾습니다.
 
-### For Entity Documentation
-- **Entity Name**: What it's called
-- **Definition**: What it represents in the business
-- **Primary Table**: Where to find this entity
-- **ID Field(s)**: How to identify it
-- **Relationships**: How it relates to other entities
-- **Common Filters**: Standard exclusions (internal, test, etc.)
+현재 SKILL.md와 참조 파일을 읽어 이미 문서화된 내용을 파악합니다.
+
+### 단계 2: 갭 식별
+
+질문: "어떤 도메인이나 주제에 더 많은 컨텍스트가 필요한가요? 어떤 쿼리가 실패하거나 잘못된 결과를 내고 있나요?"
+
+일반적인 갭:
+- 새로운 데이터 도메인 (마케팅, 재무, 제품 등)
+- 누락된 지표 정의
+- 문서화되지 않은 테이블 관계
+- 새로운 용어
+
+### 단계 3: 타겟 탐색
+
+식별된 도메인에 대해:
+
+1. **관련 테이블 탐색**: `~~data warehouse` 스키마 도구를 사용하여 해당 도메인의 테이블을 찾습니다
+2. **도메인별 질문**:
+   - "[도메인] 분석에 사용되는 테이블은 무엇인가요?"
+   - "[도메인]의 핵심 지표는 무엇인가요?"
+   - "[도메인] 데이터에 특별한 필터나 함정이 있나요?"
+
+3. **새 참조 파일 생성**: 도메인 템플릿을 사용하여 `references/[domain].md`를 생성합니다
+
+### 단계 4: 업데이트 및 재패키징
+
+1. 새 참조 파일을 추가합니다
+2. SKILL.md의 "지식 베이스 탐색" 섹션을 업데이트하여 새 도메인을 포함합니다
+3. 스킬을 재패키징합니다
+4. 업데이트된 스킬을 사용자에게 제시합니다
 
 ---
 
-## Quality Checklist
+## 참조 파일 표준
 
-Before delivering a generated skill, verify:
+각 참조 파일에는 다음이 포함되어야 합니다:
 
-- [ ] SKILL.md has complete frontmatter (name, description)
-- [ ] Entity disambiguation section is clear
-- [ ] Key terminology is defined
-- [ ] Standard filters/exclusions are documented
-- [ ] At least 2-3 sample queries per domain
-- [ ] SQL uses correct dialect syntax
-- [ ] Reference files are linked from SKILL.md navigation section
+### 테이블 문서화
+- **위치**: 전체 테이블 경로
+- **설명**: 이 테이블에 포함된 내용, 사용 시점
+- **기본 키**: 행을 고유하게 식별하는 방법
+- **업데이트 빈도**: 데이터 갱신 주기
+- **주요 컬럼**: 컬럼명, 유형, 설명, 참고사항이 포함된 테이블
+- **관계**: 다른 테이블과의 조인 방법
+- **샘플 쿼리**: 2-3개의 일반적인 쿼리 패턴
+
+### 지표 문서화
+- **지표명**: 사람이 읽을 수 있는 이름
+- **정의**: 평이한 언어로의 설명
+- **공식**: 컬럼 참조가 포함된 정확한 계산식
+- **소스 테이블**: 데이터 출처
+- **주의사항**: 엣지 케이스, 제외사항, 함정
+
+### 엔티티 문서화
+- **엔티티명**: 호칭
+- **정의**: 비즈니스에서 의미하는 바
+- **주요 테이블**: 이 엔티티를 찾을 수 있는 테이블
+- **ID 필드**: 식별 방법
+- **관계**: 다른 엔티티와의 관계
+- **일반 필터**: 표준 제외사항 (내부, 테스트 등)
+
+---
+
+## 품질 체크리스트
+
+생성된 스킬을 전달하기 전에 확인합니다:
+
+- [ ] SKILL.md에 완전한 프론트매터가 있음 (name, description)
+- [ ] 엔티티 구분 섹션이 명확함
+- [ ] 주요 용어가 정의되어 있음
+- [ ] 표준 필터/제외사항이 문서화되어 있음
+- [ ] 도메인당 최소 2-3개의 샘플 쿼리가 있음
+- [ ] SQL이 올바른 방언 구문을 사용함
+- [ ] 참조 파일이 SKILL.md 탐색 섹션에서 링크되어 있음

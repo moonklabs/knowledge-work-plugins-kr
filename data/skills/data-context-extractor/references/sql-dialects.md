@@ -1,26 +1,26 @@
-# SQL Dialect Reference
+# SQL 방언 참조
 
-Include the appropriate section in generated skills based on the user's data warehouse.
+사용자의 데이터 웨어하우스에 따라 생성된 스킬에 적절한 섹션을 포함합니다.
 
 ---
 
 ## BigQuery
 
 ```markdown
-## SQL Dialect: BigQuery
+## SQL 방언: BigQuery
 
-- **Table references**: Use backticks: \`project.dataset.table\`
-- **Safe division**: `SAFE_DIVIDE(a, b)` returns NULL instead of error
-- **Date functions**:
+- **테이블 참조**: 백틱 사용: \`project.dataset.table\`
+- **안전한 나눗셈**: `SAFE_DIVIDE(a, b)` - 오류 대신 NULL 반환
+- **날짜 함수**:
   - `DATE_TRUNC(date_col, MONTH)`
   - `DATE_SUB(date_col, INTERVAL 1 DAY)`
   - `DATE_DIFF(end_date, start_date, DAY)`
-- **Column exclusion**: `SELECT * EXCEPT(column_to_exclude)`
-- **Arrays**: `UNNEST(array_column)` to flatten
-- **Structs**: Access with dot notation `struct_col.field_name`
-- **Timestamps**: `TIMESTAMP_TRUNC()`, times in UTC by default
-- **String matching**: `LIKE`, `REGEXP_CONTAINS(col, r'pattern')`
-- **NULLs in aggregations**: Most functions ignore NULLs; use `IFNULL()` or `COALESCE()`
+- **컬럼 제외**: `SELECT * EXCEPT(column_to_exclude)`
+- **배열**: `UNNEST(array_column)`으로 펼침
+- **구조체**: 점 표기법으로 접근 `struct_col.field_name`
+- **타임스탬프**: `TIMESTAMP_TRUNC()`, 기본적으로 UTC
+- **문자열 매칭**: `LIKE`, `REGEXP_CONTAINS(col, r'pattern')`
+- **집계에서의 NULL**: 대부분의 함수는 NULL을 무시; `IFNULL()` 또는 `COALESCE()` 사용
 ```
 
 ---
@@ -28,20 +28,20 @@ Include the appropriate section in generated skills based on the user's data war
 ## Snowflake
 
 ```markdown
-## SQL Dialect: Snowflake
+## SQL 방언: Snowflake
 
-- **Table references**: `DATABASE.SCHEMA.TABLE` or with quotes for case-sensitive: `"Column_Name"`
-- **Safe division**: `DIV0(a, b)` returns 0, `DIV0NULL(a, b)` returns NULL
-- **Date functions**:
+- **테이블 참조**: `DATABASE.SCHEMA.TABLE` 또는 대소문자 구분 시 따옴표 사용: `"Column_Name"`
+- **안전한 나눗셈**: `DIV0(a, b)`는 0 반환, `DIV0NULL(a, b)`는 NULL 반환
+- **날짜 함수**:
   - `DATE_TRUNC('MONTH', date_col)`
   - `DATEADD(DAY, -1, date_col)`
   - `DATEDIFF(DAY, start_date, end_date)`
-- **Column exclusion**: `SELECT * EXCLUDE (column_to_exclude)`
-- **Arrays**: `FLATTEN(array_column)` to flatten, access with `value`
-- **Variants/JSON**: Access with colon notation `variant_col:field_name`
-- **Timestamps**: `TIMESTAMP_NTZ` (no timezone), `TIMESTAMP_TZ` (with timezone)
-- **String matching**: `LIKE`, `REGEXP_LIKE(col, 'pattern')`
-- **Case sensitivity**: Identifiers are uppercase by default unless quoted
+- **컬럼 제외**: `SELECT * EXCLUDE (column_to_exclude)`
+- **배열**: `FLATTEN(array_column)`으로 펼침, `value`로 접근
+- **Variant/JSON**: 콜론 표기법으로 접근 `variant_col:field_name`
+- **타임스탬프**: `TIMESTAMP_NTZ` (시간대 없음), `TIMESTAMP_TZ` (시간대 포함)
+- **문자열 매칭**: `LIKE`, `REGEXP_LIKE(col, 'pattern')`
+- **대소문자 구분**: 식별자는 따옴표 없이는 기본적으로 대문자
 ```
 
 ---
@@ -49,20 +49,20 @@ Include the appropriate section in generated skills based on the user's data war
 ## PostgreSQL / Redshift
 
 ```markdown
-## SQL Dialect: PostgreSQL/Redshift
+## SQL 방언: PostgreSQL/Redshift
 
-- **Table references**: `schema.table` (lowercase convention)
-- **Safe division**: `NULLIF(b, 0)` pattern: `a / NULLIF(b, 0)`
-- **Date functions**:
+- **테이블 참조**: `schema.table` (소문자 관례)
+- **안전한 나눗셈**: `NULLIF(b, 0)` 패턴: `a / NULLIF(b, 0)`
+- **날짜 함수**:
   - `DATE_TRUNC('month', date_col)`
   - `date_col - INTERVAL '1 day'`
   - `DATE_PART('day', end_date - start_date)`
-- **Column selection**: No EXCEPT; must list columns explicitly
-- **Arrays**: `UNNEST(array_column)` (PostgreSQL), limited in Redshift
-- **JSON**: `json_col->>'field_name'` for text, `json_col->'field_name'` for JSON
-- **Timestamps**: `AT TIME ZONE 'UTC'` for timezone conversion
-- **String matching**: `LIKE`, `col ~ 'pattern'` for regex
-- **Boolean**: Native BOOLEAN type; use `TRUE`/`FALSE`
+- **컬럼 선택**: EXCEPT 없음; 컬럼을 명시적으로 나열해야 함
+- **배열**: `UNNEST(array_column)` (PostgreSQL), Redshift에서는 제한적
+- **JSON**: `json_col->>'field_name'` (텍스트), `json_col->'field_name'` (JSON)
+- **타임스탬프**: 시간대 변환 시 `AT TIME ZONE 'UTC'`
+- **문자열 매칭**: `LIKE`, 정규식 `col ~ 'pattern'`
+- **불리언**: 네이티브 BOOLEAN 타입; `TRUE`/`FALSE` 사용
 ```
 
 ---
@@ -70,20 +70,20 @@ Include the appropriate section in generated skills based on the user's data war
 ## Databricks / Spark SQL
 
 ```markdown
-## SQL Dialect: Databricks/Spark SQL
+## SQL 방언: Databricks/Spark SQL
 
-- **Table references**: `catalog.schema.table` (Unity Catalog) or `schema.table`
-- **Safe division**: Use `NULLIF`: `a / NULLIF(b, 0)` or `TRY_DIVIDE(a, b)`
-- **Date functions**:
+- **테이블 참조**: `catalog.schema.table` (Unity Catalog) 또는 `schema.table`
+- **안전한 나눗셈**: `NULLIF` 사용: `a / NULLIF(b, 0)` 또는 `TRY_DIVIDE(a, b)`
+- **날짜 함수**:
   - `DATE_TRUNC('MONTH', date_col)`
   - `DATE_SUB(date_col, 1)`
   - `DATEDIFF(end_date, start_date)`
-- **Column exclusion**: `SELECT * EXCEPT (column_to_exclude)` (Databricks SQL)
-- **Arrays**: `EXPLODE(array_column)` to flatten
-- **Structs**: Access with dot notation `struct_col.field_name`
-- **JSON**: `json_col:field_name` or `GET_JSON_OBJECT()`
-- **String matching**: `LIKE`, `RLIKE` for regex
-- **Delta features**: `DESCRIBE HISTORY`, time travel with `VERSION AS OF`
+- **컬럼 제외**: `SELECT * EXCEPT (column_to_exclude)` (Databricks SQL)
+- **배열**: `EXPLODE(array_column)`으로 펼침
+- **구조체**: 점 표기법으로 접근 `struct_col.field_name`
+- **JSON**: `json_col:field_name` 또는 `GET_JSON_OBJECT()`
+- **문자열 매칭**: `LIKE`, 정규식 `RLIKE`
+- **Delta 기능**: `DESCRIBE HISTORY`, `VERSION AS OF`를 사용한 타임 트래블
 ```
 
 ---
@@ -91,31 +91,31 @@ Include the appropriate section in generated skills based on the user's data war
 ## MySQL
 
 ```markdown
-## SQL Dialect: MySQL
+## SQL 방언: MySQL
 
-- **Table references**: \`database\`.\`table\` with backticks
-- **Safe division**: Manual: `IF(b = 0, NULL, a / b)` or `a / NULLIF(b, 0)`
-- **Date functions**:
-  - `DATE_FORMAT(date_col, '%Y-%m-01')` for truncation
+- **테이블 참조**: 백틱 사용 \`database\`.\`table\`
+- **안전한 나눗셈**: 수동: `IF(b = 0, NULL, a / b)` 또는 `a / NULLIF(b, 0)`
+- **날짜 함수**:
+  - `DATE_FORMAT(date_col, '%Y-%m-01')` (절삭용)
   - `DATE_SUB(date_col, INTERVAL 1 DAY)`
   - `DATEDIFF(end_date, start_date)`
-- **Column selection**: No EXCEPT; must list columns explicitly
-- **Arrays**: Limited native support; often stored as JSON
-- **JSON**: `JSON_EXTRACT(col, '$.field')` or `col->>'$.field'`
-- **Timestamps**: `CONVERT_TZ()` for timezone conversion
-- **String matching**: `LIKE`, `REGEXP` for regex
-- **Case sensitivity**: Table names case-sensitive on Linux, not on Windows
+- **컬럼 선택**: EXCEPT 없음; 컬럼을 명시적으로 나열해야 함
+- **배열**: 네이티브 지원 제한적; JSON으로 저장되는 경우가 많음
+- **JSON**: `JSON_EXTRACT(col, '$.field')` 또는 `col->>'$.field'`
+- **타임스탬프**: 시간대 변환 시 `CONVERT_TZ()`
+- **문자열 매칭**: `LIKE`, 정규식 `REGEXP`
+- **대소문자 구분**: 테이블명은 Linux에서 대소문자 구분, Windows에서는 구분하지 않음
 ```
 
 ---
 
-## Common Patterns Across Dialects
+## 방언 간 공통 패턴
 
-| Operation | BigQuery | Snowflake | PostgreSQL | Databricks |
-|-----------|----------|-----------|------------|------------|
-| Current date | `CURRENT_DATE()` | `CURRENT_DATE()` | `CURRENT_DATE` | `CURRENT_DATE()` |
-| Current timestamp | `CURRENT_TIMESTAMP()` | `CURRENT_TIMESTAMP()` | `NOW()` | `CURRENT_TIMESTAMP()` |
-| String concat | `CONCAT()` or `\|\|` | `CONCAT()` or `\|\|` | `CONCAT()` or `\|\|` | `CONCAT()` or `\|\|` |
+| 연산 | BigQuery | Snowflake | PostgreSQL | Databricks |
+|------|----------|-----------|------------|------------|
+| 현재 날짜 | `CURRENT_DATE()` | `CURRENT_DATE()` | `CURRENT_DATE` | `CURRENT_DATE()` |
+| 현재 타임스탬프 | `CURRENT_TIMESTAMP()` | `CURRENT_TIMESTAMP()` | `NOW()` | `CURRENT_TIMESTAMP()` |
+| 문자열 연결 | `CONCAT()` 또는 `\|\|` | `CONCAT()` 또는 `\|\|` | `CONCAT()` 또는 `\|\|` | `CONCAT()` 또는 `\|\|` |
 | Coalesce | `COALESCE()` | `COALESCE()` | `COALESCE()` | `COALESCE()` |
 | Case when | `CASE WHEN` | `CASE WHEN` | `CASE WHEN` | `CASE WHEN` |
-| Count distinct | `COUNT(DISTINCT x)` | `COUNT(DISTINCT x)` | `COUNT(DISTINCT x)` | `COUNT(DISTINCT x)` |
+| 고유값 카운트 | `COUNT(DISTINCT x)` | `COUNT(DISTINCT x)` | `COUNT(DISTINCT x)` | `COUNT(DISTINCT x)` |

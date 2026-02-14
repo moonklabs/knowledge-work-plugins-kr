@@ -1,90 +1,90 @@
 ---
-description: Generate a stakeholder update tailored to audience and cadence
-argument-hint: "<update type and audience>"
+description: 대상과 주기에 맞춘 이해관계자 업데이트를 생성합니다
+argument-hint: "<업데이트 유형 및 대상>"
 ---
 
-# Stakeholder Update
+# 이해관계자 업데이트
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 참조하세요.
 
-Generate a stakeholder update tailored to the audience and cadence.
+대상과 주기에 맞춘 이해관계자 업데이트를 생성합니다.
 
-## Workflow
+## 워크플로우
 
-### 1. Determine Update Type
+### 1. 업데이트 유형 확인
 
-Ask the user what kind of update:
-- **Weekly**: Regular cadence update on progress, blockers, and next steps
-- **Monthly**: Higher-level summary with trends, milestones, and strategic alignment
-- **Launch**: Announcement of a feature or product launch with details and impact
-- **Ad-hoc**: One-off update for a specific situation (escalation, pivot, major decision)
+사용자에게 어떤 종류의 업데이트인지 확인합니다:
+- **주간**: 진행 상황, 차단 요인, 다음 단계에 대한 정기 업데이트
+- **월간**: 추세, 마일스톤, 전략적 정렬에 대한 상위 수준 요약
+- **출시**: 기능 또는 제품 출시에 대한 세부 사항과 영향을 포함한 발표
+- **비정기**: 특정 상황에 대한 일회성 업데이트 (에스컬레이션, 방향 전환, 주요 의사결정)
 
-### 2. Determine Audience
+### 2. 대상 확인
 
-Ask who the update is for:
-- **Executives / leadership**: High-level, outcome-focused, strategic framing, brief
-- **Engineering team**: Technical detail, implementation context, blockers, decisions needed
-- **Cross-functional partners**: Context-appropriate detail, focus on shared goals and dependencies
-- **Customers / external**: Benefits-focused, clear timelines, no internal jargon
-- **Board**: Metrics-driven, strategic, risk-focused, very concise
+업데이트 대상이 누구인지 확인합니다:
+- **경영진 / 리더십**: 상위 수준, 성과 중심, 전략적 프레이밍, 간결
+- **엔지니어링 팀**: 기술적 세부 사항, 구현 맥락, 차단 요인, 필요한 의사결정
+- **교차 기능 파트너**: 맥락에 적합한 세부 수준, 공유 목표와 의존성 중심
+- **고객 / 외부**: 혜택 중심, 명확한 일정, 내부 전문 용어 배제
+- **이사회**: 지표 기반, 전략적, 리스크 중심, 매우 간결
 
-### 3. Pull Context from Connected Tools
+### 3. 연결된 도구에서 컨텍스트 가져오기
 
-If **~~project tracker** is connected:
-- Pull status of roadmap items and milestones
-- Identify completed items since last update
-- Surface items that are at risk or blocked
-- Pull sprint or iteration progress
+**~~project tracker**가 연결된 경우:
+- 로드맵 항목 및 마일스톤의 상태를 가져옵니다
+- 지난 업데이트 이후 완료된 항목을 식별합니다
+- 위험 또는 차단 상태인 항목을 파악합니다
+- 스프린트 또는 이터레이션 진행 상황을 가져옵니다
 
-If **~~chat** is connected:
-- Search for relevant team discussions and decisions
-- Find blockers or issues raised in channels
-- Identify key decisions made asynchronously
+**~~chat**이 연결된 경우:
+- 관련 팀 논의 및 의사결정을 검색합니다
+- 채널에서 제기된 차단 요인이나 이슈를 찾습니다
+- 비동기적으로 이루어진 주요 의사결정을 식별합니다
 
-If **~~meeting transcription** is connected:
-- Pull recent meeting notes and discussion summaries
-- Find decisions and action items from relevant meetings
+**~~meeting transcription**이 연결된 경우:
+- 최근 회의록 및 논의 요약을 가져옵니다
+- 관련 회의의 의사결정과 액션 아이템을 찾습니다
 
-If **~~knowledge base** is connected:
-- Search for recent meeting notes
-- Find decision documents or design reviews
+**~~knowledge base**가 연결된 경우:
+- 최근 회의록을 검색합니다
+- 의사결정 문서 또는 디자인 리뷰를 찾습니다
 
-If no tools are connected, ask the user to provide:
-- What was accomplished since the last update
-- Current blockers or risks
-- Key decisions made or needed
-- What is coming next
+도구가 연결되지 않은 경우, 사용자에게 다음을 요청합니다:
+- 지난 업데이트 이후 달성한 성과
+- 현재 차단 요인 또는 리스크
+- 이루어졌거나 필요한 주요 의사결정
+- 다음에 예정된 사항
 
-### 4. Generate the Update
+### 4. 업데이트 생성
 
-Structure the update for the target audience. See the **stakeholder-comms** skill for detailed templates, G/Y/R status definitions, and the ROAM risk communication framework.
+대상에 맞게 업데이트를 구성합니다. 상세 템플릿, G/Y/R 상태 정의, ROAM 리스크 커뮤니케이션 프레임워크는 **stakeholder-comms** 스킬을 참조하세요.
 
-**For executives**: TL;DR, status color (G/Y/R), key progress tied to goals, decisions made, risks with mitigation, specific asks, and next milestones. Keep it under 300 words.
+**경영진용**: TL;DR, 상태 색상 (G/Y/R), 목표와 연계된 주요 진행 사항, 이루어진 의사결정, 대응 방안이 포함된 리스크, 구체적인 요청, 다음 마일스톤. 300단어 이내로 유지합니다.
 
-**For engineering**: What shipped (with links), what is in progress (with owners), blockers, decisions needed (with options and recommendation), and what is coming next.
+**엔지니어링용**: 배포된 사항 (링크 포함), 진행 중인 사항 (담당자 포함), 차단 요인, 필요한 의사결정 (옵션 및 권장안 포함), 다음 예정 사항.
 
-**For cross-functional partners**: What is coming that affects them, what you need from them (with deadlines), decisions that impact their team, and areas open for input.
+**교차 기능 파트너용**: 해당 팀에 영향을 주는 예정 사항, 요청 사항 (기한 포함), 해당 팀에 영향을 주는 의사결정, 의견을 받고 싶은 영역.
 
-**For customers**: What is new (framed as benefits), what is coming soon, known issues with workarounds, and how to provide feedback. No internal jargon.
+**고객용**: 새로운 사항 (혜택 관점으로 프레이밍), 곧 출시될 사항, 해결 방법이 있는 알려진 이슈, 피드백 제공 방법. 내부 전문 용어 없이 작성합니다.
 
-**For launch announcements**: What launched, why it matters, key details (scope, availability, limitations), success metrics, rollout plan, and feedback channels.
+**출시 발표용**: 출시된 기능, 중요한 이유, 핵심 세부 사항 (범위, 가용성, 제약), 성공 지표, 롤아웃 계획, 피드백 채널.
 
-### 5. Review and Deliver
+### 5. 검토 및 전달
 
-After generating the update:
-- Ask if the user wants to adjust tone, detail level, or emphasis
-- Offer to format for the delivery channel (email, chat post, doc, slides)
-- If **~~chat** is connected, offer to draft the message for sending
+업데이트 생성 후:
+- 톤, 세부 수준, 또는 강조점을 조정하고 싶은지 확인합니다
+- 전달 채널에 맞는 형식 (이메일, 채팅 포스트, 문서, 슬라이드)을 제안합니다
+- **~~chat**이 연결된 경우, 발송용 메시지 초안 작성을 제안합니다
 
-## Output Format
+## 출력 형식
 
-Keep updates scannable. Use bold for key points, bullets for lists. Executive updates should be under 300 words. Engineering updates can be longer but should still be structured for skimming.
+훑어보기 쉬운 형식으로 업데이트를 유지합니다. 핵심 포인트에 볼드체를, 목록에 불릿을 사용합니다. 경영진 업데이트는 300단어 이내로 합니다. 엔지니어링 업데이트는 더 길어도 되지만 빠르게 훑어볼 수 있는 구조여야 합니다.
 
-## Tips
+## 팁
 
-- The most common mistake in stakeholder updates is burying the lead. Start with the most important thing.
-- Status colors (Green/Yellow/Red) should reflect reality, not optimism. Yellow is not a failure — it is good risk communication.
-- Asks should be specific and actionable. "We need help" is not an ask. "We need a decision on X by Friday" is.
-- For executives, frame everything in terms of outcomes and goals, not activities and tasks.
-- If there is bad news, lead with it. Do not hide it after good news.
-- Match the length to the audience's attention. Executives get a few bullets. Engineering gets the details they need.
+- 이해관계자 업데이트에서 가장 흔한 실수는 핵심을 늦게 전달하는 것입니다. 가장 중요한 것부터 시작합니다.
+- 상태 색상 (Green/Yellow/Red)은 희망이 아닌 현실을 반영해야 합니다. Yellow는 실패가 아니라 좋은 리스크 커뮤니케이션입니다.
+- 요청은 구체적이고 실행 가능해야 합니다. "도움이 필요합니다"는 요청이 아닙니다. "금요일까지 X에 대한 결정이 필요합니다"가 요청입니다.
+- 경영진에게는 활동과 작업이 아닌 성과와 목표 관점에서 프레이밍합니다.
+- 나쁜 소식이 있으면 먼저 전달합니다. 좋은 소식 뒤에 숨기지 않습니다.
+- 업데이트 분량은 대상의 주의 집중 시간에 맞춥니다. 경영진에게는 몇 개의 불릿 포인트를, 엔지니어링에게는 필요한 세부 사항을 제공합니다.

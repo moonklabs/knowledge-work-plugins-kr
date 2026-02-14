@@ -1,97 +1,97 @@
 ---
-description: Triage and prioritize a support ticket or customer issue
-argument-hint: "<ticket or issue description>"
+description: 지원 티켓 또는 고객 이슈를 분류하고 우선순위 지정
+argument-hint: "<티켓 또는 이슈 설명>"
 ---
 
-# Triage
+# 분류
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 참조하십시오.
 
-Categorize, prioritize, and route an incoming support ticket or customer issue. Produces a structured triage assessment with a suggested initial response.
+수신된 지원 티켓 또는 고객 이슈를 분류하고 우선순위를 지정하여 라우팅합니다. 제안된 초기 응답과 함께 구조화된 분류 평가를 생성합니다.
 
-## Usage
-
-```
-/triage <ticket text, customer message, or issue description>
-```
-
-Examples:
-- `/triage Customer says their dashboard has been showing a blank page since this morning`
-- `/triage "I was charged twice for my subscription this month"`
-- `/triage User can't connect their SSO — getting a 403 error on the callback URL`
-- `/triage Feature request: they want to export reports as PDF`
-
-## Workflow
-
-### 1. Parse the Issue
-
-Read the input and extract:
-
-- **Core problem**: What is the customer actually experiencing?
-- **Symptoms**: What specific behavior or error are they seeing?
-- **Customer context**: Who is this? Any account details, plan level, or history available?
-- **Urgency signals**: Are they blocked? Is this production? How many users affected?
-- **Emotional state**: Frustrated, confused, matter-of-fact, escalating?
-
-### 2. Categorize and Prioritize
-
-Using the category taxonomy and priority framework from the **ticket-triage** skill:
-
-- Assign a **primary category** (bug, how-to, feature request, billing, account, integration, security, data, performance) and an optional secondary category
-- Assign a **priority** (P1–P4) based on impact and urgency
-- Identify the **product area** the issue maps to
-
-### 3. Check for Duplicates and Known Issues
-
-Before routing, check available sources:
-
-- **~~support platform**: Search for similar open or recently resolved tickets
-- **~~knowledge base**: Check for known issues or existing documentation
-- **~~project tracker**: Check if there's an existing bug report or feature request
-
-### 4. Determine Routing
-
-Using the routing rules from the **ticket-triage** skill, recommend which team or queue should handle this based on category and complexity.
-
-### 5. Generate Triage Output
+## 사용법
 
 ```
-## Triage: [One-line issue summary]
-
-**Category:** [Primary] / [Secondary if applicable]
-**Priority:** [P1-P4] — [Brief justification]
-**Product area:** [Area/team]
-
-### Issue Summary
-[2-3 sentence summary of what the customer is experiencing]
-
-### Key Details
-- **Customer:** [Name/account if known]
-- **Impact:** [Who and what is affected]
-- **Workaround:** [Available / Not available / Unknown]
-- **Related tickets:** [Links to similar issues if found]
-- **Known issue:** [Yes — link / No / Checking]
-
-### Routing Recommendation
-**Route to:** [Team or queue]
-**Why:** [Brief reasoning]
-
-### Suggested Initial Response
-[Draft first response to the customer — acknowledge the issue,
-set expectations, provide workaround if available.
-Use the auto-response templates from the ticket-triage skill
-as a starting point.]
-
-### Internal Notes
-- [Any additional context for the agent picking this up]
-- [Reproduction hints if it's a bug]
-- [Escalation triggers to watch for]
+/triage <티켓 텍스트, 고객 메시지 또는 이슈 설명>
 ```
 
-### 6. Offer Next Steps
+예시:
+- `/triage 오늘 아침부터 대시보드가 빈 페이지로 표시된다는 고객의 메시지`
+- `/triage "이번 달 구독료가 두 번 청구되었습니다"`
+- `/triage 사용자가 SSO를 연결할 수 없음 — 콜백 URL에서 403 에러가 발생함`
+- `/triage 기능 요청: 리포트를 PDF로 내보내고 싶어 함`
 
-After presenting the triage:
-- "Want me to draft a full response to the customer?"
-- "Should I search for more context on this issue?"
-- "Want me to check if this is a known bug in the tracker?"
-- "Should I escalate this? I can package it with /escalate."
+## 워크플로우
+
+### 1. 이슈 분석
+
+입력을 읽고 다음을 추출합니다:
+
+- **핵심 문제**: 고객이 실제로 겪고 있는 것은 무엇인지
+- **증상**: 고객이 보고 있는 구체적인 동작 또는 오류
+- **고객 컨텍스트**: 누구인지, 계정 정보, 플랜 등급 또는 이력이 있는지
+- **긴급도 신호**: 차단 상태인지, 프로덕션 환경인지, 영향받는 사용자 수
+- **감정 상태**: 불만, 혼란, 사실적, 에스컬레이션 중
+
+### 2. 분류 및 우선순위 지정
+
+**ticket-triage** 스킬의 카테고리 분류 체계 및 우선순위 프레임워크를 사용합니다:
+
+- **주요 카테고리** (버그, 사용 방법, 기능 요청, 결제, 계정, 연동, 보안, 데이터, 성능) 및 선택적 보조 카테고리를 지정합니다
+- 영향도와 긴급도를 기반으로 **우선순위** (P1–P4)를 지정합니다
+- 이슈가 매핑되는 **제품 영역**을 식별합니다
+
+### 3. 중복 및 알려진 이슈 확인
+
+라우팅 전에 사용 가능한 소스를 확인합니다:
+
+- **~~support platform**: 유사한 미해결 또는 최근 해결된 티켓을 검색합니다
+- **~~knowledge base**: 알려진 이슈 또는 기존 문서를 확인합니다
+- **~~project tracker**: 기존 버그 리포트 또는 기능 요청이 있는지 확인합니다
+
+### 4. 라우팅 결정
+
+**ticket-triage** 스킬의 라우팅 규칙을 사용하여 카테고리와 복잡도에 따라 어떤 팀 또는 대기열이 처리해야 하는지 권장합니다.
+
+### 5. 분류 결과 생성
+
+```
+## 분류: [이슈 한줄 요약]
+
+**카테고리:** [주요] / [보조 (해당시)]
+**우선순위:** [P1-P4] — [간단한 근거]
+**제품 영역:** [영역/팀]
+
+### 이슈 요약
+[고객이 겪고 있는 문제에 대한 2-3문장 요약]
+
+### 주요 세부사항
+- **고객:** [이름/계정 (알고 있는 경우)]
+- **영향도:** [누구와 무엇이 영향을 받는지]
+- **해결 방법:** [있음 / 없음 / 알 수 없음]
+- **관련 티켓:** [발견된 유사 이슈 링크]
+- **알려진 이슈:** [예 — 링크 / 아니오 / 확인 중]
+
+### 라우팅 권장사항
+**전달 대상:** [팀 또는 대기열]
+**이유:** [간단한 근거]
+
+### 제안된 초기 응답
+[고객에게 보낼 첫 응답 초안 — 이슈를 인정하고,
+기대치를 설정하며, 가능한 경우 해결 방법을 제공합니다.
+ticket-triage 스킬의 자동 응답 템플릿을
+시작점으로 사용하십시오.]
+
+### 내부 메모
+- [담당자를 위한 추가 컨텍스트]
+- [버그인 경우 재현 힌트]
+- [주의해야 할 에스컬레이션 트리거]
+```
+
+### 6. 다음 단계 제안
+
+분류를 제시한 후:
+- "고객에게 보낼 전체 응답을 작성할까요?"
+- "이 이슈에 대한 추가 컨텍스트를 검색할까요?"
+- "이것이 트래커에 등록된 알려진 버그인지 확인할까요?"
+- "에스컬레이션할까요? /escalate로 패키징할 수 있습니다."

@@ -1,172 +1,172 @@
 ---
 name: source-management
-description: Manages connected MCP sources for enterprise search. Detects available sources, guides users to connect new ones, handles source priority ordering, and manages rate limiting awareness.
+description: 엔터프라이즈 검색을 위한 연결된 MCP 소스를 관리합니다. 사용 가능한 소스를 감지하고, 새 소스 연결을 안내하며, 소스 우선순위를 관리하고, 속도 제한을 인식하여 처리합니다.
 ---
 
-# Source Management
+# 소스 관리
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인하려면 [CONNECTORS.md](../../CONNECTORS.md)를 참조하세요.
 
-Knows what sources are available, helps connect new ones, and manages how sources are queried.
+사용 가능한 소스를 파악하고, 새 소스 연결을 돕고, 소스 쿼리 방식을 관리합니다.
 
-## Checking Available Sources
+## 사용 가능한 소스 확인
 
-Determine which MCP sources are connected by checking available tools. Each source corresponds to a set of MCP tools:
+사용 가능한 도구를 확인하여 연결된 MCP 소스를 판별합니다. 각 소스는 MCP 도구 세트에 해당합니다:
 
-| Source | Key capabilities |
-|--------|-----------------|
-| **~~chat** | Search messages, read channels and threads |
-| **~~email** | Search messages, read individual emails |
-| **~~cloud storage** | Search files, fetch document contents |
-| **~~project tracker** | Search tasks, typeahead search |
-| **~~CRM** | Query records (accounts, contacts, opportunities) |
-| **~~knowledge base** | Semantic search, keyword search |
+| 소스 | 주요 기능 |
+|------|----------|
+| **~~chat** | 메시지 검색, 채널 및 스레드 읽기 |
+| **~~email** | 메시지 검색, 개별 이메일 읽기 |
+| **~~cloud storage** | 파일 검색, 문서 콘텐츠 가져오기 |
+| **~~project tracker** | 작업 검색, 자동 완성 검색 |
+| **~~CRM** | 레코드 쿼리 (계정, 연락처, 기회) |
+| **~~knowledge base** | 시맨틱 검색, 키워드 검색 |
 
-If a tool prefix is available, the source is connected and searchable.
+도구 접두사를 사용할 수 있으면 해당 소스가 연결되어 있으며 검색 가능합니다.
 
-## Guiding Users to Connect Sources
+## 사용자의 소스 연결 안내
 
-When a user searches but has few or no sources connected:
-
-```
-You currently have [N] source(s) connected: [list].
-
-To expand your search, you can connect additional sources in your MCP settings:
-- ~~chat — messages, threads, channels
-- ~~email — emails, conversations, attachments
-- ~~cloud storage — docs, sheets, slides
-- ~~project tracker — tasks, projects, milestones
-- ~~CRM — accounts, contacts, opportunities
-- ~~knowledge base — wiki pages, knowledge base articles
-
-The more sources you connect, the more complete your search results.
-```
-
-When a user asks about a specific tool that is not connected:
+사용자가 검색하지만 소스가 거의 또는 전혀 연결되어 있지 않은 경우:
 
 ```
-[Tool name] isn't currently connected. To add it:
-1. Open your MCP settings
-2. Add the [tool] MCP server configuration
-3. Authenticate when prompted
+현재 연결된 소스 [N]개: [list].
 
-Once connected, it will be automatically included in future searches.
+검색을 확장하려면 MCP 설정에서 추가 소스를 연결할 수 있습니다:
+- ~~chat — 메시지, 스레드, 채널
+- ~~email — 이메일, 대화, 첨부 파일
+- ~~cloud storage — 문서, 시트, 슬라이드
+- ~~project tracker — 작업, 프로젝트, 마일스톤
+- ~~CRM — 계정, 연락처, 기회
+- ~~knowledge base — 위키 페이지, 지식 베이스 문서
+
+연결된 소스가 많을수록 검색 결과가 더 완전해집니다.
 ```
 
-## Source Priority Ordering
+사용자가 연결되지 않은 특정 도구에 대해 문의하는 경우:
 
-Different query types benefit from searching certain sources first. Use these priorities to weight results, not to skip sources:
-
-### By Query Type
-
-**Decision queries** ("What did we decide..."):
 ```
-1. ~~chat (conversations where decisions happen)
-2. ~~email (decision confirmations, announcements)
-3. ~~cloud storage (meeting notes, decision logs)
-4. Wiki (if decisions are documented)
-5. Task tracker (if decisions are captured in tasks)
+[Tool name]은(는) 현재 연결되어 있지 않습니다. 추가하려면:
+1. MCP 설정을 엽니다
+2. [tool] MCP 서버 구성을 추가합니다
+3. 메시지가 표시되면 인증합니다
+
+연결되면 향후 검색에 자동으로 포함됩니다.
 ```
 
-**Status queries** ("What's the status of..."):
-```
-1. Task tracker (~~project tracker — authoritative status)
-2. ~~chat (real-time discussion)
-3. ~~cloud storage (status docs, reports)
-4. ~~email (status update emails)
-5. Wiki (project pages)
-```
+## 소스 우선순위
 
-**Document queries** ("Where's the doc for..."):
+쿼리 유형에 따라 특정 소스를 먼저 검색하는 것이 유리합니다. 이 우선순위는 소스를 건너뛰는 것이 아니라 결과에 가중치를 부여하는 데 사용합니다:
+
+### 쿼리 유형별
+
+**의사결정 쿼리** ("무엇을 결정했나..."):
 ```
-1. ~~cloud storage (primary doc storage)
-2. Wiki / ~~knowledge base (knowledge base)
-3. ~~email (docs shared via email)
-4. ~~chat (docs shared in channels)
-5. Task tracker (docs linked to tasks)
+1. ~~chat (의사결정이 이루어지는 대화)
+2. ~~email (결정 확인, 공지)
+3. ~~cloud storage (회의록, 결정 로그)
+4. 위키 (결정이 문서화된 경우)
+5. 작업 트래커 (결정이 작업에 캡처된 경우)
 ```
 
-**People queries** ("Who works on..." / "Who knows about..."):
+**상태 쿼리** ("...의 상태는?"):
 ```
-1. ~~chat (message authors, channel members)
-2. Task tracker (task assignees)
-3. ~~cloud storage (doc authors, collaborators)
-4. ~~CRM (account owners, contacts)
-5. ~~email (email participants)
-```
-
-**Factual/Policy queries** ("What's our policy on..."):
-```
-1. Wiki / ~~knowledge base (official documentation)
-2. ~~cloud storage (policy docs, handbooks)
-3. ~~email (policy announcements)
-4. ~~chat (policy discussions)
+1. 작업 트래커 (~~project tracker — 권위 있는 상태)
+2. ~~chat (실시간 토론)
+3. ~~cloud storage (상태 문서, 보고서)
+4. ~~email (상태 업데이트 이메일)
+5. 위키 (프로젝트 페이지)
 ```
 
-### Default Priority (General Queries)
-
-When query type is unclear:
+**문서 쿼리** ("...에 대한 문서는 어디에?"):
 ```
-1. ~~chat (highest volume, most real-time)
-2. ~~email (formal communications)
-3. ~~cloud storage (documents and files)
-4. Wiki / ~~knowledge base (structured knowledge)
-5. Task tracker (work items)
-6. CRM (customer data)
+1. ~~cloud storage (기본 문서 저장소)
+2. 위키 / ~~knowledge base (지식 베이스)
+3. ~~email (이메일을 통해 공유된 문서)
+4. ~~chat (채널에 공유된 문서)
+5. 작업 트래커 (작업에 연결된 문서)
 ```
 
-## Rate Limiting Awareness
-
-MCP sources may have rate limits. Handle them gracefully:
-
-### Detection
-
-Rate limit responses typically appear as:
-- HTTP 429 responses
-- Error messages mentioning "rate limit", "too many requests", or "quota exceeded"
-- Throttled or delayed responses
-
-### Handling
-
-When a source is rate limited:
-
-1. **Do not retry immediately** — respect the limit
-2. **Continue with other sources** — do not block the entire search
-3. **Inform the user**:
+**사람 쿼리** ("누가 ...을 담당하나" / "누가 ...에 대해 아는가"):
 ```
-Note: [Source] is temporarily rate limited. Results below are from
-[other sources]. You can retry in a few minutes to include [source].
+1. ~~chat (메시지 작성자, 채널 멤버)
+2. 작업 트래커 (작업 담당자)
+3. ~~cloud storage (문서 작성자, 공동 작업자)
+4. ~~CRM (계정 소유자, 연락처)
+5. ~~email (이메일 참가자)
 ```
-4. **For digests** — if rate limited mid-scan, note which time range was covered before the limit hit
 
-### Prevention
+**사실/정책 쿼리** ("...에 대한 정책은?"):
+```
+1. 위키 / ~~knowledge base (공식 문서)
+2. ~~cloud storage (정책 문서, 핸드북)
+3. ~~email (정책 공지)
+4. ~~chat (정책 논의)
+```
 
-- Avoid unnecessary API calls — check if the source is likely to have relevant results before querying
-- Use targeted queries over broad scans when possible
-- For digests, batch requests where the API supports it
-- Cache awareness: if a search was just run, avoid re-running the same query immediately
+### 기본 우선순위 (일반 쿼리)
 
-## Source Health
+쿼리 유형이 불분명한 경우:
+```
+1. ~~chat (가장 많은 양, 가장 실시간)
+2. ~~email (공식 커뮤니케이션)
+3. ~~cloud storage (문서 및 파일)
+4. 위키 / ~~knowledge base (구조화된 지식)
+5. 작업 트래커 (작업 항목)
+6. CRM (고객 데이터)
+```
 
-Track source availability during a session:
+## 속도 제한 인식
+
+MCP 소스에 속도 제한이 있을 수 있습니다. 이를 우아하게 처리합니다:
+
+### 감지
+
+속도 제한 응답은 일반적으로 다음과 같이 나타납니다:
+- HTTP 429 응답
+- "rate limit", "too many requests" 또는 "quota exceeded"를 언급하는 오류 메시지
+- 스로틀링되거나 지연된 응답
+
+### 처리
+
+소스가 속도 제한에 걸린 경우:
+
+1. **즉시 재시도하지 않습니다** — 제한을 존중합니다
+2. **다른 소스를 계속 진행합니다** — 전체 검색을 차단하지 않습니다
+3. **사용자에게 알립니다**:
+```
+참고: [Source]가 일시적으로 속도 제한되었습니다. 아래 결과는
+[다른 소스]에서 가져온 것입니다. 몇 분 후에 재시도하여 [source]를 포함할 수 있습니다.
+```
+4. **다이제스트의 경우** — 속도 제한이 스캔 중간에 발생하면 제한 전까지 처리된 시간 범위를 기록합니다
+
+### 예방
+
+- 불필요한 API 호출을 피합니다 — 쿼리 전에 해당 소스가 관련 결과를 가질 가능성이 있는지 확인합니다
+- 가능한 경우 광범위한 스캔 대신 맞춤 쿼리를 사용합니다
+- 다이제스트의 경우, API가 지원하는 경우 요청을 일괄 처리합니다
+- 캐시 인식: 검색이 방금 실행된 경우 동일한 쿼리를 즉시 다시 실행하지 않습니다
+
+## 소스 상태
+
+세션 중 소스 가용성을 추적합니다:
 
 ```
 Source Status:
-  ~~chat:        ✓ Available
-  ~~email:        ✓ Available
-  ~~cloud storage:  ✓ Available
-  ~~project tracker:        ✗ Not connected
-  ~~CRM:   ✗ Not connected
-  ~~knowledge base:      ⚠ Rate limited (retry in 2 min)
+  ~~chat:        ✓ 사용 가능
+  ~~email:        ✓ 사용 가능
+  ~~cloud storage:  ✓ 사용 가능
+  ~~project tracker:        ✗ 연결되지 않음
+  ~~CRM:   ✗ 연결되지 않음
+  ~~knowledge base:      ⚠ 속도 제한됨 (2분 후 재시도)
 ```
 
-When reporting search results, include which sources were searched so the user knows the scope of the answer.
+검색 결과를 보고할 때 어떤 소스가 검색되었는지 포함하여 사용자가 답변의 범위를 알 수 있도록 합니다.
 
-## Adding Custom Sources
+## 사용자 정의 소스 추가
 
-The enterprise search plugin works with any MCP-connected source. As new MCP servers become available, they can be added to the `.mcp.json` configuration. The search and digest commands will automatically detect and include new sources based on available tools.
+엔터프라이즈 검색 플러그인은 MCP에 연결된 모든 소스에서 작동합니다. 새로운 MCP 서버가 사용 가능해지면 `.mcp.json` 구성에 추가할 수 있습니다. search 및 digest 커맨드는 사용 가능한 도구를 기반으로 새 소스를 자동으로 감지하고 포함합니다.
 
-To add a new source:
-1. Add the MCP server configuration to `.mcp.json`
-2. Authenticate if required
-3. The source will be included in subsequent searches automatically
+새 소스를 추가하려면:
+1. `.mcp.json`에 MCP 서버 구성을 추가합니다
+2. 필요한 경우 인증합니다
+3. 이후 검색에 해당 소스가 자동으로 포함됩니다

@@ -1,7 +1,7 @@
 {
   "name": "customer-support",
   "version": "1.0.0",
-  "description": "Triage tickets, draft responses, escalate issues, and build your knowledge base. Research customer context and turn resolved issues into self-service content.",
+  "description": "티켓 분류, 응답 초안 작성, 이슈 에스컬레이션, 지식 베이스 구축을 지원합니다. 고객 컨텍스트를 조사하고 해결된 이슈를 셀프 서비스 콘텐츠로 전환합니다.",
   "author": {
     "name": "Anthropic"
   }

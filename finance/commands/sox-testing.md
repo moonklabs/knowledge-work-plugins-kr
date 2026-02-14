@@ -1,217 +1,217 @@
 ---
-description: Generate SOX sample selections, testing workpapers, and control assessments
-argument-hint: "<control area> [period]"
+description: SOX 표본 선정, 테스트 조서 및 통제 평가를 생성합니다
+argument-hint: "<통제 영역> [기간]"
 ---
 
-# SOX Compliance Testing
+# SOX 컴플라이언스 테스트
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인해야 하는 경우, [CONNECTORS.md](../CONNECTORS.md)를 참조하십시오.
 
-**Important**: This command assists with SOX compliance workflows but does not provide audit or legal advice. All testing workpapers and assessments should be reviewed by qualified financial professionals before use in audit documentation.
+**중요**: 이 커맨드는 SOX 컴플라이언스 워크플로우를 지원하지만 감사 또는 법률 자문을 제공하지는 않습니다. 모든 테스트 조서 및 평가는 감사 문서에 사용하기 전에 자격을 갖춘 재무 전문가의 검토를 받아야 합니다.
 
-Generate sample selections, create testing workpapers, document control assessments, and provide testing templates for SOX 404 internal controls over financial reporting.
+표본 선정, 테스트 조서 작성, 통제 평가 문서화를 수행하고, SOX 404 재무보고에 대한 내부통제 테스트 템플릿을 제공합니다.
 
-## Usage
+## 사용법
 
 ```
 /sox <control-area> <period>
 ```
 
-### Arguments
+### 인수
 
-- `control-area` — The control area to test:
-  - `revenue-recognition` — Revenue cycle controls (order-to-cash)
-  - `procure-to-pay` or `p2p` — Procurement and AP controls (purchase-to-pay)
-  - `payroll` — Payroll processing and compensation controls
-  - `financial-close` — Period-end close and reporting controls
-  - `treasury` — Cash management and treasury controls
-  - `fixed-assets` — Capital asset lifecycle controls
-  - `inventory` — Inventory valuation and management controls
-  - `itgc` — IT general controls (access, change management, operations)
-  - `entity-level` — Entity-level and monitoring controls
-  - `journal-entries` — Journal entry processing controls
-  - Any specific control ID or name
-- `period` — The testing period (e.g., `2024-Q4`, `2024`, `2024-H2`)
+- `control-area` — 테스트할 통제 영역:
+  - `revenue-recognition` — 수익 사이클 통제 (주문-입금)
+  - `procure-to-pay` 또는 `p2p` — 조달 및 매입채무 통제 (구매-지급)
+  - `payroll` — 급여 처리 및 보상 통제
+  - `financial-close` — 기말 마감 및 보고 통제
+  - `treasury` — 현금 관리 및 자금 통제
+  - `fixed-assets` — 자본 자산 수명주기 통제
+  - `inventory` — 재고 평가 및 관리 통제
+  - `itgc` — IT 일반 통제 (접근, 변경 관리, 운영)
+  - `entity-level` — 전사 수준 및 모니터링 통제
+  - `journal-entries` — 분개 처리 통제
+  - 특정 통제 ID 또는 명칭
+- `period` — 테스트 기간 (예: `2024-Q4`, `2024`, `2024-H2`)
 
-## Workflow
+## 워크플로우
 
-### 1. Identify Controls to Test
+### 1. 테스트 대상 통제 식별
 
-Based on the control area, identify the key controls. Present the control matrix:
+통제 영역에 따라 핵심 통제를 식별합니다. 통제 매트릭스를 표시합니다:
 
-| Control # | Control Description | Type | Frequency | Key/Non-Key | Risk | Assertion |
-|-----------|-------------------|------|-----------|-------------|------|-----------|
-| [ID]      | [Description]     | Manual/Automated/IT-Dependent | Daily/Weekly/Monthly/Quarterly/Annual | Key | High/Medium/Low | [CEAVOP] |
+| 통제 # | 통제 설명 | 유형 | 빈도 | 핵심/비핵심 | 위험 | 주장(Assertion) |
+|--------|----------|------|------|------------|------|----------------|
+| [ID] | [설명] | 수동/자동/IT 의존 수동 | 일별/주별/월별/분기별/연간 | 핵심 | 높음/보통/낮음 | [CEAVOP] |
 
-**Control types:**
-- **Automated:** System-enforced controls with no manual intervention
-- **Manual:** Controls performed by personnel with judgment
-- **IT-dependent manual:** Manual controls that rely on system-generated data
+**통제 유형:**
+- **자동(Automated):** 수동 개입 없이 시스템이 강제하는 통제
+- **수동(Manual):** 담당자의 판단이 필요한 통제
+- **IT 의존 수동(IT-dependent manual):** 시스템 생성 데이터에 의존하는 수동 통제
 
-**Assertions (CEAVOP):**
-- **C**ompleteness — All transactions are recorded
-- **E**xistence/Occurrence — Transactions actually occurred
-- **A**ccuracy — Amounts are correctly recorded
-- **V**aluation — Assets/liabilities are properly valued
-- **O**bligations/Rights — Entity has rights to assets, obligations for liabilities
-- **P**resentation/Disclosure — Properly classified and disclosed
+**주장(Assertions, CEAVOP):**
+- **C**(Completeness, 완전성) — 모든 거래가 기록됨
+- **E**(Existence/Occurrence, 실재성/발생) — 거래가 실제로 발생함
+- **A**(Accuracy, 정확성) — 금액이 올바르게 기록됨
+- **V**(Valuation, 평가) — 자산/부채가 적절하게 평가됨
+- **O**(Obligations/Rights, 권리와 의무) — 자산에 대한 권리, 부채에 대한 의무를 보유함
+- **P**(Presentation/Disclosure, 표시/공시) — 적절하게 분류 및 공시됨
 
-### 2. Determine Sample Size
+### 2. 표본 크기 결정
 
-Calculate sample sizes based on control frequency and risk:
+통제 빈도 및 위험에 따라 표본 크기를 계산합니다:
 
-| Control Frequency | Population Size (approx.) | Recommended Sample |
-|------------------|--------------------------|-------------------|
-| Annual           | 1                        | 1 (test the instance) |
-| Quarterly        | 4                        | 2 |
-| Monthly          | 12                       | 2-4 (based on risk) |
-| Weekly           | 52                       | 5-15 (based on risk) |
-| Daily            | ~250                     | 20-40 (based on risk) |
-| Per-transaction  | Varies                   | 25-60 (based on risk and volume) |
+| 통제 빈도 | 모집단 크기 (대략) | 권장 표본 수 |
+|-----------|-------------------|-------------|
+| 연간 | 1 | 1 (해당 건 테스트) |
+| 분기별 | 4 | 2 |
+| 월별 | 12 | 2-4 (위험 기반) |
+| 주별 | 52 | 5-15 (위험 기반) |
+| 일별 | ~250 | 20-40 (위험 기반) |
+| 거래별 | 상이 | 25-60 (위험 및 거래량 기반) |
 
-Adjust for:
-- **Risk level:** Higher risk controls require larger samples
-- **Prior year results:** Controls with prior deficiencies need larger samples
-- **Reliance:** Controls relied upon by external auditors may need larger samples
+다음 요소를 고려하여 조정합니다:
+- **위험 수준:** 위험이 높은 통제는 더 큰 표본이 필요합니다
+- **전년도 결과:** 전기에 결함이 발견된 통제는 더 큰 표본이 필요합니다
+- **의존 관계:** 외부 감사인이 의존하는 통제는 더 큰 표본이 필요할 수 있습니다
 
-### 3. Generate Sample Selection
+### 3. 표본 선정 생성
 
-Select samples from the population using the appropriate method:
+적절한 방법을 사용하여 모집단에서 표본을 선정합니다:
 
-**Random selection** (default for transaction-level controls):
-- Generate random numbers to select specific items from the population
-- Ensure coverage across the full period
+**무작위 추출** (거래 수준 통제의 기본값):
+- 난수를 생성하여 모집단에서 특정 항목을 선정합니다
+- 전체 기간에 걸쳐 고르게 선정되도록 합니다
 
-**Systematic selection** (for periodic controls):
-- Select items at fixed intervals with a random start point
-- Ensure representation across all sub-periods
+**체계적 추출** (주기적 통제용):
+- 무작위 시작점에서 일정 간격으로 항목을 선정합니다
+- 모든 하위 기간에 걸쳐 대표성을 확보합니다
 
-**Targeted selection** (supplement to random, for risk-based testing):
-- Select items with specific risk characteristics (high dollar, unusual, period-end)
-- Document rationale for targeted selections
+**목적 추출** (무작위 추출의 보완, 위험 기반 테스트용):
+- 특정 위험 특성이 있는 항목을 선정합니다 (고액, 비정상, 기말)
+- 목적 추출의 근거를 문서화합니다
 
-Present the sample:
-
-```
-SAMPLE SELECTION
-Control: [Control ID] — [Description]
-Period: [Testing period]
-Population: [Count] items, $[Total value]
-Sample size: [N] items
-Selection method: [Random/Systematic/Targeted]
-
-| Sample # | Transaction Date | Reference/ID | Amount | Selection Basis |
-|----------|-----------------|--------------|--------|-----------------|
-| 1        | [Date]          | [Ref]        | $X,XXX | Random          |
-| 2        | [Date]          | [Ref]        | $X,XXX | Random          |
-| ...      | ...             | ...          | ...    | ...             |
-```
-
-### 4. Create Testing Workpaper
-
-Generate a testing template for each control:
+표본을 표시합니다:
 
 ```
-SOX CONTROL TESTING WORKPAPER
+표본 선정
+통제: [통제 ID] — [설명]
+기간: [테스트 기간]
+모집단: [개수] 건, $[총액]
+표본 크기: [N] 건
+선정 방법: [무작위/체계적/목적]
+
+| 표본 # | 거래일 | 참조/ID | 금액 | 선정 기준 |
+|--------|--------|---------|------|-----------|
+| 1      | [날짜] | [참조]  | $X,XXX | 무작위 |
+| 2      | [날짜] | [참조]  | $X,XXX | 무작위 |
+| ...    | ...    | ...     | ...    | ...       |
+```
+
+### 4. 테스트 조서 작성
+
+각 통제에 대한 테스트 템플릿을 생성합니다:
+
+```
+SOX 통제 테스트 조서
 ==============================
-Control #: [ID]
-Control Description: [Full description of the control activity]
-Control Owner: [Role/title — to be filled by tester]
-Control Type: [Manual/Automated/IT-Dependent Manual]
-Frequency: [How often the control operates]
-Key Control: [Yes/No]
-Relevant Assertion(s): [CEAVOP]
-Testing Period: [Period]
+통제 번호: [ID]
+통제 설명: [통제 활동에 대한 전체 설명]
+통제 담당자: [역할/직함 — 테스터가 작성]
+통제 유형: [수동/자동/IT 의존 수동]
+빈도: [통제 운영 빈도]
+핵심 통제: [예/아니오]
+관련 주장: [CEAVOP]
+테스트 기간: [기간]
 
-TEST OBJECTIVE:
-To determine whether [control description] operated effectively throughout the testing period.
+테스트 목적:
+[통제 설명]이 테스트 기간 동안 효과적으로 운영되었는지 판단합니다.
 
-TEST PROCEDURES:
-1. [Step 1 — What to inspect, examine, or re-perform]
-2. [Step 2 — What evidence to obtain]
-3. [Step 3 — What to compare or verify]
-4. [Step 4 — How to evaluate completeness of performance]
-5. [Step 5 — How to assess timeliness of performance]
+테스트 절차:
+1. [단계 1 — 검사, 조사 또는 재수행할 항목]
+2. [단계 2 — 획득할 증거]
+3. [단계 3 — 비교 또는 확인할 항목]
+4. [단계 4 — 수행의 완전성 평가 방법]
+5. [단계 5 — 수행의 적시성 평가 방법]
 
-EXPECTED EVIDENCE:
-- [Document type 1 — e.g., signed approval form]
-- [Document type 2 — e.g., system screenshot showing review]
-- [Document type 3 — e.g., reconciliation with preparer sign-off]
+예상 증거:
+- [문서 유형 1 — 예: 서명된 승인 양식]
+- [문서 유형 2 — 예: 검토를 보여주는 시스템 스크린샷]
+- [문서 유형 3 — 예: 작성자 서명이 있는 조정서]
 
-TEST RESULTS:
+테스트 결과:
 
-| Sample # | Ref | Procedure 1 | Procedure 2 | Procedure 3 | Result | Exception? | Notes |
-|----------|-----|-------------|-------------|-------------|--------|------------|-------|
-| 1        |     | Pass/Fail   | Pass/Fail   | Pass/Fail   | Pass/Fail | Y/N    |       |
-| 2        |     | Pass/Fail   | Pass/Fail   | Pass/Fail   | Pass/Fail | Y/N    |       |
+| 표본 # | 참조 | 절차 1 | 절차 2 | 절차 3 | 결과 | 예외? | 비고 |
+|--------|------|--------|--------|--------|------|-------|------|
+| 1      |      | 통과/실패 | 통과/실패 | 통과/실패 | 통과/실패 | Y/N |    |
+| 2      |      | 통과/실패 | 통과/실패 | 통과/실패 | 통과/실패 | Y/N |    |
 
-EXCEPTIONS NOTED:
-| Sample # | Exception Description | Root Cause | Compensating Control | Impact |
-|----------|----------------------|------------|---------------------|--------|
-|          |                      |            |                     |        |
+발견된 예외:
+| 표본 # | 예외 설명 | 근본 원인 | 보완 통제 | 영향 |
+|--------|-----------|-----------|-----------|------|
+|        |           |           |           |      |
 
-CONCLUSION:
-[ ] Effective — Control operated effectively with no exceptions
-[ ] Effective with exceptions — Control operated effectively; exceptions are isolated
-[ ] Deficiency — Control did not operate effectively
-[ ] Significant Deficiency — Deficiency is more than inconsequential
-[ ] Material Weakness — Reasonable possibility of material misstatement not prevented/detected
+결론:
+[ ] 효과적 — 예외 없이 효과적으로 운영됨
+[ ] 예외가 있으나 효과적 — 효과적으로 운영됨; 예외는 고립된 사례
+[ ] 결함 — 효과적으로 운영되지 않음
+[ ] 유의한 결함 — 결함이 경미하지 않음
+[ ] 중요한 취약점 — 중요한 왜곡표시가 예방/발견되지 않을 합리적 가능성 존재
 
-Tested by: ________________  Date: ________
-Reviewed by: _______________  Date: ________
+테스트 수행자: ________________  날짜: ________
+검토자: _______________  날짜: ________
 ```
 
-### 5. Provide Common Control Templates
+### 5. 일반적인 통제 템플릿 제공
 
-Based on the control area, provide pre-built test step templates:
+통제 영역에 따라 사전 구성된 테스트 절차 템플릿을 제공합니다:
 
-**Revenue Recognition:**
-- Verify sales order approval and authorization
-- Confirm delivery/performance evidence
-- Test revenue recognition timing against contract terms
-- Verify pricing accuracy to contract/price list
-- Test credit memo approval and validity
+**수익 인식:**
+- 판매 주문 승인 및 권한 확인
+- 인도/이행 증거 확인
+- 계약 조건에 따른 수익 인식 시점 테스트
+- 계약/가격표 대비 가격 정확성 확인
+- 대변 메모(credit memo) 승인 및 타당성 테스트
 
-**Procure to Pay:**
-- Verify purchase order approval and authorization limits
-- Confirm three-way match (PO, receipt, invoice)
-- Test vendor master data change controls
-- Verify payment approval and segregation of duties
-- Test duplicate payment prevention controls
+**구매-지급(Procure to Pay):**
+- 구매주문서 승인 및 승인 한도 확인
+- 3자 매칭(PO, 수령, 청구서) 확인
+- 거래처 마스터 데이터 변경 통제 테스트
+- 지급 승인 및 직무 분리 확인
+- 중복 지급 방지 통제 테스트
 
-**Financial Close:**
-- Verify account reconciliation completeness and timeliness
-- Test journal entry approval and segregation of duties
-- Verify management review of financial statements
-- Test consolidation and elimination entries
-- Verify disclosure checklist completion
+**재무 마감(Financial Close):**
+- 계정 조정의 완전성 및 적시성 확인
+- 분개 승인 및 직무 분리 테스트
+- 재무제표에 대한 경영진 검토 확인
+- 연결 및 제거 분개 테스트
+- 공시 체크리스트 완료 확인
 
 **ITGC:**
-- Test user access provisioning and de-provisioning
-- Verify privileged access reviews
-- Test change management approval and testing
-- Verify batch job monitoring and exception handling
-- Test backup and recovery procedures
+- 사용자 접근 권한 부여 및 회수 테스트
+- 특권 접근 검토 확인
+- 변경 관리 승인 및 테스트 확인
+- 배치 작업 모니터링 및 예외 처리 확인
+- 백업 및 복구 절차 테스트
 
-### 6. Document Control Assessment
+### 6. 통제 평가 문서화
 
-Classify any identified deficiencies:
+식별된 결함을 분류합니다:
 
-**Deficiency:** A control does not allow management or employees to prevent or detect misstatements on a timely basis. Consider:
-- Likelihood of misstatement
-- Magnitude of potential misstatement
-- Whether compensating controls exist
+**결함(Deficiency):** 통제가 경영진 또는 직원이 왜곡표시를 적시에 예방하거나 발견하는 것을 허용하지 않습니다. 다음을 고려합니다:
+- 왜곡표시 발생 가능성
+- 잠재적 왜곡표시의 규모
+- 결함을 완화하는 보완 통제의 존재 여부
 
-**Significant Deficiency:** A deficiency (or combination) that is less severe than a material weakness but important enough to merit attention by those responsible for oversight.
+**유의한 결함(Significant Deficiency):** 중요한 취약점보다는 심각하지 않지만, 재무보고 감독 책임자의 주의를 끌어야 할 만큼 중요한 결함(또는 결함의 조합)입니다.
 
-**Material Weakness:** A deficiency (or combination) such that there is a reasonable possibility that a material misstatement will not be prevented or detected on a timely basis.
+**중요한 취약점(Material Weakness):** 재무제표의 중요한 왜곡표시가 적시에 예방 또는 발견되지 않을 합리적 가능성이 있는 결함(또는 결함의 조합)입니다.
 
-### 7. Output
+### 7. 결과물
 
-Provide:
-1. Control matrix for the selected area
-2. Sample selections with methodology documentation
-3. Testing workpaper templates with pre-populated test steps
-4. Results documentation template
-5. Deficiency evaluation framework (if exceptions are identified)
-6. Suggested remediation actions for any noted deficiencies
+다음을 제공합니다:
+1. 선택된 영역의 통제 매트릭스
+2. 방법론 문서화가 포함된 표본 선정
+3. 사전 구성된 테스트 절차가 포함된 테스트 조서 템플릿
+4. 결과 문서화 템플릿
+5. 결함 평가 프레임워크 (예외가 식별된 경우)
+6. 발견된 결함에 대한 권장 개선 조치

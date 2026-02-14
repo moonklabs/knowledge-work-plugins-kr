@@ -1,23 +1,23 @@
-# Spatial Transcriptomics Analysis
+# 공간 전사체학 분석
 
-This reference covers spatial transcriptomics analysis using scvi-tools methods: DestVI for deconvolution and resolVI for building spatial models.
+본 레퍼런스는 scvi-tools의 공간 전사체학 분석 방법인 DestVI(디컨볼루션) 및 resolVI(공간 모델 구축)를 다룹니다.
 
-## Overview
+## 개요
 
-Spatial transcriptomics technologies like Visium capture gene expression at defined spatial locations, but many platforms have multi-cellular resolution. scvi-tools provides two main approaches:
+Visium과 같은 공간 전사체학 기술은 정의된 공간 위치에서 유전자 발현을 포착하지만, 많은 플랫폼에서 다세포 해상도를 가집니다. scvi-tools는 두 가지 주요 접근법을 제공합니다:
 
-- **DestVI**: Deconvolution - estimates cell type proportions at each spot using a single-cell reference
-- **resolVI**: Builds a spatial model that learns gene expression patterns accounting for spatial context
+- **DestVI**: 공간 디컨볼루션 - 단일세포 레퍼런스를 사용하여 각 스팟의 세포 유형 비율을 추정
+- **resolVI**: 공간 맥락을 고려한 유전자 발현 패턴을 학습하는 공간 모델 구축
 
-## Available Methods in scvi-tools
+## scvi-tools에서 사용 가능한 방법
 
-| Method | Description | Use Case |
-|--------|-------------|----------|
-| **DestVI** | Variational inference for deconvolution | Estimate cell type proportions per spot |
-| **resolVI** | Spatial gene expression model | Learn spatially-aware representations |
-| **CondSCVI** | Reference model for DestVI | Required for DestVI workflow |
+| 방법 | 설명 | 사용 사례 |
+|------|------|-----------|
+| **DestVI** | 디컨볼루션을 위한 변분 추론 | 스팟별 세포 유형 비율 추정 |
+| **resolVI** | 공간 유전자 발현 모델 | 공간 인식 표현 학습 |
+| **CondSCVI** | DestVI를 위한 레퍼런스 모델 | DestVI 워크플로우에 필수 |
 
-## Prerequisites
+## 사전 요구 사항
 
 ```python
 import scvi
@@ -30,9 +30,9 @@ print(f"scvi-tools version: {scvi.__version__}")
 
 ---
 
-## Part 1: DestVI Deconvolution
+## 파트 1: DestVI 공간 디컨볼루션
 
-### Step 1: Load Spatial Data
+### 1단계: 공간 데이터 로드
 
 ```python
 # Load Visium data
@@ -51,7 +51,7 @@ adata_spatial = adata_spatial[adata_spatial.obs['n_genes_by_counts'] > 200].copy
 adata_spatial.layers["counts"] = adata_spatial.X.copy()
 ```
 
-### Step 2: Load Single-Cell Reference
+### 2단계: 단일세포 레퍼런스 로드
 
 ```python
 # Load reference single-cell data
@@ -68,7 +68,7 @@ print(adata_sc.obs['cell_type'].value_counts())
 adata_sc.layers["counts"] = adata_sc.X.copy()
 ```
 
-### Step 3: Prepare Data
+### 3단계: 데이터 준비
 
 ```python
 # DestVI requires gene overlap between reference and spatial
@@ -79,7 +79,7 @@ adata_sc = adata_sc[:, common_genes].copy()
 adata_spatial = adata_spatial[:, common_genes].copy()
 ```
 
-### Step 4: Train Reference Model (CondSCVI)
+### 4단계: 레퍼런스 모델 학습 (CondSCVI)
 
 ```python
 # Train conditional scVI on reference data
@@ -98,7 +98,7 @@ sc_model.train(max_epochs=200)
 sc_model.history['elbo_train'].plot()
 ```
 
-### Step 5: Train DestVI
+### 5단계: DestVI 학습
 
 ```python
 # Setup spatial data
@@ -116,7 +116,7 @@ spatial_model = scvi.model.DestVI.from_rna_model(
 spatial_model.train(max_epochs=500)
 ```
 
-### Step 6: Get Cell Type Proportions
+### 6단계: 세포 유형 비율 획득
 
 ```python
 # Infer cell type proportions at each spot
@@ -136,13 +136,13 @@ sq.pl.spatial_scatter(
 
 ---
 
-## Part 2: resolVI Spatial Model
+## 파트 2: resolVI 공간 모델
 
-resolVI is a semi-supervised method that learns cell type assignments and spatially-aware representations directly from spatial data, optionally using initial cell type predictions.
+resolVI는 공간 데이터에서 직접 세포 유형 할당 및 공간 인식 표현을 학습하는 준지도 방법이며, 선택적으로 초기 세포 유형 예측을 활용할 수 있습니다.
 
-**Note**: resolVI is in `scvi.external` (not `scvi.model`).
+**참고**: resolVI는 `scvi.external`에 위치합니다(`scvi.model`이 아닙니다).
 
-### Step 1: Prepare Spatial Data
+### 1단계: 공간 데이터 준비
 
 ```python
 # Load and preprocess
@@ -168,7 +168,7 @@ adata = adata[:, adata.var['highly_variable']].copy()
 # adata.obs["predicted_celltype"] = ...
 ```
 
-### Step 2: Setup and Train resolVI
+### 2단계: resolVI 설정 및 학습
 
 ```python
 # Setup for resolVI (note: scvi.external, not scvi.model)
@@ -185,7 +185,7 @@ model = scvi.external.RESOLVI(adata, semisupervised=True)
 model.train(max_epochs=50)
 ```
 
-### Step 3: Get Cell Type Predictions
+### 3단계: 세포 유형 예측 획득
 
 ```python
 # Get refined cell type predictions
@@ -199,7 +199,7 @@ adata.obs["resolvi_celltype"] = cell_type_labels
 sq.pl.spatial_scatter(adata, color="resolvi_celltype")
 ```
 
-### Step 4: Get Latent Representation
+### 4단계: 잠재 표현 획득
 
 ```python
 # Get latent representation
@@ -214,7 +214,7 @@ sc.tl.leiden(adata, resolution=0.5)
 sq.pl.spatial_scatter(adata, color="leiden")
 ```
 
-### Step 5: Differential Expression
+### 5단계: 차등 발현 분석
 
 ```python
 # DE between cell types using resolVI
@@ -228,7 +228,7 @@ de_results = model.differential_expression(
 print(de_results.head(20))
 ```
 
-### Step 6: Niche Abundance Analysis
+### 6단계: 니치 풍부도 분석
 
 ```python
 # Analyze how cell type neighborhoods differ between conditions
@@ -243,7 +243,7 @@ niche_results = model.differential_niche_abundance(
 )
 ```
 
-### Step 7: Query Mapping (Transfer to New Data)
+### 7단계: 쿼리 매핑 (새 데이터에 전이)
 
 ```python
 # Map new spatial data to trained model
@@ -263,9 +263,9 @@ query_labels = query_model.predict(query_adata, num_samples=3, soft=False)
 
 ---
 
-## Visualization
+## 시각화
 
-### Spatial Proportions
+### 공간 비율 시각화
 
 ```python
 import matplotlib.pyplot as plt
@@ -286,7 +286,7 @@ for ax, ct in zip(axes.flat, cell_types):
 plt.tight_layout()
 ```
 
-### Enrichment by Region
+### 영역별 농축 분석
 
 ```python
 # Cluster spatial data
@@ -308,7 +308,7 @@ sns.heatmap(region_props.T, annot=True, cmap='viridis')
 plt.title('Cell Type Proportions by Region')
 ```
 
-### Spatial Cell Type Interactions
+### 공간 세포 유형 상호작용
 
 ```python
 # Neighborhood enrichment using cell type assignments
@@ -326,7 +326,7 @@ sq.pl.co_occurrence(adata_spatial, cluster_key='dominant_type')
 
 ---
 
-## Complete DestVI Pipeline
+## 전체 DestVI 파이프라인
 
 ```python
 def deconvolve_spatial(
@@ -422,17 +422,17 @@ sq.pl.spatial_scatter(
 
 ---
 
-## Troubleshooting
+## 문제 해결
 
-| Issue | Cause | Solution |
-|-------|-------|----------|
-| Few common genes | Different gene naming | Convert gene names (Ensembl ↔ Symbol) |
-| Poor deconvolution | Reference doesn't match | Use tissue-matched reference |
-| All spots same type | Over-smoothing | Adjust model parameters, check reference diversity |
-| NaN proportions | Missing cell types | Ensure all expected types in reference |
-| Training slow | Large spatial dataset | Reduce max_epochs, increase batch_size |
+| 문제 | 원인 | 해결 방법 |
+|------|------|-----------|
+| 공통 유전자 부족 | 유전자 명명법 차이 | 유전자 이름 변환 (Ensembl ↔ Symbol) |
+| 디컨볼루션 품질 저하 | 레퍼런스 불일치 | 조직 일치 레퍼런스 사용 |
+| 모든 스팟이 동일 유형 | 과도한 평활화 | 모델 파라미터 조정, 레퍼런스 다양성 확인 |
+| NaN 비율 | 누락된 세포 유형 | 레퍼런스에 모든 예상 유형 포함 확인 |
+| 학습 속도 느림 | 대규모 공간 데이터셋 | max_epochs 감소, batch_size 증가 |
 
-## Key References
+## 주요 참고문헌
 
 - Lopez et al. (2022) "DestVI identifies continuums of cell types in spatial transcriptomics data"
-- [scvi-tools spatial tutorials](https://docs.scvi-tools.org/en/stable/tutorials/index.html)
+- [scvi-tools 공간 전사체학 튜토리얼](https://docs.scvi-tools.org/en/stable/tutorials/index.html)

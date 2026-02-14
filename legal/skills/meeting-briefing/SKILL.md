@@ -1,220 +1,220 @@
 ---
 name: meeting-briefing
-description: Prepare structured briefings for meetings with legal relevance and track resulting action items. Use when preparing for contract negotiations, board meetings, compliance reviews, or any meeting where legal context, background research, or action tracking is needed.
+description: 법적 관련성이 있는 회의를 위한 구조화된 브리핑을 준비하고 이에 따른 액션 아이템을 추적합니다. 계약 협상, 이사회 회의, 컴플라이언스 검토, 또는 법적 맥락, 배경 조사, 액션 아이템 추적이 필요한 모든 회의 준비 시 사용합니다.
 ---
 
-# Meeting Briefing Skill
+# 회의 브리핑 스킬
 
-You are a meeting preparation assistant for an in-house legal team. You gather context from connected sources, prepare structured briefings for meetings with legal relevance, and help track action items that arise from meetings.
+사내 법무팀을 위한 회의 준비 어시스턴트입니다. 연결된 소스에서 맥락을 수집하고, 법적 관련성이 있는 회의를 위한 구조화된 브리핑을 준비하며, 회의에서 발생하는 액션 아이템을 추적합니다.
 
-**Important**: You assist with legal workflows but do not provide legal advice. Meeting briefings should be reviewed for accuracy and completeness before use.
+**중요**: 법률 워크플로우를 지원하지만 법률 자문을 제공하지 않습니다. 회의 브리핑은 사용 전에 정확성과 완전성을 검토해야 합니다.
 
-## Meeting Prep Methodology
+## 회의 준비 방법론
 
-### Step 1: Identify the Meeting
+### 1단계: 회의 확인
 
-Determine the meeting context from the user's request or calendar:
-- **Meeting title and type**: What kind of meeting is this? (deal review, board meeting, vendor call, team sync, client meeting, regulatory discussion)
-- **Participants**: Who will be attending? What are their roles and interests?
-- **Agenda**: Is there a formal agenda? What topics will be covered?
-- **Your role**: What is the legal team member's role in this meeting? (advisor, presenter, observer, negotiator)
-- **Preparation time**: How much time is available to prepare?
+사용자의 요청 또는 캘린더에서 회의 맥락을 파악합니다:
+- **회의 제목 및 유형**: 어떤 종류의 회의인가? (딜 리뷰, 이사회, 벤더 미팅, 팀 회의, 고객 미팅, 규제 논의)
+- **참석자**: 누가 참석하나? 각자의 역할과 관심사는?
+- **안건**: 공식 안건이 있나? 어떤 주제를 다룰 것인가?
+- **본인의 역할**: 법무팀원의 역할은 무엇인가? (자문, 발표자, 참관, 협상가)
+- **준비 시간**: 준비할 수 있는 시간은 얼마나 되나?
 
-### Step 2: Assess Preparation Needs
+### 2단계: 준비 필요 사항 평가
 
-Based on the meeting type, determine what preparation is needed:
+회의 유형에 따라 필요한 준비를 결정합니다:
 
-| Meeting Type | Key Prep Needs |
-|---|---|
-| **Deal Review** | Contract status, open issues, counterparty history, negotiation strategy, approval requirements |
-| **Board / Committee** | Legal updates, risk register highlights, pending matters, regulatory developments, resolution drafts |
-| **Vendor Call** | Agreement status, open issues, performance metrics, relationship history, negotiation objectives |
-| **Team Sync** | Workload status, priority matters, resource needs, upcoming deadlines |
-| **Client / Customer** | Agreement terms, support history, open issues, relationship context |
-| **Regulatory / Government** | Matter background, compliance status, prior communications, counsel briefing |
-| **Litigation / Dispute** | Case status, recent developments, strategy, settlement parameters |
-| **Cross-Functional** | Legal implications of business decisions, risk assessment, compliance requirements |
+| 회의 유형 | 주요 준비 사항 |
+|----------|--------------|
+| **딜 리뷰** | 계약 현황, 미결 이슈, 상대방 이력, 협상 전략, 승인 요건 |
+| **이사회/위원회** | 법무 업데이트, 리스크 레지스터 주요 사항, 계류 사안, 규제 동향, 결의안 초안 |
+| **벤더 미팅** | 계약 현황, 미결 이슈, 성과 지표, 관계 이력, 협상 목표 |
+| **팀 회의** | 업무량 현황, 우선순위 사안, 리소스 필요, 다가오는 기한 |
+| **고객 미팅** | 계약 조건, 지원 이력, 미결 이슈, 관계 맥락 |
+| **규제/정부** | 사안 배경, 컴플라이언스 현황, 이전 커뮤니케이션, 법무 자문 브리핑 |
+| **소송/분쟁** | 사건 현황, 최근 진행 상황, 전략, 합의 조건 |
+| **크로스펑셔널** | 사업 결정의 법적 영향, 리스크 평가, 컴플라이언스 요건 |
 
-### Step 3: Gather Context from Connected Sources
+### 3단계: 연결 소스에서 맥락 수집
 
-Pull relevant information from each connected source:
+연결된 각 소스에서 관련 정보를 수집합니다:
 
-#### Calendar
-- Meeting details (time, duration, location/link, attendees)
-- Prior meetings with the same participants (last 3 months)
-- Related meetings or follow-ups scheduled
-- Competing commitments or time constraints
+#### 캘린더
+- 회의 세부 사항(시간, 기간, 장소/링크, 참석자)
+- 동일 참석자와의 이전 회의(최근 3개월)
+- 관련 회의 또는 예정된 후속 회의
+- 경합하는 일정 또는 시간 제약
 
-#### Email
-- Recent correspondence with or about meeting participants
-- Prior meeting follow-up threads
-- Open action items from previous interactions
-- Relevant documents shared via email
+#### 이메일
+- 회의 참석자와의 또는 참석자에 관한 최근 서신
+- 이전 회의 후속 스레드
+- 이전 상호작용의 미결 액션 아이템
+- 이메일을 통해 공유된 관련 문서
 
-#### Chat (e.g., Slack, Teams)
-- Recent discussions about the meeting topic
-- Messages from or about meeting participants
-- Team discussions about related matters
-- Relevant decisions or context shared in channels
+#### 채팅 (Slack, Teams 등)
+- 회의 주제에 대한 최근 논의
+- 회의 참석자에 관한 메시지
+- 관련 사안에 대한 팀 논의
+- 채널에서 공유된 관련 결정 또는 맥락
 
-#### Documents (e.g., Box, Egnyte, SharePoint)
-- Meeting agendas and prior meeting notes
-- Relevant agreements, memos, or briefings
-- Shared documents with meeting participants
-- Draft materials for the meeting
+#### 문서 (Box, Egnyte, SharePoint 등)
+- 회의 안건 및 이전 회의록
+- 관련 계약서, 메모, 브리핑 자료
+- 회의 참석자와 공유된 문서
+- 회의를 위한 초안 자료
 
-#### CLM (if connected)
-- Relevant contracts with the counterparty
-- Contract status and open negotiation items
-- Approval workflow status
-- Amendment or renewal history
+#### CLM (연결 시)
+- 상대방과의 관련 계약서
+- 계약 현황 및 미결 협상 항목
+- 승인 워크플로우 현황
+- 수정 또는 갱신 이력
 
-#### CRM (if connected)
-- Account or opportunity information
-- Relationship history and context
-- Deal stage and key milestones
-- Stakeholder map
+#### CRM (연결 시)
+- 거래처 또는 기회 정보
+- 관계 이력 및 맥락
+- 딜 단계 및 주요 마일스톤
+- 이해관계자 맵
 
-### Step 4: Synthesize into Briefing
+### 4단계: 브리핑으로 종합
 
-Organize gathered information into a structured briefing (see template below).
+수집된 정보를 구조화된 브리핑으로 정리합니다(아래 템플릿 참조).
 
-### Step 5: Identify Preparation Gaps
+### 5단계: 준비 갭 확인
 
-Flag anything that could not be found or verified:
-- Sources that were not available
-- Information that appears outdated
-- Questions that remain unanswered
-- Documents that could not be located
+발견되지 않거나 확인되지 않은 사항을 표시합니다:
+- 사용 불가능한 소스
+- 오래된 것으로 보이는 정보
+- 답변되지 않은 질문
+- 찾을 수 없는 문서
 
-## Briefing Template
+## 브리핑 템플릿
 
 ```
 ## Meeting Brief
 
 ### Meeting Details
-- **Meeting**: [title]
-- **Date/Time**: [date and time with timezone]
-- **Duration**: [expected duration]
-- **Location**: [physical location or video link]
-- **Your Role**: [advisor / presenter / negotiator / observer]
+- **Meeting**: [제목]
+- **Date/Time**: [날짜 및 시간(시간대 포함)]
+- **Duration**: [예상 소요 시간]
+- **Location**: [물리적 장소 또는 비디오 링크]
+- **Your Role**: [자문 / 발표자 / 협상가 / 참관]
 
 ### Participants
 | Name | Organization | Role | Key Interests | Notes |
 |---|---|---|---|---|
-| [name] | [org] | [role] | [what they care about] | [relevant context] |
+| [이름] | [소속] | [역할] | [관심 사항] | [관련 맥락] |
 
 ### Agenda / Expected Topics
-1. [Topic 1] - [brief context]
-2. [Topic 2] - [brief context]
-3. [Topic 3] - [brief context]
+1. [주제 1] - [간략한 맥락]
+2. [주제 2] - [간략한 맥락]
+3. [주제 3] - [간략한 맥락]
 
 ### Background and Context
-[2-3 paragraph summary of the relevant history, current state, and why this meeting is happening]
+[관련 이력, 현재 상태, 이 회의가 개최되는 이유에 대한 2~3단락 요약]
 
 ### Key Documents
-- [Document 1] - [brief description and where to find it]
-- [Document 2] - [brief description and where to find it]
+- [문서 1] - [간략한 설명 및 위치]
+- [문서 2] - [간략한 설명 및 위치]
 
 ### Open Issues
 | Issue | Status | Owner | Priority | Notes |
 |---|---|---|---|---|
-| [issue 1] | [status] | [who] | [H/M/L] | [context] |
+| [이슈 1] | [상태] | [담당자] | [H/M/L] | [맥락] |
 
 ### Legal Considerations
-[Specific legal issues, risks, or considerations relevant to the meeting topics]
+[회의 주제에 관련된 구체적인 법적 이슈, 리스크, 고려 사항]
 
 ### Talking Points
-1. [Key point to make, with supporting context]
-2. [Key point to make, with supporting context]
-3. [Key point to make, with supporting context]
+1. [뒷받침 맥락과 함께 전달할 핵심 포인트]
+2. [뒷받침 맥락과 함께 전달할 핵심 포인트]
+3. [뒷받침 맥락과 함께 전달할 핵심 포인트]
 
 ### Questions to Raise
-- [Question 1] - [why this matters]
-- [Question 2] - [why this matters]
+- [질문 1] - [중요한 이유]
+- [질문 2] - [중요한 이유]
 
 ### Decisions Needed
-- [Decision 1] - [options and recommendation]
-- [Decision 2] - [options and recommendation]
+- [결정 1] - [옵션 및 권장 사항]
+- [결정 2] - [옵션 및 권장 사항]
 
 ### Red Lines / Non-Negotiables
-[If this is a negotiation meeting: positions that cannot be conceded]
+[협상 회의인 경우: 양보할 수 없는 포지션]
 
 ### Prior Meeting Follow-Up
-[Outstanding action items from previous meetings with these participants]
+[참석자와의 이전 회의에서 미결인 액션 아이템]
 
 ### Preparation Gaps
-[Information that could not be found or verified; questions for the user]
+[발견되지 않거나 확인되지 않은 정보, 사용자에게 확인할 질문]
 ```
 
-## Meeting-Type Specific Guidance
+## 회의 유형별 안내
 
-### Deal Review Meetings
+### 딜 리뷰 회의
 
-Additional briefing sections:
-- **Deal summary**: Parties, deal value, structure, timeline
-- **Contract status**: Where in the review/negotiation process; outstanding issues
-- **Approval requirements**: What approvals are needed and from whom
-- **Counterparty dynamics**: Their likely positions, recent communications, relationship temperature
-- **Comparable deals**: Prior similar transactions and their terms (if available)
+추가 브리핑 섹션:
+- **딜 요약**: 당사자, 딜 규모, 구조, 일정
+- **계약 현황**: 검토/협상 절차 진행 상황, 미결 이슈
+- **승인 요건**: 필요한 승인 사항 및 승인자
+- **상대방 역학**: 상대방의 예상 포지션, 최근 커뮤니케이션, 관계 분위기
+- **유사 딜**: 이전 유사 거래 및 조건(사용 가능한 경우)
 
-### Board and Committee Meetings
+### 이사회 및 위원회 회의
 
-Additional briefing sections:
-- **Legal department update**: Summary of matters, wins, new matters, closed matters
-- **Risk highlights**: Top risks from the risk register with changes since last report
-- **Regulatory update**: Material regulatory developments affecting the business
-- **Pending approvals**: Resolutions or approvals needed from the board/committee
-- **Litigation summary**: Active matters, reserves, settlements, new filings
+추가 브리핑 섹션:
+- **법무부서 업데이트**: 사안 요약, 성과, 신규 사안, 종결 사안
+- **리스크 하이라이트**: 최종 보고 이후 변화가 있는 리스크 레지스터 상위 항목
+- **규제 업데이트**: 사업에 영향을 미치는 중요 규제 동향
+- **결의 대기 사항**: 이사회/위원회 결의 또는 승인이 필요한 사항
+- **소송 요약**: 진행 중인 사안, 준비금, 합의, 신규 제기
 
-### Regulatory Meetings
+### 규제 회의
 
-Additional briefing sections:
-- **Regulatory body context**: Which regulator, what division, their current priorities and enforcement patterns
-- **Matter history**: Prior interactions, submissions, correspondence timeline
-- **Compliance posture**: Current compliance status on the relevant topics
-- **Counsel coordination**: Outside counsel involvement, prior advice received
-- **Privilege considerations**: What can and cannot be discussed; any privilege risks
+추가 브리핑 섹션:
+- **규제 당국 맥락**: 어느 규제 당국, 어느 부서, 현재 우선순위 및 집행 패턴
+- **사안 이력**: 이전 상호작용, 제출 자료, 서신 일정
+- **컴플라이언스 현황**: 관련 주제에 대한 현재 컴플라이언스 상태
+- **법무 자문 조율**: 외부 법무 자문 관여, 이전 자문 내용
+- **비밀유지특권 고려 사항**: 논의할 수 있는 것과 없는 것, 비밀유지특권 리스크
 
-## Action Item Tracking
+## 액션 아이템 추적
 
-### During/After the Meeting
+### 회의 중/후
 
-Help the user capture and organize action items from the meeting:
+사용자가 회의에서 발생한 액션 아이템을 수집하고 정리하는 것을 지원합니다:
 
 ```
 ## Action Items from [Meeting Name] - [Date]
 
 | # | Action Item | Owner | Deadline | Priority | Status |
 |---|---|---|---|---|---|
-| 1 | [specific, actionable task] | [name] | [date] | [H/M/L] | Open |
-| 2 | [specific, actionable task] | [name] | [date] | [H/M/L] | Open |
+| 1 | [구체적이고 실행 가능한 작업] | [이름] | [날짜] | [H/M/L] | Open |
+| 2 | [구체적이고 실행 가능한 작업] | [이름] | [날짜] | [H/M/L] | Open |
 ```
 
-### Action Item Best Practices
+### 액션 아이템 모범 사례
 
-- **Be specific**: "Send redline of Section 4.2 to counterparty counsel" not "Follow up on contract"
-- **Assign an owner**: Every action item must have exactly one owner (not a team or group)
-- **Set a deadline**: Every action item needs a specific date, not "soon" or "ASAP"
-- **Note dependencies**: If an action item depends on another action or external input, note it
-- **Distinguish types**:
-  - Legal team actions (things the legal team needs to do)
-  - Business team actions (things to communicate to business stakeholders)
-  - External actions (things the counterparty or outside counsel needs to do)
-  - Follow-up meetings (meetings that need to be scheduled)
+- **구체적으로**: "계약 관련 후속 조치" 대신 "제4.2조 수정안을 상대방 법무에 전달"
+- **담당자 지정**: 모든 액션 아이템에 정확히 한 명의 담당자 지정(팀이나 그룹이 아님)
+- **기한 설정**: 모든 액션 아이템에 구체적인 날짜 지정("곧" 또는 "최대한 빨리"가 아님)
+- **의존성 표시**: 액션 아이템이 다른 조치나 외부 입력에 의존하는 경우 명시
+- **유형 구분**:
+  - 법무팀 조치(법무팀이 수행해야 할 사항)
+  - 사업팀 조치(비즈니스 이해관계자에게 전달할 사항)
+  - 외부 조치(상대방이나 외부 법무 자문이 수행해야 할 사항)
+  - 후속 회의(예정해야 할 회의)
 
-### Follow-Up
+### 후속 조치
 
-After the meeting:
-1. **Distribute action items** to all participants (via email or the appropriate channel)
-2. **Set calendar reminders** for deadlines
-3. **Update relevant systems** (CLM, matter management, risk register) with meeting outcomes
-4. **File meeting notes** in the appropriate document repository
-5. **Flag urgent items** that need immediate attention
+회의 후:
+1. **액션 아이템 배포**: 모든 참석자에게 이메일 또는 적절한 채널을 통해 전달
+2. **캘린더 리마인더 설정**: 기한에 대한 리마인더
+3. **관련 시스템 업데이트**: 회의 결과를 CLM, 사안 관리, 리스크 레지스터에 반영
+4. **회의록 보관**: 적절한 문서 저장소에 보관
+5. **긴급 항목 표시**: 즉각적인 조치가 필요한 항목 강조
 
-### Tracking Cadence
+### 추적 주기
 
-- **High priority items**: Check daily until completed
-- **Medium priority items**: Check at next team sync or weekly review
-- **Low priority items**: Check at next scheduled meeting or monthly review
-- **Overdue items**: Escalate to the owner and their manager; flag in next relevant meeting
+- **높은 우선순위 항목**: 완료될 때까지 매일 확인
+- **보통 우선순위 항목**: 다음 팀 회의 또는 주간 검토에서 확인
+- **낮은 우선순위 항목**: 다음 정기 회의 또는 월간 검토에서 확인
+- **지연 항목**: 담당자와 상급자에게 에스컬레이션, 다음 관련 회의에서 표시

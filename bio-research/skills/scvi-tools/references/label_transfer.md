@@ -1,32 +1,32 @@
-# Label Transfer and Reference Mapping with scANVI
+# scANVI를 이용한 라벨 전이 및 레퍼런스 매핑
 
-This reference covers using scANVI for transferring cell type annotations from a reference atlas to query data.
+이 레퍼런스는 scANVI를 사용하여 레퍼런스 아틀라스에서 쿼리 데이터로 세포 유형 주석을 전이하는 방법을 다룹니다.
 
-## Overview
+## 개요
 
-Reference mapping (also called "label transfer") uses a pre-trained model on annotated reference data to predict cell types in new, unannotated query data. This is faster than re-clustering and more consistent across studies.
+레퍼런스 매핑("라벨 전이"라고도 함)은 주석이 달린 레퍼런스 데이터에서 사전 학습된 모델을 사용하여 새로운 미주석 쿼리 데이터의 세포 유형을 예측합니다. 이 방법은 재클러스터링보다 빠르고 연구 간 더 일관된 결과를 제공합니다.
 
-scANVI excels at this because it:
-- Jointly embeds reference and query in shared space
-- Transfers labels probabilistically
-- Handles batch effects between reference and query
+scANVI가 이 작업에 뛰어난 이유:
+- 레퍼런스와 쿼리를 공유 공간에 동시 임베딩
+- 확률적 라벨 전이
+- 레퍼런스와 쿼리 간 배치 효과 처리
 
-## When to Use Reference Mapping
+## 레퍼런스 매핑을 사용해야 하는 경우
 
-- Annotating new dataset using existing atlas
-- Consistent annotation across multiple studies
-- Speed: no need to re-cluster and manually annotate
-- Quality: leverage expert-curated reference annotations
+- 기존 아틀라스를 사용하여 새 데이터셋에 주석 부여
+- 여러 연구에 걸쳐 일관된 주석 수행
+- 속도: 재클러스터링 및 수동 주석 불필요
+- 품질: 전문가가 큐레이션한 레퍼런스 주석 활용
 
-## Workflow Options
+## 워크플로우 옵션
 
-1. **Train new model**: Train scANVI on reference, then map query
-2. **Use pre-trained model**: Load existing model (e.g., from Model Hub)
-3. **scArches**: Extend existing model with query data (preserves reference)
+1. **새 모델 학습**: 레퍼런스에서 scANVI를 학습한 후 쿼리 매핑
+2. **사전 학습 모델 사용**: 기존 모델 로드 (예: Model Hub에서)
+3. **scArches**: 쿼리 데이터로 기존 모델 확장 (레퍼런스 보존)
 
-## Option 1: Train scANVI on Reference
+## 옵션 1: 레퍼런스에서 scANVI 학습
 
-### Step 1: Prepare Reference Data
+### 1단계: 레퍼런스 데이터 준비
 
 ```python
 import scvi
@@ -54,7 +54,7 @@ sc.pp.highly_variable_genes(
 adata_ref = adata_ref[:, adata_ref.var["highly_variable"]].copy()
 ```
 
-### Step 2: Train scANVI on Reference
+### 2단계: 레퍼런스에서 scANVI 학습
 
 ```python
 # First train scVI (unlabeled)
@@ -81,7 +81,7 @@ scanvi_ref.train(max_epochs=50)
 scanvi_ref.save("scanvi_reference_model/")
 ```
 
-### Step 3: Prepare Query Data
+### 3단계: 쿼리 데이터 준비
 
 ```python
 # Load query data
@@ -100,15 +100,15 @@ if missing_genes:
     # Add missing genes with zero expression
     import numpy as np
     from scipy.sparse import csr_matrix
-    
+
     zero_matrix = csr_matrix((adata_query.n_obs, len(missing_genes)))
     # ... concat and reorder to match reference
-    
+
 # Store counts
 adata_query.layers["counts"] = adata_query.X.copy()
 ```
 
-### Step 4: Map Query to Reference
+### 4단계: 쿼리를 레퍼런스에 매핑
 
 ```python
 # Prepare query data for mapping
@@ -134,7 +134,7 @@ soft_predictions = scanvi_query.predict(soft=True)
 adata_query.obs["prediction_score"] = soft_predictions.max(axis=1)
 ```
 
-### Step 5: Evaluate Predictions
+### 5단계: 예측 결과 평가
 
 ```python
 # Confidence scores
@@ -150,9 +150,9 @@ sc.tl.umap(adata_query)
 sc.pl.umap(adata_query, color=['predicted_cell_type', 'prediction_score'])
 ```
 
-## Option 2: Use Pre-Trained Models
+## 옵션 2: 사전 학습 모델 사용
 
-### From Model Hub
+### Model Hub에서 로드
 
 ```python
 # scvi-tools maintains models on HuggingFace
@@ -170,7 +170,7 @@ model_path = hf_hub_download(
 model = scvi.model.SCANVI.load(model_path, adata=adata_query)
 ```
 
-### From Published Atlas
+### 출판된 아틀라스에서 로드
 
 ```python
 # Many atlases provide pre-trained models
@@ -180,9 +180,9 @@ model = scvi.model.SCANVI.load(model_path, adata=adata_query)
 # model = scvi.model.SCANVI.load("atlas_model/", adata=adata_query)
 ```
 
-## Option 3: scArches for Incremental Updates
+## 옵션 3: 점진적 업데이트를 위한 scArches
 
-scArches extends a reference model without retraining from scratch:
+scArches는 처음부터 재학습하지 않고 레퍼런스 모델을 확장합니다:
 
 ```python
 # Load existing reference model
@@ -202,7 +202,7 @@ scanvi_query.train(
 )
 ```
 
-## Visualize Reference and Query Together
+## 레퍼런스와 쿼리의 동시 시각화
 
 ```python
 # Concatenate for joint visualization
@@ -228,9 +228,9 @@ sc.pl.umap(
 )
 ```
 
-## Quality Control for Predictions
+## 예측 품질 관리
 
-### Confidence Filtering
+### 신뢰도 필터링
 
 ```python
 # Filter predictions by confidence
@@ -243,7 +243,7 @@ print(f"High confidence: {len(high_conf)} ({len(high_conf)/len(adata_query)*100:
 print(f"Low confidence: {len(low_conf)} ({len(low_conf)/len(adata_query)*100:.1f}%)")
 ```
 
-### Marker Validation
+### 마커 유전자 검증
 
 ```python
 # Validate predictions with known markers
@@ -262,7 +262,7 @@ for ct, genes in markers.items():
                 print(f"{ct} - {gene}: {expr:.3f}")
 ```
 
-## Complete Pipeline
+## 전체 파이프라인
 
 ```python
 def transfer_labels(
@@ -275,7 +275,7 @@ def transfer_labels(
 ):
     """
     Transfer cell type labels from reference to query.
-    
+
     Parameters
     ----------
     adata_ref : AnnData
@@ -290,18 +290,18 @@ def transfer_labels(
         Number of HVGs
     confidence_threshold : float
         Minimum confidence for predictions
-        
+
     Returns
     -------
     AnnData with predictions
     """
     import scvi
     import scanpy as sc
-    
+
     # Prepare reference
     adata_ref = adata_ref.copy()
     adata_ref.layers["counts"] = adata_ref.X.copy()
-    
+
     sc.pp.highly_variable_genes(
         adata_ref,
         n_top_genes=n_top_genes,
@@ -310,39 +310,39 @@ def transfer_labels(
         layer="counts"
     )
     adata_ref = adata_ref[:, adata_ref.var["highly_variable"]].copy()
-    
+
     # Train reference model
     scvi.model.SCVI.setup_anndata(adata_ref, layer="counts", batch_key=batch_key)
     scvi_ref = scvi.model.SCVI(adata_ref, n_latent=30)
     scvi_ref.train(max_epochs=200)
-    
+
     scanvi_ref = scvi.model.SCANVI.from_scvi_model(
         scvi_ref,
         labels_key=cell_type_key,
         unlabeled_category="Unknown"
     )
     scanvi_ref.train(max_epochs=50)
-    
+
     # Prepare query
     adata_query = adata_query[:, adata_ref.var_names].copy()
     adata_query.layers["counts"] = adata_query.X.copy()
-    
+
     # Map query
     scvi.model.SCANVI.prepare_query_anndata(adata_query, scanvi_ref)
     scanvi_query = scvi.model.SCANVI.load_query_data(adata_query, scanvi_ref)
     scanvi_query.train(max_epochs=100, plan_kwargs={"weight_decay": 0.0})
-    
+
     # Get predictions
     adata_query.obs["predicted_cell_type"] = scanvi_query.predict()
     soft = scanvi_query.predict(soft=True)
     adata_query.obs["prediction_score"] = soft.max(axis=1)
-    
+
     # Mark low confidence
     adata_query.obs["confident_prediction"] = adata_query.obs["prediction_score"] >= confidence_threshold
-    
+
     # Add latent representation
     adata_query.obsm["X_scANVI"] = scanvi_query.get_latent_representation()
-    
+
     return adata_query, scanvi_ref, scanvi_query
 
 # Usage
@@ -358,16 +358,16 @@ sc.tl.umap(adata_annotated)
 sc.pl.umap(adata_annotated, color=['predicted_cell_type', 'prediction_score'])
 ```
 
-## Troubleshooting
+## 문제 해결
 
-| Issue | Cause | Solution |
-|-------|-------|----------|
-| Many low-confidence predictions | Query has novel cell types | Manually annotate low-confidence cells |
-| Wrong predictions | Reference doesn't match tissue | Use tissue-appropriate reference |
-| Gene mismatch | Different gene naming | Convert gene IDs |
-| All same prediction | Query too different | Check data quality, try different reference |
+| 문제 | 원인 | 해결 방법 |
+|------|------|----------|
+| 낮은 신뢰도 예측이 많음 | 쿼리에 새로운 세포 유형 존재 | 낮은 신뢰도 세포를 수동 주석 |
+| 잘못된 예측 | 레퍼런스가 조직과 불일치 | 조직에 적합한 레퍼런스 사용 |
+| 유전자 불일치 | 다른 유전자 명명 체계 | 유전자 ID 변환 |
+| 모두 동일한 예측 | 쿼리가 너무 다름 | 데이터 품질 확인, 다른 레퍼런스 시도 |
 
-## Key References
+## 주요 참고문헌
 
 - Xu et al. (2021) "Probabilistic harmonization and annotation of single-cell transcriptomics data with deep generative models"
 - Lotfollahi et al. (2022) "Mapping single-cell data to reference atlases by transfer learning"

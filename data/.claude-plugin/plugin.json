@@ -1,7 +1,7 @@
 {
   "name": "data",
   "version": "1.0.0",
-  "description": "Write SQL, explore datasets, and generate insights faster. Build visualizations and dashboards, and turn raw data into clear stories for stakeholders.",
+  "description": "SQL 작성, 데이터셋 탐색, 인사이트 생성을 더 빠르게 수행합니다. 시각화와 대시보드를 구축하고, 원시 데이터를 이해관계자를 위한 명확한 스토리로 변환합니다.",
   "author": {
     "name": "Anthropic"
   }

@@ -1,182 +1,182 @@
 ---
-description: Analyze pipeline health — prioritize deals, flag risks, get a weekly action plan
-argument-hint: "<segment or rep>"
+description: 파이프라인 건강 상태 분석 — 거래 우선순위 지정, 리스크 플래그, 주간 실행 계획 수립
+argument-hint: "<세그먼트 또는 담당자>"
 ---
 
 # /pipeline-review
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 참조하세요.
 
-Analyze your pipeline health, prioritize deals, and get actionable recommendations for where to focus.
+파이프라인 건강 상태를 분석하고, 거래 우선순위를 지정하며, 집중해야 할 영역에 대한 실행 가능한 권고 사항을 제공합니다.
 
-## Usage
+## 사용법
 
 ```
 /pipeline-review
 ```
 
-Then provide your pipeline data.
+파이프라인 데이터를 제공하세요.
 
 ---
 
-## How It Works
+## 작동 방식
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                     PIPELINE REVIEW                              │
 ├─────────────────────────────────────────────────────────────────┤
-│  STANDALONE (always works)                                       │
-│  ✓ Upload CSV export from your CRM                              │
-│  ✓ Or paste/describe your deals                                 │
-│  ✓ Health check: flag stale, stuck, and at-risk deals          │
-│  ✓ Prioritization: rank deals by impact and closability        │
-│  ✓ Hygiene audit: missing data, bad close dates, single-thread │
-│  ✓ Weekly action plan: what to focus on                        │
+│  단독 사용 (항상 작동)                                            │
+│  ✓ CRM에서 내보낸 CSV 업로드                                      │
+│  ✓ 또는 거래를 붙여넣기/설명                                      │
+│  ✓ 건강 점검: 정체, 중단, 리스크 거래 플래그                       │
+│  ✓ 우선순위: 영향도 및 성사 가능성별 거래 순위                      │
+│  ✓ 위생 감사: 누락 데이터, 잘못된 마감일, 단일 스레드               │
+│  ✓ 주간 실행 계획: 집중해야 할 영역                               │
 ├─────────────────────────────────────────────────────────────────┤
-│  SUPERCHARGED (when you connect your tools)                      │
-│  + CRM: Pull pipeline automatically, update records             │
-│  + Activity data for engagement scoring                         │
-│  + Historical patterns for risk prediction                      │
-│  + Calendar: See upcoming meetings per deal                     │
+│  강화 모드 (도구 연결 시)                                         │
+│  + CRM: 파이프라인 자동 가져오기, 기록 업데이트                     │
+│  + 참여도 스코어링을 위한 활동 데이터                               │
+│  + 리스크 예측을 위한 과거 패턴                                    │
+│  + 캘린더: 거래별 예정된 미팅 확인                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## What I Need From You
+## 필요한 정보
 
-**Option A: Upload a CSV**
-Export your pipeline from your CRM (e.g. Salesforce, HubSpot). Helpful fields:
-- Deal/Opportunity name
-- Account name
-- Amount
-- Stage
-- Close date
-- Created date
-- Last activity date
-- Owner (if reviewing a team)
-- Primary contact
+**옵션 A: CSV 업로드**
+CRM(예: Salesforce, HubSpot)에서 파이프라인을 내보내세요. 유용한 필드:
+- 거래/영업 기회 이름
+- 어카운트명
+- 금액
+- 단계
+- 마감일
+- 생성일
+- 최근 활동일
+- 담당자 (팀 리뷰 시)
+- 주요 담당자
 
-**Option B: Paste your deals**
+**옵션 B: 거래 붙여넣기**
 ```
 Acme Corp - $50K - Negotiation - closes Jan 31 - last activity Jan 20
 TechStart - $25K - Demo scheduled - closes Feb 15 - no activity in 3 weeks
 BigCo - $100K - Discovery - closes Mar 30 - created last week
 ```
 
-**Option C: Describe your pipeline**
-"I have 12 deals. Two big ones in negotiation that I'm confident about. Three stuck in discovery for over a month. The rest are mid-stage but I haven't talked to some of them in a while."
+**옵션 C: 파이프라인 설명**
+"거래가 12건 있습니다. 2건은 확신을 가진 대형 협상 건입니다. 3건은 한 달 넘게 디스커버리에 머물러 있습니다. 나머지는 중간 단계인데 한동안 연락하지 못한 건도 있습니다."
 
 ---
 
-## Output
+## 출력
 
 ```markdown
-# Pipeline Review: [Date]
+# 파이프라인 리뷰: [날짜]
 
-**Data Source:** [CSV upload / Manual input / CRM]
-**Deals Analyzed:** [X]
-**Total Pipeline Value:** $[X]
-
----
-
-## Pipeline Health Score: [X/100]
-
-| Dimension | Score | Issue |
-|-----------|-------|-------|
-| **Stage Progression** | [X]/25 | [X] deals stuck in same stage 30+ days |
-| **Activity Recency** | [X]/25 | [X] deals with no activity in 14+ days |
-| **Close Date Accuracy** | [X]/25 | [X] deals with close date in past |
-| **Contact Coverage** | [X]/25 | [X] deals single-threaded |
+**데이터 소스:** [CSV 업로드 / 수동 입력 / CRM]
+**분석 거래 수:** [X]
+**총 파이프라인 금액:** $[X]
 
 ---
 
-## Priority Actions This Week
+## 파이프라인 건강 점수: [X/100]
 
-### 1. [Highest Priority Deal]
-**Why:** [Reason — large, closing soon, at risk, etc.]
-**Action:** [Specific next step]
-**Impact:** $[X] if you close it
-
-### 2. [Second Priority]
-**Why:** [Reason]
-**Action:** [Next step]
-
-### 3. [Third Priority]
-**Why:** [Reason]
-**Action:** [Next step]
+| 항목 | 점수 | 이슈 |
+|------|------|------|
+| **단계 진행** | [X]/25 | [X]건의 거래가 동일 단계에서 30일 이상 정체 |
+| **활동 최신성** | [X]/25 | [X]건의 거래가 14일 이상 활동 없음 |
+| **마감일 정확도** | [X]/25 | [X]건의 거래가 마감일 경과 |
+| **담당자 커버리지** | [X]/25 | [X]건의 거래가 단일 스레드 |
 
 ---
 
-## Deal Prioritization Matrix
+## 이번 주 우선 조치
 
-### Close This Week (Focus Time Here)
-| Deal | Amount | Stage | Close Date | Next Action |
-|------|--------|-------|------------|-------------|
-| [Deal] | $[X] | [Stage] | [Date] | [Action] |
+### 1. [최우선 거래]
+**이유:** [근거 — 대형, 곧 마감, 리스크 등]
+**조치:** [구체적 다음 단계]
+**영향:** 성사 시 $[X]
 
-### Close This Month (Keep Warm)
-| Deal | Amount | Stage | Close Date | Status |
-|------|--------|-------|------------|--------|
-| [Deal] | $[X] | [Stage] | [Date] | [Status] |
+### 2. [2순위]
+**이유:** [근거]
+**조치:** [다음 단계]
 
-### Nurture (Check-in Periodically)
-| Deal | Amount | Stage | Close Date | Status |
-|------|--------|-------|------------|--------|
-| [Deal] | $[X] | [Stage] | [Date] | [Status] |
+### 3. [3순위]
+**이유:** [근거]
+**조치:** [다음 단계]
 
 ---
 
-## Risk Flags
+## 거래 우선순위 매트릭스
 
-### Stale Deals (No Activity 14+ Days)
-| Deal | Amount | Last Activity | Days Silent | Recommendation |
-|------|--------|---------------|-------------|----------------|
-| [Deal] | $[X] | [Date] | [X] | [Re-engage / Downgrade / Remove] |
+### 이번 주 성사 목표 (여기에 집중)
+| 거래 | 금액 | 단계 | 마감일 | 다음 조치 |
+|------|------|------|--------|-----------|
+| [거래] | $[X] | [단계] | [날짜] | [조치] |
 
-### Stuck Deals (Same Stage 30+ Days)
-| Deal | Amount | Stage | Days in Stage | Recommendation |
-|------|--------|-------|---------------|----------------|
-| [Deal] | $[X] | [Stage] | [X] | [Push / Multi-thread / Qualify out] |
+### 이번 달 성사 목표 (온도 유지)
+| 거래 | 금액 | 단계 | 마감일 | 상태 |
+|------|------|------|--------|------|
+| [거래] | $[X] | [단계] | [날짜] | [상태] |
 
-### Past Close Date
-| Deal | Amount | Close Date | Days Overdue | Recommendation |
-|------|--------|------------|--------------|----------------|
-| [Deal] | $[X] | [Date] | [X] | [Update date / Push to next quarter / Close lost] |
-
-### Single-Threaded (Only One Contact)
-| Deal | Amount | Contact | Risk | Recommendation |
-|------|--------|---------|------|----------------|
-| [Deal] | $[X] | [Name] | Champion leaves = deal dies | [Identify additional stakeholders] |
+### 육성 (주기적 체크인)
+| 거래 | 금액 | 단계 | 마감일 | 상태 |
+|------|------|------|--------|------|
+| [거래] | $[X] | [단계] | [날짜] | [상태] |
 
 ---
 
-## Hygiene Issues
+## 리스크 플래그
 
-| Issue | Count | Deals | Action |
-|-------|-------|-------|--------|
-| Missing close date | [X] | [List] | Add realistic close dates |
-| Missing amount | [X] | [List] | Estimate or qualify |
-| Missing next step | [X] | [List] | Define next action |
-| No primary contact | [X] | [List] | Assign contact |
+### 정체 거래 (14일 이상 활동 없음)
+| 거래 | 금액 | 최근 활동 | 미활동 일수 | 권고 사항 |
+|------|------|----------|------------|-----------|
+| [거래] | $[X] | [날짜] | [X] | [재접근 / 단계 하향 / 제거] |
+
+### 중단 거래 (동일 단계 30일 이상)
+| 거래 | 금액 | 단계 | 해당 단계 체류 일수 | 권고 사항 |
+|------|------|------|------------------|-----------|
+| [거래] | $[X] | [단계] | [X] | [추진 / 다중 스레드 / 부적격 처리] |
+
+### 마감일 경과
+| 거래 | 금액 | 마감일 | 초과 일수 | 권고 사항 |
+|------|------|--------|----------|-----------|
+| [거래] | $[X] | [날짜] | [X] | [날짜 업데이트 / 다음 분기로 연기 / 실주 처리] |
+
+### 단일 스레드 (담당자 1명만)
+| 거래 | 금액 | 담당자 | 리스크 | 권고 사항 |
+|------|------|--------|--------|-----------|
+| [거래] | $[X] | [이름] | 챔피언 이탈 시 거래 소멸 | [추가 이해관계자 파악] |
 
 ---
 
-## Pipeline Shape
+## 위생 이슈
 
-### By Stage
-| Stage | # Deals | Value | % of Pipeline |
-|-------|---------|-------|---------------|
-| [Stage] | [X] | $[X] | [X]% |
+| 이슈 | 건수 | 거래 목록 | 조치 |
+|------|------|----------|------|
+| 마감일 누락 | [X] | [목록] | 현실적인 마감일 추가 |
+| 금액 누락 | [X] | [목록] | 추정 또는 자격 심사 |
+| 다음 단계 누락 | [X] | [목록] | 다음 조치 정의 |
+| 주요 담당자 없음 | [X] | [목록] | 담당자 배정 |
 
-### By Close Month
-| Month | # Deals | Value |
-|-------|---------|-------|
-| [Month] | [X] | $[X] |
+---
 
-### By Deal Size
-| Size | # Deals | Value |
-|------|---------|-------|
+## 파이프라인 구조
+
+### 단계별
+| 단계 | 거래 수 | 금액 | 파이프라인 비율 |
+|------|---------|------|----------------|
+| [단계] | [X] | $[X] | [X]% |
+
+### 마감 월별
+| 월 | 거래 수 | 금액 |
+|----|---------|------|
+| [월] | [X] | $[X] |
+
+### 거래 규모별
+| 규모 | 거래 수 | 금액 |
+|------|---------|------|
 | $100K+ | [X] | $[X] |
 | $50K-100K | [X] | $[X] |
 | $25K-50K | [X] | $[X] |
@@ -184,59 +184,59 @@ BigCo - $100K - Discovery - closes Mar 30 - created last week
 
 ---
 
-## Recommendations
+## 권고 사항
 
-### This Week
-1. [ ] [Specific action for priority deal 1]
-2. [ ] [Action for at-risk deal]
-3. [ ] [Hygiene task]
+### 이번 주
+1. [ ] [우선 거래 1에 대한 구체적 조치]
+2. [ ] [리스크 거래에 대한 조치]
+3. [ ] [위생 작업]
 
-### This Month
-1. [ ] [Strategic action]
-2. [ ] [Pipeline building if needed]
+### 이번 달
+1. [ ] [전략적 조치]
+2. [ ] [필요 시 파이프라인 확대]
 
 ---
 
-## Deals to Consider Removing
+## 제거 검토 대상 거래
 
-These deals may be dead weight:
+다음 거래는 파이프라인의 불필요한 부담일 수 있습니다:
 
-| Deal | Amount | Reason | Recommendation |
-|------|--------|--------|----------------|
-| [Deal] | $[X] | [No activity 60+ days, no response] | Mark closed-lost |
-| [Deal] | $[X] | [Pushed 3+ times, no champion] | Qualify out |
+| 거래 | 금액 | 사유 | 권고 사항 |
+|------|------|------|-----------|
+| [거래] | $[X] | [60일 이상 활동 없음, 무응답] | 실주 처리 |
+| [거래] | $[X] | [3회 이상 연기, 챔피언 없음] | 부적격 처리 |
 ```
 
 ---
 
-## Prioritization Framework
+## 우선순위 프레임워크
 
-I'll rank your deals using this framework:
+다음 프레임워크를 사용하여 거래 순위를 매깁니다:
 
-| Factor | Weight | What I Look For |
-|--------|--------|-----------------|
-| **Close Date** | 30% | Deals closing soonest get priority |
-| **Deal Size** | 25% | Bigger deals = more focus |
-| **Stage** | 20% | Later stage = more focus |
-| **Activity** | 15% | Active deals get prioritized |
-| **Risk** | 10% | Lower risk = safer bet |
+| 요소 | 가중치 | 확인 사항 |
+|------|--------|-----------|
+| **마감일** | 30% | 마감이 임박한 거래 우선 |
+| **거래 규모** | 25% | 대형 거래 = 더 많은 집중 |
+| **단계** | 20% | 후반 단계 = 더 많은 집중 |
+| **활동** | 15% | 활발한 거래 우선 |
+| **리스크** | 10% | 낮은 리스크 = 더 안전한 선택 |
 
-You can tell me to weight differently: "Focus on big deals over soon deals" or "I need quick wins, prioritize close dates."
-
----
-
-## If CRM Connected
-
-- I'll pull your pipeline automatically
-- Update records with new close dates, stages, next steps
-- Create follow-up tasks
-- Track hygiene improvements over time
+가중치 변경을 요청할 수 있습니다: "대형 거래에 집중해 주세요" 또는 "빠른 성과가 필요하니 마감일 기준으로 우선순위를 매겨 주세요."
 
 ---
 
-## Tips
+## CRM 연결 시
 
-1. **Review weekly** — Pipeline health decays fast. Weekly reviews catch issues early.
-2. **Kill dead deals** — Stale opportunities inflate your pipeline and distort forecasts. Be ruthless.
-3. **Multi-thread everything** — If one person goes dark, you need a backup contact.
-4. **Close dates should mean something** — A close date is when you expect signature, not when you hope for one.
+- 파이프라인을 자동으로 가져옵니다
+- 새로운 마감일, 단계, 다음 단계로 기록을 업데이트합니다
+- 후속 조치 작업을 생성합니다
+- 시간 경과에 따른 위생 개선을 추적합니다
+
+---
+
+## 팁
+
+1. **주간 리뷰** — 파이프라인 건강 상태는 빠르게 악화됩니다. 주간 리뷰로 이슈를 조기에 포착하세요.
+2. **죽은 거래 정리** — 정체된 영업 기회는 파이프라인을 부풀리고 예측을 왜곡합니다. 과감하게 정리하세요.
+3. **모든 거래에 다중 스레드** — 한 사람이 연락 두절되면 백업 담당자가 필요합니다.
+4. **마감일은 의미가 있어야** — 마감일은 서명을 기대하는 날이지, 희망하는 날이 아닙니다.

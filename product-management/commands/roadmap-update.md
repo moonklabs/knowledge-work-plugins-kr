@@ -1,99 +1,99 @@
 ---
-description: Update, create, or reprioritize your product roadmap
-argument-hint: "<update description>"
+description: 제품 로드맵을 업데이트, 생성 또는 재우선순위화합니다
+argument-hint: "<업데이트 설명>"
 ---
 
-# Roadmap Update
+# 로드맵 업데이트
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 참조하세요.
 
-Update, create, or reprioritize a product roadmap.
+제품 로드맵을 업데이트, 생성 또는 재우선순위화합니다.
 
-## Workflow
+## 워크플로우
 
-### 1. Understand Current State
+### 1. 현재 상태 파악
 
-If **~~project tracker** is connected:
-- Pull current roadmap items with their statuses, assignees, and dates
-- Identify items that are overdue, at risk, or recently completed
-- Surface any items without clear owners or dates
+**~~project tracker**가 연결된 경우:
+- 현재 로드맵 항목의 상태, 담당자, 날짜를 가져옵니다
+- 지연, 위험 상태, 또는 최근 완료된 항목을 식별합니다
+- 명확한 담당자나 날짜가 없는 항목을 파악합니다
 
-If no project management tool is connected:
-- Ask the user to describe their current roadmap or paste/upload it
-- Accept any format: list, table, spreadsheet, screenshot, or prose description
+프로젝트 관리 도구가 연결되지 않은 경우:
+- 사용자에게 현재 로드맵을 설명하거나 붙여넣기/업로드하도록 요청합니다
+- 목록, 표, 스프레드시트, 스크린샷, 또는 서술 형식 등 어떤 형식이든 수용합니다
 
-### 2. Determine the Operation
+### 2. 작업 유형 확인
 
-Ask what the user wants to do:
+사용자에게 무엇을 하고 싶은지 확인합니다:
 
-**Add item**: New feature, initiative, or work item to the roadmap
-- Gather: name, description, priority, estimated effort, target timeframe, owner, dependencies
-- Suggest where it fits based on current priorities and capacity
+**항목 추가**: 새로운 기능, 이니셔티브, 또는 작업 항목을 로드맵에 추가
+- 수집할 정보: 이름, 설명, 우선순위, 예상 공수, 목표 시기, 담당자, 의존성
+- 현재 우선순위와 역량을 고려하여 적합한 위치를 제안합니다
 
-**Update status**: Change status of existing items
-- Options: not started, in progress, at risk, blocked, completed, cut
-- For "at risk" or "blocked": ask for the blocker and mitigation plan
+**상태 업데이트**: 기존 항목의 상태 변경
+- 옵션: 미착수, 진행 중, 위험, 차단됨, 완료, 제외
+- "위험" 또는 "차단됨"의 경우: 차단 요인과 대응 방안을 확인합니다
 
-**Reprioritize**: Change the order or priority of items
-- Ask what changed (new information, strategy shift, resource change, customer feedback)
-- Apply a prioritization framework if helpful — see the **roadmap-management** skill for RICE, MoSCoW, ICE, and value-vs-effort frameworks
-- Show before/after comparison
+**재우선순위화**: 항목의 순서나 우선순위 변경
+- 무엇이 변경되었는지 확인합니다 (새로운 정보, 전략 변경, 리소스 변동, 고객 피드백)
+- 필요한 경우 우선순위 프레임워크를 적용합니다 — RICE, MoSCoW, ICE, 가치 대 노력 프레임워크는 **roadmap-management** 스킬을 참조하세요
+- 변경 전후 비교를 보여줍니다
 
-**Move timeline**: Shift dates for items
-- Ask why (scope change, dependency slip, resource constraint)
-- Identify downstream impacts on dependent items
-- Flag items that move past hard deadlines
+**일정 변경**: 항목의 날짜 이동
+- 이유를 확인합니다 (범위 변경, 의존성 지연, 리소스 제약)
+- 의존 관계에 있는 항목에 미치는 하류 영향을 식별합니다
+- 확정 기한을 넘기는 항목을 표시합니다
 
-**Create new roadmap**: Build a roadmap from scratch
-- Ask about timeframe (quarter, half, year)
-- Ask about format preference (Now/Next/Later, quarterly columns, OKR-aligned)
-- Gather the list of initiatives to include
+**새 로드맵 생성**: 처음부터 로드맵 구축
+- 기간을 확인합니다 (분기, 반기, 연간)
+- 선호하는 형식을 확인합니다 (Now/Next/Later, 분기별 칼럼, OKR 연계)
+- 포함할 이니셔티브 목록을 수집합니다
 
-### 3. Generate Roadmap Summary
+### 3. 로드맵 요약 생성
 
-Produce a roadmap view with:
+다음을 포함한 로드맵 뷰를 작성합니다:
 
-#### Status Overview
-Quick summary: X items in progress, Y completed this period, Z at risk.
+#### 상태 개요
+간략한 요약: 진행 중 X개, 이번 기간 완료 Y개, 위험 상태 Z개.
 
-#### Roadmap Items
-For each item, show:
-- Name and one-line description
-- Status indicator (on track / at risk / blocked / completed / not started)
-- Target timeframe or date
-- Owner
-- Key dependencies
+#### 로드맵 항목
+각 항목별로 표시:
+- 이름 및 한 줄 설명
+- 상태 표시 (순조 / 위험 / 차단됨 / 완료 / 미착수)
+- 목표 시기 또는 날짜
+- 담당자
+- 주요 의존성
 
-Group items by:
-- Timeframe (Now / Next / Later) or quarter, depending on format
-- Or by theme/goal if the user prefers
+다음 기준으로 그룹화:
+- 시기 (Now / Next / Later) 또는 분기별 (형식에 따라)
+- 또는 사용자가 선호하는 경우 테마/목표별로
 
-#### Risks and Dependencies
-- Items that are blocked or at risk, with details
-- Cross-team dependencies and their status
-- Items approaching hard deadlines
+#### 리스크 및 의존성
+- 차단되었거나 위험 상태인 항목 (상세 내용 포함)
+- 팀 간 의존성 및 그 상태
+- 확정 기한이 임박한 항목
 
-#### Changes This Update
-If this is an update to an existing roadmap, summarize what changed:
-- Items added, removed, or reprioritized
-- Timeline shifts
-- Status changes
+#### 이번 업데이트 변경 사항
+기존 로드맵의 업데이트인 경우, 변경 사항을 요약합니다:
+- 추가, 제거 또는 재우선순위화된 항목
+- 일정 변경
+- 상태 변경
 
-### 4. Follow Up
+### 4. 후속 조치
 
-After generating the roadmap:
-- Offer to format for a specific audience (executive summary, engineering detail, customer-facing)
-- Offer to draft communication about roadmap changes
-- If project management tool is connected, offer to update ticket statuses
+로드맵 생성 후:
+- 특정 대상에 맞는 형식 (경영진 요약, 엔지니어링 상세, 고객 대상)을 제안합니다
+- 로드맵 변경에 대한 커뮤니케이션 초안 작성을 제안합니다
+- 프로젝트 관리 도구가 연결된 경우, 티켓 상태 업데이트를 제안합니다
 
-## Output Format
+## 출력 형식
 
-Use a clear, scannable format. Tables work well for roadmap items. Use text status labels: **Done**, **On Track**, **At Risk**, **Blocked**, **Not Started**.
+명확하고 훑어보기 쉬운 형식을 사용합니다. 로드맵 항목에는 표가 효과적입니다. 텍스트 상태 레이블을 사용합니다: **완료**, **순조**, **위험**, **차단됨**, **미착수**.
 
-## Tips
+## 팁
 
-- A roadmap is a communication tool, not a project plan. Keep it at the right altitude — themes and outcomes, not tasks.
-- When reprioritizing, always ask what changed. Priority shifts should be driven by new information, not whim.
-- Flag capacity issues early. If the roadmap has more work than the team can handle, say so.
-- Dependencies are the biggest risk to roadmaps. Surface them explicitly.
-- If the user asks to add something, always ask what comes off or moves. Roadmaps are zero-sum against capacity.
+- 로드맵은 프로젝트 계획이 아닌 커뮤니케이션 도구입니다. 적절한 추상화 수준을 유지합니다 — 작업이 아닌 테마와 성과를 다룹니다.
+- 재우선순위화할 때는 항상 무엇이 변했는지 확인합니다. 우선순위 변경은 새로운 정보에 의해 이루어져야 하며, 기분에 따라 바뀌어서는 안 됩니다.
+- 역량 이슈는 일찍 알립니다. 로드맵의 작업량이 팀이 감당할 수 있는 양을 초과하면 솔직히 말합니다.
+- 의존성은 로드맵의 가장 큰 리스크입니다. 명시적으로 표면화합니다.
+- 사용자가 무언가를 추가하려고 하면, 항상 무엇을 빼거나 이동할 것인지 확인합니다. 로드맵은 역량에 대한 제로섬입니다.

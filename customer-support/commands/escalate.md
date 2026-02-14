@@ -1,115 +1,115 @@
 ---
-description: Package an escalation for engineering, product, or leadership with full context
-argument-hint: "<issue summary> [customer name]"
+description: 엔지니어링, 프로덕트 또는 리더십을 위한 전체 컨텍스트가 포함된 에스컬레이션 패키징
+argument-hint: "<이슈 요약> [고객명]"
 ---
 
-# Escalate
+# 에스컬레이션
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 참조하십시오.
 
-Package a support issue into a structured escalation brief for engineering, product, or leadership. Gathers context, structures reproduction steps, assesses business impact, and identifies the right escalation target.
+지원 이슈를 엔지니어링, 프로덕트 또는 리더십을 위한 구조화된 에스컬레이션 브리프로 패키징합니다. 컨텍스트를 수집하고, 재현 단계를 구조화하며, 비즈니스 영향도를 평가하고, 적절한 에스컬레이션 대상을 식별합니다.
 
-## Usage
-
-```
-/escalate <issue description> [customer name or account]
-```
-
-Examples:
-- `/escalate API returning 500 errors intermittently for Acme Corp`
-- `/escalate Data export is missing rows — 3 customers reported this week`
-- `/escalate SSO login loop affecting all Enterprise customers`
-- `/escalate Customer threatening to churn over missing audit log feature`
-
-## Workflow
-
-### 1. Understand the Issue
-
-Parse the input and determine:
-
-- **What's broken or needed**: The core technical or product issue
-- **Who's affected**: Specific customer(s), segment, or all users
-- **How long**: When did this start? How long has the customer been waiting?
-- **What's been tried**: Any troubleshooting or workarounds attempted
-- **Why escalate now**: What makes this need attention beyond normal support
-
-Use the "When to Escalate vs. Handle in Support" criteria from the **escalation** skill to confirm this warrants escalation.
-
-### 2. Gather Context
-
-Pull together relevant information from available sources:
-
-- **~~support platform**: Related tickets, timeline of communications, previous troubleshooting
-- **~~CRM** (if connected): Account details, key contacts, previous escalations
-- **~~chat**: Internal discussions about this issue, similar reports from other customers
-- **~~project tracker** (if connected): Related bug reports or feature requests, engineering status
-- **~~knowledge base**: Known issues or workarounds, relevant documentation
-
-### 3. Assess Business Impact
-
-Using the impact dimensions from the **escalation** skill, quantify:
-
-- **Breadth**: How many customers/users affected? Growing?
-- **Depth**: Blocked vs. inconvenienced?
-- **Duration**: How long has this been going on?
-- **Revenue**: ARR at risk? Pending deals affected?
-- **Time pressure**: Hard deadline?
-
-### 4. Determine Escalation Target
-
-Using the escalation tiers from the **escalation** skill, identify the right target: L2 Support, Engineering, Product, Security, or Leadership.
-
-### 5. Structure Reproduction Steps (for bugs)
-
-If the issue is a bug, follow the reproduction step best practices from the **escalation** skill to document clear repro steps with environment details and evidence.
-
-### 6. Generate Escalation Brief
+## 사용법
 
 ```
-## ESCALATION: [One-line summary]
-
-**Severity:** [Critical / High / Medium]
-**Target team:** [Engineering / Product / Security / Leadership]
-**Reported by:** [Your name/team]
-**Date:** [Today's date]
-
-### Impact
-- **Customers affected:** [Who and how many]
-- **Workflow impact:** [What they can't do]
-- **Revenue at risk:** [If applicable]
-- **Time in queue:** [How long this has been an issue]
-
-### Issue Description
-[Clear, concise description of the problem — 3-5 sentences]
-
-### What's Been Tried
-1. [Troubleshooting step and result]
-2. [Troubleshooting step and result]
-3. [Troubleshooting step and result]
-
-### Reproduction Steps
-[If applicable — follow the format from the escalation skill]
-
-### Customer Communication
-- **Last update to customer:** [Date and what was communicated]
-- **Customer expectation:** [What they're expecting and by when]
-- **Escalation risk:** [Will they escalate further if not resolved by X?]
-
-### What's Needed
-- [Specific ask — "investigate root cause", "prioritize fix",
-  "make product decision on X", "approve exception for Y"]
-- **Deadline:** [When this needs resolution or an update]
-
-### Supporting Context
-- [Related tickets or links]
-- [Internal discussion threads]
-- [Documentation or logs]
+/escalate <이슈 설명> [고객명 또는 계정]
 ```
 
-### 7. Offer Next Steps
+예시:
+- `/escalate Acme Corp에서 간헐적으로 500 API 에러가 발생하고 있습니다`
+- `/escalate 데이터 내보내기에서 행이 누락되었습니다 — 이번 주에 3곳의 고객으로부터 보고되었습니다`
+- `/escalate 모든 Enterprise 고객에게 영향을 주는 SSO 로그인 무한 루프`
+- `/escalate 감사 로그 기능 미비로 인한 고객의 이탈(churn) 가능성`
 
-After generating the escalation:
-- "Want me to post this in a ~~chat channel for the target team?"
-- "Should I update the customer with an interim response?"
-- "Want me to set a follow-up reminder to check on this?"
-- "Should I draft a customer-facing update with the current status?"
+## 워크플로우
+
+### 1. 이슈 파악
+
+입력을 분석하여 다음을 파악합니다:
+
+- **장애 또는 필요 사항**: 핵심 기술 또는 프로덕트 이슈
+- **영향 대상**: 특정 고객, 세그먼트 또는 전체 사용자
+- **기간**: 언제 시작되었는지, 고객이 얼마나 기다렸는지
+- **시도된 조치**: 수행된 트러블슈팅 또는 해결 방법
+- **에스컬레이션 사유**: 일반 지원 범위를 넘어 주의가 필요한 이유
+
+**escalation** 스킬의 "에스컬레이션 vs. 지원 내 처리" 기준을 사용하여 에스컬레이션이 타당한지 확인합니다.
+
+### 2. 컨텍스트 수집
+
+사용 가능한 소스에서 관련 정보를 취합합니다:
+
+- **~~support platform**: 관련 티켓, 커뮤니케이션 타임라인, 이전 트러블슈팅
+- **~~CRM** (연결된 경우): 계정 정보, 주요 연락처, 이전 에스컬레이션
+- **~~chat**: 해당 이슈에 대한 내부 논의, 다른 고객의 유사 보고
+- **~~project tracker** (연결된 경우): 관련 버그 리포트 또는 기능 요청, 엔지니어링 상태
+- **~~knowledge base**: 알려진 이슈 또는 해결 방법, 관련 문서
+
+### 3. 비즈니스 영향도 평가
+
+**escalation** 스킬의 영향도 차원을 사용하여 다음을 정량화합니다:
+
+- **범위**: 영향받는 고객/사용자 수, 증가 추세 여부
+- **심각도**: 완전 차단 vs. 불편 수준
+- **기간**: 발생 기간
+- **매출**: 위험에 처한 ARR, 영향받는 진행 중인 거래
+- **시간 압박**: 하드 데드라인 존재 여부
+
+### 4. 에스컬레이션 대상 결정
+
+**escalation** 스킬의 에스컬레이션 등급을 사용하여 적절한 대상을 식별합니다: L2 지원, 엔지니어링, 프로덕트, 보안 또는 리더십.
+
+### 5. 재현 단계 구조화 (버그의 경우)
+
+이슈가 버그인 경우, **escalation** 스킬의 재현 단계 모범 사례에 따라 환경 세부 정보와 증거를 포함한 명확한 재현 단계를 문서화합니다.
+
+### 6. 에스컬레이션 브리프 생성
+
+```
+## 에스컬레이션: [한줄 요약]
+
+**심각도:** [긴급 / 높음 / 보통]
+**대상 팀:** [엔지니어링 / 프로덕트 / 보안 / 리더십]
+**보고자:** [귀하의 이름/팀]
+**날짜:** [오늘 날짜]
+
+### 영향도
+- **영향받는 고객:** [누구이며 몇 명인지]
+- **업무 영향:** [고객이 할 수 없는 작업]
+- **위험에 처한 매출:** [해당하는 경우]
+- **대기 시간:** [이슈가 발생한 기간]
+
+### 이슈 설명
+[문제에 대한 명확하고 간결한 설명 — 3-5문장]
+
+### 시도된 조치
+1. [트러블슈팅 단계 및 결과]
+2. [트러블슈팅 단계 및 결과]
+3. [트러블슈팅 단계 및 결과]
+
+### 재현 단계
+[해당하는 경우 — escalation 스킬의 형식 따름]
+
+### 고객 커뮤니케이션
+- **고객에게 마지막 업데이트:** [날짜 및 전달 내용]
+- **고객 기대사항:** [고객이 기대하는 것과 그 시점]
+- **에스컬레이션 위험:** [X까지 해결되지 않으면 추가 에스컬레이션 가능성?]
+
+### 필요 사항
+- [구체적 요청 — "근본 원인 조사", "수정 우선순위 지정",
+  "X에 대한 제품 결정", "Y에 대한 예외 승인"]
+- **마감일:** [해결 또는 업데이트가 필요한 시점]
+
+### 지원 컨텍스트
+- [관련 티켓 또는 링크]
+- [내부 논의 스레드]
+- [문서 또는 로그]
+```
+
+### 7. 다음 단계 제안
+
+에스컬레이션을 생성한 후:
+- "대상 팀의 ~~chat 채널에 이 내용을 게시할까요?"
+- "고객에게 중간 응답을 보낼까요?"
+- "이 건에 대한 후속 확인 리마인더를 설정할까요?"
+- "현재 상태를 포함한 고객 대면 업데이트를 작성할까요?"

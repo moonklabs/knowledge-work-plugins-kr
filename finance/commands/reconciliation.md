@@ -1,147 +1,147 @@
 ---
-description: Reconcile GL balances to subledger, bank, or third-party balances
-argument-hint: "<account> [period]"
+description: 총계정원장 잔액을 보조원장, 은행 또는 제3자 잔액과 조정합니다
+argument-hint: "<계정> [기간]"
 ---
 
-# Account Reconciliation
+# 계정 조정
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인해야 하는 경우, [CONNECTORS.md](../CONNECTORS.md)를 참조하십시오.
 
-**Important**: This command assists with reconciliation workflows but does not provide financial advice. All reconciliations should be reviewed by qualified financial professionals before sign-off.
+**중요**: 이 커맨드는 계정 조정 워크플로우를 지원하지만 재무 자문을 제공하지는 않습니다. 모든 조정은 승인 전에 자격을 갖춘 재무 전문가의 검토를 받아야 합니다.
 
-Reconcile GL account balances to subledger, bank, or third-party balances. Identify and categorize reconciling items and generate a reconciliation workpaper.
+총계정원장 계정 잔액을 보조원장, 은행 또는 제3자 잔액과 조정합니다. 조정 항목을 식별 및 분류하고 조정 조서를 생성합니다.
 
-## Usage
+## 사용법
 
 ```
 /recon <account> <period>
 ```
 
-### Arguments
+### 인수
 
-- `account` — The account or account category to reconcile. Examples:
-  - `cash` or `bank` — Bank reconciliation (GL cash to bank statement)
-  - `accounts-receivable` or `ar` — AR subledger reconciliation
-  - `accounts-payable` or `ap` — AP subledger reconciliation
-  - `fixed-assets` or `fa` — Fixed asset subledger reconciliation
-  - `intercompany` or `ic` — Intercompany balance reconciliation
-  - `prepaid` — Prepaid expense schedule reconciliation
-  - `accrued-liabilities` — Accrued liabilities detail reconciliation
-  - Any specific GL account code (e.g., `1010`, `2100`)
-- `period` — The accounting period end date (e.g., `2024-12`, `2024-12-31`)
+- `account` — 조정할 계정 또는 계정 카테고리. 예시:
+  - `cash` 또는 `bank` — 은행 조정 (총계정원장 현금 대 은행 잔액증명서)
+  - `accounts-receivable` 또는 `ar` — 매출채권 보조원장 조정
+  - `accounts-payable` 또는 `ap` — 매입채무 보조원장 조정
+  - `fixed-assets` 또는 `fa` — 고정자산 보조원장 조정
+  - `intercompany` 또는 `ic` — 회사간 잔액 조정
+  - `prepaid` — 선급비용 일정 조정
+  - `accrued-liabilities` — 미지급비용 내역 조정
+  - 특정 총계정원장 계정 코드 (예: `1010`, `2100`)
+- `period` — 회계 기간 말일 (예: `2024-12`, `2024-12-31`)
 
-## Workflow
+## 워크플로우
 
-### 1. Gather Both Sides of the Reconciliation
+### 1. 조정의 양쪽 데이터 수집
 
-If ~~erp or ~~data warehouse is connected:
-- Pull the GL balance for the specified account(s) as of period end
-- Pull the subledger, bank statement, or third-party balance for comparison
-- Pull prior period reconciliation (if available) for outstanding item carryforward
+~~erp 또는 ~~data warehouse가 연결된 경우:
+- 기말 기준 해당 계정의 총계정원장 잔액을 가져옵니다
+- 비교를 위한 보조원장, 은행 잔액증명서 또는 제3자 잔액을 가져옵니다
+- 미결 항목 이월을 위해 전기 조정 내역을 가져옵니다 (가능한 경우)
 
-If no data source is connected:
-> Connect ~~erp or ~~data warehouse to pull account balances automatically. To reconcile manually, provide:
-> 1. **GL side:** The general ledger balance for the account as of period end
-> 2. **Other side:** The subledger balance, bank statement balance, or third-party confirmation balance
-> 3. **Prior period outstanding items** (optional): Any reconciling items from the prior period reconciliation
+데이터 소스가 연결되지 않은 경우:
+> ~~erp 또는 ~~data warehouse를 연결하면 계정 잔액을 자동으로 가져올 수 있습니다. 수동으로 조정하려면 다음을 제공해 주십시오:
+> 1. **총계정원장 측:** 기말 기준 해당 계정의 총계정원장 잔액
+> 2. **상대 측:** 보조원장 잔액, 은행 잔액증명서 잔액 또는 제3자 확인 잔액
+> 3. **전기 미결 항목** (선택사항): 전기 조정에서의 조정 항목
 
-### 2. Compare Balances
+### 2. 잔액 비교
 
-Calculate the difference between the two sides:
-
-```
-GL Balance:                    $XX,XXX.XX
-Subledger/Bank/Other Balance:  $XX,XXX.XX
-                               ----------
-Difference:                    $XX,XXX.XX
-```
-
-### 3. Identify Reconciling Items
-
-Analyze the difference and categorize reconciling items:
-
-**Timing Differences** (items that will clear in subsequent periods):
-- Outstanding checks / payments issued but not yet cleared
-- Deposits in transit / receipts recorded but not yet credited
-- Invoices posted in one system but pending in the other
-- Accruals awaiting reversal
-
-**Permanent Differences** (items requiring adjustment):
-- Errors in recording (wrong amount, wrong account, duplicate entries)
-- Missing entries (transactions in one system but not the other)
-- Bank fees or charges not yet recorded
-- Foreign currency translation differences
-
-**Prior Period Items** (carryforward from prior reconciliation):
-- Items from prior period that have now cleared (remove from reconciliation)
-- Items from prior period still outstanding (carry forward with aging)
-
-### 4. Generate Reconciliation Workpaper
+양쪽 간의 차이를 계산합니다:
 
 ```
-ACCOUNT RECONCILIATION
-Account: [Account code] — [Account name]
-Period End: [Date]
-Prepared by: [User]
-Date Prepared: [Today]
+총계정원장 잔액:                    $XX,XXX.XX
+보조원장/은행/기타 잔액:            $XX,XXX.XX
+                                   ----------
+차이:                              $XX,XXX.XX
+```
 
-RECONCILIATION SUMMARY
+### 3. 조정 항목 식별
+
+차이를 분석하고 조정 항목을 분류합니다:
+
+**시차(Timing Differences)** (후속 기간에 소멸될 항목):
+- 미결제 수표 / 발행했으나 아직 결제되지 않은 지급
+- 미달 입금 / 기록했으나 아직 입금 처리되지 않은 수취
+- 한쪽 시스템에 전기되었으나 다른 쪽에서 처리 대기 중인 청구서
+- 반제 대기 중인 발생 분개
+
+**영구 차이(Permanent Differences)** (조정이 필요한 항목):
+- 기록 오류 (금액 오류, 계정 오류, 중복 입력)
+- 누락 분개 (한쪽 시스템에만 있고 다른 쪽에 없는 거래)
+- 아직 기록되지 않은 은행 수수료 또는 요금
+- 외화 환산 차이
+
+**전기 이월 항목** (전기 조정에서 이월):
+- 전기에서 이월되어 현재 소멸된 항목 (조정에서 제거)
+- 전기에서 이월되어 아직 미결인 항목 (경과 기간과 함께 이월)
+
+### 4. 조정 조서 생성
+
+```
+계정 조정
+계정: [계정 코드] — [계정명]
+기말일: [날짜]
+작성자: [사용자]
+작성일: [오늘]
+
+조정 요약
 =======================
 
-Balance per General Ledger:              $XX,XXX.XX
+총계정원장 잔액:                         $XX,XXX.XX
 
-Add: Reconciling items increasing GL
-  [Item description]                     $X,XXX.XX
-  [Item description]                     $X,XXX.XX
+가산: 총계정원장 증가 조정 항목
+  [항목 설명]                            $X,XXX.XX
+  [항목 설명]                            $X,XXX.XX
                                          ---------
-  Subtotal additions:                    $X,XXX.XX
+  가산 소계:                             $X,XXX.XX
 
-Less: Reconciling items decreasing GL
-  [Item description]                    ($X,XXX.XX)
-  [Item description]                    ($X,XXX.XX)
+차감: 총계정원장 감소 조정 항목
+  [항목 설명]                           ($X,XXX.XX)
+  [항목 설명]                           ($X,XXX.XX)
                                          ---------
-  Subtotal deductions:                  ($X,XXX.XX)
+  차감 소계:                            ($X,XXX.XX)
 
-Adjusted GL Balance:                     $XX,XXX.XX
+조정 총계정원장 잔액:                    $XX,XXX.XX
 
-Balance per [Subledger/Bank/Other]:      $XX,XXX.XX
+보조원장/은행/기타 잔액:                 $XX,XXX.XX
 
-Add: Reconciling items
-  [Item description]                     $X,XXX.XX
+가산: 조정 항목
+  [항목 설명]                            $X,XXX.XX
 
-Less: Reconciling items
-  [Item description]                    ($X,XXX.XX)
+차감: 조정 항목
+  [항목 설명]                           ($X,XXX.XX)
 
-Adjusted [Other] Balance:                $XX,XXX.XX
+조정 잔액:                               $XX,XXX.XX
 
-DIFFERENCE:                              $0.00
+차이:                                    $0.00
 ```
 
-### 5. Reconciling Items Detail
+### 5. 조정 항목 상세
 
-Present each reconciling item with:
+각 조정 항목에 대해 다음을 표시합니다:
 
-| # | Description | Amount | Category | Age (Days) | Status | Action Required |
-|---|-------------|--------|----------|------------|--------|-----------------|
-| 1 | [Detail]    | $X,XXX | Timing   | 5          | Expected to clear | Monitor |
-| 2 | [Detail]    | $X,XXX | Error    | N/A        | Requires correction | Post adjusting JE |
+| # | 설명 | 금액 | 분류 | 경과일수 | 상태 | 필요 조치 |
+|---|------|------|------|----------|------|-----------|
+| 1 | [상세] | $X,XXX | 시차 | 5일 | 소멸 예상 | 모니터링 |
+| 2 | [상세] | $X,XXX | 오류 | 해당 없음 | 수정 필요 | 조정 분개 전기 |
 
-### 6. Review and Escalation
+### 6. 검토 및 에스컬레이션
 
-Flag items that require attention:
+주의가 필요한 항목을 표시합니다:
 
-- **Aged items:** Reconciling items outstanding more than 30/60/90 days
-- **Large items:** Individual items exceeding materiality thresholds
-- **Growing balances:** Reconciling item totals increasing period over period
-- **Unresolved prior period items:** Items carried forward without resolution
-- **Unexplained differences:** Amounts that cannot be tied to specific transactions
+- **경과 항목:** 30/60/90일 이상 미결 상태인 조정 항목
+- **대규모 항목:** 중요성 기준을 초과하는 개별 항목
+- **잔액 증가:** 기간별로 증가하는 조정 항목 합계
+- **미해결 전기 항목:** 해결 없이 이월되는 항목
+- **설명 불가 차이:** 특정 거래에 연결할 수 없는 금액
 
-### 7. Output
+### 7. 결과물
 
-Provide:
-1. The formatted reconciliation workpaper
-2. List of reconciling items with categorization and aging
-3. Required adjusting entries (if any permanent differences identified)
-4. Action items for items requiring follow-up
-5. Comparison to prior period reconciliation (if available)
-6. Sign-off section for preparer and reviewer
+다음을 제공합니다:
+1. 형식화된 조정 조서
+2. 분류 및 경과 기간이 포함된 조정 항목 목록
+3. 필요한 조정 분개 (영구 차이가 식별된 경우)
+4. 후속 조치가 필요한 항목의 실행 목록
+5. 전기 조정과의 비교 (가능한 경우)
+6. 작성자 및 검토자 서명 섹션

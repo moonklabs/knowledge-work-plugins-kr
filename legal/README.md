@@ -1,212 +1,212 @@
-# Legal Productivity Plugin
+# 법무 생산성 플러그인
 
-An AI-powered productivity plugin for in-house legal teams, primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Automates contract review, NDA triage, compliance workflows, legal briefings, and templated responses -- all configurable to your organization's specific playbook and risk tolerances.
+사내 법무팀을 위한 AI 기반 생산성 플러그인으로, Anthropic의 에이전트형 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었으며 Claude Code에서도 사용할 수 있습니다. 계약서 검토, NDA 분류, 컴플라이언스 워크플로우, 법률 브리핑, 템플릿 기반 응답을 자동화하며, 조직의 고유한 플레이북과 리스크 허용 범위에 맞게 구성할 수 있습니다.
 
-> **Disclaimer:** This plugin assists with legal workflows but does not provide legal advice. Always verify conclusions with qualified legal professionals. AI-generated analysis should be reviewed by licensed attorneys before being relied upon for legal decisions.
+> **면책 조항:** 이 플러그인은 법률 워크플로우를 지원하지만 법률 자문을 제공하지는 않습니다. 결론은 항상 자격을 갖춘 법률 전문가와 확인해야 합니다. AI가 생성한 분석은 법적 결정에 활용하기 전에 반드시 자격을 갖춘 변호사의 검토를 받아야 합니다.
 
-## Target Personas
+## 대상 사용자
 
-- **Commercial Counsel** -- Contract negotiation, vendor management, deal support
-- **Product Counsel** -- Product reviews, terms of service, privacy policies, IP matters
-- **Privacy / Compliance** -- Data protection regulations, DPA reviews, data subject requests, regulatory monitoring
-- **Litigation Support** -- Discovery holds, document review prep, case briefings
+- **상사 법무 담당자** -- 계약서 협상, 벤더 관리, 딜 지원
+- **제품 법무 담당자** -- 제품 검토, 서비스 약관, 개인정보 처리방침, 지적 재산권(IP) 관련 업무
+- **개인정보 보호/컴플라이언스 담당자** -- 데이터 보호 규정, DPA 검토, 정보주체 요청, 규제 모니터링
+- **소송 지원 담당자** -- 증거보전 조치, 문서 검토 준비, 사건 브리핑
 
-## Installation
-
-```
-claude plugins add knowledge-work-plugins/legal
-```
-
-## Quick Start
-
-### 1. Install the plugin
+## 설치
 
 ```
 claude plugins add knowledge-work-plugins/legal
 ```
 
-### 2. Configure your playbook
+## 빠른 시작
 
-Create a local settings file to define your organization's standard positions. This is where you encode your team's negotiation playbook, risk tolerances, and standard terms.
+### 1. 플러그인 설치
 
-In your project's `.claude/` directory, create a `legal.local.md` file:
+```
+claude plugins add knowledge-work-plugins/legal
+```
+
+### 2. 플레이북 구성
+
+조직의 표준 포지션을 정의하는 로컬 설정 파일을 생성합니다. 이곳에 팀의 협상 플레이북, 리스크 허용 범위, 표준 조건을 인코딩합니다.
+
+프로젝트의 `.claude/` 디렉토리에 `legal.local.md` 파일을 생성합니다:
 
 ```markdown
-# Legal Playbook Configuration
+# 법무 플레이북 구성
 
-## Contract Review Positions
+## 계약 검토 포지션
 
-### Limitation of Liability
-- Standard position: Mutual cap at 12 months of fees paid/payable
-- Acceptable range: 6-24 months of fees
-- Escalation trigger: Uncapped liability, consequential damages inclusion
+### 책임 제한 (Limitation of Liability)
+- 표준 포지션: 지급된/지급될 12개월분 수수료로 상호 제한
+- 허용 범위: 6~24개월분 수수료
+- 에스컬레이션 트리거: 무제한 책임, 결과적 손해(consequential damages) 포함
 
-### Indemnification
-- Standard position: Mutual indemnification for IP infringement and data breach
-- Acceptable: Indemnification limited to third-party claims only
-- Escalation trigger: Unilateral indemnification obligations, uncapped indemnification
+### 면책 (Indemnification)
+- 표준 포지션: 지식재산권(IP) 침해 및 데이터 유출에 대한 상호 면책
+- 허용 범위: 제3자 청구로 한정된 면책
+- 에스컬레이션 트리거: 일방적 면책 의무, 무제한 면책
 
-### IP Ownership
-- Standard position: Each party retains pre-existing IP; customer owns customer data
-- Escalation trigger: Broad IP assignment clauses, work-for-hire provisions for pre-existing IP
+### 지식재산권(IP) 소유권
+- 표준 포지션: 각 당사자는 기존 IP를 보유하며, 고객은 고객 데이터를 소유함
+- 에스컬레이션 트리거: 광범위한 IP 양도 조항, 기존 IP에 대한 업무상 저작물(work-for-hire) 규정
 
-### Data Protection
-- Standard position: Require DPA for any personal data processing
-- Requirements: Sub-processor notification, data deletion on termination, breach notification within 72 hours
-- Escalation trigger: No DPA offered, cross-border transfer without safeguards
+### 데이터 보호
+- 표준 포지션: 개인정보 처리 시 DPA(데이터 처리 합의서) 요구
+- 요구 사항: 하위 처리자 통지, 종료 시 데이터 삭제, 72시간 이내 유출 통지
+- 에스컬레이션 트리거: DPA 미제공, 안전장치 없는 국외 이전
 
-### Term and Termination
-- Standard position: Annual term with 30-day termination for convenience
-- Acceptable: Multi-year with termination for convenience after initial term
-- Escalation trigger: Auto-renewal without notice period, no termination for convenience
+### 기간 및 종료
+- 표준 포지션: 1년 단위 계약 및 30일 전 통지 시 임의 해지 가능
+- 허용 범위: 다년 계약이나 초기 기간 이후 임의 해지 가능
+- 에스컬레이션 트리거: 사전 통지 없는 자동 갱신, 임의 해지 불가
 
-### Governing Law
-- Preferred: [Your jurisdiction]
-- Acceptable: Major commercial jurisdictions (NY, DE, CA, England & Wales)
-- Escalation trigger: Non-standard jurisdictions, mandatory arbitration in unfavorable venue
+### 준거법
+- 선호: [해당 관할권]
+- 허용 범위: 주요 상업 관할권 (뉴욕, 델라웨어, 캘리포니아, 영국 및 웨일스)
+- 에스컬레이션 트리거: 비표준 관할권, 불리한 장소에서의 강제 중재
 
-## NDA Defaults
-- Mutual obligations required
-- Term: 2-3 years standard, 5 years for trade secrets
-- Standard carveouts: independently developed, publicly available, rightfully received from third party
-- Residuals clause: acceptable if narrowly scoped
+## NDA 기본 설정
+- 상호 의무 필수
+- 기간: 표준 2~3년, 영업 비밀의 경우 5년
+- 표준 예외 사항: 독자적 개발, 공개적으로 가용한 정보, 제3자로부터 정당하게 수령한 정보
+- 잔존 권리(Residuals) 조항: 범위가 좁게 설정된 경우 허용
 
-## Response Templates
-Configure paths to your template files or define inline templates for common inquiries.
+## 응답 템플릿
+템플릿 파일 경로를 구성하거나 일반적인 문의에 대한 인라인 템플릿을 정의합니다.
 ```
 
-### 3. Connect your tools
+### 3. 도구 연결
 
-The plugin works best when connected to your existing tools via MCP. Pre-configured servers include Slack, Box, Egnyte, Atlassian, and Microsoft 365. See [CONNECTORS.md](CONNECTORS.md) for the full list of supported categories and options.
+플러그인은 MCP를 통해 기존 도구와 연결할 때 가장 효과적입니다. 사전 구성된 서버에는 Slack, Box, Egnyte, Atlassian, Microsoft 365가 포함됩니다. 지원되는 전체 카테고리와 옵션 목록은 [CONNECTORS.md](CONNECTORS.md)를 참고하십시오.
 
-## Commands
+## 커맨드
 
-### `/review-contract` -- Contract Review Against Playbook
+### `/review-contract` -- 플레이북 기반 계약서 검토
 
-Review a contract against your organization's negotiation playbook. Flags deviations, generates redlines, and provides business impact analysis.
+조직의 협상 플레이북에 따라 계약서를 검토합니다. 편차를 표시하고, 수정안을 생성하며, 비즈니스 영향 분석을 제공합니다.
 
 ```
 /review-contract
 ```
 
-Accepts: file upload, URL, or pasted contract text. Will ask for context (your side, deadline, focus areas) and review clause-by-clause against your configured playbook.
+파일 업로드, URL 또는 붙여넣은 계약서 텍스트를 입력받습니다. 맥락(귀사의 입장, 기한, 중점 검토 영역)을 요청한 후 구성된 플레이북에 따라 조항별로 검토합니다.
 
-### `/triage-nda` -- NDA Pre-Screening
+### `/triage-nda` -- NDA 사전 심사
 
-Rapid triage of incoming NDAs against standard criteria. Categorizes as GREEN (standard approval), YELLOW (counsel review), or RED (significant issues).
+수신된 NDA를 표준 기준에 따라 신속하게 분류합니다. GREEN(표준 승인), YELLOW(법무 검토), RED(중대한 문제)로 분류합니다.
 
 ```
 /triage-nda
 ```
 
-### `/vendor-check` -- Vendor Agreement Status
+### `/vendor-check` -- 벤더 계약 현황 확인
 
-Check the status of existing agreements with a vendor across your connected systems.
+연결된 시스템 전반에서 벤더와의 기존 계약 현황을 확인합니다.
 
 ```
 /vendor-check [vendor name]
 ```
 
-Reports on existing NDAs, MSAs, DPAs, expiration dates, and key terms.
+기존 NDA, MSA, DPA, 만료일, 주요 조건을 보고합니다.
 
-### `/brief` -- Legal Team Briefing
+### `/brief` -- 법무팀 브리핑
 
-Generate contextual briefings for your legal work.
+법률 업무를 위한 맥락별 브리핑을 생성합니다.
 
 ```
-/brief daily          # Morning brief of legal-relevant items
-/brief topic [query]  # Research brief on a specific legal question
-/brief incident       # Rapid brief on a developing situation
+/brief daily          # 아침 법무 관련 사항 브리핑
+/brief topic [query]  # 특정 법률 질문에 대한 리서치 브리핑
+/brief incident       # 긴급 상황 대응 브리핑
 ```
 
-### `/respond` -- Generate Templated Response
+### `/respond` -- 템플릿 기반 응답 생성
 
-Generate a response from your configured templates for common inquiry types.
+구성된 템플릿을 사용하여 일반적인 문의 유형에 대한 응답을 생성합니다.
 
 ```
 /respond [inquiry-type]
 ```
 
-Supported inquiry types include: data subject request, discovery hold, vendor question, NDA request, and custom categories you define.
+지원되는 문의 유형: 정보주체 요청(data subject request), 증거보전 조치(discovery hold), 벤더 질의, NDA 요청, 사용자 정의 카테고리 등
 
-## Skills
+## 스킬
 
-| Skill | Description |
-|-------|-------------|
-| `contract-review` | Playbook-based contract analysis, deviation classification, redline generation |
-| `nda-triage` | NDA screening criteria, classification rules, routing recommendations |
-| `compliance` | Privacy regulations (GDPR, CCPA), DPA review, data subject requests |
-| `canned-responses` | Template management, response categories, escalation triggers |
-| `legal-risk-assessment` | Risk severity framework, classification levels, escalation criteria |
-| `meeting-briefing` | Meeting prep methodology, context gathering, action item tracking |
+| 스킬 | 설명 |
+|------|------|
+| `contract-review` | 플레이북 기반 계약서 분석, 편차 분류, 수정안 생성 |
+| `nda-triage` | NDA 심사 기준, 분류 규칙, 라우팅 권장 사항 |
+| `compliance` | 개인정보 보호 규정(GDPR, CCPA), DPA 검토, 정보주체 요청 |
+| `canned-responses` | 템플릿 관리, 응답 카테고리, 에스컬레이션 트리거 |
+| `legal-risk-assessment` | 리스크 심각도 프레임워크, 분류 수준, 에스컬레이션 기준 |
+| `meeting-briefing` | 회의 준비 방법론, 맥락 수집, 액션 아이템 추적 |
 
-## Example Workflows
+## 워크플로우 예시
 
-### Contract Review
+### 계약서 검토
 
-1. Receive a vendor contract via email
-2. Run `/review-contract` and upload the document
-3. Provide context: "We are the customer, need to close by end of quarter, focus on data protection and liability"
-4. Receive clause-by-clause analysis with GREEN/YELLOW/RED flags
-5. Get specific redline language for YELLOW and RED items
-6. Share the analysis with your deal team
+1. 이메일로 벤더 계약서 수신
+2. `/review-contract`를 실행하고 문서 업로드
+3. 맥락 제공: "당사는 구매자 측이며, 분기 말까지 마감이 필요하고, 데이터 보호와 책임 조항에 집중"
+4. GREEN/YELLOW/RED 플래그가 포함된 조항별 분석 수신
+5. YELLOW 및 RED 항목에 대한 구체적인 수정안 확인
+6. 분석 결과를 딜 팀과 공유
 
-### NDA Triage
+### NDA 분류
 
-1. Sales team sends an NDA from a new prospect
-2. Run `/triage-nda` and paste or upload the NDA
-3. Get instant classification: GREEN (route for signature), YELLOW (specific issues to review), or RED (needs full counsel review)
-4. For GREEN NDAs, approve directly; for YELLOW/RED, address flagged issues
+1. 영업팀이 신규 잠재 고객의 NDA를 전달
+2. `/triage-nda`를 실행하고 NDA를 붙여넣거나 업로드
+3. 즉시 분류 결과 확인: GREEN(서명 진행), YELLOW(검토할 특정 이슈), RED(전체 법무 검토 필요)
+4. GREEN NDA는 바로 승인, YELLOW/RED는 표시된 이슈 해결
 
-### Daily Brief
+### 일일 브리핑
 
-1. Start your morning with `/brief daily`
-2. Get a summary of overnight contract requests, compliance questions, upcoming deadlines, and calendar items needing legal prep
-3. Prioritize your day based on urgency and deadlines
+1. 아침에 `/brief daily`로 시작
+2. 야간 계약 요청, 컴플라이언스 질의, 다가오는 기한, 법무 준비가 필요한 일정 항목 요약 확인
+3. 긴급도와 기한에 따라 하루 우선순위 설정
 
-### Vendor Check
+### 벤더 현황 확인
 
-1. Business team asks about a new engagement with an existing vendor
-2. Run `/vendor-check Acme Corp`
-3. See existing agreements, expiration dates, and key terms at a glance
-4. Know immediately whether you need a new NDA or can proceed under existing terms
+1. 사업팀이 기존 벤더와의 신규 계약에 대해 문의
+2. `/vendor-check Acme Corp` 실행
+3. 기존 계약, 만료일, 주요 조건을 한눈에 확인
+4. 신규 NDA가 필요한지 또는 기존 조건으로 진행 가능한지 즉시 파악
 
-## MCP Integration
+## MCP 연동
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 어떤 도구가 연결되어 있는지 확인하려면 [CONNECTORS.md](CONNECTORS.md)를 참고하십시오.
 
-The plugin connects to your tools through MCP (Model Context Protocol) servers:
+플러그인은 MCP(Model Context Protocol) 서버를 통해 도구와 연결됩니다:
 
-| Category | Examples | Purpose |
-|----------|----------|---------|
-| Chat | Slack, Teams | Team requests, notifications, triage |
-| Cloud storage | Box, Egnyte | Playbooks, templates, precedents |
-| Office suite | Microsoft 365 | Email, calendar, documents |
-| Project tracker | Atlassian (Jira/Confluence) | Matter tracking, tasks |
+| 카테고리 | 예시 | 용도 |
+|----------|------|------|
+| 채팅 | Slack, Teams | 팀 요청, 알림, 분류 |
+| 클라우드 스토리지 | Box, Egnyte | 플레이북, 템플릿, 판례 |
+| 오피스 제품군 | Microsoft 365 | 이메일, 캘린더, 문서 |
+| 프로젝트 트래커 | Atlassian (Jira/Confluence) | 사건 추적, 작업 |
 
-See [CONNECTORS.md](CONNECTORS.md) for the full list of supported integrations, including CLM, CRM, e-signature, and additional options.
+CLM, CRM, 전자서명 등 추가 연동 옵션을 포함한 전체 목록은 [CONNECTORS.md](CONNECTORS.md)를 참고하십시오.
 
-Configure connections in `.mcp.json`. The plugin gracefully degrades when tools are unavailable -- it will note gaps and suggest manual checks.
+`.mcp.json`에서 연결을 구성합니다. 도구를 사용할 수 없는 경우에도 플러그인은 정상적으로 기능이 축소되며, 누락된 부분을 표시하고 수동 확인을 제안합니다.
 
-## Customization
+## 사용자 정의
 
-### Playbook Configuration
+### 플레이북 구성
 
-Your playbook is the heart of the contract review system. Define your positions in `legal.local.md`:
+플레이북은 계약서 검토 시스템의 핵심입니다. `legal.local.md`에서 포지션을 정의합니다:
 
-- **Standard positions**: Your preferred contract terms
-- **Acceptable ranges**: What you can agree to without escalation
-- **Escalation triggers**: Terms that require senior review or outside counsel
+- **표준 포지션**: 선호하는 계약 조건
+- **허용 범위**: 에스컬레이션 없이 합의할 수 있는 조건
+- **에스컬레이션 트리거**: 시니어 법무 검토 또는 외부 법무 자문이 필요한 조건
 
-### Response Templates
+### 응답 템플릿
 
-Define templates for common inquiries. Templates support variable substitution and include built-in escalation triggers for situations that should not use a templated response.
+일반적인 문의에 대한 템플릿을 정의합니다. 템플릿은 변수 치환을 지원하며, 템플릿 응답을 사용해서는 안 되는 상황에 대한 에스컬레이션 트리거가 내장되어 있습니다.
 
-### Risk Framework
+### 리스크 프레임워크
 
-Customize the risk assessment matrix to match your organization's risk appetite and classification scheme.
+조직의 리스크 성향과 분류 체계에 맞게 리스크 평가 매트릭스를 사용자 정의할 수 있습니다.
 
-## File Structure
+## 파일 구조
 
 ```
 legal/

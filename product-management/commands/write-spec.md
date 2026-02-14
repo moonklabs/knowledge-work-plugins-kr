@@ -1,80 +1,80 @@
 ---
-description: Write a feature spec or PRD from a problem statement or feature idea
-argument-hint: "<feature or problem statement>"
+description: 문제 정의 또는 기능 아이디어로부터 기능 명세서 또는 PRD를 작성합니다
+argument-hint: "<기능 또는 문제 정의>"
 ---
 
-# Write Spec
+# 명세서 작성
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
+> 익숙하지 않은 플레이스홀더가 보이거나 연결된 도구를 확인하려면 [CONNECTORS.md](../CONNECTORS.md)를 참조하세요.
 
-Write a feature specification or product requirements document (PRD).
+기능 명세서 또는 제품 요구사항 문서(PRD)를 작성합니다.
 
-## Workflow
+## 워크플로우
 
-### 1. Understand the Feature
+### 1. 기능 이해
 
-Ask the user what they want to spec. Accept any of:
-- A feature name ("SSO support")
-- A problem statement ("Enterprise customers keep asking for centralized auth")
-- A user request ("Users want to export their data as CSV")
-- A vague idea ("We should do something about onboarding drop-off")
+사용자에게 무엇을 명세화할 것인지 확인합니다. 다음 중 어떤 형태든 수용합니다:
+- 기능명 ("SSO 지원")
+- 문제 정의 ("엔터프라이즈 고객들이 중앙 집중식 인증을 계속 요청합니다")
+- 사용자 요청 ("사용자들이 데이터를 CSV로 내보내고 싶어합니다")
+- 막연한 아이디어 ("온보딩 이탈에 대해 뭔가 해야 할 것 같습니다")
 
-### 2. Gather Context
+### 2. 맥락 수집
 
-Ask the user for the following. Be conversational — do not dump all questions at once. Ask the most important ones first and fill in gaps as you go:
+사용자에게 다음을 확인합니다. 대화형으로 진행하며 — 모든 질문을 한꺼번에 쏟아내지 않습니다. 가장 중요한 것부터 물어보고 진행하면서 빈 부분을 채워갑니다:
 
-- **User problem**: What problem does this solve? Who experiences it?
-- **Target users**: Which user segment(s) does this serve?
-- **Success metrics**: How will we know this worked?
-- **Constraints**: Technical constraints, timeline, regulatory requirements, dependencies
-- **Prior art**: Has this been attempted before? Are there existing solutions?
+- **사용자 문제**: 어떤 문제를 해결하는지, 누가 겪는 문제인지
+- **타겟 사용자**: 어떤 사용자 세그먼트를 대상으로 하는지
+- **성공 지표**: 이것이 효과가 있었다는 것을 어떻게 알 수 있는지
+- **제약 조건**: 기술적 제약, 일정, 규제 요건, 의존성
+- **선행 사례**: 이전에 시도된 적이 있는지, 기존 솔루션이 있는지
 
-### 3. Pull Context from Connected Tools
+### 3. 연결된 도구에서 컨텍스트 가져오기
 
-If **~~project tracker** is connected:
-- Search for related tickets, epics, or features
-- Pull in any existing requirements or acceptance criteria
-- Identify dependencies on other work items
+**~~project tracker**가 연결된 경우:
+- 관련 티켓, 에픽, 또는 기능 검색
+- 기존 요구사항이나 수락 기준 가져오기
+- 다른 작업 항목에 대한 의존성 식별
 
-If **~~knowledge base** is connected:
-- Search for related research documents, prior specs, or design docs
-- Pull in relevant user research findings
-- Find related meeting notes or decision records
+**~~knowledge base**가 연결된 경우:
+- 관련 조사 문서, 이전 명세서, 또는 설계 문서 검색
+- 관련 사용자 조사 결과 가져오기
+- 관련 회의록이나 의사결정 기록 찾기
 
-If **~~design** is connected:
-- Pull related mockups, wireframes, or design explorations
-- Search for design system components relevant to the feature
+**~~design**이 연결된 경우:
+- 관련 목업, 와이어프레임, 또는 디자인 탐색 가져오기
+- 해당 기능과 관련된 디자인 시스템 컴포넌트 검색
 
-If these tools are not connected, work entirely from what the user provides. Do not ask the user to connect tools — just proceed with available information.
+이 도구들이 연결되지 않은 경우, 사용자가 제공한 정보만으로 진행합니다. 사용자에게 도구 연결을 요청하지 않고 — 가용한 정보로 작업을 진행합니다.
 
-### 4. Generate the PRD
+### 4. PRD 생성
 
-Produce a structured PRD with these sections. See the **feature-spec** skill for detailed guidance on user stories, requirements categorization, acceptance criteria, and success metrics.
+다음 섹션으로 구성된 체계적인 PRD를 작성합니다. 사용자 스토리, 요구사항 분류, 수락 기준, 성공 지표에 대한 상세 가이드는 **feature-spec** 스킬을 참조하세요.
 
-- **Problem Statement**: The user problem, who is affected, and impact of not solving it (2-3 sentences)
-- **Goals**: 3-5 specific, measurable outcomes tied to user or business metrics
-- **Non-Goals**: 3-5 things explicitly out of scope, with brief rationale for each
-- **User Stories**: Standard format ("As a [user type], I want [capability] so that [benefit]"), grouped by persona
-- **Requirements**: Categorized as Must-Have (P0), Nice-to-Have (P1), and Future Considerations (P2), each with acceptance criteria
-- **Success Metrics**: Leading indicators (change quickly) and lagging indicators (change over time), with specific targets
-- **Open Questions**: Unresolved questions tagged with who needs to answer (engineering, design, legal, data)
-- **Timeline Considerations**: Hard deadlines, dependencies, and phasing
+- **문제 정의**: 사용자 문제, 영향받는 대상, 해결하지 않을 경우의 영향 (2-3문장)
+- **목표**: 사용자 또는 비즈니스 지표에 연계된 3-5개의 구체적이고 측정 가능한 성과
+- **비목표**: 명시적으로 범위 밖인 3-5개 항목, 각각 간략한 근거 포함
+- **사용자 스토리**: 표준 형식 ("As a [사용자 유형], I want [기능] so that [혜택]"), 페르소나별 그룹화
+- **요구사항**: 필수 (P0), 선택 (P1), 향후 고려 (P2)로 분류, 각각 수락 기준 포함
+- **성공 지표**: 선행 지표 (빠르게 변화)와 후행 지표 (시간이 걸림), 구체적 목표 포함
+- **미해결 질문**: 답변이 필요한 사람 태그 (엔지니어링, 디자인, 법무, 데이터)
+- **일정 고려 사항**: 확정 기한, 의존성, 단계적 진행
 
-### 5. Review and Iterate
+### 5. 검토 및 반복
 
-After generating the PRD:
-- Ask the user if any sections need adjustment
-- Offer to expand on specific sections
-- Offer to create follow-up artifacts (design brief, engineering ticket breakdown, stakeholder pitch)
+PRD 생성 후:
+- 조정이 필요한 섹션이 있는지 확인합니다
+- 특정 섹션의 확장을 제안합니다
+- 후속 산출물 (디자인 브리프, 엔지니어링 티켓 분해, 이해관계자 피치) 작성을 제안합니다
 
-## Output Format
+## 출력 형식
 
-Use markdown with clear headers. Keep the document scannable — busy stakeholders should be able to read just the headers and bold text to get the gist.
+명확한 제목과 함께 마크다운을 사용합니다. 문서는 훑어보기 쉽게 유지합니다 — 바쁜 이해관계자가 제목과 볼드체 텍스트만 읽어도 요지를 파악할 수 있어야 합니다.
 
-## Tips
+## 팁
 
-- Be opinionated about scope. It is better to have a tight, well-defined spec than an expansive vague one.
-- If the user's idea is too big for one spec, suggest breaking it into phases and spec the first phase.
-- Success metrics should be specific and measurable, not vague ("improve user experience").
-- Non-goals are as important as goals. They prevent scope creep during implementation.
-- Open questions should be genuinely open — do not include questions you can answer from context.
+- 범위에 대해 과감한 의견을 제시합니다. 광범위하고 모호한 명세서보다 긴밀하고 잘 정의된 명세서가 낫습니다.
+- 사용자의 아이디어가 하나의 명세서에 담기에 너무 크면, 단계를 나누어 첫 번째 단계를 명세화하도록 제안합니다.
+- 성공 지표는 구체적이고 측정 가능해야 하며, "사용자 경험 개선" 같은 모호한 표현이 아니어야 합니다.
+- 비목표는 목표만큼 중요합니다. 구현 중 범위 확장을 방지합니다.
+- 미해결 질문은 진정으로 열린 것이어야 합니다 — 맥락에서 답할 수 있는 질문은 포함하지 않습니다.

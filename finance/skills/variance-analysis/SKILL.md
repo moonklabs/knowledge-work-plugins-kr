@@ -1,265 +1,263 @@
 ---
 name: variance-analysis
-description: Decompose financial variances into drivers with narrative explanations and waterfall analysis. Use when analyzing budget vs. actual, period-over-period changes, revenue or expense variances, or preparing variance commentary for leadership.
+description: 재무 차이를 동인별로 분해하고 서술적 설명 및 워터폴 분석을 제공합니다. 예산 대 실적, 기간별 변동, 수익 또는 비용 차이 분석 또는 경영진을 위한 차이 해설 준비 시 사용합니다.
 ---
 
-# Variance Analysis
+# 차이 분석
 
-**Important**: This skill assists with variance analysis workflows but does not provide financial advice. All analyses should be reviewed by qualified financial professionals before use in reporting.
+**중요**: 이 스킬은 차이 분석 워크플로우를 지원하지만 재무 자문을 제공하지는 않습니다. 모든 분석은 보고에 사용하기 전에 자격을 갖춘 재무 전문가의 검토를 받아야 합니다.
 
-Techniques for decomposing variances, materiality thresholds, narrative generation, waterfall chart methodology, and budget vs actual vs forecast comparisons.
+차이 분해 기법, 중요성 기준, 서술 생성, 워터폴 차트 방법론, 예산 대 실적 대 전망 비교에 대해 설명합니다.
 
-## Variance Decomposition Techniques
+## 차이 분해 기법
 
-### Price / Volume Decomposition
+### 가격 / 수량 분해
 
-The most fundamental variance decomposition. Used for revenue, cost of goods, and any metric that can be expressed as Price x Volume.
+가장 기본적인 차이 분해 방법입니다. 수익, 매출원가 및 가격 x 수량으로 표현할 수 있는 모든 지표에 사용합니다.
 
-**Formula:**
+**공식:**
 ```
-Total Variance = Actual - Budget (or Prior)
+총 차이 = 실적 - 예산 (또는 전년)
 
-Volume Effect  = (Actual Volume - Budget Volume) x Budget Price
-Price Effect   = (Actual Price - Budget Price) x Actual Volume
-Mix Effect     = Residual (interaction term), or allocated proportionally
+수량 효과 = (실적 수량 - 예산 수량) x 예산 가격
+가격 효과 = (실적 가격 - 예산 가격) x 실적 수량
+믹스 효과 = 잔차 (상호작용 항목), 또는 비례적으로 배분
 
-Verification:  Volume Effect + Price Effect = Total Variance
-               (when mix is embedded in the price/volume terms)
-```
-
-**Three-way decomposition (separating mix):**
-```
-Volume Effect = (Actual Volume - Budget Volume) x Budget Price x Budget Mix
-Price Effect  = (Actual Price - Budget Price) x Budget Volume x Actual Mix
-Mix Effect    = Budget Price x Budget Volume x (Actual Mix - Budget Mix)
+검증: 수량 효과 + 가격 효과 = 총 차이
+      (믹스가 가격/수량 항목에 포함된 경우)
 ```
 
-**Example — Revenue variance:**
-- Budget: 10,000 units at $50 = $500,000
-- Actual: 11,000 units at $48 = $528,000
-- Total variance: +$28,000 favorable
-  - Volume effect: +1,000 units x $50 = +$50,000 (favorable — sold more units)
-  - Price effect: -$2 x 11,000 units = -$22,000 (unfavorable — lower ASP)
-  - Net: +$28,000
-
-### Rate / Mix Decomposition
-
-Used when analyzing blended rates across segments with different unit economics.
-
-**Formula:**
+**3분법 분해 (믹스 분리):**
 ```
-Rate Effect = Sum of (Actual Volume_i x (Actual Rate_i - Budget Rate_i))
-Mix Effect  = Sum of (Budget Rate_i x (Actual Volume_i - Expected Volume_i at Budget Mix))
+수량 효과 = (실적 수량 - 예산 수량) x 예산 가격 x 예산 믹스
+가격 효과 = (실적 가격 - 예산 가격) x 예산 수량 x 실적 믹스
+믹스 효과 = 예산 가격 x 예산 수량 x (실적 믹스 - 예산 믹스)
 ```
 
-**Example — Gross margin variance:**
-- Product A: 60% margin, Product B: 40% margin
-- Budget mix: 50% A, 50% B → Blended margin 50%
-- Actual mix: 40% A, 60% B → Blended margin 48%
-- Mix effect explains 2pp of margin compression
+**예시 — 수익 차이:**
+- 예산: 10,000 단위 x $50 = $500,000
+- 실적: 11,000 단위 x $48 = $528,000
+- 총 차이: +$28,000 유리
+  - 수량 효과: +1,000 단위 x $50 = +$50,000 (유리 — 더 많이 판매)
+  - 가격 효과: -$2 x 11,000 단위 = -$22,000 (불리 — 낮은 ASP)
+  - 순 차이: +$28,000
 
-### Headcount / Compensation Decomposition
+### 비율 / 믹스 분해
 
-Used for analyzing payroll and people-cost variances.
+단위경제가 다른 세그먼트에 걸친 혼합 비율을 분석할 때 사용합니다.
 
+**공식:**
 ```
-Total Comp Variance = Actual Compensation - Budget Compensation
-
-Decompose into:
-1. Headcount variance    = (Actual HC - Budget HC) x Budget Avg Comp
-2. Rate variance         = (Actual Avg Comp - Budget Avg Comp) x Budget HC
-3. Mix variance          = Difference due to level/department mix shift
-4. Timing variance       = Hiring earlier/later than planned (partial-period effect)
-5. Attrition impact      = Savings from unplanned departures (partially offset by backfill costs)
+요율 효과 = Σ (실적 수량_i x (실적 요율_i - 예산 요율_i))
+믹스 효과 = Σ (예산 요율_i x (실적 수량_i - 예산 믹스 기준 예상 수량_i))
 ```
 
-### Spend Category Decomposition
+**예시 — 매출총이익률 차이:**
+- 제품 A: 60% 마진, 제품 B: 40% 마진
+- 예산 믹스: 50% A, 50% B -> 혼합 마진 50%
+- 실적 믹스: 40% A, 60% B -> 혼합 마진 48%
+- 믹스 효과가 2pp의 마진 압축을 설명
 
-Used for operating expense analysis when price/volume is not applicable.
+### 인원 / 보상 분해
 
-```
-Total OpEx Variance = Actual OpEx - Budget OpEx
-
-Decompose by:
-1. Headcount-driven costs    (salaries, benefits, payroll taxes, recruiting)
-2. Volume-driven costs       (hosting, transaction fees, commissions, shipping)
-3. Discretionary spend       (travel, events, professional services, marketing programs)
-4. Contractual/fixed costs   (rent, insurance, software licenses, subscriptions)
-5. One-time / non-recurring  (severance, legal settlements, write-offs, project costs)
-6. Timing / phasing          (spend shifted between periods vs plan)
-```
-
-## Materiality Thresholds and Investigation Triggers
-
-### Setting Thresholds
-
-Materiality thresholds determine which variances require investigation and narrative explanation. Set thresholds based on:
-
-1. **Financial statement materiality:** Typically 1-5% of a key benchmark (revenue, total assets, net income)
-2. **Line item size:** Larger line items warrant lower percentage thresholds
-3. **Volatility:** More volatile line items may need higher thresholds to avoid noise
-4. **Management attention:** What level of variance would change a decision?
-
-### Recommended Threshold Framework
-
-| Comparison Type | Dollar Threshold | Percentage Threshold | Trigger |
-|----------------|-----------------|---------------------|---------|
-| Actual vs Budget | Organization-specific | 10% | Either exceeded |
-| Actual vs Prior Period | Organization-specific | 15% | Either exceeded |
-| Actual vs Forecast | Organization-specific | 5% | Either exceeded |
-| Sequential (MoM) | Organization-specific | 20% | Either exceeded |
-
-*Set dollar thresholds based on your organization's size. Common practice: 0.5%-1% of revenue for income statement items.*
-
-### Investigation Priority
-
-When multiple variances exceed thresholds, prioritize investigation by:
-
-1. **Largest absolute dollar variance** — biggest P&L impact
-2. **Largest percentage variance** — may indicate process issue or error
-3. **Unexpected direction** — variance opposite to trend or expectation
-4. **New variance** — item that was on track and is now off
-5. **Cumulative/trending variance** — growing each period
-
-## Narrative Generation for Variance Explanations
-
-### Structure for Each Variance Narrative
+급여 및 인건비 차이 분석에 사용합니다.
 
 ```
-[Line Item]: [Favorable/Unfavorable] variance of $[amount] ([percentage]%)
-vs [comparison basis] for [period]
+총 보상 차이 = 실적 보상 - 예산 보상
 
-Driver: [Primary driver description]
-[2-3 sentences explaining the business reason for the variance, with specific
-quantification of contributing factors]
-
-Outlook: [One-time / Expected to continue / Improving / Deteriorating]
-Action: [None required / Monitor / Investigate further / Update forecast]
+분해 항목:
+1. 인원 차이 = (실적 인원 - 예산 인원) x 예산 평균 보상
+2. 요율 차이 = (실적 평균 보상 - 예산 평균 보상) x 예산 인원
+3. 믹스 차이 = 직급/부서 믹스 변화에 따른 차이
+4. 타이밍 차이 = 계획 대비 채용 시점의 차이 (부분 기간 효과)
+5. 퇴사 영향 = 예상치 못한 퇴사로 인한 절감 (충원 비용으로 일부 상쇄)
 ```
 
-### Narrative Quality Checklist
+### 비용 카테고리 분해
 
-Good variance narratives should be:
-
-- [ ] **Specific:** Names the actual driver, not just "higher than expected"
-- [ ] **Quantified:** Includes dollar and percentage impact of each driver
-- [ ] **Causal:** Explains WHY it happened, not just WHAT happened
-- [ ] **Forward-looking:** States whether the variance is expected to continue
-- [ ] **Actionable:** Identifies any required follow-up or decision
-- [ ] **Concise:** 2-4 sentences, not a paragraph of filler
-
-### Common Narrative Anti-Patterns to Avoid
-
-- "Revenue was higher than budget due to higher revenue" (circular — no actual explanation)
-- "Expenses were elevated this period" (vague — which expenses? why?)
-- "Timing" without specifying what was early/late and when it will normalize
-- "One-time" without explaining what the item was
-- "Various small items" for a material variance (must decompose further)
-- Focusing only on the largest driver and ignoring offsetting items
-
-## Waterfall Chart Methodology
-
-### Concept
-
-A waterfall (or bridge) chart shows how you get from one value to another through a series of positive and negative contributors. Used to visualize variance decomposition.
-
-### Data Structure
+가격/수량이 적용 불가능한 영업비용 분석에 사용합니다.
 
 ```
-Starting value:  [Base/Budget/Prior period amount]
-Drivers:         [List of contributing factors with signed amounts]
-Ending value:    [Actual/Current period amount]
+총 영업비용(OpEx) 차이 = 실적 영업비용 - 예산 영업비용
 
-Verification:    Starting value + Sum of all drivers = Ending value
+분해 기준:
+1. 인원 기반 비용 (급여, 복리후생, 급여세, 채용)
+2. 거래량 기반 비용 (호스팅, 거래 수수료, 판매 수수료, 배송비)
+3. 재량적 지출 (출장비, 행사비, 전문 서비스, 마케팅 프로그램)
+4. 계약/고정 비용 (임대료, 보험료, 소프트웨어 라이선스, 구독료)
+5. 일회성 / 비반복적 비용 (퇴직금, 법적 합의금, 자산 상각, 프로젝트 비용)
+6. 시점/타이밍 차이 (계획 대비 기간 간 지출 이동)
 ```
 
-### Text-Based Waterfall Format
+## 중요성 기준 및 조사 트리거
 
-When a charting tool is not available, present as a text waterfall:
+### 기준 설정
+
+중요성 기준은 조사 및 서술적 설명이 필요한 차이를 결정합니다. 다음을 기반으로 기준을 설정합니다:
+
+1. **재무제표 중요성:** 일반적으로 핵심 벤치마크(수익, 총자산, 당기순이익)의 1-5%
+2. **항목 규모:** 규모가 큰 항목은 더 낮은 비율 기준이 적용됩니다
+3. **변동성:** 변동성이 큰 항목은 노이즈 방지를 위해 더 높은 기준이 필요할 수 있습니다
+4. **경영진 관심:** 어느 수준의 차이가 의사결정을 변경시킬 것인가?
+
+### 권장 기준 프레임워크
+
+| 비교 유형 | 금액 기준 | 비율 기준 | 트리거 |
+|-----------|----------|----------|--------|
+| 실적 vs 예산 | 조직별 상이 | 10% | 둘 중 하나 초과 |
+| 실적 vs 전기 | 조직별 상이 | 15% | 둘 중 하나 초과 |
+| 실적 vs 전망 | 조직별 상이 | 5% | 둘 중 하나 초과 |
+| 순차적(MoM) | 조직별 상이 | 20% | 둘 중 하나 초과 |
+
+*금액 기준은 조직 규모에 따라 설정합니다. 일반적인 관행: 손익계산서 항목의 경우 수익의 0.5%-1%.*
+
+### 조사 우선순위
+
+여러 차이가 기준을 초과할 때 다음 기준으로 조사 우선순위를 정합니다:
+
+1. **최대 절대 금액 차이** — 손익에 가장 큰 영향
+2. **최대 비율 차이** — 프로세스 문제 또는 오류를 나타낼 수 있음
+3. **예상치 못한 방향** — 추세 또는 예상과 반대되는 차이
+4. **새로운 차이** — 정상이었다가 이탈한 항목
+5. **누적/추세 차이** — 매 기간 증가하는 차이
+
+## 차이 설명을 위한 서술 생성
+
+### 각 차이 서술의 구조
 
 ```
-WATERFALL: Revenue — Q4 Actual vs Q4 Budget
+[항목]: [기간]의 [비교 대상] 대비 $[금액] ([비율]%)의 [유리/불리] 차이
 
-Q4 Budget Revenue                                    $10,000K
+동인: [주요 동인 설명]
+[차이의 사업적 원인을 구체적인 기여 요인의 정량화와 함께
+2-3문장으로 설명]
+
+전망: [일회성 / 지속 예상 / 개선 / 악화]
+조치: [필요 없음 / 모니터링 / 추가 조사 / 전망 업데이트]
+```
+
+### 서술 품질 체크리스트
+
+좋은 차이 서술은 다음을 충족해야 합니다:
+
+- [ ] **구체적:** 단순히 "예상보다 높음"이 아닌 실제 동인을 명시
+- [ ] **정량화:** 각 동인의 금액 및 비율 영향을 포함
+- [ ] **인과적:** 무엇이 일어났는지뿐만 아니라 왜 일어났는지를 설명
+- [ ] **전망 포함:** 차이가 지속될 것으로 예상되는지 명시
+- [ ] **실행 가능:** 필요한 후속 조치 또는 의사결정을 식별
+- [ ] **간결:** 불필요한 내용 없이 2-4문장
+
+### 피해야 할 일반적인 서술 패턴
+
+- "수익이 높은 수익으로 인해 예산을 초과" (순환적 — 실질적 설명 없음)
+- "이번 기간에 비용이 높아짐" (모호 — 어떤 비용? 왜?)
+- 무엇이 앞당겨지거나/늦어졌는지, 언제 정상화되는지 명시 없이 "시점 차이"
+- 해당 항목이 무엇인지 설명 없이 "일회성"
+- 중요한 차이에 대해 "여러 소규모 항목" (추가 분해 필요)
+- 가장 큰 동인에만 집중하고 상쇄 항목을 무시
+
+## 워터폴 차트 방법론
+
+### 개념
+
+워터폴(또는 브릿지) 차트는 일련의 양수 및 음수 기여를 통해 하나의 값에서 다른 값으로 이동하는 과정을 보여줍니다. 차이 분해를 시각화하는 데 사용됩니다.
+
+### 데이터 구조
+
+```
+시작값:  [기준/예산/전기 금액]
+동인:    [부호가 포함된 기여 요인 목록]
+종료값:  [실적/당기 금액]
+
+검증:    시작값 + 모든 동인의 합계 = 종료값
+
+### 텍스트 기반 워터폴 형식
+
+차트 도구를 사용할 수 없을 때 텍스트 워터폴로 표시합니다:
+
+```
+워터폴: 매출 — 4분기 실적 vs 4분기 예산
+
+4분기 예산 매출                                      $10,000K
   |
-  |--[+] Volume growth (new customers)               +$800K
-  |--[+] Expansion revenue (existing customers)      +$400K
-  |--[-] Price reductions / discounting               -$200K
-  |--[-] Churn / contraction                          -$350K
-  |--[+] FX tailwind                                  +$50K
-  |--[-] Timing (deals slipped to Q1)                 -$150K
+  |--[+] 수량 성장 (신규 고객)                       +$800K
+  |--[+] 확장 매출 (기존 고객)                       +$400K
+  |--[-] 가격 인하 / 할인                            -$200K
+  |--[-] 이탈 / 축소                                 -$350K
+  |--[+] 환율 순풍                                   +$50K
+  |--[-] 시점 차이 (1분기로 이연된 거래)             -$150K
   |
-Q4 Actual Revenue                                    $10,550K
+4분기 실적 매출                                      $10,550K
 
-Net Variance: +$550K (+5.5% favorable)
+순 차이: +$550K (+5.5% 유리)
 ```
 
-### Bridge Reconciliation Table
+### 브릿지 조정 테이블
 
-Complement the waterfall with a reconciliation table:
+워터폴과 함께 조정 테이블을 보완합니다:
 
-| Driver | Amount | % of Variance | Cumulative |
-|--------|--------|---------------|------------|
-| Volume growth | +$800K | 145% | +$800K |
-| Expansion revenue | +$400K | 73% | +$1,200K |
-| Price reductions | -$200K | -36% | +$1,000K |
-| Churn / contraction | -$350K | -64% | +$650K |
-| FX tailwind | +$50K | 9% | +$700K |
-| Timing (deal slippage) | -$150K | -27% | +$550K |
-| **Total variance** | **+$550K** | **100%** | |
+| 동인 | 금액 | 차이 대비 % | 누적 |
+|------|------|------------|------|
+| 수량 성장 | +$800K | 145% | +$800K |
+| 확장 수익 | +$400K | 73% | +$1,200K |
+| 가격 인하 | -$200K | -36% | +$1,000K |
+| 이탈 / 축소 | -$350K | -64% | +$650K |
+| 환율 순풍 | +$50K | 9% | +$700K |
+| 시점 (거래 이연) | -$150K | -27% | +$550K |
+| **총 차이** | **+$550K** | **100%** | |
 
-*Note: Percentages can exceed 100% for individual drivers when there are offsetting items.*
+*참고: 상쇄 항목이 있는 경우 개별 동인의 비율이 100%를 초과할 수 있습니다.*
 
-### Waterfall Best Practices
+### 워터폴 모범 사례
 
-1. Order drivers from largest positive to largest negative (or in logical business sequence)
-2. Keep to 5-8 drivers maximum — aggregate smaller items into "Other"
-3. Verify the waterfall reconciles (start + drivers = end)
-4. Color-code: green for favorable, red for unfavorable (in visual charts)
-5. Label each bar with both the amount and a brief description
-6. Include a "Total Variance" summary bar
+1. 동인을 가장 큰 양수에서 가장 큰 음수 순으로 정렬합니다 (또는 논리적 사업 순서)
+2. 최대 5-8개 동인으로 유지합니다 — 소규모 항목은 "기타"로 합산합니다
+3. 워터폴이 조정되는지 확인합니다 (시작값 + 동인 = 종료값)
+4. 색상 구분: 유리는 녹색, 불리는 빨간색 (시각적 차트에서)
+5. 각 막대에 금액과 간단한 설명을 표시합니다
+6. "총 차이" 요약 막대를 포함합니다
 
-## Budget vs Actual vs Forecast Comparisons
+## 예산 대 실적 대 전망 비교
 
-### Three-Way Comparison Framework
+### 3방향 비교 프레임워크
 
-| Metric | Budget | Forecast | Actual | Bud Var ($) | Bud Var (%) | Fcast Var ($) | Fcast Var (%) |
-|--------|--------|----------|--------|-------------|-------------|---------------|---------------|
-| Revenue | $X | $X | $X | $X | X% | $X | X% |
-| COGS | $X | $X | $X | $X | X% | $X | X% |
-| Gross Profit | $X | $X | $X | $X | X% | $X | X% |
+| 지표 | 예산 | 전망 | 실적 | 예산 차이 ($) | 예산 차이 (%) | 전망 차이 ($) | 전망 차이 (%) |
+|------|------|------|------|-------------|-------------|-------------|-------------|
+| 수익 | $X | $X | $X | $X | X% | $X | X% |
+| 매출원가 | $X | $X | $X | $X | X% | $X | X% |
+| 매출총이익 | $X | $X | $X | $X | X% | $X | X% |
 
-### When to Use Each Comparison
+### 각 비교의 사용 시점
 
-- **Actual vs Budget:** Annual performance measurement, compensation decisions, board reporting. Budget is set at the beginning of the year and typically not changed.
-- **Actual vs Forecast:** Operational management, identifying emerging issues. Forecast is updated periodically (monthly or quarterly) to reflect current expectations.
-- **Forecast vs Budget:** Understanding how expectations have changed since planning. Useful for identifying planning accuracy issues.
-- **Actual vs Prior Period:** Trend analysis, sequential performance. Useful when budget is not meaningful (new business lines, post-acquisition).
-- **Actual vs Prior Year:** Year-over-year growth analysis, seasonality-adjusted comparison.
+- **실적 vs 예산:** 연간 성과 측정, 보상 결정, 이사회 보고. 예산은 연초에 설정되며 일반적으로 변경하지 않습니다.
+- **실적 vs 전망:** 운영 관리, 신규 이슈 식별. 전망은 현재 기대를 반영하여 주기적(월별 또는 분기별)으로 업데이트합니다.
+- **전망 vs 예산:** 계획 수립 이후 기대가 어떻게 변했는지 이해. 계획 정확도 문제 식별에 유용합니다.
+- **실적 vs 전기:** 추세 분석, 순차적 성과. 예산이 의미 없는 경우(신규 사업, 인수 후) 유용합니다.
+- **실적 vs 전년:** 전년 대비 성장 분석, 계절성 조정 비교.
 
-### Forecast Accuracy Analysis
+### 전망 정확도 분석
 
-Track how accurate forecasts are over time to improve planning:
+시간 경과에 따른 전망 정확도를 추적하여 계획을 개선합니다:
 
 ```
-Forecast Accuracy = 1 - |Actual - Forecast| / |Actual|
+전망 정확도 = 1 - |실적 - 전망| / |실적|
 
-MAPE (Mean Absolute Percentage Error) = Average of |Actual - Forecast| / |Actual| across periods
+MAPE (평균 절대 백분율 오차) = 기간별 |실적 - 전망| / |실적|의 평균
 ```
 
-| Period | Forecast | Actual | Variance | Accuracy |
-|--------|----------|--------|----------|----------|
-| Jan    | $X       | $X     | $X (X%)  | XX%      |
-| Feb    | $X       | $X     | $X (X%)  | XX%      |
-| ...    | ...      | ...    | ...      | ...      |
-| **Avg**|          |        | **MAPE** | **XX%**  |
+| 기간 | 전망 | 실적 | 차이 | 정확도 |
+|------|------|------|------|--------|
+| 1월 | $X | $X | $X (X%) | XX% |
+| 2월 | $X | $X | $X (X%) | XX% |
+| ... | ... | ... | ... | ... |
+| **평균** | | | **MAPE** | **XX%** |
 
-### Variance Trending
+### 차이 추세 분석
 
-Track how variances evolve over the year to identify systematic bias:
+연중 차이가 어떻게 변화하는지 추적하여 체계적 편향을 식별합니다:
 
-- **Consistently favorable:** Budget may be too conservative (sandbagging)
-- **Consistently unfavorable:** Budget may be too aggressive or execution issues
-- **Growing unfavorable:** Deteriorating performance or unrealistic targets
-- **Shrinking variance:** Forecast accuracy improving through the year (normal pattern)
-- **Volatile:** Unpredictable business or poor forecasting methodology
+- **지속적 유리:** 예산이 지나치게 보수적일 수 있음 (하향 조정)
+- **지속적 불리:** 예산이 지나치게 공격적이거나 실행 문제
+- **불리 증가:** 성과 악화 또는 비현실적 목표
+- **차이 축소:** 연중 전망 정확도 향상 (정상적 패턴)
+- **변동적:** 예측 불가능한 사업 또는 부실한 전망 방법론

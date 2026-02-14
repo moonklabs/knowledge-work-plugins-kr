@@ -1,258 +1,258 @@
 ---
 name: call-prep
-description: Prepare for a sales call with account context, attendee research, and suggested agenda. Works standalone with user input and web research, supercharged when you connect your CRM, email, chat, or transcripts. Trigger with "prep me for my call with [company]", "I'm meeting with [company] prep me", "call prep [company]", or "get me ready for [meeting]".
+description: 어카운트 맥락, 참석자 조사, 제안 안건으로 영업 통화를 준비합니다. 사용자 입력과 웹 리서치만으로 단독 작동하며, CRM, 이메일, 채팅, 녹취록을 연결하면 더욱 강력해집니다. "prep me for my call with [회사]", "I'm meeting with [회사] prep me", "call prep [회사]", "get me ready for [미팅]" 등으로 실행합니다.
 ---
 
-# Call Prep
+# 통화 준비
 
-Get fully prepared for any sales call in minutes. This skill works with whatever context you provide, and gets significantly better when you connect your sales tools.
+몇 분 만에 모든 영업 통화에 완벽하게 대비하세요. 이 스킬은 제공하는 맥락으로 작동하며, 영업 도구를 연결하면 크게 향상됩니다.
 
-## How It Works
+## 작동 방식
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                        CALL PREP                                 │
 ├─────────────────────────────────────────────────────────────────┤
-│  ALWAYS (works standalone)                                       │
-│  ✓ You tell me: company, meeting type, attendees                │
-│  ✓ Web search: recent news, funding, leadership changes         │
-│  ✓ Company research: what they do, size, industry               │
-│  ✓ Output: prep brief with agenda and questions                 │
+│  기본 기능 (단독 작동)                                            │
+│  ✓ 사용자 제공: 기업, 미팅 유형, 참석자                            │
+│  ✓ 웹 검색: 최신 뉴스, 투자, 리더십 변경                           │
+│  ✓ 기업 리서치: 사업 내용, 규모, 산업                              │
+│  ✓ 출력: 안건 및 질문이 포함된 준비 브리프                          │
 ├─────────────────────────────────────────────────────────────────┤
-│  SUPERCHARGED (when you connect your tools)                      │
-│  + CRM: account history, contacts, opportunities, activities    │
-│  + Email: recent threads, open questions, commitments           │
-│  + Chat: internal discussions, colleague insights               │
-│  + Transcripts: prior call recordings, key moments              │
-│  + Calendar: auto-find meeting, pull attendees                  │
+│  강화 모드 (도구 연결 시)                                         │
+│  + CRM: 어카운트 이력, 연락처, 영업 기회, 활동                      │
+│  + 이메일: 최근 스레드, 미결 질문, 약속 사항                        │
+│  + 채팅: 내부 논의, 동료 인사이트                                  │
+│  + 녹취록: 이전 통화 녹음, 핵심 순간                               │
+│  + 캘린더: 미팅 자동 검색, 참석자 가져오기                          │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## Getting Started
+## 시작하기
 
-When you run this skill, I'll ask for what I need:
+이 스킬 실행 시 필요한 정보를 요청합니다:
 
-**Required:**
-- Company or contact name
-- Meeting type (discovery, demo, negotiation, check-in, etc.)
+**필수:**
+- 기업 또는 담당자 이름
+- 미팅 유형 (디스커버리, 데모, 협상, 체크인 등)
 
-**Helpful if you have it:**
-- Who's attending (names and titles)
-- Any context you want me to know (paste prior notes, emails, etc.)
+**있으면 도움이 되는 정보:**
+- 참석자 (이름 및 직함)
+- 알려줄 맥락 (이전 메모, 이메일 등 붙여넣기)
 
-If you've connected your CRM, email, or other tools, I'll pull context automatically and skip the questions.
-
----
-
-## Connectors (Optional)
-
-Connect your tools to supercharge this skill:
-
-| Connector | What It Adds |
-|-----------|--------------|
-| **CRM** | Account details, contact history, open deals, recent activities |
-| **Email** | Recent threads with the company, open questions, attachments shared |
-| **Chat** | Internal chat discussions (e.g. Slack) about the account, colleague insights |
-| **Transcripts** | Prior call recordings, topics covered, competitor mentions |
-| **Calendar** | Auto-find the meeting, pull attendees and description |
-
-> **No connectors?** No problem. Just tell me about the meeting and paste any context you have. I'll research the rest.
+CRM, 이메일 또는 기타 도구가 연결되어 있으면 자동으로 맥락을 가져와 질문을 건너뜁니다.
 
 ---
 
-## Output Format
+## 커넥터 (선택사항)
+
+도구를 연결하여 이 스킬을 강화하세요:
+
+| 커넥터 | 추가 기능 |
+|--------|----------|
+| **CRM** | 어카운트 세부 정보, 연락 이력, 진행 중인 거래, 최근 활동 |
+| **이메일** | 해당 기업과의 최근 스레드, 미결 질문, 공유된 첨부 파일 |
+| **채팅** | 어카운트 관련 내부 채팅 논의(예: Slack), 동료 인사이트 |
+| **녹취록** | 이전 통화 녹음, 다룬 주제, 경쟁사 언급 |
+| **캘린더** | 미팅 자동 검색, 참석자 및 설명 가져오기 |
+
+> **커넥터가 없나요?** 문제없습니다. 미팅에 대해 알려주고 가진 맥락을 붙여넣으세요. 나머지는 리서치해 드립니다.
+
+---
+
+## 출력 형식
 
 ```markdown
-# Call Prep: [Company Name]
+# 통화 준비: [기업명]
 
-**Meeting:** [Type] — [Date/Time if known]
-**Attendees:** [Names with titles]
-**Your Goal:** [What you want to accomplish]
-
----
-
-## Account Snapshot
-
-| Field | Value |
-|-------|-------|
-| **Company** | [Name] |
-| **Industry** | [Industry] |
-| **Size** | [Employees / Revenue if known] |
-| **Status** | [New prospect / Active opportunity / Customer] |
-| **Last Touch** | [Date and summary] |
+**미팅:** [유형] — [날짜/시간 (파악 시)]
+**참석자:** [이름 및 직함]
+**목표:** [달성하고자 하는 것]
 
 ---
 
-## Who You're Meeting
+## 어카운트 스냅샷
 
-### [Name] — [Title]
-- **Background:** [Career history, education if found]
+| 항목 | 값 |
+|------|-----|
+| **기업** | [이름] |
+| **산업** | [산업] |
+| **규모** | [직원 수 / 매출 (파악 시)] |
+| **상태** | [신규 잠재 고객 / 진행 중인 영업 기회 / 기존 고객] |
+| **최근 접촉** | [날짜 및 요약] |
+
+---
+
+## 미팅 상대
+
+### [이름] — [직함]
+- **경력:** [이력, 학력 (파악 시)]
 - **LinkedIn:** [URL]
-- **Role in Deal:** [Decision maker / Champion / Evaluator / etc.]
-- **Last Interaction:** [Summary if known]
-- **Talking Point:** [Something personal/professional to reference]
+- **거래 역할:** [의사결정자 / 챔피언 / 평가자 / 등]
+- **최근 상호작용:** [요약 (파악 시)]
+- **대화 포인트:** [참조할 수 있는 개인적/전문적 사항]
 
-[Repeat for each attendee]
-
----
-
-## Context & History
-
-**What's happened so far:**
-- [Key point from prior interactions]
-- [Open commitments or action items]
-- [Any concerns or objections raised]
-
-**Recent news about [Company]:**
-- [News item 1 — why it matters]
-- [News item 2 — why it matters]
+[각 참석자에 대해 반복]
 
 ---
 
-## Suggested Agenda
+## 맥락 및 이력
 
-1. **Open** — [Reference last conversation or trigger event]
-2. **[Topic 1]** — [Discovery question or value discussion]
-3. **[Topic 2]** — [Address known concern or explore priority]
-4. **[Topic 3]** — [Demo section / Proposal review / etc.]
-5. **Next Steps** — [Propose clear follow-up with timeline]
+**지금까지의 경과:**
+- [이전 상호작용의 핵심 사항]
+- [미결 약속 또는 액션 아이템]
+- [제기된 우려 또는 이의]
 
----
-
-## Discovery Questions
-
-Ask these to fill gaps in your understanding:
-
-1. [Question about their current situation]
-2. [Question about pain points or priorities]
-3. [Question about decision process and timeline]
-4. [Question about success criteria]
-5. [Question about other stakeholders]
+**[기업] 최신 뉴스:**
+- [뉴스 1 — 중요한 이유]
+- [뉴스 2 — 중요한 이유]
 
 ---
 
-## Potential Objections
+## 제안 안건
 
-| Objection | Suggested Response |
-|-----------|-------------------|
-| [Likely objection based on context] | [How to address it] |
-| [Common objection for this stage] | [How to address it] |
-
----
-
-## Internal Notes
-
-[Any internal chat context (e.g. Slack), colleague insights, or competitive intel]
+1. **시작** — [이전 대화 또는 트리거 이벤트 참조]
+2. **[주제 1]** — [디스커버리 질문 또는 가치 논의]
+3. **[주제 2]** — [알려진 우려 해소 또는 우선순위 탐색]
+4. **[주제 3]** — [데모 섹션 / 제안서 검토 / 등]
+5. **다음 단계** — [일정이 포함된 명확한 후속 조치 제안]
 
 ---
 
-## After the Call
+## 디스커버리 질문
 
-Run **call-follow-up** to:
-- Extract action items
-- Update your CRM
-- Draft follow-up email
+이해의 갭을 채우기 위한 질문:
+
+1. [현재 상황 관련 질문]
+2. [페인 포인트 또는 우선순위 관련 질문]
+3. [의사결정 프로세스 및 일정 관련 질문]
+4. [성공 기준 관련 질문]
+5. [다른 이해관계자 관련 질문]
+
+---
+
+## 예상 이의
+
+| 이의 | 제안 대응 |
+|------|----------|
+| [맥락 기반 예상 이의] | [대응 방법] |
+| [해당 단계의 일반적 이의] | [대응 방법] |
+
+---
+
+## 내부 메모
+
+[내부 채팅 맥락(예: Slack), 동료 인사이트, 경쟁 정보]
+
+---
+
+## 통화 후
+
+**call-follow-up**을 실행하여:
+- 액션 아이템 추출
+- CRM 업데이트
+- 후속 조치 이메일 작성
 ```
 
 ---
 
-## Execution Flow
+## 실행 흐름
 
-### Step 1: Gather Context
+### 1단계: 맥락 수집
 
-**If connectors available:**
+**커넥터 사용 가능 시:**
 ```
-1. Calendar → Find upcoming meeting matching company name
-   - Pull: title, time, attendees, description, attachments
+1. 캘린더 → 기업명과 일치하는 예정 미팅 검색
+   - 가져오기: 제목, 시간, 참석자, 설명, 첨부 파일
 
-2. CRM → Query account
-   - Pull: account details, all contacts, open opportunities
-   - Pull: last 10 activities, any account notes
+2. CRM → 어카운트 조회
+   - 가져오기: 어카운트 세부 정보, 전체 연락처, 진행 중인 영업 기회
+   - 가져오기: 최근 10건 활동, 어카운트 메모
 
-3. Email → Search recent threads
-   - Query: emails with company domain (last 30 days)
-   - Extract: key topics, open questions, commitments
+3. 이메일 → 최근 스레드 검색
+   - 쿼리: 기업 도메인 이메일 (최근 30일)
+   - 추출: 주요 주제, 미결 질문, 약속 사항
 
-4. Chat → Search internal discussions
-   - Query: company name mentions (last 30 days)
-   - Extract: colleague insights, competitive intel
+4. 채팅 → 내부 논의 검색
+   - 쿼리: 기업명 언급 (최근 30일)
+   - 추출: 동료 인사이트, 경쟁 정보
 
-5. Transcripts → Find prior calls
-   - Pull: call recordings with this account
-   - Extract: key moments, objections raised, topics covered
-```
-
-**If no connectors:**
-```
-1. Ask user:
-   - "What company are you meeting with?"
-   - "What type of meeting is this?"
-   - "Who's attending? (names and titles if you know)"
-   - "Any context you want me to know? (paste notes, emails, etc.)"
-
-2. Accept whatever they provide and work with it
+5. 녹취록 → 이전 통화 검색
+   - 가져오기: 해당 어카운트 통화 녹음
+   - 추출: 핵심 순간, 제기된 이의, 다룬 주제
 ```
 
-### Step 2: Research Supplement
-
-**Always run (web search):**
+**커넥터 미연결 시:**
 ```
-1. "[Company] news" — last 30 days
-2. "[Company] funding" — recent announcements
-3. "[Company] leadership" — executive changes
-4. "[Company] + [industry] trends" — relevant context
-5. Attendee LinkedIn profiles — background research
+1. 사용자에게 질문:
+   - "어떤 기업과 미팅하나요?"
+   - "어떤 유형의 미팅인가요?"
+   - "누가 참석하나요? (이름과 직함을 아시면 알려주세요)"
+   - "알려줄 맥락이 있나요? (메모, 이메일 등 붙여넣기)"
+
+2. 제공된 정보로 작업 진행
 ```
 
-### Step 3: Synthesize & Generate
+### 2단계: 리서치 보충
+
+**항상 실행 (웹 검색):**
+```
+1. "[기업] news" — 최근 30일
+2. "[기업] funding" — 최근 발표
+3. "[기업] leadership" — 임원 변경
+4. "[기업] + [산업] trends" — 관련 맥락
+5. 참석자 LinkedIn 프로필 — 경력 조사
+```
+
+### 3단계: 종합 및 생성
 
 ```
-1. Combine all sources into unified context
-2. Identify gaps in understanding → generate discovery questions
-3. Anticipate objections based on stage and history
-4. Create suggested agenda tailored to meeting type
-5. Output formatted prep brief
+1. 모든 소스를 통합된 맥락으로 결합
+2. 이해의 갭 식별 → 디스커버리 질문 생성
+3. 단계 및 이력 기반 이의 예측
+4. 미팅 유형에 맞춘 안건 제안 작성
+5. 형식화된 준비 브리프 출력
 ```
 
 ---
 
-## Meeting Type Variations
+## 미팅 유형별 변형
 
-### Discovery Call
-- Focus on: Understanding their world, pain points, priorities
-- Agenda emphasis: Questions > Talking
-- Key output: Qualification signals, next step proposal
+### 디스커버리 콜
+- 중점: 고객의 세계, 페인 포인트, 우선순위 이해
+- 안건 강조: 질문 > 발표
+- 핵심 출력: 자격 심사 신호, 다음 단계 제안
 
-### Demo / Presentation
-- Focus on: Their specific use case, tailored examples
-- Agenda emphasis: Show relevant features, get feedback
-- Key output: Technical requirements, decision timeline
+### 데모 / 프레젠테이션
+- 중점: 고객의 구체적 사용 사례, 맞춤형 예시
+- 안건 강조: 관련 기능 시연, 피드백 수집
+- 핵심 출력: 기술 요구사항, 결정 일정
 
-### Negotiation / Proposal Review
-- Focus on: Addressing concerns, justifying value
-- Agenda emphasis: Handle objections, close gaps
-- Key output: Path to agreement, clear next steps
+### 협상 / 제안서 검토
+- 중점: 우려 해소, 가치 정당화
+- 안건 강조: 이의 처리, 갭 해소
+- 핵심 출력: 합의 경로, 명확한 다음 단계
 
-### Check-in / QBR
-- Focus on: Value delivered, expansion opportunities
-- Agenda emphasis: Review wins, surface new needs
-- Key output: Renewal confidence, upsell pipeline
-
----
-
-## Tips for Better Prep
-
-1. **More context = better prep** — Paste emails, notes, anything you have
-2. **Name the attendees** — Even just titles help me research
-3. **State your goal** — "I want to get them to agree to a pilot"
-4. **Flag concerns** — "They mentioned budget is tight"
+### 체크인 / QBR
+- 중점: 전달된 가치, 확장 기회
+- 안건 강조: 성과 검토, 새로운 니즈 발굴
+- 핵심 출력: 갱신 신뢰도, 업셀 파이프라인
 
 ---
 
-## Related Skills
+## 더 나은 준비를 위한 팁
 
-- **account-research** — Deep dive on a company before first contact
-- **call-follow-up** — Process call notes and execute post-call workflow
-- **draft-outreach** — Write personalized outreach after research
+1. **맥락이 많을수록 더 좋은 준비** — 이메일, 메모 등 가진 모든 것을 붙여넣으세요
+2. **참석자 이름 명시** — 직함만이라도 리서치에 도움이 됩니다
+3. **목표 명시** — "파일럿에 동의하도록 하고 싶습니다"
+4. **우려 사항 표시** — "예산이 빠듯하다고 언급했습니다"
+
+---
+
+## 관련 스킬
+
+- **account-research** — 첫 연락 전 기업 심층 분석
+- **call-follow-up** — 통화 메모 처리 및 후속 워크플로우 실행
+- **draft-outreach** — 리서치 후 맞춤형 아웃리치 작성
