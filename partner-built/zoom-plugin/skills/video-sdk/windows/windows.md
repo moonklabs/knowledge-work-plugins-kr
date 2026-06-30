@@ -1,6 +1,6 @@
 ---
 name: video-sdk/windows
-description: "Zoom Video SDK for Windows - C++ integration for video sessions, raw audio/video capture, screen sharing, recording, and real-time communication"
+description: "Zoom Video SDK for Windows - video session, raw audio/video capture, screen sharing, recording, real-time communication을 위한 C++ 통합 가이드입니다."
 ---
 
 # Zoom Video SDK (Windows)

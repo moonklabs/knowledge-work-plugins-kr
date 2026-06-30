@@ -1,6 +1,6 @@
 ---
 name: video-sdk/linux
-description: "Zoom Video SDK for Linux - C++ integration for video sessions, raw audio/video capture, screen sharing, recording, and real-time communication"
+description: "Zoom Video SDK for Linux - video session, raw audio/video capture, screen sharing, recording, real-time communication을 위한 C++ 통합 가이드입니다."
 ---
 
 # Zoom Video SDK - Linux Development
