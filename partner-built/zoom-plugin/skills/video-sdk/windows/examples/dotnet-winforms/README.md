@@ -1,27 +1,27 @@
-# UI Integration Guide for Zoom Video SDK Windows
+# Zoom Video SDK Windows UI 통합 가이드
 
-This guide covers three different UI approaches for integrating the Zoom Video SDK:
+이 가이드는 Zoom Video SDK를 통합하는 세 가지 UI 접근 방식을 다룹니다.
 
-1. **Win32 (Native C++)** - Direct SDK usage, no wrapper
-2. **WinForms (C# .NET)** - Requires C++/CLI wrapper
-3. **WPF (C# .NET)** - Requires C++/CLI wrapper + BitmapSource conversion
+1. **Win32 (Native C++)** - Wrapper 없이 SDK를 직접 사용
+2. **WinForms (C# .NET)** - C++/CLI wrapper 필요
+3. **WPF (C# .NET)** - C++/CLI wrapper와 BitmapSource 변환 필요
 
-## Quick Comparison
+## 빠른 비교
 
-| Aspect | Win32 | WinForms | WPF |
+| 항목 | Win32 | WinForms | WPF |
 |--------|-------|----------|-----|
-| **Language** | C++ | C# | C# |
-| **Wrapper Required** | No | Yes (C++/CLI) | Yes (C++/CLI) |
-| **Video Rendering** | Canvas API (SDK renders) | Raw Data Pipe (you render) | Raw Data Pipe + BitmapSource |
-| **Performance** | Best | Good | Good (extra conversion) |
-| **Complexity** | Medium | Medium | Higher |
+| **언어** | C++ | C# | C# |
+| **Wrapper 필요 여부** | No | Yes (C++/CLI) | Yes (C++/CLI) |
+| **Video Rendering** | Canvas API(SDK가 rendering) | Raw Data Pipe(직접 rendering) | Raw Data Pipe + BitmapSource |
+| **성능** | Best | Good | Good(추가 변환 있음) |
+| **복잡도** | Medium | Medium | Higher |
 | **UI Threading** | Win32 message loop | `InvokeRequired` | `Dispatcher` |
 
 ---
 
-## Option 1: Win32 (Native C++) - Direct SDK
+## Option 1: Win32 (Native C++) - SDK 직접 사용
 
-**No wrapper needed.** The SDK is native C++, so Win32 apps use it directly.
+**Wrapper가 필요 없습니다.** SDK가 native C++이므로 Win32 앱은 SDK를 직접 사용합니다.
 
 ### Architecture
 
@@ -33,7 +33,7 @@ This guide covers three different UI approaches for integrating the Zoom Video S
        HWND              Canvas API
 ```
 
-### Key Patterns
+### 핵심 패턴
 
 #### 1. SDK Manager Class (Native C++)
 
@@ -54,7 +54,7 @@ public:
 };
 ```
 
-#### 2. Delegate Implementation (All 80+ Callbacks)
+#### 2. Delegate 구현(80개 이상 callback)
 
 ```cpp
 class CustomZoomDelegate : public IZoomVideoSDKDelegate {
@@ -75,7 +75,7 @@ public:
 };
 ```
 
-#### 3. Video Rendering with Canvas API (SDK-Rendered)
+#### 3. Canvas API를 사용한 Video Rendering(SDK-rendered)
 
 ```cpp
 // Start video preview - SDK renders directly to HWND
@@ -103,7 +103,7 @@ bool ZoomSDKManager::SubscribeRemoteVideo(HWND hwnd, const std::string& userId) 
 }
 ```
 
-#### 4. Win32 Dialog with Video Panels
+#### 4. Video panel이 있는 Win32 Dialog
 
 ```cpp
 // main.cpp - Dialog procedure
@@ -132,21 +132,21 @@ INT_PTR CALLBACK MainDialogProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM l
 }
 ```
 
-### Win32 Flow Summary
+### Win32 Flow 요약
 
 ```
 1. CreateZoomVideoSDKObj()
-2. Initialize SDK with params
-3. Create & register CustomZoomDelegate
-4. Join session
-5. On IDC_START_VIDEO click:
-   - startVideo() → transmit your camera
-   - startVideoCanvasPreview(selfHwnd) → see yourself
-   - subscribeWithView(remoteHwnd) → see others
-6. SDK renders directly to HWNDs
+2. parameter로 SDK 초기화
+3. CustomZoomDelegate 생성 및 등록
+4. Session join
+5. IDC_START_VIDEO click 시:
+   - startVideo() -> 내 camera 전송
+   - startVideoCanvasPreview(selfHwnd) -> 내 화면 보기
+   - subscribeWithView(remoteHwnd) -> 다른 참가자 보기
+6. SDK가 HWND에 직접 rendering
 ```
 
-### Sample Location
+### Sample 위치
 ```
 C:\tempsdk\videosdk-windows-dotnet-desktop-framework-quickstart\
   └── ZoomVideoSDK.Win32\
@@ -160,7 +160,7 @@ C:\tempsdk\videosdk-windows-dotnet-desktop-framework-quickstart\
 
 ## Option 2: WinForms (C# + C++/CLI Wrapper)
 
-**Requires C++/CLI bridge** because Zoom SDK is native C++.
+Zoom SDK가 native C++이므로 **C++/CLI bridge가 필요합니다**.
 
 ### Architecture
 
@@ -173,7 +173,7 @@ C:\tempsdk\videosdk-windows-dotnet-desktop-framework-quickstart\
      Bitmap^             YUV→RGB                  YUVRawDataI420
 ```
 
-### Key Patterns
+### 핵심 패턴
 
 #### 1. C++/CLI Wrapper Class
 
@@ -196,7 +196,7 @@ public:
 };
 ```
 
-#### 2. Native Callback → Managed Event (gcroot pattern)
+#### 2. Native Callback -> Managed Event(gcroot pattern)
 
 ```cpp
 // Native handler stores managed reference via gcroot
@@ -222,7 +222,7 @@ public:
 };
 ```
 
-#### 3. YUV→RGB Conversion (LockBits for Performance)
+#### 3. YUV -> RGB 변환(성능을 위한 LockBits)
 
 ```cpp
 Bitmap^ ZoomSDKManager::ConvertYUVToBitmap(char* yBuffer, char* uBuffer, char* vBuffer,
@@ -256,7 +256,7 @@ Bitmap^ ZoomSDKManager::ConvertYUVToBitmap(char* yBuffer, char* uBuffer, char* v
 }
 ```
 
-#### 4. C# Consumer (WinForms)
+#### 4. C# Consumer(WinForms)
 
 ```csharp
 // MainForm.cs
@@ -293,29 +293,29 @@ public partial class MainForm : Form {
 }
 ```
 
-### WinForms Flow Summary
+### WinForms Flow 요약
 
 ```
 C# Layer:
-1. new ZoomSDKInterop() → creates C++/CLI ZoomSDKManager
-2. Subscribe to events (SessionJoined, PreviewVideoReceived, etc.)
-3. _zoomSDK.Initialize() → SDK init
-4. _zoomSDK.JoinSession(...) → join
-5. _zoomSDK.StartVideo() → start camera + preview
+1. new ZoomSDKInterop() -> C++/CLI ZoomSDKManager 생성
+2. event 구독(SessionJoined, PreviewVideoReceived 등)
+3. _zoomSDK.Initialize() -> SDK init
+4. _zoomSDK.JoinSession(...) -> join
+5. _zoomSDK.StartVideo() -> camera + preview 시작
 
 C++/CLI Layer:
-1. Creates native SDK via CreateZoomVideoSDKObj()
-2. Creates VideoPreviewHandler with gcroot<ZoomSDKManager^>
-3. Starts Raw Data Pipe subscription
-4. onRawDataFrameReceived → YUV→RGB → fires PreviewVideoReceived event
+1. CreateZoomVideoSDKObj()로 native SDK 생성
+2. gcroot<ZoomSDKManager^>로 VideoPreviewHandler 생성
+3. Raw Data Pipe subscription 시작
+4. onRawDataFrameReceived -> YUV -> RGB -> PreviewVideoReceived event 발생
 
 C# Layer (UI Thread):
-1. OnPreviewVideo receives Bitmap
-2. Checks InvokeRequired for thread safety
-3. Sets PictureBox.Image = bitmap
+1. OnPreviewVideo가 Bitmap 수신
+2. thread safety를 위해 InvokeRequired 확인
+3. PictureBox.Image = bitmap 설정
 ```
 
-### Sample Location
+### Sample 위치
 ```
 C:\tempsdk\videosdk-windows-dotnet-desktop-framework-quickstart\
   ├── ZoomVideoSDK.Wrapper\         # C++/CLI Bridge
@@ -332,7 +332,7 @@ C:\tempsdk\videosdk-windows-dotnet-desktop-framework-quickstart\
 
 ## Option 3: WPF (C# + C++/CLI Wrapper)
 
-**Same C++/CLI wrapper as WinForms**, but with additional WPF-specific handling.
+**WinForms와 같은 C++/CLI wrapper**를 사용하지만, WPF 전용 처리가 추가됩니다.
 
 ### Architecture
 
@@ -345,18 +345,18 @@ C:\tempsdk\videosdk-windows-dotnet-desktop-framework-quickstart\
      Dispatcher          Conversion              YUV→RGB                 YUVRawDataI420
 ```
 
-### Key Differences from WinForms
+### WinForms와의 주요 차이
 
-| Aspect | WinForms | WPF |
+| 항목 | WinForms | WPF |
 |--------|----------|-----|
 | **Video Type** | `System.Drawing.Bitmap` | `System.Windows.Media.Imaging.BitmapSource` |
 | **UI Thread** | `InvokeRequired` + `BeginInvoke` | `Dispatcher.CheckAccess()` + `Dispatcher.BeginInvoke` |
 | **Image Control** | `PictureBox.Image` | `Image.Source` |
-| **Extra Step** | None | Bitmap → BitmapSource conversion |
+| **추가 단계** | None | Bitmap -> BitmapSource conversion |
 
-### Key Patterns
+### 핵심 패턴
 
-#### 1. WPF-Specific Event Args
+#### 1. WPF 전용 Event Args
 
 ```csharp
 // WPF uses BitmapSource instead of Bitmap
@@ -366,7 +366,7 @@ public class VideoFrameEventArgs : EventArgs {
 }
 ```
 
-#### 2. Bitmap → BitmapSource Conversion
+#### 2. Bitmap -> BitmapSource 변환
 
 ```csharp
 // ZoomSDKInterop.cs (WPF version)
@@ -395,7 +395,7 @@ _sdkManager.PreviewVideoReceived += (sender, e) => {
 };
 ```
 
-#### 3. WPF Dispatcher for UI Thread
+#### 3. UI Thread용 WPF Dispatcher
 
 ```csharp
 // MainWindow.xaml.cs
@@ -416,9 +416,9 @@ private void OnPreviewVideoReceived(object sender, VideoFrameEventArgs e) {
 }
 ```
 
-#### 4. Alternative: WriteableBitmap (Higher Performance)
+#### 4. 대안: WriteableBitmap(더 높은 성능)
 
-For better performance, you can write directly to WriteableBitmap:
+더 나은 성능이 필요하면 WriteableBitmap에 직접 쓸 수 있습니다.
 
 ```csharp
 private BitmapSource CreateErrorBitmapSource(int width, int height, string message) {
@@ -447,24 +447,24 @@ private BitmapSource CreateErrorBitmapSource(int width, int height, string messa
 }
 ```
 
-### WPF Flow Summary
+### WPF Flow 요약
 
 ```
-Same as WinForms, with these differences:
+WinForms와 거의 같지만 다음 차이가 있습니다.
 
 C# WPF Interop Layer:
-1. Receives Bitmap from C++/CLI wrapper
-2. Converts Bitmap → BitmapSource (PNG stream or WriteableBitmap)
-3. Calls Freeze() to make cross-thread safe
-4. Fires WPF-compatible event
+1. C++/CLI wrapper에서 Bitmap 수신
+2. Bitmap -> BitmapSource 변환(PNG stream 또는 WriteableBitmap)
+3. cross-thread safe를 위해 Freeze() 호출
+4. WPF-compatible event 발생
 
 MainWindow (UI Thread):
-1. OnPreviewVideoReceived receives BitmapSource
-2. Checks Dispatcher.CheckAccess() for thread safety
-3. Sets Image.Source = bitmapSource
+1. OnPreviewVideoReceived가 BitmapSource 수신
+2. thread safety를 위해 Dispatcher.CheckAccess() 확인
+3. Image.Source = bitmapSource 설정
 ```
 
-### Sample Location
+### Sample 위치
 ```
 C:\tempsdk\videosdk-windows-dotnet-desktop-framework-quickstart\
   ├── ZoomVideoSDK.Wrapper\         # C++/CLI Bridge (shared with WinForms)
@@ -482,11 +482,11 @@ C:\tempsdk\videosdk-windows-dotnet-desktop-framework-quickstart\
 
 ## Decision Matrix
 
-| If you need... | Use | Why |
+| 필요한 것 | 사용할 방식 | 이유 |
 |----------------|-----|-----|
-| **Best performance** | Win32 | Canvas API, SDK renders directly |
-| **C++ codebase** | Win32 | No interop overhead |
-| **Existing WinForms app** | WinForms + C++/CLI | Natural integration |
+| **Best performance** | Win32 | Canvas API, SDK가 직접 rendering |
+| **C++ codebase** | Win32 | Interop overhead 없음 |
+| **Existing WinForms app** | WinForms + C++/CLI | 자연스러운 integration |
 | **Modern .NET UI** | WPF + C++/CLI | XAML, data binding |
 | **Cross-platform .NET** | Consider Avalonia | WPF-like but cross-platform |
 
