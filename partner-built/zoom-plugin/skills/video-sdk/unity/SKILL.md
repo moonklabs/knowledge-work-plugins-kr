@@ -2,8 +2,8 @@
 
 name: zoom-video-sdk-unity
 description: >-
-  Unity wrapper integration용 Zoom Video SDK입니다. Custom Unity-based video session experience를 만들고 Unity
-  scene/UI state를 Video SDK event에 mapping할 때 사용합니다.
+  Unity wrapper 통합용 Zoom Video SDK입니다. 커스텀 Unity 기반 비디오 세션 경험을 만들고 Unity scene/UI 상태를 Video SDK
+  event에 매핑할 때 사용합니다.
 user-invocable: false
 triggers:
   - "video sdk unity"

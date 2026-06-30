@@ -2,8 +2,8 @@
 
 name: zoom-meeting-sdk-electron
 description: >-
-  Electron desktop application용 Zoom Meeting SDK입니다. Electron app에서 Node addon wrapper, JWT auth, join/start
-  flow, settings controller, raw data integration으로 Zoom meeting을 embed할 때 사용합니다.
+  Electron 데스크톱 애플리케이션용 Zoom Meeting SDK입니다. Electron 앱에서 Node addon wrapper, JWT 인증, 조인/시작 흐름, 설정
+  컨트롤러, raw data 통합으로 Zoom 미팅을 삽입할 때 사용합니다.
 user-invocable: false
 triggers:
   - electron meeting sdk

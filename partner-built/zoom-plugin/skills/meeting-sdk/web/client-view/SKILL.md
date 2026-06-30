@@ -2,8 +2,8 @@
 
 name: zoom-meeting-sdk-web-client-view
 description: >-
-  Zoom Meeting SDK Web의 Client View입니다. Familiar Zoom interface를 제공하는 full-page Zoom meeting experience에
-  사용합니다. ZoomMtg global singleton과 callback-based API를 사용하며 minimal customization으로 빠르게 integration할 때 적합합니다.
+  Zoom Meeting SDK Web의 Client View입니다. 익숙한 Zoom 인터페이스를 제공하는 전체 페이지 미팅 경험에 사용합니다. ZoomMtg global
+  singleton과 callback-based API를 쓰며 최소한의 커스터마이징으로 빠르게 통합할 때 적합합니다.
 user-invocable: false
 triggers:
   - "meeting sdk client view"

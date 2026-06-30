@@ -2,9 +2,8 @@
 
 name: zoom-meeting-sdk-web
 description: >-
-  Web용 Zoom Meeting SDK입니다. Web application에 Zoom meeting capability를 embed합니다. Client View(full-page Zoom
-  UI)와 Component View(embeddable Promise-based API)를 다루며 HD video, gallery view, virtual background를 위한
-  SharedArrayBuffer setup을 포함합니다.
+  Web용 Zoom Meeting SDK입니다. 웹 애플리케이션에 Zoom 미팅 기능을 삽입합니다. Client View와 Component View를 다루며 HD
+  video, gallery view, virtual background를 위한 SharedArrayBuffer 설정을 포함합니다.
 user-invocable: false
 triggers:
   - "embed meeting web"

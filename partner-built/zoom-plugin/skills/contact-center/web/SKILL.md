@@ -2,8 +2,8 @@
 
 name: contact-center/web
 description: >-
-  Web용 Zoom Contact Center SDK입니다. Web chat/video/campaign embed, engagement event handling, app-context
-  integration, Smart Embed postMessage workflow에 사용합니다.
+  Web용 Zoom Contact Center SDK입니다. 웹 채팅/비디오/캠페인 임베드, 참여 이벤트 처리, 앱 컨텍스트 통합, Smart Embed postMessage
+  워크플로가 필요할 때 사용합니다.
 user-invocable: false
 triggers:
   - "contact center web"

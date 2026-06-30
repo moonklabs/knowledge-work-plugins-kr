@@ -2,8 +2,8 @@
 
 name: build-zoom-contact-center-app
 description: >-
-  Zoom Contact Center 참조 스킬입니다. Contact-center workflow로 라우팅된 뒤 app, web, native integration, engagement
-  context/state handling, campaign, callback, version-drift troubleshooting을 구현할 때 사용합니다.
+  Zoom Contact Center 참조 스킬입니다. Contact Center 워크플로로 라우팅된 뒤 앱, 웹, 네이티브 통합, 참여 컨텍스트와 상태 처리, 캠페인,
+  콜백, 버전 차이 문제를 구현하거나 디버그할 때 사용합니다.
 triggers:
   - "contact center sdk"
   - "zoom contact center"

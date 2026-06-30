@@ -1,6 +1,8 @@
 ---
 name: scribe
-description: Zoom AI Services Scribe 참조 스킬입니다. 전사 워크플로로 라우팅된 뒤 업로드/저장된 미디어, Build-플랫폼 JWT 인증, 빠른 모드 전사, 배치 작업, 전사 파이프라인 design을 처리할 때 사용합니다.
+description: >-
+  Zoom AI Services Scribe 참조 스킬입니다. 전사 워크플로로 라우팅된 뒤 업로드되거나 저장된 미디어, Build 플랫폼 JWT 인증, 빠른 모드 전사, 배치
+  작업, 전사 파이프라인 설계를 처리할 때 사용합니다.
 user-invocable: false
 triggers:
   - "scribe"

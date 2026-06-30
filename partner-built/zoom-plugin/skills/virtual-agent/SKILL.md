@@ -2,8 +2,8 @@
 
 name: build-zoom-virtual-agent
 description: >-
-  Zoom Virtual Agent 참조 스킬입니다. Virtual-agent workflow로 라우팅된 뒤 web embed, Android/iOS wrapper integration,
-  knowledge-base sync, lifecycle handling, troubleshooting을 구현할 때 사용합니다.
+  Zoom Virtual Agent 참조 스킬입니다. Virtual Agent 워크플로로 라우팅된 뒤 웹 임베드, Android/iOS 래퍼 통합, 지식 베이스 동기화,
+  생명주기 처리, 문제 해결을 구현할 때 사용합니다.
 triggers:
   - "virtual agent"
   - "zva"

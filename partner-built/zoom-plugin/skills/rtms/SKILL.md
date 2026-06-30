@@ -1,6 +1,8 @@
 ---
 name: zoom-rtms
-description: Zoom RTMS 참조 스킬입니다. Live-media 워크플로로 라우팅된 뒤 실시간 오디오, 비디오, 채팅, 전사, 화면 공유, 컨택센터 음성 스트림을 처리할 때 사용합니다.
+description: >-
+  Zoom RTMS 참조 스킬입니다. Live-media 워크플로로 라우팅된 뒤 실시간 오디오, 비디오, 채팅, 전사, 화면 공유, 컨택센터 음성 스트림을 처리할 때
+  사용합니다.
 user-invocable: false
 triggers:
   - "real-time media"

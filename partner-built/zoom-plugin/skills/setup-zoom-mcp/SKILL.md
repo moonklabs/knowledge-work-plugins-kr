@@ -1,6 +1,8 @@
 ---
 name: setup-zoom-mcp
-description: Zoom MCP가 적합한 경우를 판단하고 Claude를 위한 안전한 설정 계획을 만듭니다. Zoom 데이터 위의 AI 워크플로 계획, MCP와 REST 중 선택, 하이브리드 MCP 아키텍처 정의에 사용합니다.
+description: >-
+  Zoom MCP가 적합한 경우를 판단하고 Claude를 위한 안전한 설정 계획을 만듭니다. Zoom 데이터 위의 AI 워크플로 계획, MCP와 REST 중 선택, 하이브리드
+  MCP 아키텍처 정의에 사용합니다.
 argument-hint: "<AI workflow or MCP use case>"
 ---
 

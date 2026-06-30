@@ -1,6 +1,7 @@
 ---
 name: setup-zoom-webhooks
-description: Zoom 웹훅 참조 스킬입니다. 이벤트 기반 워크플로로 라우팅된 뒤 구독, 서명 검증, 전달 처리, 재시도, 이벤트 유형 선택을 구현할 때 사용합니다.
+description: >-
+  Zoom 웹훅 참조 스킬입니다. 이벤트 기반 워크플로로 라우팅된 뒤 구독, 서명 검증, 전달 처리, 재시도, 이벤트 유형 선택을 구현할 때 사용합니다.
 triggers:
   - "zoom webhook"
   - "webhook signature"

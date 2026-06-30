@@ -1,6 +1,7 @@
 ---
 name: setup-zoom-oauth
-description: Zoom 인증을 올바르게 구현합니다. 앱 자격 증명 설정, OAuth grant 선택, 스코프 요청, 토큰 갱신 처리, 인증 실패 디버깅에 사용합니다.
+description: >-
+  Zoom 인증을 올바르게 구현합니다. 앱 자격 증명 설정, OAuth grant 선택, 스코프 요청, 토큰 갱신 처리, 인증 실패 디버깅에 사용합니다.
 ---
 
 # /setup-zoom-oauth

@@ -2,8 +2,8 @@
 
 name: zoom-video-sdk-android
 description: >-
-  Android native app용 Zoom Video SDK입니다. Full UI control, session token, raw media option, event-driven
-  participant state로 custom Android video experience를 만들 때 사용합니다.
+  Android 네이티브 앱용 Zoom Video SDK입니다. 전체 UI 제어, 세션 토큰, raw media 옵션, 이벤트 기반 참여자 상태로 커스텀 Android 비디오
+  경험을 만들 때 사용합니다.
 user-invocable: false
 triggers:
   - "video sdk android"

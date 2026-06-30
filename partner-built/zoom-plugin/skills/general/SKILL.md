@@ -1,6 +1,8 @@
 ---
 name: zoom-general
-description: Zoom 제품군 공통 참조 스킬입니다. 워크플로가 명확해진 뒤 공유 플랫폼 가이드, 앱 모델 비교, 인증 맥락, 스코프, 마켓플레이스 고려사항, API 대 MCP 라우팅이 필요할 때 사용합니다.
+description: >-
+  Zoom 제품군 공통 참조 스킬입니다. 워크플로가 명확해진 뒤 공유 플랫폼 가이드, 앱 모델 비교, 인증 맥락, 스코프, 마켓플레이스 고려사항, API와 MCP 선택 기준이
+  필요할 때 사용합니다.
 user-invocable: false
 triggers:
   - "zoom integration"

@@ -2,8 +2,8 @@
 
 name: zoom-meeting-sdk-ios
 description: >-
-  iOS native app용 Zoom Meeting SDK입니다. iOS에서 default/custom UI, PKCE + SDK auth, ZAK 기반 host start, mobile
-  lifecycle handling으로 Zoom meeting을 embed할 때 사용합니다.
+  iOS 네이티브 앱용 Zoom Meeting SDK입니다. iOS에서 기본/커스텀 UI, PKCE와 SDK 인증, ZAK 기반 호스트 시작, 모바일 생명주기 처리로 Zoom
+  미팅을 삽입할 때 사용합니다.
 user-invocable: false
 triggers:
   - "meeting sdk ios"

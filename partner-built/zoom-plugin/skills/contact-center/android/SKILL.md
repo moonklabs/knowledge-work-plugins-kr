@@ -2,8 +2,8 @@
 
 name: contact-center/android
 description: >-
-  Android용 Zoom Contact Center SDK입니다. Native Android chat/video/ZVA/scheduled callback integration, campaign
-  mode, service lifecycle, rejoin handling에 사용합니다.
+  Android용 Zoom Contact Center SDK입니다. 네이티브 Android 채팅, 비디오, ZVA, 예약 콜백 통합, 캠페인 모드, 서비스 생명주기, 재참여
+  처리가 필요할 때 사용합니다.
 user-invocable: false
 triggers:
   - "contact center android"

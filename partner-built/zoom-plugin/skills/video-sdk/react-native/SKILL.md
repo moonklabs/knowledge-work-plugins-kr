@@ -2,8 +2,8 @@
 
 name: zoom-video-sdk-react-native
 description: >-
-  React Native용 Zoom Video SDK입니다. @zoom/react-native-videosdk, event listener, helper-based API, backend JWT
-  token flow로 custom mobile video session experience를 만들 때 사용합니다.
+  React Native용 Zoom Video SDK입니다. @zoom/react-native-videosdk, event listener, helper-based API,
+  백엔드 JWT token flow로 커스텀 모바일 비디오 세션 경험을 만들 때 사용합니다.
 user-invocable: false
 triggers:
   - react native video sdk

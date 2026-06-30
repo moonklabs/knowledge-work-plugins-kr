@@ -2,8 +2,8 @@
 
 name: virtual-agent/web
 description: >-
-  Web embed용 Zoom Virtual Agent SDK입니다. Campaign 또는 entry ID chat launch, event-driven control, user context
-  update, CSP-safe deployment에 사용합니다.
+  웹 임베드용 Zoom Virtual Agent SDK입니다. 캠페인 또는 entry ID 채팅 시작, 이벤트 기반 제어, 사용자 컨텍스트 갱신, CSP 안전 배포에
+  사용합니다.
 user-invocable: false
 triggers:
   - "virtual agent web"

@@ -2,7 +2,7 @@
 
 name: ui-toolkit/web
 description: >-
-  Zoom Video SDK UI Toolkit 참조 스킬입니다. Web video workflow로 라우팅된 뒤 fully custom Video SDK interface 대신 prebuilt
+  Zoom Video SDK UI Toolkit 참조 스킬입니다. Web video 워크플로로 라우팅된 뒤 완전 커스텀 Video SDK 인터페이스 대신 미리 만들어진
   React UI를 원할 때 사용합니다.
 user-invocable: false
 triggers:

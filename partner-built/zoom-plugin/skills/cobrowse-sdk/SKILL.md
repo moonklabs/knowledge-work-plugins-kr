@@ -1,6 +1,8 @@
 ---
 name: zoom-cobrowse-sdk
-description: Zoom Cobrowse SDK 참조 스킬입니다. 협업 브라우징 워크플로로 라우팅된 뒤 브라우저 공동 브라우징, 주석 도구, 개인정보 마스킹, 원격 지원, PIN-기반 세션 공유을 구현할 때 사용합니다.
+description: >-
+  Zoom Cobrowse SDK 참조 스킬입니다. 협업 브라우징 워크플로로 라우팅된 뒤 브라우저 공동 탐색, 주석 도구, 개인정보 마스킹, 원격 지원, PIN 기반 세션
+  공유를 구현할 때 사용합니다.
 user-invocable: false
 triggers:
   - "cobrowse"
