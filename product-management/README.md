@@ -10,27 +10,27 @@ claude plugins add knowledge-work-plugins/product-management
 
 ## 주요 기능
 
-이 플러그인은 다음을 도와주는 AI-powered product management partner를 제공합니다.
+이 플러그인은 다음 작업을 돕는 AI-powered product management partner를 제공합니다.
 
 - **Feature Specs & PRDs** — Problem statement 또는 feature idea에서 구조화된 PRD를 생성합니다. User story, requirement prioritization, success metric, scope management를 포함합니다.
-- **Roadmap Planning** — Product roadmap을 create, update, reprioritize합니다. Now/Next/Later, quarterly theme, OKR-aligned format, dependency mapping을 지원합니다.
+- **Roadmap Planning** — Product roadmap을 생성, 갱신, 우선순위 재조정합니다. Now/Next/Later, quarterly theme, OKR-aligned format, dependency mapping을 지원합니다.
 - **Stakeholder Updates** — Executive, engineering, customer 등 audience에 맞춘 status update를 생성합니다. Connected tool에서 context를 가져와 weekly update 부담을 줄입니다.
 - **User Research Synthesis** — Interview note, survey data, support ticket을 structured insight로 바꿉니다. Theme을 식별하고 persona를 만들며 supporting evidence와 함께 opportunity area를 드러냅니다.
 - **Competitive Analysis** — Competitor를 조사하고 feature comparison, positioning analysis, strategic implication이 포함된 brief를 생성합니다.
 - **Metrics Review** — Product metric을 분석하고 trend를 식별하며 target과 비교해 actionable insight를 제공합니다.
-- **Product Brainstorming** — Sharp sparring partner와 problem space를 탐색하고 idea를 생성하며 product thinking을 stress-test합니다. How Might We, Jobs-to-be-Done, First Principles, Opportunity Solution Trees 같은 framework를 활용합니다.
+- **Product Brainstorming** — 날카로운 sparring partner와 problem space를 탐색하고 idea를 생성하며 product thinking을 stress-test합니다. How Might We, Jobs-to-be-Done, First Principles, Opportunity Solution Trees 같은 framework를 활용합니다.
 
 ## 명령
 
 | 명령 | 설명 |
 |---|---|
 | `/write-spec` | Problem statement에서 feature spec 또는 PRD를 작성합니다. |
-| `/roadmap-update` | Roadmap을 update, create, reprioritize합니다. |
+| `/roadmap-update` | Roadmap을 갱신, 생성, 우선순위 재조정합니다. |
 | `/stakeholder-update` | Weekly, monthly, launch용 stakeholder update를 생성합니다. |
 | `/synthesize-research` | Interview, survey, ticket에서 user research를 종합합니다. |
 | `/competitive-brief` | Competitive analysis brief를 생성합니다. |
 | `/metrics-review` | Product metric을 review하고 analyze합니다. |
-| `/brainstorm` | Product idea, problem space, strategic question을 sharp thinking partner와 brainstorm합니다. |
+| `/brainstorm` | Product idea, problem space, strategic question을 날카로운 thinking partner와 brainstorm합니다. |
 
 ## 스킬
 
@@ -42,7 +42,7 @@ claude plugins add knowledge-work-plugins/product-management
 | `user-research-synthesis` | Thematic analysis, affinity mapping, persona development, opportunity sizing을 다룹니다. |
 | `competitive-analysis` | Feature comparison matrix, positioning analysis, win/loss analysis를 다룹니다. |
 | `metrics-tracking` | Product metric hierarchy, OKR goal setting, dashboard design, review cadence를 다룹니다. |
-| `product-brainstorming` | Thinking partner로서 product idea를 brainstorm하고 problem space를 explore하며 assumption에 challenge합니다. New opportunity 탐색, product problem solution 생성, idea stress-test, PM이 방향을 정하기 전 sharp sparring partner와 생각을 정리해야 할 때 사용합니다. |
+| `product-brainstorming` | Thinking partner로서 product idea를 brainstorm하고 problem space를 explore하며 assumption에 challenge합니다. New opportunity 탐색, product problem solution 생성, idea stress-test, PM이 방향을 정하기 전 날카로운 sparring partner와 생각을 정리해야 할 때 사용합니다. |
 
 ## 예시 워크플로
 
