@@ -1,6 +1,6 @@
 ---
 name: risk-assessment
-description: 운영 위험을 식별, 평가, 완화합니다. "what are the risks", "risk assessment", "risk register", "what could go wrong" 또는 프로젝트, 벤더, process, 의사결정 관련 위험을 평가할 때 트리거됩니다.
+description: 운영 위험을 식별, 평가, 완화합니다. "what are the risks", "risk assessment", "risk register", "what could go wrong" 또는 프로젝트, 벤더, 처리, 의사결정 관련 위험을 평가할 때 트리거됩니다.
 ---
 
 # Risk Assessment

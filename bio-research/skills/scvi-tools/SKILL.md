@@ -1,6 +1,6 @@
 ---
 name: scvi-tools
-description: scvi-tools를 사용한 single-cell 분석용 딥러닝 스킬입니다. (1) scVI/scANVI 데이터 통합 및 배치 보정, (2) PeakVI ATAC-seq 분석, (3) totalVI CITE-seq 멀티모달 분석, (4) MultiVI multiome RNA+ATAC 분석, (5) DestVI 공간 전사체 디컨볼루션, (6) scANVI/scArches 라벨 전이 및 참조 매핑, (7) veloVI RNA velocity, (8) 딥러닝 기반 single-cell 방법이 필요할 때 사용합니다. scVI, scANVI, totalVI, PeakVI, MultiVI, DestVI, veloVI, sysVI, scArches, variational autoencoder, VAE, 배치 보정, 데이터 통합, 멀티모달, CITE-seq, multiome, 참조 매핑, 잠재 공간 언급이 트리거입니다.
+description: scvi-tools를 사용한 단일세포 분석용 딥러닝 스킬입니다. (1) scVI/scANVI 데이터 통합 및 배치 보정, (2) PeakVI ATAC-seq 분석, (3) totalVI CITE-seq 멀티모달 분석, (4) MultiVI multiome RNA+ATAC 분석, (5) DestVI 공간 전사체 디컨볼루션, (6) scANVI/scArches 라벨 전이 및 참조 매핑, (7) veloVI RNA velocity, (8) 딥러닝 기반 단일세포 방법이 필요할 때 사용합니다. scVI, scANVI, totalVI, PeakVI, MultiVI, DestVI, veloVI, sysVI, scArches, variational autoencoder, VAE, 배치 보정, 데이터 통합, 멀티모달, CITE-seq, multiome, 참조 매핑, 잠재 공간 언급이 트리거입니다.
 ---
 
 # scvi-tools Deep Learning Skill

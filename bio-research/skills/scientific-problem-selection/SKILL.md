@@ -2,9 +2,9 @@
 
 name: scientific-problem-selection
 description: >-
-  Scientist가 research problem selection, project ideation, stuck project troubleshooting, strategic scientific
-  decision에 도움이 필요할 때 사용합니다. New research idea pitch, project problem 해결, project risk 평가, research strategy
-  planning, decision tree 탐색, 어떤 scientific problem을 추진할지 결정하는 요청에서 트리거됩니다.
+  과학자가 연구 문제 선정, 프로젝트 아이디어 발굴, 막힌 프로젝트 문제 해결, 전략적 과학 의사결정에 도움이 필요할 때 사용합니다.
+  새 연구 아이디어 피치, 프로젝트 문제 해결, 프로젝트 위험 평가, 연구 전략 계획, decision tree 탐색, 어떤 과학 문제를 추진할지
+  결정하는 요청에서 트리거됩니다.
 ---
 
 # Scientific Problem Selection Skills

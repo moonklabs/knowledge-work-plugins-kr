@@ -2,8 +2,8 @@
 
 name: call-prep
 description: >-
-  Account context, attendee research, suggested agenda로 sales call을 준비합니다. User input과 web research만으로
-  standalone 동작하며 CRM, email, chat, transcript를 연결하면 더 강력해집니다. "prep me for my call with [company]", "I'm
+  계정 맥락, 참석자 조사, 추천 안건으로 영업 통화를 준비합니다. 사용자 입력과 웹 리서치만으로
+  독립 실행하며 CRM, email, chat, transcript를 연결하면 더 강력해집니다. "prep me for my call with [company]", "I'm
   meeting with [company] prep me", "call prep [company]"에서 트리거됩니다.
 ---
 

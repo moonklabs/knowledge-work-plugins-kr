@@ -1,6 +1,6 @@
 ---
 name: prospect
-description: Full ICP-to-leads 파이프라인입니다. 이상적 고객를 plain English로 설명하면 이메일과 전화번호가 포함된 보강된 의사결정권자 리드의 순위표을 얻습니다.
+description: Full ICP-to-leads 파이프라인입니다. 이상적 고객를 쉬운 영어로 설명하면 이메일과 전화번호가 포함된 보강된 의사결정권자 리드의 순위표을 얻습니다.
 user-invocable: true
 argument-hint: "[describe your ideal customer]"
 ---

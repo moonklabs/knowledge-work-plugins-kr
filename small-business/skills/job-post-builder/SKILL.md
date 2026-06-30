@@ -6,7 +6,7 @@ description: >-
   for", "write a job post", "job description", "JD", "open role", "create a job ad", "interview
   questions", "scoring rubric", "draft an offer letter", "send an offer", "make a hiring packet"
   또는 포지션 채용 요청에서 트리거됩니다. 애매하면 트리거합니다. 채용 공고부터 browser를 통한 DocuSign envelope creation까지 전체 채용 워크플로를
-  다룹니다. 지원자 screening이나 ranking은 하지 않습니다.
+  다룹니다. 지원자 screening이나 순위화ing은 하지 않습니다.
 ---
 
 # Job Post Builder

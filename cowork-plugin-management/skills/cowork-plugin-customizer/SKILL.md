@@ -3,9 +3,9 @@
 
 name: cowork-plugin-customizer
 description: >-
-  특정 조직의 도구와 워크플로에 맞게 Claude Code 플러그인을 커스터마이즈합니다. customize plugin, set up plugin, configure plugin,
-  tailor plugin, adjust plugin settings, customize plugin connectors, customize plugin skill, tweak plugin,
-  modify plugin configuration 요청에서 사용합니다.
+  특정 조직의 도구와 작업 흐름에 맞게 Claude Code 플러그인을 커스터마이즈합니다. "customize plugin", "set up plugin", "configure plugin",
+  "tailor plugin", "adjust plugin settings", "customize plugin connectors", "customize plugin skill", "tweak plugin",
+  "modify plugin configuration" 요청에서 사용합니다.
 compatibility: Requires Cowork desktop app environment with access to mounted plugin directories (mnt/.local-plugins, mnt/.plugins).
 ---
 

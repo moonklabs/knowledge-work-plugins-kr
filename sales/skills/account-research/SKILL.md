@@ -2,7 +2,7 @@
 
 name: account-research
 description: >-
-  Company 또는 person을 조사하고 실행 가능한 sales intel을 얻습니다. Web search만으로 standalone 동작하며 enrichment tool 또는 CRM을 연결하면
+  Company 또는 person을 조사하고 실행 가능한 sales intel을 얻습니다. Web search만으로 독립 실행하며 enrichment tool 또는 CRM을 연결하면
   더 강력해집니다. "research [company]", "look up [person]", "intel on [prospect]", "who is [name] at [company]",
   "tell me about [company]"에서 트리거됩니다.
 ---

@@ -3,8 +3,8 @@
 
 name: create-cowork-plugin
 description: >-
-  Cowork 세션에서 새 플러그인을 처음부터 만드는 과정을 안내합니다. 사용자가 create a plugin, build a plugin, make a new plugin,
-  develop a plugin, scaffold a plugin, start a plugin from scratch, design a plugin을 원할 때 사용합니다. 최종 .plugin
+  Cowork 세션에서 새 플러그인을 처음부터 만드는 과정을 안내합니다. 사용자가 "create a plugin", "build a plugin", "make a new plugin",
+  "develop a plugin", "scaffold a plugin", "start a plugin from scratch", "design a plugin"을 원할 때 사용합니다. 최종 .plugin
   파일을 전달하려면 outputs 디렉터리에 접근할 수 있는 Cowork 모드가 필요합니다.
 compatibility: Requires Cowork desktop app environment with access to the outputs directory for delivering .plugin files.
 ---
