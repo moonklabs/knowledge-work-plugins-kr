@@ -1,6 +1,6 @@
 ---
 name: people-report
-description: Headcount, attrition, diversity, org health report를 생성합니다. Leadership용 headcount snapshot, team별 turnover trend analysis, diversity representation metric 준비, 조직 전반의 span of control과 flight risk assessment에 사용합니다.
+description: 인원수, 이탈률, 다양성, 조직 건강 보고서를 생성합니다. 리더십용 인원수 스냅샷, team별 이직 추세 분석, 다양성 대표성 지표 준비, 조직 전반의 관리 범위과 이탈 위험 평가에 사용합니다.
 argument-hint: "<report type — headcount, attrition, diversity, org health>"
 ---
 

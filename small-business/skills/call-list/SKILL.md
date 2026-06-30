@@ -1,6 +1,6 @@
 ---
 name: call-list
-description: 오늘 call할 가치가 가장 높은 top-5 lead를 rank하고 email history에서 talking point를 제공하며 calendar에 시간을 block하고 follow-up message 초안을 작성합니다. Optional count와 date argument를 받습니다.
+description: 오늘 전화할 가치가 가장 높은 상위 5개 리드를 순위를 매기고 이메일 history에서 대화 포인트를 제공하며 캘린더에 시간을 확보하고 후속 메시지 초안을 작성합니다. Optional count와 날짜 argument를 받습니다.
 allowed-tools: Read, WebFetch, Bash
 ---
 

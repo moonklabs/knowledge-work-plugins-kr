@@ -1,6 +1,6 @@
 ---
 name: product-brainstorming
-description: Thinking partner로서 product idea를 brainstorm하고 problem space를 explore하며 assumption에 challenge합니다. New opportunity 탐색, product problem solution 생성, idea stress-test, PM이 방향을 정하기 전 sharp sparring partner와 생각을 정리해야 할 때 사용합니다.
+description: 사고 파트너로서 제품 아이디어를 브레인스토밍하고 문제 공간를 탐색하며 가정에 검증합니다. 새 기회 탐색, 제품 문제 해결책 생성, 아이디어 스트레스 테스트, PM이 방향을 정하기 전 날카로운 사고 파트너와 생각을 정리해야 할 때 사용합니다.
 ---
 
 # Product Brainstorming Skill

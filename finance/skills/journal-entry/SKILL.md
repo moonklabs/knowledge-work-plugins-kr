@@ -1,6 +1,6 @@
 ---
 name: journal-entry
-description: 적절한 debit, credit, supporting detail을 갖춘 journal entry를 준비합니다. Month-end accrual(AP, payroll, prepaid) booking, depreciation/amortization recording, revenue recognition 또는 deferred revenue adjustment posting, audit review용 entry documentation에 사용합니다.
+description: 적절한 차변, 대변, 상세 증빙을 갖춘 전표 분개를 준비합니다. 월말 발생액(AP, 급여, 선급비용) 입력, 감가상각/상각 기록, 수익 인식 또는 이연수익 조정 전기, 감사 검토용 분개 문서화에 사용합니다.
 argument-hint: "<entry type> [period]"
 ---
 

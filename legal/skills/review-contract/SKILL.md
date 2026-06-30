@@ -1,6 +1,6 @@
 ---
 name: review-contract
-description: Organization의 negotiation playbook에 맞춰 contract를 review합니다. Deviation을 flag하고 redline을 생성하며 business impact analysis를 제공합니다. Vendor/customer agreement review, standard position 대비 clause-by-clause analysis, prioritized redline과 fallback position이 있는 negotiation strategy 준비에 사용합니다.
+description: 조직의 협상 플레이북에 맞춰 계약를 검토합니다. 이탈 사항을 표시하고 수정안을 생성하며 비즈니스 영향 분석를 제공합니다. 벤더/고객 계약 검토, 표준 입장 대비 조항별 분석, 우선순위화된 수정안과 fallback 포지션이 있는 협상on strategy 준비에 사용합니다.
 argument-hint: "<contract file or text>"
 ---
 

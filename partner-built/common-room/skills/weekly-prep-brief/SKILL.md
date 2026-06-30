@@ -1,6 +1,6 @@
 ---
 name: weekly-prep-brief
-description: 다음 7일 동안의 모든 external call에 대한 comprehensive weekly briefing을 생성합니다. 'weekly prep brief', 'prepare my week', 'what calls do I have this week', 'Monday prep' 또는 weekly planning request에서 트리거됩니다.
+description: 다음 7일 동안의 모든 외부 통화에 대한 종합 주간 브리핑을 생성합니다. 'weekly prep brief', 'prepare my week', 'what calls do I have this week', 'Monday prep' 또는 주간 계획 요청에서 트리거됩니다.
 ---
 
 # Weekly Prep Brief

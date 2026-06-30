@@ -1,6 +1,6 @@
 ---
 name: task-management
-description: 공유 TASKS.md file을 사용하는 간단한 task management입니다. 사용자가 자신의 task를 묻거나, task 추가/완료를 원하거나, commitment tracking에 도움이 필요할 때 참조합니다.
+description: 공유 TASKS.md 파일을 사용하는 간단한 작업 관리입니다. 사용자가 자신의 작업을 묻거나, 작업 추가/완료를 원하거나, 약속 추적에 도움이 필요할 때 참조합니다.
 user-invocable: false
 ---
 

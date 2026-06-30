@@ -1,6 +1,6 @@
 ---
 name: sox-testing
-description: SOX sample selection, testing workpaper, control assessment를 생성합니다. Quarterly/annual SOX 404 testing planning, control(revenue, P2P, ITGC, close) sample 추출, testing workpaper template 작성, control deficiency evaluation/classification에 사용합니다.
+description: SOX 샘플 선정, 테스트 조서, 통제 평가를 생성합니다. 분기/연례 SOX 404 테스트 계획, 통제(수익, P2P, ITGC, 마감) 샘플 추출, 테스트 조서 템플릿 작성, 통제 미비점 평가/분류에 사용합니다.
 argument-hint: "<control area> [period]"
 ---
 

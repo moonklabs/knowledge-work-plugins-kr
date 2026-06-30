@@ -1,6 +1,6 @@
 ---
 name: journal-entry-prep
-description: Month-end close를 위해 적절한 debit, credit, supporting documentation을 갖춘 journal entry를 준비합니다. Accrual, prepaid amortization, fixed asset depreciation, payroll entry, revenue recognition 또는 manual journal entry booking에 사용합니다.
+description: 월말 마감를 위해 적절한 차변, 대변, 증빙 문서을 갖춘 전표 분개를 준비합니다. Accrual, 선급비용 상각, 고정자산 감가상각, 급여 분개, 수익 인식 또는 수기 전표 입력에 사용합니다.
 user-invocable: false
 ---
 

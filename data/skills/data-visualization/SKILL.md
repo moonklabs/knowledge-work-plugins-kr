@@ -1,6 +1,6 @@
 ---
 name: data-visualization
-description: Python(matplotlib, seaborn, plotly)으로 효과적인 data visualization을 만듭니다. Chart 작성, dataset에 맞는 chart type 선택, publication-quality figure 생성, accessibility와 color theory 같은 design principle 적용에 사용합니다.
+description: Python(matplotlib, seaborn, plotly)으로 효과적인 데이터 시각화를 만듭니다. 차트 작성, 데이터셋에 맞는 차트 유형 선택, 출판 품질의 그림 생성, 접근성와 색채 이론 같은 디자인 원칙 적용에 사용합니다.
 user-invocable: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: write-query
-description: 사용자의 dialect에 맞춰 best practice를 적용한 optimized SQL을 작성합니다. Natural-language data need를 SQL로 바꾸거나, join과 aggregation이 있는 multi-CTE query를 만들거나, large partitioned table 대상 query를 optimize하거나, Snowflake, BigQuery, Postgres 등의 dialect-specific syntax가 필요할 때 사용합니다.
+description: 사용자의 방언에 맞춰 모범 사례를 적용한 최적화된 SQL을 작성합니다. 자연어 데이터 요구사항를 SQL로 바꾸거나, 조인과 집계가 있는 다중 CTE 쿼리를 만들거나, 대형 파티션 테이블 대상 쿼리를 최적화하거나, Snowflake, BigQuery, Postgres 등의 방언별 구문가 필요할 때 사용합니다.
 argument-hint: "<description of what data you need>"
 ---
 

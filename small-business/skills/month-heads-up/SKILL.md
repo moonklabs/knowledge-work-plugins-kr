@@ -1,6 +1,6 @@
 ---
 name: month-heads-up
-description: 매월 25일에 실행되어 다음 30-day cash-flow outlook을 보여주고 month-end 전에 attention이 필요한 항목을 flag합니다. Optional 30 또는 60 day horizon을 받습니다.
+description: 매월 25일에 실행되어 다음 30일 현금흐름 전망을 보여주고 월말 전에 주의가 필요한 항목을 표시합니다. 선택적 30일 또는 60일 기간을 받습니다.
 allowed-tools: Read, WebFetch, Bash
 ---
 

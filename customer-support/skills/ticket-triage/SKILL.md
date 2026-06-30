@@ -1,6 +1,6 @@
 ---
 name: ticket-triage
-description: Support ticket 또는 customer issue를 triage하고 prioritize합니다. New ticket이 들어와 categorization, P1-P4 priority assignment, 담당 team 결정, routing 전 duplicate/known issue 확인이 필요할 때 사용합니다.
+description: 지원 티켓 또는 고객 이슈를 분류하고 우선순위화합니다. 새 티켓이 들어와 분류, P1-P4 우선순위 배정, 담당 팀 결정, 라우팅 전 중복/알려진 이슈 확인이 필요할 때 사용합니다.
 argument-hint: "<ticket or issue description>"
 ---
 

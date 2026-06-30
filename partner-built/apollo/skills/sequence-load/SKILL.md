@@ -1,6 +1,6 @@
 ---
 name: sequence-load
-description: Criteria에 맞는 lead를 찾고 Apollo outreach sequence에 bulk-add합니다. Enrichment, contact creation, deduplication, enrollment를 하나의 flow로 처리합니다.
+description: 조건에 맞는 리드를 찾고 Apollo 아웃리치 sequence에 일괄 추가합니다. 보강, 연락처 생성, 중복 제거, 등록을 하나의 흐름으로 처리합니다.
 user-invocable: true
 argument-hint: "[targeting criteria + sequence name]"
 ---

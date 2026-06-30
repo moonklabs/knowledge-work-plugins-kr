@@ -1,6 +1,6 @@
 ---
 name: start
-description: Productivity system을 initialize하고 dashboard를 엽니다. 플러그인을 처음 설정하거나, existing task list에서 working memory를 bootstrap하거나, todo에서 쓰는 shorthand(nickname, acronym, project codename)를 해석할 때 사용합니다.
+description: 생산성 시스템을 초기화하고 대시보드를 엽니다. 플러그인을 처음 설정하거나, 기존 작업 목록에서 작업 메모리를 초기 구성하거나, 할 일에서 쓰는 약어(별칭, 두문자어, 프로젝트 코드명)를 해석할 때 사용합니다.
 ---
 
 # Start Command

@@ -1,6 +1,6 @@
 ---
 name: change-request
-description: Impact analysis와 rollback plan이 포함된 change management request를 만듭니다. Approval이 필요한 system/process change proposal, CAB review용 change record 준비, deployment 전 risk와 rollback step 문서화, rollout stakeholder communication planning에 사용합니다.
+description: 영향 분석과 롤백 계획이 포함된 변경 관리 요청을 만듭니다. 승인이 필요한 시스템/프로세스 변경 제안, CAB 검토용 변경 기록 준비, 배포 전 위험과 롤백 단계 문서화, 롤아웃 이해관계자 커뮤니케이션 계획에 사용합니다.
 argument-hint: "<change description>"
 ---
 

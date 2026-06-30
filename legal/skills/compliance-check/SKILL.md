@@ -1,6 +1,6 @@
 ---
 name: compliance-check
-description: Proposed action, product feature, business initiative에 대해 compliance check를 실행해 applicable regulation, required approval, risk area를 드러냅니다. Personal data를 다루는 feature launch, regulatory implication이 있는 marketing/product proposal, 진행 전 필요한 approval과 jurisdictional requirement 확인에 사용합니다.
+description: 제안된 조치, 제품 기능, 비즈니스 이니셔티브에 대해 컴플라이언스 점검를 실행해 적용 규정, 필요 승인, 위험 영역를 드러냅니다. 개인정보를 다루는 기능 출시, 규제 영향이 있는 마케팅/제품 proposal, 진행 전 필요한 승인과 jurisdictional 요구사항 확인에 사용합니다.
 argument-hint: "<action or initiative to check>"
 ---
 

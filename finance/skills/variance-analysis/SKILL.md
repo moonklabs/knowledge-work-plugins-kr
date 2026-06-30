@@ -1,6 +1,6 @@
 ---
 name: variance-analysis
-description: Financial variance를 narrative explanation과 waterfall analysis가 포함된 driver로 분해합니다. Budget vs actual, period-over-period change, revenue/expense variance 분석, leadership용 variance commentary 준비에 사용합니다.
+description: 재무 차이를 서술형 설명과 워터폴 분석가 포함된 동인로 분해합니다. 예산 대비 실적, 기간별 변동, revenue/expense variance 분석, 리더십용 차이 해설 준비에 사용합니다.
 argument-hint: "<line item> <period> vs <comparison>"
 ---
 

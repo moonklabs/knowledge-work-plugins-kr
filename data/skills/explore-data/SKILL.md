@@ -1,6 +1,6 @@
 ---
 name: explore-data
-description: Dataset의 shape, quality, pattern을 이해하기 위해 profile하고 explore합니다. New table/file을 처음 볼 때, null rate와 column distribution 확인, duplicate나 suspicious value 같은 data quality issue 탐지, 분석할 dimension과 metric 결정에 사용합니다.
+description: 데이터셋의 형태, 품질, 패턴을 이해하기 위해 프로파일하고 탐색합니다. 새 테이블/파일을 처음 볼 때, null 비율와 열 배포 확인, 중복나 의심 값 같은 데이터 품질 이슈 탐지, 분석할 차원과 지표 결정에 사용합니다.
 argument-hint: "<table or file>"
 ---
 

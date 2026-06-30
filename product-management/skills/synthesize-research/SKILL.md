@@ -1,6 +1,6 @@
 ---
 name: synthesize-research
-description: Interview, survey, feedback의 user research를 structured insight로 종합합니다. Interview note, survey response, support ticket이 많아 의미를 정리해야 하거나, theme을 추출하고 finding을 frequency/impact로 rank하거나, raw feedback을 roadmap recommendation으로 바꾸고 싶을 때 사용합니다.
+description: 인터뷰, 설문, 피드백의 사용자 리서치를 구조화된 인사이트로 종합합니다. 인터뷰 노트, 설문 응답, 지원 티켓이 많아 의미를 정리해야 하거나, 주제를 추출하고 발견 사항을 빈도/영향로 rank하거나, 원시 피드백을 로드맵 추천n으로 바꾸고 싶을 때 사용합니다.
 argument-hint: "<research topic or question>"
 ---
 

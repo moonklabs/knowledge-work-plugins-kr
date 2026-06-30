@@ -1,6 +1,6 @@
 ---
 name: nextflow-development
-description: Sequencing data에서 nf-core bioinformatics pipeline(rnaseq, sarek, atacseq)을 실행합니다. Local FASTQ 또는 GEO/SRA public dataset의 RNA-seq, WGS/WES, ATAC-seq data를 분석할 때 사용합니다. nf-core, Nextflow, FASTQ analysis, variant calling, gene expression, differential expression, GEO reanalysis, GSE/GSM/SRR accession, samplesheet creation이 트리거입니다.
+description: 시퀀싱 데이터에서 nf-core 바이오인포매틱스 파이프라인(rnaseq, sarek, atacseq)을 실행합니다. 로컬 FASTQ 또는 GEO/SRA 공개 데이터셋의 RNA-seq, WGS/WES, ATAC-seq 데이터를 분석할 때 사용합니다. nf-core, Nextflow, FASTQ 분석, 변이 호출, 유전자 발현, 차등 발현, GEO 재분석, GSE/GSM/SRR accession, 샘플시트 생성이 트리거입니다.
 ---
 
 # nf-core Pipeline Deployment

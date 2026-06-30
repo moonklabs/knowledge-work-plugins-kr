@@ -1,6 +1,6 @@
 ---
 name: org-planning
-description: Headcount planning, org design, team structure optimization을 수행합니다. "org planning", "headcount plan", "team structure", "reorg", "who should we hire next" 또는 team size, reporting structure, organizational design을 고민할 때 트리거됩니다.
+description: 인원 계획, 조직 설계, 팀 구조 최적화을 수행합니다. "org planning", "headcount plan", "team structure", "reorg", "who should we hire next" 또는 team size, 보고 체계, 조직 설계을 고민할 때 트리거됩니다.
 ---
 
 # Org Planning

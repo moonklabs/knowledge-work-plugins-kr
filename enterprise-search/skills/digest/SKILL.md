@@ -1,6 +1,6 @@
 ---
 name: digest
-description: Connected source 전반의 activity를 daily 또는 weekly digest로 생성합니다. 자리를 비운 뒤 catch-up하거나, 하루를 시작하며 mention과 action item summary가 필요하거나, project별로 묶인 한 주의 decision과 document update를 review할 때 사용합니다.
+description: 연결된 소스 전반의 활동을 일일 또는 주간 다이제스트로 생성합니다. 자리를 비운 뒤 따라잡기하거나, 하루를 시작하며 멘션과 액션 아이템 요약가 필요하거나, 프로젝트별로 묶인 한 주의 의사결정과 문서 업데이트를 검토할 때 사용합니다.
 argument-hint: "[--daily | --weekly | --since <date>]"
 ---
 

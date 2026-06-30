@@ -1,6 +1,6 @@
 ---
 name: draft-offer
-description: Comp detail과 term이 포함된 offer letter 초안을 작성합니다. Candidate가 offer 준비 상태이거나, total comp package(base, equity, signing bonus)를 구성하거나, offer letter text를 작성하거나, hiring manager용 negotiation guidance를 준비할 때 사용합니다.
+description: 보상 세부사항과 조건이 포함된 오퍼 레터 초안을 작성합니다. 후보자가 offer 준비 상태이거나, 총보상 패키지(기본급, 지분 보상, 사이닝 보너스)를 구성하거나, 오퍼 레터 text를 작성하거나, 채용 매니저용 협상 가이드를 준비할 때 사용합니다.
 argument-hint: "<role and level>"
 ---
 

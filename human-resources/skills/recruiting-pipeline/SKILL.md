@@ -1,6 +1,6 @@
 ---
 name: recruiting-pipeline
-description: Recruiting pipeline stage를 track하고 manage합니다. "recruiting update", "candidate pipeline", "how many candidates", "hiring status" 또는 sourcing, screening, interviewing, offer extension 논의 시 트리거됩니다.
+description: 채용 파이프라인 단계를 추적하고 관리합니다. "recruiting update", "candidate pipeline", "how many candidates", "hiring status" 또는 소싱, 스크리닝, 면접, 오퍼 제안 논의 시 트리거됩니다.
 ---
 
 # Recruiting Pipeline

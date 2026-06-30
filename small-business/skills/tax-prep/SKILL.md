@@ -1,6 +1,6 @@
 ---
 name: tax-prep
-description: Tax-season material을 준비합니다. Quarterly estimated tax calculation 또는 year-end 1099 prep을 수행하고 accountant handoff packet을 생성합니다. Optional mode와 year argument를 받습니다.
+description: 세금 시즌 자료을 준비합니다. 분기 추정세 계산 또는 연말 1099 준비을 수행하고 회계사 인수인계 패킷을 생성합니다. 선택적 모드와 연도 인자를 받습니다.
 allowed-tools: Read, WebFetch, Bash
 ---
 

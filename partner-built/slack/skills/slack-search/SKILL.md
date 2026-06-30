@@ -1,6 +1,6 @@
 ---
 name: slack-search
-description: Message, file, channel, people을 찾기 위해 Slack을 효과적으로 search하는 guidance입니다
+description: Message, 파일, 채널, people을 찾기 위해 Slack을 효과적으로 search하는 가이드입니다
 ---
 
 # Slack Search

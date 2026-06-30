@@ -1,6 +1,6 @@
 ---
 name: vendor-review
-description: Vendor를 evaluate합니다. Cost analysis, risk assessment, recommendation을 포함합니다. New vendor proposal review, contract renew/replace decision, two vendor side-by-side comparison, procurement sign-off 전 TCO breakdown과 negotiation point 작성에 사용합니다.
+description: Vendor를 평가합니다. 비용 분석, 위험 평가, 추천을 포함합니다. 신규 벤더 제안 검토, 계약 갱신/교체 결정, two 벤더 나란히 비교, 구매 승인 전 TCO 분석과 협상on point 작성에 사용합니다.
 argument-hint: "<vendor name or proposal>"
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: pipeline-review
-description: Pipeline health를 analyze합니다. Deal을 prioritize하고 risk를 flag하며 weekly action plan을 얻습니다. Weekly pipeline review, 이번 주 focus deal 결정, stale/stuck opportunity 탐지, bad close date 같은 hygiene issue audit, single-threaded deal 식별에 사용합니다.
+description: 파이프라인 상태를 분석합니다. Deal을 우선순위화하고 위험을 표시하며 weekly 실행 계획을 얻습니다. 주간 파이프라인 검토, 이번 주 집중 거래 결정, 오래되었거나 정체된 기회 탐지, 잘못된 마감일 같은 위생 이슈 감사, 단일 담당자 거래 식별에 사용합니다.
 argument-hint: "<segment or rep>"
 ---
 

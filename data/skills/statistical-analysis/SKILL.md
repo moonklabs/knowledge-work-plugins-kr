@@ -1,6 +1,6 @@
 ---
 name: statistical-analysis
-description: Descriptive stats, trend analysis, outlier detection, hypothesis testing 등 statistical method를 적용합니다. Distribution analysis, significance testing, anomaly detection, correlation computation, statistical result interpretation에 사용합니다.
+description: 기술 통계, 추세 분석, 이상치 탐지, 가설 검정 등 통계 방법를 적용합니다. 분포 분석, 유의성 검정, 이상 탐지, 상관관계 계산, 통계 결과 해석에 사용합니다.
 user-invocable: false
 ---
 

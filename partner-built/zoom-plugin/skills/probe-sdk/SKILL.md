@@ -1,6 +1,6 @@
 ---
 name: probe-sdk
-description: Zoom Probe SDK reference skill입니다. Preflight 워크플로로 routing된 뒤 user join 전에 browser compatibility, media permission, audio/video diagnostic, network readiness를 test할 때 사용합니다.
+description: Zoom Probe SDK 참조 스킬입니다. 사전 점검 워크플로로 라우팅된 뒤 user 조인 전에 브라우저 호환성, 미디어 권한, audio/비디오 진단, 네트워크 준비 상태를 test할 때 사용합니다.
 user-invocable: false
 triggers:
   - "probe sdk"

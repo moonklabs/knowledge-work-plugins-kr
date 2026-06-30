@@ -1,6 +1,6 @@
 ---
 name: slack-messaging
-description: mrkdwn syntax를 사용해 well-formatted하고 effective한 Slack message를 작성하기 위한 guidance입니다
+description: mrkdwn 구문를 사용해 잘 구성되고 효과적인 Slack 메시지를 작성하기 위한 가이드입니다
 ---
 
 # Slack Messaging Best Practices

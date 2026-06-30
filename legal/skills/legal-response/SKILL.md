@@ -1,6 +1,6 @@
 ---
 name: legal-response
-description: Configured template을 사용해 common legal inquiry에 대한 response를 생성하며, templated reply를 쓰면 안 되는 상황을 위한 built-in escalation check를 포함합니다. Data subject request, litigation hold notice, vendor legal question, business team의 NDA request, subpoena에 응답할 때 사용합니다.
+description: 설정된 템플릿을 사용해 일반 법무 문의에 대한 답변를 생성하며, 템플릿 답변를 쓰면 안 되는 상황을 위한 내장 에스컬레이션 점검를 포함합니다. 정보주체 요청, 소송 보존 통지, 벤더 법무 질문, business team의 NDA 요청, subpoena에 응답할 때 사용합니다.
 argument-hint: "[inquiry-type]"
 ---
 

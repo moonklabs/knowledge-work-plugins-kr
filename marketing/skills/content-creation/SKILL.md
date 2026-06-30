@@ -1,6 +1,6 @@
 ---
 name: content-creation
-description: Blog post, social media, email newsletter, landing page, press release, case study 등 channel 전반의 marketing content 초안을 작성합니다. Marketing content 작성, channel-specific formatting, SEO-optimized copy, headline option, call to action이 필요할 때 사용합니다.
+description: 블로그 글, 소셜 미디어, 이메일 뉴스레터, 랜딩 페이지, 보도자료, 사례 연구 등 채널 전반의 마케팅 콘텐츠 초안을 작성합니다. 마케팅 콘텐츠 작성, 채널별 서식, SEO 최적화 문구, 헤드라인 옵션, 콜투액션o action이 필요할 때 사용합니다.
 user-invocable: false
 ---
 

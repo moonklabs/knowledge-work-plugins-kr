@@ -1,6 +1,6 @@
 ---
 name: competitive-brief
-description: 하나 이상의 competitor 또는 feature area에 대한 competitive analysis brief를 만듭니다. Product strategy나 feature prioritization에 input이 필요하거나, sales battlecard 작성, board/investor material 준비, differentiate할 곳과 parity를 맞출 곳 결정에 사용합니다.
+description: 하나 이상의 competitor 또는 기능 영역에 대한 경쟁 분석 브리프를 만듭니다. 제품 전략나 기능 우선순위에 입력 자료이 필요하거나, sales battlecard 작성, 이사회/투자자 자료 준비, 차별화할 곳과 동등성를 맞출 곳 결정에 사용합니다.
 argument-hint: "<competitor or feature area>"
 ---
 

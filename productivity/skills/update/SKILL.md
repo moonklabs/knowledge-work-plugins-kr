@@ -1,6 +1,6 @@
 ---
 name: update
-description: 현재 activity에서 task를 sync하고 memory를 refresh합니다. Project tracker의 새 assignment를 TASKS.md로 가져오거나, stale/overdue task를 triage하거나, 모르는 사람이나 project에 대한 memory gap을 채우거나, chat과 email에 묻힌 todo를 찾기 위해 comprehensive scan을 실행할 때 사용합니다.
+description: 현재 활동에서 작업을 동기화하고 메모리를 갱신합니다. 프로젝트 추적기의 새 배정을 TASKS.md로 가져오거나, 오래되었거나 기한이 지난 작업을 분류하거나, 모르는 사람이나 프로젝트에 대한 메모리 공백을 채우거나, 채팅과 이메일에 묻힌 할 일을 찾기 위해 종합 스캔을 실행할 때 사용합니다.
 argument-hint: "[--comprehensive]"
 ---
 

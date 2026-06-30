@@ -1,6 +1,6 @@
 ---
 name: runbook
-description: Recurring task 또는 procedure를 위한 operational runbook을 만들거나 update합니다. On-call 또는 ops가 반복 실행해야 하는 task 문서화, tribal knowledge를 exact step-by-step command로 변환, existing procedure에 troubleshooting/rollback step 추가, 문제 발생 시 escalation path 작성에 사용합니다.
+description: 반복 작업 또는 절차를 위한 운영 런북을 만들거나 업데이트합니다. 온콜 또는 운영팀가 반복 실행해야 하는 task 문서화, 암묵지를 정확한 단계별 명령로 변환, 기존 절차에 문제 해결/롤백 단계 추가, 문제 발생 시 에스컬레이션 path 작성에 사용합니다.
 argument-hint: "<process or task name>"
 ---
 

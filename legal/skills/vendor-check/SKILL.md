@@ -1,6 +1,6 @@
 ---
 name: vendor-check
-description: Connected system(CLM, CRM, email, document storage) 전반에서 vendor와의 existing agreement status를 확인하고 gap analysis와 upcoming deadline을 제공합니다. Vendor onboarding/renewal, signed item과 missing item(MSA, DPA, SOW)의 consolidated view, approaching expiration과 surviving obligation 확인에 사용합니다.
+description: 연결된 시스템(CLM, CRM, 이메일, 문서 저장소) 전반에서 벤더와의 기존 계약 상태를 확인하고 갭 분석과 다가오는 기한을 제공합니다. 벤더 온보딩/갱신, 서명 완료 항목과 누락 항목(MSA, DPA, SOW)의 통합 보기, 만료 예정 항목과 잔존 의무 확인에 사용합니다.
 argument-hint: "[vendor name]"
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: onboarding
-description: New hire를 위한 onboarding checklist와 first-week plan을 생성합니다. Start date가 다가오거나, pre-start task list(account, equipment, buddy)를 만들거나, Day 1/Week 1 schedule을 잡거나, new team member의 30/60/90-day goal을 설정할 때 사용합니다.
+description: 신규 입사자를 위한 onboarding checklist와 첫 주 계획을 생성합니다. 입사일가 다가오거나, 입사 전 작업 목록(계정, 장비, 버디)를 만들거나, 1일차/1주차 일정을 잡거나, 새 팀원의 30/60/90일 목표을 설정할 때 사용합니다.
 argument-hint: "<new hire name and role>"
 ---
 

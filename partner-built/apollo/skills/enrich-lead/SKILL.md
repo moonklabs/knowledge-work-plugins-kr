@@ -1,6 +1,6 @@
 ---
 name: enrich-lead
-description: Instant lead enrichment입니다. Name, company, LinkedIn URL 또는 email을 넣으면 email, phone, title, company intel, next action이 포함된 full contact card를 얻습니다.
+description: 즉시 리드 보강입니다. 이름, 회사, LinkedIn URL 또는 이메일을 넣으면 이메일, 전화번호, 직함, 회사 정보, 다음 조치이 포함된 전체 연락처 카드를 얻습니다.
 user-invocable: true
 argument-hint: "[name, company, LinkedIn URL, or email]"
 ---

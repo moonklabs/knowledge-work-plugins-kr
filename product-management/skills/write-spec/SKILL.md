@@ -1,6 +1,6 @@
 ---
 name: write-spec
-description: Problem statement 또는 feature idea에서 feature spec이나 PRD를 작성합니다. Vague idea/user request를 structured document로 바꾸거나, goal/non-goal로 feature scope를 잡거나, success metric과 acceptance criteria를 정의하거나, 큰 요청을 phased spec으로 나눌 때 사용합니다.
+description: 문제 정의 또는 기능 아이디어에서 기능 명세이나 PRD를 작성합니다. 모호한 아이디어/사용자 요청을 구조화된 문서로 바꾸거나, 목표/비목표로 기능 범위를 잡거나, 성공 지표과 인수 기준를 정의하거나, 큰 요청을 단계별 명세으로 나눌 때 사용합니다.
 argument-hint: "<feature or problem statement>"
 ---
 

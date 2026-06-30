@@ -1,6 +1,6 @@
 ---
 name: reconciliation
-description: GL balance를 subledger, bank statement, third-party data와 비교해 account를 reconcile합니다. Bank reconciliation, GL-to-subledger rec, intercompany reconciliation, reconciling item 식별 및 categorization에 사용합니다.
+description: 총계정원장 balance를 보조원장, bank statement, third-party data와 비교해 계정를 대사합니다. 은행 대사, 총계정원장-보조원장 대사, 회사 간 대사, 대사 항목 식별 및 분류에 사용합니다.
 argument-hint: "<account> [period]"
 ---
 

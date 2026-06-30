@@ -1,6 +1,6 @@
 ---
 name: design-mcp-workflow
-description: Claude를 위한 Zoom MCP 워크플로를 설계합니다. Zoom MCP가 task에 맞는지 판단하거나, tool-based AI 워크플로를 planning하거나, MCP responsibility와 REST API responsibility를 분리할 때 사용합니다.
+description: Claude를 위한 Zoom MCP 워크플로를 설계합니다. Zoom MCP가 작업에 맞는지 판단하거나, tool-기반 AI 워크플로를 계획하거나, MCP responsibility와 REST API responsibility를 분리할 때 사용합니다.
 user-invocable: false
 ---
 

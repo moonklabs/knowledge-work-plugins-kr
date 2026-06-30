@@ -1,6 +1,6 @@
 ---
 name: draft-content
-description: Channel-specific formatting과 SEO recommendation을 포함해 blog post, social media, email newsletter, landing page, press release, case study 초안을 작성합니다. Marketing content 작성, headline 또는 subject line option, 특정 platform/audience/brand voice에 맞춘 message adaptation에 사용합니다.
+description: 채널별 서식과 SEO 추천을 포함해 블로그 글, 소셜 미디어, 이메일 뉴스레터, 랜딩 페이지, 보도자료, 사례 연구 초안을 작성합니다. 마케팅 콘텐츠 작성, 헤드라인 또는 제목 옵션, 특정 플랫폼/대상/브랜드 보이스에 맞춘 메시지 조정에 사용합니다.
 argument-hint: "<content type and topic>"
 ---
 

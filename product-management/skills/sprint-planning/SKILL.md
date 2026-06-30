@@ -1,6 +1,6 @@
 ---
 name: sprint-planning
-description: Sprint를 계획합니다. Work scope, capacity estimate, goal setting, sprint plan draft를 다룹니다. New sprint kickoff, team availability(PTO와 meeting 포함) 대비 backlog sizing, P0 vs stretch 결정, last sprint carryover 처리에 사용합니다.
+description: 스프린트를 계획합니다. 작업 범위, 수용량 추정, 목표 설정, 스프린트 계획 초안을 다룹니다. 새 스프린트 킥오프, 팀 가용성(PTO와 미팅 포함) 대비 백로그 규모 산정, P0와 확장 목표 결정, 지난 스프린트 이월분 처리에 사용합니다.
 argument-hint: "[sprint name or date range]"
 ---
 

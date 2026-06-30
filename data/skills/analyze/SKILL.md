@@ -1,6 +1,6 @@
 ---
 name: analyze
-description: Quick lookup부터 full analysis까지 data question에 답합니다. Single metric lookup, trend/drop driver investigation, segment over time comparison, stakeholder용 formal data report 준비에 사용합니다.
+description: 빠른 조회부터 전체 분석까지 데이터 질문에 답합니다. 단일 지표 조회, 추세/하락 동인 조사, 기간별 세그먼트 비교, 이해관계자용 공식 데이터 보고서 준비에 사용합니다.
 argument-hint: "<question>"
 ---
 

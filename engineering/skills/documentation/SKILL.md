@@ -1,6 +1,6 @@
 ---
 name: documentation
-description: 기술 문서를 작성하고 유지합니다. "write docs for", "document this", "create a README", "write a runbook", "onboarding guide" 또는 API docs, architecture docs, operational runbook 등 기술 글쓰기에 도움이 필요할 때 트리거됩니다.
+description: 기술 문서를 작성하고 유지합니다. "write docs for", "document this", "create a README", "write a runbook", "onboarding guide" 또는 API docs, 아키텍처 docs, 운영 런북 등 기술 글쓰기에 도움이 필요할 때 트리거됩니다.
 ---
 
 # Technical Documentation

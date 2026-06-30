@@ -1,6 +1,6 @@
 ---
 name: memory-management
-description: Claude를 실제 workplace collaborator처럼 만드는 two-tier memory system입니다. Shorthand, acronym, nickname, internal language를 해석해 Claude가 colleague처럼 request를 이해하게 합니다. Working memory에는 CLAUDE.md를, full knowledge base에는 memory/ directory를 사용합니다.
+description: Claude를 실제 업무 협업자처럼 만드는 2계층 메모리 시스템입니다. 약어, 두문자어, 별칭, 내부 용어를 해석해 Claude가 동료처럼 요청을 이해하게 합니다. 작업 메모리에는 CLAUDE.md를, 전체 지식 기반에는 memory/ 디렉터리를 사용합니다.
 user-invocable: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: build-zoom-team-chat-app
-description: Zoom Team Chat reference 스킬입니다. Chat 워크플로로 routing된 뒤 user-scoped messaging integration, chatbot experience, rich card, button, slash command, chat webhook을 만들 때 사용합니다.
+description: Zoom Team Chat 참조 스킬입니다. Chat 워크플로로 라우팅된 뒤 사용자 범위 메시징 integration, 채팅봇 경험, 리치 카드, 버튼, 슬래시 명령, 채팅 웹훅을 만들 때 사용합니다.
 triggers:
   - "zoom team chat"
   - "zoom chatbot"

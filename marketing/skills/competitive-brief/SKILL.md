@@ -1,6 +1,6 @@
 ---
 name: competitive-brief
-description: Competitor를 research하고 content gap, opportunity, threat가 포함된 positioning/messaging comparison을 생성합니다. Sales battlecard 작성, competitor가 claim하지 않은 positioning gap과 messaging angle 탐색, competitor move의 impact assessment에 사용합니다.
+description: 경쟁사를 조사하고 콘텐츠 갭, 기회, 위협가 포함된 포지셔닝/메시징 비교를 생성합니다. 영업 배틀카드 작성, 경쟁사가 claim하지 않은 포지셔닝 갭과 메시징 각도 탐색, 경쟁사 움직임의 영향 평가에 사용합니다.
 argument-hint: "<competitor or market segment>"
 ---
 

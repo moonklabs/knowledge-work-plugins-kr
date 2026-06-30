@@ -1,6 +1,6 @@
 ---
 name: sql-queries
-description: 주요 data warehouse dialect(Snowflake, BigQuery, Databricks, PostgreSQL 등) 전반에서 correct하고 performant한 SQL을 작성합니다. Query 작성, slow SQL optimization, dialect 간 translation, CTE/window function/aggregation이 있는 complex analytical query 작성에 사용합니다.
+description: 주요 데이터 웨어하우스 방언(Snowflake, BigQuery, Databricks, PostgreSQL 등) 전반에서 정확하고 성능 좋은 SQL을 작성합니다. 쿼리 작성, 느린 SQL 최적화, 방언 간 변환, CTE/윈도우 함수/집계가 있는 복잡한 분석 쿼리 작성에 사용합니다.
 user-invocable: false
 ---
 

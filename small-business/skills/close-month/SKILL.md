@@ -1,6 +1,6 @@
 ---
 name: close-month
-description: Month를 close합니다. QB와 payment processor를 reconcile하고 gap을 flag하며 P&L narrative를 작성하고 close packet을 export합니다. Optional month와 save-to argument를 받습니다.
+description: 월을 마감합니다. QB와 결제 처리기관를 대사하고 차이를 표시하며 손익 내러티브를 작성하고 마감 패킷을 내보냅니다. Optional month와 save-to 인자를 받습니다.
 allowed-tools: Read, WebFetch, Bash
 ---
 

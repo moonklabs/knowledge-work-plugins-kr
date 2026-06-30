@@ -1,6 +1,6 @@
 ---
 name: stakeholder-update
-description: Audience와 cadence에 맞춘 stakeholder update를 생성합니다. Leadership용 weekly/monthly status 작성, launch announcement, risk/blocker escalation, 같은 progress를 exec-brief, engineering-detail, customer-facing version으로 변환할 때 사용합니다.
+description: 대상와 주기에 맞춘 이해관계자 업데이트를 생성합니다. 리더십용 주간/월간 상태 작성, 출시 공지, 위험/차단 요인 에스컬레이션, 같은 진행 상황를 임원 요약, 엔지니어링 상세, 고객용 버전으로 변환할 때 사용합니다.
 argument-hint: "<update type and audience>"
 ---
 

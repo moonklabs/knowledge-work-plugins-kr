@@ -1,6 +1,6 @@
 ---
 name: design-critique
-description: Usability, hierarchy, consistency에 대한 structured design feedback을 제공합니다. "review this design", "critique this mockup", "what do you think of this screen?" 또는 exploration부터 final polish까지 어느 단계든 Figma link나 screenshot feedback 요청 시 트리거됩니다.
+description: 사용성, 위계, 일관성에 대한 구조화된 디자인 피드백을 제공합니다. "review this design", "critique this mockup", "what do you think of this screen?" 또는 탐색부터 최종 다듬기까지 어느 단계든 Figma 링크나 스크린샷 피드백 요청 시 트리거됩니다.
 argument-hint: "<Figma URL, screenshot, or description>"
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: triage-nda
-description: Incoming NDA를 빠르게 triage하고 GREEN(standard approval), YELLOW(counsel review), RED(full legal review)로 classify합니다. Sales 또는 business development에서 새 NDA가 왔거나, embedded non-solicit/non-compete/missing carveout을 screening하거나, NDA가 standard delegation으로 signing 가능한지 결정할 때 사용합니다.
+description: 수신 NDA를 빠르게 분류하고 GREEN(표준 승인), YELLOW(법무 검토), RED(전체 법무 검토)로 분류합니다. 영업 또는 사업개발에서 새 NDA가 왔거나, 포함된 비권유/경업금지/누락된 예외 조항을 스크리닝하거나, NDA가 표준 위임 권한으로 서명 가능한지 결정할 때 사용합니다.
 argument-hint: "<NDA file or text>"
 ---
 

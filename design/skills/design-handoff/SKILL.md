@@ -1,6 +1,6 @@
 ---
 name: design-handoff
-description: Design에서 developer handoff spec을 생성합니다. Design이 engineering 준비 상태이고 layout, design token, component prop, interaction state, responsive breakpoint, edge case, animation detail을 다루는 spec sheet가 필요할 때 사용합니다.
+description: 디자인에서 개발자 핸드오프 명세를을 생성합니다. 디자인이 엔지니어링 준비 상태일 때 레이아웃, 디자인 토큰, 구성 요소 prop, 상호작용 상태, 반응형 breakpoint, 엣지 케이스, 애니메이션 상세을 다루는 명세서가 필요할 때 사용합니다.
 argument-hint: "<Figma URL or design description>"
 ---
 

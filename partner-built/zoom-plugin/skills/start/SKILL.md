@@ -1,6 +1,6 @@
 ---
 name: start
-description: Zoom integration 또는 app idea는 여기서 시작합니다. 전체 Zoom doc set을 먼저 읽지 않고도 적절한 Zoom surface를 선택하거나 architecture를 잡거나 올바른 implementation skill로 routing해야 할 때 사용합니다.
+description: Zoom integration 또는 앱 아이디어는 여기서 시작합니다. 전체 Zoom 문서 세트을 먼저 읽지 않고도 적절한 Zoom 표면를 선택하거나 아키텍처를 잡거나 올바른 구현 스킬로 라우팅해야 할 때 사용합니다.
 ---
 
 # Start
