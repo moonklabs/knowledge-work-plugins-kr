@@ -6,7 +6,7 @@ Zoom 통합을 계획하고 구축하며 디버그하기 위한 Claude 플러그
 
 이 디렉터리를 로컬 Claude 플러그인으로 설치합니다. 플러그인 매니페스트는 [`.claude-plugin/plugin.json`](.claude-plugin/plugin.json)에 있고, 함께 제공되는 Zoom MCP 커넥터는 [`.mcp.json`](.mcp.json)에 정의되어 있습니다.
 
-함께 제공되는 MCP 서버를 사용하기 전에 Claude가 사용할 Zoom 구현 영역용 bearer token을 내보내세요.
+함께 제공되는 MCP 서버를 사용하기 전에 Claude가 사용할 Zoom 구현 영역용 bearer token을 환경 변수로 내보내세요.
 
 ```bash
 export ZOOM_MCP_ACCESS_TOKEN="your_zoom_user_oauth_access_token"
@@ -71,13 +71,13 @@ export ZOOM_WHITEBOARD_MCP_ACCESS_TOKEN="your_zoom_user_oauth_access_token"
 ### 새 앱 계획
 
 ```text
-/start 고객이 우리 제품에서 Zoom 미팅을 예약하고 참여할 수 있는 React app을 만들어줘
+/start 고객이 우리 제품에서 Zoom 미팅을 예약하고 참여할 수 있는 React 앱을 만들어줘
 ```
 
 ### 깨진 웹훅 디버깅
 
 ```text
-/debug-zoom Zoom webhook 서명 검증이 로컬에서는 되는데 production에서 실패해
+/debug-zoom Zoom webhook 서명 검증이 로컬에서는 되는데 프로덕션에서 실패해
 ```
 
 ### MCP 흐름 설계
@@ -88,7 +88,7 @@ export ZOOM_WHITEBOARD_MCP_ACCESS_TOKEN="your_zoom_user_oauth_access_token"
 
 ## 커넥터
 
-[CONNECTORS.md](CONNECTORS.md)를 참고하세요. 플러그인은 함께 제공되는 스킬만으로 단독 동작하며, Claude가 [`.mcp.json`](.mcp.json)의 bundled Zoom MCP 서버를 사용할 수 있으면 더 강력해집니다.
+[CONNECTORS.md](CONNECTORS.md)를 참고하세요. 플러그인은 함께 제공되는 스킬만으로 단독 동작하며, Claude가 [`.mcp.json`](.mcp.json)의 번들 Zoom MCP 서버를 사용할 수 있으면 더 강력해집니다.
 
 ## 크로스 플랫폼 참고
 
