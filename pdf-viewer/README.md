@@ -4,7 +4,7 @@ Live interactive viewer에서 PDF를 보고, annotate하고, sign합니다. Cont
 visual feedback으로 form을 채우고, approval stamp를 찍고,
 signatures — then download the annotated copy.
 
-## What It Does
+## 주요 기능
 
 - **Open PDFs** from local files or academic sources (arXiv, bioRxiv, etc.)
 - **Annotate collaboratively** — Claude proposes highlights, notes, and
@@ -14,7 +14,7 @@ signatures — then download the annotated copy.
 - **Stamp approvals** — APPROVED, DRAFT, CONFIDENTIAL, or any custom label
 - **Download** — export the annotated PDF from the viewer toolbar
 
-## Commands
+## 명령
 
 | Command | What it does |
 |---------|-------------|

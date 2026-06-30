@@ -2,13 +2,13 @@
 
 Product management plugin입니다. 주로 Anthropic의 agentic desktop application인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Feature spec 작성, roadmap 관리, stakeholder communication, user research synthesis, competitor analysis, product metric tracking까지 PM workflow 전반을 다룹니다.
 
-## Installation
+## 설치
 
 ```
 claude plugins add knowledge-work-plugins/product-management
 ```
 
-## What It Does
+## 주요 기능
 
 This plugin gives you an AI-powered product management partner that can help with:
 
@@ -20,7 +20,7 @@ This plugin gives you an AI-powered product management partner that can help wit
 - **Metrics Review** — Analyze product metrics, identify trends, compare against targets, and surface actionable insights.
 - **Product Brainstorming** — Explore problem spaces, generate ideas, and stress-test product thinking with a sharp sparring partner. Supports divergent ideation, assumption testing, and strategy exploration using frameworks like How Might We, Jobs-to-be-Done, First Principles, and Opportunity Solution Trees.
 
-## Commands
+## 명령
 
 | Command | What It Does |
 |---|---|
@@ -30,9 +30,9 @@ This plugin gives you an AI-powered product management partner that can help wit
 | `/synthesize-research` | Synthesize user research from interviews, surveys, and tickets |
 | `/competitive-brief` | Create a competitive analysis brief |
 | `/metrics-review` | Review and analyze product metrics |
-| `/brainstorm` | Brainstorm a product idea, problem space, or strategic question with a thinking partner |
+| `/brainstorm` | Product idea, problem space, strategic question을 sharp thinking partner와 brainstorm합니다 |
 
-## Skills
+## 스킬
 
 | Skill | What It Covers |
 |---|---|
@@ -42,9 +42,9 @@ This plugin gives you an AI-powered product management partner that can help wit
 | `user-research-synthesis` | Thematic analysis, affinity mapping, persona development, opportunity sizing |
 | `competitive-analysis` | Feature comparison matrices, positioning analysis, win/loss analysis |
 | `metrics-tracking` | Product metrics hierarchy, goal setting (OKRs), dashboard design, review cadences |
-| `product-brainstorming` | Brainstorming modes (problem exploration, solution ideation, assumption testing, strategy), PM frameworks, session structure, thinking partner behaviors |
+| `product-brainstorming` | Thinking partner로서 product idea를 brainstorm하고 problem space를 explore하며 assumption에 challenge합니다. New opportunity 탐색, product problem solution 생성, idea stress-test, PM이 방향을 정하기 전 sharp sparring partner와 생각을 정리해야 할 때 사용합니다. |
 
-## Example Workflows
+## 예시 워크플로
 
 ### Writing a PRD
 

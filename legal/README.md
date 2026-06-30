@@ -11,7 +11,7 @@ In-house legal team을 위한 AI-powered productivity plugin입니다. 주로 An
 - **Privacy / Compliance** -- Data protection regulations, DPA reviews, data subject requests, regulatory monitoring
 - **Litigation Support** -- Discovery holds, document review prep, case briefings
 
-## Installation
+## 설치
 
 ```
 claude plugins add knowledge-work-plugins/legal
@@ -82,7 +82,7 @@ Configure paths to your template files or define inline templates for common inq
 
 The plugin works best when connected to your existing tools via MCP. Pre-configured servers include Slack, Box, Egnyte, Atlassian, and Microsoft 365. See [CONNECTORS.md](CONNECTORS.md) for the full list of supported categories and options.
 
-## Commands
+## 명령
 
 ### `/review-contract` -- Contract Review Against Playbook
 
@@ -132,18 +132,18 @@ Generate a response from your configured templates for common inquiry types.
 
 Supported inquiry types include: data subject request, discovery hold, vendor question, NDA request, and custom categories you define.
 
-## Skills
+## 스킬
 
-| Skill | Description |
+| 스킬 | 설명 |
 |-------|-------------|
 | `contract-review` | Playbook-based contract analysis, deviation classification, redline generation |
 | `nda-triage` | NDA screening criteria, classification rules, routing recommendations |
 | `compliance` | Privacy regulations (GDPR, CCPA), DPA review, data subject requests |
 | `canned-responses` | Template management, response categories, escalation triggers |
-| `legal-risk-assessment` | Risk severity framework, classification levels, escalation criteria |
-| `meeting-briefing` | Meeting prep methodology, context gathering, action item tracking |
+| `legal-risk-assessment` | Escalation criteria가 포함된 severity-by-likelihood framework로 legal risk를 assess하고 classify합니다. Contract risk evaluation, deal exposure assessment, issue severity classification, matter가 senior counsel 또는 outside legal review를 필요로 하는지 판단할 때 사용합니다. |
+| `meeting-briefing` | 법무 관련성이 있는 meeting을 위한 structured briefing을 준비하고 그에 따른 action item을 추적합니다. Contract negotiation, board meeting, compliance review처럼 legal context, background research, action tracking이 필요한 meeting 준비에 사용합니다. |
 
-## Example Workflows
+## 예시 워크플로
 
 ### Contract Review
 

@@ -31,7 +31,7 @@ These require a separate binary download:
 - **10X Genomics txg-mcp** (`~~genomics platform`) — Cloud analysis data and workflows ([GitHub](https://github.com/10XGenomics/txg-mcp/releases))
 - **ToolUniverse** (`~~tool database`) — AI tools for scientific discovery from Harvard MIMS ([GitHub](https://github.com/mims-harvard/ToolUniverse/releases))
 
-### Skills (Analysis Workflows)
+### 스킬 (Analysis Workflows)
 
 #### Single-Cell RNA QC
 Automated quality control for scRNA-seq data following scverse best practices. Supports `.h5ad` and `.h5` files with MAD-based filtering and comprehensive visualizations.

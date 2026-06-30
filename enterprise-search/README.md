@@ -44,7 +44,7 @@ Each source is an MCP connection. Add more sources in your MCP settings to expan
 
 ---
 
-## Commands
+## 명령
 
 | Command | What it does |
 |---------|--------------|
@@ -72,7 +72,7 @@ Highlights action items, decisions, and mentions of you. Groups activity by topi
 
 ---
 
-## Skills
+## 스킬
 
 Three skills power the search experience:
 
@@ -84,7 +84,7 @@ Three skills power the search experience:
 
 ---
 
-## Example Workflows
+## 예시 워크플로
 
 ### Finding a decision
 

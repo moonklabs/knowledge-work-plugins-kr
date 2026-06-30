@@ -18,7 +18,7 @@ Before setting up the Slack MCP server, ensure you have:
 - Cursor IDE or Claude Code CLI installed
 - Access to a Slack workspace with MCP integration approved by your workspace admin
 
-## Installation
+## 설치
 
 Choose the installation method for your IDE:
 

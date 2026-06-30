@@ -2,15 +2,15 @@
 
 Marketing plugin입니다. 주로 Anthropic의 agentic desktop application인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Content creation, campaign planning, brand voice management, competitive analysis, performance reporting을 지원합니다.
 
-## Installation
+## 설치
 
 ```bash
 claude plugins add knowledge-work-plugins/marketing
 ```
 
-## Commands
+## 명령
 
-| Command | Description |
+| 명령 | 설명 |
 |---|---|
 | `/draft-content` | Draft blog posts, social media, email newsletters, landing pages, press releases, and case studies |
 | `/campaign-plan` | Generate a full campaign brief with objectives, channels, content calendar, and success metrics |
@@ -20,17 +20,17 @@ claude plugins add knowledge-work-plugins/marketing
 | `/seo-audit` | Run a comprehensive SEO audit — keyword research, on-page analysis, content gaps, technical checks, and competitor comparison |
 | `/email-sequence` | Design and draft multi-email sequences for nurture flows, onboarding, drip campaigns, and more |
 
-## Skills
+## 스킬
 
-| Skill | Description |
+| 스킬 | 설명 |
 |---|---|
-| `content-creation` | Content type templates, writing best practices by channel, SEO fundamentals, headline formulas, and CTA guidance |
+| `content-creation` | Blog post, social media, email newsletter, landing page, press release, case study 등 channel 전반의 marketing content 초안을 작성합니다. Marketing content 작성, channel-specific formatting, SEO-optimized copy, headline option, call to action이 필요할 때 사용합니다. |
 | `campaign-planning` | Campaign frameworks, channel selection, content calendar creation, budget allocation, and success metrics |
 | `brand-voice` | Brand voice documentation, voice attributes, tone adaptation, style guide enforcement, and terminology management |
 | `competitive-analysis` | Competitive research methodology, messaging comparison, content gap analysis, positioning, and battlecard creation |
 | `performance-analytics` | Key metrics by channel, reporting templates, trend analysis, attribution modeling, and optimization frameworks |
 
-## Example Workflows
+## 예시 워크플로
 
 ### Drafting a Blog Post
 
@@ -71,7 +71,7 @@ If your brand style guide is configured in local settings, Claude will check you
 
 Configure your brand voice, style guide, and target personas in a local settings file for personalized output. This allows commands like `/draft-content` and `/brand-review` to automatically apply your brand standards without prompting each time.
 
-## MCP Integrations
+## MCP 통합
 
 > If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
 

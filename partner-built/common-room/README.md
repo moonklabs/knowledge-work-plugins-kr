@@ -11,20 +11,20 @@ Common Room 기반 GTM workflow입니다. Account research, contact research, ca
 - **Common Room MCP** (`mcp.commonroom.io/mcp`) must be connected and authenticated. This is the primary data source for all plugin functionality.
 - **Calendar connector** (optional) — enables automatic meeting lookup in `call-prep` and `weekly-prep-brief`. If not connected, both skills ask the user for meeting details instead.
 
-## Skills
+## 스킬
 
 Skills are triggered conversationally. Describe what you want and Claude will load the right skill automatically.
 
 | Skill | Trigger phrases |
 |-------|----------------|
-| `account-research` | "Research [company]", "tell me about [domain]", "what's going on with [account]", "is [company] showing buying signals" |
-| `contact-research` | "Who is [name]", "look up [email]", "research [contact]", "is [name] a warm lead" |
-| `call-prep` | "Prep me for my call with [company]", "prepare for a meeting with [company]", "what should I know before talking to [company]" |
-| `compose-outreach` | "Draft outreach to [person]", "write an email to [name]", "compose a message for [contact]" |
-| `prospect` | "Find companies that match [criteria]", "build a prospect list", "find contacts at [type of company]" |
-| `weekly-prep-brief` | "Weekly prep brief", "prepare my week", "what calls do I have this week" |
+| `account-research` | Common Room data를 사용해 company를 조사합니다. 'research [company]', 'tell me about [domain]', 'pull up signals for [account]', 'what's going on with [company]' 또는 account-level question에서 트리거됩니다. |
+| `contact-research` | Common Room data를 사용해 특정 person을 조사합니다. 'who is [name]', 'look up [email]', 'research [contact]', 'is [name] a warm lead' 또는 contact-level question에서 트리거됩니다. |
+| `call-prep` | Common Room signal을 사용해 customer 또는 prospect call을 준비합니다. 'prep me for my call with [company]', 'prepare for a meeting with [company]', 'what should I know before talking to [company]' 또는 call preparation request에서 트리거됩니다. |
+| `compose-outreach` | Common Room signal을 사용해 개인화된 outreach message를 생성합니다. 'draft outreach to [person]', 'write an email to [name]', 'compose a message for [contact]' 또는 outreach drafting request에서 트리거됩니다. |
+| `prospect` | Common Room Prospector를 사용해 targeted account 또는 contact list를 만듭니다. 'find companies that match [criteria]', 'build a prospect list', 'find contacts at [type of company]', 'show me companies hiring [role]' 또는 list-building request에서 트리거됩니다. |
+| `weekly-prep-brief` | 다음 7일 동안의 모든 external call에 대한 comprehensive weekly briefing을 생성합니다. 'weekly prep brief', 'prepare my week', 'what calls do I have this week', 'Monday prep' 또는 weekly planning request에서 트리거됩니다. |
 
-## Commands
+## 명령
 
 Two commands for complex workflows that benefit from explicit invocation:
 

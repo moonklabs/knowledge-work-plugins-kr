@@ -6,7 +6,7 @@ Generate professional, customer-ready sales assets in minutes. No design skills 
 
 ---
 
-## What It Does
+## 주요 기능
 
 This skill creates tailored sales assets by asking you about:
 1. **Your prospect** — who they are, what you've discussed

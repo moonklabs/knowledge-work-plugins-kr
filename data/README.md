@@ -2,13 +2,13 @@
 
 Data analyst plugin입니다. 주로 Anthropic의 agentic desktop application인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. SQL query, data exploration, visualization, dashboard, insight generation을 지원합니다. 어떤 data warehouse, SQL dialect, analytics stack에서도 사용할 수 있습니다.
 
-## Installation
+## 설치
 
 ```
 claude plugins add knowledge-work-plugins/data
 ```
 
-## What It Does
+## 주요 기능
 
 This plugin transforms Claude into a data analyst collaborator. It helps you explore datasets, write optimized SQL, build visualizations, create interactive dashboards, and validate analyses before sharing with stakeholders.
 
@@ -25,9 +25,9 @@ Connect your data warehouse MCP server (e.g., Snowflake, Databricks, BigQuery, o
 
 Without a data warehouse connection, paste SQL results or upload CSV/Excel files for analysis and visualization. Claude can also write SQL queries for you to run manually, and then analyze the results you provide.
 
-## Commands
+## 명령
 
-| Command | Description |
+| 명령 | 설명 |
 |---------|-------------|
 | `/analyze` | Answer data questions -- from quick lookups to full analyses |
 | `/explore-data` | Profile and explore a dataset to understand its shape, quality, and patterns |
@@ -36,18 +36,18 @@ Without a data warehouse connection, paste SQL results or upload CSV/Excel files
 | `/build-dashboard` | Build interactive HTML dashboards with filters and charts |
 | `/validate` | QA an analysis before sharing -- methodology, accuracy, and bias checks |
 
-## Skills
+## 스킬
 
-| Skill | Description |
+| 스킬 | 설명 |
 |-------|-------------|
-| `sql-queries` | SQL best practices across dialects, common patterns, and performance optimization |
+| `sql-queries` | 주요 data warehouse dialect(Snowflake, BigQuery, Databricks, PostgreSQL 등) 전반에서 correct하고 performant한 SQL을 작성합니다. Query 작성, slow SQL optimization, dialect 간 translation, CTE/window function/aggregation이 있는 complex analytical query 작성에 사용합니다. |
 | `data-exploration` | Data profiling, quality assessment, and pattern discovery |
-| `data-visualization` | Chart selection, Python viz code patterns, and design principles |
-| `statistical-analysis` | Descriptive stats, trend analysis, outlier detection, and hypothesis testing |
+| `data-visualization` | Python(matplotlib, seaborn, plotly)으로 효과적인 data visualization을 만듭니다. Chart 작성, dataset에 맞는 chart type 선택, publication-quality figure 생성, accessibility와 color theory 같은 design principle 적용에 사용합니다. |
+| `statistical-analysis` | Descriptive stats, trend analysis, outlier detection, hypothesis testing 등 statistical method를 적용합니다. Distribution analysis, significance testing, anomaly detection, correlation computation, statistical result interpretation에 사용합니다. |
 | `data-validation` | Pre-delivery QA, sanity checks, and documentation standards |
 | `interactive-dashboard-builder` | HTML/JS dashboard construction with Chart.js, filters, and styling |
 
-## Example Workflows
+## 예시 워크플로
 
 ### Ad-Hoc Analysis
 
@@ -104,7 +104,7 @@ Claude: [Reviews methodology] → [Checks for survivorship bias in churn analysi
        → [Confidence: "Ready to share with noted caveat"]
 ```
 
-## Connecting Your Data Stack
+## Data Stack 연결
 
 > If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
 

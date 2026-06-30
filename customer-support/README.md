@@ -2,13 +2,13 @@
 
 Support team을 위한 customer support plugin입니다. 주로 Anthropic의 agentic desktop application인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Ticket triage, escalation management, response drafting, customer research, knowledge base authoring을 제공합니다.
 
-## Installation
+## 설치
 
 ```
 claude plugins add knowledge-work-plugins/customer-support
 ```
 
-## What It Does
+## 주요 기능
 
 This plugin turns Claude into a customer support co-pilot. It helps you:
 
@@ -18,9 +18,9 @@ This plugin turns Claude into a customer support co-pilot. It helps you:
 - **Package escalations** with full context, reproduction steps, and business impact for engineering or product
 - **Write KB articles** from resolved issues to reduce future ticket volume
 
-## Commands
+## 명령
 
-| Command | Description |
+| 명령 | 설명 |
 |---|---|
 | `/triage` | Categorize, prioritize, and route a support ticket or customer issue |
 | `/research` | Multi-source research on a customer question or topic |
@@ -28,12 +28,12 @@ This plugin turns Claude into a customer support co-pilot. It helps you:
 | `/escalate` | Package an escalation for engineering, product, or leadership |
 | `/kb-article` | Draft a knowledge base article from a resolved issue |
 
-## Skills
+## 스킬
 
-| Skill | Description |
+| 스킬 | 설명 |
 |---|---|
-| `ticket-triage` | Category taxonomy, priority framework (P1-P4), routing rules, duplicate detection |
-| `customer-research` | Multi-source research methodology, source prioritization, answer synthesis |
+| `ticket-triage` | Support ticket 또는 customer issue를 triage하고 prioritize합니다. New ticket이 들어와 categorization, P1-P4 priority assignment, 담당 team 결정, routing 전 duplicate/known issue 확인이 필요할 때 사용합니다. |
+| `customer-research` | Source attribution이 포함된 customer question/topic에 대한 multi-source research입니다. Customer가 lookup이 필요한 질문을 하거나, bug가 이전에 report되었는지 조사하거나, specific account에 이전에 무엇을 안내했는지 확인하거나, response 초안 전 background를 수집할 때 사용합니다. |
 | `response-drafting` | Communication best practices, tone guidelines, templates for common scenarios |
 | `escalation` | Escalation tiers, structured escalation format, impact assessment, follow-up cadence |
 | `knowledge-management` | Article structure standards, writing for searchability, review cadence, maintenance |
@@ -55,7 +55,7 @@ Connect your support platform, knowledge base, and communication tools for the b
 **Additional options:**
 - See [CONNECTORS.md](CONNECTORS.md) for alternative tools in each category
 
-## Example Workflows
+## 예시 워크플로
 
 ### Triaging an Incoming Ticket
 

@@ -2,13 +2,13 @@
 
 Productivity plugin입니다. 주로 Anthropic의 agentic desktop application인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Task management, workplace memory, visual dashboard를 제공하며, Claude가 사람, project, terminology를 학습해 chatbot이 아니라 동료처럼 일할 수 있게 합니다.
 
-## Installation
+## 설치
 
 ```
 claude plugins add knowledge-work-plugins/productivity
 ```
 
-## What It Does
+## 주요 기능
 
 This plugin gives Claude a persistent understanding of your work:
 
@@ -16,7 +16,7 @@ This plugin gives Claude a persistent understanding of your work:
 - **Workplace memory** — A two-tier memory system that teaches Claude your shorthand, people, projects, and terminology. Say "ask todd to do the PSR for oracle" and Claude knows exactly who, what, and which deal.
 - **Visual dashboard** — A local HTML file that gives you a board view of your tasks and a live view of what Claude knows about your workplace. Edit from the board or the file — they stay in sync.
 
-## Commands
+## 명령
 
 | Command | What it does |
 |---------|--------------|
@@ -24,14 +24,14 @@ This plugin gives Claude a persistent understanding of your work:
 | `/update` | Triage stale items, check memory for gaps, sync from external tools if applicable |
 | `/update --comprehensive` | Deep scan email, calendar, chat — flag missed todos and suggest new memories |
 
-## Skills
+## 스킬
 
-| Skill | Description |
+| 스킬 | 설명 |
 |-------|-------------|
-| `memory-management` | Two-tier memory system — CLAUDE.md for working memory, memory/ directory for deep storage |
-| `task-management` | Markdown-based task tracking using a shared TASKS.md file |
+| `memory-management` | Claude를 실제 workplace collaborator처럼 만드는 two-tier memory system입니다. Shorthand, acronym, nickname, internal language를 해석해 Claude가 colleague처럼 request를 이해하게 합니다. Working memory에는 CLAUDE.md를, full knowledge base에는 memory/ directory를 사용합니다. |
+| `task-management` | 공유 TASKS.md file을 사용하는 간단한 task management입니다. 사용자가 자신의 task를 묻거나, task 추가/완료를 원하거나, commitment tracking에 도움이 필요할 때 참조합니다. |
 
-## Example Workflows
+## 예시 워크플로
 
 ### Getting Started
 

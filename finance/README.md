@@ -4,15 +4,15 @@ Finance 및 accounting plugin입니다. 주로 Anthropic의 agentic desktop appl
 
 > **중요:** 이 플러그인은 finance 및 accounting workflow를 보조하지만 financial, tax, audit advice를 제공하지 않습니다. 모든 output은 financial reporting, regulatory filing, audit documentation에 사용하기 전에 자격을 갖춘 financial professional의 검토를 받아야 합니다.
 
-## Installation
+## 설치
 
 ```bash
 claude plugins add knowledge-work-plugins/finance
 ```
 
-## Commands
+## 명령
 
-| Command | Description |
+| 명령 | 설명 |
 |---------|-------------|
 | `/journal-entry` | Journal entry preparation — generate accruals, fixed asset entries, prepaids, payroll, and revenue entries with proper debits/credits and supporting detail |
 | `/reconciliation` | Account reconciliation — compare GL balances to subledger, bank, or third-party balances and identify reconciling items |
@@ -20,18 +20,18 @@ claude plugins add knowledge-work-plugins/finance
 | `/variance-analysis` | Variance/flux analysis — decompose variances into drivers with narrative explanations and waterfall analysis |
 | `/sox-testing` | SOX compliance testing — generate sample selections, testing workpapers, and control assessments |
 
-## Skills
+## 스킬
 
-| Skill | Description |
+| 스킬 | 설명 |
 |-------|-------------|
-| `journal-entry-prep` | JE preparation best practices, standard accrual types, supporting documentation requirements, and review workflows |
-| `reconciliation` | Reconciliation methodology for GL-to-subledger, bank recs, and intercompany, with reconciling item categorization and aging |
-| `financial-statements` | Income statement, balance sheet, and cash flow statement formats with GAAP presentation and flux analysis methodology |
-| `variance-analysis` | Variance decomposition techniques (price/volume, rate/mix), materiality thresholds, narrative generation, and waterfall charts |
-| `close-management` | Month-end close checklist, task sequencing, dependencies, status tracking, and common close activities by day |
-| `audit-support` | SOX 404 control testing methodology, sample selection, documentation standards, and deficiency classification |
+| `journal-entry-prep` | Month-end close를 위해 적절한 debit, credit, supporting documentation을 갖춘 journal entry를 준비합니다. Accrual, prepaid amortization, fixed asset depreciation, payroll entry, revenue recognition 또는 manual journal entry booking에 사용합니다. |
+| `reconciliation` | GL balance를 subledger, bank statement, third-party data와 비교해 account를 reconcile합니다. Bank reconciliation, GL-to-subledger rec, intercompany reconciliation, reconciling item 식별 및 categorization에 사용합니다. |
+| `financial-statements` | Period-over-period comparison과 variance analysis가 포함된 financial statement(income statement, balance sheet, cash flow)를 생성합니다. Monthly/quarterly P&L 준비, book closing 중 material variance flagging, actual vs budget comparison, leadership review용 financial summary 작성, GAAP presentation requirement와 period-end adjustment 확인에 사용합니다. |
+| `variance-analysis` | Financial variance를 narrative explanation과 waterfall analysis가 포함된 driver로 분해합니다. Budget vs actual, period-over-period change, revenue/expense variance 분석, leadership용 variance commentary 준비에 사용합니다. |
+| `close-management` | Task sequencing, dependency, status tracking으로 month-end close process를 관리합니다. Close calendar planning, close progress tracking, blocker identification, close activity day-by-day sequencing에 사용합니다. |
+| `audit-support` | Control testing methodology, sample selection, documentation standard로 SOX 404 compliance를 지원합니다. Testing workpaper 생성, audit sample 선택, control deficiency classification, internal/external audit 준비에 사용합니다. |
 
-## Example Workflows
+## 예시 워크플로
 
 ### Month-End Close
 

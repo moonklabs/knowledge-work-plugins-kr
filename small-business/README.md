@@ -6,7 +6,7 @@
 
 > **Important**: This plugin assists with small business workflows but does not provide financial, tax, legal, or HR advice. All outputs should be reviewed by you (and where appropriate, a qualified professional) before use.
 
-## Installation
+## 설치
 
 ### Cowork
 
