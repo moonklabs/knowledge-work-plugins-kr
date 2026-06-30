@@ -2,8 +2,8 @@
 
 name: meeting-briefing
 description: >-
-  법무 관련성이 있는 meeting을 위한 structured briefing을 준비하고 그에 따른 action item을 추적합니다. Contract negotiation, board
-  meeting, compliance review처럼 legal context, background research, action tracking이 필요한 meeting 준비에 사용합니다.
+  법무 관련성이 있는 회의를 위한 구조화된 브리핑을 준비하고 그에 따른 액션 아이템을 추적합니다. 계약 협상, 이사회
+  회의, 컴플라이언스 검토처럼 법무 맥락, 배경 조사, 액션 추적이 필요한 회의 준비에 사용합니다.
 ---
 
 # Meeting Briefing Skill

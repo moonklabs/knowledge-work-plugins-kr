@@ -2,9 +2,9 @@
 
 name: margin-analyzer
 description: >-
-  PayPal merchant insight와 QuickBooks cost data를 사용해 제품 또는 서비스별 단위 경제성을 분석하고 인플레이션 및 비용 변화와 비교하며
-  가격 시나리오 데이터를 보여줍니다. 예: "5% 인상은 역사적으로 약 3% volume drop과 상관관계". 분석만 제공하고 가격 추천은 하지 않습니다. 사용자가
-  price raise, pricing, margin analysis, what to charge, 비용이 이익을 잠식하는지, price change가 사업에 미치는 영향을
+  PayPal 판매자 인사이트와 QuickBooks 비용 데이터를 사용해 제품 또는 서비스별 단위 경제성을 분석하고 인플레이션 및 비용 변화와 비교하며
+  가격 시나리오 데이터를 보여줍니다. 예: "5% 인상은 역사적으로 약 3% 거래량 감소와 상관관계". 분석만 제공하고 가격 추천은 하지 않습니다. 사용자가
+  가격 인상, 가격 책정, 마진 분석, 얼마를 청구해야 하는지, 비용이 이익을 잠식하는지, 가격 변경이 사업에 미치는 영향을
   묻는 경우 사용합니다. 사용자가 "margin"이라고 말하지 않아도 "am I making enough?", "should I charge more?", "my costs
   are going up" 같은 표현이면 트리거합니다.
 ---

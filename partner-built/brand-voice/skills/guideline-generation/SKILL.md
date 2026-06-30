@@ -3,11 +3,11 @@
 
 name: guideline-generation
 description: >-
-  Source material에서 brand voice guideline을 생성하거나 작성하거나 구축합니다. 사용자가 "generate brand guidelines",
+  원천 자료에서 브랜드 보이스 가이드라인을 생성하거나 작성하거나 구축합니다. 사용자가 "generate brand guidelines",
   "create a style guide", "extract brand voice", "create guidelines from calls", "consolidate
   brand materials", "analyze my sales calls for brand voice", "build a brand playbook from
-  documents", "synthesize a voice and tone guide"를 요청하거나 brand document, transcript, meeting
-  녹화을 업로드해 brand analysis를 원할 때 사용합니다. Discovery report를 actionable guideline으로 전환하려는 경우에도
+  documents", "synthesize a voice and tone guide"를 요청하거나 브랜드 문서, 전사, 회의
+  녹화본을 업로드해 브랜드 분석을 원할 때 사용합니다. 발견 보고서를 실행 가능한 가이드라인으로 전환하려는 경우에도
   트리거됩니다.
 ---
 
