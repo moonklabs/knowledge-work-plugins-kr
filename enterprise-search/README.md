@@ -1,12 +1,12 @@
 # Enterprise Search 플러그인
 
-Enterprise search 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. App을 오가며 전환하지 않고 email, chat, document, wiki 등 회사의 모든 도구를 한곳에서 검색합니다.
+엔터프라이즈 검색 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. 앱을 오가며 전환하지 않고 이메일, 채팅, 문서, 위키 등 회사의 모든 도구를 한곳에서 검색합니다.
 
 ---
 
 ## 작동 방식
 
-하나의 query가 연결된 모든 도구를 동시에 검색합니다. Claude는 질문을 분해하고 각 source에서 targeted search를 실행한 뒤, source attribution이 포함된 하나의 일관된 답변으로 결과를 종합합니다.
+하나의 질의가 연결된 모든 도구를 동시에 검색합니다. Claude는 질문을 분해하고 각 source에서 표적 검색을 실행한 뒤, 출처 표시가 포함된 하나의 일관된 답변으로 결과를 종합합니다.
 
 ```text
 사용자: "API redesign에 대해 우리가 무엇을 결정했지?"
@@ -68,7 +68,7 @@ Filter `from:`, `in:`, `after:`, `before:`, `type:`을 지원하며 각 source�
 /enterprise-search:digest --weekly     # Project/topic별로 묶은 주간 요약
 ```
 
-Action item, decision, mention을 강조합니다. Activity를 topic별로 묶어 중요한 것만 빠르게 훑을 수 있습니다.
+액션 아이템, 결정, 멘션을 강조합니다. 활동을 topic별로 묶어 중요한 것만 빠르게 훑을 수 있습니다.
 
 ---
 
@@ -76,11 +76,11 @@ Action item, decision, mention을 강조합니다. Activity를 topic별로 묶�
 
 세 가지 skill이 search experience를 구동합니다.
 
-**Search Strategy** — Query decomposition 및 source-specific translation. 자연어 질문을 source별 targeted search로 나누고 ambiguity를 처리하며 source를 사용할 수 없을 때 graceful fallback합니다.
+**Search Strategy** — 질의 분해 및 source-specific translation. 자연어 질문을 source별 표적 검색으로 나누고 모호성을 처리하며 source를 사용할 수 없을 때 graceful fallback합니다.
 
 **Source Management** — 사용 가능한 MCP source를 파악하고, 새 source 연결을 안내하며, source priority와 rate limit을 관리합니다.
 
-**Knowledge Synthesis** — 여러 source의 result를 coherent answer로 결합합니다. Cross-source information을 deduplicate하고, source attribution을 제공하며, freshness와 authority 기준으로 confidence를 산정하고 large result set을 요약합니다.
+**Knowledge Synthesis** — 여러 source의 결과를 일관된 답변으로 결합합니다. Source 간 정보를 중복 제거하고, 출처 표시를 제공하며, 최신성과 권위 기준으로 신뢰도를 산정하고 큰 결과 집합을 요약합니다.
 
 ---
 

@@ -1,6 +1,6 @@
 # HR 플러그인
 
-People operations plugin입니다. 주로 Anthropic의 agentic desktop application인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Recruiting, onboarding, performance management, policy guidance, compensation analysis를 돕습니다. 어떤 HR team에서도 사용할 수 있으며, 입력만으로 단독 동작하고 HRIS, ATS 및 다른 tool을 연결하면 더 강력해집니다.
+People operations 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. 채용, 온보딩, 성과 관리, 정책 안내, 보상 분석을 돕습니다. 어떤 HR 팀에서도 사용할 수 있으며, 입력만으로 단독 동작하고 HRIS, ATS 및 다른 도구를 연결하면 더 강력해집니다.
 
 ## 설치
 
@@ -14,18 +14,18 @@ Slash command로 호출하는 명시적 워크플로입니다:
 
 | 명령 | 설명 |
 |---|---|
-| `/draft-offer` | Compensation detail, start date, term이 포함된 offer letter 초안을 작성합니다. |
-| `/onboarding` | New hire를 위한 onboarding checklist와 first-week plan을 생성합니다. |
-| `/performance-review` | Self-assessment prompt, manager template, calibration prep을 포함해 performance review를 구조화합니다. |
-| `/policy-lookup` | PTO, benefit, expense, travel, remote work 등 company policy를 찾고 설명합니다. |
-| `/comp-analysis` | Benchmarking, band placement, equity refresh modeling으로 compensation data를 분석합니다. |
-| `/people-report` | Headcount, attrition, diversity, org health report를 생성합니다. |
+| `/draft-offer` | 보상 세부사항, 시작일, 조건이 포함된 오퍼 레터 초안을 작성합니다. |
+| `/onboarding` | 신규 입사자를 위한 온보딩 체크리스트와 첫 주 계획을 생성합니다. |
+| `/performance-review` | 자기평가 프롬프트, 매니저 템플릿, 캘리브레이션 준비를 포함해 성과 평가를 구조화합니다. |
+| `/policy-lookup` | PTO, 복리후생, 비용, 출장, 원격 근무 등 회사 정책을 찾고 설명합니다. |
+| `/comp-analysis` | 벤치마킹, 밴드 배치, 지분 보상 갱신 모델링으로 보상 데이터를 분석합니다. |
+| `/people-report` | 인원, 이탈, 다양성, 조직 건강도 보고서를 생성합니다. |
 
 모든 명령은 context와 detail만 제공해도 **단독**으로 동작하며, MCP connector를 연결하면 더 강력해집니다.
 
 ## 스킬
 
-관련 상황에서 Claude가 자동으로 사용하는 domain knowledge입니다:
+관련 상황에서 Claude가 자동으로 사용하는 도메인 지식입니다:
 
 | 스킬 | 설명 |
 |---|---|
@@ -34,7 +34,7 @@ Slash command로 호출하는 명시적 워크플로입니다:
 | `compensation-benchmarking` | Market data 기준으로 base, equity, total comp를 benchmark합니다. |
 | `org-planning` | Headcount planning, org design, team structure optimization을 수행합니다. "org planning", "headcount plan", "team structure", "reorg", "who should we hire next" 또는 team size, reporting structure, organizational design을 고민할 때 트리거됩니다. |
 | `people-analytics` | Workforce data를 분석해 attrition trend, engagement signal, diversity metric을 파악합니다. |
-| `interview-prep` | 역량 기반 질문과 scorecard가 포함된 구조화된 interview plan을 만듭니다. "interview plan for", "interview questions for", "how should we interview", "scorecard for" 또는 candidate interview 준비 요청에서 트리거됩니다. |
+| `interview-prep` | 역량 기반 질문과 스코어카드가 포함된 구조화된 인터뷰 계획을 만듭니다. "interview plan for", "interview questions for", "how should we interview", "scorecard for" 또는 후보자 인터뷰 준비 요청에서 트리거됩니다. |
 
 ## 예시 워크플로
 

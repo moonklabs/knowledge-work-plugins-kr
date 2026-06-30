@@ -1,6 +1,6 @@
 # Productivity 플러그인
 
-생산성 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. 작업 관리, workplace memory, 시각적 dashboard를 제공하며, Claude가 사람, project, terminology를 학습해 chatbot이 아니라 동료처럼 일할 수 있게 합니다.
+생산성 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. 작업 관리, 업무 메모리, 시각적 대시보드를 제공하며, Claude가 사람, 프로젝트, 용어를 학습해 chatbot이 아니라 동료처럼 일할 수 있게 합니다.
 
 ## 설치
 
@@ -12,9 +12,9 @@ claude plugins add knowledge-work-plugins/productivity
 
 이 플러그인은 Claude가 사용자의 일을 지속적으로 이해하도록 돕습니다.
 
-- **Task management** — Claude가 읽고 쓰며 실행 기준으로 삼는 markdown task list(`TASKS.md`)입니다. 자연스럽게 task를 추가하면 Claude가 status를 추적하고 stale item을 triage하며 external tool과 sync합니다.
-- **Workplace memory** — Shorthand, people, project, terminology를 Claude에게 가르치는 two-tier memory system입니다. "Todd에게 Oracle PSR 해달라고 해"라고 말하면 Claude가 누구에게 무엇을 어떤 deal에 대해 요청하는지 이해합니다.
-- **Visual dashboard** — Task board view와 Claude가 workplace에 대해 아는 내용을 보여주는 local HTML file입니다. Board나 file 어느 쪽에서 수정해도 sync됩니다.
+- **Task management** — Claude가 읽고 쓰며 실행 기준으로 삼는 markdown 작업 목록(`TASKS.md`)입니다. 자연스럽게 작업을 추가하면 Claude가 상태를 추적하고 오래된 항목을 분류하며 외부 도구와 동기화합니다.
+- **Workplace memory** — 약어, 사람, 프로젝트, 용어를 Claude에게 가르치는 2계층 메모리 시스템입니다. "Todd에게 Oracle PSR 해달라고 해"라고 말하면 Claude가 누구에게 무엇을 어떤 거래에 대해 요청하는지 이해합니다.
+- **Visual dashboard** — 작업 보드 보기와 Claude가 workplace에 대해 아는 내용을 보여주는 local HTML file입니다. 보드나 파일 어느 쪽에서 수정해도 동기화됩니다.
 
 ## 명령
 
@@ -28,8 +28,8 @@ claude plugins add knowledge-work-plugins/productivity
 
 | 스킬 | 설명 |
 |-------|-------------|
-| `memory-management` | Claude를 실제 workplace collaborator처럼 만드는 two-tier memory system입니다. Shorthand, acronym, nickname, internal language를 해석해 Claude가 colleague처럼 request를 이해하게 합니다. Working memory에는 CLAUDE.md를, full knowledge base에는 memory/ directory를 사용합니다. |
-| `task-management` | 공유 TASKS.md file을 사용하는 간단한 task management입니다. 사용자가 자신의 task를 묻거나, task 추가/완료를 원하거나, commitment tracking에 도움이 필요할 때 참조합니다. |
+| `memory-management` | Claude를 실제 업무 협업자처럼 만드는 2계층 메모리 시스템입니다. 약어, 두문자어, 별칭, 내부 언어를 해석해 Claude가 동료처럼 요청을 이해하게 합니다. 작업 메모리에는 CLAUDE.md를, 전체 지식 기반에는 memory/ 디렉터리를 사용합니다. |
+| `task-management` | 공유 TASKS.md 파일을 사용하는 간단한 작업 관리입니다. 사용자가 자신의 작업을 묻거나, 작업 추가/완료를 원하거나, 약속 추적에 도움이 필요할 때 참조합니다. |
 
 ## 예시 워크플로
 
@@ -87,7 +87,7 @@ Claude: "Todd Martinez(Finance lead)에게 Oracle Systems deal($2.3M, Q2 close)�
 
 **포함된 MCP connection:**
 - Chat(Slack): team context 및 message scanning
-- Email and calendar(Microsoft 365): action item discovery
+- Email and calendar(Microsoft 365): 액션 아이템 발견
 - Knowledge base(Notion): reference document
 - Project tracker(Asana, Linear, Atlassian, monday.com, ClickUp): task syncing
 - Office suite(Microsoft 365): document

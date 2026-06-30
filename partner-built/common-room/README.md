@@ -19,10 +19,10 @@ Common Room 기반 GTM 워크플로입니다. Account research, contact research
 |-------|----------------|
 | `account-research` | Common Room 데이터를 사용해 회사를 조사합니다. 'research [company]', 'tell me about [domain]', 'pull up signals for [account]', 'what's going on with [company]' 또는 계정 수준 질문에서 트리거됩니다. |
 | `contact-research` | Common Room 데이터를 사용해 특정 사람을 조사합니다. 'who is [name]', 'look up [email]', 'research [contact]', 'is [name] a warm lead' 또는 contact-level question에서 트리거됩니다. |
-| `call-prep` | Common Room signal을 사용해 customer 또는 prospect call을 준비합니다. 'prep me for my call with [company]', 'prepare for a meeting with [company]', 'what should I know before talking to [company]' 또는 call preparation request에서 트리거됩니다. |
-| `compose-outreach` | Common Room signal을 사용해 개인화된 outreach message를 생성합니다. 'draft outreach to [person]', 'write an email to [name]', 'compose a message for [contact]' 또는 outreach drafting request에서 트리거됩니다. |
-| `prospect` | Common Room Prospector를 사용해 targeted account 또는 contact list를 만듭니다. 'find companies that match [criteria]', 'build a prospect list', 'find contacts at [type of company]', 'show me companies hiring [role]' 또는 list-building request에서 트리거됩니다. |
-| `weekly-prep-brief` | 다음 7일 동안의 모든 external call에 대한 종합 weekly briefing을 생성합니다. 'weekly prep brief', 'prepare my week', 'what calls do I have this week', 'Monday prep' 또는 weekly planning request에서 트리거됩니다. |
+| `call-prep` | Common Room 신호를 사용해 고객 또는 잠재 고객 통화를 준비합니다. 'prep me for my call with [company]', 'prepare for a meeting with [company]', 'what should I know before talking to [company]' 또는 통화 준비 요청에서 트리거됩니다. |
+| `compose-outreach` | Common Room 신호를 사용해 개인화된 아웃리치 메시지를 생성합니다. 'draft outreach to [person]', 'write an email to [name]', 'compose a message for [contact]' 또는 아웃리치 초안 작성 요청에서 트리거됩니다. |
+| `prospect` | Common Room Prospector를 사용해 타깃 계정 또는 연락처 목록을 만듭니다. 'find companies that match [criteria]', 'build a prospect list', 'find contacts at [type of company]', 'show me companies hiring [role]' 또는 목록 작성 요청에서 트리거됩니다. |
+| `weekly-prep-brief` | 다음 7일 동안의 모든 외부 통화에 대한 종합 주간 브리핑을 생성합니다. 'weekly prep brief', 'prepare my week', 'what calls do I have this week', 'Monday prep' 또는 주간 계획 요청에서 트리거됩니다. |
 
 ## 명령
 
