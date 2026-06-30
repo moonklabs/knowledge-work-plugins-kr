@@ -46,7 +46,7 @@ MCP server가 올바르게 시작되도록 Cowork를 다시 시작하세요.
 
 ### Claude Code
 
-#### 1. 이 plugin marketplace 추가
+#### 1. plugin marketplace 추가
 
 Claude Code에서 실행합니다.
 
@@ -72,7 +72,7 @@ Apollo MCP Server는 **OAuth**를 지원합니다.
 
 1. 설치 후 Claude Code 또는 Cowork에서 `/mcp`를 실행합니다.
 2. **Apollo** server를 선택하고 **Authenticate**를 클릭합니다.
-3. Browser에서 Apollo.io 로그인을 완료합니다.
+3. 브라우저에서 Apollo.io 로그인을 완료합니다.
 4. 완료되면 모든 명령을 사용할 준비가 됩니다.
 
 ---

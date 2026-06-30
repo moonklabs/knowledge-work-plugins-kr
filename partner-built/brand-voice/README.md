@@ -4,12 +4,12 @@ Claude Cowork용 [Tribe AI](https://tribe.ai) 플러그인입니다. Cowork 출�
 
 회사를 알아볼 수 있게 만드는 브랜드 지식은 보통 편리한 한곳에 있지 않습니다. 2022년 덱, 마지막 리브랜딩 이후 아무도 업데이트하지 않은 Confluence 페이지, 오래 일한 선임 몇 명의 감각 속에 흩어져 있습니다. 영업 담당자가 AI로 아웃리치를 만들고 신규 입사자가 첫 주부터 콘텐츠를 만들 때, 바로 그 지식이 사라집니다.
 
-Brand Voice는 흩어진 브랜드 자료를 적용 가능한 AI 가드레일로 바꿉니다. Confluence, Google Drive, Box, SharePoint, Slack, Gong, Granola를 검색해 회사가 실제로 어떻게 소통하는지 찾아낸 뒤, LLM-ready 브랜드 가이드라인을 만들고 AI 생성 콘텐츠를 그 기준으로 검증합니다. Claude는 더 빠르게 쓰는 데서 그치지 않고, 여러분답게 씁니다.
+Brand Voice는 흩어진 브랜드 자료를 적용 가능한 AI 가드레일로 바꿉니다. Confluence, Google Drive, Box, SharePoint, Slack, Gong, Granola를 검색해 회사가 실제로 어떻게 소통하는지 찾아낸 뒤, LLM에 바로 쓸 수 있는 브랜드 가이드라인을 만들고 AI 생성 콘텐츠를 그 기준으로 검증합니다. Claude는 더 빠르게 쓰는 데서 그치지 않고, 여러분답게 씁니다.
 
 ## 기능
 
 ### 1. 브랜드 발견
-브랜드 지식은 Notion, Confluence, Google Drive, Gong, Slack, 수년간의 sales call 및 meeting transcript에 흩어져 있습니다. Brand Voice는 style guide, pitch deck, email template, transcript, design system을 모두 검색해 가장 강한 브랜드 신호를 하나의 최신 source of truth로 정리합니다. 3년 전 style guide의 문구가 아니라, 실제로 가장 잘하는 사람들이 어떻게 소통하는지에 기반합니다.
+브랜드 지식은 Notion, Confluence, Google Drive, Gong, Slack, 수년간의 영업 통화와 meeting transcript에 흩어져 있습니다. Brand Voice는 style guide, pitch deck, email template, transcript, design system을 모두 검색해 가장 강한 브랜드 신호를 하나의 최신 기준점으로 정리합니다. 3년 전 style guide의 문구가 아니라, 실제로 가장 잘하는 사람들이 어떻게 소통하는지에 기반합니다.
 
 **Slash 명령:** `/brand-voice:discover-brand`
 
@@ -19,7 +19,7 @@ Brand Voice는 흩어진 브랜드 자료를 적용 가능한 AI 가드레일로
 ```
 
 ### 2. 가이드라인 생성
-자료를 LLM-ready 가이드라인으로 종합합니다. Voice pillar, tone parameter, Claude에게 명확한 operating boundary를 주는 "We Are / We Are Not" framework, 실제 회사 언어를 반영하는 용어 기준을 만듭니다. 숙련된 팀을 on-brand로 유지하는 같은 guardrail 덕분에 신입도 세 달째가 아니라 첫 주부터 quality content를 만들 수 있습니다.
+자료를 LLM에 바로 쓸 수 있는 가이드라인으로 종합합니다. Voice pillar, tone parameter, Claude에게 명확한 operating boundary를 주는 "We Are / We Are Not" framework, 실제 회사 언어를 반영하는 용어 기준을 만듭니다. 숙련된 팀을 on-brand로 유지하는 같은 guardrail 덕분에 신입도 세 달째가 아니라 첫 주부터 품질 높은 콘텐츠를 만들 수 있습니다.
 
 **Slash 명령:** `/brand-voice:generate-guidelines`
 
@@ -55,7 +55,7 @@ Sales email, proposal, marketing page, press release 같은 모든 AI-generated 
 
 ### 네이티브 통합
 
-이 platform들은 native Claude integration입니다. MCP connector 설치가 필요 없습니다. 사용자가 Claude Desktop 또는 Cowork에서 연결하면 도구로 사용할 수 있습니다.
+이 platform들은 Claude 기본 통합입니다. MCP connector 설치가 필요 없습니다. 사용자가 Claude Desktop 또는 Cowork에서 연결하면 도구로 사용할 수 있습니다.
 
 | Integration | 목적 |
 |-------------|---------|
