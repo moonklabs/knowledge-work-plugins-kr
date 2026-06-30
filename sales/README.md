@@ -35,7 +35,7 @@ Slash command로 호출하는 명시적 워크플로입니다.
 
 ## 예시 워크플로
 
-### Call 이후
+### 통화 이후
 
 ```
 /call-summary
@@ -43,21 +43,21 @@ Slash command로 호출하는 명시적 워크플로입니다.
 
 Note 또는 transcript를 붙여넣으면 구조화된 summary, owner가 있는 action item, follow-up email draft를 받습니다. CRM이 연결되어 있으면 activity logging과 task 생성을 제안합니다.
 
-### Weekly forecast
+### 주간 전망
 
 ```
 /forecast
 ```
 
-CRM에서 export한 CSV를 upload하거나 deal을 paste합니다. Quota와 timeline을 알려주면 best/likely/worst scenario, commit vs. upside breakdown, gap analysis가 포함된 weighted forecast를 받습니다.
+CRM에서 export한 CSV를 업로드하거나 deal을 paste합니다. Quota와 timeline을 알려주면 best/likely/worst scenario, commit vs. upside breakdown, gap analysis가 포함된 weighted forecast를 받습니다.
 
-### Pipeline review
+### 파이프라인 검토
 
 ```
 /pipeline-review
 ```
 
-CSV를 upload하거나 pipeline을 설명합니다. Health score, deal prioritization, stale deal/past close date/single-threaded 같은 risk flag, weekly action plan을 받습니다.
+CSV를 업로드하거나 pipeline을 설명합니다. Health score, deal prioritization, stale deal/past close date/single-threaded 같은 risk flag, weekly action plan을 받습니다.
 
 ### Prospect 조사
 
@@ -68,7 +68,7 @@ CSV를 upload하거나 pipeline을 설명합니다. Health score, deal prioritiz
 
 `account-research` skill이 자동으로 trigger되어 company overview, key contact, recent news, recommended approach를 제공합니다.
 
-### Outreach 작성
+### 아웃리치 작성
 
 ```
 TechStart VP of Engineering에게 보낼 email 초안 작성해줘
@@ -76,7 +76,7 @@ TechStart VP of Engineering에게 보낼 email 초안 작성해줘
 
 `draft-outreach` skill이 prospect를 먼저 조사한 뒤 여러 angle의 personalized outreach를 생성합니다.
 
-### Competitive intel
+### 경쟁 정보
 
 ```
 Competitor X와 비교하면 우리는 어때?

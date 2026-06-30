@@ -38,15 +38,15 @@ Slash command로 호출하는 명시적 워크플로입니다.
 
 ## 예시 워크플로
 
-### Design feedback 받기
+### 디자인 피드백 받기
 
 ```
 /critique
 ```
 
-Figma link, screenshot을 공유하거나 design을 설명하세요. 사용성, 시각적 계층, 일관성, 접근성에 대한 구조화된 feedback을 받습니다.
+Figma link, 스크린샷을 공유하거나 디자인을 설명하세요. 사용성, 시각적 계층, 일관성, 접근성에 대한 구조화된 feedback을 받습니다.
 
-### Design system audit
+### 디자인 시스템 감사
 
 ```
 /design-system audit
@@ -54,7 +54,7 @@ Figma link, screenshot을 공유하거나 design을 설명하세요. 사용성, 
 
 Component library를 consistency, completeness, naming convention 기준으로 review합니다. 구체적인 improvement recommendation이 포함된 report를 받습니다.
 
-### UX copy 작성
+### UX 카피 작성
 
 ```
 /ux-copy error messages for payment flow
@@ -62,7 +62,7 @@ Component library를 consistency, completeness, naming convention 기준으로 r
 
 Tone guidance, alternative, localization note가 포함된 context-appropriate copy를 받습니다.
 
-### Developer handoff
+### 개발자 핸드오프
 
 ```
 /handoff
@@ -70,7 +70,7 @@ Tone guidance, alternative, localization note가 포함된 context-appropriate c
 
 Figma link를 공유하면 measurement, design token, component state, interaction note, edge case가 포함된 complete spec을 받습니다.
 
-### Accessibility check
+### 접근성 확인
 
 ```
 /accessibility
@@ -78,13 +78,13 @@ Figma link를 공유하면 measurement, design token, component state, interacti
 
 Design 또는 URL을 공유하면 specific issue, severity, remediation step이 포함된 WCAG 2.1 AA compliance report를 받습니다.
 
-### Research 종합
+### 리서치 종합
 
 ```
 /research-synthesis
 ```
 
-Interview transcript, survey result, usability test note를 upload하면 theme, insight, prioritized recommendation을 받습니다.
+Interview transcript, survey result, usability test note를 업로드하면 theme, insight, prioritized recommendation을 받습니다.
 
 ## 단독 사용과 통합 사용
 
@@ -92,11 +92,11 @@ Interview transcript, survey result, usability test note를 upload하면 theme, 
 
 | 할 수 있는 일 | 단독 사용 | 통합 사용 시 |
 |-----------------|------------|-------------------|
-| Design critique | 설명 또는 screenshot | Figma MCP(design 직접 수집) |
+| Design critique | 설명 또는 스크린샷 | Figma MCP(design 직접 수집) |
 | Design system | System 설명 | Figma MCP(component library audit) |
-| Handoff spec | 설명 또는 screenshot | Figma MCP(exact measurement, token) |
+| Handoff spec | 설명 또는 스크린샷 | Figma MCP(exact measurement, token) |
 | UX copy | Context 설명 | Knowledge base(brand voice guideline) |
-| Accessibility | 설명 또는 screenshot | Figma MCP, real usage data용 analytics |
+| Accessibility | 설명 또는 스크린샷 | Figma MCP, real usage data용 analytics |
 | Research synthesis | Transcript 붙여넣기 | User feedback tool(raw data 수집) |
 
 ## MCP 통합

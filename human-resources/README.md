@@ -38,7 +38,7 @@ Slash command로 호출하는 명시적 워크플로입니다.
 
 ## 예시 워크플로
 
-### Offer 초안 작성
+### 오퍼 초안 작성
 
 ```text
 /draft-offer
@@ -46,7 +46,7 @@ Slash command로 호출하는 명시적 워크플로입니다.
 
 Role, level, location, compensation detail을 알려주면 term, equity breakdown, benefit summary가 포함된 complete offer letter draft를 받습니다.
 
-### New hire onboarding
+### 신규 입사자 온보딩
 
 ```text
 /onboarding
@@ -54,7 +54,7 @@ Role, level, location, compensation detail을 알려주면 term, equity breakdow
 
 New hire의 name, role, team, start date를 제공하면 comprehensive onboarding checklist, first-week calendar, tool access list, buddy assignment template을 받습니다.
 
-### Performance review 준비
+### 성과 평가 준비
 
 ```text
 /performance-review
@@ -62,7 +62,7 @@ New hire의 name, role, team, start date를 제공하면 comprehensive onboardin
 
 Self-assessment, manager review, calibration용 template을 받습니다. 구체적이고 actionable하며 fair한 feedback 구조화를 돕습니다.
 
-### Benefit 이해
+### 복리후생 이해
 
 자연어로 물어보면 됩니다.
 
@@ -72,13 +72,13 @@ Self-assessment, manager review, calibration용 template을 받습니다. 구체
 
 `employee-handbook` skill이 자동으로 trigger되어 connected knowledge base에서 답을 찾습니다.
 
-### Compensation benchmarking
+### 보상 벤치마킹
 
 ```text
 /comp-analysis
 ```
 
-Comp data를 upload하거나 band를 설명하면 market comparison, band placement analysis, adjustment recommendation을 받습니다.
+Comp data를 업로드하거나 band를 설명하면 market comparison, band placement analysis, adjustment recommendation을 받습니다.
 
 ## 단독 사용과 통합 사용
 

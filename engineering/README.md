@@ -38,7 +38,7 @@ Slash command로 호출하는 명시적 워크플로입니다.
 
 ## 예시 워크플로
 
-### Morning standup
+### 아침 스탠드업
 
 ```text
 /standup
@@ -46,7 +46,7 @@ Slash command로 호출하는 명시적 워크플로입니다.
 
 Tool이 연결되어 있으면 recent commit, PR activity, ticket update를 가져옵니다. 그렇지 않으면 작업한 내용을 알려주면 standup format으로 정리합니다.
 
-### Code review
+### 코드 리뷰
 
 ```text
 /review https://github.com/org/repo/pull/123
@@ -54,7 +54,7 @@ Tool이 연결되어 있으면 recent commit, PR activity, ticket update를 가�
 
 PR link를 공유하거나 diff를 붙여넣거나 file을 지정하세요. Security, performance, correctness, style을 다루는 structured review를 받습니다.
 
-### Issue debugging
+### 이슈 디버깅
 
 ```text
 /debug 사용자가 checkout page에서 500 error를 보고 있습니다
@@ -62,7 +62,7 @@ PR link를 공유하거나 diff를 붙여넣거나 file을 지정하세요. Secu
 
 Reproduce, isolate, diagnose, fix로 이어지는 structured debugging process를 진행합니다. Systematic하게 생각하도록 돕습니다.
 
-### Architecture decision
+### 아키텍처 의사결정
 
 ```text
 /architecture 서비스 간 통신에 message queue를 써야 할까요, direct API call을 써야 할까요?
@@ -70,7 +70,7 @@ Reproduce, isolate, diagnose, fix로 이어지는 structured debugging process�
 
 Option analysis, trade-off, recommendation이 포함된 structured ADR을 받습니다.
 
-### Incident response
+### 인시던트 대응
 
 ```text
 /incident payments service가 503을 반환하고 있습니다
@@ -78,7 +78,7 @@ Option analysis, trade-off, recommendation이 포함된 structured ADR을 받습
 
 Incident workflow를 시작합니다. Severity를 triage하고 communication 초안을 작성하며 timeline을 track하고 resolved 후 postmortem을 생성합니다.
 
-### Pre-deploy check
+### 배포 전 확인
 
 ```text
 /deploy-checklist auth-service v2.3.0

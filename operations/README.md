@@ -38,15 +38,15 @@ Slash command로 호출하는 명시적 워크플로입니다.
 
 ## 예시 워크플로
 
-### Vendor 평가
+### 벤더 평가
 
 ```text
 /vendor-review
 ```
 
-Vendor name, contract detail을 제공하거나 proposal을 upload하면 cost analysis, risk flag, recommendation이 포함된 structured evaluation을 받습니다.
+Vendor name, contract detail을 제공하거나 proposal을 업로드하면 cost analysis, risk flag, recommendation이 포함된 structured evaluation을 받습니다.
 
-### Process 문서화
+### 프로세스 문서화
 
 ```text
 /process-doc employee offboarding
@@ -54,7 +54,7 @@ Vendor name, contract detail을 제공하거나 proposal을 upload하면 cost an
 
 Process를 설명하거나 단계별로 알려주면 flowchart, RACI matrix, step-by-step procedure가 포함된 complete SOP를 받습니다.
 
-### Change request 제출
+### 변경 요청 제출
 
 ```text
 /change-request
@@ -62,15 +62,15 @@ Process를 설명하거나 단계별로 알려주면 flowchart, RACI matrix, ste
 
 Change를 설명하면 approval에 바로 쓸 수 있는 impact analysis, risk assessment, rollback plan, communication template을 받습니다.
 
-### Capacity 계획
+### 수용량 계획
 
 ```text
 /capacity-plan
 ```
 
-Team data를 upload하거나 resource를 설명하면 utilization analysis, bottleneck identification, headcount recommendation을 받습니다.
+Team data를 업로드하거나 resource를 설명하면 utilization analysis, bottleneck identification, headcount recommendation을 받습니다.
 
-### Leadership status report
+### 리더십 상태 보고서
 
 ```text
 /status-report
@@ -78,7 +78,7 @@ Team data를 upload하거나 resource를 설명하면 utilization analysis, bott
 
 Connected tool에서 update를 가져오거나 필요한 input을 물은 뒤 KPI, risk, next step이 포함된 polished status report를 생성합니다.
 
-### Runbook 작성
+### 런북 작성
 
 ```text
 /runbook monthly close process
