@@ -2,8 +2,8 @@
 
 name: account-research
 description: >-
-  Common Room data를 사용해 company를 조사합니다. 'research [company]', 'tell me about [domain]', 'pull up signals for
-  [account]', 'what's going on with [company]' 또는 account-level question에서 트리거됩니다.
+  Common Room 데이터를 사용해 회사를 조사합니다. 'research [company]', 'tell me about [domain]', 'pull up signals for
+  [account]', 'what's going on with [company]' 또는 계정 수준 질문에서 트리거됩니다.
 ---
 
 # Account Research
@@ -140,4 +140,3 @@ Only include sections where Common Room returned actual data. Omit sections enti
 ## Reference Files
 
 - **`references/signals-guide.md`** — signal type taxonomy and interpretation guide
-

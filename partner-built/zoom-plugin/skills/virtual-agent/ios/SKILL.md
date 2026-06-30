@@ -2,8 +2,8 @@
 
 name: virtual-agent/ios
 description: >-
-  WKWebView를 통한 Zoom Virtual Agent iOS 통합입니다. Swift/Objective-C script injection, message handler,
-  support_handoff relay, URL 라우팅 정책에 사용합니다.
+  WKWebView를 통한 Zoom Virtual Agent iOS 통합입니다. Swift/Objective-C 스크립트 주입, 메시지 핸들러,
+  support_handoff 릴레이, URL 라우팅 정책에 사용합니다.
 user-invocable: false
 triggers:
   - "virtual agent ios"
