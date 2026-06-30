@@ -1,15 +1,15 @@
 # Enterprise Search
 
-An enterprise search plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Search across all your company's tools in one place — email, chat, documents, and wikis — without switching between apps.
+Enterprise search plugin입니다. 주로 Anthropic의 agentic desktop application인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. App을 오가며 전환하지 않고 email, chat, document, wiki 등 회사의 모든 tool을 한곳에서 검색합니다.
 
 ---
 
 ## How It Works
 
-One query searches all your connected tools simultaneously. Claude decomposes your question, runs targeted searches across every source, and synthesizes the results into a single coherent answer with source attribution.
+하나의 query가 연결된 모든 tool을 동시에 검색합니다. Claude는 질문을 분해하고 각 source에서 targeted search를 실행한 뒤, source attribution이 포함된 하나의 일관된 답변으로 결과를 종합합니다.
 
 ```
-You: "What did we decide about the API redesign?"
+사용자: "What did we decide about the API redesign?"
               ↓ Claude searches
 ~~chat: #engineering thread from Tuesday with the decision
 ~~email: Follow-up email from Sarah with the spec

@@ -1,10 +1,10 @@
-# Common Room Plugin
+# Common Room 플러그인
 
-GTM workflows powered by Common Room — account research, contact research, call prep, personalized outreach, prospecting, and weekly briefings.
+Common Room 기반 GTM workflow입니다. Account research, contact research, call prep, personalized outreach, prospecting, weekly briefing을 지원합니다.
 
 ## Overview
 
-This plugin connects Claude to Common Room's MCP server and equips it with six skills covering the most common rep workflows. Every output is grounded in real Common Room signal data — 1st-party product signals, 2nd-party community signals, 3rd-party intent signals, and enrichment from RoomieAI and Spark.
+이 plugin은 Claude를 Common Room MCP server에 연결하고, 가장 일반적인 rep workflow를 다루는 여섯 가지 skill을 제공합니다. 모든 output은 실제 Common Room signal data에 근거합니다. 1st-party product signal, 2nd-party community signal, 3rd-party intent signal, RoomieAI와 Spark의 enrichment를 활용합니다.
 
 ## Requirements
 

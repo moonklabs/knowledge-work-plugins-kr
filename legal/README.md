@@ -1,8 +1,8 @@
-# Legal Productivity Plugin
+# Legal Productivity 플러그인
 
-An AI-powered productivity plugin for in-house legal teams, primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Automates contract review, NDA triage, compliance workflows, legal briefings, and templated responses -- all configurable to your organization's specific playbook and risk tolerances.
+In-house legal team을 위한 AI-powered productivity plugin입니다. 주로 Anthropic의 agentic desktop application인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Contract review, NDA triage, compliance workflow, legal briefing, templated response를 자동화하며, 조직의 playbook과 risk tolerance에 맞게 모두 설정할 수 있습니다.
 
-> **Disclaimer:** This plugin assists with legal workflows but does not provide legal advice. Always verify conclusions with qualified legal professionals. AI-generated analysis should be reviewed by licensed attorneys before being relied upon for legal decisions. The default playbook examples in this plugin reflect U.S. legal positions and jurisdictions (Delaware, New York, California). If you operate under different legal systems (EU, UK, Netherlands, Australia, etc.), you must customize the playbook in .claude/legal.local.md to reflect your jurisdiction's specific legal requirements, standard contract terms, and compliance obligations before relying on the plugin's analysis.
+> **면책 고지:** 이 플러그인은 legal workflow를 보조하지만 법률 자문을 제공하지 않습니다. 결론은 항상 자격을 갖춘 법률 전문가와 검증하세요. AI가 생성한 분석은 법적 의사결정에 사용하기 전에 licensed attorney의 검토를 받아야 합니다. 이 플러그인의 기본 playbook 예시는 미국 법적 입장과 관할(Delaware, New York, California)을 반영합니다. 다른 법체계(EU, UK, Netherlands, Australia 등)에서 운영한다면, 플러그인 분석에 의존하기 전에 `.claude/legal.local.md`의 playbook을 해당 관할의 법적 요구사항, 표준 계약 조건, compliance obligation에 맞게 커스터마이즈해야 합니다.
 
 ## Target Personas
 

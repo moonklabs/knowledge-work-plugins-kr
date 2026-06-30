@@ -1,8 +1,8 @@
-# Finance & Accounting Plugin
+# Finance & Accounting 플러그인
 
-A finance and accounting plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Supports month-end close, journal entry preparation, account reconciliation, financial statement generation, variance analysis, and SOX audit support.
+Finance 및 accounting plugin입니다. 주로 Anthropic의 agentic desktop application인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Month-end close, journal entry preparation, account reconciliation, financial statement generation, variance analysis, SOX audit support를 지원합니다.
 
-> **Important**: This plugin assists with finance and accounting workflows but does not provide financial, tax, or audit advice. All outputs should be reviewed by qualified financial professionals before use in financial reporting, regulatory filings, or audit documentation.
+> **중요:** 이 플러그인은 finance 및 accounting workflow를 보조하지만 financial, tax, audit advice를 제공하지 않습니다. 모든 output은 financial reporting, regulatory filing, audit documentation에 사용하기 전에 자격을 갖춘 financial professional의 검토를 받아야 합니다.
 
 ## Installation
 

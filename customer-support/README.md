@@ -1,6 +1,6 @@
-# Customer Support Plugin
+# Customer Support 플러그인
 
-A customer support plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Provides ticket triage, escalation management, response drafting, customer research, and knowledge base authoring for support teams.
+Support team을 위한 customer support plugin입니다. 주로 Anthropic의 agentic desktop application인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Ticket triage, escalation management, response drafting, customer research, knowledge base authoring을 제공합니다.
 
 ## Installation
 

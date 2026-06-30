@@ -1,6 +1,6 @@
-# Marketing Plugin
+# Marketing 플러그인
 
-A marketing plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Content creation, campaign planning, brand voice management, competitive analysis, and performance reporting.
+Marketing plugin입니다. 주로 Anthropic의 agentic desktop application인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Content creation, campaign planning, brand voice management, competitive analysis, performance reporting을 지원합니다.
 
 ## Installation
 

@@ -1,6 +1,6 @@
-# Sales Plugin
+# Sales 플러그인
 
-A sales productivity plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Helps with prospecting, outreach, pipeline management, call preparation, and deal strategy. Works with any sales team — standalone with web search and your input, supercharged when you connect your CRM, email, and other tools.
+Sales productivity plugin입니다. 주로 Anthropic의 agentic desktop application인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Prospecting, outreach, pipeline management, call preparation, deal strategy를 돕습니다. 어떤 sales team에서도 사용할 수 있으며, web search와 사용자 입력만으로 standalone 동작하고 CRM, email 및 다른 tool을 연결하면 더 강력해집니다.
 
 ## Installation
 

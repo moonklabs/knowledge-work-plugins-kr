@@ -1,7 +1,7 @@
-# PDF Viewer Plugin
+# PDF Viewer 플러그인
 
-View, annotate, and sign PDFs in a live interactive viewer. Mark up
-contracts, fill forms with visual feedback, stamp approvals, and place
+Live interactive viewer에서 PDF를 보고, annotate하고, sign합니다. Contract를 mark up하고,
+visual feedback으로 form을 채우고, approval stamp를 찍고,
 signatures — then download the annotated copy.
 
 ## What It Does

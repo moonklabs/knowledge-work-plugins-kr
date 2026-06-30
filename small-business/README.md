@@ -1,8 +1,8 @@
-# Small Business Plugin
+# Small Business 플러그인
 
-Pre-built small business workflows for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — also works in Claude Code. Install it once and you get 15 building-block skills, 15 ready-to-use workflows, and a router that understands plain English.
+[Cowork](https://claude.com/product/cowork)용으로 미리 구성된 small business workflow 모음입니다. Cowork는 Anthropic의 agentic desktop application이며, 이 플러그인은 Claude Code에서도 동작합니다. 한 번 설치하면 15개의 building-block skill, 15개의 바로 쓸 수 있는 workflow, 자연어 요청을 이해하는 router를 사용할 수 있습니다.
 
-You don't need to memorize anything. Just tell Claude what you need — "I'm stressed about making payroll," "a customer is angry," "what should I charge?" — and it figures out the right workflow and walks you through it. Every workflow pauses before taking action, so nothing happens without your say-so.
+무엇을 외울 필요가 없습니다. Claude에게 필요한 일을 그대로 말하면 됩니다. 예: "I'm stressed about making payroll", "a customer is angry", "what should I charge?". Claude가 적절한 workflow를 찾고 단계별로 안내합니다. 모든 workflow는 action 전에 멈추므로, owner의 승인 없이 실행되는 일은 없습니다.
 
 > **Important**: This plugin assists with small business workflows but does not provide financial, tax, legal, or HR advice. All outputs should be reviewed by you (and where appropriate, a qualified professional) before use.
 

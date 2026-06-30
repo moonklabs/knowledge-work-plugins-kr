@@ -1,10 +1,10 @@
-# Slack Plugin
+# Slack 플러그인
 
-This repository contains the configuration needed to integrate Slack with Cursor IDE and Claude Code. The plugin enables your agents to interact directly with your Slack workspace, allowing you to search messages, send communications, manage canvases, and more—all through natural language.
+이 repository에는 Slack을 Cursor IDE 및 Claude Code와 통합하는 데 필요한 configuration이 포함되어 있습니다. 이 plugin을 사용하면 agent가 Slack workspace와 직접 상호작용해 message search, communication send, canvas management 등을 natural language로 수행할 수 있습니다.
 
 ## Features
 
-The Slack MCP server provides the following capabilities:
+Slack MCP server는 다음 기능을 제공합니다:
 
 - **Search**: Find messages, files, users, and channels (both public and private)
 - **Messaging**: Send messages, retrieve channel histories, and access threaded conversations

@@ -1,10 +1,10 @@
-# Zoom Plugin
+# Zoom 플러그인
 
-A Claude plugin for planning, building, and debugging Zoom integrations. It helps choose the right Zoom surface, shape implementations, debug failures, and route into the right Zoom references without making the user read the whole doc tree first.
+Zoom integration을 계획하고 구축하며 debugging하기 위한 Claude plugin입니다. 사용자가 전체 doc tree를 먼저 읽지 않아도 적절한 Zoom surface를 고르고, implementation을 구체화하고, failure를 debug하며, 필요한 Zoom reference로 라우팅할 수 있게 돕습니다.
 
 ## Installation
 
-Install this directory as a local Claude plugin. The plugin manifest is at [`.claude-plugin/plugin.json`](.claude-plugin/plugin.json) and the bundled Zoom MCP connectors are defined in [`.mcp.json`](.mcp.json).
+이 directory를 local Claude plugin으로 설치합니다. Plugin manifest는 [`.claude-plugin/plugin.json`](.claude-plugin/plugin.json)에 있고, bundled Zoom MCP connector는 [`.mcp.json`](.mcp.json)에 정의되어 있습니다.
 
 Before using the bundled MCP servers, export bearer tokens for the Zoom surfaces you want Claude to use:
 

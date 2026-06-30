@@ -1,6 +1,6 @@
-# Data Analyst Plugin
+# Data Analyst 플러그인
 
-A data analyst plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. SQL queries, data exploration, visualization, dashboards, and insight generation. Works with any data warehouse, any SQL dialect, and any analytics stack.
+Data analyst plugin입니다. 주로 Anthropic의 agentic desktop application인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. SQL query, data exploration, visualization, dashboard, insight generation을 지원합니다. 어떤 data warehouse, SQL dialect, analytics stack에서도 사용할 수 있습니다.
 
 ## Installation
 

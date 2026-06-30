@@ -1,12 +1,12 @@
-# Apollo Plugin for Claude Code and Cowork
+# Claude Code 및 Cowork용 Apollo 플러그인
 
-Prospect, enrich leads, and load outreach sequences with [Apollo.io](https://www.apollo.io/) — powered by the Apollo MCP Server with **one-click integration**.
+[Apollo.io](https://www.apollo.io/)로 prospect를 찾고, lead를 enrich하고, outreach sequence를 load합니다. Apollo MCP Server 기반이며 **one-click integration**을 지원합니다.
 
 ---
 
 ## 🔌 One-Click MCP Server Integration
 
-This plugin **automatically configures the Apollo MCP Server** when installed. No manual server setup, no config files to edit - just install the plugin and authenticate with your Apollo Account.
+이 plugin은 설치 시 **Apollo MCP Server를 자동으로 구성**합니다. Manual server setup이나 config file 수정 없이 plugin을 설치하고 Apollo Account로 인증하면 됩니다.
 
 ---
 

@@ -1,8 +1,8 @@
-# Brand Voice Plugin
+# Brand Voice 플러그인
 
-A [Tribe AI](https://tribe.ai) plugin for Claude Cowork. Built as a Cowork launch partner.
+Claude Cowork용 [Tribe AI](https://tribe.ai) plugin입니다. Cowork launch partner로 제작되었습니다.
 
-The brand knowledge that makes a company recognizable rarely lives anywhere useful. It's in a deck from 2022, a Confluence page no one's updated since the last rebrand, and the instincts of a few senior people who've been there long enough to just know. When sales reps are generating outreach with AI and new hires are producing content in their first week, that's exactly what gets lost.
+회사를 알아볼 수 있게 만드는 brand knowledge는 보통 편리한 한곳에 있지 않습니다. 2022년 deck, 마지막 rebrand 이후 아무도 업데이트하지 않은 Confluence page, 오래 일한 senior 몇 명의 감각 속에 흩어져 있습니다. Sales rep이 AI로 outreach를 만들고 new hire가 첫 주부터 content를 만들 때, 바로 그 지식이 사라집니다.
 
 Brand Voice transforms scattered brand materials into enforceable AI guardrails. It searches across Confluence, Google Drive, Box, SharePoint, Slack, Gong, and Granola to discover how your company actually communicates — then creates LLM-ready brand guidelines and validates every piece of AI-generated content against them. Claude doesn't just write faster. It writes like you.
 

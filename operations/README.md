@@ -1,6 +1,6 @@
-# Operations Plugin
+# Operations 플러그인
 
-A business operations plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Helps with vendor management, process documentation, change management, capacity planning, compliance tracking, and resource planning. Works with any ops team — standalone with your input, supercharged when you connect your ITSM, project tracker, and other tools.
+Business operations plugin입니다. 주로 Anthropic의 agentic desktop application인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Vendor management, process documentation, change management, capacity planning, compliance tracking, resource planning을 돕습니다. 어떤 ops team에서도 사용할 수 있으며, 입력만으로 standalone 동작하고 ITSM, project tracker 및 다른 tool을 연결하면 더 강력해집니다.
 
 ## Installation
 

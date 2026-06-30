@@ -6,7 +6,7 @@ Claude를 사용자의 역할, 팀, 회사에 맞는 전문가로 바꿔 주는 
 
 Cowork에서는 목표를 정하면 Claude가 완성도 높은 전문 작업물을 만들어 줍니다. 플러그인을 사용하면 한 단계 더 나아가, Claude에게 선호하는 작업 방식, 가져와야 할 도구와 데이터, 중요한 워크플로우 처리 방식, 노출할 slash command를 알려 줄 수 있습니다. 그래서 팀은 더 일관되고 품질 높은 결과를 얻습니다.
 
-각 플러그인은 특정 직무에 필요한 skills, connectors, slash commands, sub-agents를 묶습니다. 기본 상태에서도 해당 역할을 돕기 위한 강한 출발점을 제공하지만, 진짜 가치는 회사의 도구, 용어, 프로세스에 맞게 커스터마이즈할 때 나옵니다. 그렇게 하면 Claude가 처음부터 팀을 위해 만들어진 것처럼 일합니다.
+각 플러그인은 특정 직무에 필요한 스킬, 커넥터, slash command, sub-agent를 묶습니다. 기본 상태에서도 해당 역할을 돕기 위한 강한 출발점을 제공하지만, 진짜 가치는 회사의 도구, 용어, 프로세스에 맞게 커스터마이즈할 때 나옵니다. 그렇게 하면 Claude가 처음부터 팀을 위해 만들어진 것처럼 일합니다.
 
 ## 플러그인 마켓플레이스
 
@@ -24,7 +24,7 @@ Cowork에서는 목표를 정하면 Claude가 완성도 높은 전문 작업물�
 | **[data](./data)** | 데이터셋 query, 시각화, 해석을 지원합니다. SQL 작성, 통계 분석, dashboard 구축, 공유 전 검증을 돕습니다. | Snowflake, Databricks, BigQuery, Definite, Hex, Amplitude, Jira |
 | **[enterprise-search](./enterprise-search)** | email, chat, docs, wiki 전반에서 필요한 정보를 찾습니다. 한 번의 query로 회사 도구 전체를 검색합니다. | Slack, Notion, Guru, Jira, Asana, Microsoft 365 |
 | **[bio-research](./bio-research)** | 문헌 검색, genomics analysis, target prioritization 등 전임상 연구 도구와 데이터베이스를 연결해 초기 생명과학 R&D를 가속합니다. | PubMed, BioRender, bioRxiv, ClinicalTrials.gov, ChEMBL, Synapse, Wiley, Owkin, Open Targets, Benchling |
-| **[cowork-plugin-management](./cowork-plugin-management)** | 새 플러그인을 만들거나 조직의 도구와 워크플로우에 맞게 기존 플러그인을 커스터마이즈합니다. | — |
+| **[cowork-plugin-management](./cowork-plugin-management)** | 새 플러그인을 만들거나 조직의 도구와 워크플로에 맞게 기존 플러그인을 커스터마이즈합니다. | - |
 
 이 플러그인들은 Cowork에서 바로 설치하거나, GitHub에서 전체 컬렉션을 살펴보거나, 직접 새 플러그인을 만드는 출발점으로 사용할 수 있습니다.
 
