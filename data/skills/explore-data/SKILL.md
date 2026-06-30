@@ -1,7 +1,7 @@
 ---
 name: explore-data
 description: 데이터셋의 형태, 품질, 패턴을 이해하기 위해 프로파일하고 탐색합니다. 새 테이블/파일을 처음 볼 때, null 비율와 열 배포 확인, 중복나 의심 값 같은 데이터 품질 이슈 탐지, 분석할 차원과 지표 결정에 사용합니다.
-argument-hint: "<table or file>"
+argument-hint: "<table 또는 file>"
 ---
 
 # /explore-data - Profile and Explore a Dataset

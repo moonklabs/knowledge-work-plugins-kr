@@ -1,7 +1,7 @@
 ---
 name: reconciliation
 description: 총계정원장 balance를 보조원장, bank statement, third-party data와 비교해 계정을 대사합니다. 은행 대사, 총계정원장-보조원장 대사, 회사 간 대사, 대사 항목 식별 및 분류에 사용합니다.
-argument-hint: "<account> [period]"
+argument-hint: "<account> [기간]"
 ---
 
 # Reconciliation

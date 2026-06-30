@@ -3,7 +3,7 @@ name: plan-zoom-integration
 description: >-
   Zoom 통합 아이디어를 아키텍처, 인증, 전달 마일스톤이 포함된 구현 계획으로 바꿉니다. 실용적인 빌드 계획, 단계별 전달 순서, 위험 목록, 다음 단계 추천이 필요할 때
   사용합니다.
-argument-hint: "<what you want to build>"
+argument-hint: "<만들고 싶은 것>"
 user-invocable: false
 ---
 

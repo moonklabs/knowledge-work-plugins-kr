@@ -3,7 +3,7 @@ name: debug-zoom
 description: >-
   실패 지점을 격리하고 적절한 Zoom 참조 스킬로 라우팅해 깨진 Zoom 통합을 디버그합니다. Auth, API, 웹훅, SDK, MCP 동작이 실패하고 우선순위가 있는
   가설 목록과 검증 단계가 필요할 때 사용합니다.
-argument-hint: "<symptoms, error, or failing flow>"
+argument-hint: "<symptom, error 또는 failing flow>"
 ---
 
 # /debug-zoom

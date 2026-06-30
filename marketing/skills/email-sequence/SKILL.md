@@ -1,7 +1,7 @@
 ---
 name: email-sequence
 description: 전체 카피, 타이밍, 분기 로직, 종료 조건, 성과 기준이 포함된 다중 이메일 시퀀스를 설계하고 초안 작성합니다. 온보딩, 리드 육성, 재참여, 복귀 유도, 제품 출시 플로우 작성, A/B 테스트 제안이 포함된 완전한 드립 캠페인, 플로우 다이어그램이 있는 엔드투엔드 시퀀스 매핑에 사용합니다.
-argument-hint: "[sequence type]"
+argument-hint: "[sequence type 또는 sequence 유형]"
 ---
 
 # Email Sequence

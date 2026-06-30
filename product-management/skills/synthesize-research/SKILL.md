@@ -1,7 +1,7 @@
 ---
 name: synthesize-research
 description: 인터뷰, 설문, 피드백의 사용자 리서치를 구조화된 인사이트로 종합합니다. 인터뷰 노트, 설문 응답, 지원 티켓이 많아 의미를 정리해야 하거나, 주제를 추출하고 발견 사항을 빈도/영향으로 순위화하거나, 원시 피드백을 로드맵 추천으로 바꾸고 싶을 때 사용합니다.
-argument-hint: "<research topic or question>"
+argument-hint: "<research topic 또는 question>"
 ---
 
 # Synthesize Research

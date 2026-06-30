@@ -2,7 +2,7 @@
 name: sequence-load
 description: 조건에 맞는 리드를 찾고 Apollo 아웃리치 sequence에 일괄 추가합니다. 보강, 연락처 생성, 중복 제거, 등록을 하나의 흐름으로 처리합니다.
 user-invocable: true
-argument-hint: "[targeting criteria + sequence name]"
+argument-hint: "[targeting criteria + sequence 이름]"
 ---
 
 # Sequence Load

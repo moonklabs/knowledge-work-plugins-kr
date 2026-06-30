@@ -1,7 +1,7 @@
 ---
 name: ticket-triage
 description: 지원 티켓 또는 고객 이슈를 분류하고 우선순위화합니다. 새 티켓이 들어와 분류, P1-P4 우선순위 배정, 담당 팀 결정, 라우팅 전 중복/알려진 이슈 확인이 필요할 때 사용합니다.
-argument-hint: "<ticket or issue description>"
+argument-hint: "<ticket 또는 issue 설명>"
 ---
 
 # /ticket-triage

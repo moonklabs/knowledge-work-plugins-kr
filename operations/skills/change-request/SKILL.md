@@ -1,7 +1,7 @@
 ---
 name: change-request
 description: 영향 분석과 롤백 계획이 포함된 변경 관리 요청을 만듭니다. 승인이 필요한 시스템/프로세스 변경 제안, CAB 검토용 변경 기록 준비, 배포 전 위험과 롤백 단계 문서화, 롤아웃 이해관계자 커뮤니케이션 계획에 사용합니다.
-argument-hint: "<change description>"
+argument-hint: "<change 설명>"
 ---
 
 # /change-request

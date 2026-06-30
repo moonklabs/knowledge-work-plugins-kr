@@ -1,7 +1,7 @@
 ---
 name: campaign-plan
 description: 목표, 대상, 메시징, 채널 전략, 콘텐츠 캘린더, 성공 지표가 포함된 전체 캠페인 브리프를 생성합니다. 제품 출시, 리드 생성 캠페인, 인지도 캠페인 계획, 의존성이 포함된 주차별 콘텐츠 캘린더, marketing 목표를 구조화된 실행 계획으로 변환할 때 사용합니다.
-argument-hint: "<campaign objective or product>"
+argument-hint: "<campaign objective 또는 product>"
 ---
 
 # Campaign Plan

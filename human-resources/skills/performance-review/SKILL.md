@@ -1,7 +1,7 @@
 ---
 name: performance-review
 description: 자기평가, 매니저 템플릿, 캘리브레이션 준비가 포함된 성과 리뷰를 구조화합니다. 리뷰 시즌 시작 시 self-평가 템플릿이 필요하거나, 직속 구성원의 매니저 리뷰 작성, 캘리브레이션용 평가 분포 및 승진 케이스 준비, 모호한 피드백을 specific 행동 example로 바꿀 때 사용합니다.
-argument-hint: "<employee name or review cycle>"
+argument-hint: "<employee 이름 또는 review cycle>"
 ---
 
 # /performance-review

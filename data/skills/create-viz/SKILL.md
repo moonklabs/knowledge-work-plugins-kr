@@ -1,7 +1,7 @@
 ---
 name: create-viz
 description: Python으로 출판 품질의 시각화를 생성합니다. 쿼리 결과나 DataFrame을 차트로 바꾸거나, 추세/비교에 맞는 차트 유형을 선택하거나, 보고서/프레젠테이션용 플롯을 생성하거나, 호버와 확대/축소가 있는 인터랙티브 차트가 필요할 때 사용합니다.
-argument-hint: "<data source> [chart type]"
+argument-hint: "<data source> [chart type 또는 chart 종류]"
 ---
 
 # /create-viz - Create Visualizations

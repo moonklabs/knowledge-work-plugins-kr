@@ -1,7 +1,7 @@
 ---
 name: variance-analysis
 description: 재무 차이를 서술형 설명과 워터폴 분석이 포함된 동인으로 분해합니다. 예산 대비 실적, 기간별 변동, revenue/expense variance 분석, 리더십용 차이 해설 준비에 사용합니다.
-argument-hint: "<line item> <period> vs <comparison>"
+argument-hint: "<line item> <기간> vs <comparison>"
 ---
 
 # Variance Analysis

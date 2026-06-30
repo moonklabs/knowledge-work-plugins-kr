@@ -1,6 +1,6 @@
 ---
 description: PDF에 signature 또는 initials image를 배치합니다
-argument-hint: "[path-or-url] [signature-image-path]"
+argument-hint: "[path 또는 URL] [signature image path]"
 ---
 
 > If you need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).

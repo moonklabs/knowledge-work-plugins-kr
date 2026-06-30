@@ -1,7 +1,7 @@
 ---
 name: research-synthesis
 description: 사용자 조사를 주제, 인사이트, 추천으로 종합합니다. 인터뷰 전사, 설문 결과, 사용성 테스트 노트, 지원 티켓, NPS 답변을 패턴, 사용자 세그먼트, 우선순위화된 다음 단계으로 정제해야 할 때 사용합니다.
-argument-hint: "<research data, transcripts, or survey results>"
+argument-hint: "<research data, transcript 또는 survey result>"
 ---
 
 # /research-synthesis

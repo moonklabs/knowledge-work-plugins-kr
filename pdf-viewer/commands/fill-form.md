@@ -1,6 +1,6 @@
 ---
 description: Live visual feedback과 함께 PDF form field를 interactive하게 채웁니다
-argument-hint: "[path-or-url]"
+argument-hint: "[path 또는 URL]"
 ---
 
 > If you need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).

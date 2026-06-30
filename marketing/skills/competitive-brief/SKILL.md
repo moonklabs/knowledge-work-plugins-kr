@@ -1,7 +1,7 @@
 ---
 name: competitive-brief
 description: 경쟁사를 조사하고 콘텐츠 갭, 기회, 위협가 포함된 포지셔닝/메시징 비교를 생성합니다. 영업 배틀카드 작성, 경쟁사가 claim하지 않은 포지셔닝 갭과 메시징 각도 탐색, 경쟁사 움직임의 영향 평가에 사용합니다.
-argument-hint: "<competitor or market segment>"
+argument-hint: "<competitor 또는 market segment>"
 ---
 
 # Competitive Brief

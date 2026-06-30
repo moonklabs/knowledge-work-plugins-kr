@@ -1,7 +1,7 @@
 ---
 name: legal-response
 description: 설정된 템플릿을 사용해 일반 법무 문의에 대한 답변를 생성하며, 템플릿 답변를 쓰면 안 되는 상황을 위한 내장 에스컬레이션 점검를 포함합니다. 정보주체 요청, 소송 보존 통지, 벤더 법무 질문, business team의 NDA 요청, subpoena에 응답할 때 사용합니다.
-argument-hint: "[inquiry-type]"
+argument-hint: "[inquiry type 또는 문의 유형]"
 ---
 
 # /legal-response -- Generate Response from Templates

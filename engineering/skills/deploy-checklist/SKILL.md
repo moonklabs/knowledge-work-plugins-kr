@@ -1,7 +1,7 @@
 ---
 name: deploy-checklist
 description: 배포 전 검증 체크리스트입니다. 릴리스 배포 직전, 데이터베이스 마이그레이션 또는 기능 플래그가 있는 변경 배포, 프로덕션 전 CI 상태와 승인 확인, 롤백 트리거 사전 문서화에 사용합니다.
-argument-hint: "[service or release name]"
+argument-hint: "[service 또는 release 이름]"
 ---
 
 # /deploy-checklist

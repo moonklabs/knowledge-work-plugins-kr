@@ -1,7 +1,7 @@
 ---
 name: debug
 description: 구조화된 디버깅 세션입니다. 재현, 격리, 진단, 수정을 진행합니다. 오류 메시지나 스택 트레이스, "this works in staging but not prod", "something broke after the deploy" 또는 동작이 expected와 다르고 cause가 obvious하지 않을 때 트리거됩니다.
-argument-hint: "<error message or problem description>"
+argument-hint: "<error message 또는 problem 설명>"
 ---
 
 # /debug

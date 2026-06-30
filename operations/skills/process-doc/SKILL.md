@@ -1,7 +1,7 @@
 ---
 name: process-doc
 description: 비즈니스 프로세스를 문서화합니다. 흐름도, RACI, SOP를 포함합니다. 누군가의 머릿속에만 있는 처리를 공식화하거나, 누가 무엇을 소유하는지 명확히 하는 RACI를 만들거나, 인수인계/감사용 SOP를 작성하거나, 실제 work가 처리되는 예외과 엣지 케이스를 포착할 때 사용합니다.
-argument-hint: "<process name or description>"
+argument-hint: "<process 이름 또는 설명>"
 ---
 
 # /process-doc

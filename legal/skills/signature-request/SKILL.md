@@ -1,7 +1,7 @@
 ---
 name: signature-request
 description: 전자서명를 위해 문서를 준비하고 라우팅합니다. 서명 전 체크리스트를 실행하고 서명 순서를 설정한 뒤 체결으로 보냅니다. 계약가 최종 확정되어 signature 준비가 되었거나, 발송 전 법인명, 첨부자료, 서명란을 검증하거나, 순차/병렬el signer가 있는 envelope을 설정할 때 사용합니다.
-argument-hint: "<document or contract to send>"
+argument-hint: "<보낼 document 또는 contract>"
 ---
 
 # /signature-request -- E-Signature Routing

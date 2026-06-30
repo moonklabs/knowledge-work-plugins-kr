@@ -1,7 +1,7 @@
 ---
 name: financial-statements
 description: 기간별 비교와 차이 분석이 포함된 재무제표(손익계산서, 재무상태표, 현금흐름)를 생성합니다. 월간/분기 손익 준비, 장부 마감 중 중요 차이 표시, 실적 대비 예산 비교, 리더십 검토용 재무 요약 작성, GAAP 프레젠테이션 요구사항과 period-end adjustment 확인에 사용합니다.
-argument-hint: "<frequency> <period>"
+argument-hint: "<frequency> <기간>"
 ---
 
 # /financial-statements

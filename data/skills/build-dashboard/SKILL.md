@@ -1,7 +1,7 @@
 ---
 name: build-dashboard
 description: 차트, 필터, 표이 있는 인터랙티브 HTML 대시보드를 만듭니다. KPI 카드가 있는 임원용 개요, 쿼리 결과를 공유 가능한 독립형 보고서로 변환, 팀 모니터링 스냅샷 작성, 브라우저에서 열 수 있는 하나의 파일에 여러 차트와 filter가 필요할 때 사용합니다.
-argument-hint: "<description> [data source]"
+argument-hint: "<설명> [data source]"
 ---
 
 # /build-dashboard - Build Interactive Dashboards

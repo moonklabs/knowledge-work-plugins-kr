@@ -1,7 +1,7 @@
 ---
 name: people-report
 description: 인원수, 이탈률, 다양성, 조직 건강 보고서를 생성합니다. 리더십용 인원수 스냅샷, team별 이직 추세 분석, 다양성 대표성 지표 준비, 조직 전반의 관리 범위과 이탈 위험 평가에 사용합니다.
-argument-hint: "<report type — headcount, attrition, diversity, org health>"
+argument-hint: "<report type — headcount, attrition, diversity, org health 등>"
 ---
 
 # /people-report

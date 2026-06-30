@@ -3,7 +3,7 @@ name: kb-article
 description: >-
   해결된 이슈 또는 공통 질문에서 knowledge base article 초안을 작성합니다. 티켓 해결 내용을 셀프서비스용으로 문서화할 가치가 있거나, 같은 질문이
   반복되거나, 우회책을 게시해야 하거나, 알려진 이슈를 고객에게 전달해야 할 때 사용합니다.
-argument-hint: "<resolved issue or ticket>"
+argument-hint: "<resolved issue 또는 ticket>"
 ---
 
 # /kb-article

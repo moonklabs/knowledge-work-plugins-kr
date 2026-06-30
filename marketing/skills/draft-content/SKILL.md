@@ -1,7 +1,7 @@
 ---
 name: draft-content
 description: 채널별 서식과 SEO 추천을 포함해 블로그 글, 소셜 미디어, 이메일 뉴스레터, 랜딩 페이지, 보도자료, 사례 연구 초안을 작성합니다. 마케팅 콘텐츠 작성, 헤드라인 또는 제목 옵션, 특정 플랫폼/대상/브랜드 보이스에 맞춘 메시지 조정에 사용합니다.
-argument-hint: "<content type and topic>"
+argument-hint: "<content type 및 topic>"
 ---
 
 # Draft Content

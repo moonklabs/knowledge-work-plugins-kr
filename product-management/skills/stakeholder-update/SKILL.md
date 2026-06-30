@@ -1,7 +1,7 @@
 ---
 name: stakeholder-update
 description: 대상과 주기에 맞춘 이해관계자 업데이트를 생성합니다. 리더십용 주간/월간 상태 작성, 출시 공지, 위험/차단 요인 에스컬레이션, 같은 진행 상황을 임원 요약, 엔지니어링 상세, 고객용 버전으로 변환할 때 사용합니다.
-argument-hint: "<update type and audience>"
+argument-hint: "<update type 및 audience>"
 ---
 
 # Stakeholder Update

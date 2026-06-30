@@ -1,7 +1,7 @@
 ---
 name: design-system
 description: 디자인 시스템을 감사, 문서화, 확장합니다. 컴포넌트 전반의 명명 불일치나 하드코딩 값 확인, 구성 요소 variant/state/접근성 노트 문서화, 기존 시스템에 맞는 새 패턴 설계에 사용합니다.
-argument-hint: "[audit | document | extend] <component or system>"
+argument-hint: "[audit | document | extend] <component 또는 system>"
 ---
 
 # /design-system

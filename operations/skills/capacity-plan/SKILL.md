@@ -1,7 +1,7 @@
 ---
 name: capacity-plan
 description: 리소스 수용량을 계획합니다. 업무량 분석과 활용률 예측을 포함합니다. 분기 계획 진입, 팀이 과배정되어 숫자가 필요할 때, 채용 또는 우선순위 하향 결정, 다가오는 프로젝트가 현재 인력으로 가능한지 스트레스 테스트할 때 사용합니다.
-argument-hint: "<team or project scope>"
+argument-hint: "<team 또는 project scope>"
 ---
 
 # /capacity-plan

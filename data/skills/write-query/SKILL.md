@@ -1,7 +1,7 @@
 ---
 name: write-query
 description: 사용자의 방언에 맞춰 모범 사례를 적용한 최적화된 SQL을 작성합니다. 자연어 데이터 요구사항을 SQL로 바꾸거나, 조인과 집계가 있는 다중 CTE 쿼리를 만들거나, 대형 파티션 테이블 대상 쿼리를 최적화하거나, Snowflake, BigQuery, Postgres 등의 방언별 구문이 필요할 때 사용합니다.
-argument-hint: "<description of what data you need>"
+argument-hint: "<필요한 data 설명>"
 ---
 
 # /write-query - Write Optimized SQL

@@ -1,7 +1,7 @@
 ---
 name: design-handoff
 description: 디자인에서 개발자 핸드오프 명세를 생성합니다. 디자인이 엔지니어링 준비 상태일 때 레이아웃, 디자인 토큰, 구성 요소 prop, 상호작용 상태, 반응형 breakpoint, 엣지 케이스, 애니메이션 상세를 다루는 명세서가 필요할 때 사용합니다.
-argument-hint: "<Figma URL or design description>"
+argument-hint: "<Figma URL 또는 design 설명>"
 ---
 
 # /design-handoff

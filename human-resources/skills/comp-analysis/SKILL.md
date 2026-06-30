@@ -1,7 +1,7 @@
 ---
 name: comp-analysis
 description: 보상을 분석합니다. 벤치마킹, 밴드 배치, 지분 보상 모델링을 포함합니다. "what should we pay a [role]", "is this offer competitive", "model this equity grant" 또는 comp data를 upload해 이상치와 유지 위험을 찾을 때 트리거됩니다.
-argument-hint: "<role, level, or dataset>"
+argument-hint: "<role, level 또는 dataset>"
 ---
 
 # /comp-analysis

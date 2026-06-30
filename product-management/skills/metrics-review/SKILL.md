@@ -1,7 +1,7 @@
 ---
 name: metrics-review
 description: 추세 분석과 실행 가능한 인사이트로 제품 지표를 검토하고 분석합니다. 주간/월간/분기 지표 검토, 갑작스러운 급등/급락 조사, 목표 대비 성과 비교, 원시 숫자를 추천 조치가 포함된 스코어카드로 변환할 때 사용합니다.
-argument-hint: "<time period or metric focus>"
+argument-hint: "<기간 또는 metric focus>"
 ---
 
 # Metrics Review

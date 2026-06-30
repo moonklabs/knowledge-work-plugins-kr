@@ -1,6 +1,6 @@
 ---
 description: Interactive viewer에서 PDF를 엽니다
-argument-hint: "[path-or-url]"
+argument-hint: "[path 또는 URL]"
 ---
 
 > If you need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).

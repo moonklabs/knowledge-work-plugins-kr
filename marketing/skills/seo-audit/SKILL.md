@@ -1,7 +1,7 @@
 ---
 name: seo-audit
 description: 종합 SEO 감사를 실행합니다. 키워드 리서치, 온페이지 분석, 콘텐츠 갭, 기술 점검, 경쟁사 비교를 포함합니다. 사이트 SEO 상태 평가, 경쟁사가 가진 키워드 기회/콘텐츠 갭 탐색, 빠른 개선 과제와 전략 투자로 나눈 우선순위화된 실행 계획이 필요할 때 사용합니다.
-argument-hint: "<url or topic> [audit type]"
+argument-hint: "<url 또는 topic> [audit type]"
 ---
 
 # /seo-audit

@@ -1,7 +1,7 @@
 ---
 name: policy-lookup
 description: 회사 정책를 찾아 쉬운 말로 설명합니다. "what's our PTO policy", "can I work remotely from another country", "how do expenses work" 또는 복리후생, 출장, 휴가, 핸드북 규칙에 대한 쉬운 말로 된 질문에서 트리거됩니다.
-argument-hint: "<policy topic — PTO, benefits, travel, expenses, etc.>"
+argument-hint: "<policy topic — PTO, benefits, travel, expenses 등>"
 ---
 
 # /policy-lookup

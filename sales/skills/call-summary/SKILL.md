@@ -1,7 +1,7 @@
 ---
 name: call-summary
 description: 통화 메모 또는 전사를 처리합니다. 액션 아이템을 추출하고 후속 조치 이메일 초안을 작성하며 내부 요약을 생성합니다. 디스커버리, 데모, 협상 통화 후 거친 메모/전사를 붙여넣거나, 고객 후속 조치 초안 작성, CRM 활동 기록, 이의 제기와 다음 단계 포착에 사용합니다.
-argument-hint: "<call notes or transcript>"
+argument-hint: "<call note 또는 transcript>"
 ---
 
 # /call-summary

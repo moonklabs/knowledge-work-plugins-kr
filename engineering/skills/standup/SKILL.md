@@ -1,7 +1,7 @@
 ---
 name: standup
 description: 최근 활동에서 스탠드업 업데이트를 생성합니다. 일일 스탠드업 준비, yesterday's 커밋/PR/티켓 이동 요약, 어제/오늘/차단 요인 형식 정리, 거친 메모를 공유 가능한 업데이트로 구조화할 때 사용합니다.
-argument-hint: "[yesterday | today | blockers]"
+argument-hint: "[yesterday | today | blockers 중 하나]"
 ---
 
 # /standup

@@ -1,7 +1,7 @@
 ---
 name: status-report
 description: KPI, 위험, 액션 아이템이 포함된 상태 보고서를 생성합니다. 리더십용 weekly/monthly 업데이트 작성, 녹색/노란색/빨간색 상태로 프로젝트 건전성 요약, 이해관계자 주의가 필요한 위험과 결정 지점, 프로젝트 추적기 활동을 읽기 쉬운 내러티브로 변환할 때 사용합니다.
-argument-hint: "[weekly | monthly | quarterly] [project or team]"
+argument-hint: "[weekly | monthly | quarterly] [project 또는 team]"
 ---
 
 # /status-report

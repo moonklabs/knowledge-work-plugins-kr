@@ -1,6 +1,6 @@
 ---
 description: PDF를 collaborative하게 annotate합니다. Markup을 제안하고 함께 review하며 iterate합니다
-argument-hint: "[path-or-url]"
+argument-hint: "[path 또는 URL]"
 ---
 
 > If you need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).

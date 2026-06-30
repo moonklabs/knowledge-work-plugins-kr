@@ -1,7 +1,7 @@
 ---
 name: onboarding
 description: 신규 입사자를 위한 onboarding checklist와 첫 주 계획을 생성합니다. 입사일이 다가오거나, 입사 전 작업 목록(계정, 장비, 버디)을 만들거나, 1일차/1주차 일정을 잡거나, 새 팀원의 30/60/90일 목표를 설정할 때 사용합니다.
-argument-hint: "<new hire name and role>"
+argument-hint: "<new hire 이름 및 role>"
 ---
 
 # /onboarding

@@ -5,7 +5,7 @@ description: >-
   UX 카피를 작성하거나 검토합니다. 마이크로카피, 오류 메시지, 빈 상태, CTA를 다룹니다. "write copy for", "what should
   this button say?", "review this error message" 또는 CTA 명명, 확인 대화상자 문구, 빈 상태 작성,
   온보딩 문구 작성 시 트리거됩니다.
-argument-hint: "<context or copy to review>"
+argument-hint: "<검토할 context 또는 copy>"
 ---
 
 # /ux-copy

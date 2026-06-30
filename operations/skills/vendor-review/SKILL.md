@@ -1,7 +1,7 @@
 ---
 name: vendor-review
 description: 벤더를 평가합니다. 비용 분석, 위험 평가, 추천을 포함합니다. 신규 벤더 제안 검토, 계약 갱신/교체 결정, 두 벤더 비교, 구매 승인 전 TCO 분석과 협상 포인트 작성에 사용합니다.
-argument-hint: "<vendor name or proposal>"
+argument-hint: "<vendor 이름 또는 proposal>"
 ---
 
 # /vendor-review
