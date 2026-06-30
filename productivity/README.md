@@ -10,11 +10,11 @@ claude plugins add knowledge-work-plugins/productivity
 
 ## 주요 기능
 
-This plugin gives Claude a persistent understanding of your work:
+이 plugin은 Claude가 사용자의 일을 지속적으로 이해하도록 돕습니다.
 
-- **Task management** — A markdown task list (`TASKS.md`) that Claude reads, writes, and executes against. Add tasks naturally, and Claude tracks status, triages stale items, and syncs with external tools.
-- **Workplace memory** — A two-tier memory system that teaches Claude your shorthand, people, projects, and terminology. Say "ask todd to do the PSR for oracle" and Claude knows exactly who, what, and which deal.
-- **Visual dashboard** — A local HTML file that gives you a board view of your tasks and a live view of what Claude knows about your workplace. Edit from the board or the file — they stay in sync.
+- **Task management** — Claude가 읽고 쓰며 실행 기준으로 삼는 markdown task list(`TASKS.md`)입니다. 자연스럽게 task를 추가하면 Claude가 status를 추적하고 stale item을 triage하며 external tool과 sync합니다.
+- **Workplace memory** — Shorthand, people, project, terminology를 Claude에게 가르치는 two-tier memory system입니다. "Todd에게 Oracle PSR 해달라고 해"라고 말하면 Claude가 누구에게 무엇을 어떤 deal에 대해 요청하는지 이해합니다.
+- **Visual dashboard** — Task board view와 Claude가 workplace에 대해 아는 내용을 보여주는 local HTML file입니다. Board나 file 어느 쪽에서 수정해도 sync됩니다.
 
 ## 명령
 
@@ -33,7 +33,7 @@ This plugin gives Claude a persistent understanding of your work:
 
 ## 예시 워크플로
 
-### Getting Started
+### 시작하기
 
 ```
 You: /start
@@ -43,7 +43,7 @@ Claude: [Creates TASKS.md, CLAUDE.md, memory/ directory, and dashboard.html]
         [Asks about your role, team, and current priorities to seed memory]
 ```
 
-### Adding Tasks Naturally
+### 자연어로 task 추가
 
 ```
 You: I need to review the budget proposal for Sarah by Friday,
@@ -54,7 +54,7 @@ Claude: [Adds all three tasks to TASKS.md with context]
         [Dashboard updates automatically]
 ```
 
-### Morning Sync
+### Morning sync
 
 ```
 You: /update --comprehensive
@@ -66,9 +66,9 @@ Claude: [Scans email, calendar, and chat for new action items]
         [Updates stale tasks and fills memory gaps]
 ```
 
-### Workplace Shorthand
+### Workplace shorthand
 
-Once memory is populated, Claude decodes your shorthand instantly:
+Memory가 채워지면 Claude가 shorthand를 즉시 해석합니다.
 
 ```
 You: ask todd to do the PSR for oracle
@@ -77,20 +77,20 @@ Claude: "Ask Todd Martinez (Finance lead) to prepare the Pipeline
          Status Report for the Oracle Systems deal ($2.3M, closing Q2)"
 ```
 
-No clarifying questions. No round trips.
+추가 질문이나 왕복 없이 처리합니다.
 
-## Data Sources
+## Data source
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
+> 익숙하지 않은 placeholder가 보이거나 연결된 tool을 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
-Connect your communication and project management tools for the best experience. Without them, manage tasks and memory manually.
+가장 좋은 경험을 위해 communication 및 project management tool을 연결하세요. 연결하지 않으면 task와 memory를 수동으로 관리합니다.
 
-**Included MCP connections:**
+**포함된 MCP connection:**
 - Chat (Slack) for team context and message scanning
 - Email and calendar (Microsoft 365) for action item discovery
 - Knowledge base (Notion) for reference documents
 - Project tracker (Asana, Linear, Atlassian, monday.com, ClickUp) for task syncing
 - Office suite (Microsoft 365) for documents
 
-**Additional options:**
-- See [CONNECTORS.md](CONNECTORS.md) for alternative tools in each category
+**추가 option:**
+- Category별 alternative tool은 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.

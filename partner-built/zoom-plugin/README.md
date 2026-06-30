@@ -6,7 +6,7 @@ Zoom integration을 계획하고 구축하며 debugging하기 위한 Claude plug
 
 이 directory를 local Claude plugin으로 설치합니다. Plugin manifest는 [`.claude-plugin/plugin.json`](.claude-plugin/plugin.json)에 있고, bundled Zoom MCP connector는 [`.mcp.json`](.mcp.json)에 정의되어 있습니다.
 
-Before using the bundled MCP servers, export bearer tokens for the Zoom surfaces you want Claude to use:
+Bundled MCP server를 사용하기 전에 Claude가 사용할 Zoom surface용 bearer token을 export하세요.
 
 ```bash
 export ZOOM_MCP_ACCESS_TOKEN="your_zoom_user_oauth_access_token"
@@ -14,31 +14,31 @@ export ZOOM_DOCS_MCP_ACCESS_TOKEN="your_zoom_docs_mcp_access_token"
 export ZOOM_WHITEBOARD_MCP_ACCESS_TOKEN="your_zoom_user_oauth_access_token"
 ```
 
-## Slash Workflows
+## Slash workflow
 
-Explicit slash workflows implemented as skills under `skills/`:
+`skills/` 아래 skill로 구현된 explicit slash workflow입니다.
 
-| Workflow | Description |
+| Workflow | 설명 |
 |---|---|
-| [`/start`](skills/start/SKILL.md) | Start with a Zoom app idea and get routed to the right product and build path |
-| [`/setup-zoom-oauth`](skills/setup-zoom-oauth/SKILL.md) | Choose the auth model, scopes, and redirect flow for a Zoom app |
-| [`/build-zoom-meeting-app`](skills/build-zoom-meeting-app/SKILL.md) | Build an embedded or managed Zoom meeting flow |
-| [`/build-zoom-bot`](skills/build-zoom-bot/SKILL.md) | Build bots, recorders, and real-time meeting processors |
-| [`/debug-zoom`](skills/debug-zoom/SKILL.md) | Triage a broken Zoom integration and isolate the failing layer |
-| [`/setup-zoom-mcp`](skills/setup-zoom-mcp/SKILL.md) | Decide when Zoom MCP fits and set up a safe Claude workflow |
-| [`/build-zoom-rest-api-app`](skills/rest-api/SKILL.md) | Route into Zoom REST endpoints, scopes, and resource patterns |
-| [`/build-zoom-meeting-sdk-app`](skills/meeting-sdk/SKILL.md) | Route into embedded Zoom meeting implementation details |
-| [`/build-zoom-video-sdk-app`](skills/video-sdk/SKILL.md) | Route into custom video-session implementation details |
-| [`/setup-zoom-webhooks`](skills/webhooks/SKILL.md) | Set up Zoom webhook subscriptions, signature verification, and handlers |
-| [`/setup-zoom-websockets`](skills/websockets/SKILL.md) | Set up Zoom WebSocket event delivery when it fits better than webhooks |
-| [`/build-zoom-team-chat-app`](skills/team-chat/SKILL.md) | Build Team Chat user or chatbot integrations |
-| [`/build-zoom-phone-integration`](skills/phone/SKILL.md) | Build Zoom Phone integrations around Smart Embed, APIs, and events |
-| [`/build-zoom-contact-center-app`](skills/contact-center/SKILL.md) | Build Contact Center app, web, or native integrations |
-| [`/build-zoom-virtual-agent`](skills/virtual-agent/SKILL.md) | Build Virtual Agent web or mobile wrapper integrations |
+| [`/start`](skills/start/SKILL.md) | Zoom app idea에서 시작해 적절한 product와 build path로 routing합니다 |
+| [`/setup-zoom-oauth`](skills/setup-zoom-oauth/SKILL.md) | Zoom app용 auth model, scope, redirect flow를 선택합니다 |
+| [`/build-zoom-meeting-app`](skills/build-zoom-meeting-app/SKILL.md) | Embedded 또는 managed Zoom meeting flow를 구축합니다 |
+| [`/build-zoom-bot`](skills/build-zoom-bot/SKILL.md) | Bot, recorder, real-time meeting processor를 구축합니다 |
+| [`/debug-zoom`](skills/debug-zoom/SKILL.md) | Broken Zoom integration을 triage하고 failing layer를 격리합니다 |
+| [`/setup-zoom-mcp`](skills/setup-zoom-mcp/SKILL.md) | Zoom MCP가 적합한 시점을 판단하고 안전한 Claude workflow를 설정합니다 |
+| [`/build-zoom-rest-api-app`](skills/rest-api/SKILL.md) | Zoom REST endpoint, scope, resource pattern으로 routing합니다 |
+| [`/build-zoom-meeting-sdk-app`](skills/meeting-sdk/SKILL.md) | Embedded Zoom meeting implementation detail로 routing합니다 |
+| [`/build-zoom-video-sdk-app`](skills/video-sdk/SKILL.md) | Custom video-session implementation detail로 routing합니다 |
+| [`/setup-zoom-webhooks`](skills/webhooks/SKILL.md) | Zoom webhook subscription, signature verification, handler를 설정합니다 |
+| [`/setup-zoom-websockets`](skills/websockets/SKILL.md) | Webhook보다 적합할 때 Zoom WebSocket event delivery를 설정합니다 |
+| [`/build-zoom-team-chat-app`](skills/team-chat/SKILL.md) | Team Chat user 또는 chatbot integration을 구축합니다 |
+| [`/build-zoom-phone-integration`](skills/phone/SKILL.md) | Smart Embed, API, event 기반 Zoom Phone integration을 구축합니다 |
+| [`/build-zoom-contact-center-app`](skills/contact-center/SKILL.md) | Contact Center app, web, native integration을 구축합니다 |
+| [`/build-zoom-virtual-agent`](skills/virtual-agent/SKILL.md) | Virtual Agent web 또는 mobile wrapper integration을 구축합니다 |
 
-## Internal Routing Skills
+## 내부 routing skill
 
-These remain in the plugin as automatic routing helpers, but they are no longer part of the public slash-command surface:
+이 항목들은 automatic routing helper로 plugin에 남아 있지만 public slash-command surface에는 포함되지 않습니다.
 
 - [`start`](skills/start/SKILL.md)
 - [`plan-zoom-product`](skills/plan-zoom-product/SKILL.md)
@@ -47,9 +47,9 @@ These remain in the plugin as automatic routing helpers, but they are no longer 
 - [`design-mcp-workflow`](skills/design-mcp-workflow/SKILL.md)
 - [`debug-zoom-integration`](skills/debug-zoom-integration/SKILL.md)
 
-## Deep References
+## Deep reference
 
-The plugin also keeps the original Zoom product-specific reference library under `skills/`. These are supporting references, not the primary entry surface:
+Plugin은 original Zoom product-specific reference library도 `skills/` 아래에 유지합니다. 이는 primary entry surface가 아니라 supporting reference입니다.
 
 - [`skills/general/`](skills/general/)
 - [`skills/rest-api/`](skills/rest-api/)
@@ -62,39 +62,39 @@ The plugin also keeps the original Zoom product-specific reference library under
 
 ## 예시 워크플로
 
-### Starting from a Zoom app idea
+### Zoom app idea에서 시작
 
 ```text
 /start Build an internal meeting assistant that joins calls, extracts action items, and stores summaries
 ```
 
-### Planning a new app
+### 새 app 계획
 
 ```text
 /start Build a React app that lets customers schedule and join Zoom meetings from our product
 ```
 
-### Debugging a broken webhook
+### Broken webhook debugging
 
 ```text
 /debug-zoom My Zoom webhook signature verification fails in production but not locally
 ```
 
-### Designing an MCP flow
+### MCP flow 설계
 
 ```text
 /setup-zoom-mcp I want Claude to search meetings, pull recording resources, and create follow-up docs
 ```
 
-## Connectors
+## Connector
 
-See [CONNECTORS.md](CONNECTORS.md). The plugin works standalone from the bundled skills, and gets supercharged when Claude can use the bundled Zoom MCP servers from [`.mcp.json`](.mcp.json).
+[CONNECTORS.md](CONNECTORS.md)를 참고하세요. Plugin은 bundled skill만으로 standalone 동작하며, Claude가 [`.mcp.json`](.mcp.json)의 bundled Zoom MCP server를 사용할 수 있으면 더 강력해집니다.
 
-## Cross-Platform Notes
+## Cross-platform notes
 
-This repo is packaged first as a Claude plugin, but it also includes [AGENTS.md](AGENTS.md) for agent ecosystems that use a repo-level discovery file. The reusable core remains the `skills/` tree and its `SKILL.md` files.
+이 repo는 우선 Claude plugin으로 package되어 있지만, repo-level discovery file을 사용하는 agent ecosystem을 위해 [AGENTS.md](AGENTS.md)도 포함합니다. Reusable core는 `skills/` tree와 그 안의 `SKILL.md` files입니다.
 
-## Structure
+## 구조
 
 ```text
 Zoom Plugin/
@@ -117,6 +117,6 @@ Zoom Plugin/
 └── README.md
 ```
 
-## License
+## 라이선스
 
 MIT

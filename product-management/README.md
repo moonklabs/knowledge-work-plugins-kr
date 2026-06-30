@@ -10,15 +10,15 @@ claude plugins add knowledge-work-plugins/product-management
 
 ## 주요 기능
 
-This plugin gives you an AI-powered product management partner that can help with:
+이 plugin은 다음을 도와주는 AI-powered product management partner를 제공합니다.
 
-- **Feature Specs & PRDs** — Generate structured product requirements documents from a problem statement or feature idea. Includes user stories, requirements prioritization, success metrics, and scope management.
-- **Roadmap Planning** — Create, update, and reprioritize your product roadmap. Supports Now/Next/Later, quarterly themes, and OKR-aligned formats with dependency mapping.
-- **Stakeholder Updates** — Generate status updates tailored to your audience (executives, engineering, customers). Pulls context from connected tools to save you the weekly update grind.
-- **User Research Synthesis** — Turn interview notes, survey data, and support tickets into structured insights. Identifies themes, builds personas, and surfaces opportunity areas with supporting evidence.
-- **Competitive Analysis** — Research competitors and generate briefs with feature comparisons, positioning analysis, and strategic implications.
-- **Metrics Review** — Analyze product metrics, identify trends, compare against targets, and surface actionable insights.
-- **Product Brainstorming** — Explore problem spaces, generate ideas, and stress-test product thinking with a sharp sparring partner. Supports divergent ideation, assumption testing, and strategy exploration using frameworks like How Might We, Jobs-to-be-Done, First Principles, and Opportunity Solution Trees.
+- **Feature Specs & PRDs** — Problem statement 또는 feature idea에서 structured PRD를 생성합니다. User story, requirement prioritization, success metric, scope management를 포함합니다.
+- **Roadmap Planning** — Product roadmap을 create, update, reprioritize합니다. Now/Next/Later, quarterly theme, OKR-aligned format, dependency mapping을 지원합니다.
+- **Stakeholder Updates** — Executive, engineering, customer 등 audience에 맞춘 status update를 생성합니다. Connected tool에서 context를 가져와 weekly update 부담을 줄입니다.
+- **User Research Synthesis** — Interview note, survey data, support ticket을 structured insight로 바꿉니다. Theme을 식별하고 persona를 만들며 supporting evidence와 함께 opportunity area를 드러냅니다.
+- **Competitive Analysis** — Competitor를 조사하고 feature comparison, positioning analysis, strategic implication이 포함된 brief를 생성합니다.
+- **Metrics Review** — Product metric을 분석하고 trend를 식별하며 target과 비교해 actionable insight를 제공합니다.
+- **Product Brainstorming** — Sharp sparring partner와 problem space를 탐색하고 idea를 생성하며 product thinking을 stress-test합니다. How Might We, Jobs-to-be-Done, First Principles, Opportunity Solution Trees 같은 framework를 활용합니다.
 
 ## 명령
 
@@ -46,65 +46,65 @@ This plugin gives you an AI-powered product management partner that can help wit
 
 ## 예시 워크플로
 
-### Writing a PRD
+### PRD 작성
 
 ```
 You: /write-spec
-Claude: What feature or problem are you speccing out?
-You: We need to add SSO support for enterprise customers
-Claude: [Asks about target users, constraints, success metrics]
-Claude: [Generates full PRD with problem statement, user stories, requirements, success metrics, open questions]
+Claude: 어떤 feature 또는 problem을 spec으로 만들까요?
+You: Enterprise customer를 위해 SSO support를 추가해야 해
+Claude: [Target user, constraint, success metric을 질문합니다]
+Claude: [Problem statement, user story, requirement, success metric, open question이 포함된 full PRD를 생성합니다]
 ```
 
-### Preparing a Stakeholder Update
+### Stakeholder update 준비
 
 ```
 You: /stakeholder-update
-Claude: What type of update? (weekly, monthly, launch, ad-hoc)
-You: Weekly update for the exec team
-Claude: [Pulls context from project management tool, chat, and docs]
-Claude: [Generates executive summary with progress, decisions, risks, and next milestones]
+Claude: 어떤 update인가요? (weekly, monthly, launch, ad-hoc)
+You: Exec team용 weekly update
+Claude: [Project management tool, chat, docs에서 context를 가져옵니다]
+Claude: [Progress, decision, risk, next milestone이 포함된 executive summary를 생성합니다]
 ```
 
-### Synthesizing User Research
+### User research 종합
 
 ```
 You: /synthesize-research
-Claude: What research do you want to synthesize? You can paste interview notes, upload files, or I can pull from connected sources.
-You: [Pastes 8 interview transcripts]
-Claude: [Identifies themes, patterns, and insights across interviews]
-Claude: [Generates synthesis with key findings, personas, opportunity areas, and evidence]
+Claude: 어떤 research를 종합할까요? Interview note를 paste하거나 file을 upload하거나 connected source에서 가져올 수 있습니다.
+You: [8개 interview transcript를 붙여넣습니다]
+Claude: [Interview 전반의 theme, pattern, insight를 식별합니다]
+Claude: [Key finding, persona, opportunity area, evidence가 포함된 synthesis를 생성합니다]
 ```
 
-### Brainstorming a Product Idea
+### Product idea brainstorming
 
 ```
-You: /brainstorm Should we add AI-powered search to our product?
-Claude: Before we jump to AI search — what problem are your users hitting with search today?
-You: They can't find things. Support tickets about "can't find X" are our #2 category.
-Claude: That's a discovery problem, not necessarily a search technology problem. Let me push on this...
-Claude: [Explores whether the issue is search quality, information architecture, or content discoverability]
-Claude: [Generates 5 distinct approaches ranging from better taxonomy to AI search to guided navigation]
-Claude: [Challenges assumptions, suggests cheapest experiment to test the riskiest one]
+You: /brainstorm 우리 product에 AI-powered search를 추가해야 할까?
+Claude: AI search로 바로 가기 전에, 사용자가 지금 search에서 겪는 문제는 무엇인가요?
+You: 원하는 걸 못 찾아. "X를 못 찾겠다"는 support ticket이 두 번째로 많아.
+Claude: 이건 search technology 문제가 아니라 discovery problem일 수도 있습니다. 조금 더 파고들어볼게요...
+Claude: [Issue가 search quality, information architecture, content discoverability 중 어디에 있는지 탐색합니다]
+Claude: [Better taxonomy부터 AI search, guided navigation까지 5가지 접근을 생성합니다]
+Claude: [Assumption에 challenge하고 가장 risky한 가정을 검증할 cheapest experiment를 제안합니다]
 ```
 
-### Competitive Analysis
+### Competitive analysis
 
 ```
 You: /competitive-brief
-Claude: Which competitor(s) or feature area do you want to analyze?
-You: Compare our onboarding flow to [competitor A] and [competitor B]
-Claude: [Researches competitor onboarding approaches]
-Claude: [Generates brief with feature comparison, strengths/weaknesses, and strategic implications]
+Claude: 어떤 competitor 또는 feature area를 분석할까요?
+You: 우리 onboarding flow를 [competitor A], [competitor B]와 비교해줘
+Claude: [Competitor onboarding approach를 조사합니다]
+Claude: [Feature comparison, strength/weakness, strategic implication이 포함된 brief를 생성합니다]
 ```
 
-## Data Sources
+## Data source
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
+> 익숙하지 않은 placeholder가 보이거나 연결된 tool을 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
-Connect your project management and communication tools for the best experience. Without them, provide context manually.
+가장 좋은 경험을 위해 project management 및 communication tool을 연결하세요. 연결하지 않았다면 context를 직접 제공하면 됩니다.
 
-**Included MCP connections:**
+**포함된 MCP connection:**
 - Chat (Slack) for team context and stakeholder threads
 - Project tracker (Linear, Asana, monday.com, ClickUp, Atlassian) for roadmap integration, ticket context, and status tracking
 - Knowledge base (Notion) for existing specs, research, and meeting notes
@@ -113,5 +113,5 @@ Connect your project management and communication tools for the best experience.
 - User feedback (Intercom) for support tickets, feature requests, and user conversations
 - Meeting transcription (Fireflies) for meeting notes and discussion context
 
-**Additional options:**
-- See [CONNECTORS.md](CONNECTORS.md) for alternative tools in each category
+**추가 option:**
+- Category별 alternative tool은 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
