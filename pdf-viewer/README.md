@@ -2,56 +2,47 @@
 
 Live interactive viewer에서 PDF를 보고, annotate하고, sign합니다. Contract를 mark up하고,
 visual feedback으로 form을 채우고, approval stamp를 찍고,
-signatures — then download the annotated copy.
+signature를 배치한 뒤 annotated copy를 download합니다.
 
 ## 주요 기능
 
-- **Open PDFs** from local files or academic sources (arXiv, bioRxiv, etc.)
-- **Annotate collaboratively** — Claude proposes highlights, notes, and
-  stamps section by section; you review each batch in the viewer
-- **Fill forms** — guided field-by-field completion with live preview
-- **Sign documents** — place signature/initials images on the page
-- **Stamp approvals** — APPROVED, DRAFT, CONFIDENTIAL, or any custom label
-- **Download** — export the annotated PDF from the viewer toolbar
+- **PDF 열기** — local file 또는 academic source(arXiv, bioRxiv 등)에서 PDF를 엽니다
+- **Collaborative annotation** — Claude가 highlight, note, stamp를 section별로 제안하고, 사용자가 viewer에서 batch마다 review합니다
+- **Form 작성** — live preview와 함께 field-by-field로 안내하며 작성합니다
+- **Document sign** — page에 signature 또는 initials image를 배치합니다
+- **Approval stamp** — APPROVED, DRAFT, CONFIDENTIAL 또는 custom label을 찍습니다
+- **Download** — viewer toolbar에서 annotated PDF를 export합니다
 
 ## 명령
 
-| Command | What it does |
+| 명령 | 수행 내용 |
 |---------|-------------|
-| `/pdf-viewer:open` | Open a PDF in the interactive viewer |
-| `/pdf-viewer:annotate` | Walk through the document, propose + apply markup, review together |
-| `/pdf-viewer:fill-form` | Fill PDF form fields interactively |
-| `/pdf-viewer:sign` | Place a signature or initials image on the page |
+| `/pdf-viewer:open` | Interactive viewer에서 PDF를 엽니다 |
+| `/pdf-viewer:annotate` | Document를 함께 훑으며 markup을 제안, 적용, review합니다 |
+| `/pdf-viewer:fill-form` | PDF form field를 interactive하게 채웁니다 |
+| `/pdf-viewer:sign` | Page에 signature 또는 initials image를 배치합니다 |
 
-## When to use this vs. just reading a PDF
+## 일반 PDF 읽기와의 차이
 
-This plugin is for **interactive, visual workflows** — when you want to
-see the document, mark it up, and download an annotated copy.
+이 plugin은 document를 직접 보고 mark up한 뒤 annotated copy를 download하려는 **interactive, visual workflow**용입니다.
 
-If you just want Claude to **summarize or extract text** from a PDF,
-don't use this plugin. Claude can read PDF files natively and that's
-faster for pure ingestion.
+PDF에서 **summary 또는 text extraction**만 원한다면 이 plugin을 사용하지 않아도 됩니다. Claude는 PDF file을 native로 읽을 수 있고, pure ingestion에는 그 방식이 더 빠릅니다.
 
-## How It Works
+## 작동 방식
 
-This plugin uses a **local MCP server** (`@modelcontextprotocol/server-pdf`)
-that runs on your machine via `npx`. No API keys or remote services —
-the PDF server starts automatically when the plugin loads.
+이 plugin은 `npx`를 통해 사용자의 machine에서 실행되는 **local MCP server**(`@modelcontextprotocol/server-pdf`)를 사용합니다. API key나 remote service가 필요 없으며, plugin이 load될 때 PDF server가 자동으로 시작됩니다.
 
-## Requirements
+## 요구 사항
 
 - Node.js >= 18
-- Internet for remote PDFs (arXiv, etc.)
+- Remote PDF(arXiv 등)를 위한 internet
 
-## Supported PDF Sources
+## 지원 PDF source
 
-- Local files (file paths in your working directory)
-- [arXiv](https://arxiv.org) — `/abs/` URLs auto-convert to PDF
-- Any direct HTTPS PDF URL (bioRxiv, Zenodo, OSF, etc. — use the PDF
-  link, not the landing page)
+- Local file(working directory 안의 file path)
+- [arXiv](https://arxiv.org) — `/abs/` URL은 PDF로 auto-convert됩니다
+- Direct HTTPS PDF URL(bioRxiv, Zenodo, OSF 등). Landing page가 아니라 PDF link를 사용하세요
 
-## Signature Disclaimer
+## Signature disclaimer
 
-`/pdf-viewer:sign` places a **visual** signature image on the page. It is not
-a certified or cryptographic digital signature. For legally binding
-e-signatures, use a dedicated signing service.
+`/pdf-viewer:sign`은 page에 **visual** signature image를 배치합니다. Certified 또는 cryptographic digital signature가 아닙니다. Legally binding e-signature에는 dedicated signing service를 사용하세요.

@@ -49,72 +49,72 @@ Data warehouse 연결이 없으면 SQL result를 붙여 넣거나 CSV/Excel file
 
 ## 예시 워크플로
 
-### Ad-Hoc Analysis
+### Ad-hoc analysis
 
 ```
-You: /analyze What was our monthly revenue trend for the past 12 months, broken down by product line?
+You: /analyze 지난 12개월 monthly revenue trend를 product line별로 보여줘.
 
-Claude: [Writes SQL query] → [Executes against data warehouse] → [Generates trend chart]
-       → [Identifies key patterns: "Product line A grew 23% YoY while B was flat"]
-       → [Validates results with sanity checks]
+Claude: [SQL query 작성] → [Data warehouse에서 실행] → [Trend chart 생성]
+       → [Key pattern 식별: "Product line A는 YoY 23% 성장했고 B는 flat"]
+       → [Sanity check로 result 검증]
 ```
 
-### Data Exploration
+### Data exploration
 
 ```
 You: /explore-data users table
 
-Claude: [Profiles table: 2.3M rows, 47 columns]
-       → [Reports: created_at has 0.2% nulls, email has 99.8% cardinality]
-       → [Flags: status column has unexpected value "UNKNOWN" in 340 rows]
-       → [Suggests: "High-value dimensions to explore: plan_type, signup_source, country"]
+Claude: [Table profile: 2.3M rows, 47 columns]
+       → [Report: created_at null 0.2%, email cardinality 99.8%]
+       → [Flag: status column에 unexpected value "UNKNOWN" 340 rows]
+       → [제안: "탐색 가치가 높은 dimension: plan_type, signup_source, country"]
 ```
 
-### Query Writing
+### Query writing
 
 ```
-You: /write-query I need a cohort retention analysis -- users grouped by signup month,
-     showing what % are still active 1, 3, 6, and 12 months later. We use Snowflake.
+You: /write-query signup month별 cohort retention analysis가 필요해.
+     1, 3, 6, 12개월 뒤 active 비율을 보여줘. Snowflake를 사용해.
 
-Claude: [Writes optimized Snowflake SQL with CTEs]
-       → [Adds comments explaining each step]
-       → [Includes performance notes about partition pruning]
+Claude: [CTE가 포함된 optimized Snowflake SQL 작성]
+       → [각 step을 설명하는 comment 추가]
+       → [Partition pruning 관련 performance note 포함]
 ```
 
-### Dashboard Building
+### Dashboard building
 
 ```
-You: /build-dashboard Create a sales dashboard with monthly revenue, top products,
-     and regional breakdown. Here's the data: [pastes CSV]
+You: /build-dashboard monthly revenue, top products,
+     regional breakdown이 있는 sales dashboard를 만들어줘. Data는 여기 있어: [CSV 붙여넣기]
 
-Claude: [Generates self-contained HTML file]
-       → [Includes interactive Chart.js visualizations]
-       → [Adds dropdown filters for region and time period]
-       → [Opens in browser for review]
+Claude: [Self-contained HTML file 생성]
+       → [Interactive Chart.js visualization 포함]
+       → [Region 및 time period dropdown filter 추가]
+       → [Review를 위해 browser에서 열기]
 ```
 
-### Pre-Share Validation
+### 공유 전 validation
 
 ```
 You: /validate [shares analysis document]
 
-Claude: [Reviews methodology] → [Checks for survivorship bias in churn analysis]
-       → [Verifies aggregation logic] → [Flags: "Denominator excludes trial users
-          which could overstate conversion rate by ~5pp"]
-       → [Confidence: "Ready to share with noted caveat"]
+Claude: [Methodology review] → [Churn analysis의 survivorship bias 확인]
+       → [Aggregation logic 검증] → [Flag: "Denominator가 trial user를 제외해
+          conversion rate를 약 5pp 과대평가할 수 있음"]
+       → [Confidence: "Caveat를 명시하면 공유 가능"]
 ```
 
 ## Data Stack 연결
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
+> 익숙하지 않은 placeholder가 보이거나 연결된 tool을 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
-This plugin works best when connected to your data infrastructure. Add MCP servers for:
+이 plugin은 data infrastructure에 연결될 때 가장 잘 동작합니다. 다음 MCP server를 추가하세요.
 
-- **Data Warehouse**: Snowflake, Databricks, BigQuery, Definite, or any SQL-compatible database
-- **Analytics/BI**: Amplitude, Looker, Tableau, or similar
-- **Notebooks**: Jupyter, Hex, or similar
+- **Data Warehouse**: Snowflake, Databricks, BigQuery, Definite 또는 SQL-compatible database
+- **Analytics/BI**: Amplitude, Looker, Tableau 등
+- **Notebooks**: Jupyter, Hex 등
 - **Spreadsheets**: Google Sheets, Excel
 - **Data Orchestration**: Airflow, dbt, Dagster, Prefect
 - **Data Ingestion**: Fivetran, Airbyte, Stitch
 
-Configure MCP servers in your `.mcp.json` or Claude Code settings to enable direct data access.
+Direct data access를 활성화하려면 `.mcp.json` 또는 Claude Code settings에서 MCP server를 설정하세요.

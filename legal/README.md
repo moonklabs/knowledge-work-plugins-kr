@@ -136,10 +136,10 @@ Common inquiry type에 대해 configured template 기반 response를 생성합�
 
 | 스킬 | 설명 |
 |-------|-------------|
-| `contract-review` | Playbook 기반 contract analysis, deviation classification, redline generation |
-| `nda-triage` | NDA screening criteria, classification rules, routing recommendations |
-| `compliance` | Privacy regulation(GDPR, CCPA), DPA review, data subject request |
-| `canned-responses` | Template management, response category, escalation trigger |
+| `contract-review` | Playbook 기반 contract analysis, deviation classification, redline generation을 수행합니다. |
+| `nda-triage` | NDA screening criteria, classification rule, routing recommendation을 제공합니다. |
+| `compliance` | Privacy regulation(GDPR, CCPA), DPA review, data subject request를 다룹니다. |
+| `canned-responses` | Template management, response category, escalation trigger를 다룹니다. |
 | `legal-risk-assessment` | Escalation criteria가 포함된 severity-by-likelihood framework로 legal risk를 assess하고 classify합니다. Contract risk evaluation, deal exposure assessment, issue severity classification, matter가 senior counsel 또는 outside legal review를 필요로 하는지 판단할 때 사용합니다. |
 | `meeting-briefing` | 법무 관련성이 있는 meeting을 위한 structured briefing을 준비하고 그에 따른 action item을 추적합니다. Contract negotiation, board meeting, compliance review처럼 legal context, background research, action tracking이 필요한 meeting 준비에 사용합니다. |
 
@@ -182,10 +182,10 @@ Plugin은 MCP(Model Context Protocol) server를 통해 tool에 연결됩니다.
 
 | Category | 예시 | 목적 |
 |----------|----------|---------|
-| Chat | Slack, Teams | Team requests, notifications, triage |
-| Cloud storage | Box, Egnyte | Playbooks, templates, precedents |
-| Office suite | Microsoft 365 | Email, calendar, documents |
-| Project tracker | Atlassian (Jira/Confluence) | Matter tracking, tasks |
+| Chat | Slack, Teams | Team request, notification, triage |
+| Cloud storage | Box, Egnyte | Playbook, template, precedent |
+| Office suite | Microsoft 365 | Email, calendar, document |
+| Project tracker | Atlassian (Jira/Confluence) | Matter tracking, task |
 
 [CONNECTORS.md](CONNECTORS.md)에서 CLM, CRM, e-signature 및 additional option을 포함한 supported integration 전체 목록을 확인하세요.
 

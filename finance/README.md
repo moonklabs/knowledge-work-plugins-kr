@@ -33,59 +33,59 @@ claude plugins add knowledge-work-plugins/finance
 
 ## 예시 워크플로
 
-### Month-End Close
+### Month-end close
 
-1. Run `/journal-entry ap-accrual 2024-12` to generate AP accrual entries
-2. Run `/journal-entry prepaid 2024-12` to amortize prepaid expenses
-3. Run `/journal-entry fixed-assets 2024-12` to book depreciation
-4. Run `/reconciliation cash 2024-12` to reconcile bank accounts
-5. Run `/reconciliation accounts-receivable 2024-12` to reconcile AR subledger
-6. Run `/income-statement monthly 2024-12` to generate the P&L with flux analysis
+1. `/journal-entry ap-accrual 2024-12`를 실행해 AP accrual entry를 생성합니다.
+2. `/journal-entry prepaid 2024-12`를 실행해 prepaid expense를 amortize합니다.
+3. `/journal-entry fixed-assets 2024-12`를 실행해 depreciation을 book합니다.
+4. `/reconciliation cash 2024-12`를 실행해 bank account를 reconcile합니다.
+5. `/reconciliation accounts-receivable 2024-12`를 실행해 AR subledger를 reconcile합니다.
+6. `/income-statement monthly 2024-12`를 실행해 flux analysis가 포함된 P&L을 생성합니다.
 
-### Variance Analysis
+### Variance analysis
 
-1. Run `/variance-analysis revenue 2024-Q4 vs 2024-Q3` to analyze revenue variances
-2. Run `/variance-analysis opex 2024-12 vs budget` to investigate operating expense variances
-3. Review the waterfall analysis and provide context on unexplained variances
+1. `/variance-analysis revenue 2024-Q4 vs 2024-Q3`를 실행해 revenue variance를 분석합니다.
+2. `/variance-analysis opex 2024-12 vs budget`을 실행해 operating expense variance를 조사합니다.
+3. Waterfall analysis를 review하고 unexplained variance에 대한 context를 제공합니다.
 
-### SOX Testing
+### SOX testing
 
-1. Run `/sox-testing revenue-recognition 2024-Q4` to generate revenue control testing workpapers
-2. Run `/sox-testing procure-to-pay 2024-Q4` to test procurement controls
-3. Review sample selections and document test results
+1. `/sox-testing revenue-recognition 2024-Q4`를 실행해 revenue control testing workpaper를 생성합니다.
+2. `/sox-testing procure-to-pay 2024-Q4`를 실행해 procurement control을 test합니다.
+3. Sample selection을 review하고 test result를 문서화합니다.
 
-## MCP Integration
+## MCP 통합
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
+> 익숙하지 않은 placeholder가 보이거나 연결된 tool을 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
-This plugin works best when connected to your financial data sources via MCP servers. Add the relevant servers to your `.mcp.json`:
+이 plugin은 MCP server를 통해 financial data source에 연결할 때 가장 잘 동작합니다. 관련 server를 `.mcp.json`에 추가하세요.
 
-### ERP / Accounting System
+### ERP / accounting system
 
-Connect your ERP (e.g., NetSuite, SAP) MCP server to pull trial balances, subledger data, and journal entries automatically.
+ERP(예: NetSuite, SAP) MCP server를 연결해 trial balance, subledger data, journal entry를 자동으로 가져옵니다.
 
-### Data Warehouse
+### Data warehouse
 
-Connect your data warehouse (e.g., Snowflake, BigQuery) MCP server to query financial data, run variance analysis, and pull historical comparisons.
+Data warehouse(예: Snowflake, BigQuery) MCP server를 연결해 financial data를 query하고 variance analysis를 실행하며 historical comparison을 가져옵니다.
 
-### Spreadsheets
+### Spreadsheet
 
-Connect spreadsheet tools (e.g., Google Sheets, Excel) for workpaper generation, reconciliation templates, and financial model updates.
+Workpaper generation, reconciliation template, financial model update를 위해 spreadsheet tool(예: Google Sheets, Excel)을 연결합니다.
 
 ### Analytics / BI
 
-Connect your BI platform (e.g., Tableau, Looker) to pull dashboards, KPIs, and trend data for variance explanations.
+BI platform(예: Tableau, Looker)을 연결해 variance explanation에 필요한 dashboard, KPI, trend data를 가져옵니다.
 
-> **Note:** Connect your ERP and data warehouse MCP servers to pull financial data automatically. Without these, you can paste data or upload files for analysis.
+> **Note:** Financial data를 자동으로 가져오려면 ERP 및 data warehouse MCP server를 연결하세요. 없으면 data를 paste하거나 file을 upload해 analysis할 수 있습니다.
 
-## Configuration
+## 설정
 
-Add your data source MCP servers to the `mcpServers` section of `.mcp.json` in this plugin directory. The `recommendedCategories` field lists the types of integrations that enhance this plugin's capabilities:
+이 plugin directory의 `.mcp.json`에서 `mcpServers` section에 data source MCP server를 추가하세요. `recommendedCategories` field는 plugin 기능을 강화하는 integration type을 나열합니다.
 
-- `erp-accounting` — ERP or accounting system for GL, subledger, and JE data
-- `data-warehouse` — Data warehouse for financial queries and historical data
-- `spreadsheets` — Spreadsheet tools for workpaper generation
-- `analytics-bi` — BI tools for dashboards and KPI data
-- `documents` — Document storage for policies, memos, and support
-- `email` — Email for sending reports and requesting approvals
-- `chat` — Team communication for close status updates and questions
+- `erp-accounting` — GL, subledger, JE data용 ERP 또는 accounting system
+- `data-warehouse` — Financial query 및 historical data용 data warehouse
+- `spreadsheets` — Workpaper generation용 spreadsheet tool
+- `analytics-bi` — Dashboard 및 KPI data용 BI tool
+- `documents` — Policy, memo, support 자료용 document storage
+- `email` — Report 발송 및 approval request용 email
+- `chat` — Close status update 및 question용 team communication

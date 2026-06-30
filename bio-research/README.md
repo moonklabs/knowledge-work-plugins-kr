@@ -4,80 +4,80 @@ Preclinical research tool과 database(literature search, genomics analysis, targ
 
 이 plugin은 life science researcher를 위해 11개의 MCP server integration과 5개의 analysis skill을 하나의 package로 묶습니다.
 
-## What's Included
+## 포함 항목
 
-### MCP Servers (Data Sources & Tools)
+### MCP server(data source 및 tool)
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
+> 익숙하지 않은 placeholder가 보이거나 연결된 tool을 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
-| Provider | What It Does | Category/Placeholder |
+| Provider | 수행 내용 | Category/Placeholder |
 |----------|-------------|---------------------|
-| U.S. National Library of Medicine | Search biomedical literature and research articles | `~~literature` |
-| deepsense.ai | Access preprints from bioRxiv and medRxiv | `~~literature` |
-| Consensus | AI-powered search and synthesis of peer-reviewed research | `~~literature` |
-| John Wiley & Sons | Access academic research and publications | `~~journal access` |
+| U.S. National Library of Medicine | Biomedical literature와 research article 검색 | `~~literature` |
+| deepsense.ai | bioRxiv 및 medRxiv preprint 접근 | `~~literature` |
+| Consensus | Peer-reviewed research의 AI-powered search 및 synthesis | `~~literature` |
+| John Wiley & Sons | Academic research 및 publication 접근 | `~~journal access` |
 | Sage Bionetworks | Collaborative research data management | `~~data repository` |
 | deepsense.ai | Bioactive drug-like compound database | `~~chemical database` |
-| OpenTargets | Drug target discovery and prioritization | `~~drug targets` |
+| OpenTargets | Drug target discovery 및 prioritization | `~~drug targets` |
 | deepsense.ai | NIH/NLM clinical trial registry | `~~clinical trials` |
-| BioRender | Scientific illustration creation | `~~scientific illustration` |
-| Owkin | AI for biology — histopathology and drug discovery | `~~AI research` |
+| BioRender | Scientific illustration 생성 | `~~scientific illustration` |
+| Owkin | Biology용 AI — histopathology 및 drug discovery | `~~AI research` |
 | Benchling\* | Lab data management platform | `~~lab platform` |
 
-### Optional Binary MCP Servers
+### 선택형 binary MCP server
 
-These require a separate binary download:
+다음 항목은 별도 binary download가 필요합니다.
 
-- **10X Genomics txg-mcp** (`~~genomics platform`) — Cloud analysis data and workflows ([GitHub](https://github.com/10XGenomics/txg-mcp/releases))
-- **ToolUniverse** (`~~tool database`) — AI tools for scientific discovery from Harvard MIMS ([GitHub](https://github.com/mims-harvard/ToolUniverse/releases))
+- **10X Genomics txg-mcp** (`~~genomics platform`) — Cloud analysis data 및 workflow ([GitHub](https://github.com/10XGenomics/txg-mcp/releases))
+- **ToolUniverse** (`~~tool database`) — Harvard MIMS의 scientific discovery용 AI tool ([GitHub](https://github.com/mims-harvard/ToolUniverse/releases))
 
 ### 스킬 (Analysis Workflows)
 
 #### Single-Cell RNA QC
-Automated quality control for scRNA-seq data following scverse best practices. Supports `.h5ad` and `.h5` files with MAD-based filtering and comprehensive visualizations.
+scverse best practice를 따르는 scRNA-seq data automated quality control입니다. MAD-based filtering과 comprehensive visualization을 포함해 `.h5ad`, `.h5` file을 지원합니다.
 
 #### scvi-tools
-Deep learning toolkit for single-cell omics. Covers scVI, scANVI, totalVI, PeakVI, MultiVI, DestVI, veloVI, and sysVI models for integration, batch correction, label transfer, and multi-modal analysis.
+Single-cell omics용 deep learning toolkit입니다. Integration, batch correction, label transfer, multi-modal analysis를 위해 scVI, scANVI, totalVI, PeakVI, MultiVI, DestVI, veloVI, sysVI model을 다룹니다.
 
 #### Nextflow Pipelines
-Run nf-core bioinformatics pipelines on local or public GEO/SRA sequencing data:
-- **rnaseq** — Gene expression and differential expression
-- **sarek** — Germline and somatic variant calling (WGS/WES)
+Local 또는 public GEO/SRA sequencing data에서 nf-core bioinformatics pipeline을 실행합니다.
+- **rnaseq** — Gene expression 및 differential expression
+- **sarek** — Germline 및 somatic variant calling(WGS/WES)
 - **atacseq** — Chromatin accessibility analysis
 
 #### Instrument Data to Allotrope
-Convert laboratory instrument output files (PDF, CSV, Excel, TXT) to Allotrope Simple Model (ASM) format. Supports 40+ instrument types including cell counters, spectrophotometers, plate readers, qPCR, and chromatography systems.
+Laboratory instrument output file(PDF, CSV, Excel, TXT)을 Allotrope Simple Model(ASM) format으로 변환합니다. Cell counter, spectrophotometer, plate reader, qPCR, chromatography system 등 40개 이상 instrument type을 지원합니다.
 
 #### Scientific Problem Selection
-Systematic framework for research problem selection based on Fischbach & Walsh's framework. Includes 9 skills covering ideation, risk assessment, optimization, decision trees, adversity planning, and synthesis.
+Fischbach & Walsh framework 기반 research problem selection을 위한 systematic framework입니다. Ideation, risk assessment, optimization, decision tree, adversity planning, synthesis를 다루는 9개 skill을 포함합니다.
 
-## Getting Started
+## 시작하기
 
 ```bash
-# Install the plugin
+# plugin 설치
 /install anthropics/knowledge-work-plugins bio-research
 
-# Run the start command to see available tools
+# 사용 가능한 tool 확인
 /start
 ```
 
-## Common Workflows
+## 일반 workflow
 
 **Literature Review**
-Search ~~literature database for papers, access full-text through ~~journal access, and create figures with ~~scientific illustration.
+~~literature database에서 paper를 검색하고, ~~journal access로 full-text에 접근하며, ~~scientific illustration으로 figure를 만듭니다.
 
 **Single-Cell Analysis**
-Run QC on scRNA-seq data, then use scvi-tools for integration, batch correction, and cell type annotation.
+scRNA-seq data에 QC를 실행한 뒤 scvi-tools로 integration, batch correction, cell type annotation을 수행합니다.
 
 **Sequencing Pipeline**
-Download public data from GEO/SRA, run nf-core pipelines (RNA-seq, variant calling, ATAC-seq), and verify outputs.
+GEO/SRA에서 public data를 download하고 nf-core pipeline(RNA-seq, variant calling, ATAC-seq)을 실행한 뒤 output을 verify합니다.
 
 **Drug Discovery**
-Search ~~chemical database for bioactive compounds, use ~~drug target database for target prioritization, and review clinical trial data.
+~~chemical database에서 bioactive compound를 검색하고, ~~drug target database로 target prioritization을 수행하며 clinical trial data를 review합니다.
 
 **Research Strategy**
-Pitch a new idea, troubleshoot a stuck project, or evaluate strategic decisions using the scientific problem selection framework.
+Scientific problem selection framework를 사용해 new idea를 pitch하고, 막힌 project를 troubleshoot하거나 strategic decision을 evaluate합니다.
 
-## License
+## 라이선스
 
-Skills are licensed under Apache 2.0. MCP servers are provided by their respective authors — see individual server documentation for terms.
+Skill은 Apache 2.0으로 licensed됩니다. MCP server는 각 author가 제공하므로 terms는 individual server documentation을 참고하세요.
