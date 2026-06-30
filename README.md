@@ -1,80 +1,80 @@
-# Knowledge Work Plugins
+# 지식 업무 플러그인
 
-Plugins that turn Claude into a specialist for your role, team, and company. Built for [Claude Cowork](https://claude.com/product/cowork), also compatible with [Claude Code](https://claude.com/product/claude-code).
+Claude를 사용자의 역할, 팀, 회사에 맞는 전문가로 바꿔 주는 플러그인 모음입니다. [Claude Cowork](https://claude.com/product/cowork)용으로 제작되었으며 [Claude Code](https://claude.com/product/claude-code)와도 호환됩니다.
 
-## Why Plugins
+## 플러그인이 필요한 이유
 
-Cowork lets you set the goal and Claude delivers finished, professional work. Plugins let you go further: tell Claude how you like work done, which tools and data to pull from, how to handle critical workflows, and what slash commands to expose — so your team gets better and more consistent outcomes.
+Cowork에서는 목표를 정하면 Claude가 완성도 높은 전문 작업물을 만들어 줍니다. 플러그인을 사용하면 한 단계 더 나아가, Claude에게 선호하는 작업 방식, 가져와야 할 도구와 데이터, 중요한 워크플로우 처리 방식, 노출할 slash command를 알려 줄 수 있습니다. 그래서 팀은 더 일관되고 품질 높은 결과를 얻습니다.
 
-Each plugin bundles the skills, connectors, slash commands, and sub-agents for a specific job function. Out of the box, they give Claude a strong starting point for helping anyone in that role. The real power comes when you customize them for your company — your tools, your terminology, your processes — so Claude works like it was built for your team.
+각 플러그인은 특정 직무에 필요한 skills, connectors, slash commands, sub-agents를 묶습니다. 기본 상태에서도 해당 역할을 돕기 위한 강한 출발점을 제공하지만, 진짜 가치는 회사의 도구, 용어, 프로세스에 맞게 커스터마이즈할 때 나옵니다. 그렇게 하면 Claude가 처음부터 팀을 위해 만들어진 것처럼 일합니다.
 
-## Plugin Marketplace
+## 플러그인 마켓플레이스
 
-We're open-sourcing 11 plugins built and inspired by our own work:
+우리는 내부 업무에서 만들고 영감을 얻은 11개의 플러그인을 오픈소스로 제공합니다.
 
-| Plugin | How it helps | Connectors |
+| 플러그인 | 도움을 주는 일 | 커넥터 |
 |--------|-------------|------------|
-| **[productivity](./productivity)** | Manage tasks, calendars, daily workflows, and personal context so you spend less time repeating yourself. | Slack, Notion, Asana, Linear, Jira, Monday, ClickUp, Microsoft 365 |
-| **[sales](./sales)** | Research prospects, prep for calls, review your pipeline, draft outreach, and build competitive battlecards. | Slack, HubSpot, Close, Clay, ZoomInfo, Notion, Jira, Fireflies, Microsoft 365 |
-| **[customer-support](./customer-support)** | Triage tickets, draft responses, package escalations, research customer context, and turn resolved issues into knowledge base articles. | Slack, Intercom, HubSpot, Guru, Jira, Notion, Microsoft 365 |
-| **[product-management](./product-management)** | Write specs, plan roadmaps, synthesize user research, keep stakeholders updated, and track the competitive landscape. | Slack, Linear, Asana, Monday, ClickUp, Jira, Notion, Figma, Amplitude, Pendo, Intercom, Fireflies |
-| **[marketing](./marketing)** | Draft content, plan campaigns, enforce brand voice, brief on competitors, and report on performance across channels. | Slack, Canva, Figma, HubSpot, Amplitude, Notion, Ahrefs, SimilarWeb, Klaviyo |
-| **[legal](./legal)** | Review contracts, triage NDAs, navigate compliance, assess risk, prep for meetings, and draft templated responses. | Slack, Box, Egnyte, Jira, Microsoft 365 |
-| **[finance](./finance)** | Prep journal entries, reconcile accounts, generate financial statements, analyze variances, manage close, and support audits. | Snowflake, Databricks, BigQuery, Slack, Microsoft 365 |
-| **[data](./data)** | Query, visualize, and interpret datasets — write SQL, run statistical analysis, build dashboards, and validate your work before sharing. | Snowflake, Databricks, BigQuery, Definite, Hex, Amplitude, Jira |
-| **[enterprise-search](./enterprise-search)** | Find anything across email, chat, docs, and wikis — one query across all your company's tools. | Slack, Notion, Guru, Jira, Asana, Microsoft 365 |
-| **[bio-research](./bio-research)** | Connect to preclinical research tools and databases (literature search, genomics analysis, target prioritization) to accelerate early-stage life sciences R&D. | PubMed, BioRender, bioRxiv, ClinicalTrials.gov, ChEMBL, Synapse, Wiley, Owkin, Open Targets, Benchling |
-| **[cowork-plugin-management](./cowork-plugin-management)** | Create new plugins or customize existing ones for your organization's specific tools and workflows. | — |
+| **[productivity](./productivity)** | 작업, 캘린더, 일일 워크플로우, 개인 컨텍스트를 관리해 반복 설명 시간을 줄입니다. | Slack, Notion, Asana, Linear, Jira, Monday, ClickUp, Microsoft 365 |
+| **[sales](./sales)** | 잠재 고객 조사, 통화 준비, 파이프라인 검토, 아웃리치 작성, 경쟁 battlecard 작성을 돕습니다. | Slack, HubSpot, Close, Clay, ZoomInfo, Notion, Jira, Fireflies, Microsoft 365 |
+| **[customer-support](./customer-support)** | 티켓 triage, 답변 초안, escalation 패키징, 고객 컨텍스트 조사, 해결 이슈의 knowledge base화를 지원합니다. | Slack, Intercom, HubSpot, Guru, Jira, Notion, Microsoft 365 |
+| **[product-management](./product-management)** | spec 작성, roadmap 계획, 사용자 리서치 종합, stakeholder 업데이트, 경쟁 환경 추적을 돕습니다. | Slack, Linear, Asana, Monday, ClickUp, Jira, Notion, Figma, Amplitude, Pendo, Intercom, Fireflies |
+| **[marketing](./marketing)** | 콘텐츠 초안, 캠페인 계획, brand voice 적용, 경쟁사 브리핑, 채널별 성과 리포팅을 지원합니다. | Slack, Canva, Figma, HubSpot, Amplitude, Notion, Ahrefs, SimilarWeb, Klaviyo |
+| **[legal](./legal)** | 계약 검토, NDA triage, compliance 검토, risk assessment, 회의 준비, 템플릿 응답 작성을 돕습니다. | Slack, Box, Egnyte, Jira, Microsoft 365 |
+| **[finance](./finance)** | journal entry 준비, 계정 reconciliation, 재무제표 생성, variance 분석, close 관리, audit 지원을 돕습니다. | Snowflake, Databricks, BigQuery, Slack, Microsoft 365 |
+| **[data](./data)** | 데이터셋 query, 시각화, 해석을 지원합니다. SQL 작성, 통계 분석, dashboard 구축, 공유 전 검증을 돕습니다. | Snowflake, Databricks, BigQuery, Definite, Hex, Amplitude, Jira |
+| **[enterprise-search](./enterprise-search)** | email, chat, docs, wiki 전반에서 필요한 정보를 찾습니다. 한 번의 query로 회사 도구 전체를 검색합니다. | Slack, Notion, Guru, Jira, Asana, Microsoft 365 |
+| **[bio-research](./bio-research)** | 문헌 검색, genomics analysis, target prioritization 등 전임상 연구 도구와 데이터베이스를 연결해 초기 생명과학 R&D를 가속합니다. | PubMed, BioRender, bioRxiv, ClinicalTrials.gov, ChEMBL, Synapse, Wiley, Owkin, Open Targets, Benchling |
+| **[cowork-plugin-management](./cowork-plugin-management)** | 새 플러그인을 만들거나 조직의 도구와 워크플로우에 맞게 기존 플러그인을 커스터마이즈합니다. | — |
 
-Install these directly from Cowork, browse the full collection here on GitHub, or build your own.
+이 플러그인들은 Cowork에서 바로 설치하거나, GitHub에서 전체 컬렉션을 살펴보거나, 직접 새 플러그인을 만드는 출발점으로 사용할 수 있습니다.
 
-## Getting Started
+## 시작하기
 
 ### Cowork
 
-Install plugins from [claude.com/plugins](https://claude.com/plugins/).
+[claude.com/plugins](https://claude.com/plugins/)에서 플러그인을 설치합니다.
 
 ### Claude Code
 
 ```bash
-# Add the marketplace first
+# 먼저 marketplace를 추가합니다
 claude plugin marketplace add anthropics/knowledge-work-plugins
 
-# Then install a specific plugin
+# 그다음 필요한 플러그인을 설치합니다
 claude plugin install sales@knowledge-work-plugins
 ```
 
-Once installed, plugins activate automatically. Skills fire when relevant, and slash commands are available in your session (e.g., `/sales:call-prep`, `/data:write-query`).
+설치가 끝나면 플러그인은 자동으로 활성화됩니다. Skills는 관련 상황에서 자동으로 작동하고, slash commands는 세션에서 사용할 수 있습니다. 예: `/sales:call-prep`, `/data:write-query`.
 
-## How Plugins Work
+## 플러그인 동작 방식
 
-Every plugin follows the same structure:
+모든 플러그인은 같은 구조를 따릅니다.
 
 ```
 plugin-name/
 ├── .claude-plugin/plugin.json   # Manifest
-├── .mcp.json                    # Tool connections
-├── commands/                    # Slash commands you invoke explicitly
-└── skills/                      # Domain knowledge Claude draws on automatically
+├── .mcp.json                    # 도구 연결
+├── commands/                    # 명시적으로 실행하는 slash commands
+└── skills/                      # Claude가 자동으로 활용하는 domain knowledge
 ```
 
-- **Skills** encode the domain expertise, best practices, and step-by-step workflows Claude needs to give you useful help. Claude draws on them automatically when relevant.
-- **Commands** are explicit actions you trigger (e.g., `/finance:reconciliation`, `/product-management:write-spec`).
-- **Connectors** wire Claude to the external tools your role depends on — CRMs, project trackers, data warehouses, design tools, and more — via [MCP servers](https://modelcontextprotocol.io/).
+- **Skills**는 Claude가 유용한 도움을 주는 데 필요한 domain expertise, best practices, step-by-step workflows를 담습니다. Claude는 관련 상황에서 이를 자동으로 활용합니다.
+- **Commands**는 사용자가 명시적으로 실행하는 동작입니다. 예: `/finance:reconciliation`, `/product-management:write-spec`.
+- **Connectors**는 Claude를 CRM, project tracker, data warehouse, design tool 같은 외부 도구에 연결합니다. 연결은 [MCP servers](https://modelcontextprotocol.io/)를 통해 이뤄집니다.
 
-Every component is file-based — markdown and JSON, no code, no infrastructure, no build steps.
+모든 구성요소는 파일 기반입니다. Markdown과 JSON만 있으면 되며, 별도의 코드, 인프라, build step이 없습니다.
 
-## Making Them Yours
+## 우리 방식에 맞게 만들기
 
-These plugins are generic starting points. They become much more useful when you customize them for how your company actually works:
+이 플러그인들은 범용 출발점입니다. 회사의 실제 업무 방식에 맞춰 조정할수록 훨씬 더 유용해집니다.
 
-- **Swap connectors** — Edit `.mcp.json` to point at your specific tool stack.
-- **Add company context** — Drop your terminology, org structure, and processes into skill files so Claude understands your world.
-- **Adjust workflows** — Modify skill instructions to match how your team actually does things, not how a textbook says to.
-- **Build new plugins** — Use the `cowork-plugin-management` plugin or follow the structure above to create plugins for roles and workflows we haven't covered yet.
+- **Connectors 교체** — `.mcp.json`을 수정해 회사의 실제 tool stack을 가리키게 합니다.
+- **회사 컨텍스트 추가** — 용어, 조직 구조, 프로세스를 skill 파일에 넣어 Claude가 우리 업무 방식을 이해하게 합니다.
+- **워크플로우 조정** — 교과서식 절차가 아니라 실제 팀이 일하는 방식에 맞게 skill instructions를 수정합니다.
+- **새 플러그인 만들기** — `cowork-plugin-management` 플러그인을 사용하거나 위 구조를 따라 아직 다루지 않은 역할과 워크플로우용 플러그인을 만듭니다.
 
-As your team builds and shares plugins, Claude becomes a cross-functional expert. The context you define gets baked into every relevant interaction, so leaders and admins can spend less time enforcing processes and more time improving them.
+팀이 플러그인을 만들고 공유할수록 Claude는 더 넓은 직무를 이해하는 cross-functional expert가 됩니다. 정의한 컨텍스트는 관련 상호작용마다 반영되므로, 리더와 admin은 프로세스를 반복 설명하는 대신 프로세스를 개선하는 데 더 많은 시간을 쓸 수 있습니다.
 
-## Contributing
+## 기여하기
 
-Plugins are just markdown files. Fork the repo, make your changes, and submit a PR.
+플러그인은 Markdown 파일입니다. Repo를 fork하고, 변경한 뒤 PR을 제출하세요.
