@@ -38,10 +38,10 @@ Sales email, proposal, marketing page, press release 같은 모든 AI-generated 
 /brand-voice:enforce-voice 새 기능 출시를 알리는 LinkedIn post를 작성해줘
 ```
 
-### Open question
+### 미해결 질문
 플러그인이 서로 충돌하는 문서, 누락된 가이드라인, 선언된 브랜드와 실제 사용되는 브랜드의 차이처럼 해결할 수 없는 모호성을 만나면 팀 논의용 미해결 질문을 표시합니다. 모든 질문에는 에이전트 추천이 포함되어 모호성을 막다른 길이 아니라 "confirm or override" 상호작용으로 바꿉니다.
 
-## MCP connector
+## MCP 커넥터
 
 | Connector | URL | 목적 |
 |-----------|-----|---------|
@@ -53,7 +53,7 @@ Sales email, proposal, marketing page, press release 같은 모든 AI-generated 
 | **Gong** | `https://mcp.gong.io/mcp` | Enterprise conversation intelligence — sales call transcript와 분석 |
 | **Granola** | `https://mcp.granola.ai/mcp` | Meeting intelligence — sales, customer, strategy meeting의 transcript와 note |
 
-### Native integration
+### 네이티브 통합
 
 이 platform들은 native Claude integration입니다. MCP connector 설치가 필요 없습니다. 사용자가 Claude Desktop 또는 Cowork에서 연결하면 도구로 사용할 수 있습니다.
 
@@ -82,37 +82,37 @@ Brand Voice는 현재 개인 단위에서 동작하며, 팀 전체 enforcement�
 
 ```
 ├── .claude-plugin/
-│   └── plugin.json                              # Plugin manifest
-├── .mcp.json                                    # 7 MCP server connections
+│   └── plugin.json                              # 플러그인 매니페스트
+├── .mcp.json                                    # 7개 MCP server 연결
 ├── README.md
 ├── agents/
-│   ├── discover-brand.md                        # Autonomous platform search agent
-│   ├── content-generation.md                    # Brand-aligned content creation
-│   ├── conversation-analysis.md                 # Sales call transcript analysis
-│   ├── document-analysis.md                     # Brand document parsing
-│   └── quality-assurance.md                     # Compliance and open questions audit
+│   ├── discover-brand.md                        # Autonomous platform 검색 agent
+│   ├── content-generation.md                    # Brand-aligned content 생성
+│   ├── conversation-analysis.md                 # Sales call transcript 분석
+│   ├── document-analysis.md                     # Brand document 파싱
+│   └── quality-assurance.md                     # 컴플라이언스 및 open question audit
 ├── commands/
 │   ├── discover-brand.md                        # /brand-voice:discover-brand
 │   ├── enforce-voice.md                         # /brand-voice:enforce-voice
 │   └── generate-guidelines.md                   # /brand-voice:generate-guidelines
 ├── settings/
-│   └── brand-voice.local.md.example             # Per-project settings template
+│   └── brand-voice.local.md.example             # Project별 설정 template
 └── skills/
     ├── discover-brand/
-    │   ├── SKILL.md                             # Discovery orchestration
+    │   ├── SKILL.md                             # Discovery 흐름 조율
     │   └── references/
-    │       ├── search-strategies.md             # Platform-specific query patterns
-    │       └── source-ranking.md                # Ranking algorithm and categories
+    │       ├── search-strategies.md             # Platform별 query pattern
+    │       └── source-ranking.md                # Ranking algorithm 및 category
     ├── brand-voice-enforcement/
-    │   ├── SKILL.md                             # Enforcement orchestration
+    │   ├── SKILL.md                             # Enforcement 흐름 조율
     │   └── references/
-    │       ├── before-after-examples.md         # Content type transformation examples
+    │       ├── before-after-examples.md         # Content type별 transformation 예시
     │       └── voice-constant-tone-flexes.md    # "We Are / We Are Not" + tone matrix
     └── guideline-generation/
-        ├── SKILL.md                             # Generation orchestration
+        ├── SKILL.md                             # Generation 흐름 조율
         └── references/
-            ├── confidence-scoring.md            # Scoring methodology
-            └── guideline-template.md            # Full output template
+            ├── confidence-scoring.md            # Scoring 방법론
+            └── guideline-template.md            # 전체 output template
 ```
 
 ## 아키텍처

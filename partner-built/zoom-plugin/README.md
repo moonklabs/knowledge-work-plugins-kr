@@ -113,7 +113,7 @@ Zoom Plugin/
 │   ├── build-zoom-bot/
 │   ├── design-mcp-workflow/
 │   ├── debug-zoom-integration/
-│   └── ... existing Zoom reference skills
+│   └── ... 기존 Zoom 참조 스킬
 └── README.md
 ```
 
