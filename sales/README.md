@@ -1,6 +1,6 @@
 # Sales 플러그인
 
-Sales productivity 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Prospecting, outreach, pipeline management, call preparation, deal strategy를 돕습니다. 어떤 sales team에서도 사용할 수 있으며, web search와 사용자 입력만으로 단독 동작하고 CRM, email 및 다른 tool을 연결하면 더 강력해집니다.
+영업 생산성 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. 잠재 고객 발굴, 아웃리치, 파이프라인 관리, 통화 준비, 거래 전략을 돕습니다. 어떤 영업 팀에서도 사용할 수 있으며, 웹 검색과 사용자 입력만으로 단독 동작하고 CRM, 이메일 및 다른 도구를 연결하면 더 강력해집니다.
 
 ## 설치
 
@@ -14,24 +14,24 @@ Slash command로 호출하는 명시적 워크플로입니다:
 
 | 명령 | 설명 |
 |---|---|
-| `/call-summary` | Call note 또는 transcript를 처리해 action item을 추출하고 follow-up 초안과 internal summary를 생성합니다 |
-| `/forecast` | CSV를 upload하거나 pipeline을 설명하면 quota 기준 weighted sales forecast를 생성합니다 |
-| `/pipeline-review` | Pipeline health를 분석해 deal 우선순위, risk flag, weekly action plan을 제공합니다 |
+| `/call-summary` | 통화 메모 또는 전사를 처리해 액션 아이템을 추출하고 후속 조치 초안과 내부 요약을 생성합니다 |
+| `/forecast` | CSV를 업로드하거나 파이프라인을 설명하면 할당량 기준 가중 영업 전망을 생성합니다 |
+| `/pipeline-review` | 파이프라인 상태를 분석해 거래 우선순위, 위험 표시, 주간 실행 계획을 제공합니다 |
 
 모든 명령은 note paste, CSV upload, 상황 설명만으로 **단독** 동작하며, MCP connector를 연결하면 더 강력해집니다.
 
 ## 스킬
 
-관련 상황에서 Claude가 자동으로 사용하는 domain knowledge입니다:
+관련 상황에서 Claude가 자동으로 사용하는 도메인 지식입니다:
 
 | 스킬 | 설명 |
 |---|---|
 | `account-research` | Company 또는 person을 조사하고 실행 가능한 sales intel을 얻습니다. Web search만으로 standalone 동작하며 enrichment tool 또는 CRM을 연결하면 더 강력해집니다. "research [company]", "look up [person]", "intel on [prospect]", "who is [name] at [company]", "tell me about [company]"에서 트리거됩니다. |
-| `call-prep` | Account context, attendee research, suggested agenda로 sales call을 준비합니다. User input과 web research만으로 단독 동작하며 CRM, email, chat, transcript를 연결하면 더 강력해집니다. "prep me for my call with [company]", "I'm meeting with [company] prep me", "call prep [company]"에서 트리거됩니다. |
-| `daily-briefing` | Prioritized sales briefing으로 하루를 시작합니다. Meeting과 priority를 알려주면 standalone으로 동작하고 calendar, CRM, email을 연결하면 더 강력해집니다. "morning briefing", "daily brief", "what's on my plate today", "prep my day", "start my day"에서 트리거됩니다. |
+| `call-prep` | 계정 맥락, 참석자 조사, 추천 안건으로 영업 통화를 준비합니다. 사용자 입력과 웹 리서치만으로 단독 동작하며 CRM, email, chat, transcript를 연결하면 더 강력해집니다. "prep me for my call with [company]", "I'm meeting with [company] prep me", "call prep [company]"에서 트리거됩니다. |
+| `daily-briefing` | 우선순위가 정해진 영업 브리핑으로 하루를 시작합니다. 미팅과 우선순위를 알려주면 standalone으로 동작하고 calendar, CRM, email을 연결하면 더 강력해집니다. "morning briefing", "daily brief", "what's on my plate today", "prep my day", "start my day"에서 트리거됩니다. |
 | `draft-outreach` | Prospect를 조사한 뒤 개인화된 outreach 초안을 작성합니다. 기본적으로 web research만으로 동작하며 enrichment 및 CRM을 연결하면 더 강력해집니다. "draft outreach to [person/company]", "write cold email to [prospect]", "reach out to [name]"에서 트리거됩니다. |
-| `competitive-intelligence` | Competitor를 조사하고 interactive battlecard를 만듭니다. Clickable competitor card와 comparison matrix가 있는 HTML artifact를 출력합니다. "competitive intel", "research competitors", "how do we compare to [competitor]", "battlecard for [competitor]", "what's new with [competitor]"에서 트리거됩니다. |
-| `create-an-asset` | Deal context에서 tailored sales asset(landing page, deck, one-pager, workflow demo)을 생성합니다. Prospect, audience, goal을 설명하면 customer에게 공유할 ready-to-share polished branded asset을 얻습니다. |
+| `competitive-intelligence` | 경쟁사를 조사하고 인터랙티브 배틀카드를 만듭니다. 클릭 가능한 경쟁사 카드와 비교 매트릭스가 있는 HTML artifact를 출력합니다. "competitive intel", "research competitors", "how do we compare to [competitor]", "battlecard for [competitor]", "what's new with [competitor]"에서 트리거됩니다. |
+| `create-an-asset` | 거래 맥락에서 맞춤형 영업 자료(landing page, deck, one-pager, workflow demo)를 생성합니다. Prospect, audience, goal을 설명하면 고객에게 공유할 수 있는 다듬어진 브랜드 자료를 얻습니다. |
 
 ## 예시 워크플로
 

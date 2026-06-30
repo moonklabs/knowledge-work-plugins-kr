@@ -1,8 +1,8 @@
 # Finance & Accounting 플러그인
 
-Finance 및 accounting plugin입니다. 주로 Anthropic의 agentic desktop application인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Month-end close, journal entry preparation, account reconciliation, financial statement generation, variance analysis, SOX audit support를 지원합니다.
+재무 및 회계 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. 월말 마감, 전표 분개 준비, 계정 대사, 재무제표 생성, 차이 분석, SOX 감사 지원을 제공합니다.
 
-> **중요:** 이 플러그인은 finance 및 accounting workflow를 보조하지만 financial, tax, audit advice를 제공하지 않습니다. 모든 output은 financial reporting, regulatory filing, audit documentation에 사용하기 전에 자격을 갖춘 financial professional의 검토를 받아야 합니다.
+> **중요:** 이 플러그인은 재무 및 회계 작업 흐름을 보조하지만 재무, 세무, 감사 자문을 제공하지 않습니다. 모든 출력은 재무 보고, 규제 신고, 감사 문서화에 사용하기 전에 자격을 갖춘 재무 전문가의 검토를 받아야 합니다.
 
 ## 설치
 
@@ -80,7 +80,7 @@ BI platform(예: Tableau, Looker)을 연결해 variance explanation에 필요한
 
 ## 설정
 
-이 plugin directory의 `.mcp.json`에서 `mcpServers` section에 data source MCP server를 추가하세요. `recommendedCategories` field는 plugin 기능을 강화하는 integration type을 나열합니다.
+이 플러그인 디렉터리의 `.mcp.json`에서 `mcpServers` 섹션에 데이터 소스 MCP 서버를 추가하세요. `recommendedCategories` 필드는 플러그인 기능을 강화하는 통합 유형을 나열합니다.
 
 - `erp-accounting` — GL, subledger, JE data용 ERP 또는 accounting system
 - `data-warehouse` — Financial query 및 historical data용 data warehouse

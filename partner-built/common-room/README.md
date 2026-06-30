@@ -4,16 +4,16 @@ Common Room 기반 GTM 워크플로입니다. Account research, contact research
 
 ## 개요
 
-이 plugin은 Claude를 Common Room MCP server에 연결하고, 가장 일반적인 rep workflow를 다루는 여섯 가지 skill을 제공합니다. 모든 output은 실제 Common Room signal data에 근거합니다. 1st-party product signal, 2nd-party community signal, 3rd-party intent signal, RoomieAI와 Spark의 enrichment를 활용합니다.
+이 플러그인은 Claude를 Common Room MCP 서버에 연결하고, 가장 일반적인 영업 담당자 작업 흐름을 다루는 여섯 가지 스킬을 제공합니다. 모든 출력은 실제 Common Room 신호 데이터에 근거합니다. 1st-party 제품 신호, 2nd-party 커뮤니티 신호, 3rd-party 의도 신호, RoomieAI와 Spark의 보강 데이터를 활용합니다.
 
 ## 요구 사항
 
-- **Common Room MCP**(`mcp.commonroom.io/mcp`)가 연결되고 인증되어 있어야 합니다. 모든 plugin 기능의 기본 데이터 소스입니다.
-- **Calendar connector**(선택) — `call-prep`와 `weekly-prep-brief`에서 자동 meeting lookup을 가능하게 합니다. 연결하지 않으면 두 skill 모두 meeting detail을 사용자에게 묻습니다.
+- **Common Room MCP**(`mcp.commonroom.io/mcp`)가 연결되고 인증되어 있어야 합니다. 모든 플러그인 기능의 기본 데이터 소스입니다.
+- **Calendar connector**(선택) — `call-prep`와 `weekly-prep-brief`에서 자동 미팅 조회를 가능하게 합니다. 연결하지 않으면 두 스킬 모두 미팅 세부 정보를 사용자에게 묻습니다.
 
 ## 스킬
 
-Skill은 대화로 trigger됩니다. 원하는 일을 설명하면 Claude가 적절한 skill을 자동으로 불러옵니다.
+스킬은 대화로 트리거됩니다. 원하는 일을 설명하면 Claude가 적절한 스킬을 자동으로 불러옵니다.
 
 | 스킬 | Trigger phrase |
 |-------|----------------|

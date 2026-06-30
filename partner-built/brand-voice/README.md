@@ -2,9 +2,9 @@
 
 Claude Cowork용 [Tribe AI](https://tribe.ai) 플러그인입니다. Cowork launch partner로 제작되었습니다.
 
-회사를 알아볼 수 있게 만드는 브랜드 지식은 보통 편리한 한곳에 있지 않습니다. 2022년 deck, 마지막 rebrand 이후 아무도 업데이트하지 않은 Confluence page, 오래 일한 senior 몇 명의 감각 속에 흩어져 있습니다. Sales rep이 AI로 outreach를 만들고 new hire가 첫 주부터 content를 만들 때, 바로 그 지식이 사라집니다.
+회사를 알아볼 수 있게 만드는 브랜드 지식은 보통 편리한 한곳에 있지 않습니다. 2022년 덱, 마지막 리브랜딩 이후 아무도 업데이트하지 않은 Confluence 페이지, 오래 일한 선임 몇 명의 감각 속에 흩어져 있습니다. 영업 담당자가 AI로 아웃리치를 만들고 신규 입사자가 첫 주부터 콘텐츠를 만들 때, 바로 그 지식이 사라집니다.
 
-Brand Voice는 흩어진 브랜드 자료를 적용 가능한 AI guardrail로 바꿉니다. Confluence, Google Drive, Box, SharePoint, Slack, Gong, Granola를 검색해 회사가 실제로 어떻게 소통하는지 찾아낸 뒤, LLM-ready 브랜드 가이드라인을 만들고 AI-generated content를 그 기준으로 검증합니다. Claude는 더 빠르게 쓰는 데서 그치지 않고, 여러분답게 씁니다.
+Brand Voice는 흩어진 브랜드 자료를 적용 가능한 AI 가드레일로 바꿉니다. Confluence, Google Drive, Box, SharePoint, Slack, Gong, Granola를 검색해 회사가 실제로 어떻게 소통하는지 찾아낸 뒤, LLM-ready 브랜드 가이드라인을 만들고 AI 생성 콘텐츠를 그 기준으로 검증합니다. Claude는 더 빠르게 쓰는 데서 그치지 않고, 여러분답게 씁니다.
 
 ## 기능
 
@@ -39,7 +39,7 @@ Sales email, proposal, marketing page, press release 같은 모든 AI-generated 
 ```
 
 ### Open question
-플러그인이 서로 충돌하는 문서, 누락된 가이드라인, 선언된 브랜드와 실제 사용되는 브랜드의 차이처럼 해결할 수 없는 모호성을 만나면 팀 논의용 open question을 표시합니다. 모든 question에는 agent recommendation이 포함되어 모호성을 막다른 길이 아니라 "confirm or override" 상호작용으로 바꿉니다.
+플러그인이 서로 충돌하는 문서, 누락된 가이드라인, 선언된 브랜드와 실제 사용되는 브랜드의 차이처럼 해결할 수 없는 모호성을 만나면 팀 논의용 미해결 질문을 표시합니다. 모든 질문에는 에이전트 추천이 포함되어 모호성을 막다른 길이 아니라 "confirm or override" 상호작용으로 바꿉니다.
 
 ## MCP connector
 

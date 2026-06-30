@@ -1,6 +1,6 @@
 # Design 플러그인
 
-Design productivity 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Design critique, system management, UX writing, accessibility, research synthesis, developer handoff를 돕습니다. 어떤 design team에서도 사용할 수 있으며, 입력만으로 단독 동작하고 Figma 및 다른 tool을 연결하면 더 강력해집니다.
+디자인 생산성 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. 디자인 비평, 디자인 시스템 관리, UX 글쓰기, 접근성, 리서치 종합, 개발자 핸드오프를 돕습니다. 어떤 디자인 팀에서도 사용할 수 있으며, 입력만으로 단독 동작하고 Figma 및 다른 도구를 연결하면 더 강력해집니다.
 
 ## 설치
 
@@ -14,27 +14,27 @@ Slash command로 호출하는 명시적 워크플로입니다:
 
 | 명령 | 설명 |
 |---|---|
-| `/critique` | 사용성, 시각적 계층, 접근성, 일관성에 대한 구조화된 design feedback을 받습니다. |
-| `/design-system` | Component, token, pattern을 중심으로 design system을 audit, document, extend합니다. |
-| `/handoff` | Measurement, token, state, interaction, edge case가 포함된 developer handoff spec을 생성합니다. |
-| `/ux-copy` | Microcopy, error message, empty state, onboarding flow 등 UX copy를 작성하거나 review합니다. |
-| `/accessibility` | WCAG compliance, color contrast, screen reader, keyboard navigation을 포함한 accessibility audit를 실행합니다. |
-| `/research-synthesis` | Interview, survey, usability test 등 user research를 actionable insight로 종합합니다. |
+| `/critique` | 사용성, 시각적 위계, 접근성, 일관성에 대한 구조화된 디자인 피드백을 받습니다. |
+| `/design-system` | 컴포넌트, 토큰, 패턴을 중심으로 디자인 시스템을 감사, 문서화, 확장합니다. |
+| `/handoff` | 치수, 토큰, 상태, 상호작용, 엣지 케이스가 포함된 개발자 핸드오프 명세를 생성합니다. |
+| `/ux-copy` | 마이크로카피, 오류 메시지, 빈 상태, 온보딩 플로우 등 UX 카피를 작성하거나 검토합니다. |
+| `/accessibility` | WCAG 준수, 색상 대비, 스크린 리더, 키보드 탐색을 포함한 접근성 감사를 실행합니다. |
+| `/research-synthesis` | 인터뷰, 설문, 사용성 테스트 등 사용자 리서치를 실행 가능한 인사이트로 종합합니다. |
 
 모든 명령은 design을 설명하거나 screenshot을 붙여넣는 것만으로 **단독** 동작하며, MCP connector를 연결하면 더 강력해집니다.
 
 ## 스킬
 
-관련 상황에서 Claude가 자동으로 사용하는 domain knowledge입니다:
+관련 상황에서 Claude가 자동으로 사용하는 도메인 지식입니다:
 
 | 스킬 | 설명 |
 |---|---|
-| `design-critique` | 사용성, 계층 구조, 일관성에 대한 구조화된 design feedback을 제공합니다. "review this design", "critique this mockup", "what do you think of this screen?" 또는 exploration부터 final polish까지 어느 단계든 Figma link나 screenshot feedback 요청 시 트리거됩니다. |
-| `design-system-management` | Design token, component library, pattern documentation을 관리합니다. |
-| `ux-writing` | Clear, concise, consistent, brand-aligned한 effective microcopy를 작성합니다. |
-| `accessibility-review` | Design 또는 page에 대해 WCAG 2.1 AA accessibility audit를 실행합니다. "audit accessibility", "check a11y", "is this accessible?" 또는 handoff 전 color contrast, keyboard navigation, touch target size, screen reader behavior를 검토할 때 트리거됩니다. |
-| `user-research` | User research를 계획하고 수행하며 종합합니다. "user research plan", "interview guide", "usability test", "survey design", "research questions" 또는 research를 통해 user를 이해하는 모든 단계에 도움이 필요할 때 트리거됩니다. |
-| `design-handoff` | Design에서 developer handoff spec을 생성합니다. Design이 engineering 준비 상태이고 layout, design token, component prop, interaction state, responsive breakpoint, edge case, animation detail을 다루는 spec sheet가 필요할 때 사용합니다. |
+| `design-critique` | 사용성, 계층 구조, 일관성에 대한 구조화된 디자인 피드백을 제공합니다. "review this design", "critique this mockup", "what do you think of this screen?" 또는 탐색부터 최종 다듬기까지 어느 단계든 Figma 링크나 스크린샷 피드백 요청 시 트리거됩니다. |
+| `design-system-management` | 디자인 토큰, 컴포넌트 라이브러리, 패턴 문서를 관리합니다. |
+| `ux-writing` | 명확하고 간결하며 일관되고 브랜드에 맞는 효과적인 마이크로카피를 작성합니다. |
+| `accessibility-review` | 디자인 또는 페이지에 대해 WCAG 2.1 AA 접근성 감사를 실행합니다. "audit accessibility", "check a11y", "is this accessible?" 또는 핸드오프 전 색상 대비, 키보드 탐색, 터치 대상 크기, 스크린 리더 동작을 검토할 때 트리거됩니다. |
+| `user-research` | 사용자 리서치를 계획하고 수행하며 종합합니다. "user research plan", "interview guide", "usability test", "survey design", "research questions" 또는 리서치를 통해 사용자를 이해하는 모든 단계에 도움이 필요할 때 트리거됩니다. |
+| `design-handoff` | 디자인에서 개발자 핸드오프 명세를 생성합니다. 디자인이 엔지니어링 준비 상태이고 레이아웃, 디자인 토큰, 컴포넌트 prop, 상호작용 상태, 반응형 breakpoint, 엣지 케이스, 애니메이션 상세를 다루는 명세서가 필요할 때 사용합니다. |
 
 ## 예시 워크플로
 

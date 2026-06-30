@@ -1,6 +1,6 @@
 # Engineering 플러그인
 
-Software engineering 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Standup, code review, architecture decision, incident response, debugging, technical documentation을 돕습니다. 어떤 engineering team에서도 사용할 수 있으며, 입력만으로도 단독 동작하고 source control, project tracker, monitoring tool을 연결하면 더 강력해집니다.
+소프트웨어 엔지니어링 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. 스탠드업, 코드 리뷰, 아키텍처 의사결정, 인시던트 대응, 디버깅, 기술 문서 작성을 돕습니다. 어떤 엔지니어링 팀에서도 사용할 수 있으며, 입력만으로도 단독 동작하고 소스 관리, 프로젝트 추적기, 모니터링 도구를 연결하면 더 강력해집니다.
 
 ## 설치
 
@@ -14,27 +14,27 @@ Slash command로 호출하는 명시적 워크플로입니다:
 
 | 명령 | 설명 |
 |---|---|
-| `/standup` | Commit, PR, ticket, chat 등 recent activity에서 standup update를 생성합니다. |
-| `/review` | Code change를 security, performance, style, correctness 관점에서 검토합니다. |
-| `/debug` | 재현, 격리, 진단, 수정으로 이어지는 구조화된 debugging session을 실행합니다. |
-| `/architecture` | Trade-off analysis가 포함된 ADR format으로 architecture decision을 작성하거나 평가합니다. |
-| `/incident` | Triage, communication, mitigation, postmortem 작성을 포함한 incident response 워크플로를 실행합니다. |
-| `/deploy-checklist` | Test 검증, change review, dependency check, rollback plan 확인을 포함한 pre-deployment checklist를 생성합니다. |
+| `/standup` | 커밋, PR, 티켓, 채팅 등 최근 활동에서 스탠드업 업데이트를 생성합니다. |
+| `/review` | 코드 변경을 보안, 성능, 스타일, 정확성 관점에서 검토합니다. |
+| `/debug` | 재현, 격리, 진단, 수정으로 이어지는 구조화된 디버깅 세션을 실행합니다. |
+| `/architecture` | 트레이드오프 분석이 포함된 ADR 형식으로 아키텍처 의사결정을 작성하거나 평가합니다. |
+| `/incident` | 분류, 커뮤니케이션, 완화, 사후 분석 작성을 포함한 인시던트 대응 워크플로를 실행합니다. |
+| `/deploy-checklist` | 테스트 검증, 변경 검토, 의존성 점검, 롤백 계획 확인을 포함한 배포 전 체크리스트를 생성합니다. |
 
 모든 명령은 code paste, system description, file upload만으로 **단독** 동작하며, MCP connector를 연결하면 더 강력해집니다.
 
 ## 스킬
 
-관련 상황에서 Claude가 자동으로 사용하는 domain knowledge입니다:
+관련 상황에서 Claude가 자동으로 사용하는 도메인 지식입니다:
 
 | 스킬 | 설명 |
 |---|---|
-| `code-review` | 코드 변경을 security, performance, correctness 관점에서 검토합니다. PR URL 또는 diff, "review this before I merge", "is this code safe?" 또는 N+1 query, injection risk, missing edge case, error handling gap을 확인할 때 트리거됩니다. |
-| `incident-response` | Incident response 워크플로를 실행합니다. Triage, communication, postmortem 작성을 다룹니다. "we have an incident", "production is down", severity assessment가 필요한 alert, incident 중 status update, 해결 후 blameless postmortem 작성 시 트리거됩니다. |
-| `system-design` | 시스템, 서비스, architecture를 설계합니다. "design a system for", "how should we architect", "system design for", "what's the right architecture for" 또는 API design, data modeling, service boundary에 도움이 필요할 때 트리거됩니다. |
-| `tech-debt` | Technical debt를 식별, 분류, 우선순위화합니다. "tech debt", "technical debt audit", "what should we refactor", "code health" 또는 code quality, refactoring priority, maintenance backlog에 대한 질문에서 트리거됩니다. |
-| `testing-strategy` | 테스트 전략과 테스트 계획을 설계합니다. "how should we test", "test strategy for", "write tests for", "test plan", "what tests do we need" 또는 testing approach, coverage, test architecture에 도움이 필요할 때 트리거됩니다. |
-| `documentation` | 기술 문서를 작성하고 유지합니다. "write docs for", "document this", "create a README", "write a runbook", "onboarding guide" 또는 API docs, architecture docs, operational runbook 등 기술 글쓰기에 도움이 필요할 때 트리거됩니다. |
+| `code-review` | 코드 변경을 보안, 성능, 정확성 관점에서 검토합니다. PR URL 또는 diff, "review this before I merge", "is this code safe?" 또는 N+1 쿼리, 인젝션 위험, 누락된 엣지 케이스, 오류 처리 공백을 확인할 때 트리거됩니다. |
+| `incident-response` | 인시던트 대응 워크플로를 실행합니다. 분류, 커뮤니케이션, 사후 분석 작성을 다룹니다. "we have an incident", "production is down", 심각도 평가가 필요한 알림, 인시던트 중 상태 업데이트, 해결 후 비난 없는 사후 분석 작성 시 트리거됩니다. |
+| `system-design` | 시스템, 서비스, 아키텍처를 설계합니다. "design a system for", "how should we architect", "system design for", "what's the right architecture for" 또는 API 설계, 데이터 모델링, 서비스 경계에 도움이 필요할 때 트리거됩니다. |
+| `tech-debt` | 기술 부채를 식별, 분류, 우선순위화합니다. "tech debt", "technical debt audit", "what should we refactor", "code health" 또는 코드 품질, 리팩터링 우선순위, 유지보수 백로그에 대한 질문에서 트리거됩니다. |
+| `testing-strategy` | 테스트 전략과 테스트 계획을 설계합니다. "how should we test", "test strategy for", "write tests for", "test plan", "what tests do we need" 또는 테스트 접근 방식, 커버리지, 테스트 아키텍처에 도움이 필요할 때 트리거됩니다. |
+| `documentation` | 기술 문서를 작성하고 유지합니다. "write docs for", "document this", "create a README", "write a runbook", "onboarding guide" 또는 API 문서, 아키텍처 문서, 운영 런북 등 기술 글쓰기에 도움이 필요할 때 트리거됩니다. |
 
 ## 예시 워크플로
 

@@ -1,6 +1,6 @@
 # Operations 플러그인
 
-Business operations 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Vendor management, process documentation, change management, capacity planning, compliance tracking, resource planning을 돕습니다. 어떤 ops team에서도 사용할 수 있으며, 입력만으로 단독 동작하고 ITSM, project tracker 및 다른 tool을 연결하면 더 강력해집니다.
+비즈니스 운영 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. 벤더 관리, 프로세스 문서화, 변경 관리, 수용량 계획, 컴플라이언스 추적, 리소스 계획을 돕습니다. 어떤 운영 팀에서도 사용할 수 있으며, 입력만으로 단독 동작하고 ITSM, 프로젝트 추적기 및 다른 도구를 연결하면 더 강력해집니다.
 
 ## 설치
 
@@ -14,25 +14,25 @@ Slash command로 호출하는 명시적 워크플로입니다:
 
 | 명령 | 설명 |
 |---|---|
-| `/vendor-review` | Cost analysis, risk assessment, contract summary, renewal recommendation으로 vendor를 평가합니다. |
-| `/process-doc` | Flowchart, RACI matrix, SOP, runbook으로 business process를 문서화합니다. |
-| `/change-request` | Impact analysis, rollback plan, approval routing이 포함된 change management request를 작성합니다. |
-| `/capacity-plan` | Workload analysis, headcount modeling, utilization forecasting으로 resource capacity를 계획합니다. |
-| `/status-report` | Leadership용 project update, KPI, risk, action item이 포함된 status report를 생성합니다. |
-| `/runbook` | Recurring task를 위한 step-by-step operational runbook을 생성하거나 update합니다. |
+| `/vendor-review` | 비용 분석, 위험 평가, 계약 요약, 갱신 추천으로 벤더를 평가합니다. |
+| `/process-doc` | 흐름도, RACI 매트릭스, SOP, 런북으로 비즈니스 프로세스를 문서화합니다. |
+| `/change-request` | 영향 분석, 롤백 계획, 승인 라우팅이 포함된 변경 관리 요청을 작성합니다. |
+| `/capacity-plan` | 업무량 분석, 인원 모델링, 활용률 예측으로 리소스 수용량을 계획합니다. |
+| `/status-report` | 리더십용 프로젝트 업데이트, KPI, 위험, 액션 아이템이 포함된 상태 보고서를 생성합니다. |
+| `/runbook` | 반복 작업을 위한 단계별 운영 런북을 생성하거나 업데이트합니다. |
 
 모든 명령은 context와 detail만 제공해도 **단독**으로 동작하며, MCP connector를 연결하면 더 강력해집니다.
 
 ## 스킬
 
-관련 상황에서 Claude가 자동으로 사용하는 domain knowledge입니다:
+관련 상황에서 Claude가 자동으로 사용하는 도메인 지식입니다:
 
 | 스킬 | 설명 |
 |---|---|
 | `vendor-management` | Contract, performance, risk 기준으로 vendor relationship을 evaluate, compare, manage합니다. |
-| `process-optimization` | Business process를 분석하고 개선합니다. "this process is slow", "how can we improve", "streamline this workflow", "too many steps", "bottleneck" 또는 사용자가 고치고 싶은 비효율적인 process를 설명할 때 트리거됩니다. |
+| `process-optimization` | 비즈니스 프로세스를 분석하고 개선합니다. "this process is slow", "how can we improve", "streamline this workflow", "too many steps", "bottleneck" 또는 사용자가 고치고 싶은 비효율적인 프로세스를 설명할 때 트리거됩니다. |
 | `change-management` | Communication, training, adoption을 포함해 organizational 또는 technical change를 계획하고 실행합니다. |
-| `risk-assessment` | Operational risk를 식별, 평가, 완화합니다. "what are the risks", "risk assessment", "risk register", "what could go wrong" 또는 project, vendor, process, decision 관련 risk를 평가할 때 트리거됩니다. |
+| `risk-assessment` | 운영 위험을 식별, 평가, 완화합니다. "what are the risks", "risk assessment", "risk register", "what could go wrong" 또는 프로젝트, 벤더, 프로세스, 의사결정 관련 위험을 평가할 때 트리거됩니다. |
 | `compliance-tracking` | Compliance requirement와 audit readiness를 track합니다. "compliance", "audit prep", "SOC 2", "ISO 27001", "GDPR", "regulatory requirement" 또는 compliance activity tracking/preparation/documentation에 도움이 필요할 때 트리거됩니다. |
 | `resource-planning` | Capacity, utilization, forecasting, budget 기준으로 resource allocation을 계획하고 optimize합니다. |
 
