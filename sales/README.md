@@ -10,7 +10,7 @@ claude plugins add knowledge-work-plugins/sales
 
 ## 명령
 
-Slash command로 호출하는 명시적 워크플로입니다:
+Slash command로 호출하는 명시적 워크플로입니다.
 
 | 명령 | 설명 |
 |---|---|
@@ -22,7 +22,7 @@ Slash command로 호출하는 명시적 워크플로입니다:
 
 ## 스킬
 
-관련 상황에서 Claude가 자동으로 사용하는 도메인 지식입니다:
+관련 상황에서 Claude가 자동으로 사용하는 도메인 지식입니다.
 
 | 스킬 | 설명 |
 |---|---|
@@ -86,7 +86,7 @@ Competitor X와 비교하면 우리는 어때?
 
 ## 단독 사용과 통합 사용
 
-모든 명령과 스킬은 integration 없이도 동작합니다:
+모든 명령과 스킬은 integration 없이도 동작합니다.
 
 | 할 수 있는 일 | 단독 사용 | 통합 사용 시 |
 |-----------------|------------|-------------------|
@@ -100,9 +100,9 @@ Competitor X와 비교하면 우리는 어때?
 
 ## MCP 통합
 
-> 익숙하지 않은 placeholder가 보이거나 연결된 tool을 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
+> 익숙하지 않은 placeholder가 보이거나 연결된 도구를 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
-더 풍부한 경험을 위해 tool을 연결하세요:
+더 풍부한 경험을 위해 도구를 연결하세요.
 
 | 범주 | 예시 | 가능해지는 일 |
 |---|---|---|
@@ -115,7 +115,7 @@ Email, calendar, 추가 CRM option을 포함한 지원 integration 전체 목록
 
 ## 설정
 
-개인화를 위해 `settings.local.json` file을 만드세요:
+개인화를 위해 `settings.local.json` 설정 파일을 만드세요.
 
 - **Cowork**: Folder picker로 Cowork와 공유한 아무 folder에 저장합니다. Plugin이 자동으로 찾습니다.
 - **Claude Code**: `sales/.claude/settings.local.json`에 저장합니다.
