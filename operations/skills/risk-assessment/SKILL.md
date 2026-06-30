@@ -1,6 +1,6 @@
 ---
 name: risk-assessment
-description: Operational risk를 identify, assess, mitigate합니다. "what are the risks", "risk assessment", "risk register", "what could go wrong" 또는 project, vendor, process, decision 관련 risk를 평가할 때 트리거됩니다.
+description: Operational risk를 식별, 평가, 완화합니다. "what are the risks", "risk assessment", "risk register", "what could go wrong" 또는 project, vendor, process, decision 관련 risk를 평가할 때 트리거됩니다.
 ---
 
 # Risk Assessment

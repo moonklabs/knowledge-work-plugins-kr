@@ -1,6 +1,6 @@
 ---
 name: plan-zoom-integration
-description: Turn a Zoom integration idea into an implementation plan with architecture, auth, and delivery milestones. Use when you need a practical build plan, phased delivery sequence, risk list, and next-step recommendation.
+description: Zoom integration idea를 architecture, auth, delivery milestone이 포함된 implementation plan으로 바꿉니다. Practical build plan, phased delivery sequence, risk list, next-step recommendation이 필요할 때 사용합니다.
 argument-hint: "<what you want to build>"
 user-invocable: false
 ---

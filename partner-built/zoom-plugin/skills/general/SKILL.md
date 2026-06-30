@@ -1,6 +1,6 @@
 ---
 name: zoom-general
-description: Cross-product Zoom reference skill. Use after the workflow is clear when you need shared platform guidance, app-model comparisons, authentication context, scopes, marketplace considerations, or API-vs-MCP routing.
+description: Cross-product Zoom reference skill입니다. 워크플로가 명확해진 뒤 shared platform guidance, app-model comparison, authentication context, scope, marketplace consideration, API-vs-MCP routing이 필요할 때 사용합니다.
 user-invocable: false
 triggers:
   - "zoom integration"

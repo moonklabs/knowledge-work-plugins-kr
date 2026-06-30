@@ -1,6 +1,6 @@
 ---
 name: setup-zoom-oauth
-description: Implement Zoom authentication correctly. Use when setting up app credentials, choosing an OAuth grant, requesting scopes, handling token refresh, or debugging auth failures.
+description: Zoom authentication을 올바르게 구현합니다. App credential 설정, OAuth grant 선택, scope 요청, token refresh 처리, auth failure debugging에 사용합니다.
 ---
 
 # /setup-zoom-oauth

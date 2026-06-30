@@ -1,6 +1,6 @@
 ---
 name: build-zoom-bot
-description: Build a Zoom meeting bot, recorder, or real-time media workflow. Use when joining meetings programmatically, processing live media or transcripts, or combining Meeting SDK, RTMS, and backend services.
+description: Zoom meeting bot, recorder, real-time media 워크플로를 만듭니다. Meeting에 programmatic하게 join하거나, live media/transcript를 처리하거나, Meeting SDK, RTMS, backend service를 결합할 때 사용합니다.
 ---
 
 # /build-zoom-bot

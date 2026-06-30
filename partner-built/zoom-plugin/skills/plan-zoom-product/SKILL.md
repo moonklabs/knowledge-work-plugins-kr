@@ -1,6 +1,6 @@
 ---
 name: plan-zoom-product
-description: Choose the right Zoom building surface for a use case and explain the tradeoffs clearly. Use when deciding between REST API, Webhooks, WebSockets, Meeting SDK, Video SDK, Zoom Apps SDK, Phone, Contact Center, or MCP for a specific product idea or integration goal.
+description: Use case에 맞는 Zoom building surface를 선택하고 trade-off를 명확히 설명합니다. Specific product idea 또는 integration goal에 대해 REST API, Webhooks, WebSockets, Meeting SDK, Video SDK, Zoom Apps SDK, Phone, Contact Center, MCP 사이에서 결정할 때 사용합니다.
 argument-hint: "<product idea, app type, or integration goal>"
 user-invocable: false
 ---

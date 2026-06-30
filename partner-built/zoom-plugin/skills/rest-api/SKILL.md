@@ -1,6 +1,6 @@
 ---
 name: build-zoom-rest-api-app
-description: "Reference skill for Zoom REST API. Use after choosing an API-based workflow when you need endpoint selection, resource-management patterns, OAuth requirements, rate-limit awareness, or API error debugging."
+description: Zoom REST API reference skill입니다. API-based 워크플로를 선택한 뒤 endpoint selection, resource-management pattern, OAuth requirement, rate-limit awareness, API error debugging이 필요할 때 사용합니다.
 triggers:
   - "api call"
   - "rest api"

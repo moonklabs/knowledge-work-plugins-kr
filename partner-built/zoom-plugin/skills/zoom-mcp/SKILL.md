@@ -1,6 +1,6 @@
 ---
 name: zoom-mcp
-description: Guidance for the bundled Zoom MCP connectors. Use after routing to an MCP workflow when planning or troubleshooting tool-based access to meetings, recordings, meeting assets, or transcripts. Route Zoom Docs requests to the dedicated Docs MCP server and Whiteboard-specific requests to `zoom-mcp/whiteboard`.
+description: Bundled Zoom MCP connector에 대한 guidance입니다. MCP 워크플로로 routing된 뒤 meeting, recording, meeting asset, transcript에 대한 tool-based access를 planning하거나 troubleshooting할 때 사용합니다. Zoom Docs request는 dedicated Docs MCP server로, Whiteboard-specific request는 `zoom-mcp/whiteboard`로 route합니다.
 user-invocable: false
 triggers:
   - "zoom mcp"

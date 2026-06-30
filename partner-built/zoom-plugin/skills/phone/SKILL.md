@@ -1,6 +1,6 @@
 ---
 name: build-zoom-phone-integration
-description: "Reference skill for Zoom Phone. Use after routing to a phone workflow when implementing OAuth, Phone APIs, webhooks, Smart Embed events, URI schemes, CRM or CTI dialers, or call handling automation."
+description: Zoom Phone reference skill입니다. Phone 워크플로로 routing된 뒤 OAuth, Phone API, webhook, Smart Embed event, URI scheme, CRM/CTI dialer, call handling automation을 구현할 때 사용합니다.
 triggers:
   - "zoom phone"
   - "phone smart embed"

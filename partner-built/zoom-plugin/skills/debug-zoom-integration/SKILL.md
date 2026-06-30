@@ -1,6 +1,6 @@
 ---
 name: debug-zoom-integration
-description: Debug broken Zoom implementations quickly. Use when auth, webhooks, SDK joins, MCP transport, or real-time media workflows are failing and you need to isolate the layer before proposing a fix.
+description: 깨진 Zoom implementation을 빠르게 debug합니다. Auth, webhook, SDK join, MCP transport, real-time media 워크플로가 실패하고 fix 제안 전에 layer를 isolate해야 할 때 사용합니다.
 user-invocable: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: process-doc
-description: Document a business process — flowcharts, RACI, and SOPs. Use when formalizing a process that lives in someone's head, building a RACI to clarify who owns what, writing an SOP for a handoff or audit, or capturing the exceptions and edge cases of how work actually gets done.
+description: Business process를 문서화합니다. Flowchart, RACI, SOP를 포함합니다. 누군가의 머릿속에만 있는 process를 formalize하거나, 누가 무엇을 owns하는지 명확히 하는 RACI를 만들거나, handoff/audit용 SOP를 작성하거나, 실제 work가 처리되는 exception과 edge case를 포착할 때 사용합니다.
 argument-hint: "<process name or description>"
 ---
 

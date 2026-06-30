@@ -1,6 +1,6 @@
 {
   "name": "slack-by-salesforce",
-  "description": "Official Slack MCP server for interactive and collaborative workflows. Surface insights, draft messages, and engage teams directly within Slack from Claude Cowork.",
+  "description": "Interactive하고 collaborative한 워크플로를 위한 official Slack MCP server입니다. Claude Cowork에서 Slack 안으로 insight를 surface하고 message를 draft하며 team과 직접 engage합니다.",
   "version": "1.0.0",
   "author": {
     "name": "Salesforce",

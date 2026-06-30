@@ -1,9 +1,16 @@
 {
   "name": "common-room",
   "version": "1.0.0",
-  "description": "Turn Common Room into your GTM copilot. Research accounts and contacts, prep for calls with attendee profiles and talking points, and draft personalized outreach across email, LinkedIn, and phone. Build targeted prospect lists, generate weekly briefings for every upcoming call, and create strategic account plans — all grounded in real signal data from product usage, engagement and intent signals, so every output reflects what's actually happening in your accounts.",
+  "description": "Common Room을 GTM copilot으로 바꿉니다. Account와 contact를 research하고 attendee profile과 talking point로 call을 준비하며 email, LinkedIn, phone 전반의 personalized outreach 초안을 작성합니다. Targeted prospect list, upcoming call별 weekly briefing, strategic account plan을 생성하며 모든 output은 product usage, engagement, intent signal의 real signal data에 기반해 account에서 실제 일어나는 일을 반영합니다.",
   "author": {
     "name": "Common Room"
   },
-  "keywords": ["common-room", "sales", "gtm", "account-research", "prospecting", "outreach"]
+  "keywords": [
+    "common-room",
+    "sales",
+    "gtm",
+    "account-research",
+    "prospecting",
+    "outreach"
+  ]
 }

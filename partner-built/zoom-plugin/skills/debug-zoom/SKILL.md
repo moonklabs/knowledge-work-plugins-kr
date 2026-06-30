@@ -1,6 +1,6 @@
 ---
 name: debug-zoom
-description: Debug a broken Zoom integration by isolating the failure point and routing into the right Zoom references. Use when auth, API, webhook, SDK, or MCP behavior is failing and you need a ranked hypothesis list plus verification steps.
+description: Failure point를 isolate하고 적절한 Zoom reference로 routing해 깨진 Zoom integration을 debug합니다. Auth, API, webhook, SDK, MCP behavior가 실패하고 ranked hypothesis list와 verification step이 필요할 때 사용합니다.
 argument-hint: "<symptoms, error, or failing flow>"
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: weekly-prep-brief
-description: "Generate a comprehensive weekly briefing for all external calls in the next 7 days. Triggers on 'weekly prep brief', 'prepare my week', 'what calls do I have this week', 'Monday prep', or any weekly planning request."
+description: 다음 7일 동안의 모든 external call에 대한 comprehensive weekly briefing을 생성합니다. 'weekly prep brief', 'prepare my week', 'what calls do I have this week', 'Monday prep' 또는 weekly planning request에서 트리거됩니다.
 ---
 
 # Weekly Prep Brief

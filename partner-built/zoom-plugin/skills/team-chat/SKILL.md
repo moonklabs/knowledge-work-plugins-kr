@@ -1,6 +1,6 @@
 ---
 name: build-zoom-team-chat-app
-description: "Reference skill for Zoom Team Chat. Use after routing to a chat workflow when building user-scoped messaging integrations, chatbot experiences, rich cards, buttons, slash commands, or chat webhooks."
+description: Zoom Team Chat reference skill입니다. Chat 워크플로로 routing된 뒤 user-scoped messaging integration, chatbot experience, rich card, button, slash command, chat webhook을 만들 때 사용합니다.
 triggers:
   - "zoom team chat"
   - "zoom chatbot"

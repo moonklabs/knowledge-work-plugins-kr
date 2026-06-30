@@ -1,6 +1,6 @@
 ---
 name: zoom-apps-sdk
-description: Reference skill for Zoom Apps SDK. Use after routing to an in-client app workflow when building web apps that run inside Zoom meetings, webinars, the main client, or Zoom Phone.
+description: Zoom Apps SDK reference skill입니다. In-client app 워크플로로 routing된 뒤 Zoom meeting, webinar, main client, Zoom Phone 안에서 실행되는 web app을 만들 때 사용합니다.
 user-invocable: false
 triggers:
   - "zoom app"

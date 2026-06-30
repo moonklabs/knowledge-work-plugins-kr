@@ -1,6 +1,6 @@
 ---
 name: build-zoom-virtual-agent
-description: "Reference skill for Zoom Virtual Agent. Use after routing to a virtual-agent workflow when implementing web embeds, Android or iOS wrapper integrations, knowledge-base sync, lifecycle handling, or troubleshooting."
+description: Zoom Virtual Agent reference skill입니다. Virtual-agent 워크플로로 routing된 뒤 web embed, Android/iOS wrapper integration, knowledge-base sync, lifecycle handling, troubleshooting을 구현할 때 사용합니다.
 triggers:
   - "virtual agent"
   - "zva"

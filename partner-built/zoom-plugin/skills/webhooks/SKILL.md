@@ -1,6 +1,6 @@
 ---
 name: setup-zoom-webhooks
-description: Reference skill for Zoom webhooks. Use after routing to an event-driven workflow when implementing subscriptions, signature verification, delivery handling, retries, or event-type selection.
+description: Zoom webhook reference skill입니다. Event-driven 워크플로로 routing된 뒤 subscription, signature verification, delivery handling, retry, event-type selection을 구현할 때 사용합니다.
 triggers:
   - "zoom webhook"
   - "webhook signature"

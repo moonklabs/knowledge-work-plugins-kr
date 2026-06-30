@@ -1,5 +1,5 @@
 ---
-description: Generate a weekly prep briefing from your calendar and Common Room
+description: Calendar와 Common Room에서 weekly prep briefing을 생성합니다
 argument-hint: [date range, defaults to next 7 days]
 ---
 

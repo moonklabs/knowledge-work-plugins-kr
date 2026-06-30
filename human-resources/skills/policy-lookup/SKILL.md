@@ -1,6 +1,6 @@
 ---
 name: policy-lookup
-description: Find and explain company policies in plain language. Trigger with "what's our PTO policy", "can I work remotely from another country", "how do expenses work", or any plain-language question about benefits, travel, leave, or handbook rules.
+description: Company policy를 찾아 plain language로 설명합니다. "what's our PTO policy", "can I work remotely from another country", "how do expenses work" 또는 benefit, travel, leave, handbook rule에 대한 plain-language question에서 트리거됩니다.
 argument-hint: "<policy topic — PTO, benefits, travel, expenses, etc.>"
 ---
 

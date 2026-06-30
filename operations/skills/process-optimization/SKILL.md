@@ -1,6 +1,6 @@
 ---
 name: process-optimization
-description: Business process를 analyze하고 improve합니다. "this process is slow", "how can we improve", "streamline this workflow", "too many steps", "bottleneck" 또는 사용자가 고치고 싶은 inefficient process를 설명할 때 트리거됩니다.
+description: Business process를 분석하고 개선합니다. "this process is slow", "how can we improve", "streamline this workflow", "too many steps", "bottleneck" 또는 사용자가 고치고 싶은 inefficient process를 설명할 때 트리거됩니다.
 ---
 
 # Process Optimization

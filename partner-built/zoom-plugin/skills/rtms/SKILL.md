@@ -1,6 +1,6 @@
 ---
 name: zoom-rtms
-description: Reference skill for Zoom RTMS. Use after routing to a live-media workflow when processing real-time audio, video, chat, transcripts, screen share, or contact-center voice streams.
+description: Zoom RTMS reference skill입니다. Live-media 워크플로로 routing된 뒤 real-time audio, video, chat, transcript, screen share, contact-center voice stream을 처리할 때 사용합니다.
 user-invocable: false
 triggers:
   - "real-time media"

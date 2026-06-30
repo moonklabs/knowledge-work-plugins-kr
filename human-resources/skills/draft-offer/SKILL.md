@@ -1,6 +1,6 @@
 ---
 name: draft-offer
-description: Draft an offer letter with comp details and terms. Use when a candidate is ready for an offer, assembling a total comp package (base, equity, signing bonus), writing the offer letter text itself, or prepping negotiation guidance for the hiring manager.
+description: Comp detail과 term이 포함된 offer letter 초안을 작성합니다. Candidate가 offer 준비 상태이거나, total comp package(base, equity, signing bonus)를 구성하거나, offer letter text를 작성하거나, hiring manager용 negotiation guidance를 준비할 때 사용합니다.
 argument-hint: "<role and level>"
 ---
 

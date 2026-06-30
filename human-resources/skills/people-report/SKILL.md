@@ -1,6 +1,6 @@
 ---
 name: people-report
-description: Generate headcount, attrition, diversity, or org health reports. Use when pulling a headcount snapshot for leadership, analyzing turnover trends by team, preparing diversity representation metrics, or assessing span of control and flight risk across the org.
+description: Headcount, attrition, diversity, org health report를 생성합니다. Leadership용 headcount snapshot, team별 turnover trend analysis, diversity representation metric 준비, 조직 전반의 span of control과 flight risk assessment에 사용합니다.
 argument-hint: "<report type — headcount, attrition, diversity, org health>"
 ---
 

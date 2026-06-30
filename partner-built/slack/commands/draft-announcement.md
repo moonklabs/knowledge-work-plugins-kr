@@ -1,5 +1,5 @@
 ---
-description: Draft a well-formatted Slack announcement and save it as a draft
+description: Well-formatted Slack announcement를 작성하고 draft로 저장합니다
 ---
 
 Given the topic or context provided in $ARGUMENTS:

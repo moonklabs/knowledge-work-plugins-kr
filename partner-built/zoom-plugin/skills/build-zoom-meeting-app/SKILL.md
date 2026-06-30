@@ -1,6 +1,6 @@
 ---
 name: build-zoom-meeting-app
-description: Build or embed a Zoom meeting flow. Use when implementing Meeting SDK joins, web or mobile meeting embeds, meeting lifecycle flows, or when deciding between Meeting SDK and Video SDK.
+description: Zoom meeting flow를 build하거나 embed합니다. Meeting SDK join, web/mobile meeting embed, meeting lifecycle flow 구현 또는 Meeting SDK와 Video SDK 사이에서 결정할 때 사용합니다.
 ---
 
 # /build-zoom-meeting-app

@@ -1,6 +1,6 @@
 ---
 name: choose-zoom-approach
-description: Choose the right Zoom architecture for a use case. Use when deciding between REST API, Webhooks, WebSockets, Meeting SDK, Video SDK, Zoom Apps SDK, Zoom MCP, Phone, Contact Center, or a hybrid approach.
+description: Use case에 맞는 Zoom architecture를 선택합니다. REST API, Webhooks, WebSockets, Meeting SDK, Video SDK, Zoom Apps SDK, Zoom MCP, Phone, Contact Center 또는 hybrid approach 사이에서 결정할 때 사용합니다.
 user-invocable: false
 ---
 

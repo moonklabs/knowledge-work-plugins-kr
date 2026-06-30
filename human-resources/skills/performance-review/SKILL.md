@@ -1,6 +1,6 @@
 ---
 name: performance-review
-description: Structure a performance review with self-assessment, manager template, and calibration prep. Use when review season kicks off and you need a self-assessment template, writing a manager review for a direct report, prepping rating distributions and promotion cases for calibration, or turning vague feedback into specific behavioral examples.
+description: Self-assessment, manager template, calibration prep이 포함된 performance review를 구조화합니다. Review season 시작 시 self-assessment template이 필요하거나, direct report의 manager review 작성, calibration용 rating distribution 및 promotion case 준비, vague feedback을 specific behavioral example로 바꿀 때 사용합니다.
 argument-hint: "<employee name or review cycle>"
 ---
 

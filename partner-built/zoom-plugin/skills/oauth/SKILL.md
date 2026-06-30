@@ -1,6 +1,6 @@
 ---
 name: zoom-oauth
-description: Reference skill for Zoom authentication. Use after routing to an auth workflow when choosing app credentials, grant types, scopes, token refresh behavior, or debugging Zoom OAuth failures.
+description: Zoom authentication reference skill입니다. Auth 워크플로로 routing된 뒤 app credential, grant type, scope, token refresh behavior를 선택하거나 Zoom OAuth failure를 debug할 때 사용합니다.
 user-invocable: false
 triggers:
   - zoom oauth

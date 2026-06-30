@@ -1,6 +1,6 @@
 ---
 name: build-zoom-meeting-sdk-app
-description: Reference skill for Zoom Meeting SDK. Use after routing to a meeting-embed workflow when implementing real Zoom meeting joins, platform-specific SDK behavior, auth and join flows, waiting room issues, or meeting bot patterns.
+description: Zoom Meeting SDK reference skill입니다. Meeting-embed 워크플로로 routing된 뒤 real Zoom meeting join, platform-specific SDK behavior, auth/join flow, waiting room issue, meeting bot pattern을 구현할 때 사용합니다.
 triggers:
   - "embed meeting"
   - "embed zoom meeting"

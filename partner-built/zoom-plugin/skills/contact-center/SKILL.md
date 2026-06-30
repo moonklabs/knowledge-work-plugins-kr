@@ -1,6 +1,6 @@
 ---
 name: build-zoom-contact-center-app
-description: "Reference skill for Zoom Contact Center. Use after routing to a contact-center workflow when implementing app, web, or native integrations; engagement context and state handling; campaigns; callbacks; or version-drift troubleshooting."
+description: Zoom Contact Center reference skill입니다. Contact-center 워크플로로 routing된 뒤 app, web, native integration, engagement context/state handling, campaign, callback, version-drift troubleshooting을 구현할 때 사용합니다.
 triggers:
   - "contact center sdk"
   - "zoom contact center"

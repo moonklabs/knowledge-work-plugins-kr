@@ -1,6 +1,6 @@
 ---
 name: ui-toolkit/web
-description: "Reference skill for Zoom Video SDK UI Toolkit. Use after routing to a web video workflow when you want prebuilt React UI instead of building a fully custom Video SDK interface."
+description: Zoom Video SDK UI Toolkit reference skill입니다. Web video 워크플로로 routing된 뒤 fully custom Video SDK interface 대신 prebuilt React UI를 원할 때 사용합니다.
 user-invocable: false
 triggers:
   - "ui toolkit"

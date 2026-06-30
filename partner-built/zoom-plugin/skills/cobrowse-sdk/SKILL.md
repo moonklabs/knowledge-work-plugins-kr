@@ -1,6 +1,6 @@
 ---
 name: zoom-cobrowse-sdk
-description: "Reference skill for Zoom Cobrowse SDK. Use after routing to a collaborative-support workflow when implementing browser co-browsing, annotation tools, privacy masking, remote assist, or PIN-based session sharing."
+description: Zoom Cobrowse SDK reference skill입니다. Collaborative-support 워크플로로 routing된 뒤 browser co-browsing, annotation tool, privacy masking, remote assist, PIN-based session sharing을 구현할 때 사용합니다.
 user-invocable: false
 triggers:
   - "cobrowse"

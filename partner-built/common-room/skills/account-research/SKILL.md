@@ -1,6 +1,6 @@
 ---
 name: account-research
-description: "Research a company using Common Room data. Triggers on 'research [company]', 'tell me about [domain]', 'pull up signals for [account]', 'what's going on with [company]', or any account-level question."
+description: Common Room data를 사용해 company를 research합니다. 'research [company]', 'tell me about [domain]', 'pull up signals for [account]', 'what's going on with [company]' 또는 account-level question에서 트리거됩니다.
 ---
 
 # Account Research

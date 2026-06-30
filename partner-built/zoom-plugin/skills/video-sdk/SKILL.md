@@ -1,6 +1,6 @@
 ---
 name: build-zoom-video-sdk-app
-description: Reference skill for Zoom Video SDK. Use after routing to a custom-session workflow when the user needs full control over the video experience rather than an actual Zoom meeting.
+description: Zoom Video SDK reference skill입니다. 실제 Zoom meeting이 아니라 video experience를 완전히 control해야 하는 custom-session 워크플로로 routing된 뒤 사용합니다.
 triggers:
   - "custom video"
   - "video sdk"

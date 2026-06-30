@@ -1,6 +1,6 @@
 ---
 name: scribe
-description: "Reference skill for Zoom AI Services Scribe. Use after routing to a transcription workflow when handling uploaded or stored media, Build-platform JWT auth, fast mode transcription, batch jobs, or transcript pipeline design."
+description: Zoom AI Services Scribe reference skill입니다. Transcription 워크플로로 routing된 뒤 uploaded/stored media, Build-platform JWT auth, fast mode transcription, batch job, transcript pipeline design을 처리할 때 사용합니다.
 user-invocable: false
 triggers:
   - "scribe"

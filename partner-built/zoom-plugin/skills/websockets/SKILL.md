@@ -1,6 +1,6 @@
 ---
 name: setup-zoom-websockets
-description: Reference skill for Zoom WebSockets. Use after routing to a low-latency event workflow when persistent connections, faster event delivery, or security constraints make WebSockets preferable to webhooks.
+description: Zoom WebSockets reference skill입니다. Low-latency event 워크플로로 routing된 뒤 persistent connection, faster event delivery, security constraint 때문에 WebSocket이 webhook보다 적합할 때 사용합니다.
 triggers:
   - "zoom websockets"
   - "websocket event subscription"

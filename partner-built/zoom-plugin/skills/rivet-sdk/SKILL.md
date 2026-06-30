@@ -1,6 +1,6 @@
 ---
 name: rivet-sdk
-description: "Reference skill for Zoom Rivet SDK. Use after routing to a Rivet-based server workflow when implementing auth handling, webhook consumers, API wrappers, multi-module composition, or Lambda receiver patterns."
+description: Zoom Rivet SDK reference skill입니다. Rivet-based server 워크플로로 routing된 뒤 auth handling, webhook consumer, API wrapper, multi-module composition, Lambda receiver pattern을 구현할 때 사용합니다.
 user-invocable: false
 triggers:
   - "rivet"

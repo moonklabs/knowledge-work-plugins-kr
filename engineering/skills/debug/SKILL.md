@@ -1,6 +1,6 @@
 ---
 name: debug
-description: Structured debugging session입니다. Reproduce, isolate, diagnose, fix를 진행합니다. Error message나 stack trace, "this works in staging but not prod", "something broke after the deploy" 또는 behavior가 expected와 다르고 cause가 obvious하지 않을 때 트리거됩니다.
+description: 구조화된 debugging session입니다. Reproduce, isolate, diagnose, fix를 진행합니다. Error message나 stack trace, "this works in staging but not prod", "something broke after the deploy" 또는 behavior가 expected와 다르고 cause가 obvious하지 않을 때 트리거됩니다.
 argument-hint: "<error message or problem description>"
 ---
 
