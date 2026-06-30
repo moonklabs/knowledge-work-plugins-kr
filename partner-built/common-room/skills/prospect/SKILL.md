@@ -1,6 +1,6 @@
 ---
 name: prospect
-description: Common Room 잠재고객or를 사용해 타깃 계정 또는 연락처 목록를 만듭니다. 'find companies that match [criteria]', 'build a prospect list', 'find contacts at [type of company]', 'show me companies hiring [role]' 또는 list-building 요청에서 트리거됩니다.
+description: Common Room Prospector를 사용해 타깃 계정 또는 연락처 목록을 만듭니다. 'find companies that match [criteria]', 'build a prospect list', 'find contacts at [type of company]', 'show me companies hiring [role]' 또는 list-building 요청에서 트리거됩니다.
 ---
 
 # Prospecting

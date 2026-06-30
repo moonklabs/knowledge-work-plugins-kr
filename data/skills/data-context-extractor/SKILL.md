@@ -2,12 +2,12 @@
 
 name: data-context-extractor
 description: >-
-  분석가의 현장 지식을 추출해 회사별 data analysis skill을 생성하거나 개선합니다. BOOTSTRAP MODE 트리거: "Create a data context skill",
+  분석가의 현장 지식을 추출해 회사별 데이터 분석 스킬을 생성하거나 개선합니다. BOOTSTRAP MODE 트리거: "Create a data context skill",
   "Set up data analysis for our warehouse", "Help me create a skill for our database", "Generate a data skill
   for [company]". 이 모드에서는 schema를 발견하고 핵심 질문을 한 뒤 reference file이 포함된 초기 skill을 생성합니다. ITERATION MODE 트리거:
   "Add context about [domain]", "The skill needs more info about [topic]", "Update the data skill with
   [metrics/tables/terminology]", "Improve the [domain] reference". 이 모드에서는 기존 skill을 불러오고 targeted question을 한
-  뒤 reference file을 추가하거나 갱신합니다. Data analyst가 Claude에게 회사의 data warehouse, terminology, metric definition,
+  뒤 reference file을 추가하거나 갱신합니다. 데이터 분석가가 Claude에게 회사의 data warehouse, terminology, metric definition,
   common query pattern을 이해시키려 할 때 사용합니다.
 ---
 

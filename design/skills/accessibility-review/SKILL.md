@@ -1,6 +1,6 @@
 ---
 name: accessibility-review
-description: 디자인 또는 페이지에 대해 WCAG 2.1 AA 접근성 감사를 실행합니다. "audit accessibility", "check a11y", "is this accessible?" 또는 handoff 전 색상 대비, 키보드 탐색, 터치 대상 크기, 스크린 리더 동작를 검토할 때 트리거됩니다.
+description: 디자인 또는 페이지에 대해 WCAG 2.1 AA 접근성 감사를 실행합니다. "audit accessibility", "check a11y", "is this accessible?" 또는 handoff 전 색상 대비, 키보드 탐색, 터치 대상 크기, 스크린 리더 동작을 검토할 때 트리거됩니다.
 argument-hint: "<Figma URL, URL, or description>"
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: forecast
-description: 최선/기준/최악 시나리오, commit 대비 upside breakdown, 갭 분석가 포함된 가중 영업 전망를 생성합니다. 분기 전망 회의 준비, 파이프라인 CSV에서 쿼터 대비 갭 평가, commit 거래과 upside 거래 결정, 숫자 대비 파이프라인 커버리지 확인에 사용합니다.
+description: 최선/기준/최악 시나리오, commit 대비 upside breakdown, 갭 분석이 포함된 가중 영업 전망을 생성합니다. 분기 전망 회의 준비, 파이프라인 CSV에서 쿼터 대비 갭 평가, commit 거래와 upside 거래 결정, 숫자 대비 파이프라인 커버리지 확인에 사용합니다.
 argument-hint: "<period>"
 ---
 

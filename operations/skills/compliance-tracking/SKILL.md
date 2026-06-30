@@ -1,6 +1,6 @@
 ---
 name: compliance-tracking
-description: 컴플라이언스 요구사항와 감사 준비 상태를 추적합니다. "compliance", "audit prep", "SOC 2", "ISO 27001", "GDPR", "regulatory requirement" 또는 컴플라이언스 활동 추적/준비/문서화에 도움이 필요할 때 트리거됩니다.
+description: 컴플라이언스 요구사항과 감사 준비 상태를 추적합니다. "compliance", "audit prep", "SOC 2", "ISO 27001", "GDPR", "regulatory requirement" 또는 컴플라이언스 활동 추적/준비/문서화에 도움이 필요할 때 트리거됩니다.
 ---
 
 # Compliance Tracking
