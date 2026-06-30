@@ -1,6 +1,6 @@
 ---
 name: instrument-data-to-allotrope
-description: Convert laboratory instrument output files (PDF, CSV, Excel, TXT) to Allotrope Simple Model (ASM) JSON format or flattened 2D CSV. Use this skill when scientists need to standardize instrument data for LIMS systems, data lakes, or downstream analysis. Supports auto-detection of instrument types. Outputs include full ASM JSON, flattened CSV for easy import, and exportable Python code for data engineers. Common triggers include converting instrument files, standardizing lab data, preparing data for upload to LIMS/ELN systems, or generating parser code for production pipelines.
+description: Laboratory instrument output file(PDF, CSV, Excel, TXT)을 Allotrope Simple Model(ASM) JSON format 또는 flattened 2D CSV로 변환합니다. Scientist가 LIMS system, data lake, downstream analysis를 위해 instrument data를 standardize해야 할 때 사용합니다. Instrument type auto-detection을 지원합니다. Output에는 full ASM JSON, import하기 쉬운 flattened CSV, data engineer용 exportable Python code가 포함됩니다. Instrument file conversion, lab data standardization, LIMS/ELN upload 준비, production pipeline용 parser code generation이 common trigger입니다.
 ---
 
 # Instrument Data to Allotrope Converter

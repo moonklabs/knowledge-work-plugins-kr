@@ -1,6 +1,6 @@
 ---
 name: quarterly-review
-description: Generates a full QBR narrative — revenue trend, margin trend, customer health, top opportunities and risks — as a presentation-ready PDF or deck. Accepts optional quarter and save-to arguments.
+description: Revenue trend, margin trend, customer health, top opportunity/risk가 포함된 full QBR narrative를 presentation-ready PDF 또는 deck으로 생성합니다. Optional quarter와 save-to argument를 받습니다.
 allowed-tools: Read, WebFetch, Bash
 ---
 

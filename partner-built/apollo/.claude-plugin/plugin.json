@@ -1,7 +1,7 @@
 {
   "name": "apollo",
   "version": "0.1.0",
-  "description": "3 pre-built skills that chain multiple Apollo APIs into complete sales workflows — no manual steps, no tab switching. Enrich any contact from a name, email, or LinkedIn URL. Prospect by describing your ICP in plain English and get ranked leads. Find, enrich, and load contacts into a sequence in one shot.",
+  "description": "여러 Apollo API를 연결해 complete sales workflow를 만드는 3개의 pre-built skill입니다. Manual step이나 tab switching 없이 동작합니다. Name, email, LinkedIn URL에서 contact를 enrich합니다. ICP를 plain English로 설명하면 ranked lead를 얻습니다. Contact를 find, enrich하고 sequence에 한 번에 load합니다.",
   "author": {
     "name": "Apollo.io",
     "url": "https://www.apollo.io/"
@@ -9,5 +9,13 @@
   "repository": "https://github.com/apolloio/apollo-mcp-plugin",
   "homepage": "https://www.apollo.io/",
   "license": "MIT",
-  "keywords": ["apollo", "sales", "prospecting", "icp", "enrichment", "sequences", "mcp"]
+  "keywords": [
+    "apollo",
+    "sales",
+    "prospecting",
+    "icp",
+    "enrichment",
+    "sequences",
+    "mcp"
+  ]
 }

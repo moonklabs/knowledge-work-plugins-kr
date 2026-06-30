@@ -1,6 +1,6 @@
 ---
 name: sequence-load
-description: "Find leads matching criteria and bulk-add them to an Apollo outreach sequence. Handles enrichment, contact creation, deduplication, and enrollment in one flow."
+description: Criteria에 맞는 lead를 찾고 Apollo outreach sequence에 bulk-add합니다. Enrichment, contact creation, deduplication, enrollment를 하나의 flow로 처리합니다.
 user-invocable: true
 argument-hint: "[targeting criteria + sequence name]"
 ---

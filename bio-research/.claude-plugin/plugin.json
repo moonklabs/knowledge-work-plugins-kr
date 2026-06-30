@@ -1,7 +1,7 @@
 {
   "name": "bio-research",
   "version": "1.2.0",
-  "description": "Connect to preclinical research tools and databases (literature search, genomics analysis, target prioritization) to accelerate early-stage life sciences R&D",
+  "description": "Preclinical research tool과 database(literature search, genomics analysis, target prioritization)에 연결해 early-stage life sciences R&D를 가속합니다",
   "author": {
     "name": "Anthropic"
   }

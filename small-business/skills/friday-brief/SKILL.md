@@ -1,6 +1,6 @@
 ---
 name: friday-brief
-description: Delivers the Friday end-of-week pulse — revenue vs prior week, top sellers, wins and watches. Accepts optional lookback window of 7 or 14 days.
+description: Friday end-of-week pulse를 제공합니다. Revenue vs prior week, top seller, win, watch를 포함합니다. Optional lookback window는 7 또는 14일입니다.
 allowed-tools: Read, WebFetch, Bash
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: call-prep
-description: Prepare for a sales call with account context, attendee research, and suggested agenda. Works standalone with user input and web research, supercharged when you connect your CRM, email, chat, or transcripts. Trigger with "prep me for my call with [company]", "I'm meeting with [company] prep me", "call prep [company]", or "get me ready for [meeting]".
+description: Account context, attendee research, suggested agenda로 sales call을 준비합니다. User input과 web research로 standalone 동작하며 CRM, email, chat, transcript를 연결하면 더 강력해집니다. "prep me for my call with [company]", "I'm meeting with [company] prep me", "call prep [company]", "get me ready for [meeting]"에서 트리거됩니다.
 ---
 
 # Call Prep

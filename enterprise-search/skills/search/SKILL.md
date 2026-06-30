@@ -1,6 +1,6 @@
 ---
 name: search
-description: Search across all connected sources in one query. Trigger with "find that doc about...", "what did we decide on...", "where was the conversation about...", or when looking for a decision, document, or discussion that could live in chat, email, cloud storage, or a project tracker.
+description: 하나의 query로 모든 connected source를 search합니다. "find that doc about...", "what did we decide on...", "where was the conversation about..." 또는 chat, email, cloud storage, project tracker 어딘가에 있을 수 있는 decision, document, discussion을 찾을 때 트리거됩니다.
 argument-hint: "<query>"
 ---
 

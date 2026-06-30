@@ -1,6 +1,6 @@
 ---
 name: crm-cleanup
-description: Scans HubSpot for stale deals, duplicate contacts, and missing fields, then fixes what the owner approves. Accepts optional scope argument for deals, contacts, or all.
+description: HubSpot에서 stale deal, duplicate contact, missing field를 scan한 뒤 owner가 approve한 항목을 fix합니다. Deals, contacts 또는 all에 대한 optional scope argument를 받습니다.
 allowed-tools: Read, WebFetch, Bash
 ---
 

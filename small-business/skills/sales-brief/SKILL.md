@@ -1,6 +1,6 @@
 ---
 name: sales-brief
-description: Surfaces top and bottom sellers, identifies seasonality patterns, and produces a 2-week content brief to push winners and clear slow movers. Accepts optional lookback window of 30, 60, or 90 days.
+description: Top/bottom seller를 surface하고 seasonality pattern을 식별하며 winner를 push하고 slow mover를 clear하기 위한 2-week content brief를 생성합니다. Optional lookback window는 30, 60, 90일입니다.
 allowed-tools: Read, WebFetch, Bash
 ---
 

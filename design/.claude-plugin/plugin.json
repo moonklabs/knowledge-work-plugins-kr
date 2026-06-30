@@ -1,7 +1,7 @@
 {
   "name": "design",
   "version": "1.2.0",
-  "description": "Accelerate design workflows — critique, design system management, UX writing, accessibility audits, research synthesis, and dev handoff. From exploration to pixel-perfect specs.",
+  "description": "Design 워크플로를 가속합니다. Critique, design system management, UX writing, accessibility audit, research synthesis, dev handoff를 다룹니다. Exploration부터 pixel-perfect spec까지 지원합니다.",
   "author": {
     "name": "Anthropic"
   }

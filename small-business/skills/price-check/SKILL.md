@@ -1,6 +1,6 @@
 ---
 name: price-check
-description: Produces a margin-by-product table and three pricing-scenario data views so the owner can see the full financial picture before making a pricing decision. Accepts optional product name argument.
+description: Owner가 pricing decision 전에 full financial picture를 볼 수 있도록 margin-by-product table과 세 가지 pricing-scenario data view를 생성합니다. Optional product name argument를 받습니다.
 allowed-tools: Read, WebFetch, Bash
 ---
 

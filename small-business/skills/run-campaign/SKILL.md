@@ -1,6 +1,6 @@
 ---
 name: run-campaign
-description: Runs an end-to-end marketing campaign — sales analysis, content brief, Canva assets, HubSpot send. Accepts optional lookback and channel arguments.
+description: End-to-end marketing campaign을 실행합니다. Sales analysis, content brief, Canva asset, HubSpot send를 포함합니다. Optional lookback과 channel argument를 받습니다.
 allowed-tools: Read, WebFetch, Bash
 ---
 

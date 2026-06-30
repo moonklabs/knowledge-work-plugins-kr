@@ -1,6 +1,6 @@
 ---
 name: design-system
-description: Audit, document, or extend your design system. Use when checking for naming inconsistencies or hardcoded values across components, writing documentation for a component's variants, states, and accessibility notes, or designing a new pattern that fits the existing system.
+description: Design system을 audit, document, extend합니다. Component 전반의 naming inconsistency나 hardcoded value 확인, component variant/state/accessibility note 문서화, existing system에 맞는 new pattern 설계에 사용합니다.
 argument-hint: "[audit | document | extend] <component or system>"
 ---
 

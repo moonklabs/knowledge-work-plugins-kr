@@ -1,6 +1,6 @@
 ---
 name: scvi-tools
-description: Deep learning for single-cell analysis using scvi-tools. This skill should be used when users need (1) data integration and batch correction with scVI/scANVI, (2) ATAC-seq analysis with PeakVI, (3) CITE-seq multi-modal analysis with totalVI, (4) multiome RNA+ATAC analysis with MultiVI, (5) spatial transcriptomics deconvolution with DestVI, (6) label transfer and reference mapping with scANVI/scArches, (7) RNA velocity with veloVI, or (8) any deep learning-based single-cell method. Triggers include mentions of scVI, scANVI, totalVI, PeakVI, MultiVI, DestVI, veloVI, sysVI, scArches, variational autoencoder, VAE, batch correction, data integration, multi-modal, CITE-seq, multiome, reference mapping, latent space.
+description: scvi-tools를 사용한 single-cell analysis용 deep learning skill입니다. (1) scVI/scANVI data integration 및 batch correction, (2) PeakVI ATAC-seq analysis, (3) totalVI CITE-seq multi-modal analysis, (4) MultiVI multiome RNA+ATAC analysis, (5) DestVI spatial transcriptomics deconvolution, (6) scANVI/scArches label transfer 및 reference mapping, (7) veloVI RNA velocity, (8) deep learning-based single-cell method가 필요할 때 사용합니다. scVI, scANVI, totalVI, PeakVI, MultiVI, DestVI, veloVI, sysVI, scArches, variational autoencoder, VAE, batch correction, data integration, multi-modal, CITE-seq, multiome, reference mapping, latent space 언급이 트리거입니다.
 ---
 
 # scvi-tools Deep Learning Skill

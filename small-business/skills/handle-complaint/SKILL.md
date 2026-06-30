@@ -1,6 +1,6 @@
 ---
 name: handle-complaint
-description: Handles an incoming customer complaint end-to-end — pulls context, drafts a response, and suggests an operational fix. Accepts optional email or ticket ID argument.
+description: Incoming customer complaint를 end-to-end로 처리합니다. Context를 가져오고 response 초안을 작성하며 operational fix를 제안합니다. Optional email 또는 ticket ID argument를 받습니다.
 allowed-tools: Read, WebFetch, Bash
 ---
 

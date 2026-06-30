@@ -1,6 +1,6 @@
 ---
 name: monday-brief
-description: Generates a one-page Monday morning briefing — cash, sales, pipeline, week ahead, top three to-dos. Accepts optional post destination and save-to arguments.
+description: Cash, sales, pipeline, upcoming week, top three to-do가 포함된 one-page Monday morning briefing을 생성합니다. Optional post destination과 save-to argument를 받습니다.
 allowed-tools: Read, WebFetch, Bash
 ---
 

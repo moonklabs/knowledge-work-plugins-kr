@@ -1,6 +1,6 @@
 ---
 name: digest
-description: Generate a daily or weekly digest of activity across all connected sources. Use when catching up after time away, starting the day and wanting a summary of mentions and action items, or reviewing a week's decisions and document updates grouped by project.
+description: Connected source 전반의 activity를 daily 또는 weekly digest로 생성합니다. 자리를 비운 뒤 catch-up하거나, 하루를 시작하며 mention과 action item summary가 필요하거나, project별로 묶인 한 주의 decision과 document update를 review할 때 사용합니다.
 argument-hint: "[--daily | --weekly | --since <date>]"
 ---
 

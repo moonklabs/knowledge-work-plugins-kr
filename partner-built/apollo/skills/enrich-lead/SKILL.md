@@ -1,6 +1,6 @@
 ---
 name: enrich-lead
-description: "Instant lead enrichment. Drop a name, company, LinkedIn URL, or email and get the full contact card with email, phone, title, company intel, and next actions."
+description: Instant lead enrichment입니다. Name, company, LinkedIn URL 또는 email을 넣으면 email, phone, title, company intel, next action이 포함된 full contact card를 얻습니다.
 user-invocable: true
 argument-hint: "[name, company, LinkedIn URL, or email]"
 ---

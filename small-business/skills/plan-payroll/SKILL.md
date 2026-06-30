@@ -1,6 +1,6 @@
 ---
 name: plan-payroll
-description: Forecasts cash, ranks overdue invoices, and stages PayPal reminders so the owner can confidently run payroll. Accepts optional horizon and payroll-date arguments.
+description: Cash를 forecast하고 overdue invoice를 rank하며 PayPal reminder를 stage해 owner가 payroll을 자신 있게 실행할 수 있게 합니다. Optional horizon과 payroll-date argument를 받습니다.
 allowed-tools: Read, WebFetch, Bash
 ---
 

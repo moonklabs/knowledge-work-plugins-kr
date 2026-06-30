@@ -1,6 +1,6 @@
 ---
 name: call-summary
-description: Process call notes or a transcript — extract action items, draft follow-up email, generate internal summary. Use when pasting rough notes or a transcript after a discovery, demo, or negotiation call, drafting a customer follow-up, logging the activity for your CRM, or capturing objections and next steps for your team.
+description: Call note 또는 transcript를 처리합니다. Action item을 추출하고 follow-up email 초안을 작성하며 internal summary를 생성합니다. Discovery, demo, negotiation call 후 rough note/transcript를 붙여넣거나, customer follow-up 초안 작성, CRM activity logging, objection과 next step capture에 사용합니다.
 argument-hint: "<call notes or transcript>"
 ---
 

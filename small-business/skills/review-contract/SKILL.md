@@ -1,6 +1,6 @@
 ---
 name: review-contract
-description: Reviews a contract in plain English, surfaces red flags with severity ratings, and produces a marked-up docx/PDF with suggested redlines. Accepts optional file path or DocuSign envelope ID.
+description: Contract를 plain English로 review하고 severity rating이 있는 red flag를 surface하며 suggested redline이 포함된 marked-up docx/PDF를 생성합니다. Optional file path 또는 DocuSign envelope ID를 받습니다.
 allowed-tools: Read, WebFetch, Bash
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: prospect
-description: "Full ICP-to-leads pipeline. Describe your ideal customer in plain English and get a ranked table of enriched decision-maker leads with emails and phone numbers."
+description: Full ICP-to-leads pipeline입니다. Ideal customer를 plain English로 설명하면 email과 phone number가 포함된 enriched decision-maker lead의 ranked table을 얻습니다.
 user-invocable: true
 argument-hint: "[describe your ideal customer]"
 ---

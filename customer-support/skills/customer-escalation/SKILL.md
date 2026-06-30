@@ -1,6 +1,6 @@
 ---
 name: customer-escalation
-description: Package an escalation for engineering, product, or leadership with full context. Use when a bug needs engineering attention beyond normal support, multiple customers report the same issue, a customer is threatening to churn, or an issue has sat unresolved past its SLA.
+description: Engineering, product, leadership을 위한 escalation을 full context와 함께 package합니다. Bug가 normal support를 넘어 engineering attention이 필요하거나, 여러 customer가 같은 issue를 report하거나, customer가 churn을 위협하거나, issue가 SLA를 넘겨 unresolved 상태일 때 사용합니다.
 argument-hint: "<issue summary> [customer name]"
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: source-management
-description: Manages connected MCP sources for enterprise search. Detects available sources, guides users to connect new ones, handles source priority ordering, and manages rate limiting awareness.
+description: Enterprise search용 connected MCP source를 manage합니다. Available source를 detect하고 new source 연결을 guide하며 source priority ordering과 rate limiting awareness를 관리합니다.
 user-invocable: false
 ---
 

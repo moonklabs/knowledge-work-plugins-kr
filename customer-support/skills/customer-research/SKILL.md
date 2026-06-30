@@ -1,6 +1,6 @@
 ---
 name: customer-research
-description: Multi-source research on a customer question or topic with source attribution. Use when a customer asks something you need to look up, investigating whether a bug has been reported before, checking what was previously told to a specific account, or gathering background before drafting a response.
+description: Source attribution이 포함된 customer question/topic에 대한 multi-source research입니다. Customer가 lookup이 필요한 질문을 하거나, bug가 이전에 report되었는지 조사하거나, specific account에 이전에 무엇을 안내했는지 확인하거나, response 초안 전 background를 수집할 때 사용합니다.
 argument-hint: "<question or topic>"
 ---
 

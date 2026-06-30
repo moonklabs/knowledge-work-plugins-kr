@@ -1,6 +1,6 @@
 ---
 name: customer-pulse-check
-description: Synthesizes themes from PayPal disputes, HubSpot tickets, and review exports into a top-3 fixable issues list with drafted response templates. Accepts optional since-date argument.
+description: PayPal dispute, HubSpot ticket, review export의 theme을 top-3 fixable issue list와 response template draft로 종합합니다. Optional since-date argument를 받습니다.
 allowed-tools: Read, WebFetch, Bash
 ---
 

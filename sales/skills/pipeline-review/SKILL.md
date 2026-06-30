@@ -1,6 +1,6 @@
 ---
 name: pipeline-review
-description: Analyze pipeline health — prioritize deals, flag risks, get a weekly action plan. Use when running a weekly pipeline review, deciding which deals to focus on this week, spotting stale or stuck opportunities, auditing for hygiene issues like bad close dates, or identifying single-threaded deals.
+description: Pipeline health를 analyze합니다. Deal을 prioritize하고 risk를 flag하며 weekly action plan을 얻습니다. Weekly pipeline review, 이번 주 focus deal 결정, stale/stuck opportunity 탐지, bad close date 같은 hygiene issue audit, single-threaded deal 식별에 사용합니다.
 argument-hint: "<segment or rep>"
 ---
 

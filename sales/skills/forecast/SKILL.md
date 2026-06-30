@@ -1,6 +1,6 @@
 ---
 name: forecast
-description: Generate a weighted sales forecast with best/likely/worst scenarios, commit vs. upside breakdown, and gap analysis. Use when preparing a quarterly forecast call, assessing gap-to-quota from a pipeline CSV, deciding which deals to commit vs. call upside, or checking pipeline coverage against your number.
+description: Best/likely/worst scenario, commit vs upside breakdown, gap analysis가 포함된 weighted sales forecast를 생성합니다. Quarterly forecast call 준비, pipeline CSV에서 gap-to-quota 평가, commit deal과 upside deal 결정, number 대비 pipeline coverage 확인에 사용합니다.
 argument-hint: "<period>"
 ---
 

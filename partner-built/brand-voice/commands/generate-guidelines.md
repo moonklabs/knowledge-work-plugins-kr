@@ -1,5 +1,5 @@
 ---
-description: Generate brand voice guidelines from documents, transcripts, discovery reports, or any combination
+description: Document, transcript, discovery report 또는 그 조합에서 brand voice guideline을 생성합니다
 argument-hint: "<sources — documents, transcripts, or description of what you have>"
 ---
 

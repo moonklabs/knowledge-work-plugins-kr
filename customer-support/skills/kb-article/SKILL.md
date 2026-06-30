@@ -1,6 +1,6 @@
 ---
 name: kb-article
-description: Draft a knowledge base article from a resolved issue or common question. Use when a ticket resolution is worth documenting for self-service, the same question keeps coming up, a workaround needs to be published, or a known issue should be communicated to customers.
+description: Resolved issue 또는 common question에서 knowledge base article 초안을 작성합니다. Ticket resolution을 self-service용으로 문서화할 가치가 있거나, 같은 question이 반복되거나, workaround를 publish해야 하거나, known issue를 customer에게 communicate해야 할 때 사용합니다.
 argument-hint: "<resolved issue or ticket>"
 ---
 

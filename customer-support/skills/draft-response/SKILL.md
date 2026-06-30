@@ -1,6 +1,6 @@
 ---
 name: draft-response
-description: Draft a professional customer-facing response tailored to the situation and relationship. Use when answering a product question, responding to an escalation or outage, delivering bad news like a delay or won't-fix, declining a feature request, or replying to a billing issue.
+description: 상황과 relationship에 맞춘 professional customer-facing response 초안을 작성합니다. Product question 답변, escalation/outage response, delay나 won't-fix 같은 bad news 전달, feature request decline, billing issue reply에 사용합니다.
 argument-hint: "<situation description>"
 ---
 

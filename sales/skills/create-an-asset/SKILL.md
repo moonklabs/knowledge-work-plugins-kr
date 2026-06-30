@@ -1,6 +1,6 @@
 ---
 name: create-an-asset
-description: Generate tailored sales assets (landing pages, decks, one-pagers, workflow demos) from your deal context. Describe your prospect, audience, and goal — get a polished, branded asset ready to share with customers.
+description: Deal context에서 tailored sales asset(landing page, deck, one-pager, workflow demo)을 생성합니다. Prospect, audience, goal을 설명하면 customer에게 공유할 ready-to-share polished branded asset을 얻습니다.
 ---
 
 # Create an Asset

@@ -1,6 +1,6 @@
 ---
 name: ticket-triage
-description: Triage and prioritize a support ticket or customer issue. Use when a new ticket comes in and needs categorization, assigning P1-P4 priority, deciding which team should handle it, or checking whether it's a duplicate or known issue before routing.
+description: Support ticket 또는 customer issue를 triage하고 prioritize합니다. New ticket이 들어와 categorization, P1-P4 priority assignment, 담당 team 결정, routing 전 duplicate/known issue 확인이 필요할 때 사용합니다.
 argument-hint: "<ticket or issue description>"
 ---
 

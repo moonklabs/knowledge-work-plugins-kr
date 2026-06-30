@@ -1,7 +1,7 @@
 {
   "name": "enterprise-search",
   "version": "1.3.0",
-  "description": "Search across all of your company's tools in one place. Find anything across email, chat, documents, and wikis without switching between apps.",
+  "description": "회사의 모든 tool을 한 곳에서 search합니다. App을 오가지 않고 email, chat, document, wiki 전반에서 무엇이든 찾습니다.",
   "author": {
     "name": "Anthropic"
   }

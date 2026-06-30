@@ -1,6 +1,6 @@
 ---
 name: single-cell-rna-qc
-description: Performs quality control on single-cell RNA-seq data (.h5ad or .h5 files) using scverse best practices with MAD-based filtering and comprehensive visualizations. Use when users request QC analysis, filtering low-quality cells, assessing data quality, or following scverse/scanpy best practices for single-cell analysis.
+description: MAD-based filtering과 comprehensive visualization을 포함한 scverse best practice로 single-cell RNA-seq data(.h5ad 또는 .h5 file)에 quality control을 수행합니다. QC analysis, low-quality cell filtering, data quality assessment, single-cell analysis를 위한 scverse/scanpy best practice 적용 요청에 사용합니다.
 ---
 
 # Single-Cell RNA-seq Quality Control

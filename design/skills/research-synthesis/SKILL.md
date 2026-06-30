@@ -1,6 +1,6 @@
 ---
 name: research-synthesis
-description: Synthesize user research into themes, insights, and recommendations. Use when you have interview transcripts, survey results, usability test notes, support tickets, or NPS responses that need to be distilled into patterns, user segments, and prioritized next steps.
+description: User research를 theme, insight, recommendation으로 synthesize합니다. Interview transcript, survey result, usability test note, support ticket, NPS response를 pattern, user segment, prioritized next step으로 정제해야 할 때 사용합니다.
 argument-hint: "<research data, transcripts, or survey results>"
 ---
 

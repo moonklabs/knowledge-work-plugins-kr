@@ -1,6 +1,6 @@
 ---
 name: search-strategy
-description: Query decomposition and multi-source search orchestration. Breaks natural language questions into targeted searches per source, translates queries into source-specific syntax, ranks results by relevance, and handles ambiguity and fallback strategies.
+description: Query decomposition과 multi-source search orchestration을 수행합니다. Natural language question을 source별 targeted search로 나누고, query를 source-specific syntax로 변환하며, result를 relevance로 rank하고 ambiguity와 fallback strategy를 처리합니다.
 user-invocable: false
 ---
 

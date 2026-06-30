@@ -1,6 +1,6 @@
 ---
 name: start
-description: Set up your bio-research environment and explore available tools. Use when first getting oriented with the plugin, checking which literature, drug-discovery, or visualization MCP servers are connected, or surveying available analysis skills before starting a new project.
+description: Bio-research environment를 설정하고 available tool을 explore합니다. 플러그인에 처음 적응하거나, 어떤 literature, drug-discovery, visualization MCP server가 connected되었는지 확인하거나, new project 시작 전 available analysis skill을 살펴볼 때 사용합니다.
 ---
 
 # Bio-Research Start

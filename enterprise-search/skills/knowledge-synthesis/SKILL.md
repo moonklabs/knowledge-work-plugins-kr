@@ -1,6 +1,6 @@
 ---
 name: knowledge-synthesis
-description: Combines search results from multiple sources into coherent, deduplicated answers with source attribution. Handles confidence scoring based on freshness and authority, and summarizes large result sets effectively.
+description: 여러 source의 search result를 source attribution이 포함된 coherent하고 deduplicated된 answer로 결합합니다. Freshness와 authority 기반 confidence scoring을 처리하고 large result set을 효과적으로 summarize합니다.
 user-invocable: false
 ---
 
