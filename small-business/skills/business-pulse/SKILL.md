@@ -2,11 +2,10 @@
 
 name: business-pulse
 description: >-
-  SMB owner를 위해 one-page cross-functional business snapshot을 생성합니다. Cash position(QuickBooks), sales
-  trend(PayPal/Square), pipeline movement(HubSpot), 이번 주 commitment(Calendar), urgent watch-list
-  item(Gmail/Slack), 오늘 가장 주의해야 할 단일 항목을 포함합니다. 사용 가능한 connector를 모두 시도하고 연결된 범위에 맞춰 graceful하게 scope를 줄입니다.
-  사용자가 business 상태, snapshot, weekly summary, Monday brief를 요청하거나 "what am I missing", "catch me up on the
-  business"처럼 말할 때 트리거됩니다.
+  SMB 사업주를 위해 1페이지짜리 교차 기능 사업 스냅샷을 생성합니다. 현금 위치(QuickBooks), 매출 추세(PayPal/Square), 파이프라인
+  이동(HubSpot), 이번 주 약속(Calendar), 긴급 주의 항목(Gmail/Slack), 오늘 가장 주의해야 할 단일 항목을 포함합니다. 사용 가능한 커넥터를 모두
+  시도하고 연결된 범위에 맞춰 자연스럽게 범위를 줄입니다. 사용자가 사업 상태, 스냅샷, 주간 요약, Monday brief를 요청하거나 "what am I missing",
+  "catch me up on the business"라고 말할 때 트리거됩니다.
 ---
 
 # Business Pulse

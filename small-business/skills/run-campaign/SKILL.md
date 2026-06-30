@@ -1,6 +1,7 @@
 ---
 name: run-campaign
-description: 엔드투엔드 마케팅 캠페인을 실행합니다. 영업 분석, 콘텐츠 브리프, Canva 자료, HubSpot 발송를 포함합니다. Optional 조회 기간과 채널 인자를 받습니다.
+description: >-
+  엔드투엔드 마케팅 캠페인을 실행합니다. 영업 분석, 콘텐츠 브리프, Canva 자료, HubSpot 발송을 포함합니다. 선택적으로 조회 기간과 채널 인자를 받습니다.
 allowed-tools: Read, WebFetch, Bash
 ---
 

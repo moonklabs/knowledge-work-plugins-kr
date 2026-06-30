@@ -1,6 +1,8 @@
 ---
 name: crm-cleanup
-description: HubSpot에서 오래된 거래, 중복 연락처, 누락 필드를 스캔한 뒤 owner가 승인한 항목을 수정합니다. Deals, contacts 또는 all에 대한 선택적 범위 인자를 받습니다.
+description: >-
+  HubSpot에서 오래된 거래, 중복 연락처, 누락 필드를 스캔한 뒤 사업주가 승인한 항목을 수정합니다. Deals, contacts 또는 all에 대한 선택적 범위 인자를
+  받습니다.
 allowed-tools: Read, WebFetch, Bash
 ---
 

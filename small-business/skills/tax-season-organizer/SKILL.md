@@ -2,14 +2,11 @@
 
 name: tax-season-organizer
 description: >-
-  Small business owner를 위한 tax-season material을 준비합니다. Tax advice가 아니라 accountant에게 넘길 deliverable로
-  framing합니다. 두 가지 mode가 있습니다. (1) quarterly estimated tax calculation: QuickBooks에서 YTD net income을 가져와
-  federal income tax + self-employment tax liability와 quarterly payment due를 계산합니다. (2) year-end 1099 prep:
-  QuickBooks, PayPal, Stripe에서 $600 초과 contractor payment를 scan하고 missing W-9 flag가 포함된 1099-NEC candidate
-  list와 CPA가 바로 사용할 수 있는 plain-English summary를 생성합니다. 사용자가 quarterly taxes, estimated tax payment, how much
-  to set aside for taxes, 1099s, 1099-NEC, year-end tax prep, contractor payments, W-9s 또는 tax
-  deadline/accountant handoff 준비를 암시하는 표현을 말하면 트리거합니다. Tax bill을 걱정하는 context에서 net profit 또는 YTD income을 묻는
-  경우에도 proactive하게 트리거합니다.
+  소규모 사업주를 위한 세금 시즌 자료를 준비합니다. 세무 자문이 아니라 회계사에게 넘길 산출물로 다룹니다. 두 가지 모드가 있습니다. (1) 분기 추정세 계산:
+  QuickBooks에서 연초 이후 순이익을 가져와 연방 소득세, 자영업세 부담, 분기별 납부 예정액을 계산합니다. (2) 연말 1099 준비: QuickBooks,
+  PayPal, Stripe에서 $600를 초과한 외주/벤더 지급액을 스캔하고, W-9 누락 표시가 포함된 1099-NEC 후보 목록과 CPA가 바로 사용할 수 있는 쉬운 말
+  요약을 생성합니다. 사용자가 분기 세금, 추정세 납부액, 세금으로 따로 떼어둘 금액, 1099, 1099-NEC, 연말 세금 준비, 외주 지급액, W-9, 세금 마감일 또는
+  회계사 인수인계를 암시하면 트리거합니다. 세금 고지서를 걱정하는 맥락에서 순이익이나 연초 이후 소득을 묻는 경우에도 선제적으로 트리거합니다.
 ---
 
 # Tax Season Organizer

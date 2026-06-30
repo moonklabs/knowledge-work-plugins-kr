@@ -1,6 +1,8 @@
 ---
 name: customer-pulse-check
-description: PayPal 분쟁, HubSpot 티켓, 리뷰 export의 주제를 상위 3개 해결 가능 이슈 목록와 답변 템플릿 초안으로 종합합니다. Optional since 날짜 인자를 받습니다.
+description: >-
+  PayPal 분쟁, HubSpot 티켓, 리뷰 export의 주제를 해결 가능한 상위 3개 이슈와 답변 템플릿 초안으로 종합합니다. 선택적으로 since 날짜 인자를
+  받습니다.
 allowed-tools: Read, WebFetch, Bash
 ---
 

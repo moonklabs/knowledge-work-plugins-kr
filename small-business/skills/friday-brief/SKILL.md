@@ -1,6 +1,7 @@
 ---
 name: friday-brief
-description: 금요일 주간 마감 pulse를 제공합니다. 전주 대비 매출, 상위 판매 상품, 성과와 관찰 항목를 포함합니다. 선택적 조회 기간는 7 또는 14일입니다.
+description: >-
+  금요일 주간 마감 pulse를 제공합니다. 전주 대비 매출, 상위 판매 상품, 성과와 관찰 항목을 포함합니다. 선택적 조회 기간은 7일 또는 14일입니다.
 allowed-tools: Read, WebFetch, Bash
 ---
 

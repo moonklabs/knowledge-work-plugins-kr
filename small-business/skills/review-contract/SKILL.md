@@ -1,6 +1,8 @@
 ---
 name: review-contract
-description: 계약을 쉬운 영어로 검토하고 심각도 등급이 있는 위험 신호를 표면하며 제안 수정안이 포함된 마크업된 docx/PDF를 생성합니다. 선택적 파일 경로 또는 DocuSign envelope ID를 받습니다.
+description: >-
+  계약을 쉬운 말로 검토하고 심각도 등급이 있는 위험 신호를 표시하며 제안 수정안이 포함된 마크업 docx/PDF를 생성합니다. 선택적으로 파일 경로 또는 DocuSign
+  envelope ID를 받습니다.
 allowed-tools: Read, WebFetch, Bash
 ---
 

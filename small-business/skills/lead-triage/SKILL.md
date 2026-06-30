@@ -3,9 +3,8 @@
 name: lead-triage
 version: 0.1.1
 description: >-
-  Inbound HubSpot lead를 engagement signal, company fit, urgency marker로 scoring해 talking point가 포함된 "오늘 call할
-  5명" 목록을 만들고 follow-up 초안을 작성하며 Calendar time을 block합니다. 사용자가 lead priority, 누구에게 먼저 call할지, pipeline에 대해 묻는
-  경우 사용합니다.
+  Inbound HubSpot 리드를 참여 신호, 회사 적합도, 긴급도 표시로 점수화해 대화 포인트가 포함된 "오늘 전화할 5명" 목록을 만들고 follow-up 초안을
+  작성하며 Calendar 시간을 확보합니다. 사용자가 리드 우선순위, 누구에게 먼저 전화할지, 파이프라인에 대해 묻는 경우 사용합니다.
 ---
 
 # Lead Triage

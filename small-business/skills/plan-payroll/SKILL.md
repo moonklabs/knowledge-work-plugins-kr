@@ -1,6 +1,7 @@
 ---
 name: plan-payroll
-description: 현금을 예측하고 연체 인보이스를 순위를 매기며 PayPal 알림를 준비해 대표가 급여를 자신 있게 실행할 수 있게 합니다. 선택적 기간과 급여일 인자를 받습니다.
+description: >-
+  현금을 예측하고 연체 인보이스를 순위화하며 PayPal 알림을 준비해 대표가 급여 지급 여부를 자신 있게 판단할 수 있게 합니다. 선택적으로 기간과 급여일 인자를 받습니다.
 allowed-tools: Read, WebFetch, Bash
 ---
 

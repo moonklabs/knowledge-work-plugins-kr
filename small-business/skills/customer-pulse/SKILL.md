@@ -3,9 +3,9 @@
 name: customer-pulse
 version: 0.2.0
 description: >-
-  PayPal dispute, HubSpot feedback/ticket, email sentiment와 pasted/exported Google/Yelp review를 종합해 verbatim
-  evidence가 포함된 theme report와 "이번 주 해야 할 세 가지" 목록을 만듭니다. 사용자가 customer sentiment, review analysis, 사람들이 뭐라고
-  말하는지, dispute에 대해 묻는 경우 사용합니다.
+  PayPal 분쟁, HubSpot feedback/ticket, 이메일 감정, 붙여 넣거나 export한 Google/Yelp 리뷰를 종합해 원문 근거가 포함된 주제
+  보고서와 "이번 주 해야 할 세 가지" 목록을 만듭니다. 사용자가 customer sentiment, review analysis, 사람들이 뭐라고 말하는지,
+  dispute에 대해 묻는 경우 사용합니다.
 ---
 
 # Customer Pulse

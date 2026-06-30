@@ -1,6 +1,7 @@
 ---
 name: handle-complaint
-description: 들어온 고객 불만를 처음부터 끝까지로 처리합니다. 맥락을 가져오고 답변 초안을 작성하며 운영 개선안를 제안합니다. Optional 이메일 또는 티켓 ID 인자를 받습니다.
+description: >-
+  들어온 고객 불만을 처음부터 끝까지 처리합니다. 맥락을 가져오고 답변 초안을 작성하며 운영 개선안을 제안합니다. 선택적으로 이메일 또는 티켓 ID 인자를 받습니다.
 allowed-tools: Read, WebFetch, Bash
 ---
 

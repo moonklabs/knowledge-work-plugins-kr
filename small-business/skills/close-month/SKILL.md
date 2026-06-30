@@ -1,6 +1,8 @@
 ---
 name: close-month
-description: 월을 마감합니다. QB와 결제 처리기관를 대사하고 차이를 표시하며 손익 내러티브를 작성하고 마감 패킷을 내보냅니다. Optional month와 save-to 인자를 받습니다.
+description: >-
+  월을 마감합니다. QuickBooks와 결제 처리기관을 대사하고 차이를 표시하며 손익 내러티브를 작성하고 마감 패킷을 내보냅니다. 선택적으로 월과 save-to 인자를
+  받습니다.
 allowed-tools: Read, WebFetch, Bash
 ---
 

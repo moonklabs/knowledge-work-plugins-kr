@@ -2,11 +2,11 @@
 
 name: job-post-builder
 description: >-
-  Hiring brief에서 job post, scoring rubric이 있는 structured interview guide, offer letter template까지 end-to-end
-  hiring packet을 만듭니다. "help me hire", "we're hiring for", "write a job post", "job description", "JD", "open
-  role", "create a job ad", "interview questions", "scoring rubric", "draft an offer letter", "send an offer",
-  "make a hiring packet" 또는 position recruiting request에서 트리거됩니다. 의심스러우면 트리거합니다. Job post부터 browser를 통한
-  DocuSign envelope creation까지 full hiring workflow를 다룹니다. Applicant screening이나 ranking은 하지 않습니다.
+  채용 브리프에서 채용 공고, 점수표가 있는 구조화된 면접 가이드, 오퍼 레터 템플릿까지 전체 채용 패킷을 만듭니다. "help me hire", "we're hiring
+  for", "write a job post", "job description", "JD", "open role", "create a job ad", "interview
+  questions", "scoring rubric", "draft an offer letter", "send an offer", "make a hiring packet"
+  또는 포지션 채용 요청에서 트리거됩니다. 애매하면 트리거합니다. 채용 공고부터 browser를 통한 DocuSign envelope creation까지 전체 채용 워크플로를
+  다룹니다. 지원자 screening이나 ranking은 하지 않습니다.
 ---
 
 # Job Post Builder

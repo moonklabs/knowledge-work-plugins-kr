@@ -2,10 +2,10 @@
 
 name: cash-flow-snapshot
 description: >-
-  QuickBooks, PayPal, Stripe, Square 또는 CSV upload에서 AR/AP, historical cash timing, known fixed cost를 읽어
-  30/60/90-day cash flow forecast를 percentage-variance confidence band와 named risk flag와 함께 생성합니다. Chat
-  summary와 downloadable XLSX를 제공합니다. 사용자가 "forecast my cash flow", "will I make payroll"을 묻거나 "runway", "cash
-  crunch"를 언급할 때 사용합니다. Live connector가 없으면 CSV upload로 fallback합니다.
+  QuickBooks, PayPal, Stripe, Square 또는 CSV upload에서 AR/AP, 과거 현금 유입/유출 시점, 알려진 고정비를 읽어 30/60/90일
+  현금흐름 예측을 만들고, 백분율 분산 신뢰 구간과 이름 붙은 위험 신호를 함께 제공합니다. 채팅 요약과 다운로드 가능한 XLSX를 제공합니다. 사용자가 "forecast
+  my cash flow", "will I make payroll"을 묻거나 "runway", "cash crunch"를 언급할 때 사용합니다. Live connector가
+  없으면 CSV upload로 대체합니다.
 compatibility: "Requires one or more of: QuickBooks MCP, PayPal MCP, Stripe MCP, Square MCP, file upload (CSV fallback). Output uses xlsx skill."
 ---
 
