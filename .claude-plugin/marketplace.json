@@ -6,75 +6,75 @@
   "plugins": [
     {
       "name": "productivity",
-      "displayName": "Productivity",
+      "displayName": "생산성",
       "source": "./productivity",
-      "description": "Manage tasks, plan your day, and build up memory of important context about your work. Syncs with your calendar, email, and chat to keep everything organized and on track."
+      "description": "작업을 관리하고 하루를 계획하며 업무의 중요한 맥락을 기억으로 쌓습니다. Calendar, email, chat과 동기화해 모든 일을 정리하고 추적합니다."
     },
     {
       "name": "enterprise-search",
-      "displayName": "Enterprise Search",
+      "displayName": "엔터프라이즈 검색",
       "source": "./enterprise-search",
-      "description": "Search across all of your company's tools in one place. Find anything across email, chat, documents, and wikis without switching between apps."
+      "description": "회사 도구 전반을 한곳에서 검색합니다. App을 오가지 않고 email, chat, document, wiki에서 필요한 것을 찾습니다."
     },
     {
       "name": "cowork-plugin-management",
-      "displayName": "Plugin Management",
+      "displayName": "플러그인 관리",
       "source": "./cowork-plugin-management",
-      "description": "Create, customize, and manage plugins tailored to your organization's tools and workflows. Configure MCP servers, adjust plugin behavior, and adapt templates to match how your team works."
+      "description": "조직의 도구와 workflow에 맞춘 plugin을 만들고, customize하고, 관리합니다. MCP server를 설정하고 plugin behavior를 조정하며 팀의 업무 방식에 맞게 template을 수정합니다."
     },
     {
       "name": "sales",
-      "displayName": "Sales",
+      "displayName": "영업",
       "source": "./sales",
-      "description": "Prospect, craft outreach, and build deal strategy faster. Prep for calls, manage your pipeline, and write personalized messaging that moves deals forward."
+      "description": "Prospecting, outreach 작성, deal strategy 수립을 더 빠르게 수행합니다. Call 준비, pipeline 관리, deal을 앞으로 움직이는 개인화 message 작성을 지원합니다."
     },
     {
       "name": "finance",
-      "displayName": "Finance",
+      "displayName": "재무",
       "source": "./finance",
-      "description": "Streamline finance and accounting workflows, from journal entries and reconciliation to financial statements and variance analysis. Speed up audit prep, month-end close, and keeping your books clean."
+      "description": "Journal entry와 reconciliation부터 financial statement와 variance analysis까지 finance 및 accounting workflow를 간소화합니다. Audit prep, month-end close, 장부 정리를 더 빠르게 수행합니다."
     },
     {
       "name": "data",
-      "displayName": "Data",
+      "displayName": "데이터",
       "source": "./data",
-      "description": "Write SQL, explore datasets, and generate insights faster. Build visualizations and dashboards, and turn raw data into clear stories for stakeholders."
+      "description": "SQL 작성, dataset 탐색, insight 생성을 더 빠르게 수행합니다. Visualization과 dashboard를 만들고 raw data를 stakeholder에게 전달하기 쉬운 story로 바꿉니다."
     },
     {
       "name": "legal",
-      "displayName": "Legal",
+      "displayName": "법무",
       "source": "./legal",
-      "description": "Speed up contract review, NDA triage, and compliance workflows for in-house legal teams. Draft legal briefs, organize precedent research, and manage institutional knowledge."
+      "description": "사내 법무팀의 contract review, NDA triage, compliance workflow를 빠르게 합니다. Legal brief 초안 작성, precedent research 정리, institutional knowledge 관리를 지원합니다."
     },
     {
       "name": "marketing",
-      "displayName": "Marketing",
+      "displayName": "마케팅",
       "source": "./marketing",
-      "description": "Create content, plan campaigns, and analyze performance across marketing channels. Maintain brand voice consistency, track competitors, and report on what's working."
+      "description": "Content 생성, campaign planning, marketing channel 전반의 performance analysis를 지원합니다. Brand voice 일관성을 유지하고 competitor를 추적하며 효과가 있는 항목을 report합니다."
     },
     {
       "name": "customer-support",
-      "displayName": "Customer Support",
+      "displayName": "고객 지원",
       "source": "./customer-support",
-      "description": "Triage tickets, draft responses, escalate issues, and build your knowledge base. Research customer context and turn resolved issues into self-service content."
+      "description": "Ticket triage, response 초안 작성, issue escalation, knowledge base 구축을 지원합니다. Customer context를 조사하고 해결된 issue를 self-service content로 바꿉니다."
     },
     {
       "name": "product-management",
-      "displayName": "Product Management",
+      "displayName": "제품 관리",
       "source": "./product-management",
-      "description": "Write feature specs, plan roadmaps, and synthesize user research faster. Keep stakeholders updated and stay ahead of the competitive landscape."
+      "description": "Feature spec 작성, roadmap planning, user research synthesis를 더 빠르게 수행합니다. Stakeholder를 최신 상태로 유지하고 competitive landscape를 앞서 파악합니다."
     },
     {
       "name": "bio-research",
-      "displayName": "Bio Research",
+      "displayName": "바이오 리서치",
       "source": "./bio-research",
-      "description": "Connect to preclinical research tools and databases (literature search, genomics analysis, target prioritization) to accelerate early-stage life sciences R&D"
+      "description": "전임상 research tool 및 database(literature search, genomics analysis, target prioritization)에 연결해 초기 life sciences R&D를 가속합니다."
     },
     {
       "name": "slack-by-salesforce",
       "displayName": "Slack",
       "source": "./partner-built/slack",
-      "description": "Slack integration for searching messages, sending communications, managing canvases, and more",
+      "description": "Message 검색, communication 전송, canvas 관리 등을 위한 Slack integration입니다.",
       "author": {
         "name": "Salesforce"
       }
@@ -83,7 +83,7 @@
       "name": "apollo",
       "displayName": "Apollo.io",
       "source": "./partner-built/apollo",
-      "description": "Prospect, enrich leads, and load outreach sequences with Apollo.io — one-click MCP server integration for Claude Code and Cowork.",
+      "description": "Apollo.io로 prospect를 찾고 lead를 enrich하며 outreach sequence를 불러옵니다. Claude Code와 Cowork를 위한 one-click MCP server integration입니다.",
       "author": {
         "name": "Apollo.io"
       }
@@ -92,46 +92,46 @@
       "name": "common-room",
       "displayName": "Common Room",
       "source": "./partner-built/common-room",
-      "description": "Turn Common Room into your GTM copilot. Research accounts and contacts, prep for calls with attendee profiles and talking points, and draft personalized outreach across email, LinkedIn, and phone.",
+      "description": "Common Room을 GTM copilot으로 바꿉니다. Account와 contact를 조사하고 attendee profile과 talking point로 call을 준비하며 email, LinkedIn, phone 전반의 개인화 outreach 초안을 작성합니다.",
       "author": {
         "name": "Common Room"
       }
     },
     {
       "name": "engineering",
-      "displayName": "Engineering",
+      "displayName": "엔지니어링",
       "source": "./engineering",
-      "description": "Streamline engineering workflows — standups, code review, architecture decisions, incident response, and technical documentation. Works with your existing tools or standalone."
+      "description": "Standup, code review, architecture decision, incident response, technical documentation 등 engineering workflow를 간소화합니다. 기존 도구와 함께 쓰거나 standalone으로 동작합니다."
     },
     {
       "name": "human-resources",
-      "displayName": "Human Resources",
+      "displayName": "인사",
       "source": "./human-resources",
-      "description": "Streamline people operations — recruiting, onboarding, performance reviews, compensation analysis, and policy guidance. Maintain compliance and keep your team running smoothly."
+      "description": "Recruiting, onboarding, performance review, compensation analysis, policy guidance 등 people operation을 간소화합니다. Compliance를 유지하고 팀 운영을 원활하게 합니다."
     },
     {
       "name": "design",
-      "displayName": "Design",
+      "displayName": "디자인",
       "source": "./design",
-      "description": "Accelerate design workflows — critique, design system management, UX writing, accessibility audits, research synthesis, and dev handoff. From exploration to pixel-perfect specs."
+      "description": "Critique, design system management, UX writing, accessibility audit, research synthesis, dev handoff 등 design workflow를 가속합니다. Exploration부터 pixel-perfect spec까지 지원합니다."
     },
     {
       "name": "operations",
-      "displayName": "Operations",
+      "displayName": "운영",
       "source": "./operations",
-      "description": "Optimize business operations — vendor management, process documentation, change management, capacity planning, and compliance tracking. Keep your organization running efficiently."
+      "description": "Vendor management, process documentation, change management, capacity planning, compliance tracking 등 business operation을 최적화합니다. 조직이 효율적으로 운영되도록 돕습니다."
     },
     {
       "name": "small-business",
-      "displayName": "Small Business",
+      "displayName": "소상공인",
       "source": "./small-business",
-      "description": "Pre-built small business workflows (including payroll planning, month-end close, weekly briefs, and growth campaigns) using your QuickBooks, PayPal, HubSpot, Docusign, Gsuite, O365, Canva, and other connected tools. You approve every step that touches money or customers."
+      "description": "QuickBooks, PayPal, HubSpot, Docusign, Gsuite, O365, Canva 및 기타 연결 도구를 사용하는 사전 구축된 small business workflow입니다. Payroll planning, month-end close, weekly brief, growth campaign을 포함합니다. 돈이나 고객에 영향을 주는 모든 단계는 사용자가 승인합니다."
     },
     {
       "name": "brand-voice",
-      "displayName": "Brand Voice",
+      "displayName": "브랜드 보이스",
       "source": "./partner-built/brand-voice",
-      "description": "Discover your brand voice from existing documents and conversations, generate enforceable guidelines, and validate AI-generated content against your established tone and positioning.",
+      "description": "기존 document와 conversation에서 brand voice를 발견하고, 실행 가능한 guideline을 생성하며, AI-generated content가 확립된 tone과 positioning에 맞는지 검증합니다.",
       "author": {
         "name": "Tribe AI"
       }
@@ -164,7 +164,7 @@
       "name": "zoom-plugin",
       "displayName": "Zoom",
       "source": "./partner-built/zoom-plugin",
-      "description": "Plan, build, and debug Zoom integrations across REST APIs, Meeting SDK, Video SDK, webhooks, bots, and MCP workflows. Search meetings, retrieve recordings, access transcripts, and design AI-powered Zoom experiences.",
+      "description": "REST API, Meeting SDK, Video SDK, webhook, bot, MCP workflow 전반의 Zoom integration을 계획, 구축, 디버그합니다. Meeting 검색, recording 가져오기, transcript access, AI-powered Zoom experience 설계를 지원합니다.",
       "author": {
         "name": "Zoom"
       }
@@ -449,9 +449,9 @@
     },
     {
       "name": "pdf-viewer",
-      "displayName": "PDF Viewer",
+      "displayName": "PDF 뷰어",
       "source": "./pdf-viewer",
-      "description": "View, annotate, and sign PDFs in a live interactive viewer. Mark up contracts, fill forms with visual feedback, stamp approvals, and place signatures — then download the annotated copy."
+      "description": "Live interactive viewer에서 PDF를 보고, 주석을 달고, 서명합니다. Contract markup, visual feedback이 있는 form 작성, approval stamp, signature placement를 수행한 뒤 주석이 포함된 copy를 download합니다."
     },
     {
       "name": "box",
