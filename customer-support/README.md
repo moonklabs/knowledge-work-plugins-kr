@@ -10,23 +10,23 @@ claude plugins add knowledge-work-plugins/customer-support
 
 ## 주요 기능
 
-This plugin turns Claude into a customer support co-pilot. It helps you:
+이 plugin은 Claude를 customer support co-pilot으로 바꿉니다. 다음을 도와줍니다:
 
-- **Triage incoming tickets** with structured categorization, priority assessment, and routing recommendations
-- **Research customer questions** by synthesizing information from multiple sources with confidence scoring
-- **Draft professional responses** tailored to the situation, urgency, and communication channel
-- **Package escalations** with full context, reproduction steps, and business impact for engineering or product
-- **Write KB articles** from resolved issues to reduce future ticket volume
+- **Incoming ticket triage**: structured categorization, priority assessment, routing recommendation을 제공합니다.
+- **Customer question research**: 여러 source의 정보를 confidence scoring과 함께 종합합니다.
+- **Professional response draft**: 상황, 긴급도, communication channel에 맞춘 답변을 작성합니다.
+- **Escalation packaging**: engineering/product team을 위해 full context, reproduction step, business impact를 정리합니다.
+- **KB article 작성**: 해결된 issue를 문서화해 future ticket volume을 줄입니다.
 
 ## 명령
 
 | 명령 | 설명 |
 |---|---|
-| `/triage` | Categorize, prioritize, and route a support ticket or customer issue |
-| `/research` | Multi-source research on a customer question or topic |
-| `/draft-response` | Draft a customer-facing response for any situation |
-| `/escalate` | Package an escalation for engineering, product, or leadership |
-| `/kb-article` | Draft a knowledge base article from a resolved issue |
+| `/triage` | Support ticket 또는 customer issue를 categorize, prioritize, route합니다. |
+| `/research` | Customer question 또는 topic에 대해 multi-source research를 수행합니다. |
+| `/draft-response` | 어떤 상황에서도 customer-facing response 초안을 작성합니다. |
+| `/escalate` | Engineering, product, leadership용 escalation을 package합니다. |
+| `/kb-article` | Resolved issue에서 knowledge base article 초안을 작성합니다. |
 
 ## 스킬
 
@@ -34,11 +34,11 @@ This plugin turns Claude into a customer support co-pilot. It helps you:
 |---|---|
 | `ticket-triage` | Support ticket 또는 customer issue를 triage하고 prioritize합니다. New ticket이 들어와 categorization, P1-P4 priority assignment, 담당 team 결정, routing 전 duplicate/known issue 확인이 필요할 때 사용합니다. |
 | `customer-research` | Source attribution이 포함된 customer question/topic에 대한 multi-source research입니다. Customer가 lookup이 필요한 질문을 하거나, bug가 이전에 report되었는지 조사하거나, specific account에 이전에 무엇을 안내했는지 확인하거나, response 초안 전 background를 수집할 때 사용합니다. |
-| `response-drafting` | Communication best practices, tone guidelines, templates for common scenarios |
-| `escalation` | Escalation tiers, structured escalation format, impact assessment, follow-up cadence |
-| `knowledge-management` | Article structure standards, writing for searchability, review cadence, maintenance |
+| `response-drafting` | Communication best practice, tone guideline, common scenario template을 제공합니다. |
+| `escalation` | Escalation tier, structured escalation format, impact assessment, follow-up cadence를 다룹니다. |
+| `knowledge-management` | Article structure standard, searchability를 위한 writing, review cadence, maintenance를 다룹니다. |
 
-## Data Sources
+## Data Source
 
 > If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
 
@@ -127,7 +127,7 @@ Claude: [Generates a structured how-to article with prerequisites,
  issues — optimized for search]
 ```
 
-## Configuration
+## 설정
 
 The plugin works out of the box with the included MCP connections. For the richest experience, connect additional data sources through your Claude settings:
 

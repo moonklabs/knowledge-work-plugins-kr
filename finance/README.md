@@ -14,11 +14,11 @@ claude plugins add knowledge-work-plugins/finance
 
 | 명령 | 설명 |
 |---------|-------------|
-| `/journal-entry` | Journal entry preparation — generate accruals, fixed asset entries, prepaids, payroll, and revenue entries with proper debits/credits and supporting detail |
-| `/reconciliation` | Account reconciliation — compare GL balances to subledger, bank, or third-party balances and identify reconciling items |
-| `/income-statement` | Income statement generation — produce P&L with period-over-period comparison and variance analysis |
-| `/variance-analysis` | Variance/flux analysis — decompose variances into drivers with narrative explanations and waterfall analysis |
-| `/sox-testing` | SOX compliance testing — generate sample selections, testing workpapers, and control assessments |
+| `/journal-entry` | 적절한 debit/credit과 supporting detail이 포함된 accrual, fixed asset, prepaid, payroll, revenue journal entry를 준비합니다. |
+| `/reconciliation` | GL balance를 subledger, bank, third-party balance와 비교하고 reconciling item을 식별합니다. |
+| `/income-statement` | Period-over-period comparison과 variance analysis가 포함된 P&L을 생성합니다. |
+| `/variance-analysis` | Variance를 driver로 분해하고 narrative explanation과 waterfall analysis를 제공합니다. |
+| `/sox-testing` | Sample selection, testing workpaper, control assessment를 생성해 SOX compliance testing을 지원합니다. |
 
 ## 스킬
 

@@ -10,42 +10,42 @@ claude plugins add knowledge-work-plugins/data
 
 ## 주요 기능
 
-This plugin transforms Claude into a data analyst collaborator. It helps you explore datasets, write optimized SQL, build visualizations, create interactive dashboards, and validate analyses before sharing with stakeholders.
+이 plugin은 Claude를 data analyst collaborator로 바꿉니다. Dataset exploration, optimized SQL 작성, visualization 생성, interactive dashboard 구축, stakeholder 공유 전 analysis validation을 돕습니다.
 
-### With a Data Warehouse Connection
+### Data Warehouse 연결이 있을 때
 
-Connect your data warehouse MCP server (e.g., Snowflake, Databricks, BigQuery, or any SQL-compatible database) for the best experience. Claude will:
+최상의 경험을 위해 data warehouse MCP server(Snowflake, Databricks, BigQuery 또는 SQL-compatible database)를 연결하세요. Claude는 다음을 수행합니다:
 
-- Query your data warehouse directly
-- Explore schemas and table metadata
-- Run analyses end-to-end without copy-pasting
-- Iterate on queries based on results
+- Data warehouse를 직접 query합니다.
+- Schema와 table metadata를 explore합니다.
+- Copy/paste 없이 analysis를 end-to-end로 실행합니다.
+- Result를 바탕으로 query를 iterate합니다.
 
-### Without a Data Warehouse Connection
+### Data Warehouse 연결이 없을 때
 
-Without a data warehouse connection, paste SQL results or upload CSV/Excel files for analysis and visualization. Claude can also write SQL queries for you to run manually, and then analyze the results you provide.
+Data warehouse 연결이 없으면 SQL result를 붙여 넣거나 CSV/Excel file을 upload해 analysis와 visualization을 수행합니다. Claude는 사용자가 수동 실행할 SQL query를 작성하고, 사용자가 제공한 result를 분석할 수도 있습니다.
 
 ## 명령
 
 | 명령 | 설명 |
 |---------|-------------|
-| `/analyze` | Answer data questions -- from quick lookups to full analyses |
-| `/explore-data` | Profile and explore a dataset to understand its shape, quality, and patterns |
-| `/write-query` | Write optimized SQL for your dialect with best practices |
-| `/create-viz` | Create publication-quality visualizations with Python |
-| `/build-dashboard` | Build interactive HTML dashboards with filters and charts |
-| `/validate` | QA an analysis before sharing -- methodology, accuracy, and bias checks |
+| `/analyze` | Quick lookup부터 full analysis까지 data question에 답합니다. |
+| `/explore-data` | Dataset의 shape, quality, pattern을 이해하기 위해 profile하고 explore합니다. |
+| `/write-query` | 사용하는 dialect에 맞춰 best practice가 반영된 optimized SQL을 작성합니다. |
+| `/create-viz` | Python으로 publication-quality visualization을 생성합니다. |
+| `/build-dashboard` | Filter와 chart가 포함된 interactive HTML dashboard를 만듭니다. |
+| `/validate` | 공유 전 methodology, accuracy, bias check로 analysis를 QA합니다. |
 
 ## 스킬
 
 | 스킬 | 설명 |
 |-------|-------------|
 | `sql-queries` | 주요 data warehouse dialect(Snowflake, BigQuery, Databricks, PostgreSQL 등) 전반에서 correct하고 performant한 SQL을 작성합니다. Query 작성, slow SQL optimization, dialect 간 translation, CTE/window function/aggregation이 있는 complex analytical query 작성에 사용합니다. |
-| `data-exploration` | Data profiling, quality assessment, and pattern discovery |
+| `data-exploration` | Data profiling, quality assessment, pattern discovery를 수행합니다. |
 | `data-visualization` | Python(matplotlib, seaborn, plotly)으로 효과적인 data visualization을 만듭니다. Chart 작성, dataset에 맞는 chart type 선택, publication-quality figure 생성, accessibility와 color theory 같은 design principle 적용에 사용합니다. |
 | `statistical-analysis` | Descriptive stats, trend analysis, outlier detection, hypothesis testing 등 statistical method를 적용합니다. Distribution analysis, significance testing, anomaly detection, correlation computation, statistical result interpretation에 사용합니다. |
-| `data-validation` | Pre-delivery QA, sanity checks, and documentation standards |
-| `interactive-dashboard-builder` | HTML/JS dashboard construction with Chart.js, filters, and styling |
+| `data-validation` | Pre-delivery QA, sanity check, documentation standard를 다룹니다. |
+| `interactive-dashboard-builder` | Chart.js, filter, styling을 사용해 HTML/JS dashboard를 구성합니다. |
 
 ## 예시 워크플로
 

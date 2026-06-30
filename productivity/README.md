@@ -18,11 +18,11 @@ This plugin gives Claude a persistent understanding of your work:
 
 ## 명령
 
-| Command | What it does |
+| 명령 | 설명 |
 |---------|--------------|
-| `/start` | Initialize tasks + memory, open the dashboard |
-| `/update` | Triage stale items, check memory for gaps, sync from external tools if applicable |
-| `/update --comprehensive` | Deep scan email, calendar, chat — flag missed todos and suggest new memories |
+| `/start` | Task와 memory를 초기화하고 dashboard를 엽니다. |
+| `/update` | Stale item을 triage하고 memory gap을 확인하며, 가능한 경우 external tool에서 sync합니다. |
+| `/update --comprehensive` | Email, calendar, chat을 deep scan해 missed todo를 flag하고 new memory를 제안합니다. |
 
 ## 스킬
 

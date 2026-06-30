@@ -12,13 +12,13 @@ claude plugins add knowledge-work-plugins/marketing
 
 | 명령 | 설명 |
 |---|---|
-| `/draft-content` | Draft blog posts, social media, email newsletters, landing pages, press releases, and case studies |
-| `/campaign-plan` | Generate a full campaign brief with objectives, channels, content calendar, and success metrics |
-| `/brand-review` | Review content against your brand voice, style guide, and messaging pillars |
-| `/competitive-brief` | Research competitors and generate a positioning and messaging comparison |
-| `/performance-report` | Build a marketing performance report with key metrics, trends, and optimization recommendations |
-| `/seo-audit` | Run a comprehensive SEO audit — keyword research, on-page analysis, content gaps, technical checks, and competitor comparison |
-| `/email-sequence` | Design and draft multi-email sequences for nurture flows, onboarding, drip campaigns, and more |
+| `/draft-content` | Blog post, social media, email newsletter, landing page, press release, case study 초안을 작성합니다. |
+| `/campaign-plan` | Objective, channel, content calendar, success metric이 포함된 full campaign brief를 생성합니다. |
+| `/brand-review` | Brand voice, style guide, messaging pillar 기준으로 content를 review합니다. |
+| `/competitive-brief` | Competitor를 research하고 positioning 및 messaging comparison을 생성합니다. |
+| `/performance-report` | Key metric, trend, optimization recommendation이 포함된 marketing performance report를 만듭니다. |
+| `/seo-audit` | Keyword research, on-page analysis, content gap, technical check, competitor comparison을 포함한 SEO audit를 실행합니다. |
+| `/email-sequence` | Nurture flow, onboarding, drip campaign 등을 위한 multi-email sequence를 설계하고 초안을 작성합니다. |
 
 ## 스킬
 

@@ -14,12 +14,12 @@ Slash command로 호출하는 명시적 workflow입니다:
 
 | 명령 | 설명 |
 |---|---|
-| `/vendor-review` | Evaluate a vendor — cost analysis, risk assessment, contract summary, and renewal recommendation |
-| `/process-doc` | Document a business process — flowcharts, RACI matrices, SOPs, and runbooks |
-| `/change-request` | Create a change management request — impact analysis, rollback plan, approval routing |
-| `/capacity-plan` | Plan resource capacity — workload analysis, headcount modeling, utilization forecasting |
-| `/status-report` | Generate a status report — project updates, KPIs, risks, and action items for leadership |
-| `/runbook` | Create or update an operational runbook — step-by-step procedures for recurring tasks |
+| `/vendor-review` | Cost analysis, risk assessment, contract summary, renewal recommendation으로 vendor를 평가합니다. |
+| `/process-doc` | Flowchart, RACI matrix, SOP, runbook으로 business process를 문서화합니다. |
+| `/change-request` | Impact analysis, rollback plan, approval routing이 포함된 change management request를 작성합니다. |
+| `/capacity-plan` | Workload analysis, headcount modeling, utilization forecasting으로 resource capacity를 계획합니다. |
+| `/status-report` | Leadership용 project update, KPI, risk, action item이 포함된 status report를 생성합니다. |
+| `/runbook` | Recurring task를 위한 step-by-step operational runbook을 생성하거나 update합니다. |
 
 All commands work **standalone** (provide context and details) and get **supercharged** with MCP connectors.
 

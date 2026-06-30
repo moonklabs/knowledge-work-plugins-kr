@@ -22,26 +22,26 @@ This plugin gives you an AI-powered product management partner that can help wit
 
 ## 명령
 
-| Command | What It Does |
+| 명령 | 설명 |
 |---|---|
-| `/write-spec` | Write a feature spec or PRD from a problem statement |
-| `/roadmap-update` | Update, create, or reprioritize your roadmap |
-| `/stakeholder-update` | Generate a stakeholder update (weekly, monthly, launch) |
-| `/synthesize-research` | Synthesize user research from interviews, surveys, and tickets |
-| `/competitive-brief` | Create a competitive analysis brief |
-| `/metrics-review` | Review and analyze product metrics |
+| `/write-spec` | Problem statement에서 feature spec 또는 PRD를 작성합니다. |
+| `/roadmap-update` | Roadmap을 update, create, reprioritize합니다. |
+| `/stakeholder-update` | Weekly, monthly, launch용 stakeholder update를 생성합니다. |
+| `/synthesize-research` | Interview, survey, ticket에서 user research를 종합합니다. |
+| `/competitive-brief` | Competitive analysis brief를 생성합니다. |
+| `/metrics-review` | Product metric을 review하고 analyze합니다. |
 | `/brainstorm` | Product idea, problem space, strategic question을 sharp thinking partner와 brainstorm합니다 |
 
 ## 스킬
 
-| Skill | What It Covers |
+| 스킬 | 다루는 내용 |
 |---|---|
-| `feature-spec` | PRD structure, user stories, requirements categorization, acceptance criteria |
-| `roadmap-management` | Prioritization frameworks (RICE, MoSCoW), roadmap formats, dependency mapping |
-| `stakeholder-comms` | Update templates by audience, risk communication, decision documentation |
-| `user-research-synthesis` | Thematic analysis, affinity mapping, persona development, opportunity sizing |
-| `competitive-analysis` | Feature comparison matrices, positioning analysis, win/loss analysis |
-| `metrics-tracking` | Product metrics hierarchy, goal setting (OKRs), dashboard design, review cadences |
+| `feature-spec` | PRD structure, user story, requirement categorization, acceptance criteria를 다룹니다. |
+| `roadmap-management` | RICE, MoSCoW 같은 prioritization framework, roadmap format, dependency mapping을 다룹니다. |
+| `stakeholder-comms` | Audience별 update template, risk communication, decision documentation을 다룹니다. |
+| `user-research-synthesis` | Thematic analysis, affinity mapping, persona development, opportunity sizing을 다룹니다. |
+| `competitive-analysis` | Feature comparison matrix, positioning analysis, win/loss analysis를 다룹니다. |
+| `metrics-tracking` | Product metric hierarchy, OKR goal setting, dashboard design, review cadence를 다룹니다. |
 | `product-brainstorming` | Thinking partner로서 product idea를 brainstorm하고 problem space를 explore하며 assumption에 challenge합니다. New opportunity 탐색, product problem solution 생성, idea stress-test, PM이 방향을 정하기 전 sharp sparring partner와 생각을 정리해야 할 때 사용합니다. |
 
 ## 예시 워크플로

@@ -14,12 +14,12 @@ Slash command로 호출하는 명시적 workflow입니다:
 
 | 명령 | 설명 |
 |---|---|
-| `/standup` | Generate a standup update from your recent activity — commits, PRs, tickets, and chat |
-| `/review` | Review code changes — security, performance, style, and correctness |
-| `/debug` | Structured debugging session — reproduce, isolate, diagnose, and fix |
-| `/architecture` | Create or evaluate architecture decisions — ADR format with trade-off analysis |
-| `/incident` | Run an incident response workflow — triage, communicate, mitigate, and write postmortem |
-| `/deploy-checklist` | Pre-deployment checklist — verify tests, review changes, check dependencies, confirm rollback plan |
+| `/standup` | Commit, PR, ticket, chat 등 recent activity에서 standup update를 생성합니다. |
+| `/review` | Code change를 security, performance, style, correctness 관점에서 review합니다. |
+| `/debug` | Reproduce, isolate, diagnose, fix로 이어지는 structured debugging session을 실행합니다. |
+| `/architecture` | Trade-off analysis가 포함된 ADR format으로 architecture decision을 작성하거나 평가합니다. |
+| `/incident` | Triage, communication, mitigation, postmortem 작성을 포함한 incident response workflow를 실행합니다. |
+| `/deploy-checklist` | Test 검증, change review, dependency check, rollback plan 확인을 포함한 pre-deployment checklist를 생성합니다. |
 
 모든 명령은 code paste, system description, file upload만으로 **standalone** 동작하며, MCP connector를 연결하면 더 강력해집니다.
 

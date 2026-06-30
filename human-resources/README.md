@@ -14,12 +14,12 @@ Slash command로 호출하는 명시적 workflow입니다:
 
 | 명령 | 설명 |
 |---|---|
-| `/draft-offer` | Draft an offer letter with compensation details, start date, and terms |
-| `/onboarding` | Generate an onboarding checklist and first-week plan for a new hire |
-| `/performance-review` | Structure a performance review — self-assessment prompts, manager template, calibration prep |
-| `/policy-lookup` | Find and explain company policies — PTO, benefits, expense, travel, remote work |
-| `/comp-analysis` | Analyze compensation data — benchmarking, band placement, equity refresh modeling |
-| `/people-report` | Generate headcount, attrition, diversity, or org health reports |
+| `/draft-offer` | Compensation detail, start date, term이 포함된 offer letter 초안을 작성합니다. |
+| `/onboarding` | New hire를 위한 onboarding checklist와 first-week plan을 생성합니다. |
+| `/performance-review` | Self-assessment prompt, manager template, calibration prep을 포함해 performance review를 구조화합니다. |
+| `/policy-lookup` | PTO, benefit, expense, travel, remote work 등 company policy를 찾고 설명합니다. |
+| `/comp-analysis` | Benchmarking, band placement, equity refresh modeling으로 compensation data를 분석합니다. |
+| `/people-report` | Headcount, attrition, diversity, org health report를 생성합니다. |
 
 All commands work **standalone** (provide context and details) and get **supercharged** with MCP connectors.
 

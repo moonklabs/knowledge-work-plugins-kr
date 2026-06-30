@@ -14,12 +14,12 @@ Slash command로 호출하는 명시적 workflow입니다:
 
 | 명령 | 설명 |
 |---|---|
-| `/critique` | Get structured design feedback — usability, visual hierarchy, accessibility, and consistency |
-| `/design-system` | Audit, document, or extend your design system — components, tokens, patterns |
-| `/handoff` | Generate developer handoff specs — measurements, tokens, states, interactions, and edge cases |
-| `/ux-copy` | Write or review UX copy — microcopy, error messages, empty states, onboarding flows |
-| `/accessibility` | Run an accessibility audit — WCAG compliance, color contrast, screen reader, and keyboard navigation |
-| `/research-synthesis` | Synthesize user research — interviews, surveys, usability tests into actionable insights |
+| `/critique` | Usability, visual hierarchy, accessibility, consistency에 대한 structured design feedback을 받습니다. |
+| `/design-system` | Component, token, pattern을 중심으로 design system을 audit, document, extend합니다. |
+| `/handoff` | Measurement, token, state, interaction, edge case가 포함된 developer handoff spec을 생성합니다. |
+| `/ux-copy` | Microcopy, error message, empty state, onboarding flow 등 UX copy를 작성하거나 review합니다. |
+| `/accessibility` | WCAG compliance, color contrast, screen reader, keyboard navigation을 포함한 accessibility audit를 실행합니다. |
+| `/research-synthesis` | Interview, survey, usability test 등 user research를 actionable insight로 종합합니다. |
 
 All commands work **standalone** (describe your design or paste screenshots) and get **supercharged** with MCP connectors.
 
