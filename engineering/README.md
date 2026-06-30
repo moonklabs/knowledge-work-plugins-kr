@@ -38,53 +38,53 @@ Slash command로 호출하는 명시적 workflow입니다:
 
 ## 예시 워크플로
 
-### Morning Standup
+### Morning standup
 
 ```
 /standup
 ```
 
-If your tools are connected, I'll pull your recent commits, PR activity, and ticket updates. Otherwise, tell me what you worked on and I'll format it.
+Tool이 연결되어 있으면 recent commit, PR activity, ticket update를 가져옵니다. 그렇지 않으면 작업한 내용을 알려주면 standup format으로 정리합니다.
 
-### Code Review
+### Code review
 
 ```
 /review https://github.com/org/repo/pull/123
 ```
 
-Share a PR link, paste a diff, or point to files. Get a structured review covering security, performance, correctness, and style.
+PR link를 공유하거나 diff를 붙여넣거나 file을 지정하세요. Security, performance, correctness, style을 다루는 structured review를 받습니다.
 
-### Debugging an Issue
+### Issue debugging
 
 ```
 /debug Users are getting 500 errors on the checkout page
 ```
 
-Walk through a structured debugging process: reproduce, isolate, diagnose, fix. I'll help you think through it systematically.
+Reproduce, isolate, diagnose, fix로 이어지는 structured debugging process를 진행합니다. Systematic하게 생각하도록 돕습니다.
 
-### Architecture Decision
+### Architecture decision
 
 ```
 /architecture Should we use a message queue or direct API calls between services?
 ```
 
-Get a structured ADR with options analysis, trade-offs, and a recommendation.
+Option analysis, trade-off, recommendation이 포함된 structured ADR을 받습니다.
 
-### Incident Response
+### Incident response
 
 ```
 /incident The payments service is returning 503s
 ```
 
-Start an incident workflow: triage severity, draft communications, track timeline, and generate a postmortem when resolved.
+Incident workflow를 시작합니다. Severity를 triage하고 communication 초안을 작성하며 timeline을 track하고 resolved 후 postmortem을 생성합니다.
 
-### Pre-Deploy Check
+### Pre-deploy check
 
 ```
 /deploy-checklist auth-service v2.3.0
 ```
 
-Get a customized deployment checklist based on your service and what's changing.
+Service와 변경 내용을 기준으로 customized deployment checklist를 받습니다.
 
 ## 단독 사용과 통합 사용
 
@@ -92,27 +92,27 @@ Get a customized deployment checklist based on your service and what's changing.
 
 | 할 수 있는 일 | 단독 사용 | 통합 사용 시 |
 |-----------------|------------|-------------------|
-| Standup updates | Describe your work | Source control, Project tracker, Chat |
-| Code review | Paste diff or code | Source control (pull PRs automatically) |
-| Debug sessions | Describe the problem | Monitoring (pull logs and metrics) |
-| Architecture decisions | Describe the system | Knowledge base (find prior ADRs) |
-| Incident response | Describe the incident | Monitoring, Incident management, Chat |
-| Deploy checklists | Describe the deploy | CI/CD, Source control |
+| Standup update | 작업 내용 설명 | Source control, Project tracker, Chat |
+| Code review | Diff 또는 code 붙여넣기 | Source control(PR 자동 수집) |
+| Debug session | Problem 설명 | Monitoring(log와 metric 수집) |
+| Architecture decision | System 설명 | Knowledge base(prior ADR 검색) |
+| Incident response | Incident 설명 | Monitoring, Incident management, Chat |
+| Deploy checklist | Deploy 설명 | CI/CD, Source control |
 
 ## MCP 통합
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
+> 익숙하지 않은 placeholder가 보이거나 연결된 tool을 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
 더 풍부한 경험을 위해 tool을 연결하세요:
 
 | 범주 | 예시 | 가능해지는 일 |
 |---|---|---|
-| **Source control** | GitHub, GitLab | PR diffs, commit history, branch status |
-| **Project tracker** | Linear, Jira, Asana | Ticket status, sprint data, assignments |
-| **Monitoring** | Datadog, New Relic | Logs, metrics, alerts, dashboards |
-| **Incident management** | PagerDuty, Opsgenie | On-call schedules, incident tracking, paging |
-| **Chat** | Slack, Teams | Team discussions, standup channels |
-| **Knowledge base** | Notion, Confluence | ADRs, runbooks, onboarding docs |
+| **Source control** | GitHub, GitLab | PR diff, commit history, branch status |
+| **Project tracker** | Linear, Jira, Asana | Ticket status, sprint data, assignment |
+| **Monitoring** | Datadog, New Relic | Log, metric, alert, dashboard |
+| **Incident management** | PagerDuty, Opsgenie | On-call schedule, incident tracking, paging |
+| **Chat** | Slack, Teams | Team discussion, standup channel |
+| **Knowledge base** | Notion, Confluence | ADR, runbook, onboarding doc |
 
 지원되는 integration 전체 목록은 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 

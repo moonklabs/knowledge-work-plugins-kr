@@ -21,7 +21,7 @@ Slash command로 호출하는 명시적 workflow입니다:
 | `/status-report` | Leadership용 project update, KPI, risk, action item이 포함된 status report를 생성합니다. |
 | `/runbook` | Recurring task를 위한 step-by-step operational runbook을 생성하거나 update합니다. |
 
-All commands work **standalone** (provide context and details) and get **supercharged** with MCP connectors.
+모든 명령은 context와 detail만 제공해도 **standalone**으로 동작하며, MCP connector를 연결하면 더 강력해집니다.
 
 ## 스킬
 
@@ -29,62 +29,62 @@ All commands work **standalone** (provide context and details) and get **superch
 
 | 스킬 | 설명 |
 |---|---|
-| `vendor-management` | Evaluate, compare, and manage vendor relationships — contracts, performance, risk |
+| `vendor-management` | Contract, performance, risk 기준으로 vendor relationship을 evaluate, compare, manage합니다. |
 | `process-optimization` | Business process를 분석하고 개선합니다. "this process is slow", "how can we improve", "streamline this workflow", "too many steps", "bottleneck" 또는 사용자가 고치고 싶은 inefficient process를 설명할 때 트리거됩니다. |
-| `change-management` | Plan and execute organizational or technical changes — communication, training, adoption |
+| `change-management` | Communication, training, adoption을 포함해 organizational 또는 technical change를 계획하고 실행합니다. |
 | `risk-assessment` | Operational risk를 식별, 평가, 완화합니다. "what are the risks", "risk assessment", "risk register", "what could go wrong" 또는 project, vendor, process, decision 관련 risk를 평가할 때 트리거됩니다. |
 | `compliance-tracking` | Compliance requirement와 audit readiness를 track합니다. "compliance", "audit prep", "SOC 2", "ISO 27001", "GDPR", "regulatory requirement" 또는 compliance activity tracking/preparation/documentation에 도움이 필요할 때 트리거됩니다. |
-| `resource-planning` | Plan and optimize resource allocation — capacity, utilization, forecasting, budget |
+| `resource-planning` | Capacity, utilization, forecasting, budget 기준으로 resource allocation을 계획하고 optimize합니다. |
 
 ## 예시 워크플로
 
-### Evaluating a Vendor
+### Vendor 평가
 
 ```
 /vendor-review
 ```
 
-Provide the vendor name, contract details, or upload a proposal. Get a structured evaluation with cost analysis, risk flags, and a recommendation.
+Vendor name, contract detail을 제공하거나 proposal을 upload하면 cost analysis, risk flag, recommendation이 포함된 structured evaluation을 받습니다.
 
-### Documenting a Process
+### Process 문서화
 
 ```
 /process-doc employee offboarding
 ```
 
-Describe the process or walk me through it. Get a complete SOP with flowchart, RACI matrix, and step-by-step procedures.
+Process를 설명하거나 단계별로 알려주면 flowchart, RACI matrix, step-by-step procedure가 포함된 complete SOP를 받습니다.
 
-### Submitting a Change Request
+### Change request 제출
 
 ```
 /change-request
 ```
 
-Describe the change. Get an impact analysis, risk assessment, rollback plan, and communication template ready for approval.
+Change를 설명하면 approval에 바로 쓸 수 있는 impact analysis, risk assessment, rollback plan, communication template을 받습니다.
 
-### Planning Capacity
+### Capacity 계획
 
 ```
 /capacity-plan
 ```
 
-Upload team data or describe your resources. Get utilization analysis, bottleneck identification, and headcount recommendations.
+Team data를 upload하거나 resource를 설명하면 utilization analysis, bottleneck identification, headcount recommendation을 받습니다.
 
-### Leadership Status Report
+### Leadership status report
 
 ```
 /status-report
 ```
 
-I'll pull updates from your connected tools (or ask you for input) and generate a polished status report with KPIs, risks, and next steps.
+Connected tool에서 update를 가져오거나 필요한 input을 물은 뒤 KPI, risk, next step이 포함된 polished status report를 생성합니다.
 
-### Creating a Runbook
+### Runbook 작성
 
 ```
 /runbook monthly close process
 ```
 
-Walk me through the process once. I'll document it as a repeatable runbook with checklists, troubleshooting, and escalation paths.
+Process를 한 번 설명하면 checklist, troubleshooting, escalation path가 포함된 repeatable runbook으로 문서화합니다.
 
 ## 단독 사용과 통합 사용
 
@@ -92,33 +92,33 @@ Walk me through the process once. I'll document it as a repeatable runbook with 
 
 | 할 수 있는 일 | 단독 사용 | 통합 사용 시 |
 |-----------------|------------|-------------------|
-| Vendor reviews | Provide details, upload proposals | Procurement, Knowledge base |
-| Process documentation | Describe the process | Knowledge base (existing docs) |
-| Change requests | Describe the change | ITSM, Project tracker |
-| Capacity planning | Upload data, describe team | Project tracker (workload data) |
-| Status reports | Provide updates manually | Project tracker, Chat, Calendar |
-| Runbooks | Walk through the process | Knowledge base, ITSM |
+| Vendor review | Detail 제공, proposal upload | Procurement, Knowledge base |
+| Process documentation | Process 설명 | Knowledge base(existing docs) |
+| Change request | Change 설명 | ITSM, Project tracker |
+| Capacity planning | Data upload, team 설명 | Project tracker(workload data) |
+| Status report | Update 수동 제공 | Project tracker, Chat, Calendar |
+| Runbook | Process walkthrough | Knowledge base, ITSM |
 
 ## MCP 통합
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
+> 익숙하지 않은 placeholder가 보이거나 연결된 tool을 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
 더 풍부한 경험을 위해 tool을 연결하세요:
 
 | 범주 | 예시 | 가능해지는 일 |
 |---|---|---|
-| **ITSM** | ServiceNow, Zendesk | Ticket management, change requests, incident tracking |
+| **ITSM** | ServiceNow, Zendesk | Ticket management, change request, incident tracking |
 | **Project tracker** | Asana, Jira, monday.com | Project status, resource allocation, task tracking |
-| **Knowledge base** | Notion, Confluence | Process docs, runbooks, policies |
-| **Chat** | Slack, Teams | Team coordination, approvals, status updates |
+| **Knowledge base** | Notion, Confluence | Process doc, runbook, policy |
+| **Chat** | Slack, Teams | Team coordination, approval, status update |
 | **Calendar** | Google Calendar, Microsoft 365 | Meeting scheduling, deadline tracking |
-| **Email** | Gmail, Microsoft 365 | Vendor communications, approvals |
+| **Email** | Gmail, Microsoft 365 | Vendor communication, approval |
 
 지원되는 integration 전체 목록은 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
 ## 설정
 
-Create a local settings file at `operations/.claude/settings.local.json` to personalize:
+개인화를 위해 `operations/.claude/settings.local.json`에 local settings file을 만드세요.
 
 ```json
 {

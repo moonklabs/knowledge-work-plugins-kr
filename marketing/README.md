@@ -25,14 +25,14 @@ claude plugins add knowledge-work-plugins/marketing
 | 스킬 | 설명 |
 |---|---|
 | `content-creation` | Blog post, social media, email newsletter, landing page, press release, case study 등 channel 전반의 marketing content 초안을 작성합니다. Marketing content 작성, channel-specific formatting, SEO-optimized copy, headline option, call to action이 필요할 때 사용합니다. |
-| `campaign-planning` | Campaign frameworks, channel selection, content calendar creation, budget allocation, and success metrics |
-| `brand-voice` | Brand voice documentation, voice attributes, tone adaptation, style guide enforcement, and terminology management |
-| `competitive-analysis` | Competitive research methodology, messaging comparison, content gap analysis, positioning, and battlecard creation |
-| `performance-analytics` | Key metrics by channel, reporting templates, trend analysis, attribution modeling, and optimization frameworks |
+| `campaign-planning` | Campaign framework, channel selection, content calendar creation, budget allocation, success metric을 다룹니다. |
+| `brand-voice` | Brand voice documentation, voice attribute, tone adaptation, style guide enforcement, terminology management를 다룹니다. |
+| `competitive-analysis` | Competitive research methodology, messaging comparison, content gap analysis, positioning, battlecard creation을 다룹니다. |
+| `performance-analytics` | Channel별 key metric, reporting template, trend analysis, attribution modeling, optimization framework를 다룹니다. |
 
 ## 예시 워크플로
 
-### Drafting a Blog Post
+### Blog post 초안 작성
 
 ```
 > /draft-content
@@ -44,9 +44,9 @@ Tone: Authoritative but approachable
 Length: 1200 words
 ```
 
-Claude will generate a structured blog post draft with an engaging headline, introduction with a hook, organized sections, SEO-optimized subheadings, and a clear call to action.
+Claude는 engaging headline, hook이 있는 introduction, organized section, SEO-optimized subheading, clear call to action이 포함된 structured blog post draft를 생성합니다.
 
-### Planning a Campaign
+### Campaign 계획
 
 ```
 > /campaign-plan
@@ -56,34 +56,34 @@ Timeline: 6 weeks
 Budget range: $20,000-$30,000
 ```
 
-Claude will produce a campaign brief covering objectives, audience segmentation, key messages, channel strategy, a week-by-week content calendar, and KPIs to track.
+Claude는 objective, audience segmentation, key message, channel strategy, week-by-week content calendar, tracking KPI를 다루는 campaign brief를 생성합니다.
 
-### Reviewing Content Against Brand Guidelines
+### Brand guideline 기준 content review
 
 ```
 > /brand-review
 [paste your draft content]
 ```
 
-If your brand style guide is configured in local settings, Claude will check your content against voice, tone, terminology, and messaging pillars. If not configured, Claude will ask about your guidelines or provide a generic review for clarity, consistency, and professionalism.
+Local settings에 brand style guide가 설정되어 있으면 Claude가 voice, tone, terminology, messaging pillar 기준으로 content를 확인합니다. 설정되어 있지 않으면 guideline을 묻거나 clarity, consistency, professionalism 기준의 generic review를 제공합니다.
 
-## Configuration
+## 설정
 
-Configure your brand voice, style guide, and target personas in a local settings file for personalized output. This allows commands like `/draft-content` and `/brand-review` to automatically apply your brand standards without prompting each time.
+Personalized output을 위해 local settings file에 brand voice, style guide, target persona를 설정하세요. 이렇게 하면 `/draft-content`, `/brand-review` 같은 command가 매번 묻지 않고 brand standard를 자동 적용합니다.
 
 ## MCP 통합
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
+> 익숙하지 않은 placeholder가 보이거나 연결된 tool을 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
-This plugin works with the following MCP servers:
+이 plugin은 다음 MCP server와 함께 동작합니다.
 
-- **Slack** — Share drafts, reports, and briefs with your team
-- **Canva** — Create and edit design assets
-- **Figma** — Access design files and brand assets
-- **HubSpot** — Pull campaign data, manage contacts, and track marketing automation
-- **Amplitude** — Pull product analytics and user behavior data for performance reporting
-- **Notion** — Access briefs, style guides, and campaign documents
-- **Ahrefs** — SEO keyword research, backlink analysis, and site audits
-- **Similarweb** — Competitive traffic analysis and market benchmarking
-- **Klaviyo** — Draft and review email marketing sequences and campaigns
-- **Supermetrics** — Pull marketing data from multiple platforms for analytics and reporting
+- **Slack** — Draft, report, brief를 team과 공유
+- **Canva** — Design asset 생성 및 편집
+- **Figma** — Design file 및 brand asset 접근
+- **HubSpot** — Campaign data 수집, contact 관리, marketing automation tracking
+- **Amplitude** — Performance reporting용 product analytics 및 user behavior data 수집
+- **Notion** — Brief, style guide, campaign document 접근
+- **Ahrefs** — SEO keyword research, backlink analysis, site audit
+- **Similarweb** — Competitive traffic analysis 및 market benchmarking
+- **Klaviyo** — Email marketing sequence와 campaign 초안 작성 및 review
+- **Supermetrics** — Analytics/reporting용 multi-platform marketing data 수집
