@@ -8,12 +8,12 @@ Common Room 기반 GTM workflow입니다. Account research, contact research, ca
 
 ## 요구 사항
 
-- **Common Room MCP**(`mcp.commonroom.io/mcp`)가 연결되고 authenticated되어 있어야 합니다. 모든 plugin 기능의 primary data source입니다.
-- **Calendar connector**(선택) — `call-prep`와 `weekly-prep-brief`에서 automatic meeting lookup을 가능하게 합니다. 연결하지 않으면 두 skill 모두 meeting detail을 사용자에게 묻습니다.
+- **Common Room MCP**(`mcp.commonroom.io/mcp`)가 연결되고 인증되어 있어야 합니다. 모든 plugin 기능의 primary data source입니다.
+- **Calendar connector**(선택) — `call-prep`와 `weekly-prep-brief`에서 자동 meeting lookup을 가능하게 합니다. 연결하지 않으면 두 skill 모두 meeting detail을 사용자에게 묻습니다.
 
 ## 스킬
 
-Skill은 대화로 trigger됩니다. 원하는 일을 설명하면 Claude가 적절한 skill을 자동으로 load합니다.
+Skill은 대화로 trigger됩니다. 원하는 일을 설명하면 Claude가 적절한 skill을 자동으로 불러옵니다.
 
 | 스킬 | Trigger phrase |
 |-------|----------------|
@@ -22,7 +22,7 @@ Skill은 대화로 trigger됩니다. 원하는 일을 설명하면 Claude가 적
 | `call-prep` | Common Room signal을 사용해 customer 또는 prospect call을 준비합니다. 'prep me for my call with [company]', 'prepare for a meeting with [company]', 'what should I know before talking to [company]' 또는 call preparation request에서 트리거됩니다. |
 | `compose-outreach` | Common Room signal을 사용해 개인화된 outreach message를 생성합니다. 'draft outreach to [person]', 'write an email to [name]', 'compose a message for [contact]' 또는 outreach drafting request에서 트리거됩니다. |
 | `prospect` | Common Room Prospector를 사용해 targeted account 또는 contact list를 만듭니다. 'find companies that match [criteria]', 'build a prospect list', 'find contacts at [type of company]', 'show me companies hiring [role]' 또는 list-building request에서 트리거됩니다. |
-| `weekly-prep-brief` | 다음 7일 동안의 모든 external call에 대한 comprehensive weekly briefing을 생성합니다. 'weekly prep brief', 'prepare my week', 'what calls do I have this week', 'Monday prep' 또는 weekly planning request에서 트리거됩니다. |
+| `weekly-prep-brief` | 다음 7일 동안의 모든 external call에 대한 종합 weekly briefing을 생성합니다. 'weekly prep brief', 'prepare my week', 'what calls do I have this week', 'Monday prep' 또는 weekly planning request에서 트리거됩니다. |
 
 ## 명령
 
@@ -30,7 +30,7 @@ Skill은 대화로 trigger됩니다. 원하는 일을 설명하면 Claude가 적
 
 | 명령 | 사용법 |
 |---------|-------|
-| `/generate-account-plan <company>` | Stakeholder mapping, engagement analysis, opportunity, risk, action item이 포함된 comprehensive strategic account plan |
+| `/generate-account-plan <company>` | Stakeholder mapping, engagement analysis, opportunity, risk, action item이 포함된 종합 strategic account plan |
 | `/weekly-brief [date range]` | Full weekly prep briefing을 생성합니다. 기본값은 다음 7일입니다 |
 
 ## 각 스킬의 output
@@ -50,7 +50,7 @@ Skill은 대화로 trigger됩니다. 원하는 일을 설명하면 Claude가 적
 ## 설정
 
 1. Cowork settings에서 Common Room MCP server가 connected 및 authenticated 상태인지 확인합니다.
-2. 선택 사항으로 call prep 및 weekly briefing의 automatic meeting lookup을 위해 calendar MCP server를 연결합니다.
+2. 선택 사항으로 call prep 및 weekly briefing의 자동 meeting lookup을 위해 calendar MCP server를 연결합니다.
 3. 이 plugin을 설치합니다. 모든 skill과 command를 즉시 사용할 수 있습니다.
 
 ## User context

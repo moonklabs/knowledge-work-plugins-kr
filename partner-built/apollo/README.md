@@ -68,7 +68,7 @@ Claude Code에서 실행합니다.
 
 ## 인증
 
-The Apollo MCP Server supports **OAuth**:
+Apollo MCP Server는 **OAuth**를 지원합니다.
 
 1. 설치 후 Claude Code 또는 Cowork에서 `/mcp`를 실행합니다
 2. **Apollo** server를 선택하고 **Authenticate**를 클릭합니다
@@ -79,13 +79,13 @@ The Apollo MCP Server supports **OAuth**:
 
 ## Apollo credit
 
-Some operations consume [Apollo credits](https://docs.apollo.io/):
+일부 작업은 [Apollo credits](https://docs.apollo.io/)를 소비합니다.
 
-- **People enrichment**(세 skill 모두 사용)은 person당 1 credit을 소비합니다
+- **People enrichment**(세 skill 모두 사용)는 person당 1 credit을 소비합니다
 - **Bulk enrichment**(`/apollo:prospect`, `/apollo:sequence-load`)는 batch의 person당 1 credit을 소비합니다
 - Plugin은 credit을 소비하기 전에 항상 경고합니다
 
-## Credit
+## 크레딧
 
 - **MCP Server** by [Apollo.io](https://docs.apollo.io/)
 - **Plugin Specification** by [Anthropic](https://docs.anthropic.com/)

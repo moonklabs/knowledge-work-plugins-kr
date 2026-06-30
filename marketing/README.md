@@ -1,6 +1,6 @@
 # Marketing 플러그인
 
-Marketing plugin입니다. 주로 Anthropic의 agentic desktop application인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Content creation, campaign planning, brand voice management, competitive analysis, performance reporting을 지원합니다.
+Marketing 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Content creation, campaign planning, brand voice management, competitive analysis, performance reporting을 지원합니다.
 
 ## 설치
 
@@ -50,7 +50,7 @@ Claude는 engaging headline, hook이 있는 introduction, organized section, SEO
 
 ```
 > /campaign-plan
-Goal: Drive 500 signups for our new product launch
+Goal: 새 product launch에서 signup 500건 달성
 Audience: Technical decision-makers at enterprise companies
 Timeline: 6 weeks
 Budget range: $20,000-$30,000
