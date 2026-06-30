@@ -1,7 +1,7 @@
 ---
 
 description: 브랜드 가이드라인을 콘텐츠 생성에 적용합니다.
-argument-hint: "<content request>"
+argument-hint: "<콘텐츠 요청>"
 ---
 
 **MANDATORY FIRST STEP — do this before anything else, including loading guidelines or processing the content request.** Check whether the user has a working folder selected for this session. You must verify this before starting any enforcement work. If there is no working folder, stop and warn the user: "You don't have a working folder selected. Without one, I can't load saved guidelines from a previous session, and any guidelines generated in this conversation won't be saved for future sessions either. Please select a working folder and re-run this command. If you'd like to proceed anyway (guidelines will only be usable in this session), let me know."  Wait for the user to confirm before continuing.

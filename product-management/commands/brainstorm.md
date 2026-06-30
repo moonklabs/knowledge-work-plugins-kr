@@ -1,6 +1,6 @@
 ---
-description: Product idea, problem space, strategic question을 sharp thinking partner와 brainstorm합니다
-argument-hint: "<topic, problem, or idea to explore>"
+description: Product idea, problem space, strategic question을 날카로운 thinking partner와 brainstorm합니다
+argument-hint: "<탐색할 topic, problem 또는 idea>"
 ---
 
 # /brainstorm

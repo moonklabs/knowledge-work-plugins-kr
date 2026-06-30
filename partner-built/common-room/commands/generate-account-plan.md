@@ -2,7 +2,7 @@
 
 description: >-
   포괄적인 strategic account plan을 생성합니다.
-argument-hint: <company name or domain>
+argument-hint: <회사명 또는 domain>
 ---
 
 Generate a comprehensive account plan for "$ARGUMENTS".

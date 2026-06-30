@@ -1,6 +1,6 @@
 ---
 description: Calendar와 Common Room에서 weekly prep briefing을 생성합니다
-argument-hint: [date range, defaults to next 7 days]
+argument-hint: [date range, 기본값은 다음 7일]
 ---
 
 Generate a weekly prep briefing using Common Room and your calendar.

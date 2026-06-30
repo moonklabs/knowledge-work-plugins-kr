@@ -1,6 +1,6 @@
 ---
 description: 문서, transcript, discovery report 또는 그 조합에서 brand voice guideline을 생성합니다.
-argument-hint: "<sources — documents, transcripts, or description of what you have>"
+argument-hint: "<source: 문서, transcript 또는 보유 자료 설명>"
 ---
 
 **MANDATORY FIRST STEP — do this before anything else, including reading sources or processing arguments.** Check whether the user has a working folder selected for this session. You must verify this before starting any guideline generation work. If there is no working folder, stop and warn the user: "You don't have a working folder selected. Without one, I can't save guidelines to a file — they'll only exist in this conversation and won't persist to future sessions. Please select a working folder and re-run this command. If you'd like to proceed anyway, let me know."  Wait for the user to confirm before continuing.

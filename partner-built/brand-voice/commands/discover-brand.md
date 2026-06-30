@@ -1,6 +1,6 @@
 ---
 description: 연결된 platform에서 브랜드 자료를 검색하고 discovery report를 생성합니다.
-argument-hint: "[company name or platforms to search]"
+argument-hint: "[회사명 또는 검색할 platform]"
 ---
 
 Discover brand materials across the user's connected enterprise platforms. Search Notion, Confluence, Google Drive, Box, SharePoint, Figma, Gong, Granola, and Slack for brand guidelines, style guides, messaging frameworks, templates, and conversation transcripts.
