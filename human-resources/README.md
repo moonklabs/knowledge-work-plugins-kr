@@ -1,6 +1,6 @@
 # HR 플러그인
 
-People operations 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. 채용, 온보딩, 성과 관리, 정책 안내, 보상 분석을 돕습니다. 어떤 HR 팀에서도 사용할 수 있으며, 입력만으로 단독 동작하고 HRIS, ATS 및 다른 도구를 연결하면 더 강력해집니다.
+People operations 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. 채용, 온보딩, 성과 관리, 정책 안내, 보상 분석을 돕습니다. 입력만으로 단독 동작하고 HRIS, ATS 및 다른 도구를 연결하면 더 강력해집니다.
 
 ## 설치
 
@@ -10,7 +10,7 @@ claude plugins add knowledge-work-plugins/human-resources
 
 ## 명령
 
-Slash command로 호출하는 명시적 워크플로입니다:
+Slash command로 호출하는 명시적 워크플로입니다.
 
 | 명령 | 설명 |
 |---|---|
@@ -25,7 +25,7 @@ Slash command로 호출하는 명시적 워크플로입니다:
 
 ## 스킬
 
-관련 상황에서 Claude가 자동으로 사용하는 도메인 지식입니다:
+관련 상황에서 Claude가 자동으로 사용하는 도메인 지식입니다.
 
 | 스킬 | 설명 |
 |---|---|
@@ -40,7 +40,7 @@ Slash command로 호출하는 명시적 워크플로입니다:
 
 ### Offer 초안 작성
 
-```
+```text
 /draft-offer
 ```
 
@@ -48,7 +48,7 @@ Role, level, location, compensation detail을 알려주면 term, equity breakdow
 
 ### New hire onboarding
 
-```
+```text
 /onboarding
 ```
 
@@ -56,7 +56,7 @@ New hire의 name, role, team, start date를 제공하면 comprehensive onboardin
 
 ### Performance review 준비
 
-```
+```text
 /performance-review
 ```
 
@@ -64,8 +64,9 @@ Self-assessment, manager review, calibration용 template을 받습니다. 구체
 
 ### Benefit 이해
 
-Just ask naturally:
-```
+자연어로 물어보면 됩니다.
+
+```text
 우리 parental leave policy가 뭐야?
 ```
 
@@ -73,7 +74,7 @@ Just ask naturally:
 
 ### Compensation benchmarking
 
-```
+```text
 /comp-analysis
 ```
 
@@ -81,7 +82,7 @@ Comp data를 upload하거나 band를 설명하면 market comparison, band placem
 
 ## 단독 사용과 통합 사용
 
-모든 명령과 스킬은 integration 없이도 동작합니다:
+모든 명령과 스킬은 integration 없이도 동작합니다.
 
 | 할 수 있는 일 | 단독 사용 | 통합 사용 시 |
 |-----------------|------------|-------------------|
@@ -94,9 +95,9 @@ Comp data를 upload하거나 band를 설명하면 market comparison, band placem
 
 ## MCP 통합
 
-> 익숙하지 않은 placeholder가 보이거나 연결된 tool을 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
+> 익숙하지 않은 placeholder가 보이거나 연결된 도구를 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
-더 풍부한 경험을 위해 tool을 연결하세요:
+더 풍부한 경험을 위해 tool을 연결하세요.
 
 | 범주 | 예시 | 가능해지는 일 |
 |---|---|---|
@@ -111,7 +112,7 @@ Comp data를 upload하거나 band를 설명하면 market comparison, band placem
 
 ## 설정
 
-개인화를 위해 `settings.local.json` file을 만드세요:
+개인화를 위해 `settings.local.json` file을 만드세요.
 
 - **Cowork**: Folder picker로 Cowork와 공유한 아무 folder에 저장합니다. Plugin이 자동으로 찾습니다.
 - **Claude Code**: `human-resources/.claude/settings.local.json`에 저장합니다.

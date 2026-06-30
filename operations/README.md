@@ -1,6 +1,6 @@
 # Operations 플러그인
 
-비즈니스 운영 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. 벤더 관리, 프로세스 문서화, 변경 관리, 수용량 계획, 컴플라이언스 추적, 리소스 계획을 돕습니다. 어떤 운영 팀에서도 사용할 수 있으며, 입력만으로 단독 동작하고 ITSM, 프로젝트 추적기 및 다른 도구를 연결하면 더 강력해집니다.
+비즈니스 운영 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. 벤더 관리, 프로세스 문서화, 변경 관리, 수용량 계획, 컴플라이언스 추적, 리소스 계획을 돕습니다. 입력만으로 단독 동작하고 ITSM, 프로젝트 추적기 및 다른 도구를 연결하면 더 강력해집니다.
 
 ## 설치
 
@@ -10,7 +10,7 @@ claude plugins add knowledge-work-plugins/operations
 
 ## 명령
 
-Slash command로 호출하는 명시적 워크플로입니다:
+Slash command로 호출하는 명시적 워크플로입니다.
 
 | 명령 | 설명 |
 |---|---|
@@ -25,7 +25,7 @@ Slash command로 호출하는 명시적 워크플로입니다:
 
 ## 스킬
 
-관련 상황에서 Claude가 자동으로 사용하는 도메인 지식입니다:
+관련 상황에서 Claude가 자동으로 사용하는 도메인 지식입니다.
 
 | 스킬 | 설명 |
 |---|---|
@@ -40,7 +40,7 @@ Slash command로 호출하는 명시적 워크플로입니다:
 
 ### Vendor 평가
 
-```
+```text
 /vendor-review
 ```
 
@@ -48,7 +48,7 @@ Vendor name, contract detail을 제공하거나 proposal을 upload하면 cost an
 
 ### Process 문서화
 
-```
+```text
 /process-doc employee offboarding
 ```
 
@@ -56,7 +56,7 @@ Process를 설명하거나 단계별로 알려주면 flowchart, RACI matrix, ste
 
 ### Change request 제출
 
-```
+```text
 /change-request
 ```
 
@@ -64,7 +64,7 @@ Change를 설명하면 approval에 바로 쓸 수 있는 impact analysis, risk a
 
 ### Capacity 계획
 
-```
+```text
 /capacity-plan
 ```
 
@@ -72,7 +72,7 @@ Team data를 upload하거나 resource를 설명하면 utilization analysis, bott
 
 ### Leadership status report
 
-```
+```text
 /status-report
 ```
 
@@ -80,7 +80,7 @@ Connected tool에서 update를 가져오거나 필요한 input을 물은 뒤 KPI
 
 ### Runbook 작성
 
-```
+```text
 /runbook monthly close process
 ```
 
@@ -88,7 +88,7 @@ Process를 한 번 설명하면 checklist, troubleshooting, escalation path가 �
 
 ## 단독 사용과 통합 사용
 
-모든 명령과 스킬은 integration 없이도 동작합니다:
+모든 명령과 스킬은 integration 없이도 동작합니다.
 
 | 할 수 있는 일 | 단독 사용 | 통합 사용 시 |
 |-----------------|------------|-------------------|
@@ -101,9 +101,9 @@ Process를 한 번 설명하면 checklist, troubleshooting, escalation path가 �
 
 ## MCP 통합
 
-> 익숙하지 않은 placeholder가 보이거나 연결된 tool을 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
+> 익숙하지 않은 placeholder가 보이거나 연결된 도구를 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
-더 풍부한 경험을 위해 tool을 연결하세요:
+더 풍부한 경험을 위해 tool을 연결하세요.
 
 | 범주 | 예시 | 가능해지는 일 |
 |---|---|---|

@@ -56,9 +56,9 @@ claude plugins add knowledge-work-plugins/finance
 
 ## MCP 통합
 
-> 익숙하지 않은 placeholder가 보이거나 연결된 tool을 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
+> 익숙하지 않은 placeholder가 보이거나 연결된 도구를 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
-이 plugin은 MCP server를 통해 financial data source에 연결할 때 가장 잘 동작합니다. 관련 server를 `.mcp.json`에 추가하세요.
+이 플러그인은 MCP server를 통해 financial data source에 연결할 때 가장 잘 동작합니다. 관련 server를 `.mcp.json`에 추가하세요.
 
 ### ERP / accounting system
 
@@ -82,10 +82,10 @@ BI platform(예: Tableau, Looker)을 연결해 variance explanation에 필요한
 
 이 플러그인 디렉터리의 `.mcp.json`에서 `mcpServers` 섹션에 데이터 소스 MCP 서버를 추가하세요. `recommendedCategories` 필드는 플러그인 기능을 강화하는 통합 유형을 나열합니다.
 
-- `erp-accounting` — GL, subledger, JE data용 ERP 또는 accounting system
-- `data-warehouse` — Financial query 및 historical data용 data warehouse
-- `spreadsheets` — Workpaper generation용 spreadsheet tool
-- `analytics-bi` — Dashboard 및 KPI data용 BI tool
-- `documents` — Policy, memo, support 자료용 document storage
-- `email` — Report 발송 및 approval request용 email
-- `chat` — Close status update 및 question용 team communication
+- `erp-accounting`: GL, subledger, JE data용 ERP 또는 accounting system
+- `data-warehouse`: Financial query 및 historical data용 data warehouse
+- `spreadsheets`: Workpaper generation용 spreadsheet tool
+- `analytics-bi`: Dashboard 및 KPI data용 BI tool
+- `documents`: Policy, memo, support 자료용 document storage
+- `email`: Report 발송 및 approval request용 email
+- `chat`: Close status update 및 question용 team communication
