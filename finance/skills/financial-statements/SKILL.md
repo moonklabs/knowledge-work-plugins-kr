@@ -1,6 +1,6 @@
 ---
 name: financial-statements
-description: Generate financial statements (income statement, balance sheet, cash flow) with period-over-period comparison and variance analysis. Use when preparing a monthly or quarterly P&L, closing the books and need to flag material variances, comparing actuals to budget, building a financial summary for leadership review, or looking up GAAP presentation requirements and period-end adjustments.
+description: Period-over-period comparison과 variance analysis가 포함된 financial statement(income statement, balance sheet, cash flow)를 생성합니다. Monthly/quarterly P&L 준비, book closing 중 material variance flagging, actual vs budget comparison, leadership review용 financial summary 작성, GAAP presentation requirement와 period-end adjustment 확인에 사용합니다.
 argument-hint: "<frequency> <period>"
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: standup
-description: Generate a standup update from recent activity. Use when preparing for daily standup, summarizing yesterday's commits and PRs and ticket moves, formatting work into yesterday/today/blockers, or structuring a few rough notes into a shareable update.
+description: Recent activity에서 standup update를 생성합니다. Daily standup 준비, yesterday's commit/PR/ticket move 요약, yesterday/today/blocker 형식 정리, rough note를 shareable update로 구조화할 때 사용합니다.
 argument-hint: "[yesterday | today | blockers]"
 ---
 

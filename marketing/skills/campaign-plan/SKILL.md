@@ -1,6 +1,6 @@
 ---
 name: campaign-plan
-description: Generate a full campaign brief with objectives, audience, messaging, channel strategy, content calendar, and success metrics. Use when planning a product launch, lead-gen push, or awareness campaign, when you need a week-by-week content calendar with dependencies, or when translating a marketing goal into a structured, executable plan.
+description: Objective, audience, messaging, channel strategy, content calendar, success metric이 포함된 full campaign brief를 생성합니다. Product launch, lead-gen push, awareness campaign planning, dependency가 포함된 week-by-week content calendar, marketing goal을 structured executable plan으로 변환할 때 사용합니다.
 argument-hint: "<campaign objective or product>"
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: roadmap-update
-description: Update, create, or reprioritize your product roadmap. Use when adding a new initiative and deciding what moves to make room, shifting priorities after new information comes in, moving timelines due to a dependency slip, or building a Now/Next/Later view from scratch.
+description: Product roadmap을 update, create, reprioritize합니다. New initiative를 추가하며 무엇을 밀어낼지 결정하거나, new information 이후 priority를 조정하거나, dependency slip으로 timeline을 이동하거나, Now/Next/Later view를 처음부터 만들 때 사용합니다.
 argument-hint: "<update description>"
 ---
 

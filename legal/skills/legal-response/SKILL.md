@@ -1,6 +1,6 @@
 ---
 name: legal-response
-description: Generate a response to a common legal inquiry using configured templates, with built-in escalation checks for situations that shouldn't use a templated reply. Use when responding to data subject requests, litigation hold notices, vendor legal questions, NDA requests from business teams, or subpoenas.
+description: Configured template을 사용해 common legal inquiry에 대한 response를 생성하며, templated reply를 쓰면 안 되는 상황을 위한 built-in escalation check를 포함합니다. Data subject request, litigation hold notice, vendor legal question, business team의 NDA request, subpoena에 응답할 때 사용합니다.
 argument-hint: "[inquiry-type]"
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: capacity-plan
-description: Plan resource capacity — workload analysis and utilization forecasting. Use when heading into quarterly planning, the team feels overallocated and you need the numbers, deciding whether to hire or deprioritize, or stress-testing whether upcoming projects fit the people you have.
+description: Resource capacity를 계획합니다. Workload analysis와 utilization forecasting을 포함합니다. Quarterly planning 진입, team이 overallocated되어 숫자가 필요할 때, hire 또는 deprioritize 결정, upcoming project가 현재 인력으로 가능한지 stress-test할 때 사용합니다.
 argument-hint: "<team or project scope>"
 ---
 

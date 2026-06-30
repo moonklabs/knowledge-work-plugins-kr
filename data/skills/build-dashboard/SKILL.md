@@ -1,6 +1,6 @@
 ---
 name: build-dashboard
-description: Build an interactive HTML dashboard with charts, filters, and tables. Use when creating an executive overview with KPI cards, turning query results into a shareable self-contained report, building a team monitoring snapshot, or needing multiple charts with filters in one browser-openable file.
+description: Chart, filter, table이 있는 interactive HTML dashboard를 만듭니다. KPI card가 있는 executive overview, query result를 shareable self-contained report로 변환, team monitoring snapshot 작성, browser에서 열 수 있는 하나의 file에 여러 chart와 filter가 필요할 때 사용합니다.
 argument-hint: "<description> [data source]"
 ---
 

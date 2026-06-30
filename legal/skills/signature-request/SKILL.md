@@ -1,6 +1,6 @@
 ---
 name: signature-request
-description: Prepare and route a document for e-signature — run a pre-signature checklist, configure signing order, and send for execution. Use when a contract is finalized and ready to sign, when verifying entity names, exhibits, and signature blocks before sending, or when setting up an envelope with sequential or parallel signers.
+description: E-signature를 위해 document를 준비하고 route합니다. Pre-signature checklist를 실행하고 signing order를 설정한 뒤 execution으로 보냅니다. Contract가 finalized되어 signature 준비가 되었거나, 발송 전 entity name, exhibit, signature block을 검증하거나, sequential/parallel signer가 있는 envelope을 설정할 때 사용합니다.
 argument-hint: "<document or contract to send>"
 ---
 

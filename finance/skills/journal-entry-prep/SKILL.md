@@ -1,6 +1,6 @@
 ---
 name: journal-entry-prep
-description: Prepare journal entries with proper debits, credits, and supporting documentation for month-end close. Use when booking accruals, prepaid amortization, fixed asset depreciation, payroll entries, revenue recognition, or any manual journal entry.
+description: Month-end close를 위해 적절한 debit, credit, supporting documentation을 갖춘 journal entry를 준비합니다. Accrual, prepaid amortization, fixed asset depreciation, payroll entry, revenue recognition 또는 manual journal entry booking에 사용합니다.
 user-invocable: false
 ---
 

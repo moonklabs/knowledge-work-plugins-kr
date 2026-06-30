@@ -1,6 +1,6 @@
 ---
 name: content-creation
-description: Draft marketing content across channels — blog posts, social media, email newsletters, landing pages, press releases, and case studies. Use when writing any marketing content, when you need channel-specific formatting, SEO-optimized copy, headline options, or calls to action.
+description: Blog post, social media, email newsletter, landing page, press release, case study 등 channel 전반의 marketing content 초안을 작성합니다. Marketing content 작성, channel-specific formatting, SEO-optimized copy, headline option, call to action이 필요할 때 사용합니다.
 user-invocable: false
 ---
 

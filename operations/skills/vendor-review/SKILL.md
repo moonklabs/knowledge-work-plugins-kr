@@ -1,6 +1,6 @@
 ---
 name: vendor-review
-description: Evaluate a vendor — cost analysis, risk assessment, and recommendation. Use when reviewing a new vendor proposal, deciding whether to renew or replace a contract, comparing two vendors side-by-side, or building a TCO breakdown and negotiation points before procurement sign-off.
+description: Vendor를 evaluate합니다. Cost analysis, risk assessment, recommendation을 포함합니다. New vendor proposal review, contract renew/replace decision, two vendor side-by-side comparison, procurement sign-off 전 TCO breakdown과 negotiation point 작성에 사용합니다.
 argument-hint: "<vendor name or proposal>"
 ---
 

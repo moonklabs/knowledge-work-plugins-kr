@@ -1,6 +1,6 @@
 ---
 name: start
-description: Initialize the productivity system and open the dashboard. Use when setting up the plugin for the first time, bootstrapping working memory from your existing task list, or decoding the shorthand (nicknames, acronyms, project codenames) you use in your todos.
+description: Productivity system을 initialize하고 dashboard를 엽니다. 플러그인을 처음 설정하거나, existing task list에서 working memory를 bootstrap하거나, todo에서 쓰는 shorthand(nickname, acronym, project codename)를 해석할 때 사용합니다.
 ---
 
 # Start Command

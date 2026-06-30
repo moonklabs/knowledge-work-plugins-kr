@@ -1,6 +1,6 @@
 ---
 name: code-review
-description: Review code changes for security, performance, and correctness. Trigger with a PR URL or diff, "review this before I merge", "is this code safe?", or when checking a change for N+1 queries, injection risks, missing edge cases, or error handling gaps.
+description: Code change를 security, performance, correctness 관점에서 review합니다. PR URL 또는 diff, "review this before I merge", "is this code safe?" 또는 N+1 query, injection risk, missing edge case, error handling gap을 확인할 때 트리거됩니다.
 argument-hint: "<PR URL, diff, or file path>"
 ---
 

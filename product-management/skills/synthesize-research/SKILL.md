@@ -1,6 +1,6 @@
 ---
 name: synthesize-research
-description: Synthesize user research from interviews, surveys, and feedback into structured insights. Use when you have a pile of interview notes, survey responses, or support tickets to make sense of, need to extract themes and rank findings by frequency and impact, or want to turn raw feedback into roadmap recommendations.
+description: Interview, survey, feedback의 user research를 structured insight로 종합합니다. Interview note, survey response, support ticket이 많아 의미를 정리해야 하거나, theme을 추출하고 finding을 frequency/impact로 rank하거나, raw feedback을 roadmap recommendation으로 바꾸고 싶을 때 사용합니다.
 argument-hint: "<research topic or question>"
 ---
 

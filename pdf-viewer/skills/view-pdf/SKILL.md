@@ -1,6 +1,6 @@
 ---
 name: view-pdf
-description: Interactive PDF viewer. Use when the user wants to open, show, or view a PDF and collaborate on it visually — annotate, highlight, stamp, fill form fields, place signature/initials, or review markup together. Not for summarization or text extraction (use native Read instead).
+description: Interactive PDF viewer입니다. 사용자가 PDF를 열거나 보여주거나 보고, annotate, highlight, stamp, form field filling, signature/initials placement, markup review를 시각적으로 함께 하고 싶을 때 사용합니다. Summarization이나 text extraction 용도가 아니며 그 경우에는 native Read를 사용합니다.
 ---
 
 # PDF Viewer — Interactive Document Workflows

@@ -1,6 +1,6 @@
 ---
 name: sprint-planning
-description: Plan a sprint — scope work, estimate capacity, set goals, and draft a sprint plan. Use when kicking off a new sprint, sizing a backlog against team availability (accounting for PTO and meetings), deciding what's P0 vs. stretch, or handling carryover from the last sprint.
+description: Sprint를 계획합니다. Work scope, capacity estimate, goal setting, sprint plan draft를 다룹니다. New sprint kickoff, team availability(PTO와 meeting 포함) 대비 backlog sizing, P0 vs stretch 결정, last sprint carryover 처리에 사용합니다.
 argument-hint: "[sprint name or date range]"
 ---
 

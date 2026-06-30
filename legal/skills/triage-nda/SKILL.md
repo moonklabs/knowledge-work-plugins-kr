@@ -1,6 +1,6 @@
 ---
 name: triage-nda
-description: Rapidly triage an incoming NDA and classify it as GREEN (standard approval), YELLOW (counsel review), or RED (full legal review). Use when a new NDA arrives from sales or business development, when screening for embedded non-solicits, non-competes, or missing carveouts, or when deciding whether an NDA can be signed under standard delegation.
+description: Incoming NDA를 빠르게 triage하고 GREEN(standard approval), YELLOW(counsel review), RED(full legal review)로 classify합니다. Sales 또는 business development에서 새 NDA가 왔거나, embedded non-solicit/non-compete/missing carveout을 screening하거나, NDA가 standard delegation으로 signing 가능한지 결정할 때 사용합니다.
 argument-hint: "<NDA file or text>"
 ---
 

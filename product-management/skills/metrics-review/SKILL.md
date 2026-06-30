@@ -1,6 +1,6 @@
 ---
 name: metrics-review
-description: Review and analyze product metrics with trend analysis and actionable insights. Use when running a weekly, monthly, or quarterly metrics review, investigating a sudden spike or drop, comparing performance against targets, or turning raw numbers into a scorecard with recommended actions.
+description: Trend analysis와 actionable insight로 product metric을 review하고 analyze합니다. Weekly/monthly/quarterly metrics review, sudden spike/drop investigation, target 대비 performance comparison, raw number를 recommended action이 포함된 scorecard로 변환할 때 사용합니다.
 argument-hint: "<time period or metric focus>"
 ---
 

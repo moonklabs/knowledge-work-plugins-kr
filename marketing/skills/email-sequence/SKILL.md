@@ -1,6 +1,6 @@
 ---
 name: email-sequence
-description: Design and draft multi-email sequences with full copy, timing, branching logic, exit conditions, and performance benchmarks. Use when building onboarding, lead nurture, re-engagement, win-back, or product launch flows, when you need a complete drip campaign with A/B test suggestions, or when mapping a sequence end-to-end with a flow diagram.
+description: Full copy, timing, branching logic, exit condition, performance benchmark가 포함된 multi-email sequence를 설계하고 초안 작성합니다. Onboarding, lead nurture, re-engagement, win-back, product launch flow 작성, A/B test suggestion이 포함된 complete drip campaign, flow diagram이 있는 end-to-end sequence mapping에 사용합니다.
 argument-hint: "[sequence type]"
 ---
 

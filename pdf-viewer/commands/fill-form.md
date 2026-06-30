@@ -1,5 +1,5 @@
 ---
-description: Fill PDF form fields interactively with live visual feedback
+description: Live visual feedback과 함께 PDF form field를 interactive하게 채웁니다
 argument-hint: "[path-or-url]"
 ---
 

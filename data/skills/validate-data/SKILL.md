@@ -1,6 +1,6 @@
 ---
 name: validate-data
-description: QA an analysis before sharing -- methodology, accuracy, and bias checks. Use when reviewing an analysis before a stakeholder presentation, spot-checking calculations and aggregation logic, verifying a SQL query's results look right, or assessing whether conclusions are actually supported by the data.
+description: 공유 전 analysis를 QA합니다. Methodology, accuracy, bias를 점검합니다. Stakeholder presentation 전 analysis review, calculation 및 aggregation logic spot-check, SQL query result 검증, conclusion이 data로 실제 뒷받침되는지 평가할 때 사용합니다.
 argument-hint: "<analysis to review>"
 ---
 

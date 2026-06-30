@@ -1,6 +1,6 @@
 ---
 name: brief
-description: Generate contextual briefings for legal work — daily summary, topic research, or incident response. Use when starting your day and need a scan of legal-relevant items across email, calendar, and contracts, when researching a specific legal question across internal sources, or when a developing situation (data breach, litigation threat, regulatory inquiry) needs rapid context.
+description: Legal work를 위한 contextual briefing을 생성합니다. Daily summary, topic research, incident response를 다룹니다. 하루를 시작하며 email/calendar/contract 전반의 legal-relevant item scan이 필요하거나, internal source에서 specific legal question을 research하거나, data breach, litigation threat, regulatory inquiry 같은 developing situation에 rapid context가 필요할 때 사용합니다.
 argument-hint: "[daily | topic <query> | incident]"
 ---
 

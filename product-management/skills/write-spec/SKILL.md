@@ -1,6 +1,6 @@
 ---
 name: write-spec
-description: Write a feature spec or PRD from a problem statement or feature idea. Use when turning a vague idea or user request into a structured document, scoping a feature with goals and non-goals, defining success metrics and acceptance criteria, or breaking a big ask into a phased spec.
+description: Problem statement 또는 feature idea에서 feature spec이나 PRD를 작성합니다. Vague idea/user request를 structured document로 바꾸거나, goal/non-goal로 feature scope를 잡거나, success metric과 acceptance criteria를 정의하거나, 큰 요청을 phased spec으로 나눌 때 사용합니다.
 argument-hint: "<feature or problem statement>"
 ---
 

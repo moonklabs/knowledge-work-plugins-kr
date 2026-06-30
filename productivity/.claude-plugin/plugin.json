@@ -1,7 +1,7 @@
 {
   "name": "productivity",
   "version": "1.3.0",
-  "description": "Manage tasks, plan your day, and build up memory of important context about your work. Syncs with your calendar, email, and chat to keep everything organized and on track.",
+  "description": "Task를 관리하고 하루를 계획하며 업무에 중요한 context memory를 쌓습니다. Calendar, email, chat과 sync해 모든 일을 정리하고 track합니다.",
   "author": {
     "name": "Anthropic"
   }

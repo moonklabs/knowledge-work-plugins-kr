@@ -1,6 +1,6 @@
 ---
 name: performance-report
-description: Build a marketing performance report with key metrics, trend analysis, wins and misses, and prioritized optimization recommendations. Use when wrapping a campaign, when preparing weekly, monthly, or quarterly channel summaries for stakeholders, or when you need data translated into an executive summary with next-period priorities.
+description: Key metric, trend analysis, win/miss, prioritized optimization recommendation을 포함한 marketing performance report를 만듭니다. Campaign wrap-up, stakeholder용 weekly/monthly/quarterly channel summary 준비, data를 next-period priority가 포함된 executive summary로 바꿀 때 사용합니다.
 argument-hint: "<time period or campaign>"
 ---
 

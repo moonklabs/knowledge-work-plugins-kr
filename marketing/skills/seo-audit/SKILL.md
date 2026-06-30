@@ -1,6 +1,6 @@
 ---
 name: seo-audit
-description: Run a comprehensive SEO audit — keyword research, on-page analysis, content gaps, technical checks, and competitor comparison. Use when assessing a site's SEO health, when finding keyword opportunities and content gaps competitors own, or when you need a prioritized action plan split into quick wins and strategic investments.
+description: Comprehensive SEO audit를 실행합니다. Keyword research, on-page analysis, content gap, technical check, competitor comparison을 포함합니다. Site SEO health assessment, competitor가 가진 keyword opportunity/content gap 탐색, quick win과 strategic investment로 나눈 prioritized action plan이 필요할 때 사용합니다.
 argument-hint: "<url or topic> [audit type]"
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: audit-support
-description: Support SOX 404 compliance with control testing methodology, sample selection, and documentation standards. Use when generating testing workpapers, selecting audit samples, classifying control deficiencies, or preparing for internal or external audits.
+description: Control testing methodology, sample selection, documentation standard로 SOX 404 compliance를 지원합니다. Testing workpaper 생성, audit sample 선택, control deficiency classification, internal/external audit 준비에 사용합니다.
 user-invocable: false
 ---
 

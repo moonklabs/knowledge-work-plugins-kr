@@ -1,6 +1,6 @@
 ---
 name: variance-analysis
-description: Decompose financial variances into drivers with narrative explanations and waterfall analysis. Use when analyzing budget vs. actual, period-over-period changes, revenue or expense variances, or preparing variance commentary for leadership.
+description: Financial variance를 narrative explanation과 waterfall analysis가 포함된 driver로 분해합니다. Budget vs actual, period-over-period change, revenue/expense variance 분석, leadership용 variance commentary 준비에 사용합니다.
 argument-hint: "<line item> <period> vs <comparison>"
 ---
 

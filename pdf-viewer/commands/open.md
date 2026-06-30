@@ -1,5 +1,5 @@
 ---
-description: Open a PDF in the interactive viewer
+description: Interactive viewer에서 PDF를 엽니다
 argument-hint: "[path-or-url]"
 ---
 

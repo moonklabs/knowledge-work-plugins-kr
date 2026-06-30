@@ -1,7 +1,7 @@
 {
   "name": "product-management",
   "version": "1.2.0",
-  "description": "Write feature specs, plan roadmaps, and synthesize user research faster. Keep stakeholders updated and stay ahead of the competitive landscape.",
+  "description": "Feature spec 작성, roadmap planning, user research synthesis를 더 빠르게 합니다. Stakeholder update를 유지하고 competitive landscape를 앞서 파악합니다.",
   "author": {
     "name": "Anthropic"
   }

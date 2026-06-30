@@ -1,6 +1,6 @@
 ---
 name: brand-review
-description: Review content against your brand voice, style guide, and messaging pillars, flagging deviations by severity with specific before/after fixes. Use when checking a draft before it ships, when auditing copy for voice consistency and terminology, or when screening for unsubstantiated claims, missing disclaimers, and other legal flags.
+description: Brand voice, style guide, messaging pillar에 맞춰 content를 review하고 deviation을 severity별로 flag하며 specific before/after fix를 제공합니다. Draft 출고 전 check, voice consistency와 terminology audit, unsubstantiated claim, missing disclaimer, other legal flag screening에 사용합니다.
 argument-hint: "<content to review>"
 ---
 

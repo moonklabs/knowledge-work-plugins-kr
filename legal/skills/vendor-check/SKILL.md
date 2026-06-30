@@ -1,6 +1,6 @@
 ---
 name: vendor-check
-description: Check the status of existing agreements with a vendor across all connected systems — CLM, CRM, email, and document storage — with gap analysis and upcoming deadlines. Use when onboarding or renewing a vendor, when you need a consolidated view of what's signed and what's missing (MSA, DPA, SOW), or when checking for approaching expirations and surviving obligations.
+description: Connected system(CLM, CRM, email, document storage) 전반에서 vendor와의 existing agreement status를 확인하고 gap analysis와 upcoming deadline을 제공합니다. Vendor onboarding/renewal, signed item과 missing item(MSA, DPA, SOW)의 consolidated view, approaching expiration과 surviving obligation 확인에 사용합니다.
 argument-hint: "[vendor name]"
 ---
 

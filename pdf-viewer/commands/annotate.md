@@ -1,5 +1,5 @@
 ---
-description: Collaboratively annotate a PDF — propose markup, review together, iterate
+description: PDF를 collaborative하게 annotate합니다. Markup을 제안하고 함께 review하며 iterate합니다
 argument-hint: "[path-or-url]"
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: documentation
-description: Write and maintain technical documentation. Trigger with "write docs for", "document this", "create a README", "write a runbook", "onboarding guide", or when the user needs help with any form of technical writing — API docs, architecture docs, or operational runbooks.
+description: Technical documentation을 작성하고 유지합니다. "write docs for", "document this", "create a README", "write a runbook", "onboarding guide" 또는 API docs, architecture docs, operational runbook 등 기술 글쓰기에 도움이 필요할 때 트리거됩니다.
 ---
 
 # Technical Documentation

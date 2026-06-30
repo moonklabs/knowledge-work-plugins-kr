@@ -1,6 +1,6 @@
 ---
 name: reconciliation
-description: Reconcile accounts by comparing GL balances to subledgers, bank statements, or third-party data. Use when performing bank reconciliations, GL-to-subledger recs, intercompany reconciliations, or identifying and categorizing reconciling items.
+description: GL balance를 subledger, bank statement, third-party data와 비교해 account를 reconcile합니다. Bank reconciliation, GL-to-subledger rec, intercompany reconciliation, reconciling item 식별 및 categorization에 사용합니다.
 argument-hint: "<account> [period]"
 ---
 

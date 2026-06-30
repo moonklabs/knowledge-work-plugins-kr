@@ -1,5 +1,5 @@
 ---
-description: Place a signature or initials image on a PDF
+description: PDF에 signature 또는 initials image를 배치합니다
 argument-hint: "[path-or-url] [signature-image-path]"
 ---
 

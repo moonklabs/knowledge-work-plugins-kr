@@ -1,6 +1,6 @@
 ---
 name: legal-risk-assessment
-description: Assess and classify legal risks using a severity-by-likelihood framework with escalation criteria. Use when evaluating contract risk, assessing deal exposure, classifying issues by severity, or determining whether a matter needs senior counsel or outside legal review.
+description: Escalation criteria가 포함된 severity-by-likelihood framework로 legal risk를 assess하고 classify합니다. Contract risk evaluation, deal exposure assessment, issue severity classification, matter가 senior counsel 또는 outside legal review를 필요로 하는지 판단할 때 사용합니다.
 ---
 
 # Legal Risk Assessment Skill

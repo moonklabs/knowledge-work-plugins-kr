@@ -1,6 +1,6 @@
 ---
 name: product-brainstorming
-description: Brainstorm product ideas, explore problem spaces, and challenge assumptions as a thinking partner. Use when exploring a new opportunity, generating solutions to a product problem, stress-testing an idea, or when a PM needs to think out loud with a sharp sparring partner before converging on a direction.
+description: Thinking partner로서 product idea를 brainstorm하고 problem space를 explore하며 assumption에 challenge합니다. New opportunity 탐색, product problem solution 생성, idea stress-test, PM이 방향을 정하기 전 sharp sparring partner와 생각을 정리해야 할 때 사용합니다.
 ---
 
 # Product Brainstorming Skill

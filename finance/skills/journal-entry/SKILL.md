@@ -1,6 +1,6 @@
 ---
 name: journal-entry
-description: Prepare journal entries with proper debits, credits, and supporting detail. Use when booking month-end accruals (AP, payroll, prepaid), recording depreciation or amortization, posting revenue recognition or deferred revenue adjustments, or documenting an entry for audit review.
+description: 적절한 debit, credit, supporting detail을 갖춘 journal entry를 준비합니다. Month-end accrual(AP, payroll, prepaid) booking, depreciation/amortization recording, revenue recognition 또는 deferred revenue adjustment posting, audit review용 entry documentation에 사용합니다.
 argument-hint: "<entry type> [period]"
 ---
 

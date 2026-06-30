@@ -1,5 +1,5 @@
 ---
-description: Brainstorm a product idea, problem space, or strategic question with a sharp thinking partner
+description: Product idea, problem space, strategic question을 sharp thinking partner와 brainstorm합니다
 argument-hint: "<topic, problem, or idea to explore>"
 ---
 

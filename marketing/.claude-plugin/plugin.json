@@ -1,7 +1,7 @@
 {
   "name": "marketing",
   "version": "1.2.0",
-  "description": "Create content, plan campaigns, and analyze performance across marketing channels. Maintain brand voice consistency, track competitors, and report on what's working.",
+  "description": "Marketing channel 전반에서 content를 만들고 campaign을 계획하며 performance를 분석합니다. Brand voice consistency를 유지하고 competitor를 track하며 효과가 있는 것을 report합니다.",
   "author": {
     "name": "Anthropic"
   }

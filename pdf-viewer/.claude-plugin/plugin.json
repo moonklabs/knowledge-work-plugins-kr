@@ -1,7 +1,7 @@
 {
   "name": "pdf-viewer",
   "version": "0.2.0",
-  "description": "View, annotate, and sign PDFs in a live interactive viewer. Mark up contracts, fill forms with visual feedback, stamp approvals, and place signatures — then download the annotated copy.",
+  "description": "Live interactive viewer에서 PDF를 보고 annotate하고 sign합니다. Contract markup, visual feedback이 있는 form filling, approval stamp, signature placement를 수행한 뒤 annotated copy를 download합니다.",
   "author": {
     "name": "Anthropic"
   }

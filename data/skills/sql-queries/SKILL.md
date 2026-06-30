@@ -1,6 +1,6 @@
 ---
 name: sql-queries
-description: Write correct, performant SQL across all major data warehouse dialects (Snowflake, BigQuery, Databricks, PostgreSQL, etc.). Use when writing queries, optimizing slow SQL, translating between dialects, or building complex analytical queries with CTEs, window functions, or aggregations.
+description: 주요 data warehouse dialect(Snowflake, BigQuery, Databricks, PostgreSQL 등) 전반에서 correct하고 performant한 SQL을 작성합니다. Query 작성, slow SQL optimization, dialect 간 translation, CTE/window function/aggregation이 있는 complex analytical query 작성에 사용합니다.
 user-invocable: false
 ---
 

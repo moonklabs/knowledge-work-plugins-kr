@@ -1,6 +1,6 @@
 ---
 name: deploy-checklist
-description: Pre-deployment verification checklist. Use when about to ship a release, deploying a change with database migrations or feature flags, verifying CI status and approvals before going to production, or documenting rollback triggers ahead of time.
+description: Pre-deployment verification checklist입니다. Release ship 직전, database migration 또는 feature flag가 있는 change 배포, production 전 CI status와 approval 확인, rollback trigger 사전 문서화에 사용합니다.
 argument-hint: "[service or release name]"
 ---
 

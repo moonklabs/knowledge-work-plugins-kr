@@ -1,6 +1,6 @@
 ---
 name: explore-data
-description: Profile and explore a dataset to understand its shape, quality, and patterns. Use when encountering a new table or file, checking null rates and column distributions, spotting data quality issues like duplicates or suspicious values, or deciding which dimensions and metrics to analyze.
+description: Dataset의 shape, quality, pattern을 이해하기 위해 profile하고 explore합니다. New table/file을 처음 볼 때, null rate와 column distribution 확인, duplicate나 suspicious value 같은 data quality issue 탐지, 분석할 dimension과 metric 결정에 사용합니다.
 argument-hint: "<table or file>"
 ---
 

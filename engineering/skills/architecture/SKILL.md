@@ -1,6 +1,6 @@
 ---
 name: architecture
-description: Create or evaluate an architecture decision record (ADR). Use when choosing between technologies (e.g., Kafka vs SQS), documenting a design decision with trade-offs and consequences, reviewing a system design proposal, or designing a new component from requirements and constraints.
+description: Architecture decision record(ADR)를 작성하거나 평가합니다. Technology 선택(Kafka vs SQS 등), trade-off와 consequence가 있는 design decision 문서화, system design proposal review, requirement와 constraint에서 new component를 설계할 때 사용합니다.
 argument-hint: "<decision or system to design>"
 ---
 

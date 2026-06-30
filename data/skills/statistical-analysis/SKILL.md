@@ -1,6 +1,6 @@
 ---
 name: statistical-analysis
-description: Apply statistical methods including descriptive stats, trend analysis, outlier detection, and hypothesis testing. Use when analyzing distributions, testing for significance, detecting anomalies, computing correlations, or interpreting statistical results.
+description: Descriptive stats, trend analysis, outlier detection, hypothesis testing 등 statistical method를 적용합니다. Distribution analysis, significance testing, anomaly detection, correlation computation, statistical result interpretation에 사용합니다.
 user-invocable: false
 ---
 

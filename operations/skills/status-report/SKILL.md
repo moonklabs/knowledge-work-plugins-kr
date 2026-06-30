@@ -1,6 +1,6 @@
 ---
 name: status-report
-description: Generate a status report with KPIs, risks, and action items. Use when writing a weekly or monthly update for leadership, summarizing project health with green/yellow/red status, surfacing risks and decisions that need stakeholder attention, or turning a pile of project tracker activity into a readable narrative.
+description: KPI, risk, action item이 포함된 status report를 생성합니다. Leadership용 weekly/monthly update 작성, green/yellow/red status로 project health 요약, stakeholder attention이 필요한 risk와 decision surface, project tracker activity를 readable narrative로 변환할 때 사용합니다.
 argument-hint: "[weekly | monthly | quarterly] [project or team]"
 ---
 

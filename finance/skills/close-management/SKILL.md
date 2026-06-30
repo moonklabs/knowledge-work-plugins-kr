@@ -1,6 +1,6 @@
 ---
 name: close-management
-description: Manage the month-end close process with task sequencing, dependencies, and status tracking. Use when planning the close calendar, tracking close progress, identifying blockers, or sequencing close activities by day.
+description: Task sequencing, dependency, status tracking으로 month-end close process를 관리합니다. Close calendar planning, close progress tracking, blocker identification, close activity day-by-day sequencing에 사용합니다.
 user-invocable: false
 ---
 
