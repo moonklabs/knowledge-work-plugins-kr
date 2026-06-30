@@ -6,7 +6,7 @@ Zoom 통합을 계획하고 구축하며 디버그하기 위한 Claude 플러그
 
 이 디렉터리를 로컬 Claude 플러그인으로 설치합니다. 플러그인 매니페스트는 [`.claude-plugin/plugin.json`](.claude-plugin/plugin.json)에 있고, 함께 제공되는 Zoom MCP 커넥터는 [`.mcp.json`](.mcp.json)에 정의되어 있습니다.
 
-함께 제공되는 MCP 서버를 사용하기 전에 Claude가 사용할 Zoom 구현 영역용 bearer token을 export하세요.
+함께 제공되는 MCP 서버를 사용하기 전에 Claude가 사용할 Zoom 구현 영역용 bearer token을 내보내세요.
 
 ```bash
 export ZOOM_MCP_ACCESS_TOKEN="your_zoom_user_oauth_access_token"
@@ -80,7 +80,7 @@ export ZOOM_WHITEBOARD_MCP_ACCESS_TOKEN="your_zoom_user_oauth_access_token"
 /debug-zoom Zoom webhook 서명 검증이 로컬에서는 되는데 production에서 실패해
 ```
 
-### MCP flow 설계
+### MCP 흐름 설계
 
 ```text
 /setup-zoom-mcp Claude가 미팅을 검색하고 녹화 리소스를 가져온 뒤 후속 문서를 만들게 하고 싶어
@@ -92,7 +92,7 @@ export ZOOM_WHITEBOARD_MCP_ACCESS_TOKEN="your_zoom_user_oauth_access_token"
 
 ## 크로스 플랫폼 참고
 
-이 저장소는 우선 Claude 플러그인으로 패키징되어 있지만, 저장소 수준 discovery file을 사용하는 agent ecosystem을 위해 [AGENTS.md](AGENTS.md)도 포함합니다. 재사용 가능한 core는 `skills/` 트리와 그 안의 `SKILL.md` 파일입니다.
+이 저장소는 우선 Claude 플러그인으로 패키징되어 있지만, 저장소 수준 discovery file을 사용하는 agent ecosystem을 위해 [AGENTS.md](AGENTS.md)도 포함합니다. 재사용 가능한 핵심은 `skills/` 트리와 그 안의 `SKILL.md` 파일입니다.
 
 ## 구조
 

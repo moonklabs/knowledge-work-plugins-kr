@@ -6,7 +6,7 @@
 
 ## 작동 방식
 
-하나의 질의가 연결된 모든 도구를 동시에 검색합니다. Claude는 질문을 분해하고 각 source에서 표적 검색을 실행한 뒤, 출처 표시가 포함된 하나의 일관된 답변으로 결과를 종합합니다.
+하나의 질의가 연결된 모든 도구를 동시에 검색합니다. Claude는 질문을 분해하고 각 출처에서 표적 검색을 실행한 뒤, 출처 표시가 포함된 하나의 일관된 답변으로 결과를 종합합니다.
 
 ```text
 사용자: "API redesign에 대해 우리가 무엇을 결정했지?"
@@ -28,19 +28,19 @@ Tab을 오갈 필요도, 어떤 도구에 무엇이 있었는지 기억할 필�
 
 > 익숙하지 않은 placeholder가 보이거나 연결된 도구를 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
-Source를 원하는 조합으로 연결하세요. 더 많이 연결할수록 답변이 완전해집니다.
+출처를 원하는 조합으로 연결하세요. 더 많이 연결할수록 답변이 완전해집니다.
 
-| Source | 찾는 내용 |
+| 출처 | 찾는 내용 |
 |--------|---------------|
-| **~~chat** | Message, thread, channel, DM |
-| **~~email** | Email, attachment, conversation |
-| **~~cloud storage** | Doc, sheet, slide, PDF |
-| **Wiki / Knowledge Base** | Internal documentation, runbook |
-| **Project Management** | Task, issue, epic, milestone |
-| **CRM** | Account, contact, opportunity |
-| **Ticketing** | Support ticket, customer issue |
+| **~~chat** | 메시지, 스레드, 채널, DM |
+| **~~email** | 이메일, 첨부파일, 대화 |
+| **~~cloud storage** | 문서, 시트, 슬라이드, PDF |
+| **Wiki / Knowledge Base** | 내부 문서, runbook |
+| **Project Management** | 작업, 이슈, epic, milestone |
+| **CRM** | 계정, contact, opportunity |
+| **Ticketing** | 지원 티켓, 고객 이슈 |
 
-각 source는 MCP connection입니다. MCP setting에 source를 더 추가하면 Claude가 검색할 수 있는 범위가 확장됩니다.
+각 출처는 MCP connection입니다. MCP setting에 출처를 더 추가하면 Claude가 검색할 수 있는 범위가 확장됩니다.
 
 ---
 
@@ -48,8 +48,8 @@ Source를 원하는 조합으로 연결하세요. 더 많이 연결할수록 답
 
 | 명령 | 수행 내용 |
 |---------|--------------|
-| `/search` | 하나의 query로 모든 connected source를 검색합니다. |
-| `/digest` | 모든 source 활동의 daily 또는 weekly digest를 생성합니다. |
+| `/search` | 하나의 query로 모든 연결된 출처를 검색합니다. |
+| `/digest` | 모든 출처 활동의 일간 또는 주간 digest를 생성합니다. |
 
 ### Search
 
@@ -59,12 +59,12 @@ Source를 원하는 조합으로 연결하세요. 더 많이 연결할수록 답
 /enterprise-search:search 이번 주 #product에서 결정된 사항
 ```
 
-Filter `from:`, `in:`, `after:`, `before:`, `type:`을 지원하며 각 source의 native query syntax에 맞게 지능적으로 적용합니다.
+필터 `from:`, `in:`, `after:`, `before:`, `type:`을 지원하며 각 출처의 native query syntax에 맞게 지능적으로 적용합니다.
 
 ### Digest
 
 ```text
-/enterprise-search:digest --daily      # 오늘 모든 source에서 있었던 일
+/enterprise-search:digest --daily      # 오늘 모든 출처에서 있었던 일
 /enterprise-search:digest --weekly     # Project/topic별로 묶은 주간 요약
 ```
 
@@ -74,13 +74,13 @@ Filter `from:`, `in:`, `after:`, `before:`, `type:`을 지원하며 각 source�
 
 ## 스킬
 
-세 가지 skill이 search experience를 구동합니다.
+세 가지 skill이 검색 경험을 구동합니다.
 
-**Search Strategy** — 질의 분해 및 source-specific translation. 자연어 질문을 source별 표적 검색으로 나누고 모호성을 처리하며 source를 사용할 수 없을 때 graceful fallback합니다.
+**Search Strategy** — 질의 분해 및 출처별 변환입니다. 자연어 질문을 출처별 표적 검색으로 나누고 모호성을 처리하며 출처를 사용할 수 없을 때 자연스럽게 대체합니다.
 
-**Source Management** — 사용 가능한 MCP source를 파악하고, 새 source 연결을 안내하며, source priority와 rate limit을 관리합니다.
+**Source Management** — 사용 가능한 MCP 출처를 파악하고, 새 출처 연결을 안내하며, 출처 우선순위와 rate limit을 관리합니다.
 
-**Knowledge Synthesis** — 여러 source의 결과를 일관된 답변으로 결합합니다. Source 간 정보를 중복 제거하고, 출처 표시를 제공하며, 최신성과 권위 기준으로 신뢰도를 산정하고 큰 결과 집합을 요약합니다.
+**Knowledge Synthesis** — 여러 출처의 결과를 일관된 답변으로 결합합니다. 출처 간 정보를 중복 제거하고, 출처 표시를 제공하며, 최신성과 권위 기준으로 신뢰도를 산정하고 큰 결과 집합을 요약합니다.
 
 ---
 
