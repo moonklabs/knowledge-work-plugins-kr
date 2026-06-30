@@ -2,9 +2,9 @@
 
 name: document-analysis
 description: >-
-  Brand document를 분석해 voice attribute, messaging, terminology, example을 추출합니다. 여러 brand document를 처리하거나
-  cross-document pattern recognition이 필요할 때 사용합니다. 예: guideline-generation skill이 여러 document를 받아 brand
-  element를 추출해야 하거나, discovery report가 식별한 Notion/Confluence material을 깊게 분석해야 할 때 사용합니다.
+  Brand document를 분석해 voice attribute, messaging, terminology, example을 추출합니다. 여러 brand document를
+  처리하거나 문서 간 pattern recognition이 필요할 때 사용합니다. 예: guideline-generation skill이 여러 document를 받아
+  brand element를 추출해야 하거나, discovery report가 식별한 Notion/Confluence material을 깊게 분석해야 할 때 사용합니다.
 model: sonnet
 color: green
 # tools not restricted -- this agent needs MCP tools to fetch documents from connected platforms

@@ -3,11 +3,11 @@
 
 name: discover-brand
 description: >-
-  Enterprise platform(Notion, Confluence, Google Drive, Box, SharePoint, Figma, Gong, Granola, Slack) 전반에서
-  brand material을 자율적으로 발견하도록 조율합니다. 사용자가 "discover brand materials", "find brand documents", "search for
-  brand guidelines", "audit brand content", "what brand materials do we have", "find our style guide", "where
-  are our brand docs", "do we have a style guide", "discover brand voice", "brand content audit", "find brand
-  assets"를 요청할 때 사용합니다.
+  Enterprise platform(Notion, Confluence, Google Drive, Box, SharePoint, Figma, Gong, Granola,
+  Slack) 전반에서 브랜드 자료를 자율적으로 발견하도록 조율합니다. 사용자가 "discover brand materials", "find brand documents",
+  "search for brand guidelines", "audit brand content", "what brand materials do we have", "find
+  our style guide", "where are our brand docs", "do we have a style guide", "discover brand
+  voice", "brand content audit", "find brand assets"를 요청할 때 사용합니다.
 ---
 
 # Brand Discovery

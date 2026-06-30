@@ -1,5 +1,5 @@
 ---
-description: Connected platform에서 brand material을 검색하고 discovery report를 생성합니다
+description: 연결된 platform에서 브랜드 자료를 검색하고 discovery report를 생성합니다.
 argument-hint: "[company name or platforms to search]"
 ---
 

@@ -2,9 +2,9 @@
 
 name: quality-assurance
 description: >-
-  Content와 brand guideline을 brand standard에 맞춰 검증합니다. Output을 finalize하기 전에 compliance, consistency,
-  completeness, open question coverage를 확인할 때 이 agent를 사용합니다. 예: 생성된 cold email을 guideline에 맞춰 검증하거나, 방금 생성한
-  brand guideline의 completeness와 quality를 확인할 때 사용합니다.
+  Content와 brand guideline을 brand standard에 맞춰 검증합니다. Output을 finalize하기 전에 compliance,
+  consistency, completeness, open question coverage를 확인할 때 이 agent를 사용합니다. 예: 생성된 cold email을
+  guideline에 맞춰 검증하거나, 방금 생성한 brand guideline의 completeness와 quality를 확인할 때 사용합니다.
 model: haiku
 color: yellow
 tools:

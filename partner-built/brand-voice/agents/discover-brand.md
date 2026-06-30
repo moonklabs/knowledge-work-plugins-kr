@@ -2,9 +2,10 @@
 
 name: discover-brand
 description: >-
-  Enterprise platform을 자율적으로 검색해 brand 관련 document, transcript, design asset을 발견합니다. 사용자가 guideline을 만들고 싶지만
-  material 위치를 모르거나 comprehensive brand content audit을 원할 때 사용합니다. 예: brand material이 Notion, Confluence,
-  Google Drive, Box 등에 흩어져 있거나, 실제 보유한 brand material 전체를 찾아 categorize, rank, report해야 할 때 사용합니다.
+  Enterprise platform을 자율적으로 검색해 브랜드 관련 document, transcript, design asset을 발견합니다. 사용자가 guideline을
+  만들고 싶지만 material 위치를 모르거나 comprehensive brand content audit을 원할 때 사용합니다. 예: brand material이
+  Notion, Confluence, Google Drive, Box 등에 흩어져 있거나, 실제 보유한 brand material 전체를 찾아 categorize, rank,
+  report해야 할 때 사용합니다.
 model: sonnet
 color: cyan
 maxTurns: 25

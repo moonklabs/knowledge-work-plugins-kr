@@ -2,10 +2,10 @@
 
 name: content-generation
 description: >-
-  Brand guideline을 특정 content request에 적용해 brand-aligned sales 및 marketing content를 생성합니다. Long-form content,
-  batch generation, 또는 여러 brand constraint를 동시에 균형 있게 적용해야 할 때 이 agent를 사용합니다. 예: brand-voice-enforcement
-  skill이 detailed enterprise proposal을 생성해야 하거나, 서로 다른 persona용 personalized outreach email batch가 필요할 때
-  long-form 및 multi-constraint generation을 맡깁니다.
+  브랜드 가이드라인을 특정 콘텐츠 요청에 적용해 브랜드에 맞는 sales 및 marketing content를 생성합니다. 긴 형식의 콘텐츠, batch generation,
+  또는 여러 브랜드 제약을 동시에 균형 있게 적용해야 할 때 이 agent를 사용합니다. 예: brand-voice-enforcement skill이 상세 enterprise
+  proposal을 생성해야 하거나, 서로 다른 persona용 personalized outreach email batch가 필요할 때 long-form 및
+  multi-constraint generation을 맡깁니다.
 model: sonnet
 color: magenta
 tools:

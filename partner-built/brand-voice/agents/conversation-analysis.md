@@ -2,9 +2,10 @@
 
 name: conversation-analysis
 description: >-
-  Sales call transcript를 분석해 brand voice pattern, messaging effectiveness, tone variation을 추출합니다. 여러
-  transcript를 처리하거나 conversation 전반의 deep pattern recognition이 필요할 때 이 agent를 사용합니다. 예: guideline-generation
-  skill이 10개의 sales call transcript를 분석해야 하거나, discovery 중 찾은 Gong recording에서 voice pattern을 분석해야 할 때 사용합니다.
+  Sales call transcript를 분석해 brand voice pattern, 메시지 효과, tone variation을 추출합니다. 여러 transcript를
+  처리하거나 conversation 전반의 deep pattern recognition이 필요할 때 이 agent를 사용합니다. 예: guideline-generation
+  skill이 10개의 sales call transcript를 분석해야 하거나, discovery 중 찾은 Gong recording에서 voice pattern을 분석해야
+  할 때 사용합니다.
 model: sonnet
 color: blue
 # tools not restricted -- this agent needs MCP tools to fetch transcripts from Gong, Granola, etc.

@@ -3,12 +3,13 @@
 
 name: brand-voice-enforcement
 description: >-
-  브랜드 가이드라인을 content creation에 적용합니다. 사용자가 "write an email", "draft a proposal", "create a pitch deck", "write
-  a LinkedIn post", "draft a presentation", "write a Slack message", "draft sales content"를 요청하거나 brand voice를
-  적용해야 하는 content creation request를 할 때 사용합니다. "on-brand", "brand voice", "enforce voice", "apply brand
-  guidelines", "brand-aligned content", "write in our voice", "use our brand tone", "make this sound like us",
-  "rewrite this in our tone", "this doesn't sound on-brand"에서도 트리거됩니다. Guideline을 처음 생성하는 작업에는
-  guideline-generation을, brand material discovery에는 discover-brand를 사용합니다.
+  브랜드 가이드라인을 콘텐츠 생성에 적용합니다. 사용자가 "write an email", "draft a proposal", "create a pitch deck",
+  "write a LinkedIn post", "draft a presentation", "write a Slack message", "draft sales content"를
+  요청하거나 brand voice를 적용해야 하는 content creation request를 할 때 사용합니다. "on-brand", "brand voice",
+  "enforce voice", "apply brand guidelines", "brand-aligned content", "write in our voice", "use
+  our brand tone", "make this sound like us", "rewrite this in our tone", "this doesn't sound
+  on-brand"에서도 트리거됩니다. Guideline을 처음 생성하는 작업에는 guideline-generation을, brand material discovery에는
+  discover-brand를 사용합니다.
 ---
 
 # Brand Voice Enforcement

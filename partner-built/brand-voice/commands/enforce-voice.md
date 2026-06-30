@@ -1,7 +1,6 @@
 ---
 
-description: >-
-  Brand guideline을 content creation에 적용합니다.
+description: 브랜드 가이드라인을 콘텐츠 생성에 적용합니다.
 argument-hint: "<content request>"
 ---
 
