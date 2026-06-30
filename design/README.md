@@ -10,7 +10,7 @@ claude plugins add knowledge-work-plugins/design
 
 ## 명령
 
-Slash command로 호출하는 명시적 워크플로입니다.
+슬래시 명령으로 호출하는 명시적 워크플로입니다.
 
 | 명령 | 설명 |
 |---|---|
@@ -21,7 +21,7 @@ Slash command로 호출하는 명시적 워크플로입니다.
 | `/accessibility` | WCAG 준수, 색상 대비, 스크린 리더, 키보드 탐색을 포함한 접근성 감사를 실행합니다. |
 | `/research-synthesis` | 인터뷰, 설문, 사용성 테스트 등 사용자 리서치를 실행 가능한 인사이트로 종합합니다. |
 
-모든 명령은 design을 설명하거나 screenshot을 붙여넣는 것만으로 **단독** 동작하며, MCP connector를 연결하면 더 강력해집니다.
+모든 명령은 디자인을 설명하거나 스크린샷을 붙여넣는 것만으로 **단독** 동작하며, MCP connector를 연결하면 더 강력해집니다.
 
 ## 스킬
 
@@ -44,7 +44,7 @@ Slash command로 호출하는 명시적 워크플로입니다.
 /critique
 ```
 
-Figma link, 스크린샷을 공유하거나 디자인을 설명하세요. 사용성, 시각적 계층, 일관성, 접근성에 대한 구조화된 feedback을 받습니다.
+Figma link, 스크린샷을 공유하거나 디자인을 설명하세요. 사용성, 시각적 계층, 일관성, 접근성에 대한 구조화된 피드백을 받습니다.
 
 ### 디자인 시스템 감사
 
@@ -52,7 +52,7 @@ Figma link, 스크린샷을 공유하거나 디자인을 설명하세요. 사용
 /design-system audit
 ```
 
-Component library를 consistency, completeness, naming convention 기준으로 review합니다. 구체적인 improvement recommendation이 포함된 report를 받습니다.
+Component library를 일관성, 완성도, naming convention 기준으로 review합니다. 구체적인 개선 추천이 포함된 report를 받습니다.
 
 ### UX 카피 작성
 
@@ -60,7 +60,7 @@ Component library를 consistency, completeness, naming convention 기준으로 r
 /ux-copy error messages for payment flow
 ```
 
-Tone guidance, alternative, localization note가 포함된 context-appropriate copy를 받습니다.
+Tone guidance, 대안, localization note가 포함된 맥락에 맞는 copy를 받습니다.
 
 ### 개발자 핸드오프
 
@@ -68,7 +68,7 @@ Tone guidance, alternative, localization note가 포함된 context-appropriate c
 /handoff
 ```
 
-Figma link를 공유하면 measurement, design token, component state, interaction note, edge case가 포함된 complete spec을 받습니다.
+Figma link를 공유하면 measurement, design token, component state, interaction note, edge case가 포함된 완성된 spec을 받습니다.
 
 ### 접근성 확인
 
@@ -76,7 +76,7 @@ Figma link를 공유하면 measurement, design token, component state, interacti
 /accessibility
 ```
 
-Design 또는 URL을 공유하면 specific issue, severity, remediation step이 포함된 WCAG 2.1 AA compliance report를 받습니다.
+Design 또는 URL을 공유하면 구체적인 issue, severity, remediation step이 포함된 WCAG 2.1 AA compliance report를 받습니다.
 
 ### 리서치 종합
 
@@ -84,11 +84,11 @@ Design 또는 URL을 공유하면 specific issue, severity, remediation step이 
 /research-synthesis
 ```
 
-Interview transcript, survey result, usability test note를 업로드하면 theme, insight, prioritized recommendation을 받습니다.
+Interview transcript, survey result, usability test note를 업로드하면 theme, insight, 우선순위가 매겨진 recommendation을 받습니다.
 
 ## 단독 사용과 통합 사용
 
-모든 명령과 스킬은 integration 없이도 동작합니다.
+모든 명령과 스킬은 통합 도구 없이도 동작합니다.
 
 | 할 수 있는 일 | 단독 사용 | 통합 사용 시 |
 |-----------------|------------|-------------------|
@@ -113,4 +113,4 @@ Interview transcript, survey result, usability test note를 업로드하면 them
 | **Knowledge base** | Notion | Brand guideline, design principle, research repository |
 | **Product analytics** | Amplitude, Mixpanel | Research synthesis와 design decision용 usage data |
 
-지원되는 integration 전체 목록은 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
+지원되는 통합 전체 목록은 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.

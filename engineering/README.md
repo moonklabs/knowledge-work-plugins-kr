@@ -10,7 +10,7 @@ claude plugins add knowledge-work-plugins/engineering
 
 ## 명령
 
-Slash command로 호출하는 명시적 워크플로입니다.
+슬래시 명령으로 호출하는 명시적 워크플로입니다.
 
 | 명령 | 설명 |
 |---|---|
@@ -21,7 +21,7 @@ Slash command로 호출하는 명시적 워크플로입니다.
 | `/incident` | 분류, 커뮤니케이션, 완화, 사후 분석 작성을 포함한 인시던트 대응 워크플로를 실행합니다. |
 | `/deploy-checklist` | 테스트 검증, 변경 검토, 의존성 점검, 롤백 계획 확인을 포함한 배포 전 체크리스트를 생성합니다. |
 
-모든 명령은 code paste, system description, file upload만으로 **단독** 동작하며, MCP connector를 연결하면 더 강력해집니다.
+모든 명령은 코드 붙여넣기, 시스템 설명, 파일 업로드만으로 **단독** 동작하며, MCP connector를 연결하면 더 강력해집니다.
 
 ## 스킬
 
@@ -44,7 +44,7 @@ Slash command로 호출하는 명시적 워크플로입니다.
 /standup
 ```
 
-Tool이 연결되어 있으면 recent commit, PR activity, ticket update를 가져옵니다. 그렇지 않으면 작업한 내용을 알려주면 standup format으로 정리합니다.
+도구가 연결되어 있으면 최근 commit, PR activity, ticket update를 가져옵니다. 그렇지 않으면 작업한 내용을 알려주면 standup format으로 정리합니다.
 
 ### 코드 리뷰
 
@@ -88,7 +88,7 @@ Service와 변경 내용을 기준으로 customized deployment checklist를 받�
 
 ## 단독 사용과 통합 사용
 
-모든 명령과 스킬은 integration 없이도 동작합니다.
+모든 명령과 스킬은 통합 도구 없이도 동작합니다.
 
 | 할 수 있는 일 | 단독 사용 | 통합 사용 시 |
 |-----------------|------------|-------------------|
@@ -114,11 +114,11 @@ Service와 변경 내용을 기준으로 customized deployment checklist를 받�
 | **Chat** | Slack, Teams | Team discussion, standup channel |
 | **Knowledge base** | Notion, Confluence | ADR, runbook, onboarding doc |
 
-지원되는 integration 전체 목록은 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
+지원되는 통합 전체 목록은 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
 ## 설정
 
-개인화를 위해 `engineering/.claude/settings.local.json`에 local settings file을 만드세요.
+개인화를 위해 `engineering/.claude/settings.local.json`에 로컬 설정 파일을 만드세요.
 
 ```json
 {
