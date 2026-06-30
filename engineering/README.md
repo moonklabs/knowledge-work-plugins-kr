@@ -1,6 +1,6 @@
 # Engineering 플러그인
 
-Software engineering 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Standup, code review, architecture decision, incident response, debugging, technical documentation을 돕습니다. 어떤 engineering team에서도 사용할 수 있으며, 입력만으로도 standalone 동작하고 source control, project tracker, monitoring tool을 연결하면 더 강력해집니다.
+Software engineering 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Standup, code review, architecture decision, incident response, debugging, technical documentation을 돕습니다. 어떤 engineering team에서도 사용할 수 있으며, 입력만으로도 단독 동작하고 source control, project tracker, monitoring tool을 연결하면 더 강력해집니다.
 
 ## 설치
 
@@ -10,18 +10,18 @@ claude plugins add knowledge-work-plugins/engineering
 
 ## 명령
 
-Slash command로 호출하는 명시적 workflow입니다:
+Slash command로 호출하는 명시적 워크플로입니다:
 
 | 명령 | 설명 |
 |---|---|
 | `/standup` | Commit, PR, ticket, chat 등 recent activity에서 standup update를 생성합니다. |
-| `/review` | Code change를 security, performance, style, correctness 관점에서 review합니다. |
-| `/debug` | Reproduce, isolate, diagnose, fix로 이어지는 structured debugging session을 실행합니다. |
+| `/review` | Code change를 security, performance, style, correctness 관점에서 검토합니다. |
+| `/debug` | 재현, 격리, 진단, 수정으로 이어지는 구조화된 debugging session을 실행합니다. |
 | `/architecture` | Trade-off analysis가 포함된 ADR format으로 architecture decision을 작성하거나 평가합니다. |
-| `/incident` | Triage, communication, mitigation, postmortem 작성을 포함한 incident response workflow를 실행합니다. |
+| `/incident` | Triage, communication, mitigation, postmortem 작성을 포함한 incident response 워크플로를 실행합니다. |
 | `/deploy-checklist` | Test 검증, change review, dependency check, rollback plan 확인을 포함한 pre-deployment checklist를 생성합니다. |
 
-모든 명령은 code paste, system description, file upload만으로 **standalone** 동작하며, MCP connector를 연결하면 더 강력해집니다.
+모든 명령은 code paste, system description, file upload만으로 **단독** 동작하며, MCP connector를 연결하면 더 강력해집니다.
 
 ## 스킬
 
@@ -29,7 +29,7 @@ Slash command로 호출하는 명시적 workflow입니다:
 
 | 스킬 | 설명 |
 |---|---|
-| `code-review` | 코드 변경을 security, performance, correctness 관점에서 review합니다. PR URL 또는 diff, "review this before I merge", "is this code safe?" 또는 N+1 query, injection risk, missing edge case, error handling gap을 확인할 때 트리거됩니다. |
+| `code-review` | 코드 변경을 security, performance, correctness 관점에서 검토합니다. PR URL 또는 diff, "review this before I merge", "is this code safe?" 또는 N+1 query, injection risk, missing edge case, error handling gap을 확인할 때 트리거됩니다. |
 | `incident-response` | Incident response 워크플로를 실행합니다. Triage, communication, postmortem 작성을 다룹니다. "we have an incident", "production is down", severity assessment가 필요한 alert, incident 중 status update, 해결 후 blameless postmortem 작성 시 트리거됩니다. |
 | `system-design` | 시스템, 서비스, architecture를 설계합니다. "design a system for", "how should we architect", "system design for", "what's the right architecture for" 또는 API design, data modeling, service boundary에 도움이 필요할 때 트리거됩니다. |
 | `tech-debt` | Technical debt를 식별, 분류, 우선순위화합니다. "tech debt", "technical debt audit", "what should we refactor", "code health" 또는 code quality, refactoring priority, maintenance backlog에 대한 질문에서 트리거됩니다. |

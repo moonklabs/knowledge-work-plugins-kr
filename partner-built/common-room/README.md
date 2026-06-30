@@ -1,6 +1,6 @@
 # Common Room 플러그인
 
-Common Room 기반 GTM workflow입니다. Account research, contact research, call prep, personalized outreach, prospecting, weekly briefing을 지원합니다.
+Common Room 기반 GTM 워크플로입니다. Account research, contact research, call prep, personalized outreach, prospecting, weekly briefing을 지원합니다.
 
 ## 개요
 
@@ -8,7 +8,7 @@ Common Room 기반 GTM workflow입니다. Account research, contact research, ca
 
 ## 요구 사항
 
-- **Common Room MCP**(`mcp.commonroom.io/mcp`)가 연결되고 인증되어 있어야 합니다. 모든 plugin 기능의 primary data source입니다.
+- **Common Room MCP**(`mcp.commonroom.io/mcp`)가 연결되고 인증되어 있어야 합니다. 모든 plugin 기능의 기본 데이터 소스입니다.
 - **Calendar connector**(선택) — `call-prep`와 `weekly-prep-brief`에서 자동 meeting lookup을 가능하게 합니다. 연결하지 않으면 두 skill 모두 meeting detail을 사용자에게 묻습니다.
 
 ## 스킬
@@ -17,8 +17,8 @@ Skill은 대화로 trigger됩니다. 원하는 일을 설명하면 Claude가 적
 
 | 스킬 | Trigger phrase |
 |-------|----------------|
-| `account-research` | Common Room data를 사용해 company를 조사합니다. 'research [company]', 'tell me about [domain]', 'pull up signals for [account]', 'what's going on with [company]' 또는 account-level question에서 트리거됩니다. |
-| `contact-research` | Common Room data를 사용해 특정 person을 조사합니다. 'who is [name]', 'look up [email]', 'research [contact]', 'is [name] a warm lead' 또는 contact-level question에서 트리거됩니다. |
+| `account-research` | Common Room 데이터를 사용해 회사를 조사합니다. 'research [company]', 'tell me about [domain]', 'pull up signals for [account]', 'what's going on with [company]' 또는 계정 수준 질문에서 트리거됩니다. |
+| `contact-research` | Common Room 데이터를 사용해 특정 사람을 조사합니다. 'who is [name]', 'look up [email]', 'research [contact]', 'is [name] a warm lead' 또는 contact-level question에서 트리거됩니다. |
 | `call-prep` | Common Room signal을 사용해 customer 또는 prospect call을 준비합니다. 'prep me for my call with [company]', 'prepare for a meeting with [company]', 'what should I know before talking to [company]' 또는 call preparation request에서 트리거됩니다. |
 | `compose-outreach` | Common Room signal을 사용해 개인화된 outreach message를 생성합니다. 'draft outreach to [person]', 'write an email to [name]', 'compose a message for [contact]' 또는 outreach drafting request에서 트리거됩니다. |
 | `prospect` | Common Room Prospector를 사용해 targeted account 또는 contact list를 만듭니다. 'find companies that match [criteria]', 'build a prospect list', 'find contacts at [type of company]', 'show me companies hiring [role]' 또는 list-building request에서 트리거됩니다. |

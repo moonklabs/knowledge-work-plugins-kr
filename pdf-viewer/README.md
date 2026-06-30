@@ -1,8 +1,8 @@
 # PDF Viewer 플러그인
 
-Live interactive viewer에서 PDF를 보고, annotate하고, sign합니다. Contract를 mark up하고,
+Live interactive viewer에서 PDF를 보고, annotate하고, sign합니다. 계약서를 mark up하고,
 visual feedback으로 form을 채우고, approval stamp를 찍고,
-signature를 배치한 뒤 annotated copy를 download합니다.
+signature를 배치한 뒤 annotated copy를 다운로드합니다.
 
 ## 주요 기능
 
@@ -24,7 +24,7 @@ signature를 배치한 뒤 annotated copy를 download합니다.
 
 ## 일반 PDF 읽기와의 차이
 
-이 plugin은 document를 직접 보고 mark up한 뒤 annotated copy를 download하려는 **interactive, visual workflow**용입니다.
+이 plugin은 document를 직접 보고 mark up한 뒤 annotated copy를 다운로드하려는 **interactive, visual workflow**용입니다.
 
 PDF에서 **summary 또는 text extraction**만 원한다면 이 plugin을 사용하지 않아도 됩니다. Claude는 PDF file을 native로 읽을 수 있고, pure ingestion에는 그 방식이 더 빠릅니다.
 

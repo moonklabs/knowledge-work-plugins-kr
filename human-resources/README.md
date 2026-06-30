@@ -1,6 +1,6 @@
 # HR 플러그인
 
-People operations plugin입니다. 주로 Anthropic의 agentic desktop application인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Recruiting, onboarding, performance management, policy guidance, compensation analysis를 돕습니다. 어떤 HR team에서도 사용할 수 있으며, 입력만으로 standalone 동작하고 HRIS, ATS 및 다른 tool을 연결하면 더 강력해집니다.
+People operations plugin입니다. 주로 Anthropic의 agentic desktop application인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Recruiting, onboarding, performance management, policy guidance, compensation analysis를 돕습니다. 어떤 HR team에서도 사용할 수 있으며, 입력만으로 단독 동작하고 HRIS, ATS 및 다른 tool을 연결하면 더 강력해집니다.
 
 ## 설치
 
@@ -10,7 +10,7 @@ claude plugins add knowledge-work-plugins/human-resources
 
 ## 명령
 
-Slash command로 호출하는 명시적 workflow입니다:
+Slash command로 호출하는 명시적 워크플로입니다:
 
 | 명령 | 설명 |
 |---|---|
@@ -21,7 +21,7 @@ Slash command로 호출하는 명시적 workflow입니다:
 | `/comp-analysis` | Benchmarking, band placement, equity refresh modeling으로 compensation data를 분석합니다. |
 | `/people-report` | Headcount, attrition, diversity, org health report를 생성합니다. |
 
-모든 명령은 context와 detail만 제공해도 **standalone**으로 동작하며, MCP connector를 연결하면 더 강력해집니다.
+모든 명령은 context와 detail만 제공해도 **단독**으로 동작하며, MCP connector를 연결하면 더 강력해집니다.
 
 ## 스킬
 
@@ -34,7 +34,7 @@ Slash command로 호출하는 명시적 workflow입니다:
 | `compensation-benchmarking` | Market data 기준으로 base, equity, total comp를 benchmark합니다. |
 | `org-planning` | Headcount planning, org design, team structure optimization을 수행합니다. "org planning", "headcount plan", "team structure", "reorg", "who should we hire next" 또는 team size, reporting structure, organizational design을 고민할 때 트리거됩니다. |
 | `people-analytics` | Workforce data를 분석해 attrition trend, engagement signal, diversity metric을 파악합니다. |
-| `interview-prep` | Competency-based question과 scorecard가 포함된 structured interview plan을 만듭니다. "interview plan for", "interview questions for", "how should we interview", "scorecard for" 또는 candidate interview 준비 요청에서 트리거됩니다. |
+| `interview-prep` | 역량 기반 질문과 scorecard가 포함된 구조화된 interview plan을 만듭니다. "interview plan for", "interview questions for", "how should we interview", "scorecard for" 또는 candidate interview 준비 요청에서 트리거됩니다. |
 
 ## 예시 워크플로
 

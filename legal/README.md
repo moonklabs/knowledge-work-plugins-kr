@@ -42,31 +42,31 @@ Claude가 찾을 수 있는 위치에 `legal.local.md` 파일을 만드세요.
 ### 책임 제한
 - 표준 입장: 양방향 책임 한도를 지급/지급 예정 수수료 12개월분으로 제한
 - 허용 범위: 수수료 6~24개월분
-- Escalation trigger: 무제한 책임, consequential damages 포함
+- 에스컬레이션 조건: 무제한 책임, consequential damages 포함
 
 ### 면책
 - 표준 입장: IP 침해와 데이터 침해에 대한 상호 면책
 - 허용 가능: 제3자 청구로 제한된 면책
-- Escalation trigger: 일방적 면책 의무, 무제한 면책
+- 에스컬레이션 조건: 일방적 면책 의무, 무제한 면책
 
 ### IP 소유권
 - 표준 입장: 각 당사자는 기존 IP를 보유하고 customer data는 customer가 소유
-- Escalation trigger: 광범위한 IP 양도 조항, 기존 IP에 대한 work-for-hire 조항
+- 에스컬레이션 조건: 광범위한 IP 양도 조항, 기존 IP에 대한 work-for-hire 조항
 
 ### 데이터 보호
 - 표준 입장: 모든 개인정보 처리에 DPA 요구
 - 요구사항: 하위 처리자 통지, 종료 시 데이터 삭제, 72시간 내 침해 통지
-- Escalation trigger: DPA 미제공, 보호조치 없는 국외 이전
+- 에스컬레이션 조건: DPA 미제공, 보호조치 없는 국외 이전
 
 ### 기간 및 해지
 - 표준 입장: 연 단위 계약, 30일 전 통지로 임의 해지 가능
 - 허용 가능: 최초 기간 이후 임의 해지가 가능한 다년 계약
-- Escalation trigger: 통지 기간 없는 자동 갱신, 임의 해지 불가
+- 에스컬레이션 조건: 통지 기간 없는 자동 갱신, 임의 해지 불가
 
 ### 준거법
 - 선호: [Your jurisdiction]
 - 허용 가능: 주요 상사 관할(NY, DE, CA, England & Wales)
-- Escalation trigger: 비표준 관할, 불리한 장소의 강제 중재
+- 에스컬레이션 조건: 비표준 관할, 불리한 장소의 강제 중재
 
 ## NDA 기본값
 - 상호 의무 필요
@@ -140,7 +140,7 @@ Claude가 찾을 수 있는 위치에 `legal.local.md` 파일을 만드세요.
 | `nda-triage` | NDA 선별 기준, 분류 규칙, 라우팅 추천을 제공합니다. |
 | `compliance` | 개인정보 규제(GDPR, CCPA), DPA 검토, 정보주체 요청을 다룹니다. |
 | `canned-responses` | 템플릿 관리, 응답 범주, escalation trigger를 다룹니다. |
-| `legal-risk-assessment` | escalation criteria가 포함된 severity-by-likelihood framework로 법무 위험을 평가하고 분류합니다. 계약 위험 평가, 거래 exposure 평가, 이슈 심각도 분류, matter가 senior counsel 또는 outside legal review를 필요로 하는지 판단할 때 사용합니다. |
+| `legal-risk-assessment` | 에스컬레이션 기준이 포함된 severity-by-likelihood framework로 법무 위험을 평가하고 분류합니다. 계약 위험 평가, 거래 exposure 평가, 이슈 심각도 분류, matter가 senior counsel 또는 outside legal review를 필요로 하는지 판단할 때 사용합니다. |
 | `meeting-briefing` | 법무 관련성이 있는 미팅을 위한 구조화된 브리핑을 준비하고 그에 따른 action item을 추적합니다. 계약 협상, 이사회 미팅, 컴플라이언스 검토처럼 법무 맥락, 배경 조사, action tracking이 필요한 미팅 준비에 사용합니다. |
 
 ## 예시 워크플로

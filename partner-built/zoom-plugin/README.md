@@ -20,7 +20,7 @@ export ZOOM_WHITEBOARD_MCP_ACCESS_TOKEN="your_zoom_user_oauth_access_token"
 
 | 워크플로 | 설명 |
 |---|---|
-| [`/start`](skills/start/SKILL.md) | Zoom 앱 아이디어에서 시작해 적절한 product와 build path로 라우팅합니다 |
+| [`/start`](skills/start/SKILL.md) | Zoom 앱 아이디어에서 시작해 적절한 제품과 빌드 경로로 라우팅합니다 |
 | [`/setup-zoom-oauth`](skills/setup-zoom-oauth/SKILL.md) | Zoom app용 인증 모델, scope, redirect flow를 선택합니다 |
 | [`/build-zoom-meeting-app`](skills/build-zoom-meeting-app/SKILL.md) | 임베드형 또는 관리형 Zoom 미팅 흐름을 구축합니다 |
 | [`/build-zoom-bot`](skills/build-zoom-bot/SKILL.md) | 봇, 레코더, 실시간 미팅 처리기를 구축합니다 |
@@ -68,7 +68,7 @@ export ZOOM_WHITEBOARD_MCP_ACCESS_TOKEN="your_zoom_user_oauth_access_token"
 /start 통화에 참여해 액션 아이템을 추출하고 요약을 저장하는 내부 미팅 비서를 만들어줘
 ```
 
-### 새 app 계획
+### 새 앱 계획
 
 ```text
 /start 고객이 우리 제품에서 Zoom 미팅을 예약하고 참여할 수 있는 React app을 만들어줘
@@ -88,11 +88,11 @@ export ZOOM_WHITEBOARD_MCP_ACCESS_TOKEN="your_zoom_user_oauth_access_token"
 
 ## 커넥터
 
-[CONNECTORS.md](CONNECTORS.md)를 참고하세요. 플러그인은 함께 제공되는 스킬만으로 standalone 동작하며, Claude가 [`.mcp.json`](.mcp.json)의 bundled Zoom MCP 서버를 사용할 수 있으면 더 강력해집니다.
+[CONNECTORS.md](CONNECTORS.md)를 참고하세요. 플러그인은 함께 제공되는 스킬만으로 단독 동작하며, Claude가 [`.mcp.json`](.mcp.json)의 bundled Zoom MCP 서버를 사용할 수 있으면 더 강력해집니다.
 
 ## 크로스 플랫폼 참고
 
-이 repo는 우선 Claude 플러그인으로 package되어 있지만, repo-level discovery file을 사용하는 agent ecosystem을 위해 [AGENTS.md](AGENTS.md)도 포함합니다. 재사용 가능한 core는 `skills/` 트리와 그 안의 `SKILL.md` 파일입니다.
+이 저장소는 우선 Claude 플러그인으로 패키징되어 있지만, 저장소 수준 discovery file을 사용하는 agent ecosystem을 위해 [AGENTS.md](AGENTS.md)도 포함합니다. 재사용 가능한 core는 `skills/` 트리와 그 안의 `SKILL.md` 파일입니다.
 
 ## 구조
 

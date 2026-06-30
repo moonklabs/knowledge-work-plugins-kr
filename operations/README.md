@@ -1,6 +1,6 @@
 # Operations 플러그인
 
-Business operations 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Vendor management, process documentation, change management, capacity planning, compliance tracking, resource planning을 돕습니다. 어떤 ops team에서도 사용할 수 있으며, 입력만으로 standalone 동작하고 ITSM, project tracker 및 다른 tool을 연결하면 더 강력해집니다.
+Business operations 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Vendor management, process documentation, change management, capacity planning, compliance tracking, resource planning을 돕습니다. 어떤 ops team에서도 사용할 수 있으며, 입력만으로 단독 동작하고 ITSM, project tracker 및 다른 tool을 연결하면 더 강력해집니다.
 
 ## 설치
 
@@ -10,7 +10,7 @@ claude plugins add knowledge-work-plugins/operations
 
 ## 명령
 
-Slash command로 호출하는 명시적 workflow입니다:
+Slash command로 호출하는 명시적 워크플로입니다:
 
 | 명령 | 설명 |
 |---|---|
@@ -21,7 +21,7 @@ Slash command로 호출하는 명시적 workflow입니다:
 | `/status-report` | Leadership용 project update, KPI, risk, action item이 포함된 status report를 생성합니다. |
 | `/runbook` | Recurring task를 위한 step-by-step operational runbook을 생성하거나 update합니다. |
 
-모든 명령은 context와 detail만 제공해도 **standalone**으로 동작하며, MCP connector를 연결하면 더 강력해집니다.
+모든 명령은 context와 detail만 제공해도 **단독**으로 동작하며, MCP connector를 연결하면 더 강력해집니다.
 
 ## 스킬
 

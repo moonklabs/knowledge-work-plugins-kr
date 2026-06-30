@@ -39,7 +39,7 @@ Sales email, proposal, marketing page, press release 같은 모든 AI-generated 
 ```
 
 ### Open question
-플러그인이 서로 충돌하는 문서, 누락된 가이드라인, 선언된 브랜드와 실제 사용되는 브랜드의 차이처럼 해결할 수 없는 ambiguity를 만나면 team discussion용 open question을 표시합니다. 모든 question에는 agent recommendation이 포함되어 ambiguity를 dead end가 아니라 "confirm or override" interaction으로 바꿉니다.
+플러그인이 서로 충돌하는 문서, 누락된 가이드라인, 선언된 브랜드와 실제 사용되는 브랜드의 차이처럼 해결할 수 없는 모호성을 만나면 팀 논의용 open question을 표시합니다. 모든 question에는 agent recommendation이 포함되어 모호성을 막다른 길이 아니라 "confirm or override" 상호작용으로 바꿉니다.
 
 ## MCP connector
 
@@ -59,20 +59,20 @@ Sales email, proposal, marketing page, press release 같은 모든 AI-generated 
 
 | Integration | 목적 |
 |-------------|---------|
-| **Google Drive** | 공유 브랜드 문서, style guide, 마케팅 자료, Google Docs and Slides |
-| **Slack** | 브랜드 논의, 채널 검색, pinned brand guideline, informal voice pattern |
+| **Google Drive** | 공유 브랜드 문서, style guide, 마케팅 자료, Google Docs 및 Slides |
+| **Slack** | 브랜드 논의, 채널 검색, pinned brand guideline, 비공식 voice pattern |
 
 ## 빠른 시작
 
 1. 플러그인을 설치하고 Claude Cowork를 엽니다.
 2. 최소 하나의 platform을 연결합니다. Notion을 권장합니다. Google Drive, SharePoint, Slack, Jira를 federate합니다.
-3. `/brand-voice:discover-brand`를 실행합니다. Claude가 connected knowledge base에서 브랜드 자료를 자동 검색합니다.
+3. `/brand-voice:discover-brand`를 실행합니다. Claude가 연결된 지식 베이스에서 브랜드 자료를 자동 검색합니다.
 4. `/brand-voice:generate-guidelines`를 실행해 discovery report 기반의 지속 가능한 guideline을 만듭니다.
 5. Sales email, proposal, LinkedIn post 등 customer-facing content를 만들 때 `/brand-voice:enforce-voice`를 사용합니다.
 
-원한다면 Claude에게 specific document를 직접 지정할 수도 있습니다. 어느 쪽이든 플러그인이 process를 안내합니다.
+원한다면 Claude에게 특정 문서를 직접 지정할 수도 있습니다. 어느 쪽이든 플러그인이 과정을 안내합니다.
 
-Brand Voice는 현재 개인 단위에서 동작하며, team-wide enforcement는 곧 제공될 예정입니다.
+Brand Voice는 현재 개인 단위에서 동작하며, 팀 전체 enforcement는 곧 제공될 예정입니다.
 
 ### Project별 설정
 
@@ -121,12 +121,12 @@ Brand Voice는 현재 개인 단위에서 동작하며, team-wide enforcement는
 
 **Agents**는 platform search, document analysis, transcript parsing, content generation, quality validation 같은 무거운 autonomous work를 처리합니다.
 
-**Commands**는 skill workflow를 trigger하는 명시적 user entry point입니다.
+**Commands**는 skill workflow를 trigger하는 명시적 사용자 진입점입니다.
 
 **핵심 설계 결정:**
 - Voice는 일정하고 tone은 유연합니다. Enforcement를 위한 명확한 mental model입니다.
 - Discovery agent는 autonomous하지만 accountable합니다. Provenance와 conflict를 함께 보여줍니다.
-- Open question은 failure가 아니라 feature입니다. 모든 ambiguity에는 recommendation이 포함됩니다.
-- Progressive disclosure를 사용합니다. Frontmatter는 lean하게, `SKILL.md`는 focused하게 유지하고 detail은 `references/`에 둡니다.
+- Open question은 실패가 아니라 기능입니다. 모든 ambiguity에는 recommendation이 포함됩니다.
+- Progressive disclosure를 사용합니다. Frontmatter는 간결하게, `SKILL.md`는 focused하게 유지하고 detail은 `references/`에 둡니다.
 - Notion AI Search를 federated discovery engine으로 사용합니다. 하나의 API가 connected source를 통해 8개 이상 platform을 검색합니다.
 - Google Drive와 Slack은 native Claude integration입니다. MCP connector가 필요 없습니다.

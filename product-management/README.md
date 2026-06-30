@@ -1,6 +1,6 @@
 # Product Management 플러그인
 
-Product management 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Feature spec 작성, roadmap 관리, stakeholder communication, user research synthesis, competitor analysis, product metric tracking까지 PM workflow 전반을 다룹니다.
+Product management 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Feature spec 작성, roadmap 관리, stakeholder communication, user research synthesis, competitor analysis, product metric tracking까지 PM 워크플로 전반을 다룹니다.
 
 ## 설치
 
@@ -12,7 +12,7 @@ claude plugins add knowledge-work-plugins/product-management
 
 이 플러그인은 다음을 도와주는 AI-powered product management partner를 제공합니다.
 
-- **Feature Specs & PRDs** — Problem statement 또는 feature idea에서 structured PRD를 생성합니다. User story, requirement prioritization, success metric, scope management를 포함합니다.
+- **Feature Specs & PRDs** — Problem statement 또는 feature idea에서 구조화된 PRD를 생성합니다. User story, requirement prioritization, success metric, scope management를 포함합니다.
 - **Roadmap Planning** — Product roadmap을 create, update, reprioritize합니다. Now/Next/Later, quarterly theme, OKR-aligned format, dependency mapping을 지원합니다.
 - **Stakeholder Updates** — Executive, engineering, customer 등 audience에 맞춘 status update를 생성합니다. Connected tool에서 context를 가져와 weekly update 부담을 줄입니다.
 - **User Research Synthesis** — Interview note, survey data, support ticket을 structured insight로 바꿉니다. Theme을 식별하고 persona를 만들며 supporting evidence와 함께 opportunity area를 드러냅니다.
