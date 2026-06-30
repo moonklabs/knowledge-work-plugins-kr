@@ -1,6 +1,6 @@
 ---
 name: search-strategy
-description: 쿼리 분해와 다중 소스 검색 오케스트레이션을 수행합니다. 자연어 질문을 소스별 목표 검색로 나누고, 쿼리를 소스-specific syntax로 변환하며, 결과를 관련도순으로 정렬하고 모호성와 대체 전략를 처리합니다.
+description: 쿼리 분해와 다중 소스 검색 오케스트레이션을 수행합니다. 자연어 질문을 소스별 목표 검색으로 나누고, 쿼리를 source-specific syntax로 변환하며, 결과를 관련도순으로 정렬하고 모호성과 대체 전략을 처리합니다.
 user-invocable: false
 ---
 

@@ -1,16 +1,16 @@
 # Product Management 플러그인
 
-Product management plugin입니다. 주로 Anthropic의 agentic desktop application인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Feature spec 작성, roadmap 관리, stakeholder communication, user research synthesis, competitor analysis, product metric tracking까지 PM workflow 전반을 다룹니다.
+Product management 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Feature spec 작성, roadmap 관리, stakeholder communication, user research synthesis, competitor analysis, product metric tracking까지 PM workflow 전반을 다룹니다.
 
 ## 설치
 
-```
+```text
 claude plugins add knowledge-work-plugins/product-management
 ```
 
 ## 주요 기능
 
-이 plugin은 다음을 도와주는 AI-powered product management partner를 제공합니다.
+이 플러그인은 다음을 도와주는 AI-powered product management partner를 제공합니다.
 
 - **Feature Specs & PRDs** — Problem statement 또는 feature idea에서 structured PRD를 생성합니다. User story, requirement prioritization, success metric, scope management를 포함합니다.
 - **Roadmap Planning** — Product roadmap을 create, update, reprioritize합니다. Now/Next/Later, quarterly theme, OKR-aligned format, dependency mapping을 지원합니다.
@@ -30,7 +30,7 @@ claude plugins add knowledge-work-plugins/product-management
 | `/synthesize-research` | Interview, survey, ticket에서 user research를 종합합니다. |
 | `/competitive-brief` | Competitive analysis brief를 생성합니다. |
 | `/metrics-review` | Product metric을 review하고 analyze합니다. |
-| `/brainstorm` | Product idea, problem space, strategic question을 sharp thinking partner와 brainstorm합니다 |
+| `/brainstorm` | Product idea, problem space, strategic question을 sharp thinking partner와 brainstorm합니다. |
 
 ## 스킬
 
@@ -48,7 +48,7 @@ claude plugins add knowledge-work-plugins/product-management
 
 ### PRD 작성
 
-```
+```text
 You: /write-spec
 Claude: 어떤 feature 또는 problem을 spec으로 만들까요?
 You: Enterprise customer를 위해 SSO support를 추가해야 해
@@ -58,7 +58,7 @@ Claude: [Problem statement, user story, requirement, success metric, open questi
 
 ### Stakeholder update 준비
 
-```
+```text
 You: /stakeholder-update
 Claude: 어떤 update인가요? (weekly, monthly, launch, ad-hoc)
 You: Exec team용 weekly update
@@ -68,7 +68,7 @@ Claude: [Progress, decision, risk, next milestone이 포함된 executive summary
 
 ### User research 종합
 
-```
+```text
 You: /synthesize-research
 Claude: 어떤 research를 종합할까요? Interview note를 paste하거나 file을 upload하거나 connected source에서 가져올 수 있습니다.
 You: [8개 interview transcript를 붙여넣습니다]
@@ -78,7 +78,7 @@ Claude: [Key finding, persona, opportunity area, evidence가 포함된 synthesis
 
 ### Product idea brainstorming
 
-```
+```text
 You: /brainstorm 우리 product에 AI-powered search를 추가해야 할까?
 Claude: AI search로 바로 가기 전에, 사용자가 지금 search에서 겪는 문제는 무엇인가요?
 You: 원하는 걸 못 찾아. "X를 못 찾겠다"는 support ticket이 두 번째로 많아.
@@ -90,7 +90,7 @@ Claude: [Assumption에 challenge하고 가장 risky한 가정을 검증할 cheap
 
 ### Competitive analysis
 
-```
+```text
 You: /competitive-brief
 Claude: 어떤 competitor 또는 feature area를 분석할까요?
 You: 우리 onboarding flow를 [competitor A], [competitor B]와 비교해줘
@@ -100,18 +100,18 @@ Claude: [Feature comparison, strength/weakness, strategic implication이 포함�
 
 ## Data source
 
-> 익숙하지 않은 placeholder가 보이거나 연결된 tool을 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
+> 익숙하지 않은 placeholder가 보이거나 연결된 도구를 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
 가장 좋은 경험을 위해 project management 및 communication tool을 연결하세요. 연결하지 않았다면 context를 직접 제공하면 됩니다.
 
 **포함된 MCP connection:**
-- Chat (Slack) for team context and stakeholder threads
-- Project tracker (Linear, Asana, monday.com, ClickUp, Atlassian) for roadmap integration, ticket context, and status tracking
-- Knowledge base (Notion) for existing specs, research, and meeting notes
-- Design (Figma) for design context and handoff
-- Product analytics (Amplitude, Pendo) for usage data, metrics, and behavioral analysis
-- User feedback (Intercom) for support tickets, feature requests, and user conversations
-- Meeting transcription (Fireflies) for meeting notes and discussion context
+- Chat(Slack): team context 및 stakeholder thread
+- Project tracker(Linear, Asana, monday.com, ClickUp, Atlassian): roadmap integration, ticket context, status tracking
+- Knowledge base(Notion): existing spec, research, meeting note
+- Design(Figma): design context 및 handoff
+- Product analytics(Amplitude, Pendo): usage data, metric, behavioral analysis
+- User feedback(Intercom): support ticket, feature request, user conversation
+- Meeting transcription(Fireflies): meeting note 및 discussion context
 
 **추가 option:**
 - Category별 alternative tool은 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.

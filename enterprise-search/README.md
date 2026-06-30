@@ -1,14 +1,14 @@
 # Enterprise Search 플러그인
 
-Enterprise search plugin입니다. 주로 Anthropic의 agentic desktop application인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. App을 오가며 전환하지 않고 email, chat, document, wiki 등 회사의 모든 tool을 한곳에서 검색합니다.
+Enterprise search 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. App을 오가며 전환하지 않고 email, chat, document, wiki 등 회사의 모든 도구를 한곳에서 검색합니다.
 
 ---
 
 ## 작동 방식
 
-하나의 query가 연결된 모든 tool을 동시에 검색합니다. Claude는 질문을 분해하고 각 source에서 targeted search를 실행한 뒤, source attribution이 포함된 하나의 일관된 답변으로 결과를 종합합니다.
+하나의 query가 연결된 모든 도구를 동시에 검색합니다. Claude는 질문을 분해하고 각 source에서 targeted search를 실행한 뒤, source attribution이 포함된 하나의 일관된 답변으로 결과를 종합합니다.
 
-```
+```text
 사용자: "API redesign에 대해 우리가 무엇을 결정했지?"
               ↓ Claude searches
 ~~chat: 결정이 담긴 화요일 #engineering thread
@@ -20,13 +20,13 @@ Enterprise search plugin입니다. 주로 Anthropic의 agentic desktop applicati
  final approach를 반영하고 있습니다."
 ```
 
-Tab을 오갈 필요도, 어떤 tool에 무엇이 있었는지 기억할 필요도 없습니다. 질문하면 답을 얻습니다.
+Tab을 오갈 필요도, 어떤 도구에 무엇이 있었는지 기억할 필요도 없습니다. 질문하면 답을 얻습니다.
 
 ---
 
 ## 검색 대상
 
-> 익숙하지 않은 placeholder가 보이거나 연결된 tool을 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
+> 익숙하지 않은 placeholder가 보이거나 연결된 도구를 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
 Source를 원하는 조합으로 연결하세요. 더 많이 연결할수록 답변이 완전해집니다.
 
@@ -53,19 +53,19 @@ Source를 원하는 조합으로 연결하세요. 더 많이 연결할수록 답
 
 ### Search
 
-```
-/enterprise-search:search what's the status of Project Aurora?
+```text
+/enterprise-search:search Project Aurora 상태가 어떻게 됐지?
 /enterprise-search:search from:sarah about:budget after:2025-01-01
-/enterprise-search:search decisions made in #product this week
+/enterprise-search:search 이번 주 #product에서 결정된 사항
 ```
 
 Filter `from:`, `in:`, `after:`, `before:`, `type:`을 지원하며 각 source의 native query syntax에 맞게 지능적으로 적용합니다.
 
 ### Digest
 
-```
-/enterprise-search:digest --daily      # What happened today across all sources
-/enterprise-search:digest --weekly     # Weekly rollup grouped by project/topic
+```text
+/enterprise-search:digest --daily      # 오늘 모든 source에서 있었던 일
+/enterprise-search:digest --weekly     # Project/topic별로 묶은 주간 요약
 ```
 
 Action item, decision, mention을 강조합니다. Activity를 topic별로 묶어 중요한 것만 빠르게 훑을 수 있습니다.
@@ -88,7 +88,7 @@ Action item, decision, mention을 강조합니다. Activity를 topic별로 묶�
 
 ### Decision 찾기
 
-```
+```text
 You: /enterprise-search:search Postgres로 전환하기로 언제 결정했지?
 
 Claude searches:
@@ -103,13 +103,13 @@ Result: "Decision은 3월 3일 #infrastructure에서 내려졌습니다(link).
 
 ### 휴가 후 따라잡기
 
-```
+```text
 You: /enterprise-search:digest --weekly
 
 Claude scans:
-  ~~chat → channels you're in, DMs, mentions
+  ~~chat → 참여 중인 channel, DM, mention
   ~~email → inbox activity
-  ~~cloud storage → docs shared with you or modified
+  ~~cloud storage → 공유되었거나 수정된 docs
 
 Result: Project별 grouped summary와 flagged action item,
         highlighted decision을 제공합니다.
@@ -117,13 +117,13 @@ Result: Project별 grouped summary와 flagged action item,
 
 ### Expert 찾기
 
-```
+```text
 You: /enterprise-search:search 우리 Kubernetes setup을 누가 잘 알아?
 
 Claude searches:
-  ~~chat → messages about Kubernetes, k8s, clusters
-  ~~cloud storage → docs authored about infrastructure
-  Wiki → runbooks and architecture docs
+  ~~chat → Kubernetes, k8s, clusters 관련 message
+  ~~cloud storage → infrastructure 관련 docs author
+  Wiki → runbook 및 architecture docs
 
 Result: "Message history와 doc authorship 기준으로
          Alex와 Priya가 k8s 담당자입니다.
@@ -151,6 +151,6 @@ MCP로 더 많은 source를 연결할수록 search result가 완전해집니다.
 
 ## 철학
 
-Knowledge worker는 tool 전반에 흩어진 정보를 찾는 데 매주 많은 시간을 씁니다. 답은 Slack thread, email chain, doc, wiki page 어딘가에 있지만, 찾으려면 각 tool을 따로 검색하고 result를 cross-reference하며 올바른 곳을 확인했기를 바라야 합니다.
+Knowledge worker는 도구 전반에 흩어진 정보를 찾는 데 매주 많은 시간을 씁니다. 답은 Slack thread, email chain, doc, wiki page 어딘가에 있지만, 찾으려면 각 도구를 따로 검색하고 result를 cross-reference하며 올바른 곳을 확인했기를 바라야 합니다.
 
-Enterprise Search는 모든 tool을 하나의 searchable knowledge base처럼 다룹니다. One query, all sources, synthesized results. 회사의 knowledge는 silo에 갇혀 있으면 안 됩니다. 한 번에 모두 검색하세요.
+Enterprise Search는 모든 도구를 하나의 searchable knowledge base처럼 다룹니다. One query, all sources, synthesized results. 회사의 knowledge는 silo에 갇혀 있으면 안 됩니다. 한 번에 모두 검색하세요.

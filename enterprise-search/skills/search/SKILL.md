@@ -1,6 +1,6 @@
 ---
 name: search
-description: 하나의 쿼리로 모든 연결 소스를 search합니다. "find that doc about...", "what did we decide on...", "where was the conversation about..." 또는 채팅, 이메일, cloud storage, 프로젝트 추적er 어딘가에 있을 수 있는 의사결정, 문서, discussion을 찾을 때 트리거됩니다.
+description: 하나의 쿼리로 모든 연결 소스를 search합니다. "find that doc about...", "what did we decide on...", "where was the conversation about..." 또는 채팅, 이메일, cloud storage, 프로젝트 추적 도구 어딘가에 있을 수 있는 의사결정, 문서, discussion을 찾을 때 트리거됩니다.
 argument-hint: "<query>"
 ---
 

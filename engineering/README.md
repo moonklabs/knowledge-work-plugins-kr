@@ -1,6 +1,6 @@
 # Engineering 플러그인
 
-Software engineering plugin입니다. 주로 Anthropic의 agentic desktop application인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Standup, code review, architecture decision, incident response, debugging, technical documentation을 돕습니다. 어떤 engineering team에서도 사용할 수 있으며, 입력만으로도 standalone 동작하고 source control, project tracker, monitoring tool을 연결하면 더 강력해집니다.
+Software engineering 플러그인입니다. 주로 Anthropic의 agentic 데스크톱 애플리케이션인 [Cowork](https://claude.com/product/cowork)용으로 설계되었지만 Claude Code에서도 동작합니다. Standup, code review, architecture decision, incident response, debugging, technical documentation을 돕습니다. 어떤 engineering team에서도 사용할 수 있으며, 입력만으로도 standalone 동작하고 source control, project tracker, monitoring tool을 연결하면 더 강력해집니다.
 
 ## 설치
 
@@ -40,7 +40,7 @@ Slash command로 호출하는 명시적 workflow입니다:
 
 ### Morning standup
 
-```
+```text
 /standup
 ```
 
@@ -48,7 +48,7 @@ Tool이 연결되어 있으면 recent commit, PR activity, ticket update를 가�
 
 ### Code review
 
-```
+```text
 /review https://github.com/org/repo/pull/123
 ```
 
@@ -56,31 +56,31 @@ PR link를 공유하거나 diff를 붙여넣거나 file을 지정하세요. Secu
 
 ### Issue debugging
 
-```
-/debug Users are getting 500 errors on the checkout page
+```text
+/debug 사용자가 checkout page에서 500 error를 보고 있습니다
 ```
 
 Reproduce, isolate, diagnose, fix로 이어지는 structured debugging process를 진행합니다. Systematic하게 생각하도록 돕습니다.
 
 ### Architecture decision
 
-```
-/architecture Should we use a message queue or direct API calls between services?
+```text
+/architecture 서비스 간 통신에 message queue를 써야 할까요, direct API call을 써야 할까요?
 ```
 
 Option analysis, trade-off, recommendation이 포함된 structured ADR을 받습니다.
 
 ### Incident response
 
-```
-/incident The payments service is returning 503s
+```text
+/incident payments service가 503을 반환하고 있습니다
 ```
 
 Incident workflow를 시작합니다. Severity를 triage하고 communication 초안을 작성하며 timeline을 track하고 resolved 후 postmortem을 생성합니다.
 
 ### Pre-deploy check
 
-```
+```text
 /deploy-checklist auth-service v2.3.0
 ```
 
@@ -101,7 +101,7 @@ Service와 변경 내용을 기준으로 customized deployment checklist를 받�
 
 ## MCP 통합
 
-> 익숙하지 않은 placeholder가 보이거나 연결된 tool을 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
+> 익숙하지 않은 placeholder가 보이거나 연결된 도구를 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
 더 풍부한 경험을 위해 tool을 연결하세요:
 
