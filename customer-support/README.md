@@ -4,13 +4,13 @@ Support team을 위한 customer support 플러그인입니다. 주로 Anthropic�
 
 ## 설치
 
-```
+```text
 claude plugins add knowledge-work-plugins/customer-support
 ```
 
 ## 주요 기능
 
-이 플러그인은 Claude를 customer support co-pilot으로 바꿉니다. 다음을 도와줍니다:
+이 플러그인은 Claude를 customer support co-pilot으로 바꿉니다. 다음을 도와줍니다.
 
 - **수신 티켓 분류**: 구조화된 categorization, priority assessment, routing recommendation을 제공합니다.
 - **고객 질문 조사**: 여러 source의 정보를 confidence scoring과 함께 종합합니다.
@@ -33,7 +33,7 @@ claude plugins add knowledge-work-plugins/customer-support
 | 스킬 | 설명 |
 |---|---|
 | `ticket-triage` | Support ticket 또는 customer issue를 triage하고 prioritize합니다. 새 티켓이 들어와 categorization, P1-P4 priority assignment, 담당 team 결정, routing 전 duplicate/known issue 확인이 필요할 때 사용합니다. |
-| `customer-research` | Source attribution이 포함된 customer question/topic에 대한 multi-source research입니다. 고객이 조회가 필요한 질문을 하거나, bug가 이전에 report되었는지 조사하거나, specific account에 이전에 무엇을 안내했는지 확인하거나, response 초안 전 background를 수집할 때 사용합니다. |
+| `customer-research` | Source attribution이 포함된 customer question/topic에 대한 multi-source research입니다. 고객 질문에 조사가 필요하거나, bug가 이전에 report되었는지 확인하거나, 특정 account에 이전에 무엇을 안내했는지 확인하거나, response 초안 전 background를 수집할 때 사용합니다. |
 | `response-drafting` | Communication best practice, tone guideline, common scenario template을 제공합니다. |
 | `escalation` | Escalation tier, structured escalation format, impact assessment, follow-up cadence를 다룹니다. |
 | `knowledge-management` | Article structure standard, searchability를 위한 writing, review cadence, maintenance를 다룹니다. |
@@ -45,6 +45,7 @@ claude plugins add knowledge-work-plugins/customer-support
 가장 좋은 경험을 위해 support platform, knowledge base, communication tool을 연결하세요. 연결하지 않았다면 customer context를 수동으로 제공하면 됩니다.
 
 **포함된 MCP connection:**
+
 - Chat(Slack): 내부 논의 및 customer channel context
 - Support platform(Intercom): ticket history 및 customer conversation
 - CRM(HubSpot): account detail 및 contact information
@@ -53,13 +54,14 @@ claude plugins add knowledge-work-plugins/customer-support
 - Email 및 cloud storage(Microsoft 365): customer correspondence
 
 **추가 option:**
+
 - Category별 alternative tool은 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
 ## 예시 워크플로
 
 ### 수신 티켓 분류
 
-```
+```text
 You: /triage Enterprise 플랜 고객인데 오늘 아침부터 dashboard가 빈 page로 보인다고 합니다
 
 Claude: 이슈를 분석합니다...
@@ -81,7 +83,7 @@ Route to: Tier 2 Support (브라우저/계정 특이사항을 조사하고,
 
 ### Customer question 조사
 
-```
+```text
 You: /research 우리 platform은 Okta SSO를 지원하나요?
 
 Claude: 사용 가능한 source를 확인해볼게요...
@@ -92,7 +94,7 @@ Claude: 사용 가능한 source를 확인해볼게요...
 
 ### Escalation package 작성
 
-```
+```text
 You: /escalate API가 간헐적으로 500 error를 반환합니다 — 이번 주 Enterprise 고객 3곳이 보고했습니다
 
 Claude: 맥락을 모아 escalation brief를 만들겠습니다...
@@ -104,7 +106,7 @@ Claude: 맥락을 모아 escalation brief를 만들겠습니다...
 
 ### Response 초안 작성
 
-```
+```text
 You: /draft-response 고객 escalation — integration이 2일째 down되어 고객이 frustrated 상태입니다
 
 Claude: [frustration을 인정하고 ownership을 보이며,
@@ -114,7 +116,7 @@ Claude: [frustration을 인정하고 ownership을 보이며,
 
 ### KB article 작성
 
-```
+```text
 You: /kb-article Webhook notification 설정 방법 — 이번 달 세 번째 고객에게 방금 해결해줬습니다
 
 Claude: [prerequisite, step-by-step instruction,
@@ -126,9 +128,9 @@ Claude: [prerequisite, step-by-step instruction,
 
 플러그인은 포함된 MCP connection만으로 바로 동작합니다. 더 풍부한 경험을 위해 Claude settings에서 additional data source를 연결하세요.
 
-1. **Support platform**: Ticket history와 customer context를 위해 ticketing system을 추가합니다
-2. **Knowledge base**: Internal documentation과 existing KB article을 위해 wiki를 추가합니다
-3. **Project tracker**: Bug report와 feature request를 위해 issue tracker를 추가합니다
-4. **CRM**: Account detail과 contact information을 위해 CRM을 추가합니다
+1. **Support platform**: Ticket history와 customer context를 위해 ticketing system을 추가합니다.
+2. **Knowledge base**: Internal documentation과 existing KB article을 위해 wiki를 추가합니다.
+3. **Project tracker**: Bug report와 feature request를 위해 issue tracker를 추가합니다.
+4. **CRM**: Account detail과 contact information을 위해 CRM을 추가합니다.
 
 이 connection이 없으면 플러그인은 context를 수동으로 제공하도록 요청하고, 사용자가 own data로 채울 수 있는 framework와 template을 제공합니다.
