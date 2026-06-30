@@ -1,6 +1,6 @@
 # Common Room 플러그인
 
-Common Room 기반 GTM 워크플로입니다. Account research, contact research, call prep, personalized outreach, prospecting, weekly briefing을 지원합니다.
+Common Room 기반 GTM 워크플로입니다. 계정 조사, 연락처 조사, 통화 준비, 개인화된 아웃리치, 잠재고객 발굴, 주간 브리핑을 지원합니다.
 
 ## 개요
 
@@ -18,7 +18,7 @@ Common Room 기반 GTM 워크플로입니다. Account research, contact research
 | 스킬 | 트리거 문구 |
 |-------|----------------|
 | `account-research` | Common Room 데이터를 사용해 회사를 조사합니다. 'research [company]', 'tell me about [domain]', 'pull up signals for [account]', 'what's going on with [company]' 또는 계정 수준 질문에서 트리거됩니다. |
-| `contact-research` | Common Room 데이터를 사용해 특정 사람을 조사합니다. 'who is [name]', 'look up [email]', 'research [contact]', 'is [name] a warm lead' 또는 contact-level question에서 트리거됩니다. |
+| `contact-research` | Common Room 데이터를 사용해 특정 사람을 조사합니다. 'who is [name]', 'look up [email]', 'research [contact]', 'is [name] a warm lead' 또는 연락처 수준 질문에서 트리거됩니다. |
 | `call-prep` | Common Room 신호를 사용해 고객 또는 잠재 고객 통화를 준비합니다. 'prep me for my call with [company]', 'prepare for a meeting with [company]', 'what should I know before talking to [company]' 또는 통화 준비 요청에서 트리거됩니다. |
 | `compose-outreach` | Common Room 신호를 사용해 개인화된 아웃리치 메시지를 생성합니다. 'draft outreach to [person]', 'write an email to [name]', 'compose a message for [contact]' 또는 아웃리치 초안 작성 요청에서 트리거됩니다. |
 | `prospect` | Common Room Prospector를 사용해 타깃 계정 또는 연락처 목록을 만듭니다. 'find companies that match [criteria]', 'build a prospect list', 'find contacts at [type of company]', 'show me companies hiring [role]' 또는 목록 작성 요청에서 트리거됩니다. |
@@ -26,18 +26,18 @@ Common Room 기반 GTM 워크플로입니다. Account research, contact research
 
 ## 명령
 
-명시적 호출이 더 적합한 complex workflow용 command 두 가지입니다.
+명시적 호출이 더 적합한 복잡한 워크플로용 command 두 가지입니다.
 
 | 명령 | 사용법 |
 |---------|-------|
-| `/generate-account-plan <company>` | Stakeholder mapping, engagement analysis, opportunity, risk, action item이 포함된 종합 strategic account plan |
-| `/weekly-brief [date range]` | Full weekly prep briefing을 생성합니다. 기본값은 다음 7일입니다 |
+| `/generate-account-plan <company>` | 이해관계자 매핑, engagement analysis, opportunity, risk, action item이 포함된 종합 strategic account plan |
+| `/weekly-brief [date range]` | 전체 주간 준비 브리핑을 생성합니다. 기본값은 다음 7일입니다 |
 
 ## 각 스킬의 output
 
-**Account Research** — Full overview, targeted field question, honest sparse-data response, MCP data + LLM reasoning 결합 등 네 pattern을 처리합니다. Recent news용 web search를 포함하며 "My Segments"로 자동 scope합니다.
+**Account Research** — 전체 개요, 표적 field question, 데이터가 부족할 때의 정직한 응답, MCP data + LLM reasoning 결합 등 네 pattern을 처리합니다. Recent news용 web search를 포함하며 "My Segments"로 자동 scope합니다.
 
-**Contact Research** — Email, name+company, social handle로 lookup합니다. Enriched identity, CRM field, score, website visit, activity history, Spark analysis, conversation starter를 반환합니다.
+**Contact Research** — Email, name+company, social handle로 lookup합니다. 보강된 identity, CRM field, score, website visit, activity history, Spark analysis, conversation starter를 반환합니다.
 
 **Call Prep** — Company snapshot, attendee별 profile, signal highlight, tailored talking point, likely objection, recommended call outcome을 제공합니다. Gong/call recording activity를 우선하며, 연결된 경우 calendar-aware하게 동작합니다.
 
@@ -45,7 +45,7 @@ Common Room 기반 GTM 워크플로입니다. Account research, contact research
 
 **Prospecting** — Net-new company(ProspectorOrganization)와 existing account(Organization)를 구분합니다. Iterative refinement와 "find companies like [X]" 같은 lookalike search를 지원합니다. Web search가 net-new result를 enrich합니다.
 
-**Weekly Prep Brief** — 다음 7일의 모든 external call을 다루는 full briefing입니다. Company snapshot, attendee profile, signal, meeting별 recommended objective를 포함합니다.
+**Weekly Prep Brief** — 다음 7일의 모든 external call을 다루는 전체 브리핑입니다. Company snapshot, attendee profile, signal, meeting별 recommended objective를 포함합니다.
 
 ## 설정
 

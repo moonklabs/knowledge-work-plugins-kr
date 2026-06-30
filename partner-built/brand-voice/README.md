@@ -1,6 +1,6 @@
 # Brand Voice 플러그인
 
-Claude Cowork용 [Tribe AI](https://tribe.ai) 플러그인입니다. Cowork launch partner로 제작되었습니다.
+Claude Cowork용 [Tribe AI](https://tribe.ai) 플러그인입니다. Cowork 출시 파트너로 제작되었습니다.
 
 회사를 알아볼 수 있게 만드는 브랜드 지식은 보통 편리한 한곳에 있지 않습니다. 2022년 덱, 마지막 리브랜딩 이후 아무도 업데이트하지 않은 Confluence 페이지, 오래 일한 선임 몇 명의 감각 속에 흩어져 있습니다. 영업 담당자가 AI로 아웃리치를 만들고 신규 입사자가 첫 주부터 콘텐츠를 만들 때, 바로 그 지식이 사라집니다.
 
@@ -19,13 +19,13 @@ Brand Voice는 흩어진 브랜드 자료를 적용 가능한 AI 가드레일로
 ```
 
 ### 2. 가이드라인 생성
-자료를 LLM-ready 가이드라인으로 종합합니다. Voice pillar, tone parameter, Claude에게 명확한 operating boundary를 주는 "We Are / We Are Not" framework, 실제 회사 언어를 반영하는 용어 기준을 만듭니다. Veteran team을 on-brand로 유지하는 같은 guardrail 덕분에 new hire도 세 달째가 아니라 첫 주부터 quality content를 만들 수 있습니다.
+자료를 LLM-ready 가이드라인으로 종합합니다. Voice pillar, tone parameter, Claude에게 명확한 operating boundary를 주는 "We Are / We Are Not" framework, 실제 회사 언어를 반영하는 용어 기준을 만듭니다. 숙련된 팀을 on-brand로 유지하는 같은 guardrail 덕분에 신입도 세 달째가 아니라 첫 주부터 quality content를 만들 수 있습니다.
 
 **Slash 명령:** `/brand-voice:generate-guidelines`
 
 ```
 /brand-voice:generate-guidelines
-/brand-voice:generate-guidelines from the discovery report and these 3 PDFs
+/brand-voice:generate-guidelines discovery report와 이 PDF 3개를 바탕으로 만들어줘
 ```
 
 ### 3. Brand voice 적용
@@ -65,7 +65,7 @@ Sales email, proposal, marketing page, press release 같은 모든 AI-generated 
 ## 빠른 시작
 
 1. 플러그인을 설치하고 Claude Cowork를 엽니다.
-2. 최소 하나의 platform을 연결합니다. Notion을 권장합니다. Google Drive, SharePoint, Slack, Jira를 federate합니다.
+2. 최소 하나의 platform을 연결합니다. Notion을 권장합니다. Google Drive, SharePoint, Slack, Jira를 통합 검색합니다.
 3. `/brand-voice:discover-brand`를 실행합니다. Claude가 연결된 지식 베이스에서 브랜드 자료를 자동 검색합니다.
 4. `/brand-voice:generate-guidelines`를 실행해 discovery report 기반의 지속 가능한 guideline을 만듭니다.
 5. Sales email, proposal, LinkedIn post 등 customer-facing content를 만들 때 `/brand-voice:enforce-voice`를 사용합니다.
