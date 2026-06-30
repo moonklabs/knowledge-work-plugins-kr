@@ -48,8 +48,8 @@ Source를 원하는 조합으로 연결하세요. 더 많이 연결할수록 답
 
 | 명령 | 수행 내용 |
 |---------|--------------|
-| `/search` | 하나의 query로 모든 connected source를 검색합니다 |
-| `/digest` | 모든 source 활동의 daily 또는 weekly digest를 생성합니다 |
+| `/search` | 하나의 query로 모든 connected source를 검색합니다. |
+| `/digest` | 모든 source 활동의 daily 또는 weekly digest를 생성합니다. |
 
 ### Search
 

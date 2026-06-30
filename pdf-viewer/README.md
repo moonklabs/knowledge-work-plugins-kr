@@ -6,21 +6,21 @@
 
 ## 주요 기능
 
-- **PDF 열기** — local file 또는 academic source(arXiv, bioRxiv 등)에서 PDF를 엽니다
-- **Collaborative annotation** — Claude가 highlight, note, stamp를 section별로 제안하고, 사용자가 viewer에서 batch마다 review합니다
-- **Form 작성** — live preview와 함께 field-by-field로 안내하며 작성합니다
-- **Document sign** — page에 signature 또는 initials image를 배치합니다
-- **Approval stamp** — APPROVED, DRAFT, CONFIDENTIAL 또는 custom label을 찍습니다
-- **Download** — viewer toolbar에서 annotated PDF를 export합니다
+- **PDF 열기** — local file 또는 academic source(arXiv, bioRxiv 등)에서 PDF를 엽니다.
+- **Collaborative annotation** — Claude가 highlight, note, stamp를 section별로 제안하고, 사용자가 viewer에서 batch마다 review합니다.
+- **Form 작성** — live preview와 함께 field-by-field로 안내하며 작성합니다.
+- **Document sign** — page에 signature 또는 initials image를 배치합니다.
+- **Approval stamp** — APPROVED, DRAFT, CONFIDENTIAL 또는 custom label을 찍습니다.
+- **Download** — viewer toolbar에서 annotated PDF를 export합니다.
 
 ## 명령
 
 | 명령 | 수행 내용 |
 |---------|-------------|
-| `/pdf-viewer:open` | Interactive viewer에서 PDF를 엽니다 |
-| `/pdf-viewer:annotate` | Document를 함께 훑으며 markup을 제안, 적용, review합니다 |
-| `/pdf-viewer:fill-form` | PDF form field를 interactive하게 채웁니다 |
-| `/pdf-viewer:sign` | Page에 signature 또는 initials image를 배치합니다 |
+| `/pdf-viewer:open` | Interactive viewer에서 PDF를 엽니다. |
+| `/pdf-viewer:annotate` | Document를 함께 훑으며 markup을 제안, 적용, review합니다. |
+| `/pdf-viewer:fill-form` | PDF form field를 interactive하게 채웁니다. |
+| `/pdf-viewer:sign` | Page에 signature 또는 initials image를 배치합니다. |
 
 ## 일반 PDF 읽기와의 차이
 
