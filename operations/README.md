@@ -10,7 +10,7 @@ claude plugins add knowledge-work-plugins/operations
 
 ## 명령
 
-Slash command로 호출하는 명시적 워크플로입니다.
+슬래시 명령으로 호출하는 명시적 워크플로입니다.
 
 | 명령 | 설명 |
 |---|---|
@@ -21,7 +21,7 @@ Slash command로 호출하는 명시적 워크플로입니다.
 | `/status-report` | 리더십용 프로젝트 업데이트, KPI, 위험, 액션 아이템이 포함된 상태 보고서를 생성합니다. |
 | `/runbook` | 반복 작업을 위한 단계별 운영 런북을 생성하거나 업데이트합니다. |
 
-모든 명령은 context와 detail만 제공해도 **단독**으로 동작하며, MCP connector를 연결하면 더 강력해집니다.
+모든 명령은 맥락과 세부 정보만 제공해도 **단독**으로 동작하며, MCP connector를 연결하면 더 강력해집니다.
 
 ## 스킬
 
@@ -34,7 +34,7 @@ Slash command로 호출하는 명시적 워크플로입니다.
 | `change-management` | Communication, training, adoption을 포함해 organizational 또는 technical change를 계획하고 실행합니다. |
 | `risk-assessment` | 운영 위험을 식별, 평가, 완화합니다. "what are the risks", "risk assessment", "risk register", "what could go wrong" 또는 프로젝트, 벤더, 프로세스, 의사결정 관련 위험을 평가할 때 트리거됩니다. |
 | `compliance-tracking` | Compliance requirement와 audit readiness를 track합니다. "compliance", "audit prep", "SOC 2", "ISO 27001", "GDPR", "regulatory requirement" 또는 compliance activity tracking/preparation/documentation에 도움이 필요할 때 트리거됩니다. |
-| `resource-planning` | Capacity, utilization, forecasting, budget 기준으로 resource allocation을 계획하고 optimize합니다. |
+| `resource-planning` | 수용량, 활용률, 예측, 예산을 기준으로 resource allocation을 계획하고 optimize합니다. |
 
 ## 예시 워크플로
 
@@ -44,7 +44,7 @@ Slash command로 호출하는 명시적 워크플로입니다.
 /vendor-review
 ```
 
-Vendor name, contract detail을 제공하거나 proposal을 업로드하면 cost analysis, risk flag, recommendation이 포함된 structured evaluation을 받습니다.
+벤더 이름과 계약 세부 정보를 제공하거나 제안서를 업로드하면 비용 분석, 위험 표시, 추천 조치가 포함된 구조화된 평가를 받습니다.
 
 ### 프로세스 문서화
 
@@ -52,7 +52,7 @@ Vendor name, contract detail을 제공하거나 proposal을 업로드하면 cost
 /process-doc employee offboarding
 ```
 
-Process를 설명하거나 단계별로 알려주면 flowchart, RACI matrix, step-by-step procedure가 포함된 complete SOP를 받습니다.
+프로세스를 설명하거나 단계별로 알려주면 flowchart, RACI matrix, 단계별 절차가 포함된 완성된 SOP를 받습니다.
 
 ### 변경 요청 제출
 
@@ -60,7 +60,7 @@ Process를 설명하거나 단계별로 알려주면 flowchart, RACI matrix, ste
 /change-request
 ```
 
-Change를 설명하면 approval에 바로 쓸 수 있는 impact analysis, risk assessment, rollback plan, communication template을 받습니다.
+변경 사항을 설명하면 approval에 바로 쓸 수 있는 impact analysis, risk assessment, rollback plan, communication template을 받습니다.
 
 ### 수용량 계획
 
@@ -68,7 +68,7 @@ Change를 설명하면 approval에 바로 쓸 수 있는 impact analysis, risk a
 /capacity-plan
 ```
 
-Team data를 업로드하거나 resource를 설명하면 utilization analysis, bottleneck identification, headcount recommendation을 받습니다.
+팀 데이터를 업로드하거나 resource를 설명하면 활용률 분석, 병목 식별, headcount recommendation을 받습니다.
 
 ### 리더십 상태 보고서
 
@@ -76,7 +76,7 @@ Team data를 업로드하거나 resource를 설명하면 utilization analysis, b
 /status-report
 ```
 
-Connected tool에서 update를 가져오거나 필요한 input을 물은 뒤 KPI, risk, next step이 포함된 polished status report를 생성합니다.
+연결된 도구에서 update를 가져오거나 필요한 input을 물은 뒤 KPI, risk, next step이 포함된 다듬어진 상태 보고서를 생성합니다.
 
 ### 런북 작성
 
@@ -84,11 +84,11 @@ Connected tool에서 update를 가져오거나 필요한 input을 물은 뒤 KPI
 /runbook monthly close process
 ```
 
-Process를 한 번 설명하면 checklist, troubleshooting, escalation path가 포함된 repeatable runbook으로 문서화합니다.
+프로세스를 한 번 설명하면 checklist, troubleshooting, escalation path가 포함된 반복 가능한 runbook으로 문서화합니다.
 
 ## 단독 사용과 통합 사용
 
-모든 명령과 스킬은 integration 없이도 동작합니다.
+모든 명령과 스킬은 통합 도구 없이도 동작합니다.
 
 | 할 수 있는 일 | 단독 사용 | 통합 사용 시 |
 |-----------------|------------|-------------------|
@@ -103,7 +103,7 @@ Process를 한 번 설명하면 checklist, troubleshooting, escalation path가 �
 
 > 익숙하지 않은 placeholder가 보이거나 연결된 도구를 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
-더 풍부한 경험을 위해 tool을 연결하세요.
+더 풍부한 경험을 위해 도구를 연결하세요.
 
 | 범주 | 예시 | 가능해지는 일 |
 |---|---|---|
@@ -114,11 +114,11 @@ Process를 한 번 설명하면 checklist, troubleshooting, escalation path가 �
 | **Calendar** | Google Calendar, Microsoft 365 | Meeting scheduling, deadline tracking |
 | **Email** | Gmail, Microsoft 365 | Vendor communication, approval |
 
-지원되는 integration 전체 목록은 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
+지원되는 통합 전체 목록은 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
 ## 설정
 
-개인화를 위해 `operations/.claude/settings.local.json`에 local settings file을 만드세요.
+개인화를 위해 `operations/.claude/settings.local.json`에 로컬 설정 파일을 만드세요.
 
 ```json
 {

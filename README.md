@@ -52,17 +52,17 @@ claude plugin install sales@knowledge-work-plugins
 
 ```
 plugin-name/
-├── .claude-plugin/plugin.json   # Manifest
+├── .claude-plugin/plugin.json   # 매니페스트
 ├── .mcp.json                    # 도구 연결
 ├── commands/                    # 명시적으로 실행하는 슬래시 명령
-└── skills/                      # Claude가 자동으로 활용하는 domain knowledge
+└── skills/                      # Claude가 자동으로 활용하는 도메인 지식
 ```
 
-- **Skills**는 Claude가 유용한 도움을 주는 데 필요한 domain expertise, best practices, step-by-step workflow를 담습니다. Claude는 관련 상황에서 이를 자동으로 활용합니다.
+- **Skills**는 Claude가 유용한 도움을 주는 데 필요한 도메인 전문성, 모범 사례, 단계별 워크플로를 담습니다. Claude는 관련 상황에서 이를 자동으로 활용합니다.
 - **Commands**는 사용자가 명시적으로 실행하는 동작입니다. 예: `/finance:reconciliation`, `/product-management:write-spec`.
 - **Connectors**는 Claude를 CRM, project tracker, data warehouse, design tool 같은 외부 도구에 연결합니다. 연결은 [MCP servers](https://modelcontextprotocol.io/)를 통해 이뤄집니다.
 
-모든 구성요소는 파일 기반입니다. Markdown과 JSON만 있으면 되며, 별도의 코드, 인프라, build step이 없습니다.
+모든 구성요소는 파일 기반입니다. Markdown과 JSON만 있으면 되며, 별도의 코드, 인프라, 빌드 단계가 없습니다.
 
 ## 우리 방식에 맞게 만들기
 

@@ -10,7 +10,7 @@ claude plugins add knowledge-work-plugins/sales
 
 ## 명령
 
-Slash command로 호출하는 명시적 워크플로입니다.
+슬래시 명령으로 호출하는 명시적 워크플로입니다.
 
 | 명령 | 설명 |
 |---|---|
@@ -18,7 +18,7 @@ Slash command로 호출하는 명시적 워크플로입니다.
 | `/forecast` | CSV를 업로드하거나 파이프라인을 설명하면 할당량 기준 가중 영업 전망을 생성합니다 |
 | `/pipeline-review` | 파이프라인 상태를 분석해 거래 우선순위, 위험 표시, 주간 실행 계획을 제공합니다 |
 
-모든 명령은 note paste, CSV upload, 상황 설명만으로 **단독** 동작하며, MCP connector를 연결하면 더 강력해집니다.
+모든 명령은 메모 붙여넣기, CSV 업로드, 상황 설명만으로 **단독** 동작하며, MCP connector를 연결하면 더 강력해집니다.
 
 ## 스킬
 
@@ -26,9 +26,9 @@ Slash command로 호출하는 명시적 워크플로입니다.
 
 | 스킬 | 설명 |
 |---|---|
-| `account-research` | Company 또는 person을 조사하고 실행 가능한 sales intel을 얻습니다. Web search만으로 standalone 동작하며 enrichment tool 또는 CRM을 연결하면 더 강력해집니다. "research [company]", "look up [person]", "intel on [prospect]", "who is [name] at [company]", "tell me about [company]"에서 트리거됩니다. |
+| `account-research` | 회사 또는 사람을 조사하고 실행 가능한 영업 정보를 얻습니다. Web search만으로 단독 동작하며 enrichment tool 또는 CRM을 연결하면 더 강력해집니다. "research [company]", "look up [person]", "intel on [prospect]", "who is [name] at [company]", "tell me about [company]"에서 트리거됩니다. |
 | `call-prep` | 계정 맥락, 참석자 조사, 추천 안건으로 영업 통화를 준비합니다. 사용자 입력과 웹 리서치만으로 단독 동작하며 CRM, email, chat, transcript를 연결하면 더 강력해집니다. "prep me for my call with [company]", "I'm meeting with [company] prep me", "call prep [company]"에서 트리거됩니다. |
-| `daily-briefing` | 우선순위가 정해진 영업 브리핑으로 하루를 시작합니다. 미팅과 우선순위를 알려주면 standalone으로 동작하고 calendar, CRM, email을 연결하면 더 강력해집니다. "morning briefing", "daily brief", "what's on my plate today", "prep my day", "start my day"에서 트리거됩니다. |
+| `daily-briefing` | 우선순위가 정해진 영업 브리핑으로 하루를 시작합니다. 미팅과 우선순위를 알려주면 단독으로 동작하고 calendar, CRM, email을 연결하면 더 강력해집니다. "morning briefing", "daily brief", "what's on my plate today", "prep my day", "start my day"에서 트리거됩니다. |
 | `draft-outreach` | Prospect를 조사한 뒤 개인화된 outreach 초안을 작성합니다. 기본적으로 web research만으로 동작하며 enrichment 및 CRM을 연결하면 더 강력해집니다. "draft outreach to [person/company]", "write cold email to [prospect]", "reach out to [name]"에서 트리거됩니다. |
 | `competitive-intelligence` | 경쟁사를 조사하고 인터랙티브 배틀카드를 만듭니다. 클릭 가능한 경쟁사 카드와 비교 매트릭스가 있는 HTML artifact를 출력합니다. "competitive intel", "research competitors", "how do we compare to [competitor]", "battlecard for [competitor]", "what's new with [competitor]"에서 트리거됩니다. |
 | `create-an-asset` | 거래 맥락에서 맞춤형 영업 자료(landing page, deck, one-pager, workflow demo)를 생성합니다. Prospect, audience, goal을 설명하면 고객에게 공유할 수 있는 다듬어진 브랜드 자료를 얻습니다. |
@@ -41,7 +41,7 @@ Slash command로 호출하는 명시적 워크플로입니다.
 /call-summary
 ```
 
-Note 또는 transcript를 붙여넣으면 구조화된 summary, owner가 있는 action item, follow-up email draft를 받습니다. CRM이 연결되어 있으면 activity logging과 task 생성을 제안합니다.
+메모 또는 transcript를 붙여넣으면 구조화된 요약, 담당자가 있는 액션 아이템, 후속 email 초안을 받습니다. CRM이 연결되어 있으면 activity logging과 task 생성을 제안합니다.
 
 ### 주간 전망
 
@@ -49,7 +49,7 @@ Note 또는 transcript를 붙여넣으면 구조화된 summary, owner가 있는 
 /forecast
 ```
 
-CRM에서 export한 CSV를 업로드하거나 deal을 paste합니다. Quota와 timeline을 알려주면 best/likely/worst scenario, commit vs. upside breakdown, gap analysis가 포함된 weighted forecast를 받습니다.
+CRM에서 내보낸 CSV를 업로드하거나 deal을 붙여넣습니다. 할당량과 일정을 알려주면 best/likely/worst scenario, commit vs. upside breakdown, gap analysis가 포함된 weighted forecast를 받습니다.
 
 ### 파이프라인 검토
 
@@ -57,7 +57,7 @@ CRM에서 export한 CSV를 업로드하거나 deal을 paste합니다. Quota와 t
 /pipeline-review
 ```
 
-CSV를 업로드하거나 pipeline을 설명합니다. Health score, deal prioritization, stale deal/past close date/single-threaded 같은 risk flag, weekly action plan을 받습니다.
+CSV를 업로드하거나 pipeline을 설명합니다. Health score, deal prioritization, stale deal/past close date/single-threaded 같은 위험 표시와 주간 실행 계획을 받습니다.
 
 ### Prospect 조사
 
@@ -86,7 +86,7 @@ Competitor X와 비교하면 우리는 어때?
 
 ## 단독 사용과 통합 사용
 
-모든 명령과 스킬은 integration 없이도 동작합니다.
+모든 명령과 스킬은 통합 도구 없이도 동작합니다.
 
 | 할 수 있는 일 | 단독 사용 | 통합 사용 시 |
 |-----------------|------------|-------------------|
@@ -111,7 +111,7 @@ Competitor X와 비교하면 우리는 어때?
 | **Enrichment** | Clay, ZoomInfo, Apollo | Company and contact data enrichment |
 | **Chat** | Slack, Teams | Internal discussions, colleague intel |
 
-Email, calendar, 추가 CRM option을 포함한 지원 integration 전체 목록은 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
+Email, calendar, 추가 CRM option을 포함한 지원 통합 전체 목록은 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
 ## 설정
 
