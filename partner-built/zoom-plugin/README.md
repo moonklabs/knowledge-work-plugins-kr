@@ -21,7 +21,7 @@ export ZOOM_WHITEBOARD_MCP_ACCESS_TOKEN="your_zoom_user_oauth_access_token"
 | 워크플로 | 설명 |
 |---|---|
 | [`/start`](skills/start/SKILL.md) | Zoom 앱 아이디어에서 시작해 적절한 제품과 빌드 경로로 라우팅합니다 |
-| [`/setup-zoom-oauth`](skills/setup-zoom-oauth/SKILL.md) | Zoom app용 인증 모델, scope, redirect flow를 선택합니다 |
+| [`/setup-zoom-oauth`](skills/setup-zoom-oauth/SKILL.md) | Zoom 앱용 인증 모델, scope, redirect flow를 선택합니다 |
 | [`/build-zoom-meeting-app`](skills/build-zoom-meeting-app/SKILL.md) | 임베드형 또는 관리형 Zoom 미팅 흐름을 구축합니다 |
 | [`/build-zoom-bot`](skills/build-zoom-bot/SKILL.md) | 봇, 레코더, 실시간 미팅 처리기를 구축합니다 |
 | [`/debug-zoom`](skills/debug-zoom/SKILL.md) | 깨진 Zoom 통합을 분류하고 실패 계층을 격리합니다 |
@@ -92,7 +92,7 @@ export ZOOM_WHITEBOARD_MCP_ACCESS_TOKEN="your_zoom_user_oauth_access_token"
 
 ## 크로스 플랫폼 참고
 
-이 저장소는 우선 Claude 플러그인으로 패키징되어 있지만, 저장소 수준 discovery file을 사용하는 agent ecosystem을 위해 [AGENTS.md](AGENTS.md)도 포함합니다. 재사용 가능한 핵심은 `skills/` 트리와 그 안의 `SKILL.md` 파일입니다.
+이 저장소는 우선 Claude 플러그인으로 패키징되어 있지만, 저장소 수준 discovery file을 사용하는 에이전트 생태계를 위해 [AGENTS.md](AGENTS.md)도 포함합니다. 재사용 가능한 핵심은 `skills/` 트리와 그 안의 `SKILL.md` 파일입니다.
 
 ## 구조
 
