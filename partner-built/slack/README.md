@@ -1,22 +1,22 @@
 # Slack 플러그인
 
-이 repository에는 Slack을 Cursor IDE 및 Claude Code와 통합하는 데 필요한 configuration이 포함되어 있습니다. 이 plugin을 사용하면 agent가 Slack workspace와 직접 상호작용해 message search, communication send, canvas management 등을 natural language로 수행할 수 있습니다.
+이 repository에는 Slack을 Cursor IDE 및 Claude Code와 통합하는 데 필요한 configuration이 포함되어 있습니다. 이 플러그인을 사용하면 agent가 Slack workspace와 직접 상호작용해 message search, communication send, canvas management 등을 natural language로 수행할 수 있습니다.
 
 ## 기능
 
-Slack MCP server는 다음 기능을 제공합니다:
+Slack MCP server는 다음 기능을 제공합니다.
 
-- **Search**: Public/private message, file, user, channel을 찾습니다
-- **Messaging**: Message를 보내고 channel history와 thread conversation을 가져옵니다
-- **Canvas**: Formatted document를 만들고 공유하며 markdown으로 export합니다
-- **User Management**: Custom field와 status information을 포함한 user profile을 가져옵니다
+- **Search**: Public/private message, file, user, channel을 찾습니다.
+- **Messaging**: Message를 보내고 channel history와 thread conversation을 가져옵니다.
+- **Canvas**: Formatted document를 만들고 공유하며 markdown으로 export합니다.
+- **User Management**: Custom field와 status information을 포함한 user profile을 가져옵니다.
 
 ## 사전 요구 사항
 
 Slack MCP server를 설정하기 전에 다음을 확인하세요.
 
-- Cursor IDE 또는 Claude Code CLI가 설치되어 있어야 합니다
-- Workspace admin이 MCP integration을 승인한 Slack workspace에 접근할 수 있어야 합니다
+- Cursor IDE 또는 Claude Code CLI가 설치되어 있어야 합니다.
+- Workspace admin이 MCP integration을 승인한 Slack workspace에 접근할 수 있어야 합니다.
 
 ## 설치
 
@@ -24,7 +24,7 @@ IDE에 맞는 설치 방법을 선택하세요.
 
 ### Claude Code
 
-Claude Code CLI를 사용한다면 local clone으로 plugin을 설치할 수 있습니다.
+Claude Code CLI를 사용한다면 local clone으로 플러그인을 설치할 수 있습니다.
 
 ```bash
 git clone https://github.com/slackapi/slack-mcp-plugin.git
@@ -59,7 +59,7 @@ Claude plugin은 다음 MCP configuration(`.mcp.json`)을 사용합니다.
 
 #### Step 1: Cursor settings 열기
 
-**Cursor → Settings → Cursor Settings**로 이동합니다. macOS에서는 `Cmd+,`, Windows/Linux에서는 `Ctrl+,` shortcut을 사용할 수 있습니다.
+**Cursor -> Settings -> Cursor Settings**로 이동합니다. macOS에서는 `Cmd+,`, Windows/Linux에서는 `Ctrl+,` shortcut을 사용할 수 있습니다.
 
 #### Step 2: MCP tab으로 이동
 

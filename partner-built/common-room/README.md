@@ -15,7 +15,7 @@ Common Room 기반 GTM 워크플로입니다. Account research, contact research
 
 스킬은 대화로 트리거됩니다. 원하는 일을 설명하면 Claude가 적절한 스킬을 자동으로 불러옵니다.
 
-| 스킬 | Trigger phrase |
+| 스킬 | 트리거 문구 |
 |-------|----------------|
 | `account-research` | Common Room 데이터를 사용해 회사를 조사합니다. 'research [company]', 'tell me about [domain]', 'pull up signals for [account]', 'what's going on with [company]' 또는 계정 수준 질문에서 트리거됩니다. |
 | `contact-research` | Common Room 데이터를 사용해 특정 사람을 조사합니다. 'who is [name]', 'look up [email]', 'research [contact]', 'is [name] a warm lead' 또는 contact-level question에서 트리거됩니다. |
