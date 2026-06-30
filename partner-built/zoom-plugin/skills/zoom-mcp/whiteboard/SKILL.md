@@ -1,9 +1,10 @@
 ---
+
 name: zoom-mcp/whiteboard
-description: |
-  Guidance for the bundled Zoom Whiteboard MCP connector. Use for Whiteboard MCP auth,
-  endpoints, ID mapping, and tool workflows such as list_whiteboards and get_a_whiteboard.
-  Prefer this skill when the request is specifically about Whiteboard MCP rather than general Zoom MCP.
+description: >-
+  Bundled Zoom Whiteboard MCP connector guidance입니다. Whiteboard MCP auth, endpoint, ID mapping,
+  list_whiteboards 및 get_a_whiteboard 같은 tool workflow에 사용합니다. 일반 Zoom MCP가 아니라 Whiteboard MCP에 대한 요청일 때 이 스킬을
+  우선 사용합니다.
 user-invocable: false
 triggers:
   - "whiteboard mcp"

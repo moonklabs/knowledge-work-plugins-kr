@@ -1,6 +1,9 @@
 ---
+
 name: interview-prep
-description: Competency-based question과 scorecard가 포함된 structured interview plan을 만듭니다. "interview plan for", "interview questions for", "how should we interview", "scorecard for" 또는 candidate interview 준비 시 트리거됩니다.
+description: >-
+  Competency-based question과 scorecard가 포함된 structured interview plan을 만듭니다. "interview plan for", "interview
+  questions for", "how should we interview", "scorecard for" 또는 candidate interview 준비 요청에서 트리거됩니다.
 ---
 
 # Interview Prep

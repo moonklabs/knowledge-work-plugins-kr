@@ -1,20 +1,15 @@
 ---
-name: tax-season-organizer
-description: >
-  Prepares tax-season materials for small business owners — framed as deliverables
-  for their accountant, not tax advice. Two modes: (1) quarterly estimated tax
-  calculation — pulls YTD net income from QuickBooks and calculates the federal
-  income tax + self-employment tax liability and quarterly payment due; (2)
-  year-end 1099 prep — scans QuickBooks, PayPal, and Stripe for contractors paid
-  over $600, builds a 1099-NEC candidate list with missing W-9 flags, and
-  produces a plain-English summary a CPA can work from directly.
 
-  Trigger this skill whenever the user mentions: quarterly taxes, estimated tax
-  payment, how much to set aside for taxes, 1099s, 1099-NEC, year-end tax prep,
-  contractor payments, W-9s, or any phrase suggesting they are preparing for a
-  tax deadline or handing materials to an accountant. Also trigger proactively
-  when a user asks about net profit or YTD income in a context that suggests
-  they are worried about their tax bill.
+name: tax-season-organizer
+description: >-
+  Small business owner를 위한 tax-season material을 준비합니다. Tax advice가 아니라 accountant에게 넘길 deliverable로
+  framing합니다. 두 가지 mode가 있습니다. (1) quarterly estimated tax calculation: QuickBooks에서 YTD net income을 가져와
+  federal income tax + self-employment tax liability와 quarterly payment due를 계산합니다. (2) year-end 1099 prep:
+  QuickBooks, PayPal, Stripe에서 $600 초과 contractor payment를 scan하고 missing W-9 flag가 포함된 1099-NEC candidate
+  list와 CPA가 바로 사용할 수 있는 plain-English summary를 생성합니다. 사용자가 quarterly taxes, estimated tax payment, how much
+  to set aside for taxes, 1099s, 1099-NEC, year-end tax prep, contractor payments, W-9s 또는 tax
+  deadline/accountant handoff 준비를 암시하는 표현을 말하면 트리거합니다. Tax bill을 걱정하는 context에서 net profit 또는 YTD income을 묻는
+  경우에도 proactive하게 트리거합니다.
 ---
 
 # Tax Season Organizer

@@ -1,31 +1,11 @@
 ---
+
 name: content-generation
-description: >
-  Generates brand-aligned sales and marketing content by applying brand guidelines
-  to specific content requests. Use this agent for long-form content, batch
-  generation, or when multiple brand constraints must be balanced simultaneously.
-
-  <example>
-  Context: The brand-voice-enforcement skill needs to generate a detailed enterprise
-  proposal. It delegates to the content-generation agent for long-form,
-  multi-constraint content creation.
-  user: "Write a 5-page proposal for our AI platform at a Fortune 500"
-  assistant: "I'll generate a brand-aligned proposal applying all guidelines..."
-  <commentary>
-  Long-form content requiring simultaneous application of multiple brand constraints.
-  The content-generation agent handles complex generation with thorough validation.
-  </commentary>
-  </example>
-
-  <example>
-  Context: User needs a batch of personalized outreach emails for different personas.
-  user: "Create 5 cold emails for different buyer personas using our brand voice"
-  assistant: "I'll generate brand-aligned emails tailored to each persona..."
-  <commentary>
-  Batch content generation requiring brand consistency across multiple variations.
-  The content-generation agent balances brand constraints with persona-specific adaptation.
-  </commentary>
-  </example>
+description: >-
+  Brand guideline을 특정 content request에 적용해 brand-aligned sales 및 marketing content를 생성합니다. Long-form content,
+  batch generation, 또는 여러 brand constraint를 동시에 균형 있게 적용해야 할 때 이 agent를 사용합니다. 예: brand-voice-enforcement
+  skill이 detailed enterprise proposal을 생성해야 하거나, 서로 다른 persona용 personalized outreach email batch가 필요할 때
+  long-form 및 multi-constraint generation을 맡깁니다.
 model: sonnet
 color: magenta
 tools:

@@ -1,11 +1,10 @@
 ---
+
 name: content-strategy
-description: >
-  Analyzes sales data from PayPal and QuickBooks to find top performers and
-  slow movers, layers in seasonality, and produces a prioritized 30-day
-  content brief: what to push, what offers to run, what to hold. Strategic
-  output only — no calendars or assets. Use when the user asks what to post,
-  wants a content plan, asks what's selling, or what to promote this month.
+description: >-
+  PayPal과 QuickBooks의 sales data를 분석해 top performer와 slow mover를 찾고 seasonality를 반영해 prioritized 30-day
+  content brief를 생성합니다. 무엇을 push할지, 어떤 offer를 실행할지, 무엇을 hold할지 제안합니다. Strategic output만 제공하며 calendar나 asset은
+  만들지 않습니다. 사용자가 무엇을 post할지, content plan, 무엇이 팔리는지, 이번 달 무엇을 promote할지 묻는 경우 사용합니다.
 ---
 
 # Content Strategy

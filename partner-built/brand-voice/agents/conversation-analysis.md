@@ -1,29 +1,10 @@
 ---
+
 name: conversation-analysis
-description: >
-  Analyzes sales call transcripts to extract brand voice patterns, messaging
-  effectiveness, and tone variations. Use this agent when processing multiple
-  transcripts or performing deep pattern recognition across conversations.
-
-  <example>
-  Context: The guideline-generation skill has 10 sales call transcripts to analyze.
-  user: "Generate brand guidelines from my last 10 sales calls"
-  assistant: "I'll analyze the transcripts for voice patterns and messaging..."
-  <commentary>
-  Multiple transcripts need deep pattern recognition across conversations.
-  The conversation-analysis agent handles this heavy analysis.
-  </commentary>
-  </example>
-
-  <example>
-  Context: Gong transcripts were found during brand discovery and need analysis.
-  user: "Analyze the Gong calls found during discovery"
-  assistant: "I'll pull the transcripts from Gong and analyze voice patterns..."
-  <commentary>
-  Discovery identified relevant Gong recordings. The conversation-analysis agent
-  fetches transcripts via MCP and performs deep pattern analysis.
-  </commentary>
-  </example>
+description: >-
+  Sales call transcript를 분석해 brand voice pattern, messaging effectiveness, tone variation을 추출합니다. 여러
+  transcript를 처리하거나 conversation 전반의 deep pattern recognition이 필요할 때 이 agent를 사용합니다. 예: guideline-generation
+  skill이 10개의 sales call transcript를 분석해야 하거나, discovery 중 찾은 Gong recording에서 voice pattern을 분석해야 할 때 사용합니다.
 model: sonnet
 color: blue
 # tools not restricted -- this agent needs MCP tools to fetch transcripts from Gong, Granola, etc.

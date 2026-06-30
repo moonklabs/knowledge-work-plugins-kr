@@ -1,13 +1,12 @@
 ---
+
 name: invoice-chase
 version: 0.2.0
-description: >
-  Drafts overdue-invoice reminder emails from QuickBooks and PayPal data,
-  matched to each customer's payment history and tone (gentle for good customers,
-  firm for repeat late payers). Sends via PayPal with owner approval;
-  non-PayPal invoices queue as mail drafts. Use when the user asks
-  "who owes me money," mentions overdue invoices, or wants to follow up
-  on unpaid invoices.
+description: >-
+  QuickBooks와 PayPal data에서 overdue-invoice reminder email 초안을 작성하고, 각 customer의 payment history와 tone에 맞춥니다.
+  Good customer에게는 gentle tone, 반복 late payer에게는 firm tone을 사용합니다. Owner approval 후 PayPal로 전송하며 non-PayPal
+  invoice는 mail draft로 queue합니다. 사용자가 "who owes me money"라고 묻거나 overdue invoice를 언급하거나 unpaid invoice
+  follow-up을 원할 때 사용합니다.
 ---
 
 # Invoice Chase

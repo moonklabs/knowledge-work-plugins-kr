@@ -1,6 +1,9 @@
 ---
+
 name: virtual-agent/android
-description: "Zoom Virtual Agent Android integration via WebView. Use for Java/Kotlin bridge callbacks, native URL handling, support_handoff relay, and lifecycle-safe embedding."
+description: >-
+  WebView를 통한 Zoom Virtual Agent Android integration입니다. Java/Kotlin bridge callback, native URL handling,
+  support_handoff relay, lifecycle-safe embedding에 사용합니다.
 user-invocable: false
 triggers:
   - "virtual agent android"

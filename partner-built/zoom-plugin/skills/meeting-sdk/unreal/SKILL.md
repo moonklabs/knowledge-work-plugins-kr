@@ -1,8 +1,9 @@
 ---
+
 name: zoom-meeting-sdk-unreal
-description: |
-  Zoom Meeting SDK for Unreal Engine wrapper integrations. Use when building Unreal projects that
-  embed Zoom meetings with C++ and Blueprint wrappers, including wrapper-to-SDK mapping concerns.
+description: >-
+  Unreal Engine wrapper integration용 Zoom Meeting SDK입니다. C++ 및 Blueprint wrapper로 Zoom meeting을 embed하는
+  Unreal project를 만들고 wrapper-to-SDK mapping concern을 다룰 때 사용합니다.
 user-invocable: false
 triggers:
   - "meeting sdk unreal"

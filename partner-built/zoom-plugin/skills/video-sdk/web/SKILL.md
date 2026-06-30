@@ -1,6 +1,9 @@
 ---
+
 name: video-sdk/web
-description: "Zoom Video SDK for Web - JavaScript/TypeScript integration for browser-based video sessions, real-time communication, screen sharing, recording, and live transcription"
+description: >-
+  Web용 Zoom Video SDK입니다. Browser-based video session, real-time communication, screen sharing, recording,
+  live transcription을 위한 JavaScript/TypeScript integration에 사용합니다.
 user-invocable: false
 triggers:
   - "video sdk web"

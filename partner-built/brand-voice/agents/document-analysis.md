@@ -1,29 +1,10 @@
 ---
+
 name: document-analysis
-description: >
-  Analyzes brand documents to extract voice attributes, messaging, terminology,
-  and examples. Use this agent when processing multiple brand documents or
-  performing cross-document pattern recognition.
-
-  <example>
-  Context: The guideline-generation skill has received 5 brand documents to process.
-  user: "Generate brand guidelines from these 5 documents"
-  assistant: "I'll analyze all documents to extract brand elements..."
-  <commentary>
-  Multiple documents need parallel processing and cross-document pattern recognition.
-  The document-analysis agent handles heavy parsing efficiently.
-  </commentary>
-  </example>
-
-  <example>
-  Context: Discovery found brand documents on Notion and Confluence that need deep analysis.
-  user: "Analyze the brand materials found during discovery"
-  assistant: "I'll do a deep analysis of each discovered document..."
-  <commentary>
-  Discovery report identified key documents. The document-analysis agent fetches
-  full content from connected platforms and extracts structured brand elements.
-  </commentary>
-  </example>
+description: >-
+  Brand document를 분석해 voice attribute, messaging, terminology, example을 추출합니다. 여러 brand document를 처리하거나
+  cross-document pattern recognition이 필요할 때 사용합니다. 예: guideline-generation skill이 여러 document를 받아 brand
+  element를 추출해야 하거나, discovery report가 식별한 Notion/Confluence material을 깊게 분석해야 할 때 사용합니다.
 model: sonnet
 color: green
 # tools not restricted -- this agent needs MCP tools to fetch documents from connected platforms

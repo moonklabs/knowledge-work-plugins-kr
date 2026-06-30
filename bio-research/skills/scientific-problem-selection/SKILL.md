@@ -1,6 +1,10 @@
 ---
+
 name: scientific-problem-selection
-description: Scientist가 research problem selection, project ideation, stuck project troubleshooting, strategic scientific decision에 도움이 필요할 때 사용합니다. New research idea pitch, project problem 해결, project risk 평가, research strategy planning, decision tree 탐색, 어떤 scientific problem을 다룰지 선택하는 도움 요청에 사용합니다. Typical request는 "I have an idea for a project", "I'm stuck on my research", "help me evaluate this project", "what should I work on", "I need strategic advice about my research"입니다.
+description: >-
+  Scientist가 research problem selection, project ideation, stuck project troubleshooting, strategic scientific
+  decision에 도움이 필요할 때 사용합니다. New research idea pitch, project problem 해결, project risk 평가, research strategy
+  planning, decision tree 탐색, 어떤 scientific problem을 추진할지 결정하는 요청에서 트리거됩니다.
 ---
 
 # Scientific Problem Selection Skills

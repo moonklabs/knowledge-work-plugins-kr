@@ -1,5 +1,7 @@
 ---
-description: Get a digest of recent activity across multiple Slack channels
+
+description: >-
+  여러 Slack channel의 최근 활동 digest를 가져옵니다.
 ---
 
 Given the comma-separated channel names provided in $ARGUMENTS (strip leading `#` and whitespace from each):

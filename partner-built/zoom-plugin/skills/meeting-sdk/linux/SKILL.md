@@ -1,6 +1,9 @@
 ---
+
 name: meeting-sdk/linux
-description: "Zoom Meeting SDK for Linux - C++ headless meeting bots with raw audio/video access, transcription, recording, and AI integration for server-side automation"
+description: >-
+  Linux용 Zoom Meeting SDK입니다. Raw audio/video access, transcription, recording, AI integration을 사용하는
+  server-side automation용 C++ headless meeting bot에 사용합니다.
 user-invocable: false
 triggers:
   - "linux meeting bot"

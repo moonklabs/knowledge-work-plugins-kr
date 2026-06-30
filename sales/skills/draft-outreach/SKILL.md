@@ -1,6 +1,9 @@
 ---
+
 name: draft-outreach
-description: Prospect를 research한 뒤 personalized outreach 초안을 작성합니다. 기본적으로 web research를 사용하고 enrichment 및 CRM 연결 시 더 강력해집니다. "draft outreach to [person/company]", "write cold email to [prospect]", "reach out to [name]"에서 트리거됩니다.
+description: >-
+  Prospect를 조사한 뒤 개인화된 outreach 초안을 작성합니다. 기본적으로 web research만으로 동작하며 enrichment 및 CRM을 연결하면 더 강력해집니다. "draft
+  outreach to [person/company]", "write cold email to [prospect]", "reach out to [name]"에서 트리거됩니다.
 ---
 
 # Draft Outreach

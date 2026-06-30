@@ -1,5 +1,7 @@
 ---
-description: Generate a standup update based on your recent Slack activity
+
+description: >-
+  최근 Slack activity를 바탕으로 standup update를 생성합니다.
 ---
 
 1. Use `slack_read_user_profile` (with no user_id) to get the current user's profile information, including their user ID and display name.

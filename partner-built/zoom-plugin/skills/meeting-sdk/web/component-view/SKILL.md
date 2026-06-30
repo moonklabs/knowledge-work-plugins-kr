@@ -1,9 +1,10 @@
 ---
+
 name: zoom-meeting-sdk-web-component-view
-description: |
-  Zoom Meeting SDK Web - Component View. Embeddable Zoom meeting components with Promise-based API
-  for flexible integration. Ideal for React/Vue/Angular apps and custom layouts. Uses ZoomMtgEmbedded
-  with async/await patterns and embeddable UI containers.
+description: >-
+  Zoom Meeting SDK Web의 Component View입니다. Flexible integration을 위한 Promise-based API 기반 embeddable Zoom
+  meeting component에 사용합니다. React/Vue/Angular app과 custom layout에 적합하며 ZoomMtgEmbedded, async/await pattern,
+  embeddable UI container를 사용합니다.
 user-invocable: false
 triggers:
   - "meeting sdk component view"

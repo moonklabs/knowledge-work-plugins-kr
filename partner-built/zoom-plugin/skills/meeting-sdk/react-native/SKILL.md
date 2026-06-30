@@ -1,6 +1,9 @@
 ---
+
 name: zoom-meeting-sdk-react-native
-description: Zoom Meeting SDK for React Native. Use when embedding Zoom meetings in React Native iOS/Android apps with @zoom/meetingsdk-react-native, JWT auth, join/start flows, platform setup, and native bridge troubleshooting.
+description: >-
+  React Native용 Zoom Meeting SDK입니다. React Native iOS/Android app에서 @zoom/meetingsdk-react-native, JWT auth,
+  join/start flow, platform setup, native bridge troubleshooting으로 Zoom meeting을 embed할 때 사용합니다.
 user-invocable: false
 triggers:
   - react native meeting sdk

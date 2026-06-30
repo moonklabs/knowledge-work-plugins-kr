@@ -1,30 +1,10 @@
 ---
+
 name: quality-assurance
-description: >
-  Validates content and brand guidelines against brand standards. Use this agent
-  to check compliance, consistency, completeness, and open question coverage
-  before finalizing output.
-
-  <example>
-  Context: The brand-voice-enforcement skill has generated a cold email and wants to
-  validate it against guidelines before presenting to the user.
-  user: "Check this email against our brand guidelines"
-  assistant: "Let me validate this against your brand guidelines..."
-  <commentary>
-  Content needs validation against brand standards before delivery.
-  The quality-assurance agent performs a fast, structured compliance check.
-  </commentary>
-  </example>
-
-  <example>
-  Context: Brand guidelines were just generated and need validation before presenting.
-  user: "Validate these brand guidelines for completeness and quality"
-  assistant: "Let me check the guidelines for completeness, consistency, and open questions..."
-  <commentary>
-  Generated guidelines need quality validation before presenting to the user.
-  The quality-assurance agent checks completeness, open questions coverage, and PII.
-  </commentary>
-  </example>
+description: >-
+  Content와 brand guideline을 brand standard에 맞춰 검증합니다. Output을 finalize하기 전에 compliance, consistency,
+  completeness, open question coverage를 확인할 때 이 agent를 사용합니다. 예: 생성된 cold email을 guideline에 맞춰 검증하거나, 방금 생성한
+  brand guideline의 completeness와 quality를 확인할 때 사용합니다.
 model: haiku
 color: yellow
 tools:

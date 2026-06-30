@@ -1,12 +1,11 @@
 ---
+
 name: contract-review
-description: >
-  Lightweight NDA, MSA, and vendor contract review for SMBs without legal on
-  staff. Reads contracts from local files, Gmail attachments, or DocuSign
-  envelopes; flags non-standard terms; explains risks in plain English; and
-  outputs a marked-up redline as a separate DOCX. Use when the user says
-  "review this contract," "what am I signing," "red flags," "flag any concerns,"
-  "check the payment terms," or uploads/forwards a contract or legal agreement.
+description: >-
+  사내 legal staff가 없는 SMB를 위한 lightweight NDA, MSA, vendor contract review입니다. Local file, Gmail attachment,
+  DocuSign envelope에서 contract를 읽고 non-standard term을 flag하며 plain English로 risk를 설명하고 separate DOCX redline을
+  출력합니다. 사용자가 "review this contract", "what am I signing", "red flags", "flag any concerns", "check the
+  payment terms"라고 말하거나 contract 또는 legal agreement를 업로드/전달할 때 사용합니다.
 ---
 
 # Contract Review

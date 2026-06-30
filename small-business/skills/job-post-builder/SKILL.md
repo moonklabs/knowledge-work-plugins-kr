@@ -1,14 +1,12 @@
 ---
+
 name: job-post-builder
-description: >
-  Builds end-to-end hiring packets — job post, structured interview guide with
-  scoring rubric, and offer letter template — from a hiring brief. Triggers on:
-  "help me hire", "we're hiring for", "write a job post", "job description",
-  "JD", "open role", "create a job ad", "interview questions", "scoring rubric",
-  "draft an offer letter", "send an offer", "make a hiring packet", or any
-  request to recruit for a position. When in doubt, trigger — covers the full
-  hiring workflow from job post through DocuSign envelope creation via browser.
-  Does NOT screen or rank applicants.
+description: >-
+  Hiring brief에서 job post, scoring rubric이 있는 structured interview guide, offer letter template까지 end-to-end
+  hiring packet을 만듭니다. "help me hire", "we're hiring for", "write a job post", "job description", "JD", "open
+  role", "create a job ad", "interview questions", "scoring rubric", "draft an offer letter", "send an offer",
+  "make a hiring packet" 또는 position recruiting request에서 트리거됩니다. 의심스러우면 트리거합니다. Job post부터 browser를 통한
+  DocuSign envelope creation까지 full hiring workflow를 다룹니다. Applicant screening이나 ranking은 하지 않습니다.
 ---
 
 # Job Post Builder

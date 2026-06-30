@@ -1,6 +1,9 @@
 ---
+
 name: compose-outreach
-description: Common Room signal을 사용해 personalized outreach message를 생성합니다. 'draft outreach to [person]', 'write an email to [name]', 'compose a message for [contact]' 또는 outreach drafting request에서 트리거됩니다.
+description: >-
+  Common Room signal을 사용해 개인화된 outreach message를 생성합니다. 'draft outreach to [person]', 'write an email to
+  [name]', 'compose a message for [contact]' 또는 outreach drafting request에서 트리거됩니다.
 ---
 
 # Compose Outreach

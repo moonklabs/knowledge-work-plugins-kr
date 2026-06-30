@@ -1,38 +1,10 @@
 ---
+
 name: discover-brand
-description: >
-  Autonomously searches enterprise platforms to discover brand-related documents,
-  transcripts, and design assets. Use when the user wants to build brand guidelines
-  but doesn't know where materials are, or wants a comprehensive brand content audit.
-
-  <example>
-  Context: User wants to create brand guidelines but doesn't know what materials exist.
-  user: "I need brand guidelines but our stuff is scattered everywhere — Notion, Confluence, Google Drive, Box..."
-  assistant: "I'll search across your connected platforms to find all brand-related materials."
-  <commentary>
-  User has scattered brand materials across multiple platforms. The discover-brand agent
-  autonomously searches all connected MCP platforms to find and triage brand content.
-  </commentary>
-  </example>
-
-  <example>
-  Context: User wants a brand content audit before generating guidelines.
-  user: "What brand materials do we actually have? Can you find everything?"
-  assistant: "I'll run a comprehensive brand discovery across your connected platforms."
-  <commentary>
-  User wants to understand what brand materials exist. The discover-brand agent searches,
-  categorizes, ranks, and reports on all discovered brand content.
-  </commentary>
-  </example>
-
-  <example>
-  Context: The discover-brand skill delegates deep platform search to this agent.
-  user: "Discover our brand voice"
-  assistant: "I'll search your connected platforms for brand materials..."
-  <commentary>
-  The discover-brand skill orchestrates this agent for the heavy search and triage work.
-  </commentary>
-  </example>
+description: >-
+  Enterprise platform을 자율적으로 검색해 brand 관련 document, transcript, design asset을 발견합니다. 사용자가 guideline을 만들고 싶지만
+  material 위치를 모르거나 comprehensive brand content audit을 원할 때 사용합니다. 예: brand material이 Notion, Confluence,
+  Google Drive, Box 등에 흩어져 있거나, 실제 보유한 brand material 전체를 찾아 categorize, rank, report해야 할 때 사용합니다.
 model: sonnet
 color: cyan
 maxTurns: 25

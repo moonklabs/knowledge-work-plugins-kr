@@ -1,11 +1,11 @@
 ---
+
 name: lead-triage
 version: 0.1.1
-description: >
-  Scores inbound HubSpot leads by engagement signals, company fit, and urgency
-  markers to produce a "call these 5 today" list with talking points, drafts
-  the follow-ups, and blocks Calendar time. Use when the user asks to
-  prioritize leads, who to call first, or about their pipeline.
+description: >-
+  Inbound HubSpot lead를 engagement signal, company fit, urgency marker로 scoring해 talking point가 포함된 "오늘 call할
+  5명" 목록을 만들고 follow-up 초안을 작성하며 Calendar time을 block합니다. 사용자가 lead priority, 누구에게 먼저 call할지, pipeline에 대해 묻는
+  경우 사용합니다.
 ---
 
 # Lead Triage

@@ -1,14 +1,12 @@
 ---
+
 name: canva-creator
-description: >
-  Takes an approved content brief and executes a campaign end-to-end: builds
-  the posting calendar, generates Canva designs for social posts, drafts
-  caption and email copy, and stages social sends in HubSpot. Canva is used
-  for social posts only (Instagram, Facebook, X, LinkedIn) — email content
-  is drafted as plain text and surfaced inline for the owner to send from
-  their own tool. Every step requires explicit owner approval. Use when the
-  user says "make the content," "generate the posts," "create the assets,"
-  "turn this into a campaign," or hands off an approved brief for execution.
+description: >-
+  Approved content brief를 받아 campaign을 end-to-end로 실행합니다. Posting calendar를 만들고, social post용 Canva design을
+  생성하고, caption 및 email copy를 작성하며, HubSpot에 social send를 stage합니다. Canva는 Instagram, Facebook, X, LinkedIn 같은
+  social post에만 사용하고 email content는 plain text로 작성해 owner가 직접 보낼 수 있게 inline으로 제공합니다. 모든 단계에는 explicit owner
+  approval이 필요합니다. 사용자가 "make the content", "generate the posts", "create the assets", "turn this into a
+  campaign"이라고 말하거나 approved brief 실행을 맡길 때 사용합니다.
 ---
 
 # Canva Creator

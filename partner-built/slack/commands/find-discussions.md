@@ -1,5 +1,7 @@
 ---
-description: Find discussions about a specific topic across Slack channels
+
+description: >-
+  특정 topic에 대한 논의를 Slack channel 전반에서 찾습니다.
 ---
 
 Given the topic provided in $ARGUMENTS:

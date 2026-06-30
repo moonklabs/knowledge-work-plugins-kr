@@ -1,6 +1,9 @@
 ---
+
 name: video-sdk/linux
-description: "Zoom Video SDK for Linux - C++ headless bots, raw audio/video capture/injection, Qt/GTK integration, Docker support"
+description: >-
+  Linux용 Zoom Video SDK입니다. C++ headless bot, raw audio/video capture/injection, Qt/GTK integration, Docker
+  support가 필요한 작업에 사용합니다.
 user-invocable: false
 triggers:
 - linux video sdk

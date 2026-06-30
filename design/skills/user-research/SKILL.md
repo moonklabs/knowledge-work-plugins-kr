@@ -1,6 +1,9 @@
 ---
+
 name: user-research
-description: User research를 plan, conduct, synthesize합니다. "user research plan", "interview guide", "usability test", "survey design", "research questions" 또는 research를 통해 user를 이해하는 모든 단계에 도움이 필요할 때 트리거됩니다.
+description: >-
+  User research를 계획하고 수행하며 종합합니다. "user research plan", "interview guide", "usability test", "survey design",
+  "research questions" 또는 research를 통해 user를 이해하는 모든 단계에 도움이 필요할 때 트리거됩니다.
 ---
 
 # User Research

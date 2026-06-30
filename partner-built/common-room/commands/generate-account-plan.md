@@ -1,5 +1,7 @@
 ---
-description: Generate a comprehensive strategic account plan
+
+description: >-
+  포괄적인 strategic account plan을 생성합니다.
 argument-hint: <company name or domain>
 ---
 

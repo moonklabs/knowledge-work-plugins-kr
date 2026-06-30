@@ -1,6 +1,10 @@
 ---
+
 name: competitive-intelligence
-description: Competitor를 research하고 interactive battlecard를 만듭니다. Clickable competitor card와 comparison matrix가 있는 HTML artifact를 출력합니다. "competitive intel", "research competitors", "how do we compare to [competitor]", "battlecard for [competitor]", "what's new with [competitor]"에서 트리거됩니다.
+description: >-
+  Competitor를 조사하고 interactive battlecard를 만듭니다. Clickable competitor card와 comparison matrix가 있는 HTML
+  artifact를 출력합니다. "competitive intel", "research competitors", "how do we compare to [competitor]",
+  "battlecard for [competitor]", "what's new with [competitor]"에서 트리거됩니다.
 ---
 
 # Competitive Intelligence

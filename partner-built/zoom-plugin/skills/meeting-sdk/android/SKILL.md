@@ -1,8 +1,9 @@
 ---
+
 name: zoom-meeting-sdk-android
-description: |
-  Zoom Meeting SDK for Android native apps. Use when embedding Zoom meetings in Android with
-  default/custom UI, PKCE + SDK auth, join/start flows, and Meeting SDK API integration.
+description: >-
+  Android native app용 Zoom Meeting SDK입니다. Android에서 default/custom UI, PKCE + SDK auth, join/start flow,
+  Meeting SDK API integration으로 Zoom meeting을 embed할 때 사용합니다.
 user-invocable: false
 triggers:
   - "meeting sdk android"

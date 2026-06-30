@@ -1,13 +1,11 @@
 ---
+
 name: smb-router
-description: >
-  The front door to the Small Business plugin. Listens to what the owner needs
-  right now — vague or specific — and routes them to the best skill or slash
-  command for the moment. Also serves as a guide: explains what's available,
-  suggests what to try next, and adapts recommendations based on stored business
-  context. Trigger whenever the owner asks "what can you do," "help me with my
-  business," "what should I focus on," "I don't know where to start," or any
-  open-ended business request that doesn't clearly match a single skill.
+description: >-
+  Small Business plugin의 front door입니다. Owner가 지금 필요한 일을 vague하거나 specific하게 말하면 그 순간에 가장 적합한 skill 또는 slash
+  command로 route합니다. 사용 가능한 기능을 설명하고, 다음에 시도할 일을 제안하며, 저장된 business context를 바탕으로 recommendation을 조정하는 guide
+  역할도 합니다. Owner가 "what can you do", "help me with my business", "what should I focus on", "I don't know where
+  to start"라고 말하거나 단일 skill에 명확히 매칭되지 않는 open-ended business request를 할 때 트리거됩니다.
 ---
 
 # SMB Router

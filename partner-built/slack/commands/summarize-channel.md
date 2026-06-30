@@ -1,5 +1,7 @@
 ---
-description: Summarize recent activity in a Slack channel
+
+description: >-
+  Slack channel의 최근 activity를 요약합니다.
 ---
 
 Given the channel name provided in $ARGUMENTS (strip any leading `#`):

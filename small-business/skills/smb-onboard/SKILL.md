@@ -1,13 +1,11 @@
 ---
+
 name: smb-onboard
-description: >
-  Claude as the trainer. Walks an SMB owner through connecting their first two
-  tools, runs one recipe to prove immediate value, interviews them about their
-  business (industry, size, top three headaches), stores that context
-  persistently so every other skill benefits, and sets a weekly check-in
-  cadence. Use when the owner is getting started or says any of: "set me up,"
-  "setup," "help me get set up," "get started," "help me get started," "get me
-  started," "what can you do," "I'm new to this," or is in their first session.
+description: >-
+  Claude가 trainer처럼 SMB owner를 안내합니다. 첫 두 tool 연결을 돕고, 즉각적인 가치를 증명하는 recipe 하나를 실행하며, business 정보(industry,
+  size, top three headaches)를 interview하고, 모든 다른 skill이 활용할 수 있도록 context를 persistent하게 저장하며 weekly check-in
+  cadence를 설정합니다. Owner가 처음 시작하거나 "set me up", "setup", "help me get set up", "get started", "help me get
+  started", "get me started", "what can you do", "I'm new to this"라고 말하거나 첫 session일 때 사용합니다.
 ---
 
 # SMB Onboard

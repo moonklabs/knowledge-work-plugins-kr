@@ -1,8 +1,9 @@
 ---
+
 name: zoom-meeting-sdk-macos
-description: |
-  Zoom Meeting SDK for macOS native apps. Use when embedding Zoom meetings in macOS with
-  default/custom UI, PKCE + SDK auth, host start/join flows, and desktop meeting feature controllers.
+description: >-
+  macOS native app용 Zoom Meeting SDK입니다. macOS에서 default/custom UI, PKCE + SDK auth, host start/join flow,
+  desktop meeting feature controller로 Zoom meeting을 embed할 때 사용합니다.
 user-invocable: false
 triggers:
   - "meeting sdk macos"

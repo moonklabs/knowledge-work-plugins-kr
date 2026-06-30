@@ -1,11 +1,10 @@
 ---
+
 name: ticket-deflector
-description: >
-  Reads a forwarded customer email or ticket, pulls order/refund status from
-  PayPal and account history from HubSpot, drafts a tone-matched reply in the
-  owner's writing voice, and can issue a PayPal refund with explicit owner
-  approval. Use when the user says "draft a response," "answer this customer,"
-  "where's my order," or "I want a refund."
+description: >-
+  Forwarded customer email 또는 ticket을 읽고 PayPal의 order/refund status와 HubSpot의 account history를 가져온 뒤 owner의
+  writing voice에 맞춘 reply 초안을 작성합니다. Explicit owner approval이 있으면 PayPal refund도 실행할 수 있습니다. 사용자가 "draft a
+  response", "answer this customer", "where's my order", "I want a refund"라고 말할 때 사용합니다.
 compatibility: "Requires PayPal, HubSpot, Mail. Optional: Intercom, Square."
 ---
 

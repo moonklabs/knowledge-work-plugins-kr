@@ -1,15 +1,12 @@
 ---
+
 name: margin-analyzer
-description: >
-  Analyzes unit economics by product or service using PayPal merchant
-  insights and QuickBooks cost data, benchmarks against inflation and cost
-  changes, and shows pricing-scenario data (e.g. "a 5% increase historically
-  correlates with ~3% volume drop"). Surfaces analysis only — does not
-  recommend a price. Use when the user asks about raising prices, pricing,
-  margin analysis, what to charge, whether costs are eating into profit, or
-  how a price change might affect their business. Trigger even if the user
-  doesn't say "margin" explicitly — phrases like "am I making enough?",
-  "should I charge more?", or "my costs are going up" all call for this skill.
+description: >-
+  PayPal merchant insight와 QuickBooks cost data를 사용해 product 또는 service별 unit economics를 분석하고 inflation 및 cost
+  change와 benchmark하며 pricing-scenario data를 보여줍니다. 예: "5% 인상은 역사적으로 약 3% volume drop과 상관관계". Analysis만 제공하고
+  price recommendation은 하지 않습니다. 사용자가 price raise, pricing, margin analysis, what to charge, cost가 profit을
+  잠식하는지, price change가 business에 미치는 영향을 묻는 경우 사용합니다. 사용자가 "margin"이라고 말하지 않아도 "am I making enough?", "should
+  I charge more?", "my costs are going up" 같은 표현이면 트리거합니다.
 ---
 
 # Margin Analyzer

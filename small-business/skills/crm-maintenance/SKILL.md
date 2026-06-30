@@ -1,11 +1,10 @@
 ---
+
 name: crm-maintenance
-description: >
-  Keeps HubSpot current without the owner opening it: creates and updates
-  contacts and deals from email and calendar context, logs notes and calls,
-  and flags stale records. The "stop doing data entry" skill. Use when the
-  user asks to update the CRM, log a call, clean up HubSpot, or add context
-  to a deal.
+description: >-
+  Owner가 HubSpot을 열지 않아도 HubSpot을 최신 상태로 유지합니다. Email 및 calendar context에서 contact와 deal을 생성/업데이트하고, note와
+  call을 log하며, stale record를 flag합니다. "stop doing data entry" 스킬입니다. 사용자가 CRM update, call log, HubSpot
+  cleanup, deal context 추가를 요청할 때 사용합니다.
 ---
 
 # CRM Maintenance

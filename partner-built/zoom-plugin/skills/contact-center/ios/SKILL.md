@@ -1,6 +1,9 @@
 ---
+
 name: contact-center/ios
-description: "Zoom Contact Center SDK for iOS. Use for native iOS chat/video/ZVA/scheduled callback integrations, app lifecycle bridging, rejoin flow, and callback handling."
+description: >-
+  iOS용 Zoom Contact Center SDK입니다. Native iOS chat/video/ZVA/scheduled callback integration, app lifecycle
+  bridging, rejoin flow, callback handling에 사용합니다.
 user-invocable: false
 triggers:
   - "contact center ios"

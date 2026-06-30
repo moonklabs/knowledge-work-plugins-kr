@@ -1,6 +1,10 @@
 ---
+
 name: call-prep
-description: Common Room signal을 사용해 customer 또는 prospect call을 준비합니다. 'prep me for my call with [company]', 'prepare for a meeting with [company]', 'what should I know before talking to [company]' 또는 call preparation request에서 트리거됩니다.
+description: >-
+  Common Room signal을 사용해 customer 또는 prospect call을 준비합니다. 'prep me for my call with [company]', 'prepare for
+  a meeting with [company]', 'what should I know before talking to [company]' 또는 call preparation request에서
+  트리거됩니다.
 ---
 
 # Call Prep

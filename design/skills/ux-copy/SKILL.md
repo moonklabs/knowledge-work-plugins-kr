@@ -1,6 +1,10 @@
 ---
+
 name: ux-copy
-description: UX copy를 작성하거나 review합니다. Microcopy, error message, empty state, CTA를 다룹니다. "write copy for", "what should this button say?", "review this error message" 또는 CTA naming, confirmation dialog wording, empty state 작성, onboarding text 작성 시 트리거됩니다.
+description: >-
+  UX copy를 작성하거나 review합니다. Microcopy, error message, empty state, CTA를 다룹니다. "write copy for", "what should
+  this button say?", "review this error message" 또는 CTA naming, confirmation dialog wording, empty state 작성,
+  onboarding text 작성 시 트리거됩니다.
 argument-hint: "<context or copy to review>"
 ---
 

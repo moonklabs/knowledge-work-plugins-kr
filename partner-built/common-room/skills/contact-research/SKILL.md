@@ -1,6 +1,9 @@
 ---
+
 name: contact-research
-description: "Research a specific person using Common Room data. Triggers on 'who is [name]', 'look up [email]', 'research [contact]', 'is [name] a warm lead', or any contact-level question."
+description: >-
+  Common Room data를 사용해 특정 person을 조사합니다. 'who is [name]', 'look up [email]', 'research [contact]', 'is [name]
+  a warm lead' 또는 contact-level question에서 트리거됩니다.
 ---
 
 # Contact Research

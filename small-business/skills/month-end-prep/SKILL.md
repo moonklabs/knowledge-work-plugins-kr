@@ -1,12 +1,11 @@
 ---
+
 name: month-end-prep
-description: >
-  Walks an SMB owner through month-end close: reconciles QuickBooks against
-  PayPal (and Square/Stripe) settlements, flags uncategorized transactions,
-  suspicious duplicates, and missing receipts, then writes a plain-English
-  P&L narrative and exports a close packet (xlsx + one-page PDF). Use when
-  the user says "close the month," "month-end," "reconcile," "what's missing,"
-  "P&L," or asks why revenue or margin changed this month.
+description: >-
+  SMB owner의 month-end close를 안내합니다. QuickBooks를 PayPal 및 Square/Stripe settlement와 reconcile하고, uncategorized
+  transaction, suspicious duplicate, missing receipt를 flag한 뒤 plain-English P&L narrative를 작성하고 close
+  packet(xlsx + one-page PDF)을 export합니다. 사용자가 "close the month", "month-end", "reconcile", "what's missing",
+  "P&L"이라고 말하거나 이번 달 revenue 또는 margin 변화 이유를 묻는 경우 사용합니다.
 ---
 
 # Month End Prep
