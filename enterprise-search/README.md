@@ -10,11 +10,11 @@
 
 ```text
 사용자: "API redesign에 대해 우리가 무엇을 결정했지?"
-              ↓ Claude searches
+              ↓ Claude가 검색
 ~~chat: 결정이 담긴 화요일 #engineering thread
 ~~email: Sarah가 보낸 spec follow-up email
 ~~cloud storage: Updated API design doc (어제 수정)
-              ↓ Claude synthesizes
+              ↓ Claude가 종합
 "Team은 화요일에 GraphQL 대신 REST로 가기로 결정했습니다.
  Sarah가 목요일에 updated spec을 보냈고, design doc은
  final approach를 반영하고 있습니다."
@@ -40,7 +40,7 @@ Tab을 오갈 필요도, 어떤 도구에 무엇이 있었는지 기억할 필�
 | **CRM** | 계정, contact, opportunity |
 | **Ticketing** | 지원 티켓, 고객 이슈 |
 
-각 출처는 MCP connection입니다. MCP setting에 출처를 더 추가하면 Claude가 검색할 수 있는 범위가 확장됩니다.
+각 출처는 MCP 연결입니다. MCP 설정에 출처를 더 추가하면 Claude가 검색할 수 있는 범위가 확장됩니다.
 
 ---
 
@@ -91,7 +91,7 @@ Tab을 오갈 필요도, 어떤 도구에 무엇이 있었는지 기억할 필�
 ```text
 You: /enterprise-search:search Postgres로 전환하기로 언제 결정했지?
 
-Claude searches:
+Claude가 검색:
   ~~chat → #engineering, #infrastructure for "postgres" "switch" "decision"
   ~~email → threads with "postgres" in subject
   ~~cloud storage → docs mentioning database migration
@@ -106,13 +106,13 @@ Result: "Decision은 3월 3일 #infrastructure에서 내려졌습니다(link).
 ```text
 You: /enterprise-search:digest --weekly
 
-Claude scans:
+Claude가 스캔:
   ~~chat → 참여 중인 channel, DM, mention
   ~~email → inbox activity
   ~~cloud storage → 공유되었거나 수정된 docs
 
-Result: Project별 grouped summary와 flagged action item,
-        highlighted decision을 제공합니다.
+Result: 프로젝트별로 묶은 요약, 표시된 액션 아이템,
+        강조된 결정을 제공합니다.
 ```
 
 ### Expert 찾기
@@ -120,7 +120,7 @@ Result: Project별 grouped summary와 flagged action item,
 ```text
 You: /enterprise-search:search 우리 Kubernetes setup을 누가 잘 알아?
 
-Claude searches:
+Claude가 검색:
   ~~chat → Kubernetes, k8s, clusters 관련 message
   ~~cloud storage → infrastructure 관련 docs author
   Wiki → runbook 및 architecture docs
@@ -145,12 +145,12 @@ claude plugins add knowledge-work-plugins/enterprise-search
 /enterprise-search:digest --daily
 ```
 
-MCP로 더 많은 source를 연결할수록 search result가 완전해집니다. ~~chat, ~~email, ~~cloud storage부터 시작하고 필요에 따라 wiki, project management tool, CRM을 추가하세요.
+MCP로 더 많은 출처를 연결할수록 검색 결과가 완전해집니다. ~~chat, ~~email, ~~cloud storage부터 시작하고 필요에 따라 wiki, 프로젝트 관리 도구, CRM을 추가하세요.
 
 ---
 
 ## 철학
 
-Knowledge worker는 도구 전반에 흩어진 정보를 찾는 데 매주 많은 시간을 씁니다. 답은 Slack thread, email chain, doc, wiki page 어딘가에 있지만, 찾으려면 각 도구를 따로 검색하고 result를 cross-reference하며 올바른 곳을 확인했기를 바라야 합니다.
+지식 노동자는 도구 전반에 흩어진 정보를 찾는 데 매주 많은 시간을 씁니다. 답은 Slack thread, email chain, doc, wiki page 어딘가에 있지만, 찾으려면 각 도구를 따로 검색하고 결과를 대조하며 올바른 곳을 확인했기를 바라야 합니다.
 
-Enterprise Search는 모든 도구를 하나의 searchable knowledge base처럼 다룹니다. One query, all sources, synthesized results. 회사의 knowledge는 silo에 갇혀 있으면 안 됩니다. 한 번에 모두 검색하세요.
+Enterprise Search는 모든 도구를 하나의 검색 가능한 지식 베이스처럼 다룹니다. 하나의 질의, 모든 출처, 종합된 결과. 회사의 지식은 silo에 갇혀 있으면 안 됩니다. 한 번에 모두 검색하세요.

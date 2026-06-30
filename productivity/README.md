@@ -14,15 +14,15 @@ claude plugins add knowledge-work-plugins/productivity
 
 - **작업 관리** — Claude가 읽고 쓰며 실행 기준으로 삼는 markdown 작업 목록(`TASKS.md`)입니다. 자연스럽게 작업을 추가하면 Claude가 상태를 추적하고 오래된 항목을 분류하며 외부 도구와 동기화합니다.
 - **업무 메모리** — 약어, 사람, 프로젝트, 용어를 Claude에게 가르치는 2계층 메모리 시스템입니다. "Todd에게 Oracle PSR 해달라고 해"라고 말하면 Claude가 누구에게 무엇을 어떤 거래에 대해 요청하는지 이해합니다.
-- **시각적 대시보드** — 작업 보드 보기와 Claude가 workplace에 대해 아는 내용을 보여주는 local HTML file입니다. 보드나 파일 어느 쪽에서 수정해도 동기화됩니다.
+- **시각적 대시보드** — 작업 보드 보기와 Claude가 업무 환경에 대해 아는 내용을 보여주는 로컬 HTML 파일입니다. 보드나 파일 어느 쪽에서 수정해도 동기화됩니다.
 
 ## 명령
 
 | 명령 | 설명 |
 |---------|--------------|
-| `/start` | 작업과 메모리를 초기화하고 dashboard를 엽니다. |
-| `/update` | 오래된 항목을 분류하고 memory gap을 확인하며, 가능한 경우 외부 도구에서 동기화합니다. |
-| `/update --comprehensive` | Email, calendar, chat을 심층 스캔해 놓친 할 일을 표시하고 새 메모리를 제안합니다. |
+| `/start` | 작업과 메모리를 초기화하고 대시보드를 엽니다. |
+| `/update` | 오래된 항목을 분류하고 메모리 공백을 확인하며, 가능한 경우 외부 도구에서 동기화합니다. |
+| `/update --comprehensive` | 이메일, 캘린더, 채팅을 심층 스캔해 놓친 할 일을 표시하고 새 메모리를 제안합니다. |
 
 ## 스킬
 
@@ -38,9 +38,9 @@ claude plugins add knowledge-work-plugins/productivity
 ```
 You: /start
 
-Claude: [TASKS.md, CLAUDE.md, memory/ directory, dashboard.html을 생성]
-        [browser에서 dashboard를 엽니다]
-        [memory seed를 위해 역할, 팀, 현재 우선순위를 질문]
+Claude: [TASKS.md, CLAUDE.md, memory/ 디렉터리, dashboard.html을 생성]
+        [브라우저에서 대시보드를 엽니다]
+        [메모리 초기값을 위해 역할, 팀, 현재 우선순위를 질문]
 ```
 
 ### 자연어로 작업 추가
@@ -50,7 +50,7 @@ You: 금요일까지 Sarah의 budget proposal을 review해야 하고,
      Greg와 sync한 뒤 Q2 roadmap을 draft해야 하고,
      Platform team의 API spec도 follow up해야 해
 
-Claude: [세 task를 context와 함께 TASKS.md에 추가]
+Claude: [세 작업을 맥락과 함께 TASKS.md에 추가]
         [Dashboard가 자동으로 업데이트]
 ```
 
@@ -59,11 +59,11 @@ Claude: [세 task를 context와 함께 TASKS.md에 추가]
 ```
 You: /update --comprehensive
 
-Claude: [email, calendar, chat에서 새 action item을 scan]
+Claude: [이메일, 캘린더, 채팅에서 새 액션 아이템을 스캔]
         [Flags: "Budget proposal review is due tomorrow — still open"]
         [Suggests: "New person mentioned in 3 threads: Jamie Park,
          Design Lead — add to memory?"]
-        [stale task를 갱신하고 memory gap을 채움]
+        [오래된 작업을 갱신하고 메모리 공백을 채움]
 ```
 
 ### 업무 약어
@@ -83,14 +83,14 @@ Claude: "Todd Martinez(Finance lead)에게 Oracle Systems deal($2.3M, Q2 close)�
 
 > 익숙하지 않은 placeholder가 보이거나 연결된 도구를 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
-가장 좋은 경험을 위해 communication 및 project management tool을 연결하세요. 연결하지 않으면 작업과 메모리를 수동으로 관리합니다.
+가장 좋은 경험을 위해 커뮤니케이션 및 프로젝트 관리 도구를 연결하세요. 연결하지 않으면 작업과 메모리를 수동으로 관리합니다.
 
-**포함된 MCP connection:**
-- Chat(Slack): 팀 맥락 및 메시지 스캔
-- Email and calendar(Microsoft 365): 액션 아이템 발견
+**포함된 MCP 연결:**
+- 채팅(Slack): 팀 맥락 및 메시지 스캔
+- 이메일 및 캘린더(Microsoft 365): 액션 아이템 발견
 - Knowledge base(Notion): 참고 문서
 - Project tracker(Asana, Linear, Atlassian, monday.com, ClickUp): 작업 동기화
 - Office suite(Microsoft 365): 문서
 
 **추가 옵션:**
-- Category별 대체 도구는 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
+- 범주별 대체 도구는 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.

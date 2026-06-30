@@ -58,7 +58,7 @@ claude plugins add knowledge-work-plugins/finance
 
 > 익숙하지 않은 placeholder가 보이거나 연결된 도구를 확인해야 한다면 [CONNECTORS.md](CONNECTORS.md)를 참고하세요.
 
-이 플러그인은 MCP server를 통해 financial data source에 연결할 때 가장 잘 동작합니다. 관련 server를 `.mcp.json`에 추가하세요.
+이 플러그인은 MCP server를 통해 financial data source에 연결할 때 가장 잘 동작합니다. 관련 서버를 `.mcp.json`에 추가하세요.
 
 ### ERP / accounting system
 
@@ -74,9 +74,9 @@ Workpaper generation, reconciliation template, financial model update를 위해 
 
 ### Analytics / BI
 
-BI platform(예: Tableau, Looker)을 연결해 variance explanation에 필요한 dashboard, KPI, trend data를 가져옵니다.
+BI platform(예: Tableau, Looker)을 연결해 variance explanation에 필요한 dashboard, KPI, 추세 데이터를 가져옵니다.
 
-> **Note:** Financial data를 자동으로 가져오려면 ERP 및 data warehouse MCP server를 연결하세요. 없으면 data를 paste하거나 file을 upload해 analysis할 수 있습니다.
+> **참고:** Financial data를 자동으로 가져오려면 ERP 및 data warehouse MCP server를 연결하세요. 없으면 data를 paste하거나 file을 upload해 analysis할 수 있습니다.
 
 ## 설정
 
@@ -88,4 +88,4 @@ BI platform(예: Tableau, Looker)을 연결해 variance explanation에 필요한
 - `analytics-bi`: Dashboard 및 KPI data용 BI tool
 - `documents`: Policy, memo, support 자료용 document storage
 - `email`: Report 발송 및 approval request용 email
-- `chat`: Close status update 및 question용 team communication
+- `chat`: Close status update 및 question용 팀 커뮤니케이션
