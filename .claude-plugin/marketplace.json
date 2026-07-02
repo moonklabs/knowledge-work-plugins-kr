@@ -6,67 +6,67 @@
   "plugins": [
     {
       "name": "productivity",
-      "displayName": "생산성",
+      "displayName": "Productivity (생산성)",
       "source": "./productivity",
       "description": "작업을 관리하고 하루를 계획하며 업무의 중요한 맥락을 기억으로 쌓습니다. Calendar, email, chat과 동기화해 모든 일을 정리하고 추적합니다."
     },
     {
       "name": "enterprise-search",
-      "displayName": "엔터프라이즈 검색",
+      "displayName": "Enterprise Search (엔터프라이즈 검색)",
       "source": "./enterprise-search",
       "description": "회사 도구 전반을 한곳에서 검색합니다. App을 오가지 않고 email, chat, document, wiki에서 필요한 것을 찾습니다."
     },
     {
       "name": "cowork-plugin-management",
-      "displayName": "플러그인 관리",
+      "displayName": "Plugin Management (플러그인 관리)",
       "source": "./cowork-plugin-management",
       "description": "조직의 도구와 workflow에 맞춘 plugin을 만들고, customize하고, 관리합니다. MCP server를 설정하고 plugin behavior를 조정하며 팀의 업무 방식에 맞게 template을 수정합니다."
     },
     {
       "name": "sales",
-      "displayName": "영업",
+      "displayName": "Sales (영업)",
       "source": "./sales",
       "description": "Prospecting, outreach 작성, deal strategy 수립을 더 빠르게 수행합니다. Call 준비, pipeline 관리, deal을 앞으로 움직이는 개인화 message 작성을 지원합니다."
     },
     {
       "name": "finance",
-      "displayName": "재무",
+      "displayName": "Finance (재무)",
       "source": "./finance",
       "description": "Journal entry와 reconciliation부터 financial statement와 variance analysis까지 finance 및 accounting workflow를 간소화합니다. Audit prep, month-end close, 장부 정리를 더 빠르게 수행합니다."
     },
     {
       "name": "data",
-      "displayName": "데이터",
+      "displayName": "Data (데이터)",
       "source": "./data",
       "description": "SQL 작성, dataset 탐색, insight 생성을 더 빠르게 수행합니다. Visualization과 dashboard를 만들고 raw data를 stakeholder에게 전달하기 쉬운 story로 바꿉니다."
     },
     {
       "name": "legal",
-      "displayName": "법무",
+      "displayName": "Legal (법무)",
       "source": "./legal",
       "description": "사내 법무팀의 contract review, NDA triage, compliance workflow를 빠르게 합니다. Legal brief 초안 작성, precedent research 정리, institutional knowledge 관리를 지원합니다."
     },
     {
       "name": "marketing",
-      "displayName": "마케팅",
+      "displayName": "Marketing (마케팅)",
       "source": "./marketing",
       "description": "Content 생성, campaign planning, marketing channel 전반의 performance analysis를 지원합니다. Brand voice 일관성을 유지하고 competitor를 추적하며 효과가 있는 항목을 report합니다."
     },
     {
       "name": "customer-support",
-      "displayName": "고객 지원",
+      "displayName": "Customer Support (고객 지원)",
       "source": "./customer-support",
       "description": "Ticket triage, response 초안 작성, issue escalation, knowledge base 구축을 지원합니다. Customer context를 조사하고 해결된 issue를 self-service content로 바꿉니다."
     },
     {
       "name": "product-management",
-      "displayName": "제품 관리",
+      "displayName": "Product Management (제품 관리)",
       "source": "./product-management",
       "description": "Feature spec 작성, roadmap planning, user research synthesis를 더 빠르게 수행합니다. Stakeholder를 최신 상태로 유지하고 competitive landscape를 앞서 파악합니다."
     },
     {
       "name": "bio-research",
-      "displayName": "바이오 리서치",
+      "displayName": "Bio Research (바이오 리서치)",
       "source": "./bio-research",
       "description": "전임상 research tool 및 database(literature search, genomics analysis, target prioritization)에 연결해 초기 life sciences R&D를 가속합니다."
     },
@@ -99,37 +99,37 @@
     },
     {
       "name": "engineering",
-      "displayName": "엔지니어링",
+      "displayName": "Engineering (엔지니어링)",
       "source": "./engineering",
       "description": "Standup, code review, architecture decision, incident response, technical documentation 등 engineering workflow를 간소화합니다. 기존 도구와 함께 쓰거나 standalone으로 동작합니다."
     },
     {
       "name": "human-resources",
-      "displayName": "인사",
+      "displayName": "Human Resources (인사)",
       "source": "./human-resources",
       "description": "Recruiting, onboarding, performance review, compensation analysis, policy guidance 등 people operation을 간소화합니다. Compliance를 유지하고 팀 운영을 원활하게 합니다."
     },
     {
       "name": "design",
-      "displayName": "디자인",
+      "displayName": "Design (디자인)",
       "source": "./design",
       "description": "Critique, design system management, UX writing, accessibility audit, research synthesis, dev handoff 등 design workflow를 가속합니다. Exploration부터 pixel-perfect spec까지 지원합니다."
     },
     {
       "name": "operations",
-      "displayName": "운영",
+      "displayName": "Operations (운영)",
       "source": "./operations",
       "description": "Vendor management, process documentation, change management, capacity planning, compliance tracking 등 business operation을 최적화합니다. 조직이 효율적으로 운영되도록 돕습니다."
     },
     {
       "name": "small-business",
-      "displayName": "소상공인",
+      "displayName": "Small Business (소상공인)",
       "source": "./small-business",
       "description": "QuickBooks, PayPal, HubSpot, Docusign, Gsuite, O365, Canva 및 기타 연결 도구를 사용하는 사전 구축된 small business workflow입니다. Payroll planning, month-end close, weekly brief, growth campaign을 포함합니다. 돈이나 고객에 영향을 주는 모든 단계는 사용자가 승인합니다."
     },
     {
       "name": "brand-voice",
-      "displayName": "브랜드 보이스",
+      "displayName": "Brand Voice (브랜드 보이스)",
       "source": "./partner-built/brand-voice",
       "description": "기존 document와 conversation에서 brand voice를 발견하고, 실행 가능한 guideline을 생성하며, AI-generated content가 확립된 tone과 positioning에 맞는지 검증합니다.",
       "author": {
@@ -449,7 +449,7 @@
     },
     {
       "name": "pdf-viewer",
-      "displayName": "PDF 뷰어",
+      "displayName": "PDF Viewer (PDF 뷰어)",
       "source": "./pdf-viewer",
       "description": "Live interactive viewer에서 PDF를 보고, 주석을 달고, 서명합니다. Contract markup, visual feedback이 있는 form 작성, approval stamp, signature placement를 수행한 뒤 주석이 포함된 copy를 download합니다."
     },
