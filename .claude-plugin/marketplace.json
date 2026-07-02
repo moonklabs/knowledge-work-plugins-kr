@@ -245,7 +245,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/Zoominfo/zoominfo-mcp-plugin.git",
-        "sha": "cfdebda5f3ce24d0d964cc0b3e9e5dd9ea9d507d"
+        "sha": "b836604c5474f245c4dfc0ed610cd9dfcfeee35e"
       },
       "homepage": "https://zoominfo.com"
     },
@@ -305,7 +305,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/cockroachdb/claude-plugin.git",
-        "sha": "736bd11df55bac97e2a6c98be8e93503b125902c"
+        "sha": "c511ba806b1797b1737fc4cbffbe3dba8697b1f2"
       },
       "homepage": "https://github.com/cockroachdb/claude-plugin"
     },
@@ -327,7 +327,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/fastly/fastly-agent-toolkit.git",
-        "sha": "f410cb742523f5eabad9a1bf41e3bc9f8a8e6534"
+        "sha": "9a273f0b2f7a496355b6ec30c1b34614a80bf805"
       },
       "homepage": "https://github.com/fastly/fastly-agent-toolkit/blob/main/README.md"
     },
@@ -526,7 +526,7 @@
         "url": "https://github.com/carta/plugins.git",
         "path": "plugins/carta-investors",
         "ref": "main",
-        "sha": "787932173c1bc0fb6f2346e380fddd2349ceb8df"
+        "sha": "c3b215afca71e5fd3b607fb6b558a85c23272d59"
       },
       "homepage": "https://carta.com"
     },
@@ -555,7 +555,7 @@
         "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP.git",
         "path": "plugins/claude",
         "ref": "main",
-        "sha": "acc69e00cced485e37c43088e0f49a1b63a739a7"
+        "sha": "0ad919bc188947fc55b1bf269df62f4b14b3880c"
       },
       "homepage": "https://desktopcommander.app"
     },
@@ -626,7 +626,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/wix/skills.git",
-        "sha": "958772ecff1d2e4a3e7a63c2baee502ec65179b1"
+        "sha": "320c8affaa42ad0a7cee5fa7e020926677ec63a5"
       },
       "homepage": "https://dev.wix.com/docs/wix-cli/guides/development/about-wix-skills"
     },
@@ -664,7 +664,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/langfuse/skills.git",
-        "sha": "604e4c7b1d4879bebd9e78d27c316a07cc9abce5"
+        "sha": "d48c5b8b434dc34550053699e8403c23f231446d"
       },
       "homepage": "https://langfuse.com"
     },
@@ -678,7 +678,7 @@
         "url": "https://github.com/val-town/plugins.git",
         "path": "plugin",
         "ref": "main",
-        "sha": "80cc05b9229aaec38b5da5e9d33d9898e1e614cd"
+        "sha": "1bd1c3f93161d88908dc0838aa81980ff1b2e4f7"
       },
       "homepage": "https://val.town"
     },
@@ -759,7 +759,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/buildkite/skills.git",
-        "sha": "6ab569537d836b66edcc52d61c566bdfa670a7c2"
+        "sha": "24242e53c688546fb39e40a7f1f769dbbcd77400"
       },
       "homepage": "https://github.com/buildkite/skills"
     },
@@ -783,7 +783,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/datarobot-oss/datarobot-agent-skills.git",
-        "sha": "5434cb0618939c0ea0b61da32cdb942dc599715d"
+        "sha": "d6725fd1bca76743d0309fd48cba91a5586e27de"
       },
       "homepage": "https://datarobot.com"
     },
@@ -819,7 +819,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/exa-labs/exa-mcp-server.git",
-        "sha": "08242e3b8a9efdee9a8e945a33b68f283874010f"
+        "sha": "c4b419adb3ce2674ad062b15f0d42f8b8cee05c5"
       },
       "homepage": "https://exa.ai/docs/reference/exa-mcp"
     },
@@ -859,9 +859,49 @@
       "source": {
         "source": "url",
         "url": "https://github.com/pixeltable/pixeltable-skill.git",
-        "sha": "f89c9b73f9dab404df3d9ab9ee4d470399b7c761"
+        "sha": "729175dbb2a144bb6529fb93ac696bad40a1f09d"
       },
       "homepage": "https://docs.pixeltable.com"
+    },
+    {
+      "name": "grafana-assistant",
+      "displayName": "Grafana Assistant",
+      "description": "Skills and rules for developing and using the Grafana Assistant app and CLI.",
+      "category": "monitoring",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/grafana/ai-marketplace.git",
+        "path": "plugins/grafana-assistant",
+        "ref": "main",
+        "sha": "a5c72f2d74c640e9675eb0249526447968535015"
+      },
+      "homepage": "https://grafana.com"
+    },
+    {
+      "name": "grafana-cloud-mcp",
+      "displayName": "Grafana Cloud MCP",
+      "description": "Hosted MCP server for AI-assisted Grafana Cloud observability — no local installation required.",
+      "category": "monitoring",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/grafana/ai-marketplace.git",
+        "path": "plugins/grafana-cloud-mcp",
+        "ref": "main",
+        "sha": "a5c72f2d74c640e9675eb0249526447968535015"
+      },
+      "homepage": "https://grafana.com"
+    },
+    {
+      "name": "grasp",
+      "displayName": "Grasp",
+      "description": "Deal-work workflows powered by Grasp company lookup, table creation, import, buyer, transaction, table enrichment, contact, and market research tools.",
+      "category": "productivity",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/grasp-ai/grasp-mcp-plugin.git",
+        "sha": "3331cc8b908e038df5ec1b199c55b2f763943511"
+      },
+      "homepage": "https://www.grasp-ai.com/"
     }
   ]
 }
