@@ -1,4 +1,4 @@
-# 지식 업무 플러그인
+# 지식 업무 플러그인 (한글버전)
 
 Claude를 사용자의 역할, 팀, 회사에 맞는 전문가로 바꿔 주는 플러그인 모음입니다. [Claude Cowork](https://claude.com/product/cowork)용으로 제작되었으며 [Claude Code](https://claude.com/product/claude-code)와도 호환됩니다.
 
@@ -38,10 +38,10 @@ Cowork에서는 목표를 정하면 Claude가 완성도 높은 전문 작업물�
 
 ```bash
 # 먼저 마켓플레이스를 추가합니다
-claude plugin marketplace add anthropics/knowledge-work-plugins
+claude plugin marketplace add moonklabs/knowledge-work-plugins-kr
 
 # 그다음 필요한 플러그인을 설치합니다
-claude plugin install sales@knowledge-work-plugins
+claude plugin install sales@knowledge-work-plugins-kr
 ```
 
 설치가 끝나면 플러그인은 자동으로 활성화됩니다. 스킬은 관련 상황에서 자동으로 작동하고, 슬래시 명령은 세션에서 사용할 수 있습니다. 예: `/sales:call-prep`, `/data:write-query`.
