@@ -234,7 +234,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/sanity-io/agent-toolkit.git",
-        "sha": "2ec17ddc6034073b2974e6dbf691acb3bcc8b9fd"
+        "sha": "6c81e246ed9d63588ca1fb624f29ac804184d1be"
       },
       "homepage": "https://www.sanity.io"
     },
@@ -327,7 +327,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/fastly/fastly-agent-toolkit.git",
-        "sha": "9a273f0b2f7a496355b6ec30c1b34614a80bf805"
+        "sha": "ea3623d5facc7053eaa802f5fc483dd7121a39aa"
       },
       "homepage": "https://github.com/fastly/fastly-agent-toolkit/blob/main/README.md"
     },
@@ -429,7 +429,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/figma/mcp-server-guide.git",
-        "sha": "bea8bea5f676ab2bf76fa822b82f50b66653c098"
+        "sha": "a72c41ef5cd8ea88c96dd4b2e73311463b1cf6bc"
       },
       "homepage": "https://github.com/figma/mcp-server-guide"
     },
@@ -461,7 +461,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/box/box-for-ai.git",
-        "sha": "16f1a0427710b0812519ea634cd5ce6830bde8fc"
+        "sha": "172a8273f5d532c13ef6a3057e50c30e5368a2aa"
       },
       "homepage": "https://github.com/box/box-for-ai"
     },
@@ -500,7 +500,7 @@
         "url": "https://github.com/carta/plugins.git",
         "path": "plugins/carta-cap-table",
         "ref": "main",
-        "sha": "787932173c1bc0fb6f2346e380fddd2349ceb8df"
+        "sha": "4eceb972f7954ea5b00f7df66b7adca11bdd5425"
       },
       "homepage": "https://carta.com"
     },
@@ -526,7 +526,7 @@
         "url": "https://github.com/carta/plugins.git",
         "path": "plugins/carta-investors",
         "ref": "main",
-        "sha": "c3b215afca71e5fd3b607fb6b558a85c23272d59"
+        "sha": "4eceb972f7954ea5b00f7df66b7adca11bdd5425"
       },
       "homepage": "https://carta.com"
     },
@@ -615,7 +615,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/base44/skills.git",
-        "sha": "1463369a8664bb3dbf127d041a710dd7a085f4fa"
+        "sha": "d04c22ea298c8e370a9dd2e7c3e8c0aa6c0623eb"
       },
       "homepage": "https://docs.base44.com"
     },
@@ -626,7 +626,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/wix/skills.git",
-        "sha": "320c8affaa42ad0a7cee5fa7e020926677ec63a5"
+        "sha": "afe99e49d0f2a8b87fe83278dedb5fcee993ca48"
       },
       "homepage": "https://dev.wix.com/docs/wix-cli/guides/development/about-wix-skills"
     },
@@ -664,7 +664,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/langfuse/skills.git",
-        "sha": "d48c5b8b434dc34550053699e8403c23f231446d"
+        "sha": "b2df647aef80678abc2f2c45faa867b2853e862c"
       },
       "homepage": "https://langfuse.com"
     },
@@ -733,7 +733,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/lusha-oss/lusha-mcp-plugin.git",
-        "sha": "aafe0a59cb143d0adc711af2813cd3b9cd5693d0"
+        "sha": "f42bb8f65b3a62fd59711578b8e0446bca644e4b"
       },
       "homepage": "https://www.lusha.com"
     },
@@ -747,7 +747,7 @@
         "url": "https://github.com/auth0/agent-skills.git",
         "path": "plugins/auth0",
         "ref": "main",
-        "sha": "aacefa7dcbdf2d32ac14d3d7790b610cf716bd3c"
+        "sha": "1ee3e4cc6f43dafa6bcffcc24bb04a94d1a6dc85"
       },
       "homepage": "https://github.com/auth0/agent-skills"
     },
@@ -771,7 +771,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/ClickHouse/clickhouse-claude-code-plugin.git",
-        "sha": "ecbd47627d7e7b3de15b297b91e0abf3e6ebc746"
+        "sha": "e98bda0a36613cd220243a83535dcc37e14295ab"
       },
       "homepage": "https://github.com/ClickHouse/clickhouse-claude-code-plugin"
     },
@@ -783,7 +783,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/datarobot-oss/datarobot-agent-skills.git",
-        "sha": "d6725fd1bca76743d0309fd48cba91a5586e27de"
+        "sha": "c4a9729d617aa32e7e9e35c6b30cc97ae81ee47e"
       },
       "homepage": "https://datarobot.com"
     },
@@ -795,7 +795,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/qdrant/skills.git",
-        "sha": "b12b75c01f567eb1f7a3e05a991641627c30998a"
+        "sha": "c6ec1242a20bde524e9e4a73ee5540fb22b99235"
       },
       "homepage": "https://skills.qdrant.tech"
     },
@@ -819,7 +819,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/exa-labs/exa-mcp-server.git",
-        "sha": "c4b419adb3ce2674ad062b15f0d42f8b8cee05c5"
+        "sha": "9c69a3b45b228243215c59673e54c5bf321bb416"
       },
       "homepage": "https://exa.ai/docs/reference/exa-mcp"
     },
@@ -859,7 +859,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/pixeltable/pixeltable-skill.git",
-        "sha": "729175dbb2a144bb6529fb93ac696bad40a1f09d"
+        "sha": "933c15b55a49aa375ce0300c074bdf43b68571b9"
       },
       "homepage": "https://docs.pixeltable.com"
     },
@@ -902,6 +902,46 @@
         "sha": "3331cc8b908e038df5ec1b199c55b2f763943511"
       },
       "homepage": "https://www.grasp-ai.com/"
+    },
+    {
+      "name": "honeycomb",
+      "displayName": "Honeycomb",
+      "description": "Skills, agents, and workflows for Honeycomb observability — query patterns, production investigations, SLOs, OpenTelemetry instrumentation, and Beeline migration. Designed to complement the Honeycomb MCP server.",
+      "category": "monitoring",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/honeycombio/agent-skill.git",
+        "path": "honeycomb",
+        "ref": "main",
+        "sha": "53e6bb80242d4667dd730e7cc2150a4a2f9a83bf"
+      },
+      "homepage": "https://github.com/honeycombio/agent-skill"
+    },
+    {
+      "name": "b12-claude-plugin",
+      "displayName": "B12",
+      "description": "B12 plugin with two skills: Website Generator (create a B12 website from a brief description) and B12 Website Editor (edit a live B12 website using Claude's browser access in Claude Cowork).",
+      "category": "design",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/b12io/b12-claude-plugin.git",
+        "sha": "a53638c2b23b82c6be7c4e5b1e3cecd6a59f9fb8"
+      },
+      "homepage": "https://github.com/b12io/b12-claude-plugin"
+    },
+    {
+      "name": "signoz",
+      "displayName": "SigNoz",
+      "description": "Official SigNoz plugin for MCP setup, docs, queries, dashboards, and alerts",
+      "category": "monitoring",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/SigNoz/agent-skills.git",
+        "path": "plugins/signoz",
+        "ref": "main",
+        "sha": "c86f50a83d52894fb989628b6401824a4238fba4"
+      },
+      "homepage": "https://signoz.io/docs/ai/agent-skills"
     }
   ]
 }
