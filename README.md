@@ -28,6 +28,15 @@ Cowork에서는 목표를 정하면 Claude가 완성도 높은 전문 작업물�
 
 이 플러그인들은 Cowork에서 바로 설치하거나, GitHub에서 전체 컬렉션을 살펴보거나, 직접 새 플러그인을 만드는 출발점으로 사용할 수 있습니다.
 
+## 현지화 릴리스 노트
+
+### 2026-07-09
+
+- upstream marketplace 업데이트를 `f96c57c`까지 동기화했습니다.
+- 새 Cowork marketplace 항목 `Honeycomb`, `B12`, `SigNoz`의 설명을 한국어로 번역했습니다.
+- 원격 `korean` 브랜치의 README 업데이트를 보존해 병합했습니다.
+- marketplace 설명의 영어-only 잔여 항목과 `English (한국어)` 표시명 규칙을 검증했습니다.
+
 ## 시작하기
 
 ### Cowork
