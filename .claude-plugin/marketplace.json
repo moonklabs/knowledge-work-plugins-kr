@@ -906,7 +906,7 @@
     {
       "name": "honeycomb",
       "displayName": "Honeycomb",
-      "description": "Skills, agents, and workflows for Honeycomb observability — query patterns, production investigations, SLOs, OpenTelemetry instrumentation, and Beeline migration. Designed to complement the Honeycomb MCP server.",
+      "description": "Honeycomb observability를 위한 스킬, 에이전트, 워크플로입니다. 쿼리 패턴, 프로덕션 조사, SLO, OpenTelemetry instrumentation, Beeline migration을 다룹니다. Honeycomb MCP 서버를 보완하도록 설계되었습니다.",
       "category": "monitoring",
       "source": {
         "source": "git-subdir",
@@ -920,7 +920,7 @@
     {
       "name": "b12-claude-plugin",
       "displayName": "B12",
-      "description": "B12 plugin with two skills: Website Generator (create a B12 website from a brief description) and B12 Website Editor (edit a live B12 website using Claude's browser access in Claude Cowork).",
+      "description": "두 가지 스킬을 포함한 B12 플러그인입니다. Website Generator는 짧은 설명으로 B12 웹사이트를 만들고, B12 Website Editor는 Claude Cowork의 브라우저 접근을 사용해 live B12 웹사이트를 편집합니다.",
       "category": "design",
       "source": {
         "source": "url",
@@ -932,7 +932,7 @@
     {
       "name": "signoz",
       "displayName": "SigNoz",
-      "description": "Official SigNoz plugin for MCP setup, docs, queries, dashboards, and alerts",
+      "description": "MCP 설정, 문서, 쿼리, 대시보드, alert를 위한 공식 SigNoz 플러그인입니다.",
       "category": "monitoring",
       "source": {
         "source": "git-subdir",
