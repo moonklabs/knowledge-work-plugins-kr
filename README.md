@@ -30,6 +30,13 @@ Cowork에서는 목표를 정하면 Claude가 완성도 높은 전문 작업물�
 
 ## 현지화 릴리스 노트
 
+### 2026-07-13
+
+- upstream marketplace 업데이트를 `8cfb8a2`까지 동기화했습니다.
+- Figma, Carta, Qodo, Twilio, Base44, Wix, Airwallex, Langfuse, Qdrant, Qt, Exa, Pixeltable, SigNoz의 소스 버전을 갱신했습니다.
+- 이번 upstream 변경에는 사용자 노출 설명 또는 표시명 변경이 없어 추가 한글 번역은 필요하지 않았습니다.
+- marketplace JSON 파싱 및 `English (한국어)` 표시명 규칙을 검증했습니다.
+
 ### 2026-07-09
 
 - upstream marketplace 업데이트를 `f96c57c`까지 동기화했습니다.
