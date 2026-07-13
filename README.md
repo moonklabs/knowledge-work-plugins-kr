@@ -2,6 +2,9 @@
 
 Claude를 사용자의 역할, 팀, 회사에 맞는 전문가로 바꿔 주는 플러그인 모음입니다. [Claude Cowork](https://claude.com/product/cowork)용으로 제작되었으며 [Claude Code](https://claude.com/product/claude-code)와도 호환됩니다.
 
+<img width="640" height="468" alt="cowork-kr" src="https://github.com/user-attachments/assets/bb335a1a-1aca-407e-b1e0-3b5eb3567c7b" />
+
+
 ## 플러그인이 필요한 이유
 
 Cowork에서는 목표를 정하면 Claude가 완성도 높은 전문 작업물을 만들어 줍니다. 플러그인을 사용하면 한 단계 더 나아가, Claude에게 선호하는 작업 방식, 가져와야 할 도구와 데이터, 중요한 워크플로우 처리 방식, 노출할 슬래시 명령을 알려 줄 수 있습니다. 그래서 팀은 더 일관되고 품질 높은 결과를 얻습니다.
