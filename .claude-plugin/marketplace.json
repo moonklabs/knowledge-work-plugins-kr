@@ -429,7 +429,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/figma/mcp-server-guide.git",
-        "sha": "a72c41ef5cd8ea88c96dd4b2e73311463b1cf6bc"
+        "sha": "aa1d073884af0db2e69a7b31957513f3d3cc6503"
       },
       "homepage": "https://github.com/figma/mcp-server-guide"
     },
@@ -500,7 +500,7 @@
         "url": "https://github.com/carta/plugins.git",
         "path": "plugins/carta-cap-table",
         "ref": "main",
-        "sha": "4eceb972f7954ea5b00f7df66b7adca11bdd5425"
+        "sha": "660e3f601f3d15bcc827f56aa36e140ce4f95e0d"
       },
       "homepage": "https://carta.com"
     },
@@ -526,7 +526,7 @@
         "url": "https://github.com/carta/plugins.git",
         "path": "plugins/carta-investors",
         "ref": "main",
-        "sha": "4eceb972f7954ea5b00f7df66b7adca11bdd5425"
+        "sha": "77458769bf2dea4a860a0fef15f25b50dad413c1"
       },
       "homepage": "https://carta.com"
     },
@@ -566,7 +566,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/qodo-ai/qodo-skills.git",
-        "sha": "e7b677142bbb41eb8fd1cf4b50b2e759bb0c4f03"
+        "sha": "5c31f3275199c6ccf07fa84c3a34d6d338f97aee"
       },
       "homepage": "https://qodo.ai"
     },
@@ -593,7 +593,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/twilio/ai.git",
-        "sha": "aa67a6d476107d6742f31a53d68b10749552930f"
+        "sha": "29f355c55ddb137f34b1fa8345a7fea153805ffc"
       },
       "homepage": "https://www.twilio.com"
     },
@@ -615,7 +615,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/base44/skills.git",
-        "sha": "d04c22ea298c8e370a9dd2e7c3e8c0aa6c0623eb"
+        "sha": "b7610fe5082d38b9eddd7180b49e4008608700ab"
       },
       "homepage": "https://docs.base44.com"
     },
@@ -626,7 +626,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/wix/skills.git",
-        "sha": "afe99e49d0f2a8b87fe83278dedb5fcee993ca48"
+        "sha": "aacb1f8667d1bc59f1832ce2e9d1f4fba2f7bc9b"
       },
       "homepage": "https://dev.wix.com/docs/wix-cli/guides/development/about-wix-skills"
     },
@@ -652,7 +652,7 @@
         "url": "https://github.com/airwallex/airwallex-marketplace.git",
         "path": "plugins/airwallex-agentos",
         "ref": "master",
-        "sha": "683a7536f9445c07439d087607b44b0383b8c41d"
+        "sha": "b0bd2c3d65da47e39db8c779501119376d91c431"
       },
       "homepage": "https://www.airwallex.com/docs"
     },
@@ -664,7 +664,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/langfuse/skills.git",
-        "sha": "b2df647aef80678abc2f2c45faa867b2853e862c"
+        "sha": "242e0ecce57c73da91af5d1afe5e5dfaf6661482"
       },
       "homepage": "https://langfuse.com"
     },
@@ -795,7 +795,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/qdrant/skills.git",
-        "sha": "c6ec1242a20bde524e9e4a73ee5540fb22b99235"
+        "sha": "8ba95bc77c88d8db365075e285c005654303b205"
       },
       "homepage": "https://skills.qdrant.tech"
     },
@@ -807,7 +807,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/TheQtCompanyRnD/agent-skills.git",
-        "sha": "6e3411d7e58965aa31fa3803c398511f27b29216"
+        "sha": "71d6c10da78b9a764468ae11c86ab3bc4ca4921f"
       },
       "homepage": "https://github.com/TheQtCompanyRnD/agent-skills"
     },
@@ -819,7 +819,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/exa-labs/exa-mcp-server.git",
-        "sha": "9c69a3b45b228243215c59673e54c5bf321bb416"
+        "sha": "8823cbea80b6ec5999c6217cccd91660fe953b97"
       },
       "homepage": "https://exa.ai/docs/reference/exa-mcp"
     },
@@ -859,7 +859,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/pixeltable/pixeltable-skill.git",
-        "sha": "933c15b55a49aa375ce0300c074bdf43b68571b9"
+        "sha": "ec4c931a24a4b3e423b66f8dd8c381c57e2f39b1"
       },
       "homepage": "https://docs.pixeltable.com"
     },
@@ -939,7 +939,7 @@
         "url": "https://github.com/SigNoz/agent-skills.git",
         "path": "plugins/signoz",
         "ref": "main",
-        "sha": "c86f50a83d52894fb989628b6401824a4238fba4"
+        "sha": "6f3f47ec3c104353c58853e2caa7a4599af44f3d"
       },
       "homepage": "https://signoz.io/docs/ai/agent-skills"
     }
